@@ -10313,7 +10313,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_forgotten_ranger =
 };
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_guard_ardy = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_RAC_PALETTE_3,
+    .paletteTag = OBJ_EVENT_PAL_ARDY,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -10331,7 +10331,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_guard_ardy = {
 };
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_knight_ardy = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_RAC_PALETTE_3,
+    .paletteTag = OBJ_EVENT_PAL_ARDY,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,

@@ -2360,3 +2360,22 @@ const u16 gTilesetPalettes_Wilderness_Crater[][16] =
 };
 
 const u32 gTilesetTiles_Wilderness_Crater[] = INCBIN_U32("data/tilesets/secondary/wilderness_crater/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Ardougne[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/ardougne/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Ardougne[] = INCBIN_U32("data/tilesets/secondary/ardougne/tiles.4bpp.lz");

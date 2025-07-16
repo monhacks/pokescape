@@ -383,12 +383,12 @@ RAC_LegendArts_1:
 	end
 
 RAC_LegendArts_3:
-	showmonpic SPECIES_FROGEEL, 10, 3
+	showmonpic SPECIES_FROGEEL_PRINCE, 10, 3
 	msgbox RAC_LegendArts_Text_2
 	goto RAC_LegendArts_1
 
 RAC_LegendArts_4:
-	showmonpic SPECIES_FROGEEL, 10, 3
+	showmonpic SPECIES_FROGEEL_PRINCESS, 10, 3
 	msgbox RAC_LegendArts_Text_3
 	goto RAC_LegendArts_1
 
@@ -413,7 +413,7 @@ RAC_NYChannel::
 	lock
 	faceplayer
 	namebox RAC_NYChannel_Text_0
-	msgbox RAC_Theo_Text_1
+	msgbox RAC_NYChannel_Text_1
 	hidenamebox
 	closemessage
 	release
@@ -424,7 +424,7 @@ RAC_Jaxyys::
 	lock
 	faceplayer
 	namebox RAC_Jaxyys_Text_0
-	msgbox RAC_Theo_Text_1
+	msgbox RAC_Jaxyys_Text_1
 	hidenamebox
 	closemessage
 	release
@@ -475,7 +475,7 @@ NPC_VarrockPub_Prezleek::
 	lock
 	faceplayer
 	namebox BATTLE_Prezleek_Text_0
-	msgbox NPC_VarrockPub_NYChannel_Text_1
+	msgbox NPC_VarrockPub_Prezleek_Text_0
 	hidenamebox
 	goto_if_unset FLAG_PUB_TRAINER_11, NPC_VarrockPub_Prezleek_2
 NPC_VarrockPub_Prezleek_1:
@@ -493,7 +493,7 @@ NPC_VarrockPub_Prezleek_4:
 	hidenamebox
 	setflag FLAG_PUB_TRAINER_11
 	trainerbattle_no_intro TRAINER_PREZLEEK, NPC_VarrockPub_NPC8_Text_1
-	namebox NPC_VarrockPub_NYChannel_Text_0
+	namebox BATTLE_Prezleek_Text_0
 	msgbox NPC_VarrockPub_NYChannel_Text_2
 	hidenamebox
 	call GIVE_RANDOM_ITEM
@@ -714,13 +714,24 @@ RAC_Theo_Text_0:
 	.string "Theo$"
 
 RAC_Theo_Text_1:
-	.string "Hello.$"
+	.string "Hey {PLAYER} fancy seeing you here!\p"
+	.string "Did you know I'm not only a member of\n"
+	.string "the White Knights, but also a member of\l"
+	.string "the RAC!$"
 
 RAC_NYChannel_Text_0:
 	.string "NYChannel$"
 
+RAC_NYChannel_Text_1:
+	.string "Hello.$"
+
 RAC_Jaxyys_Text_0:
 	.string "Jaxyys$"
+
+RAC_Jaxyys_Text_1:
+	.string "Huh, you're interested in some lore?\p"
+	.string "Try the wise old man's house in Draynor.\p"
+	.string "He has bookcases full of lore!$"
 
 RAC_Snow_Text_0:
 	.string "Seakara$"
@@ -734,7 +745,12 @@ NPC_VarrockPub_NYChannel_Text_0:
 	.string "NyChannel$"
 
 NPC_VarrockPub_NYChannel_Text_1:
-	.string "Hey there!$"
+	.string "With George by my side, I am the\n"
+	.string "strongest Woodcutters in Gielinor!\p"
+	.string "We'll cut you down to size no problems!$"
 
 NPC_VarrockPub_NYChannel_Text_2:
 	.string "Looks like I lost…$"
+
+NPC_VarrockPub_Prezleek_Text_0:
+	.string "Baroo? Baroo?!$"

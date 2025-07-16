@@ -1070,6 +1070,7 @@ const u16 gObjectEventPalette_MONSTERS_GREEN_BLUE_YELLOW[] = INCBIN_U16("graphic
 const u16 gObjectEventPalette_MONSTERS_RED_GREY[] = INCBIN_U16("graphics/object_events/palettes/PokeScape_Palettes/monsters_red_grey.gbapal");
 const u16 gObjectEventPalette_GENIE[] = INCBIN_U16("graphics/object_events/palettes/PokeScape_Palettes/genie.gbapal");
 const u16 gObjectEventPalette_Frogeel[] = INCBIN_U16("graphics/object_events/palettes/PokeScape_Palettes/frogeel.gbapal");
+const u16 gObjectEventPalette_ARDY[] = INCBIN_U16("graphics/object_events/palettes/PokeScape_Palettes/ardy.gbapal");
 
 /*
 const u16 gObjectEventPalette_RAC_BATS[] = INCBIN_U16("graphics/object_events/pics/pokescape_overworlds/rac_bats.gbapal");

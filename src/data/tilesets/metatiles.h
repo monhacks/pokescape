@@ -327,3 +327,6 @@ const u16 gMetatileAttributes_DwarvenMines[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_Wilderness_Crater[] = INCBIN_U16("data/tilesets/secondary/wilderness_crater/metatiles.bin");
 const u16 gMetatileAttributes_Wilderness_Crater[] = INCBIN_U16("data/tilesets/secondary/wilderness_crater/metatile_attributes.bin");
+
+const u16 gMetatiles_Ardougne[] = INCBIN_U16("data/tilesets/secondary/ardougne/metatiles.bin");
+const u16 gMetatileAttributes_Ardougne[] = INCBIN_U16("data/tilesets/secondary/ardougne/metatile_attributes.bin");

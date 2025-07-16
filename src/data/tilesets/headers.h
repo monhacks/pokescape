@@ -1287,3 +1287,14 @@ const struct Tileset gTileset_Wilderness_Crater =
     .metatileAttributes = gMetatileAttributes_Wilderness_Crater,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Ardougne =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Ardougne,
+    .palettes = gTilesetPalettes_Ardougne,
+    .metatiles = gMetatiles_Ardougne,
+    .metatileAttributes = gMetatileAttributes_Ardougne,
+    .callback = NULL,
+};

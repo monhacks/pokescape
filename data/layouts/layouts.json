@@ -5567,7 +5567,7 @@
       "width": 68,
       "height": 56,
       "primary_tileset": "gTileset_PokeScapeOutdoors",
-      "secondary_tileset": "gTileset_Varrock",
+      "secondary_tileset": "gTileset_Ardougne",
       "border_filepath": "data/layouts/Ardougne/border.bin",
       "blockdata_filepath": "data/layouts/Ardougne/map.bin"
     },

@@ -392,10 +392,10 @@ script RAC_LegendArts
     random(3)
     switch (var(VAR_RESULT)) {
 		case 0:
-            showmonpic (SPECIES_FROGEEL, 10, 3)
+            showmonpic (SPECIES_FROGEEL_PRINCE, 10, 3)
             msgbox(format("I title this picture, 'The Prince of AAA!'"))
         case 1:
-            showmonpic (SPECIES_FROGEEL, 10, 3)
+            showmonpic (SPECIES_FROGEEL_PRINCESS, 10, 3)
             msgbox(format("I title this picture, 'The Princess of AAA!'"))
         case 2:
             showmonpic (SPECIES_FROGEEL, 10, 3)
@@ -415,7 +415,7 @@ script RAC_Theo
     lock
     faceplayer
     namebox ("Theo")
-    msgbox(format("Hello."))
+    msgbox(format("Hey {PLAYER} fancy seeing you here!\pDid you know I'm not only a member of the White Knights, but also a member of the RAC!"))
     hidenamebox
     closemessage
     release
@@ -439,7 +439,7 @@ script RAC_Jaxyys
     lock
     faceplayer
     namebox ("Jaxyys")
-    msgbox(format("Hello."))
+    msgbox(format("Huh, you're interested in some lore?\pTry the wise old man's house in Draynor.\pHe has bookcases full of lore!"))
     hidenamebox
     closemessage
     release
@@ -465,7 +465,7 @@ script NPC_VarrockPub_NYChannel {
 	lock
 	faceplayer
     namebox("NyChannel")
-	msgbox(format("Hey there!"))
+	msgbox(format("With George by my side, I am the strongest Woodcutters in Gielinor!\pWe'll cut you down to size no problems!"))
 	hidenamebox
 	if (flag(FLAG_PUB_TRAINER_10) == false) 
 	{
@@ -489,7 +489,7 @@ script NPC_VarrockPub_Prezleek {
 	lock
 	faceplayer
     namebox("Prezleek")
-	msgbox(format("Hey there!"))
+	msgbox(format("Baroo? Baroo?!"))
 	hidenamebox
 	if (flag(FLAG_PUB_TRAINER_11) == false) 
 	{
@@ -499,7 +499,7 @@ script NPC_VarrockPub_Prezleek {
 				hidenamebox
 				setflag(FLAG_PUB_TRAINER_11)
 				trainerbattle_no_intro(TRAINER_PREZLEEK, msgbox(format("…")))
-				namebox("NyChannel")
+				namebox("Prezleek")
 				msgbox(format("Looks like I lost…"))
 				hidenamebox
 				call(GIVE_RANDOM_ITEM)
