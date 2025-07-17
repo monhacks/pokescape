@@ -666,7 +666,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DRAYNOR_MANOR_TRAINER_3] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Bedlam"),
@@ -787,7 +787,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE2_TRAINER_5] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Elijah"),
@@ -799,7 +799,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE2_TRAINER_6] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Darve"),
@@ -2148,7 +2148,7 @@ const struct Trainer gTrainers[] = {
     // ROUTE13
     [TRAINER_ROUTE13_TRAINER_1] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Ulgon"),
@@ -2160,7 +2160,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE13_TRAINER_2] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Mephisto"),
@@ -2172,7 +2172,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE13_TRAINER_3] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Socrates"),
@@ -2184,7 +2184,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE13_TRAINER_4] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Bellatro"),
@@ -2196,7 +2196,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE13_TRAINER_5] = //FINAL WIZARD, EVENT WITH DELRITH?
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Palagius"),
@@ -3594,7 +3594,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE_42_TRAINER_3] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_PKER,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("B0nediddly"),
@@ -3717,7 +3717,7 @@ const struct Trainer gTrainers[] = {
 //Route 47
     [TRAINER_ROUTE_47_TRAINER_1] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_NOOB,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Magnus"),
@@ -3729,7 +3729,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ROUTE_47_TRAINER_2] =
     {
-        .trainerClass = TRAINER_CLASS_DARK,
+        .trainerClass = TRAINER_CLASS_DARK_WIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_NOOB,
         .trainerPic = TRAINER_PIC_wizard_dark,
         .trainerName = _("Mognus"),

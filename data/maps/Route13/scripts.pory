@@ -10,10 +10,13 @@ mapscripts Route13_MapScripts {
 
 
 script Route13_STATE {
+    setflag(FLAG_TEMP_1E) //DELRITH
+
     if (var(VAR_POKESCAPE_GAMEMODE_STATE) == 1) //if OPENWORLD
     {
         removeobject(18)
         setflag(FLAG_ROUTE13_BLOCK)
+        setflag(FLAG_TEMP_1F) // Guard and Dark Wizard
     }
 
     if (!flag(FLAG_ROUTE13_BLOCK)) {    //if FALSE
@@ -32,6 +35,10 @@ script Route13_STATE {
         setobjectmovementtype(11, MOVEMENT_TYPE_WANDER_AROUND)
         setobjectmovementtype(19, MOVEMENT_TYPE_WANDER_AROUND)
         setobjectmovementtype(20, MOVEMENT_TYPE_WANDER_AROUND)
+    }
+
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) <= 235) { //TODO - Need the correct storymode value.
+        setflag(FLAG_TEMP_1F) // Guard and Dark Wizard
     }
     return
 }
@@ -203,9 +210,10 @@ script VARROCK_NPC_RATBURGUS
 
 script ROUTE14_QUESTER
 {
+    lock
     faceplayer
-    //namebox ("Quester")
-    msgbox(format("This is the champions guild.\pMake yourself worthy and you may one day become a member."))
+    namebox ("Quester")
+    msgbox(format("This is the Champions Guild.\pMake yourself worthy and you may one day be eligible to enter."))
     closemessage
     hidenamebox
     release
@@ -217,7 +225,7 @@ script ROUTE14_QUESTER
 script BATTLE_ROUTE13_DARKWIZARD_1 
 { //Raven. Mohawk raven-
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_1, format("Beware the might of Zamorak!"),format("Praise lord Zamorak!"))
-    namebox ("DARK WIZARD")
+    namebox ("Dark Wizard")
     msgbox(format("Praise lord Zamorak!"))
 	hidenamebox
     release
@@ -227,7 +235,7 @@ script BATTLE_ROUTE13_DARKWIZARD_1
 script BATTLE_ROUTE13_DARKWIZARD_2 
 { //Lesser demon. lesser tongue demon
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_2, format("This circle is taken, get lost kid."),format("And let that be a warning."))
-    namebox ("DARK WIZARD")
+    namebox ("Dark Wizard")
     msgbox(format("And let that be a warning."))
 	hidenamebox
     release
@@ -237,7 +245,7 @@ script BATTLE_ROUTE13_DARKWIZARD_2
 script BATTLE_ROUTE13_DARKWIZARD_3 
 { //Lesser demon (osrs) Lesser demon (black) Impx2
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_3, format("For the glory of Delrith!"),format("Just wait until we have the might of Delrith on our side."))
-    namebox ("DARK WIZARD")
+    namebox ("Dark Wizard")
     msgbox(format("Just wait until we have the might of Delrith on our side."))
 	hidenamebox
     release
@@ -247,7 +255,7 @@ script BATTLE_ROUTE13_DARKWIZARD_3
 script BATTLE_ROUTE13_DARKWIZARD_4 
 { //eam: Greater demon (rs3)
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_4, format("Step one: Aquire the circle.\pCheck.\pStep two: Summon the Demon…\pHmmm…\pHey, you! You are not supposed to be here!"),format("At least I know step 4 is to worship the demon."))
-    namebox ("DARK WIZARD")
+    namebox ("Dark Wizard")
     msgbox(format("At least I know step 4 is to worship the Demon."))
 	hidenamebox
     release
@@ -257,7 +265,7 @@ script BATTLE_ROUTE13_DARKWIZARD_4
 script BATTLE_ROUTE13_DARKWIZARD_5  //FINAL WIZARD, EVENT WITH DELRITH?
 { //Team: Imp, Black demon (winged), Spooky raven.
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_5, format(""),format(""))
-    namebox ("DARK WIZARD")
+    namebox ("Dark Wizard")
     msgbox(format(""))
 	hidenamebox
     release
@@ -267,7 +275,7 @@ script BATTLE_ROUTE13_DARKWIZARD_5  //FINAL WIZARD, EVENT WITH DELRITH?
 script BATTLE_ROUTE13_TRAINER_1 
 { //Chicken x6 (do some different formes maybe, but no full evos)
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_6, format("Where is Varok?"),format("Oh it is pronounced Varrock?"))
-    namebox ("NOOB")
+    //namebox ("Choob")
     msgbox(format("Where is Varok?\pOh it is pronounced Varrock?\pThat explains why I couldn't find it on my Newcomer Map.\pThanks bud."))
 	hidenamebox
     release
@@ -277,7 +285,7 @@ script BATTLE_ROUTE13_TRAINER_1
 script BATTLE_ROUTE13_TRAINER_2 
 {
     trainerbattle_single(TRAINER_ROUTE13_TRAINER_7, format("I am full of energy after jumping over that gate!"),format("I have run energy for days."))
-    namebox ("AGILE")
+    //namebox ("AGILE")
     msgbox(format("Beware on the road to Varrock.\pSome shady people have started residing in the old ruins near the gates.\pYou may want to take the east path instead."))
 	hidenamebox
     release
@@ -478,7 +486,32 @@ script PURO_PURO_EVENT_ROUTE13 {
 	return
 }
 
+script STORY_BLOCK_ROUTE13_GUARD_WIZARD {
+    random(5)
+        switch (var(VAR_RESULT)) {
+        case 0:
+            namebox("Varrock Guard")
+            msgbox(format("This one is for that poor noob you!"))
+        case 1:
+            namebox("Varrock Guard")
+            msgbox(format("Leave those poor adventurers alone you fiend!"))
+        case 2:
+            namebox("Dark Wizard")
+            msgbox(format("Once we revive Delrith your puny city will be destroyed!"))
+        case default:
+            namebox("Varrock Guard")
+            msgbox(format("Al Kharid?\pWhat does that have to do with anything?!"))
 
+        }
+    closemessage
+    release
+    end
+}
 
-
-
+script SIGNPOST_ROUTE13
+{
+    msgbox(format("Northwest - to Varrock.\nSoutheast - to Al Kharid.\lEast - to Digsite / Exam Centre.\nSouth - to Lumbridge."))
+    closemessage
+    release
+    end
+}

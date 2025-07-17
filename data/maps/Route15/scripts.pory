@@ -36,7 +36,7 @@ script RANDOM_EVENT_SPAWNS_ROUTE15 {
 
 script ROUTE15_SIGNPOST
 {
-    msgbox(format("NORTH - VARROCK.\lSOUTH - AL KHARID.\lEAST - DIGSITE."))
+    msgbox(format("North - to Varrock.\nSouth - to Al Kharid.\lEast - to Digsite / Exam Centre.\nWest - to Lumbridge."))
     closemessage
     release
     end
@@ -143,3 +143,16 @@ script BATTLE_ROUTE15_TRAINER_6
 }
 
 //I hear the digsite is nearby, but only members are allowed to excavate it.
+
+script STORY_BLOCK_ROUTE15_FLYERBOY {
+    lock
+    namebox ("Guard")
+    msgbox(format("Listen here kid, we've been informed of someone scamming adventurers out this way with flyers, you know anything about that do you?"))
+    namebox ("Ali the Kid")
+    msgbox(format("No sir, but here take this flyer.\pIt's a buy one get one free voucher for Ali's Pouch store in Al Kharid!"))
+    namebox ("Guard")
+    msgbox(format("Oh wow cool!\pHey wait a minute…\pThis is out of date!"))
+    closemessage
+    release
+    end
+}

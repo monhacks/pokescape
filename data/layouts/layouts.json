@@ -7304,8 +7304,8 @@
     {
       "id": "LAYOUT_AL_KHARID_HOUSE_1",
       "name": "AlKharid_House_1_Layout",
-      "width": 8,
-      "height": 8,
+      "width": 12,
+      "height": 10,
       "primary_tileset": "gTileset_PokeScapeIndoors",
       "secondary_tileset": "gTileset_IndoorTowns2",
       "border_filepath": "data/layouts/AlKharid_House_1/border.bin",

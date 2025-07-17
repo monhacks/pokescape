@@ -457,7 +457,7 @@ script BATTLE_ROUTE1_RIVER_TRAINER_2
 {
     trainerbattle_single(TRAINER_ROUTE1_RIVER_TRAINER_2, format("I need to get into Varrock for my quest but they've locked down access!\pArgh, I'm so mad I need to take out my anger in a battle!"),format("I lost?"))
     namebox ("Gelo Ball")
-    msgbox(format("The guards are blocking one entrance..\pSheep are blocking another.\pMaybe I should just give up on slaying that demon."))
+    msgbox(format("The guards are blocking one entrance…\pSheep are blocking another.\pMaybe I should just give up on slaying that demon."))
     hidenamebox
     release
     end

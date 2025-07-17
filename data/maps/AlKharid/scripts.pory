@@ -196,7 +196,7 @@ script ALKHARID_NPC_10
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("I'm glad I managed to get assigned as a guard outside the palace.\pTherer were too many adventurers coming into the palace and trapping my brothers behind furniture to kill them."))
+    msgbox(format("I'm glad I managed to get assigned as a guard outside the palace.\pThere were too many adventurers coming into the palace and trapping my brothers behind furniture."))
     closemessage
     hidenamebox
     release
@@ -218,7 +218,7 @@ script ALKHARID_NPC_12
 {
     faceplayer
     namebox ("Spirit Angler")
-    msgbox(format("The Spirit of the Sea has awoken and is creating intense storms for sailors.\pI wonder if there are any adventurers brave enough to defeat it."))
+    msgbox(format("There is a creature known as the Spirit of the Sea.\pThey say once it has awoken it will cause intense storms for sailors.\pLet's hope no one ever awakens it…"))
     closemessage
     hidenamebox
     release
@@ -238,10 +238,9 @@ script ALKHARID_NPC_13
 
 script ALKHARID_NPC_14
 {
-    //not currently in use
     faceplayer
-    namebox ("Cupholder")
-    msgbox(format("I am a Cupholder"))
+    namebox ("Guard")
+    msgbox(format("I'm guarding the bank, so don't think about doing anything that will make me have to actually work."))
     closemessage
     hidenamebox
     release
@@ -250,10 +249,9 @@ script ALKHARID_NPC_14
 
 script ALKHARID_NPC_15
 {
-    //not currently in use
     faceplayer
-    namebox ("Cupholder")
-    msgbox(format("I am a Cupholder"))
+    namebox ("Guard")
+    msgbox(format("Patrolling the streets is just one of the jobs of a Warrior of Al Khaird!"))
     closemessage
     hidenamebox
     release
@@ -262,10 +260,20 @@ script ALKHARID_NPC_15
 
 script ALKHARID_NPC_16
 {
-    //not currently in use
     faceplayer
-    namebox ("Cupholder")
-    msgbox(format("I am a Cupholder"))
+    namebox ("Guard")
+    msgbox(format("Have you ever noticed how shops have those newsletters on the desk?\pI wonder if anyone reads them…"))
+    closemessage
+    hidenamebox
+    release
+    end
+}
+
+script ALKHARID_NPC_17
+{
+    faceplayer
+    namebox ("Guard")
+    msgbox(format("Can you believe it?\pOur very own Prince Ali was choosen to be one of the MvM leaders!"))
     closemessage
     hidenamebox
     release
@@ -278,10 +286,9 @@ script ALKHARID_NPC_16
 
 script ALKHARID_INDOOR_NPC_1
 {
-    //not currently in use
     faceplayer
-    namebox ("Cupholder")
-    msgbox(format("Hello, I am a Cupholder."))
+    namebox ("Ranger")
+    msgbox(format("Do you give your monsters items to hold?\pYou probably should if you aren't already doing so."))
     closemessage
     hidenamebox
     release
@@ -292,7 +299,7 @@ script ALKHARID_INDOOR_NPC_2
 {
     faceplayer
     namebox ("Karim")
-    msgbox(format("Would you like to buy a nice kebab? Only one gold.{PAUSE 32}\nAre you sure you wouldn't like a kebab?"))
+    msgbox(format("Would you like to buy a nice kebab?\pOh hang on these aren't ready for consumption yet…\pWho knows what the effects would be if you were to eat one now."))
     closemessage
     hidenamebox
     release

@@ -1708,25 +1708,53 @@ static const u8 *ReturnEmptyStringIfNull(const u8 *string)
         return string;
 }
 
+
+void SpeakerNameTrainerClasses(void)
+{
+    //If trainer class is one of these trainers then use a different speaker name.
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_DARK_WIZARD) {
+        gSpeakerName = ("Dark Wizard");
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_HILL_GIANT) {
+        gSpeakerName = ("Hill Giant");
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MOSS_GIANT) {
+        gSpeakerName = ("Moss Giant");
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_FIRE_GIANT) {
+        gSpeakerName = ("Fire Giant");
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_FORGOTTEN) {
+        gSpeakerName = ("Forgotten Warrior");
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_ZAMORAK) {
+        gSpeakerName = ("Zamorakian Monk");
+    }
+}
+
 static const u8 *GetIntroSpeechOfApproachingTrainer(void)
 {
     if (FlagGet(FLAG_TZHAAR_RANDOM)) {
         if (gApproachingTrainerId == 0) {
-        gSpeakerName = gTrainersFightCaves[gTrainerBattleOpponent_A].trainerName;
-        return ReturnEmptyStringIfNull(sTrainerAIntroSpeech);
+            gSpeakerName = gTrainersFightCaves[gTrainerBattleOpponent_A].trainerName;
+            SpeakerNameTrainerClasses();
+            return ReturnEmptyStringIfNull(sTrainerAIntroSpeech);
         }
         else {
             gSpeakerName = gTrainersFightCaves[gTrainerBattleOpponent_B].trainerName;
+            SpeakerNameTrainerClasses();
             return ReturnEmptyStringIfNull(sTrainerBIntroSpeech);
         }
     }
     else {
         if (gApproachingTrainerId == 0) {
-        gSpeakerName = gTrainers[gTrainerBattleOpponent_A].trainerName;
-        return ReturnEmptyStringIfNull(sTrainerAIntroSpeech);
+            gSpeakerName = gTrainers[gTrainerBattleOpponent_A].trainerName;
+            SpeakerNameTrainerClasses();
+            return ReturnEmptyStringIfNull(sTrainerAIntroSpeech);
         }
         else {
             gSpeakerName = gTrainers[gTrainerBattleOpponent_B].trainerName;
+            SpeakerNameTrainerClasses();
             return ReturnEmptyStringIfNull(sTrainerBIntroSpeech);
         }
     }
