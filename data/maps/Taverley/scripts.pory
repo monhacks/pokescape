@@ -59,7 +59,7 @@ script TAVERLEY_BOY
 {
     faceplayer
     namebox ("Harvey")
-    msgbox(format("I kicked my ball over that hedge into that garden!\pThe old lady who lives there is scary... She's taken my ball and won't give it back."))
+    msgbox(format("I kicked my ball over that hedge into that garden!\pThe old lady who lives there is scary… She's taken my ball and won't give it back."))
     closemessage
     hidenamebox
     release

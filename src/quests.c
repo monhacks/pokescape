@@ -952,10 +952,81 @@ static const struct SubQuest sSubQuests_POWERPLANT_SCORPIONS[QUEST_POWERPLANT_SC
 	),
 };
 
-
-
-
-
+static const struct SubQuest sSubQuests_ANGRENOUILLE_QUEST[QUEST_ANGRENOUILLE_QUEST_SUB_COUNT] =
+{
+	sub_quest(
+	      62,
+	      gText_SubQuest_AngrenouilleQuest_Name1,
+	      gText_SubQuest_AngrenouilleQuest_Desc1,
+	      gText_MapName_Route1,
+	      SPECIES_FROGEEL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      63,
+	      gText_SubQuest_AngrenouilleQuest_Name2,
+	      gText_SubQuest_AngrenouilleQuest_Desc2,
+	      gText_MapName_Falador,
+	      SPECIES_FROGEEL_TRIAL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      64,
+	      gText_SubQuest_AngrenouilleQuest_Name3,
+	      gText_SubQuest_AngrenouilleQuest_Desc3,
+	      gText_MapName_MusaPoint,
+	      SPECIES_FROGEEL_TZHAAR,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      65,
+	      gText_SubQuest_AngrenouilleQuest_Name4,
+	      gText_SubQuest_AngrenouilleQuest_Desc4,
+	      gText_MapName_Route20,
+	      SPECIES_FROGEEL_REANIMATED,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      66,
+	      gText_SubQuest_AngrenouilleQuest_Name5,
+	      gText_SubQuest_AngrenouilleQuest_Desc5,
+	      gText_MapName_Edgeville,
+	      SPECIES_FROGEEL_CORPOREAL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      67,
+	      gText_SubQuest_AngrenouilleQuest_Name6,
+	      gText_SubQuest_AngrenouilleQuest_Desc6,
+	      gText_MapName_AlKharid,
+	      SPECIES_FROGEEL_STRYKEWYRM,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      68,
+	      gText_SubQuest_AngrenouilleQuest_Name7,
+	      gText_SubQuest_AngrenouilleQuest_Desc7,
+	      gText_MapName_Varrock,
+	      SPECIES_FROGEEL_ABYSSAL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      69,
+	      gText_SubQuest_AngrenouilleQuest_Name8,
+	      gText_SubQuest_AngrenouilleQuest_Desc8,
+	      gText_MapName_Daemonheim,
+	      SPECIES_FROGEEL_SEEKER,
+	      PKMN,
+	      sText_Delivered
+	),
+};
 
 
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -1073,7 +1144,16 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      sSubQuests_POWERPLANT_SCORPIONS,
 	      QUEST_POWERPLANT_SCORPIONS_SUB_COUNT
 	),
-	
+	side_quest(
+	      gText_SideQuestName_AngrenouilleQuest,
+	      gText_SideQuestDesc_AngrenouilleQuest,
+	      gText_SideQuestDesc_Completed_Banana_Boat,
+	      gText_MapName_Lumbridge,
+	      OBJ_EVENT_GFX_ANGRENNOUILLE,
+	      OBJECT,
+	      sSubQuests_ANGRENOUILLE_QUEST,
+	      QUEST_ANGRENOUILLE_QUEST_SUB_COUNT
+	),	
 
 
 	

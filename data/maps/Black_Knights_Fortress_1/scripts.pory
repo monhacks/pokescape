@@ -139,7 +139,7 @@ script BLACK_KNIGHT_QUIZ_2 //Mare //Double Battle
             hidenamebox
             facefollower
             namebox("Sir Owen")
-            msgbox(format(".....\p{PLAYER}, something within me felt like we should have taken a loss here...."))
+            msgbox(format(".....\p{PLAYER}, something within me felt like we should have taken a loss here…"))
             closemessage
             hidenamebox
             setvar(VAR_BKF_QUIZ_2, 1) // Not Caught
@@ -225,7 +225,7 @@ script BKFORT_1F_NPC_5
 	lock
     faceplayer
     namebox ("Guard")
-    msgbox(format("I don't know if this special guest was cosplaying or just had poor fashion sense but they were dressed entirely in pink..."))
+    msgbox(format("I don't know if this special guest was cosplaying or just had poor fashion sense but they were dressed entirely in pink…"))
     closemessage
     hidenamebox
     release
@@ -237,7 +237,7 @@ script BKFORT_1F_NPC_6
 	lock
     faceplayer
     namebox ("Guard")
-    msgbox(format("I just really want to finish my book, and for the two characters to get their happy ever after.\pIt has been giving me hope that one day I might have the courage to pursue my love..."))
+    msgbox(format("I just really want to finish my book, and for the two characters to get their happy ever after.\pIt has been giving me hope that one day I might have the courage to pursue my love…"))
     closemessage
     hidenamebox
     release
@@ -249,7 +249,7 @@ script BKFORT_1F_NPC_7
 	lock
     faceplayer
     namebox ("Guard")
-    msgbox(format("Don't mind me, I am just staying out of the way.\pThat way I can't mess anything up again..."))
+    msgbox(format("Don't mind me, I am just staying out of the way.\pThat way I can't mess anything up again…"))
     closemessage
     hidenamebox
     release
@@ -261,7 +261,7 @@ script BKFORT_1F_NPC_8
 	lock
     faceplayer
     namebox ("Guard")
-    msgbox(format("I hate being posted here!\pI can hear the screams of the prisoners from the basement...{PAUSE 15}\pJust makes me really sad I'm not the one down there torturing them..."))
+    msgbox(format("I hate being posted here!\pI can hear the screams of the prisoners from the basement…{PAUSE 15}\pJust makes me really sad I'm not the one down there torturing them…"))
     closemessage
     hidenamebox
     release
@@ -273,7 +273,7 @@ script BKFORT_1F_NPC_9
 	lock
     faceplayer
     namebox ("Qu3stL0ck")
-    msgbox(format("Whoever wrote this guide is an idiot!\pIt clearly says bring a cabbage, but this witch wants a MONSTER Cabbage and not the item!\pI'm going to have to trek all the way back to a Bank now..."))
+    msgbox(format("Whoever wrote this guide is an idiot!\pIt clearly says bring a cabbage, but this witch wants a MONSTER Cabbage and not the item!\pI'm going to have to trek all the way back to a Bank now…"))
     closemessage
     hidenamebox
     release

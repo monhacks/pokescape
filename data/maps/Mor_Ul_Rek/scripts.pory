@@ -442,7 +442,7 @@ script TZHAAR_NPC_15
 }
 
 
-//Would like to include some variable dialogue for after you have completed the Gym challenge? Maybe 'Ga'al not die in...caves like other Ga'al. All thanks to...you!'
+//Would like to include some variable dialogue for after you have completed the Gym challenge? Maybe 'Ga'al not die in… caves like other Ga'al. All thanks to… you!'
 
 script TZHAAR_OZAN
 {

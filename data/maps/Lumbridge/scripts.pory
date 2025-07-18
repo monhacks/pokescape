@@ -437,7 +437,7 @@ script NPC_LumbridgeBridge
 	lock
 	faceplayer
 	namebox("Fisherman")
-	msgbox(format("Is it just me or is this really long?\pNah, I must be imagining it.\p{PAUSE 15}Wait, I'm SURE the river used to be wider than this..."))
+	msgbox(format("Is it just me or is this really long?\pNah, I must be imagining it.\p{PAUSE 15}Wait, I'm SURE the river used to be wider than this…"))
 	release
 	end
 }
@@ -1001,7 +1001,7 @@ script Lumbridge_GRAVEYARD_SIGN_1
 script Lumbridge_GRAVEYARD_SIGN_2
 {
 	lock
-	msgbox(format("The grave is simply marked with the letter 'J'.\pThere is a tattered scroll with the number 17 written on it, along with a bloody harpoon.\pYou decide it's best to leave that alone..."))
+	msgbox(format("The grave is simply marked with the letter 'J'.\pThere is a tattered scroll with the number 17 written on it, along with a bloody harpoon.\pYou decide it's best to leave that alone…"))
 	release
 	end
 }
@@ -1065,7 +1065,7 @@ script Lumbridge_River_NPC3 {
         case 2: 
             msgbox(format("If you find any rare fish, could you let minnow?"))
         case 3: 
-            msgbox(format("You’re krilling me with these sea-rious vibes..."))
+            msgbox(format("You're krilling me with these sea-rious vibes…"))
         case 4: 
             msgbox(format("Speak up, I'm hard of herring."))
         case 5: 
@@ -1104,9 +1104,9 @@ script BATTLE_LUMBRIDGE_RIVER_TRAINER_2
 
 script BATTLE_LUMBRIDGE_RIVER_TRAINER_3
 {
-    trainerbattle_single(TRAINER_LUMBRIDGE_RIVER_TRAINER_3, format("I fell off the bridge when it got destroyed.\pPlease help me, I want to go back to land..."),format("Please!!"))
+    trainerbattle_single(TRAINER_LUMBRIDGE_RIVER_TRAINER_3, format("I fell off the bridge when it got destroyed.\pPlease help me, I want to go back to land…"),format("Please!!"))
     namebox ("ofRats")
-    msgbox(format("I said help me, not fight me!\nPlease get me to land!\nI dont know how to steer a boat.\nPlease don't leave me out here..."))
+    msgbox(format("I said help me, not fight me!\nPlease get me to land!\nI dont know how to steer a boat.\nPlease don't leave me out here…"))
     hidenamebox
     release
     end

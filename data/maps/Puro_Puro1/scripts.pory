@@ -114,7 +114,7 @@ script PURO_IRONMAN_1{
     lock
     faceplayer
     namebox("Ironman")
-    msgbox(format("I need to try and catch thousands of eclectic implings to stack medium clue scrolls and get myself a pair of Ranger boots!\p{PAUSE 15}But I've been here for hours and not seen a single eclectic impling..."))
+    msgbox(format("I need to try and catch thousands of eclectic implings to stack medium clue scrolls and get myself a pair of Ranger boots!\p{PAUSE 15}But I've been here for hours and not seen a single eclectic impling…"))
     hidenamebox
     closemessage
     release

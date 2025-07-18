@@ -416,7 +416,7 @@ script BATTLE_ROUTE12_RIVER_TRAINER_1
 {
 	trainerbattle_single(TRAINER_ROUTE12_RIVER_TRAINER_1, format("The water looks very deep here, but let us not trace into a deep conversation and battle instead."),format("So deep I nearly drowned!"))
 	namebox("Ulrik")
-	msgbox(format("The perceived depth and actual depth may differ.\pThis goes for anything, water, literature...\nEven this conversation."))
+	msgbox(format("The perceived depth and actual depth may differ.\pThis goes for anything, water, literature…\nEven this conversation."))
 	hidenamebox
 	closemessage
 	end
@@ -648,7 +648,7 @@ script NPC_ROUTE12_IRONMAN {
     random(7)
     switch (var(VAR_RESULT)) {
         case 0: 
-            msgbox(format("I got 99 Woodcutting with a steel axe without ever leaving Lumbridge!\pI think I'm the reason Bob is out of axes.\pNow where is that Woodcutting Tutor with my cape..."))
+            msgbox(format("I got 99 Woodcutting with a steel axe without ever leaving Lumbridge!\pI think I'm the reason Bob is out of axes.\pNow where is that Woodcutting Tutor with my cape…"))
         case 1: 
             msgbox(format("With how my routes rolled, it took me 2 years to finish Cook's Assistant."))
         case 2: 
@@ -658,9 +658,9 @@ script NPC_ROUTE12_IRONMAN {
         case 4: 
             msgbox(format("The extreme part of a extreme one route ironman means absolutely no exceptions to my rules!"))
         case 5: 
-            msgbox(format("I smelted so many bronze bars in the Lumbridge Furnace that I think I broke it...\pApparently they've had to send a dwarf all the way from near Falador to fix it."))
+            msgbox(format("I smelted so many bronze bars in the Lumbridge Furnace that I think I broke it…\pApparently they've had to send a dwarf all the way from near Falador to fix it."))
         case 6: 
-            msgbox(format("There's a gnome near the windmill that is looking for an item.\pDo you have any idea where it could be?\pI can't roll my next route until I find it.\p{PAUSE 15}...\p{PAUSE 15}I... must... find... it!"))
+            msgbox(format("There's a gnome near the windmill that is looking for an item.\pDo you have any idea where it could be?\pI can't roll my next route until I find it.\p{PAUSE 15}…\p{PAUSE 15}I… must… find… it!"))
     }
     hidenamebox
     closemessage
@@ -721,7 +721,7 @@ script NPC_ROUTE12_BOAT_1 {     //Not in use
     lock
 	faceplayer
 	namebox("L0st2theS3a")
-    msgbox(format("I picked up a courier task to deliver from lobsters from Musa Point to Catherby.\pI have absolutely no idea how I ended up here, though.\pI just got caught up in the currents...\pI'm just continuing to follow them and hoping for the best."))
+    msgbox(format("I picked up a courier task to deliver from lobsters from Musa Point to Catherby.\pI have absolutely no idea how I ended up here, though.\pI just got caught up in the currents…\pI'm just continuing to follow them and hoping for the best."))
     hidenamebox
 	closemessage
 	release

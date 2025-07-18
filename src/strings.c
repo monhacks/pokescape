@@ -2124,9 +2124,9 @@ const u8 gText_MapName_Edgeville[] = _("Edgeville");
 const u8 gText_MapName_BarbarianVillage[] = _("Barbarian Village");
 const u8 gText_MapName_Daemonheim[] = _("Daemonheim");
 const u8 gText_MapName_WildernessCrater[] = _("Wilderness Crater");
+const u8 gText_MapName_MusaPoint[] = _("Musa Point");
 
-
-
+const u8 gText_MapName_Route20[] = _("Route 20");
 
 const u8 gText_SideQuestName_Main_Story[] = _("Main Story");
 const u8 gText_SideQuestDesc_Main_Story[] = _("Follow the story of PokeScape.");
@@ -2193,7 +2193,24 @@ const u8 gText_SubQuest_QuestPowerPlantScorpions_Desc3[] = _("You defeated some 
 const u8 gText_SubQuest_QuestPowerPlantScorpions_Name4[] = _("Still not enough…");
 const u8 gText_SubQuest_QuestPowerPlantScorpions_Desc4[] = _("Nulodion rewarded you with\nsome junk.");
 
-
+const u8 gText_SideQuestName_AngrenouilleQuest[] = _("Frogeelman Quest");
+const u8 gText_SideQuestDesc_AngrenouilleQuest[] = _("Who is this mysterious, yet dashing rogue?");
+const u8 gText_SubQuest_AngrenouilleQuest_Name1[] = _("A Ribbeting Tale");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc1[] = _("Once upon a time, you met a frog\nprince. Thankfully he didn't want a kiss.");
+const u8 gText_SubQuest_AngrenouilleQuest_Name2[] = _("An Un-frog-ettable Exit");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc2[] = _("You watched Angrenouille evade\ncapture after stealing from the White Knights.");
+const u8 gText_SubQuest_AngrenouilleQuest_Name3[] = _("Don't Frog-et About Me");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc3[] = _("You encounter Angrenouille again\nat Musa Point. He's still as eccentric as ever.");
+const u8 gText_SubQuest_AngrenouilleQuest_Name4[] = _("Toad-ally In Love");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc4[] = _("Angrenouille tried, and failed, to\nfind love with a barbarian woman. Ouch!");
+const u8 gText_SubQuest_AngrenouilleQuest_Name5[] = _("We're Making Frog-ress"); //edgeville
+const u8 gText_SubQuest_AngrenouilleQuest_Desc5[] = _("You helped Angrenouille decide whether\nto go to Varrock. Or Al Kharid. Or both. Or neither?");
+const u8 gText_SubQuest_AngrenouilleQuest_Name6[] = _("Amphibious, not Ambiguous!");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc6[] = _("You think you stopped Angrenouille from\nrobbing Al Kharid palace. Maybe?");
+const u8 gText_SubQuest_AngrenouilleQuest_Name7[] = _("Now Who's Unhoppy?");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc7[] = _("Angrenouille fails to steal his most valuable\nprize yet. The Queen's heart.");
+const u8 gText_SubQuest_AngrenouilleQuest_Name8[] = _("Asking for Frog-iveness");
+const u8 gText_SubQuest_AngrenouilleQuest_Desc8[] = _("After all this time, you think\n you can finally call Angrenouille a friend.");
 
 //names
 

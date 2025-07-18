@@ -15,7 +15,7 @@ script BATTLE_ROUTE_51_EFFIGY
 
 script BATTLE_ROUTE_51_GUNS
 {
-    trainerbattle_single(TRAINER_ROUTE_51_GUNS, format("8,999\p9,000\p9,001\p...\p9,002..13?\pArgh! You made me lose count! I'll beat you to...urghh...a pulp!"),format("I could really do with a good kebab and a cold beer down the pub right about now."))
+    trainerbattle_single(TRAINER_ROUTE_51_GUNS, format("8,999\p9,000\p9,001\p…\p9,002..13?\pArgh! You made me lose count! I'll beat you to… urghh… a pulp!"),format("I could really do with a good kebab and a cold beer down the pub right about now."))
     namebox ("'The Guns'")
     msgbox(format("I could really do with a good kebab and a cold beer down the pub right about now."))
 	hidenamebox
@@ -63,7 +63,7 @@ script ROUTE51_BUILDER_4
 {
     faceplayer
     namebox ("'No fingers'")
-    msgbox(format("Don't suppose you've seen any boots around here? Size nine, steel toed, brown leather...\pI think some adventurer mighta nicked 'em!"))
+    msgbox(format("Don't suppose you've seen any boots around here? Size nine, steel toed, brown leather…\pI think some adventurer mighta nicked 'em!"))
     closemessage
     hidenamebox
     release

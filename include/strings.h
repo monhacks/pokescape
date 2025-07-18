@@ -3329,6 +3329,9 @@ extern const u8 gText_MapName_MelzarsMaze[];
 extern const u8 gText_MapName_DwarvenMines[];
 extern const u8 gText_MapName_Crandor[];
 extern const u8 gText_MapName_IceMountain[];
+extern const u8 gText_MapName_MusaPoint[];
+
+extern const u8 gText_MapName_Route20[];
 
 extern const u8 gText_SideQuestName_Main_Story[];
 extern const u8 gText_SideQuestDesc_Main_Story[];
@@ -3387,6 +3390,24 @@ extern const u8 gText_SubQuest_QuestPowerPlantScorpions_Desc3[];
 extern const u8 gText_SubQuest_QuestPowerPlantScorpions_Name4[];
 extern const u8 gText_SubQuest_QuestPowerPlantScorpions_Desc4[];
 
+extern const u8 gText_SideQuestName_AngrenouilleQuest[];
+extern const u8 gText_SideQuestDesc_AngrenouilleQuest[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name1[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc1[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name2[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc2[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name3[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc3[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name4[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc4[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name5[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc5[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name6[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc6[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name7[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc7[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Name8[];
+extern const u8 gText_SubQuest_AngrenouilleQuest_Desc8[];
 
 /*
 

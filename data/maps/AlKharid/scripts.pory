@@ -119,7 +119,7 @@ script ALKHARID_NPC_3
 {
     faceplayer
     namebox ("BigPencil55")
-    msgbox(format("Welcome to Al Kharid, NOOB!\nYeah, so what if I snuck in while the guards were distracted..."))
+    msgbox(format("Welcome to Al Kharid, NOOB!\nYeah, so what if I snuck in while the guards were distracted…"))
     closemessage
     hidenamebox
     release
@@ -207,7 +207,7 @@ script ALKHARID_NPC_11
 {
     faceplayer
     namebox ("Man")
-    msgbox(format("We deal with a lot of thieves and cutthroats here.\pAl Kharid does not welcome them, yet they keep coming back..."))
+    msgbox(format("We deal with a lot of thieves and cutthroats here.\pAl Kharid does not welcome them, yet they keep coming back…"))
     closemessage
     hidenamebox
     release
@@ -251,7 +251,7 @@ script ALKHARID_NPC_15
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("Patrolling the streets is just one of the jobs of a Warrior of Al Khaird!"))
+    msgbox(format("Patrolling the streets is just one of the jobs of a Warrior of Al Kharid!"))
     closemessage
     hidenamebox
     release
@@ -273,7 +273,7 @@ script ALKHARID_NPC_17
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("Can you believe it?\pOur very own Prince Ali was choosen to be one of the MvM leaders!"))
+    msgbox(format("Can you believe it?\pOur very own Prince Ali was chosen to be one of the MvM leaders!"))
     closemessage
     hidenamebox
     release
@@ -358,11 +358,11 @@ script Friendship_Checker_Ellis {
 	lock
 	faceplayer
 	namebox ("Ellis")
-	msgbox(format("I've spent so many years working with monster hide, that I can tell a lot about a monster just by looking at it.\pHmm, let me see here..."))
+	msgbox(format("I've spent so many years working with monster hide, that I can tell a lot about a monster just by looking at it.\pHmm, let me see here…"))
 	specialvar (VAR_RESULT, GetLeadMonFriendshipScore)
 	switch(var(VAR_RESULT)) {
 		case 0:
-			msgbox(format("Its hide looks incredibly rough and calloused.\pYou either haven't adventurered with it long, or you abuse the poor creature..."))
+			msgbox(format("Its hide looks incredibly rough and calloused.\pYou either haven't adventurered with it long, or you abuse the poor creature…"))
     		msgbox(format("FRIENDSHIP is: FRIENDSHIP NONE."))
 		case 1:
 			msgbox(format("This monster has such a bleak complexion.\pIt looks like the two of you have a very poor relationship.\pYou really need to work on that."))
@@ -758,7 +758,7 @@ script BATTLE_FROGEEL_RIVAL_6 {
         trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_6_WATER, format("Seeya!"))
     }
     namebox("Angrenouille")
-    msgbox(format("A\nAAA\nAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pB!\p...{PAUSE 15}\lNo, that's wrong.{PAUSE 15}\pAA!\lThat's better."))
+    msgbox(format("A\nAAA\nAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pB!\p…{PAUSE 15}\lNo, that's wrong.{PAUSE 15}\pAA!\lThat's better."))
     closemessage
     hidenamebox
     playse(SE_FLEE)

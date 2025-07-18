@@ -693,7 +693,7 @@ script RAC_QUEST_START_P3_JATIZSO
     lock
     faceplayer
     namebox ("King")
-    msgbox(format("How dare you approach me?!\pWhat do you want?\p…{PAUSE 15} …{PAUSE 15} …{PAUSE 15} …{PAUSE 15} …\pI see, you desire to have Honourable Holmgang with me?\pPAH! I don’t even know who you are!\pFor all I know you could be a filthy Yak lover from Neitiznot!\pAnyway I am way too busy preparing for a battle against Neitiznot.\pI will not even consider your challenge until the battle is won.\pSince you are here, I shall recruit you!\pProve yourself and I might just consider your challenge.\pGo speak with Jaxyys and they will give you more details.\pNow go away.\nI am done with you."))
+    msgbox(format("How dare you approach me?!\pWhat do you want?\p…{PAUSE 15} …{PAUSE 15} …{PAUSE 15} …{PAUSE 15} …\pI see, you desire to have Honourable Holmgang with me?\pPAH! I don't even know who you are!\pFor all I know you could be a filthy Yak lover from Neitiznot!\pAnyway I am way too busy preparing for a battle against Neitiznot.\pI will not even consider your challenge until the battle is won.\pSince you are here, I shall recruit you!\pProve yourself and I might just consider your challenge.\pGo speak with Jaxyys and they will give you more details.\pNow go away.\nI am done with you."))
     setvar(VAR_POKESCAPE_RAC_QUEST_STATE, 15)
     closemessage
     hidenamebox

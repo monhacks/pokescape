@@ -886,6 +886,36 @@ static const u8 sText_Hans_PlayerLost[] = _("Back to Lumbridge {PLAYER}!{PAUSE_U
 static const u8 sText_Zanik_BeforeFirstTurn[] = _("We dont need gods, because we can fight anything when we stand together.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Zanik_SwitchIn[] = _("We can never surrender, not as long as we can fight.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Zanik_PlayerLost[] = _("Nothing can stand up to my crossbow!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_FirstDown[] = _("Stubborn pest aren't you?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_SwitchIn[] = _("I saved the best for last you little thorn in my side.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_PlayerMonUnaffected[] = _("I still don't get these darn monsters. It is like when spells splash?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_PlayerLost[] = _("No backbone huh? Didn't expect more from someone like you.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_BeforeFirstTurn[] = _("Just so you know I am really not feeling this.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_SwitchIn[] = _("Could we end this quick? This is getting tiresome.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_PlayerMonUnaffected[] = _("Oops. Maybe I should pay more attention.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_PlayerLost[] = _("Why did you even ask for a fight if you are going to lose?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_SuperEffective[] = _("Got a tactic in mind do you?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_FirstSTABMove[] = _("Seems you are no pushover.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_FirstDown[] = _("Do not underestimate the Duke of Lumbridge.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_SwitchIn[] = _("Do not go thinking this will be a piece of cake.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_PlayerLost[] = _("A lot of bark but no bite. I think you need more training or a proper plan to beat me!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_SuperEffective[] = _("You would make it far among the White Knights.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_FirstDown[] = _("Plenty of fish in the sea, plenty of knights in the castle.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_SwitchIn[] = _("Piety in even the toughest of fights is but one of the White Knights' values.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_PlayerLost[] = _("When you fight like that I almost regret inviting you into the White Knights.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_SuperEffective[] = _("May the endurance of these trials weigh heavily upon you JalYt.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_FirstDown[] = _("Are you feeling the heat yet?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_LastLowHp[] = _("Impressive JalYt.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_SwitchIn[] = _("Truly a battle worthy of the Fight Caves.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_PlayerLost[] = _("There is no dishonour in attempting the trials anew young JalYt!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_CriticalHit[] = _("RUUUARRRGHHHH!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_SuperEffective[] = _("GRRRUUUUAAARGHHH!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_FirstSTABMove[] = _("ROOOAAAAARRRR!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_PlayerMonUnaffected[] = _("WOOOOAAAAHHHHH!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_FirstDown[] = _("RUUUUAAARRGGGHHH!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_SwitchIn[] = _("GRRRUUUAAARRGGGHHHH!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Gunthor_PlayerLost[] = _("MRRRGWAAAAAAAARGHHH!{PAUSE_UNTIL_PRESS}");
+
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1627,7 +1657,35 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ZANIK_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Zanik_BeforeFirstTurn,
     [STRINGID_ZANIK_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Zanik_SwitchIn,
     [STRINGID_ZANIK_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Zanik_PlayerLost,
-
+    [STRINGID_PATTY_LIGHTHOUSE_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_PattyLighthouse_FirstDown,
+    [STRINGID_PATTY_LIGHTHOUSE_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_PattyLighthouse_SwitchIn,
+    [STRINGID_PATTY_LIGHTHOUSE_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_PattyLighthouse_PlayerMonUnaffected,
+    [STRINGID_PATTY_LIGHTHOUSE_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_PattyLighthouse_PlayerLost,
+    [STRINGID_BABE_MELZARS_MAZE_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_BabeMelzarsMaze_BeforeFirstTurn,
+    [STRINGID_BABE_MELZARS_MAZE_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_BabeMelzarsMaze_SwitchIn,
+    [STRINGID_BABE_MELZARS_MAZE_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_BabeMelzarsMaze_PlayerMonUnaffected,
+    [STRINGID_BABE_MELZARS_MAZE_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_BabeMelzarsMaze_PlayerLost,
+    [STRINGID_DUKE_HORACIO_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_DukeHoracio_SuperEffective,
+    [STRINGID_DUKE_HORACIO_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_DukeHoracio_FirstSTABMove,
+    [STRINGID_DUKE_HORACIO_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_DukeHoracio_FirstDown,
+    [STRINGID_DUKE_HORACIO_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_DukeHoracio_SwitchIn,
+    [STRINGID_DUKE_HORACIO_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_DukeHoracio_PlayerLost,
+    [STRINGID_SIR_AMIK_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_SirAmik_SuperEffective,
+    [STRINGID_SIR_AMIK_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_SirAmik_FirstDown,
+    [STRINGID_SIR_AMIK_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_SirAmik_SwitchIn,
+    [STRINGID_SIR_AMIK_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_SirAmik_PlayerLost,
+    [STRINGID_KIMIT_KAL_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_KimitKal_SuperEffective,
+    [STRINGID_KIMIT_KAL_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_KimitKal_FirstDown,
+    [STRINGID_KIMIT_KAL_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_KimitKal_LastLowHp,
+    [STRINGID_KIMIT_KAL_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_KimitKal_SwitchIn,
+    [STRINGID_KIMIT_KAL_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_KimitKal_PlayerLost,
+    [STRINGID_GUNTHOR_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_CriticalHit,
+    [STRINGID_GUNTHOR_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_SuperEffective,
+    [STRINGID_GUNTHOR_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_FirstSTABMove,
+    [STRINGID_GUNTHOR_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_PlayerMonUnaffected,
+    [STRINGID_GUNTHOR_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_FirstDown,
+    [STRINGID_GUNTHOR_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_SwitchIn,
+    [STRINGID_GUNTHOR_MESSAGE_7 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_PlayerLost,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -4274,6 +4332,59 @@ static const struct TrainerSlide sTrainerSlides[] =
     },
 
     {
+        .trainerId = TRAINER_LIGHTHOUSE_3F_HAM_ADMIN_PATTY,    //Patty battle one
+        .msgFirstDown = sText_PattyLighthouse_FirstDown,
+        .msgLastSwitchIn = sText_PattyLighthouse_SwitchIn,
+        .msgPlayerMonUnaffected = sText_PattyLighthouse_PlayerMonUnaffected,
+        .msgPlayerLost = sText_PattyLighthouse_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MELZARSMAZE_HAM_ADMIN_BABE,    //Babe battle one
+        .msgBeforeFirstTurn = sText_BabeMelzarsMaze_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_BabeMelzarsMaze_SwitchIn,
+        .msgPlayerMonUnaffected = sText_BabeMelzarsMaze_PlayerMonUnaffected,
+        .msgPlayerLost = sText_BabeMelzarsMaze_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_LEADER_DUKE_1,    //Duke Horacio
+        .msgFirstSuperEffectiveHit = sText_DukeHoracio_SuperEffective,
+        .msgFirstSTABMove = sText_DukeHoracio_FirstSTABMove,
+        .msgFirstDown = sText_DukeHoracio_FirstDown,
+        .msgLastSwitchIn = sText_DukeHoracio_SwitchIn,
+        .msgPlayerLost = sText_DukeHoracio_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FALADOR_GYM_AMIKVARZE,    //Sir Amik
+        .msgFirstSuperEffectiveHit = sText_SirAmik_SuperEffective,
+        .msgFirstDown = sText_SirAmik_FirstDown,
+        .msgLastSwitchIn = sText_SirAmik_SwitchIn,
+        .msgPlayerLost = sText_SirAmik_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_GYM_LEADER_TZHAAR_CHAMPION_1,    //Kimit Kal
+        .msgFirstSuperEffectiveHit = sText_KimitKal_SuperEffective,
+        .msgFirstDown = sText_KimitKal_FirstDown,
+        .msgLastLowHp = sText_KimitKal_LastLowHp,
+        .msgLastSwitchIn = sText_KimitKal_SwitchIn,
+        .msgPlayerLost = sText_KimitKal_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_GYM_LEADER_TZHAAR_CHAMPION_1,    //Gunthor
+        .msgFirstCriticalHit = sText_Gunthor_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Gunthor_SuperEffective,
+        .msgFirstSTABMove = sText_Gunthor_FirstSTABMove,
+        .msgPlayerMonUnaffected = sText_Gunthor_PlayerMonUnaffected,
+        .msgFirstDown = sText_Gunthor_FirstDown,
+        .msgLastSwitchIn = sText_Gunthor_SwitchIn,
+        .msgPlayerLost = sText_Gunthor_PlayerLost,
+    },
+
+    {
         .trainerId = TRAINER_ELITE4_SIR_TIFFY_1,
         .msgBeforeFirstTurn = sText_SirTiffy_BeforeFirstTurn,
         .msgLastSwitchIn = sText_SirTiffy_SwitchIn,
@@ -4294,7 +4405,7 @@ static const struct TrainerSlide sTrainerSlides[] =
         .msgPlayerLost = sText_Hans_PlayerLost,
     },
 
-        {
+    {
         .trainerId = TRAINER_ELITE4_HANS_1_FIRE,
         .msgFirstDown = sText_Hans_FirstDown,
         .msgLastSwitchIn = sText_Hans_SwitchIn,

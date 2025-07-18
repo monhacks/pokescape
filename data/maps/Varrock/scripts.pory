@@ -992,7 +992,7 @@ script NPC_VARROCK_PILLORY_MUGGER
     lock
     faceplayer
     namebox ("Mugger")
-	msgbox(format("Argh! My fingers are so numb from all the pickpocketing I've been doing that I can't pick this damn lock to escape..."))
+	msgbox(format("Argh! My fingers are so numb from all the pickpocketing I've been doing that I can't pick this damn lock to escape…"))
     closemessage
     hidenamebox
 	release

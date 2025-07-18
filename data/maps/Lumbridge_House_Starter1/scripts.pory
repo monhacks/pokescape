@@ -239,6 +239,12 @@ script FIND_ITEM_MEAT_PIE_SANDWICH
     end
 }
 
+script FIND_ITEM_KEBAB
+{
+    finditem(ITEM_KEBAB_SANDWICH)
+    end
+}
+
 //BERRIES
 
 script FIND_ITEM_APPLES

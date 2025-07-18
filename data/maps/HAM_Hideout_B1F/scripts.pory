@@ -1122,7 +1122,7 @@ script NPC_HAM_HIDEOUT_B1F_14
 		    release
 		    end
         case 1:
-            msgbox(format("Let them not infest our cities and towns..."))
+            msgbox(format("Let them not infest our cities and towns…"))
             hidenamebox
 		    release
 		    end
@@ -1137,7 +1137,7 @@ script NPC_HAM_HIDEOUT_B1F_14
 		    release
 		    end
         case 4:
-            msgbox(format("If thine monsters visage does frighten thee, then tear it off I say... tear it off!"))
+            msgbox(format("If thine monsters visage does frighten thee, then tear it off I say… tear it off!"))
             hidenamebox
 		    release
 		    end
@@ -1157,7 +1157,7 @@ script NPC_HAM_HIDEOUT_B1F_14
 		    release
 		    end
         case 8:
-            msgbox(format("Where do we go for safety from these monsters... here, with our brethren!"))
+            msgbox(format("Where do we go for safety from these monsters… here, with our brethren!"))
             hidenamebox
 		    release
 		    end

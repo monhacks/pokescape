@@ -63,7 +63,7 @@ script BKFORT_4F_NPC_4 //Right middle Black Knight
     lock
     faceplayer
     namebox ("Black Knight")
-    msgbox(format("Please don't look at me.\pI don't want any trouble.\pI am just going to look in these boxes, and if anybody asks you snuck past me..."))
+    msgbox(format("Please don't look at me.\pI don't want any trouble.\pI am just going to look in these boxes, and if anybody asks you snuck past me…"))
     closemessage
     hidenamebox
     applymovement(19, MOVEMENT_FACE_RIGHT)
@@ -199,7 +199,7 @@ script BKFORT_4F_BOOK_3
 	msgbox(format("A book on the Kinshra catches your eye.\pWould you like to read it?"), MSGBOX_YESNO)
         if (var(VAR_RESULT))
         { 
-            msgbox(format("Volume ??\pPossible future plans.\pLocate a tomb in the north, and use the power within to raise an army of the undead.\p{PAUSE 15}Enslave some druids in Taverley, and use their magic to bolster our monsters.\p{PAUSE 15}Resume contact with the witch in the west to capture a King Arthur and take over Camelot.\p{PAUSE 15}Prevent the White Knights from retrieving the Holy Grail.\pUse the Humans Against Monsters organisation to locate a monster of immense power capable of...\p{PAUSE 15}The rest of the page appears to have been hurriedly torn out."))
+            msgbox(format("Volume ??\pPossible future plans.\pLocate a tomb in the north, and use the power within to raise an army of the undead.\p{PAUSE 15}Enslave some druids in Taverley, and use their magic to bolster our monsters.\p{PAUSE 15}Resume contact with the witch in the west to capture a King Arthur and take over Camelot.\p{PAUSE 15}Prevent the White Knights from retrieving the Holy Grail.\pUse the Humans Against Monsters organisation to locate a monster of immense power capable of…\p{PAUSE 15}The rest of the page appears to have been hurriedly torn out."))
         }
     closemessage
 	release
@@ -358,7 +358,7 @@ script BATTLE_BLACKKNIGHT_SIFT
 {
     trainerbattle_single(TRAINER_BLACKKNIGHT_SIFT, format("I can't let you through here."),format("Oh, I am definitely getting fired for this!"))
     namebox ("Black Knight")
-    msgbox(format("Maybe I should take some of this loot for myself and blame it on you..."))
+    msgbox(format("Maybe I should take some of this loot for myself and blame it on you…"))
 	hidenamebox
     release
 	end

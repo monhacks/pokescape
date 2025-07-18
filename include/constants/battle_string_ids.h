@@ -747,8 +747,39 @@
 #define STRINGID_ZANIK_MESSAGE_1                      745
 #define STRINGID_ZANIK_MESSAGE_2                      746
 #define STRINGID_ZANIK_MESSAGE_3                      747
+#define STRINGID_PATTY_LIGHTHOUSE_MESSAGE_1           748
+#define STRINGID_PATTY_LIGHTHOUSE_MESSAGE_2           749
+#define STRINGID_PATTY_LIGHTHOUSE_MESSAGE_3           750
+#define STRINGID_PATTY_LIGHTHOUSE_MESSAGE_4           751
+#define STRINGID_BABE_MELZARS_MAZE_MESSAGE_1          752
+#define STRINGID_BABE_MELZARS_MAZE_MESSAGE_2          753
+#define STRINGID_BABE_MELZARS_MAZE_MESSAGE_3          754
+#define STRINGID_BABE_MELZARS_MAZE_MESSAGE_4          755
+#define STRINGID_DUKE_HORACIO_MESSAGE_1               756
+#define STRINGID_DUKE_HORACIO_MESSAGE_2               757
+#define STRINGID_DUKE_HORACIO_MESSAGE_3               758
+#define STRINGID_DUKE_HORACIO_MESSAGE_4               759
+#define STRINGID_DUKE_HORACIO_MESSAGE_5               760
+#define STRINGID_SIR_AMIK_MESSAGE_1                   761
+#define STRINGID_SIR_AMIK_MESSAGE_2                   762
+#define STRINGID_SIR_AMIK_MESSAGE_3                   763
+#define STRINGID_SIR_AMIK_MESSAGE_4                   764
+#define STRINGID_KIMIT_KAL_MESSAGE_1                  765
+#define STRINGID_KIMIT_KAL_MESSAGE_2                  766
+#define STRINGID_KIMIT_KAL_MESSAGE_3                  767
+#define STRINGID_KIMIT_KAL_MESSAGE_4                  768
+#define STRINGID_KIMIT_KAL_MESSAGE_5                  769
+#define STRINGID_GUNTHOR_MESSAGE_1                    770
+#define STRINGID_GUNTHOR_MESSAGE_2                    771
+#define STRINGID_GUNTHOR_MESSAGE_3                    772
+#define STRINGID_GUNTHOR_MESSAGE_4                    773
+#define STRINGID_GUNTHOR_MESSAGE_5                    774
+#define STRINGID_GUNTHOR_MESSAGE_6                    775
+#define STRINGID_GUNTHOR_MESSAGE_7                    776
 
-#define BATTLESTRINGS_VANILLA_END                     747
+
+
+#define BATTLESTRINGS_VANILLA_END                     776
 
 
 

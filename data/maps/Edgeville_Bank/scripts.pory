@@ -27,7 +27,7 @@ script NPC_EDGEVILLE_BANK_2 //Noob
 	lock
 	faceplayer
     namebox ("Ry4nInnit")
-	msgbox(format("A couple of people made friends with me and convinced me to head into the Wilderness with them to find some rare monsters!\pBut they weren't friendly after all, and I lost all my stuff..."))
+	msgbox(format("A couple of people made friends with me and convinced me to head into the Wilderness with them to find some rare monsters!\pBut they weren't friendly after all, and I lost all my stuff…"))
     closemessage
     hidenamebox
 	release

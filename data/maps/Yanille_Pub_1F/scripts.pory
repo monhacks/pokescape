@@ -56,7 +56,7 @@ script NPC_YANILLE_PUB_1F_5
 	lock
 	faceplayer
     namebox ("Guard Captain")
-	msgbox(format("Go 'way! This pint'sh nearly finished! Unlessh you got more that ish....?"))
+	msgbox(format("Go 'way! This pint'sh nearly finished! Unlessh you got more that ish…?"))
     closemessage
     hidenamebox
 	release

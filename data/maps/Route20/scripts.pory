@@ -121,7 +121,7 @@ script BATTLE_ROUTE20_TRAINER_2
 
 script BATTLE_ROUTE20_TRAINER_3
 {
-    trainerbattle_single(TRAINER_ROUTE20_TRAINER_7, format("I summoned this canoe."),format("You don't seem to be that impressed..."))
+    trainerbattle_single(TRAINER_ROUTE20_TRAINER_7, format("I summoned this canoe."),format("You don't seem to be that impressed…"))
     namebox ("Srift")
     msgbox(format("I don't know where this canoe is going.\pI don't know how to steer.\pI'm running out of food.\pHow do I summon this canoe to shore?\pPlease dont leave me, I am dying!"))
 	hidenamebox
@@ -131,7 +131,7 @@ script BATTLE_ROUTE20_TRAINER_3
 
 script BATTLE_ROUTE20_TRAINER_4
 {
-    trainerbattle_single(TRAINER_ROUTE20_TRAINER_8, format("I tried sailing up the river to see whether I'd have better odds of catching rare fish...\pYou better not have scared them off!"),format("My fish!!"))
+    trainerbattle_single(TRAINER_ROUTE20_TRAINER_8, format("I tried sailing up the river to see whether I'd have better odds of catching rare fish…\pYou better not have scared them off!"),format("My fish!!"))
     namebox ("D Bait Err")
     msgbox(format("Honestly, I don't think fishing here is any different to fishing on land!"))
 	hidenamebox
@@ -158,7 +158,7 @@ script ROUTE20_BLOCKADE_SOUTH
 {
     faceplayer
     namebox ("Sailor")
-    msgbox(format("Blasted fish leapt out the water and stole me leg!\pI can't let you past until I've caught it...\p{PAUSE 15}I'm comin' for ye Peggy!"))
+    msgbox(format("Blasted fish leapt out the water and stole me leg!\pI can't let you past until I've caught it…\p{PAUSE 15}I'm comin' for ye Peggy!"))
     closemessage
     hidenamebox
     applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP)
@@ -236,7 +236,7 @@ script FROGEEL_RIVAL_4 {
         faceplayer
         msgbox(format("Oh hi {PLAYER}.\p{PAUSE 15}Hey, are you following me?\p{PAUSE 15}Pure chance?\nYeah right.\pListen, I am not up to anything shady this time.\pI haven't stolen anything.\p{PAUSE 32}Yet.\pListen, when I am King of The Land of the Frogs, you might regret your tone here.\nDon't you think?"), MSGBOX_YESNO)
         if (var(VAR_RESULT)) { 
-            msgbox(format("That's right.\pNow, make sure not to tell my future Frog Princess to be about our encounter with the barbarian lady..."))
+            msgbox(format("That's right.\pNow, make sure not to tell my future Frog Princess to be about our encounter with the barbarian lady…"))
             closemessage
             hidenamebox
             setvar(VAR_FROGEEL_RIVAL, 16)
@@ -257,7 +257,7 @@ script FROGEEL_RIVAL_4 {
         msgbox(format("Oh, you again?\pI thought we had an agreement that you weren't going to do anything you might regret when I am King of the Land of Frogs.\nHave you changed your mind?"), MSGBOX_YESNO)
         if (var(VAR_RESULT))
         { 
-            msgbox(format("That's right.\pNow, make sure not to tell my future Frog Princess to be about our encounter with the barbarian lady..."))
+            msgbox(format("That's right.\pNow, make sure not to tell my future Frog Princess to be about our encounter with the barbarian lady…"))
             closemessage
             hidenamebox
             setvar(VAR_FROGEEL_RIVAL, 17)

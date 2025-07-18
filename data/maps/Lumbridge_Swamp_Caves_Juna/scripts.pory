@@ -366,7 +366,7 @@ script ENCOUNTER_JUNA
 	lock
     namebox ("Juna")
     if (!flag(FLAG_TEMP_10)){
-        msgbox(format("Adventurer...\pI have been waiting here three thousand years, guarding the Tears of Guthix.\pThe Tears have become polluted over the years, and some of the streams are no longer blessed with Guthix's power.\lPlease, restore balance and return His power to these caves."))
+        msgbox(format("Adventurer…\pI have been waiting here three thousand years, guarding the Tears of Guthix.\pThe Tears have become polluted over the years, and some of the streams are no longer blessed with Guthix's power.\lPlease, restore balance and return His power to these caves."))
         hidenamebox
         closemessage
     }

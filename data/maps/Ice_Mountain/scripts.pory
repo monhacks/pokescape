@@ -190,7 +190,7 @@ script NPC_ORACLE {
                 lock
     		faceplayer
 		namebox("Oracle")
-                msgbox(format("Pies...they're great, aren't they?"))
+                msgbox(format("Pies… they're great, aren't they?"))
                 hidenamebox
 		release
 		end
@@ -281,7 +281,7 @@ script TRIGGER_BLACK_KNIGHTS_FORTRESS_ENTRY {
 		applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN)
 		waitmovement(0)
 		namebox ("Sir Owen")
-		msgbox(format("Hmm... We are going to have to get a guard uniform from somewhere.\pLet us retreat momentarily while we think of something."))
+		msgbox(format("Hmm… We are going to have to get a guard uniform from somewhere.\pLet us retreat momentarily while we think of something."))
 		closemessage
 		hidenamebox
 		setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 185)
@@ -463,7 +463,7 @@ script EVENT_ICE_MOUNTAIN_GUARDS {
 	//fadescreenswapbuffers(FADE_FROM_BLACK)
 	
 	namebox ("Sir Owen")
-	msgbox(format("Right, this should get us through the gate.\pAlthough I do feel a bit bad for leaving them out in the cold..."))
+	msgbox(format("Right, this should get us through the gate.\pAlthough I do feel a bit bad for leaving them out in the cold…"))
 	closemessage
 	hidenamebox
 	setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 187)

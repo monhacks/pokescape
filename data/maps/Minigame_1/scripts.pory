@@ -17,7 +17,7 @@ script VOID_KNIGHT_NPC_1
             case 3:
                 msgbox(format("The red, south-western portal shield is down!"))
             case 4:
-                msgbox(format("So many monsters...!\pWe cannot let them escape this island!"))
+                msgbox(format("So many monsters…!\pWe cannot let them escape this island!"))
         }
     closemessage
     hidenamebox

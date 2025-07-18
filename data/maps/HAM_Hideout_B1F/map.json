@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NPC_HAM_HIDEOUT_B1F_3",
-      "flag": "0"
+      "flag": "FLAG_TEMP_D"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HAM_DEACON",

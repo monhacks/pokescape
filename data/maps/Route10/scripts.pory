@@ -121,13 +121,13 @@ script ROUTE10_SirAcknis {
         case 2: 
             msgbox(format("There was a White Knight called Sir Theodore who grew up south-west of here in Rimmington.\pNobody is quite sure what happened to him though."))
         case 3: 
-            msgbox(format("If you're ever in Falador, please visit the park.\pOur head of recruitment can be found sitting on a bench there, drinking cups of tea.\pI've never seen anybody refill his cup though...\pI wonder if it's enchanted..."))
+            msgbox(format("If you're ever in Falador, please visit the park.\pOur head of recruitment can be found sitting on a bench there, drinking cups of tea.\pI've never seen anybody refill his cup though…\pI wonder if it's enchanted…"))
             case 4: 
             msgbox(format("You can tell what rank a White Knight is by the colour cloth on our armour.\pFor example, mine is blue because I am a Partisan.\pWe also have some Proselytes with us today for training and their cloth is yellow."))
         case 5: 
             msgbox(format("Our armourer, Sir Vyvin, lost his eye to some lunatic that lived in the Wilderness while defending Falador!\pSupposedly they fought with sharp teeth and nails rather than monsters!"))
         case 6: 
-            msgbox(format("The Herald, Sir Renitee, focuses more on people's family heritage and painting now than anything combat related.\pNow that I think about it, I'm not even sure how that makes him qualified to be a White Knight..."))
+            msgbox(format("The Herald, Sir Renitee, focuses more on people's family heritage and painting now than anything combat related.\pNow that I think about it, I'm not even sure how that makes him qualified to be a White Knight…"))
     }
     hidenamebox
     closemessage

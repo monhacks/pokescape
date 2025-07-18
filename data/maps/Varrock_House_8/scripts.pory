@@ -17,7 +17,7 @@ script NPC_BLACK_ARM_1 {
 	lock
 	faceplayer
     namebox ("Mugger")
-	msgbox(format("Lady Katrine asked me to steal a crossbow from the Phoenix Gang to prove my loyalty.\pI've stolen plenty of things over the years, but I think I'll need some help to get into their weapon store..."))
+	msgbox(format("Lady Katrine asked me to steal a crossbow from the Phoenix Gang to prove my loyalty.\pI've stolen plenty of things over the years, but I think I'll need some help to get into their weapon store…"))
     closemessage
     hidenamebox
 	release
@@ -28,7 +28,7 @@ script NPC_BLACK_ARM_2 {
 	lock
 	faceplayer
     namebox ("Thief")
-	msgbox(format("I heard that Scarface Pete has the candlesticks, but I have no idea how to get past his security...\p{PAUSE 15}Hey!\pForget you heard anything, or else!"))
+	msgbox(format("I heard that Scarface Pete has the candlesticks, but I have no idea how to get past his security…\p{PAUSE 15}Hey!\pForget you heard anything, or else!"))
     closemessage
     hidenamebox
 	release

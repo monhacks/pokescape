@@ -106,7 +106,7 @@ script NPC_LUMBRIDGE_FOREST_2
 	lock
 	faceplayer
     namebox ("Warrior")
-	msgbox(format("We're looking for Zanaris...GAH!\pI mean we're not here for any particular reason at all.\p...\pOf course we know where it is! We just haven't found which tree the stupid leprechaun's hiding in yet!"))
+	msgbox(format("We're looking for Zanaris… GAH!\pI mean we're not here for any particular reason at all.\p…\pOf course we know where it is! We just haven't found which tree the stupid leprechaun's hiding in yet!"))
     closemessage
     hidenamebox
 	release
@@ -546,7 +546,7 @@ script ZANIK_DIALOGUE_LUMBRIDGE_FOREST {
 	case 0:
 		msgbox(format("I see people around here using axes for cutting down trees.\pThey're tools for good, so why do people also use them as weapons?"))
 	case 1:
-		msgbox(format("Is... Is that another goblin over there?\pI wonder if they're a distant relative."))
+		msgbox(format("Is… Is that another goblin over there?\pI wonder if they're a distant relative."))
 	case 2:
 		msgbox(format("This place is so different to Dorgesh-Kaan."))
 	case 3:
@@ -571,13 +571,13 @@ script ZANIK_DIALOGUE_HAM_HIDEOUT_B1F {
 	case 3:
 		msgbox(format("These people are so driven by their beliefs, but at the same time they say it's because Saradomin would want the same.\pDo they truly need a god to justify their actions?"))
 	case 4:
-		msgbox(format("It's sad to think about how many amazing things were probably dug up to build this place.\pAll that history gone, and for what..."))
+		msgbox(format("It's sad to think about how many amazing things were probably dug up to build this place.\pAll that history gone, and for what…"))
 	case 5:
 		msgbox(format("Come on {PLAYER} if we keep looking around we are bound to find something eventually."))
 	case 6:
-		msgbox(format("These people claim to hate monsters, but just look around.\pThey're the real monsters..."))
+		msgbox(format("These people claim to hate monsters, but just look around.\pThey're the real monsters…"))
 	case 7:
-		msgbox(format("I can hear something going on deeper into these caves...\pWe should investigate!"))
+		msgbox(format("I can hear something going on deeper into these caves…\pWe should investigate!"))
 	}
 	hidenamebox
 	closemessage
@@ -589,7 +589,7 @@ script ZANIK_DIALOGUE_HAM_HIDEOUT_B2F {
 	random(7)
 	switch (var(VAR_RESULT)) {
 	case 0:
-		msgbox(format("It's funny that they claim to hate creatures like me, yet here they are living in a cave... just like me."))
+		msgbox(format("It's funny that they claim to hate creatures like me, yet here they are living in a cave… just like me."))
 	case 1:
 		msgbox(format("I can't believe that they live like this.\pEven we have running water in Dorgesh-Kaan!"))
 	case 2:
@@ -616,7 +616,7 @@ script NPC_LUMBRIDGEFOREST_HAM_1
 	lock
 	faceplayer
     namebox ("H.A.M Grunt")
-	msgbox(format("Our hideout isn't here, but if it was we would totally not hold anybody important like a prince here.\pAnd we totally would not need that theoretical prince because he has what is needed to summon a power that will rip the world as we know it in two...\pAnd H.A.M definitely would not want to use that power so we can return the world to the peaceful state it needs to be.{PAUSE 15}\nThat's right, there is nothing here.\pMove on."))
+	msgbox(format("Our hideout isn't here, but if it was we would totally not hold anybody important like a prince here.\pAnd we totally would not need that theoretical prince because he has what is needed to summon a power that will rip the world as we know it in two…\pAnd H.A.M definitely would not want to use that power so we can return the world to the peaceful state it needs to be.{PAUSE 15}\nThat's right, there is nothing here.\pMove on."))
     closemessage
     hidenamebox
 	release
@@ -629,7 +629,7 @@ script BATTLE_LUMBRIDGEFOREST_HAM_1
 { 
     trainerbattle_single(TRAINER_LUMBRIDGEFOREST_HAM_1, format("Why would you look at that, a little monster sympathiser lost in the woods."),format("You may have beaten us, but we will never tell you where our secret hideout is."))
     namebox ("H.A.M Grunt")
-    msgbox(format("That grunt needs to stop talking before she gets us both into some serious trouble..."))
+    msgbox(format("That grunt needs to stop talking before she gets us both into some serious trouble…"))
 	hidenamebox
     release
 	end
@@ -647,9 +647,9 @@ script BATTLE_LUMBRIDGEFOREST_HAM_2
 
 script BATTLE_LUMBRIDGEFOREST_HAM_3
 { 
-    trainerbattle_single(TRAINER_LUMBRIDGEFOREST_HAM_3, format("We fight for what's right... The future will show you were in the wrong!"),format("You may have won, but you're still on the wrong side of this!"))
+    trainerbattle_single(TRAINER_LUMBRIDGEFOREST_HAM_3, format("We fight for what's right… The future will show you were in the wrong!"),format("You may have won, but you're still on the wrong side of this!"))
     namebox ("H.A.M Grunt")
-    msgbox(format("The future is written by the victors... Remember that when we smite you down like the bug you are."))
+    msgbox(format("The future is written by the victors… Remember that when we smite you down like the bug you are."))
 	hidenamebox
     release
 	end
@@ -657,7 +657,7 @@ script BATTLE_LUMBRIDGEFOREST_HAM_3
 
 script BATTLE_LUMBRIDGEFOREST_HAM_4
 { 
-    trainerbattle_single(TRAINER_LUMBRIDGEFOREST_HAM_4, format("I refuse to just let you just waltz into our hideout!"),format("This really isn't my day..."))
+    trainerbattle_single(TRAINER_LUMBRIDGEFOREST_HAM_4, format("I refuse to just let you just waltz into our hideout!"),format("This really isn't my day…"))
     namebox ("H.A.M Grunt")
     msgbox(format("This really isn't my day.\pI hope my superiors aren't watching.\pIt would really kill my performance review."))
 	hidenamebox

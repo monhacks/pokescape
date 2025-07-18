@@ -143,7 +143,7 @@ script TRIGGER_STORYMODE_EVENT_ROUTE26 {
             setflag(FLAG_PARTNER_BATTLE)
             setvar (VAR_PARTNER_TRAINER, TRAINER_SIR_OWEN_1)
             setvar (VAR_PARTNER_SPRITE, TRAINER_BACK_PIC_OWEN)
-            trainerbattle_no_intro(TRAINER_ROUTE26_BLACK_KNIGHT, format("Urgh, I could have stopped one of you but not both..."))
+            trainerbattle_no_intro(TRAINER_ROUTE26_BLACK_KNIGHT, format("Urgh, I could have stopped one of you but not both…"))
             applymovement (BLACKKNIGHT_ID,movement_BLACKKNIGHT_1)
             waitmovement (0)
             setflag(FLAG_TEMP_1F)

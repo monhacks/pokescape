@@ -176,7 +176,7 @@ script BATTLE_HAM_HIDEOUT_GRUNT_1
 
 script BATTLE_HAM_HIDEOUT_GRUNT_2
 { 
-    trainerbattle_single(TRAINER_HAM_HIDEOUT_GRUNT_2, format("I've only been a member for a few days...\pDo you know where the toilets are?"),format("Aaaaaahhhh!"))
+    trainerbattle_single(TRAINER_HAM_HIDEOUT_GRUNT_2, format("I've only been a member for a few days…\pDo you know where the toilets are?"),format("Aaaaaahhhh!"))
     namebox ("H.A.M Grunt")
     msgbox(format("Please tell me it's not just a hole in the floor…"))
     hidenamebox
@@ -219,7 +219,7 @@ script BATTLE_HAM_HIDEOUT_GRUNT_6
 { 
     trainerbattle_single(TRAINER_HAM_HIDEOUT_GRUNT_6, format("I have been chosen by Johanhus for a special purpose."),format("I may have lost, but I won't fail him."))
     namebox ("H.A.M Grunt")
-    msgbox(format("Johanhus has tasked me with searching for caches of First Age armour.\pI wonder why he wants it, we already have plenty of sets of much newer armour..."))
+    msgbox(format("Johanhus has tasked me with searching for caches of First Age armour.\pI wonder why he wants it, we already have plenty of sets of much newer armour…"))
     hidenamebox
     release
     end
@@ -263,7 +263,7 @@ script BATTLE_HAM_HIDEOUT_GRUNT_10
     //trainerbattle_single(TRAINER_HAM_HIDEOUT_GRUNT_10, format("Monsters are evil, so that means we can kill them for fun."),format("Evil, evil creatures!"))
     namebox ("H.A.M Grunt")
     msgbox(format("I may have failed to stop you but the others won't stop until we bundle you up into jail!"))
-    //msgbox(format("I learned that from an old book, the 'Manual of Monsters'.\pIt had details on all different kinds of monsters and it said if they were good or evil...\nand most of them are evil!"))
+    //msgbox(format("I learned that from an old book, the 'Manual of Monsters'.\pIt had details on all different kinds of monsters and it said if they were good or evil…\nand most of them are evil!"))
     hidenamebox
     release
     end
@@ -535,7 +535,7 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     namebox ("Johanhus")
     msgbox(format("And you are sure this will save the world of the scourge that are monsters Sigmund?"))
     namebox ("Sigmund")
-    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\lAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens...\lThe world will be at peace.\lJust like we have always wanted..."))
+    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\lAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\lThe world will be at peace.\lJust like we have always wanted…"))
     setobjectxy(35, 41, 34)      //spawn in Prince Ali
 	setobjectxyperm(35, 41, 34)
     applymovement (35, movement_HAM_Hideout_finale_walk_up) //walk beside player to left

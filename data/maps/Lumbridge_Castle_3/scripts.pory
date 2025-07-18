@@ -313,7 +313,7 @@ script HANS_GYM_LUMBRIDGE {
 
 script SIGMUND_DRAWERS {
     lock
-    msgbox(format("You rummage through the drawers...\p{PAUSE 15}")) 
+    msgbox(format("You rummage through the drawers…\p{PAUSE 15}")) 
     if (!flag(FLAG_BADGE03_GET)){
         msgbox(format("and find a set of pink robes?"))
         closemessage

@@ -382,7 +382,7 @@ script POTTERINGTON_FARM_Gonthorian
                 lock
     		    faceplayer
 		        namebox("Gonthorian")
-                msgbox(format("It is I, Gonthorian!\pDestroyer of beasts!\pFisher of trout!\pCooker of..."))
+                msgbox(format("It is I, Gonthorian!\pDestroyer of beasts!\pFisher of trout!\pCooker of…"))
                 hidenamebox
 		        release
 		        end
@@ -406,7 +406,7 @@ script POTTERINGTON_FARM_Gonthorian
                 lock
     		    faceplayer
 		        namebox("Gonthorian")
-                msgbox(format("It is I, Gonthorian!\pProtector of Falador!!\pKeeper of wisdom!\pCreator of Kraft Dinner\p...On a regular basis"))
+                msgbox(format("It is I, Gonthorian!\pProtector of Falador!!\pKeeper of wisdom!\pCreator of Kraft Dinner\p… On a regular basis"))
                 hidenamebox
 		        release
 		        end

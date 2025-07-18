@@ -8,7 +8,7 @@ script NPC_EVIL_DAVE
     lock
     faceplayer
     namebox ("Evil Dave")
-	msgbox(format("Hey! You're like TOTALLY EVIL right?\pOf course, I can tell just by looking at you!\pI'll let you in on a secret...\pI am going to summon DEMONS and totally, like, take over the world!\pSo far though, I've only managed some hell-rats.\pIf you want one of your own without all the blood magic, you can use a fire rune on a rat.\pIf you train a cat while you've got one of these rats too, you might get an extra special surprise!\pAh-ha-ha-ha-ha-haa!"))
+	msgbox(format("Hey! You're like TOTALLY EVIL right?\pOf course, I can tell just by looking at you!\pI'll let you in on a secret…\pI am going to summon DEMONS and totally, like, take over the world!\pSo far though, I've only managed some hell-rats.\pIf you want one of your own without all the blood magic, you can use a fire rune on a rat.\pIf you train a cat while you've got one of these rats too, you might get an extra special surprise!\pAh-ha-ha-ha-ha-haa!"))
     closemessage
     hidenamebox
 	release

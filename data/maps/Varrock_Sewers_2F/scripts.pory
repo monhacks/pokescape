@@ -106,9 +106,9 @@ script BATTLE_VARROCK_SEWERS_2F_TRAINER_5
 
 script BATTLE_VARROCK_SEWERS_2F_TRAINER_6
 {
-    trainerbattle_single(TRAINER_VARROCK_SEWERS_2F_TRAINER_6, format("Bah, hey you, fight me. I need a break."),format("200 rats. They assigned me a task of 200 rats. Why the heck did they assign me 200 rats?\pMaybe this is what I get for skipping tasks for easy Slayer points..."))
+    trainerbattle_single(TRAINER_VARROCK_SEWERS_2F_TRAINER_6, format("Bah, hey you, fight me. I need a break."),format("200 rats. They assigned me a task of 200 rats. Why the heck did they assign me 200 rats?\pMaybe this is what I get for skipping tasks for easy Slayer points…"))
     //namebox ("SLAYER")
-    msgbox(format("200 rats. They assigned me a task of 200 rats. Why the heck did they assign me 200 rats?\pMaybe this is what I get for skipping tasks for easy Slayer points..."))
+    msgbox(format("200 rats. They assigned me a task of 200 rats. Why the heck did they assign me 200 rats?\pMaybe this is what I get for skipping tasks for easy Slayer points…"))
 	hidenamebox
     release
 	end

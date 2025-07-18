@@ -28,7 +28,7 @@ script NPC_VARROCK_ZMI_3 {
 	lock
 	faceplayer
     namebox ("Acolyte")
-	msgbox(format("Did you ever hear the tragedy of Zamorak, Lord of Chaos?\pI thought not.\pIt’s not a story the Saradominists would tell you..."))
+	msgbox(format("Did you ever hear the tragedy of Zamorak, Lord of Chaos?\pI thought not.\pIt's not a story the Saradominists would tell you…"))
     closemessage
     hidenamebox
 	release

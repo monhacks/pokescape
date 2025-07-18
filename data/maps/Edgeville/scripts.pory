@@ -563,7 +563,7 @@ script NPC_EDGEVILLE_HOUSE_NPC_1 {
 	lock
 	faceplayer
     namebox ("Man")
-	msgbox(format("Some dude asked me if I wanted his stuff, all I had to do is follow him to the Wilderness.\pI was tempted, but that would require way too much effort..."))
+	msgbox(format("Some dude asked me if I wanted his stuff, all I had to do is follow him to the Wilderness.\pI was tempted, but that would require way too much effort…"))
     closemessage
     hidenamebox
 	release
@@ -573,7 +573,7 @@ script NPC_EDGEVILLE_HOUSE_NPC_2 {
 	lock
 	faceplayer
     namebox ("Man")
-	msgbox(format("Why are all of us dudes together in this weird barn?\pI have no idea, I was told there would be Beer..."))
+	msgbox(format("Why are all of us dudes together in this weird barn?\pI have no idea, I was told there would be Beer…"))
     closemessage
     hidenamebox
 	release
@@ -654,7 +654,7 @@ script NPC_EDGEVILLE_HOUSE_NPC_9 {
 	lock
 	faceplayer
     namebox ("Engineer")
-	msgbox(format("Sorry, the furnace is currently broken.\pToo many adventurers were trying to dump ores in at the same time.\pA furnace needs to be significantly hotter to smelt gold than bronze!\pWhen will they learn..."))
+	msgbox(format("Sorry, the furnace is currently broken.\pToo many adventurers were trying to dump ores in at the same time.\pA furnace needs to be significantly hotter to smelt gold than bronze!\pWhen will they learn…"))
     closemessage
     hidenamebox
 	release
@@ -664,7 +664,7 @@ script NPC_EDGEVILLE_HOUSE_NPC_10 {
 	lock
 	faceplayer
     namebox ("SitnSkill")
-	msgbox(format("Aw man, how am I meant to smelt more ores now?\pI can't cast Superheat Item..."))
+	msgbox(format("Aw man, how am I meant to smelt more ores now?\pI can't cast Superheat Item…"))
     closemessage
     hidenamebox
 	release
@@ -805,7 +805,7 @@ script FROGEEL_RIVAL_5 {
     lock
 	faceplayer 
     namebox("Angrenouille")
-	msgbox(format("You really aren't escaping those stalker allegations {PLAYER}.\p...{PAUSE 15}\p...{PAUSE 15}\pDo you just want an autograph?\pNo shame in being shy {PLAYER}.\lI got you, I got you."))
+	msgbox(format("You really aren't escaping those stalker allegations {PLAYER}.\p…{PAUSE 15}\p…{PAUSE 15}\pDo you just want an autograph?\pNo shame in being shy {PLAYER}.\lI got you, I got you."))
 	hidenamebox
     closemessage
 	playse(SE_PIN)

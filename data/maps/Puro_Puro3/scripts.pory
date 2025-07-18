@@ -18,7 +18,7 @@ script PURO_HUNTER_3{
     lock
     faceplayer
     namebox("Hunter")
-    msgbox(format("I tried smuggling in some imp boxes to help me catch myself some of the wandering imps.\pI heard they have magic powers and can send things to your bank!\pBut they didn't take too kindly to it and confiscated them when I got here..."))
+    msgbox(format("I tried smuggling in some imp boxes to help me catch myself some of the wandering imps.\pI heard they have magic powers and can send things to your bank!\pBut they didn't take too kindly to it and confiscated them when I got here…"))
     hidenamebox
     closemessage
     release

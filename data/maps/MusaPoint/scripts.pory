@@ -455,7 +455,7 @@ script NEWSLETTER_9 //Dwarven Mines
 	faceplayer
 	msgbox(format("Newsletter Volume 9.\nMysterious Strangers.\pWould you like to read it?"), MSGBOX_YESNO)
 	if (var(VAR_RESULT)) {
-	msgbox(format("Mysterious figures have been spotted in and around Potterington Farm!\pThere are rumours circulating that they possess some kind of magical ability and only make themselves visible to adventurers with specific monsters in their parties.\pWhat are these monsters?\pNobody knows for certain, but apparently one of the mysterious visitors really, really likes hats..."))
+	msgbox(format("Mysterious figures have been spotted in and around Potterington Farm!\pThere are rumours circulating that they possess some kind of magical ability and only make themselves visible to adventurers with specific monsters in their parties.\pWhat are these monsters?\pNobody knows for certain, but apparently one of the mysterious visitors really, really likes hats…"))
 	}
     closemessage
 	release
@@ -1608,7 +1608,7 @@ script SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_2 {
 	case 0:
 		msgbox(format("These Kinshra seem obsessed with their history."))
 	case 1:
-		msgbox(format("I cannot believe that they are having a feast in here while people in nearby towns are starving..."))
+		msgbox(format("I cannot believe that they are having a feast in here while people in nearby towns are starving…"))
 	case 2:
 		msgbox(format("Sir Tiffy is not going to be pleased when he hears how many Black Knights are here."))
 	case 3:
@@ -1634,7 +1634,7 @@ script SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_3 {
 	case 1:
 		msgbox(format("The Kinshra often fill up their armies with slaves.\pI bet these poor people are some of them, ready for whatever war they start next."))
 	case 2:
-		msgbox(format("Can you hear that sound?\pThey've got more than just humans down here..."))
+		msgbox(format("Can you hear that sound?\pThey've got more than just humans down here…"))
 	case 3:
 		msgbox(format("That sound!\pThey're training!\p{PAUSE 15}We need to find out what they're up to and stop them quickly!"))
 	}

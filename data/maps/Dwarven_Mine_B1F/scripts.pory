@@ -624,7 +624,7 @@ script NPC_DWARVENMINES_DWARF_10
 	lock
 	faceplayer
     namebox ("Dwarf")
-	msgbox(format("I've seen humans down here mining ores, then using magic to smelt them into bars!\pBlasphemy!\pIt has taken dwaves centuries to find the perfect temperatures for our forges, there's no way humans can just bypass that...\pRight?? "))
+	msgbox(format("I've seen humans down here mining ores, then using magic to smelt them into bars!\pBlasphemy!\pIt has taken dwaves centuries to find the perfect temperatures for our forges, there's no way humans can just bypass that…\pRight?? "))
     hidenamebox
 	release
 	end
@@ -635,7 +635,7 @@ script NPC_DWARVENMINES_DWARF_11
 	lock
 	faceplayer
     namebox ("Dwarf")
-	msgbox(format("Heigh ho!\pWe dig dig dig dig dig dig dig from early morn till night...\pWe dig dig dig dig dig dig dig up everything in sight...\pHeigh ho!"))
+	msgbox(format("Heigh ho!\pWe dig dig dig dig dig dig dig from early morn till night…\pWe dig dig dig dig dig dig dig up everything in sight…\pHeigh ho!"))
     hidenamebox
 	release
 	end

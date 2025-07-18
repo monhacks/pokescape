@@ -82,7 +82,7 @@ script MELZAR_3F_NOOB
 {
     faceplayer
     namebox ("N00b234")
-    msgbox(format("I bought this house from an estate agent.\pI knew it would need a lot of renovation, but it's full of monsters!\pI want a refund!\pWait... What do you mean you get to those houses through a portal, are you mad?"))
+    msgbox(format("I bought this house from an estate agent.\pI knew it would need a lot of renovation, but it's full of monsters!\pI want a refund!\pWait… What do you mean you get to those houses through a portal, are you mad?"))
     closemessage
     hidenamebox
     release

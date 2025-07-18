@@ -1587,10 +1587,10 @@ script FROGEEL_RIVAL_2 {
     }
     elif (var(VAR_FROGEEL_RIVAL) == 6) {   //Variable for if you have spoken to him once but not battled him
             namebox("Angrenouille")
-            msgbox(format("{PLAYER}... You agreed that you were going to let me leave.\pYou haven't changed your mind now, have you?"), MSGBOX_YESNO)
+            msgbox(format("{PLAYER}… You agreed that you were going to let me leave.\pYou haven't changed your mind now, have you?"), MSGBOX_YESNO)
             if (!var(VAR_RESULT))
             { 
-                msgbox(format("Good, now leave me to plan my next heis-\p{PAUSE 15}You heard nothing..."))
+                msgbox(format("Good, now leave me to plan my next heis-\p{PAUSE 15}You heard nothing…"))
                 closemessage
                 hidenamebox
                 setvar(VAR_FROGEEL_RIVAL, 7)
@@ -1601,7 +1601,7 @@ script FROGEEL_RIVAL_2 {
             }
             else {
                 namebox("Angrenouille")
-                msgbox(format("Ugh, in that case I shall have to fight my way out..."))
+                msgbox(format("Ugh, in that case I shall have to fight my way out…"))
                 closemessage
                 hidenamebox
                 goto(BATTLE_FROGEEL_RIVAL_2)

@@ -18,11 +18,11 @@ script BLACK_KNIGHT_QUIZ_3 //Necromancer
     waitmovement(0)
     namebox("Necromancer")
     if (var(VAR_BKF_QUIZ_3) == 0) {  
-        msgbox(format("I hope you've studied, as that's the only way you're getting through here.\pTell me..."))
+        msgbox(format("I hope you've studied, as that's the only way you're getting through here.\pTell me…"))
         msgbox(format("The first Black Knight was Lord Sanafin Valzin."), MSGBOX_YESNO)
         if (var(VAR_RESULT) == FALSE)
         {
-            msgbox(format("Guess you White Knights don't read your history.\pTime to die!\pMaybe I'll even resurrect you as my pets after..."))
+            msgbox(format("Guess you White Knights don't read your history.\pTime to die!\pMaybe I'll even resurrect you as my pets after…"))
             closemessage
             hidenamebox
             call(CAUGHT_BY_BLACK_KNIGHTS)
@@ -75,7 +75,7 @@ script BLACK_KNIGHT_QUIZ_4 //Taim
     waitmovement(0)
     namebox("Black Knight")
     if (var(VAR_BKF_QUIZ_4) == 0) {  
-        msgbox(format("Sorry. Increased security means you need to answer a question before passing.\pIt'll be easy...\pif you're a true Black Knight!"))
+        msgbox(format("Sorry. Increased security means you need to answer a question before passing.\pIt'll be easy…\pif you're a true Black Knight!"))
         msgbox(format("The first Black Knights were allies of King Wallace?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == TRUE)
         {
@@ -131,7 +131,7 @@ script BLACK_KNIGHT_QUIZ_5 //Laif
     waitmovement(0)
     namebox("Black Knight")
     if (var(VAR_BKF_QUIZ_5) == 0) {
-        msgbox(format("Before you go any further..."))
+        msgbox(format("Before you go any further…"))
         msgbox(format("Black and red is a great colour combination."), MSGBOX_YESNO)
         if (var(VAR_RESULT) == FALSE)
         {
@@ -187,7 +187,7 @@ script BLACK_KNIGHT_QUIZ_6 //UPDATE AND ADD Necromancer
     waitmovement(0)
     namebox("Necromancer")
     if (var(VAR_BKF_QUIZ_6) == 0) {
-        msgbox(format("You know the drill by now...\pAnswer the question, and you can keep going."))
+        msgbox(format("You know the drill by now…\pAnswer the question, and you can keep going."))
         msgbox(format("The Zamorakian mage Solus Dellagar is a close ally of the Black Knights."), MSGBOX_YESNO)
         if (var(VAR_RESULT) == TRUE)
         {
@@ -306,7 +306,7 @@ script BKFORT_2F_NPC_2 //Western most Black Knight in main room
     lock
     faceplayer
     namebox ("Black Knight")
-    msgbox(format("People wouldn't be so afraid of us if we were White Knights..."))
+    msgbox(format("People wouldn't be so afraid of us if we were White Knights…"))
     closemessage
     hidenamebox
     release
@@ -318,7 +318,7 @@ script BKFORT_2F_NPC_3 //South-western most Black Knight in main room
     lock
     faceplayer
     namebox ("Black Knight")
-    msgbox(format("Can I ask you a question?\pWhat do you think about puns?{PAUSE 15}\pLook, I hate the White Knights as much as everyone else but I really do think they nailed the whole naming thing.\pImagine if we had names like that...\pLike Jack, or Chap!\pMaybe I should bring it up next council meeting..."))
+    msgbox(format("Can I ask you a question?\pWhat do you think about puns?{PAUSE 15}\pLook, I hate the White Knights as much as everyone else but I really do think they nailed the whole naming thing.\pImagine if we had names like that…\pLike Jack, or Chap!\pMaybe I should bring it up next council meeting…"))
     closemessage
     hidenamebox
     release
@@ -330,7 +330,7 @@ script BKFORT_2F_NPC_4 //Guard by entrance and item
     lock
     faceplayer
     namebox ("Guard")
-    msgbox(format("I am so tired I could go for another nap..."))
+    msgbox(format("I am so tired I could go for another nap…"))
     closemessage
     hidenamebox
     release
@@ -342,7 +342,7 @@ script BKFORT_2F_NPC_5 //Dark Wizard in South
     lock
     faceplayer
     namebox ("Dark Wizard")
-    msgbox(format("Do you think I look...\pEvil enough?\pI'm worried that my robes are a bit washed out now and they're only grey instead of black.\pI don't want to get kicked out because of it!"))
+    msgbox(format("Do you think I look…\pEvil enough?\pI'm worried that my robes are a bit washed out now and they're only grey instead of black.\pI don't want to get kicked out because of it!"))
     closemessage
     hidenamebox
     release
@@ -354,7 +354,7 @@ script BKFORT_2F_NPC_6 //Zamorak Wizard in Hallway
     lock
     faceplayer
     namebox ("Zammy Wizard")
-    msgbox(format("One of the eggs was blessed by Zamorak himself and the first Hawk was born..."))
+    msgbox(format("One of the eggs was blessed by Zamorak himself and the first Hawk was born…"))
     closemessage
     hidenamebox
     release
@@ -426,7 +426,7 @@ script BKFORT_2F_NPC_12 //Second of two guards in main hall
     lock
     faceplayer
     namebox ("Guard")
-    msgbox(format("Ughhhhhh\pI was so hungry I snuck into the kitchen and ate a whole cabbage!\pBut now I feel really sick..."))
+    msgbox(format("Ughhhhhh\pI was so hungry I snuck into the kitchen and ate a whole cabbage!\pBut now I feel really sick…"))
     closemessage
     hidenamebox
     release
@@ -438,7 +438,7 @@ script BKFORT_2F_NPC_13 //Chef
     lock
     faceplayer
     namebox ("Chef")
-    msgbox(format("Become a chef, they said.\pStart your own catering business, they said.\pNobody said anything about having to live in a creepy fortress serving food to an army of mercenaries!\pIt's too late for me to even leave now, I've seen too much..."))
+    msgbox(format("Become a chef, they said.\pStart your own catering business, they said.\pNobody said anything about having to live in a creepy fortress serving food to an army of mercenaries!\pIt's too late for me to even leave now, I've seen too much…"))
     closemessage
     hidenamebox
     release
@@ -510,7 +510,7 @@ script BKFORT_2F_NPC_19 //PVMer in Chapel
     lock
     faceplayer
     namebox ("GIM Frankie")
-    msgbox(format("Hold on...{PAUSE 15}\pThis isn't White Knight's castle.\pDrat!\pWrong quest guide..."))
+    msgbox(format("Hold on…{PAUSE 15}\pThis isn't White Knight's castle.\pDrat!\pWrong quest guide…"))
     closemessage
     hidenamebox
     release

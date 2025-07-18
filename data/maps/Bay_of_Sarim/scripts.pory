@@ -17,7 +17,7 @@ script BATTLE_SARIM_BAY_PIRATE_1
 
 script BATTLE_SARIM_BAY_PIRATE_2
 {
-    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_2, format("There be something breathing under the ship. Might be a sea serpent...\pReady yer weapons!"),format("You're no sea serpent.\pYou're much more dangerous."))
+    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_2, format("There be something breathing under the ship. Might be a sea serpent…\pReady yer weapons!"),format("You're no sea serpent.\pYou're much more dangerous."))
     namebox ("Dreadnought")
     msgbox(format("I heard from a crew that sailed out towards Rellekka that someone there caught a sea snake!"))
     hidenamebox
@@ -37,7 +37,7 @@ script BATTLE_SARIM_BAY_PIRATE_3
 
 script BATTLE_SARIM_BAY_PIRATE_4
 {
-    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_4, format("I swear I saw eyes glowing in the mist..."),format("Turns out all I saw was the look of determination in your eyes."))
+    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_4, format("I swear I saw eyes glowing in the mist…"),format("Turns out all I saw was the look of determination in your eyes."))
     namebox ("Calypso")
     msgbox(format("Have you ever considered becoming a pirate?\pWith you on our crew we'd be unstoppable!"))
     hidenamebox
@@ -47,9 +47,9 @@ script BATTLE_SARIM_BAY_PIRATE_4
 
 script BATTLE_SARIM_BAY_PIRATE_5
 {
-    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_5, format("The map says there's an island cursed by creatures of the night.\pMaybe we should stay clear...\pOr not!"),format("You might have beaten me, but you'll never make it inside our fortress."))
+    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_5, format("The map says there's an island cursed by creatures of the night.\pMaybe we should stay clear…\pOr not!"),format("You might have beaten me, but you'll never make it inside our fortress."))
     namebox ("Ravenwood")
-    msgbox(format("Have you heard of Morytania?\pIf the rumours are true and those cursed creatures do walk that land...\pImagine all the treasures they'll have hoarded over the years just waiting to be...\pRehomed!"))
+    msgbox(format("Have you heard of Morytania?\pIf the rumours are true and those cursed creatures do walk that land…\pImagine all the treasures they'll have hoarded over the years just waiting to be…\pRehomed!"))
     hidenamebox
     release
     end
@@ -57,7 +57,7 @@ script BATTLE_SARIM_BAY_PIRATE_5
 
 script BATTLE_SARIM_BAY_PIRATE_6
 {
-    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_6, format("I’ll sail the seas until the stars fall, but no storm's takin’ me down!"),format("Seems like it wasn't a storm I needed to worry about.."))
+    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_6, format("I'll sail the seas until the stars fall, but no storm's takin' me down!"),format("Seems like it wasn't a storm I needed to worry about.."))
     namebox ("Whisperwind")
     msgbox(format("With monsters like that, you'll be able to weather any storm."))
     hidenamebox
@@ -67,7 +67,7 @@ script BATTLE_SARIM_BAY_PIRATE_6
 
 script BATTLE_SARIM_BAY_PIRATE_7
 {
-    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_7, format("There’s something in the water...\pBest keep your eyes sharp, matey."),format("Looks like you're fierce enough for anything the sea might throw at you."))
+    trainerbattle_single(TRAINER_SARIM_BAY_PIRATE_7, format("There's something in the water…\pBest keep your eyes sharp, matey."),format("Looks like you're fierce enough for anything the sea might throw at you."))
     namebox ("Patchwork")
     msgbox(format("Looks like you're fierce enough for anything the sea might throw at you."))
     hidenamebox
@@ -79,7 +79,7 @@ script BATTLE_SARIM_BAY_SAILOR_1
 {
     trainerbattle_single(TRAINER_SARIM_BAY_SAILOR_1, format("Aaarrgh, not another pirate!"),format("Oh, you aren't a pirate?\pMaybe I should have asked for help instead of a battle.."))
     namebox ("Caspian")
-    msgbox(format("Unfortunately, this bay is full of pirates.\pWe can't go anywhere for fear of being robbed, but now all my monsters have fainted I can't battle my way out either.\pI'm just... stuck here."))
+    msgbox(format("Unfortunately, this bay is full of pirates.\pWe can't go anywhere for fear of being robbed, but now all my monsters have fainted I can't battle my way out either.\pI'm just… stuck here."))
     hidenamebox
     release
     end
@@ -87,7 +87,7 @@ script BATTLE_SARIM_BAY_SAILOR_1
 
 script BATTLE_SARIM_BAY_SAILOR_2
 {
-    trainerbattle_single(TRAINER_SARIM_BAY_SAILOR_2, format("It has been my dream since I was a child to sail the high seas!"),format("My dreams never involved me losing like this though.."))
+    trainerbattle_single(TRAINER_SARIM_BAY_SAILOR_2, format("It has been my dream since I was a child to sail the high seas!"),format("My dreams never involved me losing like this though…"))
     namebox ("Erasmus")
     msgbox(format("With all the adventurers roaming around the mainland, there's nowhere near as much crime there as there used to be.\pLooks like all the criminals took to the ocean instead.\pIf only more adventurers were able to start sailing.."))
     hidenamebox

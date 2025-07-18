@@ -105,7 +105,7 @@ script NPC_ALKHARID_BANK_1
     namebox ("Summoner")
     msgbox(format("I'm using Pouches that I brought from Ali's Pouch Store!\pThey are so OP!"))
     //namebox ("Eryndor")
-    //msgbox(format("I am extremely skilled at reanimation, and can bring back Scorpions!\nWoah, woah now, it's VERY different to Necromancy!\pI am just reanimating their bodies, but Necromancers manipulate souls...\pIt's much darker."))
+    //msgbox(format("I am extremely skilled at reanimation, and can bring back Scorpions!\nWoah, woah now, it's VERY different to Necromancy!\pI am just reanimating their bodies, but Necromancers manipulate souls…pIt's much darker."))
     closemessage
     hidenamebox
     release
@@ -116,9 +116,9 @@ script NPC_ALKHARID_BANK_2
 {
     faceplayer
     namebox ("Diviner")
-    msgbox(format("I can sense the anima flowing in all living things…\pYou'd think that'd be great but I swear theres something big shifting in the sands below us…"))
+    msgbox(format("I can sense the anima flowing in all living things…\pYou'd think that'd be great but I swear there's something big shifting in the sands below us…"))
     //namebox ("Fendrel")
-    //msgbox(format("There is a dark omen lurking over this town.\pI have seen it in the stars.\pIt has sheathed wings, and undergoes the most visceral of metamorphosis...\pbut there may be one even more deadly lurking deeper beneath the sands.\nBe careful out there."))
+    //msgbox(format("There is a dark omen lurking over this town.\pI have seen it in the stars.\pIt has sheathed wings, and undergoes the most visceral of metamorphosis…pbut there may be one even more deadly lurking deeper beneath the sands.\nBe careful out there."))
     closemessage
     hidenamebox
     release

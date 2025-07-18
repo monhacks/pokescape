@@ -172,7 +172,7 @@ script GeneralStore_TZHAAR_Human {
     lock
     faceplayer
     namebox("Clerk")
-    msgbox(format("It's so hot down here...\pWelcome to the Tzhaar General Store.\pHow may I help you?"))
+    msgbox(format("It's so hot down here…\pWelcome to the Tzhaar General Store.\pHow may I help you?"))
     waitmessage
     call(GeneralStoreShopScript)
     namebox("Clerk")
@@ -747,7 +747,7 @@ script POUCH_INFO_BLACK {
 }
 script POUCH_INFO_WHITE {
     namebox ("Ali") 
-	msgbox(format("That's a White Pouch!\pYou'd want to use these Midday or if you're trying to capture a monster which for some reason located indoors."))
+	msgbox(format("That's a White Pouch!\pYou'd want to use these Midday or if you're trying to capture a monster which for some reason is located indoors."))
     closemessage
     end
 }
@@ -771,7 +771,7 @@ script POUCH_INFO_MYSTIC {
 }
 script POUCH_INFO_ANCIENT {
     namebox ("Ali") 
-	msgbox(format("That's an Ancient Pouch!\pNot much is known about these pouches but they say a contract is forced upon the monster to encourge friendship growth."))
+	msgbox(format("That's an Ancient Pouch!\pNot much is known about these pouches but they say a contract is forced upon the monster to encourage friendship growth."))
     closemessage
     end
 }

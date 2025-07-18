@@ -190,13 +190,13 @@ script LeftDoorScript
 	applymovement(10, Movement_Hans_2)
 	waitmovement (0)
 	namebox ("Hans")
-	msgbox(format("Hello there!\pMy name is Hans.\pYou are...?"))
+	msgbox(format("Hello there!\pMy name is Hans.\pYou are…?"))
 	hidenamebox
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PLAYER_1)
 	waitmovement (0)
 	namebox ("Hans")
-	msgbox(format("...\pNice to meet you {PLAYER}.\pYou must be here to see the researcher?\pWe've had a few others come see him today too.\pFollow me."))
+	msgbox(format("…\pNice to meet you {PLAYER}.\pYou must be here to see the researcher?\pWe've had a few others come see him today too.\pFollow me."))
 	waitmessage
 	hidenamebox
 	closemessage
@@ -215,7 +215,7 @@ script LeftDoorScript
 	msgbox(format("I am Professor Normal Tree.\pBut everyone calls me Professor Tree for short.\pI am in need of assistants to help me in my research, as you would know this world is full to the brim with all sorts of monsters.\pWhat I would like assistance with is filling this BESTIARY with as much data as possible.\pOf course I wouldn't ask you to do it for free, I'll be giving you one of 3 rare monsters to take with you on your journey."))
 	msgbox(format("Would you like to accept my Quest?"), MSGBOX_YESNO)
 	while (var(VAR_RESULT) != 1) {
-        msgbox(format("Noob.\p...How about now?"), MSGBOX_YESNO)	
+        msgbox(format("Noob.\p…How about now?"), MSGBOX_YESNO)	
 	}
 		msgbox(format("Nice.\pPlease choose from one of these 3 monsters on the table."))
 		hidenamebox
@@ -234,13 +234,13 @@ script RightDoorScript
 	applymovement(10, Movement_Hans_2)
 	waitmovement (0)
 	namebox ("Hans")
-	msgbox(format("Hello there!\pMy name is Hans.\pYou are...?"))
+	msgbox(format("Hello there!\pMy name is Hans.\pYou are…?"))
 	hidenamebox
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PLAYER_1)
 	waitmovement (0)
 	namebox ("Hans")
-	msgbox(format("...\pNice to meet you {PLAYER}.\pYou must be here to see the researcher?\pWe've had a few others come see him today too.\pFollow me."))
+	msgbox(format("…\pNice to meet you {PLAYER}.\pYou must be here to see the researcher?\pWe've had a few others come see him today too.\pFollow me."))
 	waitmessage
 	hidenamebox
 	closemessage
@@ -259,7 +259,7 @@ script RightDoorScript
 	msgbox(format("I am Professor Normal Tree.\pBut everyone calls me Professor Tree for short.\pI am in need of assistants to help me in my research, as you would know this world is full to the brim with all sorts of monsters.\pWhat I would like assistance with is filling this BESTIARY with as much data as possible.\pOf course I wouldn't ask you to do it for free, I'll be giving you one of 3 rare monsters to take with you on your journey."))
 	msgbox(format("Would you like to accept my Quest?"), MSGBOX_YESNO)
 	while (var(VAR_RESULT) != 1) {
-        msgbox(format("Noob.\p...How about now?"), MSGBOX_YESNO)	
+        msgbox(format("Noob.\p…How about now?"), MSGBOX_YESNO)	
 	}
 		msgbox(format("Nice.\pPlease choose from one of these 3 monsters on the table."))
 		hidenamebox
@@ -287,7 +287,7 @@ script Lumbridge_Castle_Professor_Normal_Tree_1{
 		msgbox(format("Obtained the BESTIARY."))
 		waitfanfare
 		namebox ("Prof. Tree")
-		msgbox(format("I've got to head to Kandarin now, I look forward to seeing how much of the BESTIARY you've filled out the next we meet.\pUntil then...\lFarewell."))
+		msgbox(format("I've got to head to Kandarin now, I look forward to seeing how much of the BESTIARY you've filled out the next we meet.\pUntil then…\lFarewell."))
 		waitmessage
 		hidenamebox
 		closemessage
@@ -695,7 +695,7 @@ script QUEST_Cooks_Assistant_STATE{
 	switch (var(VAR_POKESCAPE_COOKS_ASSISTANT_QUEST_STATE)){ 
 		case 0: 
 			namebox ("Cook")
-			msgbox(format("Oh dear...\pWhat am I to do...\nI'm in a terrible, terrible mess!\pI should be making a cake for the Duke but I forgot to get the ingredients!"))
+			msgbox(format("Oh dear…\pWhat am I to do…\nI'm in a terrible, terrible mess!\pI should be making a cake for the Duke but I forgot to get the ingredients!"))
 			msgbox(format("Can you please help me?"), MSGBOX_YESNO)
 			if (var(VAR_RESULT)){
 				hidenamebox
@@ -727,18 +727,18 @@ script QUEST_Cooks_Assistant_STATE{
 			namebox ("Cook")
 			msgbox(format("Do you have the ingredients?"), MSGBOX_YESNO)
 			if (var(VAR_RESULT)){
-				msgbox(format("Let me check..."))
+				msgbox(format("Let me check…"))
 				call(CooksAssistant_Check_EGG)
 				call(CooksAssistant_Check_MILK)
 				call(CooksAssistant_Check_FLOUR)
-				msgbox(format("It looks like you have everything!\p...\pThis is a bit awkward but could you also bake the cake?\pI forgot how...\pPlease use the range over there!"))
+				msgbox(format("It looks like you have everything!\p…\pThis is a bit awkward but could you also bake the cake?\pI forgot how…\pPlease use the range over there!"))
 				setvar(VAR_POKESCAPE_COOKS_ASSISTANT_QUEST_STATE, 2)
 				hidenamebox
 				release
 				end
 			}
 			else {
-				msgbox(format("Please hurry..."))
+				msgbox(format("Please hurry…"))
 				hidenamebox
 				release
 				end
@@ -944,7 +944,7 @@ script QUEST_COOKING_RANGE_COOKSASSISTANT{
 					removeitem(ITEM_SUPER_LARGE_EGG)
 					removeitem(ITEM_TOP_QUALITY_MILK)
 					removeitem(ITEM_EXTRA_FINE_FLOUR)
-					msgbox(format("...\pUnsure on how to bake a cake you throw all the ingredients at the range.")) 
+					msgbox(format("…\pUnsure on how to bake a cake you throw all the ingredients at the range.")) 
 					msgbox(format("{PAUSE 32}1, {PAUSE 15}2, and{PAUSE 15}… {PAUSE 15}… {PAUSE 15}… {PAUSE 15}{PLAY_SE SE_BALL_BOUNCE_1}Poof!\pYou bake a cake!"))
 					giveitem(ITEM_SPECIAL_CAKE, 1)
 					release
