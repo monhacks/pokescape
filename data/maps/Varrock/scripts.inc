@@ -993,9 +993,28 @@ NPC_VARROCK_CAT_INFO_2:
 NPC_ROUTE18_MAN::
 	lock
 	faceplayer
+	namebox VARROCK_NPC_THUG_2_Text_0
 	msgbox NPC_ROUTE18_MAN_Text_0
 	closemessage
 	hidenamebox
+	release
+	end
+
+
+STORY_BLOCK_ROUTE18_GUARD_1::
+	namebox VARROCK_NPC_GUARD_0_Text_0
+	msgbox STORY_BLOCK_ROUTE18_GUARD_1_Text_0
+	closemessage
+	release
+	end
+
+
+STORY_BLOCK_ROUTE18_GUARD_2::
+	lock
+	faceplayer
+	namebox STORY_BLOCK_ROUTE18_GUARD_2_Text_0
+	msgbox STORY_BLOCK_ROUTE18_GUARD_2_Text_1
+	closemessage
 	release
 	end
 
@@ -1958,11 +1977,32 @@ NPC_VARROCK_CAT_INFO_Text_1:
 	.string "cause a cat to get a bit too overgrown.$"
 
 NPC_ROUTE18_MAN_Text_0:
-	.string "Over the road here is Gertrude's house.\p"
+	.string "Over the road is Gertrude's house.\p"
 	.string "If you like cats then I think you should\n"
 	.string "pay her a visit.\p"
 	.string "If I was not busy sitting on this bench\n"
 	.string "I would pay her a visit myself.$"
+
+STORY_BLOCK_ROUTE18_GUARD_1_Text_0:
+	.string "Okay, so what is with us guarding all\n"
+	.string "these routes?!\p"
+	.string "It's almost like were funneling people\n"
+	.string "to a specific location by not allowing\l"
+	.string "them to pass!\p"
+	.string "Surely the public are getting sick of us\n"
+	.string "by now…$"
+
+STORY_BLOCK_ROUTE18_GUARD_2_Text_0:
+	.string "Varrock Guard$"
+
+STORY_BLOCK_ROUTE18_GUARD_2_Text_1:
+	.string "There has been an incident up ahead and\n"
+	.string "we're having to lock down this West\l"
+	.string "Gate until the matter is resolved.\p"
+	.string "You're an MvM Challenger correct?\p"
+	.string "Why not go challenge the Al Kharid gym.\p"
+	.string "Surely this matter will have been\n"
+	.string "resolved by then.$"
 
 GiveMon_VARROCK_SendParty_KITTEN_Text_0:
 	.string "Would you like to give your monster a\n"

@@ -2458,3 +2458,14 @@ const u8 gText_SlayerPoints[] = _("{STR_VAR_1} SP");
 const u8 gText_Tokkul[] = _("{STR_VAR_1} TKL");
 const u8 gText_YouWantedVar1OutfitThatllBeVar2[] = _("You wanted that {STR_VAR_1} OUTFIT?\nThat'll be {STR_VAR_2} GP. Will that be okay?");
 const u8 gText_HereIsTheOutfitThankYou[] = _("Here is the OUTFIT!\nThank you very much.");
+
+
+const u8 gText_DarkWizard[] = _("Dark Wizard");
+const u8 gText_HillGiant[] = _("Hill Giant");
+const u8 gText_MossGiant[] = _("Moss Giant");
+const u8 gText_FireGiant[] = _("Fire Giant");
+const u8 gText_ForgottenWarrior[] = _("Forgotten Warrior");
+const u8 gText_ZamorakianMonk[] = _("Zamorakian Monk");
+const u8 gText_Mugger[] = _("Mugger");
+
+

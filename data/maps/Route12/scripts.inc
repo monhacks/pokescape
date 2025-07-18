@@ -592,14 +592,11 @@ NPC_ROUTE12_BRONZEMAN::
 	msgbox NPC_ROUTE12_BRONZEMAN_Text_1
 	hidenamebox
 	closemessage
-	applymovement 39, FACE_ORIGINAL_DIRECTION
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
-
-FACE_ORIGINAL_DIRECTION:
-	face_original_direction
-	step_end
 
 NPC_ROUTE12_COW::
 	lock
@@ -664,11 +661,13 @@ TRIGGER_ALKHARID_HAM_EVENT_1::
 	playse SE_PIN
 	applymovement 45, movement_OZAN_CONFUSED
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, movement_OZAN_CONFUSED
+	waitmovement 0
 	playbgm MUS_PS_ENCOUNTER_HAM, TRUE
 	delay 60
 	playse SE_FLEE
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_2, 54
+	compare VAR_TEMP_2, 53
 	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_1_2
 TRIGGER_ALKHARID_HAM_EVENT_1_1:
 	applymovement 46, movement_HAM_RUN_LEFT_WITH_SACK
@@ -677,6 +676,7 @@ TRIGGER_ALKHARID_HAM_EVENT_1_1:
 	applymovement 45, Movement_InteractFACELEFT
 	delay 60
 	applymovement 27, movement_GUARD_CHASE_HAM_BUT_STOP
+	waitmovement 0
 	playse SE_PIN
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	compare VAR_TEMP_1, 28
@@ -710,6 +710,7 @@ TRIGGER_ALKHARID_HAM_EVENT_1_4:
 
 TRIGGER_ALKHARID_HAM_EVENT_1_2:
 	applymovement OBJ_EVENT_ID_PLAYER, movement_PLAYER_AVOIDS_HAM
+	waitmovement 0
 	goto TRIGGER_ALKHARID_HAM_EVENT_1_1
 
 TRIGGER_ALKHARID_HAM_EVENT_1_5:
@@ -838,9 +839,9 @@ movement_OZAN_RUNS_TO_PALACE:
 	step_end
 
 movement_PLAYER_AVOIDS_HAM:
-	emote_question_mark
 	lock_facing_direction
 	slide_up
+	unlock_facing_direction
 	emote_exclamation_mark
 	face_down
 	delay_16
@@ -1144,7 +1145,8 @@ NPC_ROUTE12_BRONZEMAN_Text_1:
 	.string "But no matter how much I run after it, I\n"
 	.string "can't seem to keep this cow still long\l"
 	.string "enough!\p"
-	.string "{PAUSE 15}Wait, what's a pouch..?$"
+	.string "Wait…{PAUSE 15}…{PAUSE 15}\n"
+	.string "What's a pouch…?$"
 
 NPC_ROUTE12_COW_Text_0:
 	.string "Cow$"

@@ -17021,7 +17021,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DEFIANCE] =
     {
-        .effect = EFFECT_DEFENSE_DOWN_HIT, 
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT, 
         .power = 110,
         .type = TYPE_ELECTRIC,
         .accuracy = 95,

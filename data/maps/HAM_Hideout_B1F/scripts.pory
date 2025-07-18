@@ -27,9 +27,11 @@ script HAMHIDEOUT_B1F_STATE {
 
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 220) { 
         setvar(VAR_TEMP_0, 1)
+        setvar(VAR_TEMP_3, 1)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 225) { 
         setvar(VAR_TEMP_0, 2)
+        setvar(VAR_TEMP_3, 1)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) { 
         removeobject(18)      //Jail guard
@@ -37,6 +39,7 @@ script HAMHIDEOUT_B1F_STATE {
         setflag(FLAG_TEMP_6)
         removeobject(45)       //Guard blocking storerooms
         setflag(FLAG_TEMP_4) 
+        setvar(VAR_TEMP_3, 1)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) { 
         setflag(FLAG_TEMP_D) //Hides NPCS
@@ -47,6 +50,7 @@ script HAMHIDEOUT_B1F_STATE {
         setflag(FLAG_TEMP_6)
         removeobject(45)       //Guard blocking storerooms
         setflag(FLAG_TEMP_4) 
+        setvar(VAR_TEMP_3, 1)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 240) { 
         setflag(FLAG_TEMP_D) //Hides NPCS
@@ -62,6 +66,7 @@ script HAMHIDEOUT_B1F_STATE {
         setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
         setmetatile(37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
         setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
+        setvar(VAR_TEMP_3, 1)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 245) { 
         setflag(FLAG_TEMP_D) //Hides NPCS
@@ -493,43 +498,67 @@ script GOLDENGNOME_TEST {
 
 script TRIGGER_HAMHIDEOUT_EVENT_1 {
     lock
-    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)     
-    if (var(VAR_TEMP_1) == 11){                 
+    getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+    if (var(VAR_TEMP_8) == 11){                 
         applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Zanik_1_Right)         //have Zanik move beside player
         waitmovement(0)
+        playse(SE_PIN)
         applymovement(33, HAM_Hideout_Intro_1_Left)         //have HAM member move to speak to them
         waitmovement(0)
     } 
     else {
         applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Zanik_1_Left)         //have Zanik move beside player
         waitmovement(0)
+        playse(SE_PIN)
         applymovement(33, HAM_Hideout_Intro_1_Right)        //have HAM member move to speak to them
         waitmovement(0)
     }
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
     applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP)
     waitmovement(0)
-    namebox("HAM Grunt")
-    msgbox(format("You're late!\lYou should have come in to cover the next shift hours ago.\p...{PAUSE 15}\pI don't want to hear any excuses, now go to the jail!\lSomeone needs to keep watch over our guests!\p...{PAUSE 15}\pWhat's with the blank expressions?\lSurely you both know it's in the south-east of the cave by now, right!?"))
+    namebox("H.A.M Grunt")
+    msgbox(format("You're late!\pYou should have come in to cover the next shift hours ago."))
     hidenamebox
     closemessage
-    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)  
-    if (var(VAR_TEMP_1) == 11){                 
+    facefollower
+    namebox("Zanik")
+    msgbox(format("…{PAUSE 15}…{PAUSE 15}…"))
+    hidenamebox
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+    applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP)
+    waitmovement(0)
+    namebox("H.A.M Grunt")
+    msgbox(format("I don't want to hear any excuses, now go to the jail!\pSomeone needs to keep watch over our guests!"))
+    hidenamebox
+    closemessage
+    facefollower
+    namebox("Zanik")
+    msgbox(format("…{PAUSE 15}…{PAUSE 15}…"))
+    hidenamebox
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+    applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP)
+    waitmovement(0)
+    namebox("H.A.M Grunt")
+    msgbox(format("What's with the blank expressions?\pSurely you both know it's in the south-east of the cave by now, right!?"))
+    hidenamebox
+    closemessage
+
+
+    getplayerxy(VAR_TEMP_8, VAR_TEMP_9)  
+    if (var(VAR_TEMP_8) == 11){                 
         applymovement(33, HAM_Hideout_Intro_2_Left)         //have HAM member move to original position
         waitmovement(0)
-        applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT)
-        applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT)
-        waitmovement(0)
+        facefollower
     } 
     else {
         applymovement(33, HAM_Hideout_Intro_2_Right)        //have HAM member move to original position
         waitmovement(0)
-        applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
-        applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT)
-        waitmovement(0)
+        facefollower
     }
     namebox("Zanik")
-    msgbox(format("Did you hear that {PLAYER}?! This gives us the perfect cover to check whether H.A.M have the Prince in their jail cells.\lLet's go!"))
+    msgbox(format("Did you hear that {PLAYER}?!\pThis gives us the perfect cover to check whether H.A.M have the Prince in their jail cells.\pLet's go!"))
     closemessage
     hidenamebox
     setvar(VAR_TEMP_0, 2)
@@ -553,17 +582,19 @@ movement HAM_Hideout_Zanik_1_Right {
 }
 
 movement HAM_Hideout_Intro_1_Left {
-    walk_left * 2
-    face_down
     emote_double_exclamation_mark
+    face_down
+    delay_16 * 2
+    walk_left * 2
     walk_down
     step_end
 }
 
 movement HAM_Hideout_Intro_1_Right {
-    walk_left
-    face_down
     emote_double_exclamation_mark
+    face_down
+    delay_16 * 2
+    walk_left
     walk_down
     step_end
 }
@@ -584,8 +615,8 @@ movement HAM_Hideout_Intro_2_Right {
 
 script TRIGGER_HAMHIDEOUT_EVENT_2 {
     lock
-    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)     
-    if (var(VAR_TEMP_2) == 44){                 
+    getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+    if (var(VAR_TEMP_9) == 44){                 
         applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Bottom_1) //have Zanik move beside player
         waitmovement(0)
     } 
@@ -606,8 +637,8 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
     applymovement(18, HAM_Hideout_Jail_Guard_Top_2)     //top guard faces down
     applymovement(19, HAM_Hideout_Jail_Guard_Bottom_2)  //bottom guard moves out the way
     waitmovement(0)
-    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)     
-    if (var(VAR_TEMP_2) == 44){                 
+    getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+    if (var(VAR_TEMP_9) == 44){                 
         applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Bottom_2) //have Zanik move in front of the jail
         applymovement(OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Top) //have the player walk down and forward
         waitmovement(0)
@@ -623,7 +654,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
     removeobject(18)
     removeobject(19)
     setflag(FLAG_TEMP_6)                                      //Check this is a useable flag
-    setvar(VAR_TEMP_0, 3)
+    setvar(VAR_TEMP_0, 3) //no longer triggers stuff.
     facefollower
     applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER) 
     waitmovement(0)
@@ -631,8 +662,8 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
     msgbox(format("This is our chance {PLAYER}!\lLet's unlock that cell door and break the Prince out!"))
     hidenamebox
     closemessage
-    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)     
-    if (var(VAR_TEMP_1) == 36){                 
+    getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+    if (var(VAR_TEMP_8) == 36){                 
         applymovement(OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Left)
         applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP)     
         waitmovement(0)
@@ -787,28 +818,28 @@ script TRIGGER_HAMHIDEOUT_EVENT_3 {                              //This needs so
     waitmovement(0)
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 225) { 
         namebox("H.A.M Guard")
-        msgbox(format("Shouldn't you two be guarding the prisoners?\lThe jail cell is over to the east, remember?"))
+        msgbox(format("Shouldn't you two be guarding the prisoners?\pThe jail cell is over to the east, remember?"))
         closemessage
         hidenamebox
         applymovement (OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN)
 		applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN)
         waitmovement(0)
-        applymovement (10, FACE_ORIGINAL_DIRECTION)                 //Right guard
-		applymovement (11, FACE_ORIGINAL_DIRECTION)                 //Left guard
+        applymovement (10, Common_Movement_FaceOriginalDirection)                 //Right guard
+		applymovement (11, Common_Movement_FaceOriginalDirection)                 //Left guard
         waitmovement(0)
         release
         end
     }
     elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) { 
         namebox("H.A.M Guard")
-        msgbox(format("Get back to guarding the prisoners!\lJohanhus won't be happy if he hears you've abandoned your posts."))
+        msgbox(format("Get back to guarding the prisoners!\pJohanhus won't be happy if he hears you've abandoned your posts."))
         closemessage
         hidenamebox
         applymovement (OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN)
 		applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN)
         waitmovement(0)
-        applymovement (10, FACE_ORIGINAL_DIRECTION)                 //Right guard
-		applymovement (11, FACE_ORIGINAL_DIRECTION)                 //Left guard
+        applymovement (10, Common_Movement_FaceOriginalDirection)                 //Right guard
+		applymovement (11, Common_Movement_FaceOriginalDirection)                 //Left guard
         waitmovement(0)
         release
         end
@@ -821,11 +852,12 @@ script TRIGGER_HAMHIDEOUT_EVENT_3 {                              //This needs so
         applymovement (OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN)
 		applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN)
         waitmovement(0)
-        applymovement (10, FACE_ORIGINAL_DIRECTION)                 //Right guard
-		applymovement (11, FACE_ORIGINAL_DIRECTION)                 //Left guard
+        applymovement (10, Common_Movement_FaceOriginalDirection)                 //Right guard
+		applymovement (11, Common_Movement_FaceOriginalDirection)                 //Left guard
         waitmovement(0)
         facefollower
         applymovement (OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER)
+        waitmovement(0)
         namebox("Zanik")
         msgbox(format("Maybe we should go and free the Prince while they're distracted guarding whatever's in there?"))
         closemessage
@@ -849,7 +881,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_3 {                              //This needs so
         removeobject(10)
         removeobject(11)
         setflag(FLAG_TEMP_5)                                      //Check this is a useable flag. Also add in some mapscripts to set/hide flags and NPCs
-        setvar(VAR_TEMP_1, 1)
+        setvar(VAR_TEMP_3, 2)
         setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 245)
         release
         end
@@ -905,7 +937,7 @@ script NPC_HAM_HIDEOUT_B1F_1
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 225) { 
         faceplayer
         namebox ("H.A.M Member")
-	    msgbox(format("What did I tell you two?\pGo and guard the jail!\lOtherwise you won't be getting any rations tonight."))
+	    msgbox(format("What did I tell you two?\pGo and guard the jail!\pOtherwise you won't be getting any rations tonight."))
         closemessage
         hidenamebox
         return
@@ -951,7 +983,7 @@ script NPC_HAM_HIDEOUT_B1F_3
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("Have you had the chance to hear the Deacon speak yet?\lHis words are so wise and inspiring, it's almost as if Saradomin is speaking through him!"))
+	msgbox(format("Have you had the chance to hear the Deacon speak yet?\pHis words are so wise and inspiring, it's almost as if Saradomin is speaking through him!"))
     closemessage
     hidenamebox
 	release
@@ -1144,7 +1176,7 @@ script NPC_HAM_HIDEOUT_B1F_15
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("Don't forget, through here are the sleeping quarters if you need to take a rest.\lJust make sure not to get caught sleeping if you're on duty, or Sigmund will have your head!"))
+	msgbox(format("Don't forget, through here are the sleeping quarters if you need to take a rest.\pJust make sure not to get caught sleeping if you're on duty, or Sigmund will have your head!"))
     closemessage
     hidenamebox
 	release
@@ -1156,7 +1188,7 @@ script NPC_HAM_HIDEOUT_B1F_16
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("It's really inspiring seeing such strong female figures like Babe and Patty having positions of authority here.\lThat's how I know this group truly are guided by Saradomin himself.\pThe churches may preach about him, but you never seen any female priests or monks..!"))
+	msgbox(format("It's really inspiring seeing such strong female figures like Babe and Patty having positions of authority here.\lThat's how I know this group truly are guided by Saradomin himself.\pThe churches may preach about him, but you never seen any female priests or monks…!"))
     closemessage
     hidenamebox
 	release
@@ -1195,14 +1227,14 @@ script NPC_HAM_HIDEOUT_B1F_19
     msgbox(format("Sorry, this area is off-limits.\lSigmund and Johanhus are having an important meeting."))
     closemessage
     hidenamebox
-    applymovement(10, FACE_ORIGINAL_DIRECTION)        //The other guard can only be talked to from one direction which is why this movement isn't on both
+    applymovement(10, Common_Movement_FaceOriginalDirection)        //The other guard can only be talked to from one direction which is why this movement isn't on both
 	release
 	end
 }
 
 script HAM_HIDEOUT_RANGE
 {
-	msgbox(format("It's a range for cooking on.\lThough you are not really sure how H.A.M managed to get one working this far underground."))
+	msgbox(format("It's a range for cooking on.\pThough you are not really sure how H.A.M managed to get one working this far underground."))
     closemessage
 	release
 	end
@@ -1236,7 +1268,7 @@ script NPC_HAM_HIDEOUT_B1F_STOREROOM_BLOCK
 	lock
 	faceplayer
     namebox("H.A.M Guard")
-    msgbox(format("You best get to your posts.\lPatty and Babe came through here earlier, and they will not be happy seeing you two wandering aimlessly."))
+    msgbox(format("You best get to your posts.\pPatty and Babe came through here earlier, and they will not be happy seeing you two wandering aimlessly."))
     closemessage
     hidenamebox
 	release
@@ -1248,7 +1280,7 @@ script HAM_HIDEOUT_B1F_JIMMY
     lock
     faceplayer
     namebox("Jimmy")
-	msgbox(format("Hello mate.\lDid Aggie send you?\pI've been training as her apprentice, but these lunatics kidnapped me and tried to force me to join their cult!"))
+	msgbox(format("Hello mate.\nDid Aggie send you?\pI've been training as her apprentice, but these lunatics kidnapped me and tried to force me to join their cult!"))
     hidenamebox
     closemessage
 	release

@@ -1183,7 +1183,6 @@ script NPC_ROUTE18_MAN
 }
 
 script STORY_BLOCK_ROUTE18_GUARD_1 {
-    lock
     namebox("Guard")
     msgbox(format("Okay, so what is with us guarding all these routes?!\pIt's almost like were funneling people to a specific location by not allowing them to pass!\pSurely the public are getting sick of us by now…"))
     closemessage

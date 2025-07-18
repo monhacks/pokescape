@@ -2,6 +2,9 @@ mapscripts Crandor_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         call(CRANDOR_STATE)
         call(RANDOM_EVENT_SPAWNS_CRANDOR)
+        if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 150) { // If storymode is after Elvarg Event then call the weather.
+            call(WEATHER_CHANGE_SEA_ROUTES_ROUGH) //TODO;  OPENWORLD
+        }
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
 		VAR_POKESCAPE_STORYMODE_PROGRESS, 135: CRANDOR_CRASHED

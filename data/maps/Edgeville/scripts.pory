@@ -421,8 +421,8 @@ script EDGEVILLE_GYM_BATTLE_VANNAKA {
         addvar(VAR_GAMEMODE_LEVEL_SCALING, 1) //INCREASES LEVEL SCALING & SHOPS
         //call(SetGymTrainers_EDGEVILLE)
 
-		msgbox(format("Now that you've bested me you are eligible to take Slayer Tasks from me.\pTalk to me again if you'd like to particpate."))
-		msgbox(format("Also you should make your way to Daemonheim in the Wilderness for your next badge."))
+		msgbox(format("Now that you've bested me you are eligible for Slayer Tasks.\pTalk to me again if you'd like to particpate."))
+		msgbox(format("And if you want to continue your MvM championships then it looks like the next badge you'll be needing is in Al Kharid.\pGood luck!"))
 		closemessage
         hidenamebox
 		//questmenu(QUEST_MENU_COMPLETE_QUEST , QUEST_KOUREND_SLAYER)

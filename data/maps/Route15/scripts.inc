@@ -129,10 +129,24 @@ BATTLE_ROUTE15_TRAINER_6::
 	end
 
 
+STORY_BLOCK_ROUTE15_FLYERBOY::
+	lock
+	namebox STORY_BLOCK_ROUTE15_FLYERBOY_Text_0
+	msgbox STORY_BLOCK_ROUTE15_FLYERBOY_Text_1
+	namebox STORY_BLOCK_ROUTE15_FLYERBOY_Text_2
+	msgbox STORY_BLOCK_ROUTE15_FLYERBOY_Text_3
+	namebox STORY_BLOCK_ROUTE15_FLYERBOY_Text_0
+	msgbox STORY_BLOCK_ROUTE15_FLYERBOY_Text_4
+	closemessage
+	release
+	end
+
+
 ROUTE15_SIGNPOST_Text_0:
-	.string "NORTH - VARROCK.\l"
-	.string "SOUTH - AL KHARID.\l"
-	.string "EAST - DIGSITE.$"
+	.string "North - to Varrock.\n"
+	.string "South - to Al Kharid.\l"
+	.string "East - to Digsite / Exam Centre.\l"
+	.string "West - to Lumbridge.$"
 
 ROUTE15_NPC_UNICORN_Text_0:
 	.string "Unicorn$"
@@ -211,3 +225,25 @@ BATTLE_ROUTE15_TRAINER_6_Text_0:
 BATTLE_ROUTE15_TRAINER_6_Text_1:
 	.string "My Beaver?\p"
 	.string "I found him was level 3.$"
+
+STORY_BLOCK_ROUTE15_FLYERBOY_Text_0:
+	.string "Guard$"
+
+STORY_BLOCK_ROUTE15_FLYERBOY_Text_1:
+	.string "Listen here kid, we've been informed of\n"
+	.string "someone scamming adventurers out this\l"
+	.string "way with flyers, you know anything\l"
+	.string "about that do you?$"
+
+STORY_BLOCK_ROUTE15_FLYERBOY_Text_2:
+	.string "Ali the Kid$"
+
+STORY_BLOCK_ROUTE15_FLYERBOY_Text_3:
+	.string "No sir, but here take this flyer.\p"
+	.string "It's a buy one get one free voucher for\n"
+	.string "Ali's Pouch store in Al Kharid!$"
+
+STORY_BLOCK_ROUTE15_FLYERBOY_Text_4:
+	.string "Oh wow cool!\p"
+	.string "Hey wait a minute…\p"
+	.string "This is out of date!$"

@@ -692,6 +692,104 @@ STORE_BattleShop:
     release
     end
 
+POUCH_INFO_IRON::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_IRON_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_MITHRIL::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_MITHRIL_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_ADAMANT::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_ADAMANT_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_CRYSTAL::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_CRYSTAL_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_BLACK::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_BLACK_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_WHITE::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_WHITE_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_AUGMENTED::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_AUGMENTED_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_SPLITBARK::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_SPLITBARK_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_MYSTIC::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_MYSTIC_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_ANCIENT::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_ANCIENT_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_DRAGON::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_DRAGON_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_ELEMENTAL::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_ELEMENTAL_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_CATALYTIC::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_CATALYTIC_Text_0
+	closemessage
+	end
+
+
+POUCH_INFO_BANE::
+	namebox SHOP_SPECIAL_POUCHES_Text_0
+	msgbox POUCH_INFO_BANE_Text_0
+	closemessage
+	end
+
+
 SHOP_TOKKUL_Text_0:
 	.string "Tz-ShopKeeps$"
 
@@ -823,9 +921,99 @@ SHOP_LOWE_Text_2:
 	.string "Thank you, come again.$"
 
 SHOP_SPECIAL_POUCHES_Text_0:
-	.string "Ranael$"
+	.string "Ali$"
 
 SHOP_SPECIAL_POUCHES_Text_1:
 	.string "Welcome to my store, I have pouches\n"
 	.string "that you cannot buy anywhere else!\p"
 	.string "How may I help you today?$"
+
+POUCH_INFO_IRON_Text_0:
+	.string "That's an Iron Pouch!\p"
+	.string "An Iron Pouch makes it easier to catch\n"
+	.string "monsters while fishing or underwater.$"
+
+POUCH_INFO_MITHRIL_Text_0:
+	.string "That's a Mithril Pouch!\p"
+	.string "You'd want to use that on the first\n"
+	.string "turn of battle for it to be most\l"
+	.string "effective.\p"
+	.string "After that it's about as useful as a\n"
+	.string "regular pouch.$"
+
+POUCH_INFO_ADAMANT_Text_0:
+	.string "That's an Adamant Pouch!\p"
+	.string "If the battle drags on for a long time\n"
+	.string "that's when you'd want to use this one.$"
+
+POUCH_INFO_CRYSTAL_Text_0:
+	.string "Huh?\p"
+	.string "Oh this pouch?\p"
+	.string "This is a rare Crystal Pouch!\p"
+	.string "It is very effective on shiny monsters,\n"
+	.string "but it is extremely expensive!$"
+
+POUCH_INFO_BLACK_Text_0:
+	.string "That's a Black Pouch!\p"
+	.string "You'd want to use these at Night or if\n"
+	.string "you're exploring a cave.$"
+
+POUCH_INFO_WHITE_Text_0:
+	.string "That's a White Pouch!\p"
+	.string "You'd want to use these Midday or if\n"
+	.string "you're trying to capture a monster\l"
+	.string "which for some reason located indoors.$"
+
+POUCH_INFO_AUGMENTED_Text_0:
+	.string "That's a Augmented Pouch!\p"
+	.string "These work wonders if you have already\n"
+	.string "caught the same species of monster\l"
+	.string "you're trying to capture!$"
+
+POUCH_INFO_SPLITBARK_Text_0:
+	.string "That's a Splitbark Pouch!\p"
+	.string "No matter what the status ailment of a\n"
+	.string "monster is, as long as it has one then\l"
+	.string "this will make it easier to capture\l"
+	.string "them!$"
+
+POUCH_INFO_MYSTIC_Text_0:
+	.string "That's a Mystic Pouch!\p"
+	.string "It's strange how this pouch works, but\n"
+	.string "after capturing a monster with it, that\l"
+	.string "monster will be in full health.$"
+
+POUCH_INFO_ANCIENT_Text_0:
+	.string "That's an Ancient Pouch!\p"
+	.string "Not much is known about these pouches\n"
+	.string "but they say a contract is forced upon\l"
+	.string "the monster to encourge friendship\l"
+	.string "growth.$"
+
+POUCH_INFO_DRAGON_Text_0:
+	.string "That's a Dragon Pouch!\p"
+	.string "This amazing pouch can catch any\n"
+	.string "monster without fail!\p"
+	.string "The only drawback is that no one knows\n"
+	.string "how they are made, so that makes them\l"
+	.string "really expensive.\p"
+	.string "Haha, no you cannot buy this one, it's\n"
+	.string "my prized pouch!$"
+
+POUCH_INFO_ELEMENTAL_Text_0:
+	.string "That's an Elemental Pouch!\p"
+	.string "These will make it easier to catch a\n"
+	.string "monster if it is a WATER, FIRE, ROCK,\l"
+	.string "GROUND, GRASS or FLYING type.$"
+
+POUCH_INFO_CATALYTIC_Text_0:
+	.string "That's an Catalytic Pouch!\p"
+	.string "These will make it easier to catch a\n"
+	.string "monster if it is a GHOST, POISON, BUG,\l"
+	.string "FIGHTING, ELECTRIC or ICE type.$"
+
+POUCH_INFO_BANE_Text_0:
+	.string "That's an Banite Pouch!\p"
+	.string "These will make it easier to catch a\n"
+	.string "monster if it is a DRAGON, FAIRY, DARK,\l"
+	.string "NORMAL, STEEL or PSYCHIC type.$"

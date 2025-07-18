@@ -142,35 +142,28 @@ EventScript_ChangeOutfit_Text_0:
 	.string "Would you like to change your outfit?$"
 
 NPC_ALKHARID_BANK_1_Text_0:
-	.string "Eryndor$"
+	.string "Summoner$"
 
 NPC_ALKHARID_BANK_1_Text_1:
-	.string "I am extremely skilled at reanimation,\n"
-	.string "and can bring back Scorpions!\n"
-	.string "Woah, woah now, it's VERY different to\l"
-	.string "Necromancy!\p"
-	.string "I am just reanimating their bodies, but\n"
-	.string "Necromancers manipulate souls...\p"
-	.string "It's much darker.$"
+	.string "I'm using Pouches that I brought from\n"
+	.string "Ali's Pouch Store!\p"
+	.string "They are so OP!$"
 
 NPC_ALKHARID_BANK_2_Text_0:
-	.string "Fendrel$"
+	.string "Diviner$"
 
 NPC_ALKHARID_BANK_2_Text_1:
-	.string "There is a dark omen lurking over this\n"
-	.string "town.\p"
-	.string "I have seen it in the stars.\p"
-	.string "It has sheathed wings, and undergoes\n"
-	.string "the most visceral of metamorphosis...\p"
-	.string "but there may be one even more deadly\n"
-	.string "lurking deeper beneath the sands.\n"
-	.string "Be careful out there.$"
+	.string "I can sense the anima flowing in all\n"
+	.string "living things…\p"
+	.string "You'd think that'd be great but I swear\n"
+	.string "theres something big shifting in the\l"
+	.string "sands below us…$"
 
 NPC_ALKHARID_BANK_3_Text_0:
 	.string "Guard$"
 
 NPC_ALKHARID_BANK_3_Text_1:
 	.string "I was the guard on watch when it\n"
-	.string "happened...\p"
+	.string "happened…\p"
 	.string "I'm probably going to be executed for\n"
-	.string "this...$"
+	.string "this…$"

@@ -39,10 +39,12 @@ HAMHIDEOUT_B1F_STATE_16:
 
 HAMHIDEOUT_B1F_STATE_2:
 	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_1
 
 HAMHIDEOUT_B1F_STATE_5:
 	setvar VAR_TEMP_0, 2
+	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_4
 
 HAMHIDEOUT_B1F_STATE_8:
@@ -51,6 +53,7 @@ HAMHIDEOUT_B1F_STATE_8:
 	setflag FLAG_TEMP_6
 	removeobject 45
 	setflag FLAG_TEMP_4
+	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_7
 
 HAMHIDEOUT_B1F_STATE_11:
@@ -62,6 +65,7 @@ HAMHIDEOUT_B1F_STATE_11:
 	setflag FLAG_TEMP_6
 	removeobject 45
 	setflag FLAG_TEMP_4
+	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_10
 
 HAMHIDEOUT_B1F_STATE_14:
@@ -78,6 +82,7 @@ HAMHIDEOUT_B1F_STATE_14:
 	setmetatile 37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
 	setmetatile 37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
 	setmetatile 38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1
+	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_13
 
 HAMHIDEOUT_B1F_STATE_17:
@@ -515,11 +520,12 @@ GOLDENGNOME_TEST_2:
 
 TRIGGER_HAMHIDEOUT_EVENT_1::
 	lock
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_1, 11
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_8, 11
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_2
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Zanik_1_Left
 	waitmovement 0
+	playse SE_PIN
 	applymovement 33, HAM_Hideout_Intro_1_Right
 	waitmovement 0
 TRIGGER_HAMHIDEOUT_EVENT_1_1:
@@ -530,17 +536,39 @@ TRIGGER_HAMHIDEOUT_EVENT_1_1:
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_1
 	hidenamebox
 	closemessage
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_1, 11
+	facefollower
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
+	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_3
+	hidenamebox
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP
+	waitmovement 0
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_0
+	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_4
+	hidenamebox
+	closemessage
+	facefollower
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
+	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_3
+	hidenamebox
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP
+	waitmovement 0
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_0
+	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_5
+	hidenamebox
+	closemessage
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_8, 11
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_6
 	applymovement 33, HAM_Hideout_Intro_2_Right
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
-	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT
-	waitmovement 0
+	facefollower
 TRIGGER_HAMHIDEOUT_EVENT_1_5:
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
-	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_3
+	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_6
 	closemessage
 	hidenamebox
 	setvar VAR_TEMP_0, 2
@@ -551,6 +579,7 @@ TRIGGER_HAMHIDEOUT_EVENT_1_5:
 TRIGGER_HAMHIDEOUT_EVENT_1_2:
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Zanik_1_Right
 	waitmovement 0
+	playse SE_PIN
 	applymovement 33, HAM_Hideout_Intro_1_Left
 	waitmovement 0
 	goto TRIGGER_HAMHIDEOUT_EVENT_1_1
@@ -558,9 +587,7 @@ TRIGGER_HAMHIDEOUT_EVENT_1_2:
 TRIGGER_HAMHIDEOUT_EVENT_1_6:
 	applymovement 33, HAM_Hideout_Intro_2_Left
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
-	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT
-	waitmovement 0
+	facefollower
 	goto TRIGGER_HAMHIDEOUT_EVENT_1_5
 
 
@@ -575,17 +602,21 @@ HAM_Hideout_Zanik_1_Right:
 	step_end
 
 HAM_Hideout_Intro_1_Left:
-	walk_left
-	walk_left
-	face_down
 	emote_double_exclamation_mark
+	face_down
+	delay_16
+	delay_16
+	walk_left
+	walk_left
 	walk_down
 	step_end
 
 HAM_Hideout_Intro_1_Right:
-	walk_left
-	face_down
 	emote_double_exclamation_mark
+	face_down
+	delay_16
+	delay_16
+	walk_left
 	walk_down
 	step_end
 
@@ -604,8 +635,8 @@ HAM_Hideout_Intro_2_Right:
 
 TRIGGER_HAMHIDEOUT_EVENT_2::
 	lock
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_2, 44
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_9, 44
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_2_2
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Top_1
 	waitmovement 0
@@ -623,8 +654,8 @@ TRIGGER_HAMHIDEOUT_EVENT_2_1:
 	applymovement 18, HAM_Hideout_Jail_Guard_Top_2
 	applymovement 19, HAM_Hideout_Jail_Guard_Bottom_2
 	waitmovement 0
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_2, 44
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_9, 44
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_2_6
 	applymovement OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Bottom
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Top_2
@@ -644,8 +675,8 @@ TRIGGER_HAMHIDEOUT_EVENT_2_5:
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_2_Text_3
 	hidenamebox
 	closemessage
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_1, 36
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_8, 36
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_2_10
 	applymovement OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Right
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Left
@@ -833,8 +864,8 @@ TRIGGER_HAMHIDEOUT_EVENT_3_2:
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
 	waitmovement 0
-	applymovement 10, FACE_ORIGINAL_DIRECTION
-	applymovement 11, FACE_ORIGINAL_DIRECTION
+	applymovement 10, Common_Movement_FaceOriginalDirection
+	applymovement 11, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
 	end
@@ -847,8 +878,8 @@ TRIGGER_HAMHIDEOUT_EVENT_3_3:
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
 	waitmovement 0
-	applymovement 10, FACE_ORIGINAL_DIRECTION
-	applymovement 11, FACE_ORIGINAL_DIRECTION
+	applymovement 10, Common_Movement_FaceOriginalDirection
+	applymovement 11, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
 	end
@@ -861,11 +892,12 @@ TRIGGER_HAMHIDEOUT_EVENT_3_4:
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
 	waitmovement 0
-	applymovement 10, FACE_ORIGINAL_DIRECTION
-	applymovement 11, FACE_ORIGINAL_DIRECTION
+	applymovement 10, Common_Movement_FaceOriginalDirection
+	applymovement 11, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	facefollower
 	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER
+	waitmovement 0
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_3_Text_3
 	closemessage
@@ -889,7 +921,7 @@ TRIGGER_HAMHIDEOUT_EVENT_3_5:
 	removeobject 10
 	removeobject 11
 	setflag FLAG_TEMP_5
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_3, 2
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 245
 	release
 	end
@@ -1241,7 +1273,7 @@ NPC_HAM_HIDEOUT_B1F_19::
 	msgbox NPC_HAM_HIDEOUT_B1F_19_Text_0
 	closemessage
 	hidenamebox
-	applymovement 10, FACE_ORIGINAL_DIRECTION
+	applymovement 10, Common_Movement_FaceOriginalDirection
 	release
 	end
 
@@ -1437,30 +1469,35 @@ GOLDENGNOME_TEST_Text_0:
 	.string "Testing…$"
 
 TRIGGER_HAMHIDEOUT_EVENT_1_Text_0:
-	.string "HAM Grunt$"
+	.string "H.A.M Grunt$"
 
 TRIGGER_HAMHIDEOUT_EVENT_1_Text_1:
-	.string "You're late!\l"
-	.string "You should have come in to cover the\l"
-	.string "next shift hours ago.\p"
-	.string "...{PAUSE 15}\p"
-	.string "I don't want to hear any excuses, now\n"
-	.string "go to the jail!\l"
-	.string "Someone needs to keep watch over our\l"
-	.string "guests!\p"
-	.string "...{PAUSE 15}\p"
-	.string "What's with the blank expressions?\l"
-	.string "Surely you both know it's in the\l"
-	.string "south-east of the cave by now, right!?$"
+	.string "You're late!\p"
+	.string "You should have come in to cover the\n"
+	.string "next shift hours ago.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_1_Text_2:
 	.string "Zanik$"
 
 TRIGGER_HAMHIDEOUT_EVENT_1_Text_3:
-	.string "Did you hear that {PLAYER}?! This\n"
-	.string "gives us the perfect cover to check\l"
-	.string "whether H.A.M have the Prince in their\l"
-	.string "jail cells.\l"
+	.string "…{PAUSE 15}…{PAUSE 15}…$"
+
+TRIGGER_HAMHIDEOUT_EVENT_1_Text_4:
+	.string "I don't want to hear any excuses, now\n"
+	.string "go to the jail!\p"
+	.string "Someone needs to keep watch over our\n"
+	.string "guests!$"
+
+TRIGGER_HAMHIDEOUT_EVENT_1_Text_5:
+	.string "What's with the blank expressions?\p"
+	.string "Surely you both know it's in the\n"
+	.string "south-east of the cave by now, right!?$"
+
+TRIGGER_HAMHIDEOUT_EVENT_1_Text_6:
+	.string "Did you hear that {PLAYER}?!\p"
+	.string "This gives us the perfect cover to\n"
+	.string "check whether H.A.M have the Prince in\l"
+	.string "their jail cells.\p"
 	.string "Let's go!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_0:
@@ -1501,13 +1538,13 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_7:
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_0:
 	.string "Shouldn't you two be guarding the\n"
-	.string "prisoners?\l"
-	.string "The jail cell is over to the east,\l"
+	.string "prisoners?\p"
+	.string "The jail cell is over to the east,\n"
 	.string "remember?$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_1:
-	.string "Get back to guarding the prisoners!\l"
-	.string "Johanhus won't be happy if he hears\l"
+	.string "Get back to guarding the prisoners!\p"
+	.string "Johanhus won't be happy if he hears\n"
 	.string "you've abandoned your posts.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_2:
@@ -1549,8 +1586,8 @@ NPC_HAM_HIDEOUT_B1F_1_Text_1:
 
 NPC_HAM_HIDEOUT_B1F_1_Text_2:
 	.string "What did I tell you two?\p"
-	.string "Go and guard the jail!\l"
-	.string "Otherwise you won't be getting any\l"
+	.string "Go and guard the jail!\p"
+	.string "Otherwise you won't be getting any\n"
 	.string "rations tonight.$"
 
 NPC_HAM_HIDEOUT_B1F_1_Text_3:
@@ -1579,8 +1616,8 @@ NPC_HAM_HIDEOUT_B1F_2_Text_1:
 
 NPC_HAM_HIDEOUT_B1F_3_Text_0:
 	.string "Have you had the chance to hear the\n"
-	.string "Deacon speak yet?\l"
-	.string "His words are so wise and inspiring, it's\l"
+	.string "Deacon speak yet?\p"
+	.string "His words are so wise and inspiring, it's\n"
 	.string "almost as if Saradomin is speaking\l"
 	.string "through him!$"
 
@@ -1695,8 +1732,8 @@ NPC_HAM_HIDEOUT_B1F_14_Text_9:
 NPC_HAM_HIDEOUT_B1F_15_Text_0:
 	.string "Don't forget, through here are the\n"
 	.string "sleeping quarters if you need to take a\l"
-	.string "rest.\l"
-	.string "Just make sure not to get caught\l"
+	.string "rest.\p"
+	.string "Just make sure not to get caught\n"
 	.string "sleeping if you're on duty, or Sigmund\l"
 	.string "will have your head!$"
 
@@ -1708,7 +1745,7 @@ NPC_HAM_HIDEOUT_B1F_16_Text_0:
 	.string "guided by Saradomin himself.\p"
 	.string "The churches may preach about him, but\n"
 	.string "you never seen any female priests or\l"
-	.string "monks..!$"
+	.string "monks…!$"
 
 NPC_HAM_HIDEOUT_B1F_17_Text_0:
 	.string "It's my turn to prepare tonight's meal.\p"
@@ -1727,8 +1764,8 @@ NPC_HAM_HIDEOUT_B1F_19_Text_0:
 	.string "important meeting.$"
 
 HAM_HIDEOUT_RANGE_Text_0:
-	.string "It's a range for cooking on.\l"
-	.string "Though you are not really sure how H.A.M\l"
+	.string "It's a range for cooking on.\p"
+	.string "Though you are not really sure how H.A.M\n"
 	.string "managed to get one working this far\l"
 	.string "underground.$"
 
@@ -1742,8 +1779,8 @@ HAM_HIDEOUT_CELL_DOOR_Text_1:
 	.string "with a key.$"
 
 NPC_HAM_HIDEOUT_B1F_STOREROOM_BLOCK_Text_0:
-	.string "You best get to your posts.\l"
-	.string "Patty and Babe came through here\l"
+	.string "You best get to your posts.\p"
+	.string "Patty and Babe came through here\n"
 	.string "earlier, and they will not be happy\l"
 	.string "seeing you two wandering aimlessly.$"
 
@@ -1751,7 +1788,7 @@ HAM_HIDEOUT_B1F_JIMMY_Text_0:
 	.string "Jimmy$"
 
 HAM_HIDEOUT_B1F_JIMMY_Text_1:
-	.string "Hello mate.\l"
+	.string "Hello mate.\n"
 	.string "Did Aggie send you?\p"
 	.string "I've been training as her apprentice,\n"
 	.string "but these lunatics kidnapped me and\l"

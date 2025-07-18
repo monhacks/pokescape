@@ -289,8 +289,8 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
         msgbox(format("Well drat.\nI guess I'm not as persuasive as I thought…"))
 		hidenamebox
     	closemessage
-        applymovement (29, movement_ZANIK_WALKS_AWAY)
 		applymovement (OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP)
+		applymovement (29, movement_ZANIK_WALKS_AWAY)
 		waitmovement(0)
     }
     else {
@@ -459,28 +459,8 @@ script Following_Zanik {
     namebox("Zanik")
     facefollower 
 
-	switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
-		case 225:
-			msgbox(format("The disguises are working!\pNow where might they be holding their prisoners?"))
-			hidenamebox
-			closemessage
-			release
-			end
-		case 230:
-			msgbox(format("We need to find someone with a spare key to the jail cell.\pPerhaps they're somewhere deeper inside the hideout?"))
-			hidenamebox
-			closemessage
-			release
-			end
-		case 235:
-			msgbox(format("I am sorry I blew our cover {PLAYER}, but we've come this far and we have the jail cell key now!\pWe have to keep going and find the Prince!"))
-			hidenamebox
-			closemessage
-			release
-			end
-	}
 	//It is more common for special dialogue than this common dialogue. 1/5
-	random(5)
+	random(6)
 	switch (var(VAR_RESULT)) {
 		case 0:
 		case 1:
@@ -498,6 +478,29 @@ script Following_Zanik {
 			}
 			else {
 				goto(ZANIK_DIALOGUE_COMMON)
+			}
+		case 4:
+			switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+				case 225:
+					msgbox(format("The disguises are working!\pNow where might they be holding their prisoners?"))
+					hidenamebox
+					closemessage
+					release
+					end
+				case 230:
+					msgbox(format("We need to find someone with a spare key to the jail cell.\pPerhaps they're somewhere deeper inside the hideout?"))
+					hidenamebox
+					closemessage
+					release
+					end
+				case 235:
+					msgbox(format("I am sorry I blew our cover {PLAYER}, but we've come this far and we have the jail cell key now!\pWe have to keep going and find the Prince!"))
+					hidenamebox
+					closemessage
+					release
+					end
+				default:
+					goto(ZANIK_DIALOGUE_COMMON)
 			}
 		default:
 			goto(ZANIK_DIALOGUE_COMMON)

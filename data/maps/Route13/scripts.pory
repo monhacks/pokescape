@@ -11,12 +11,12 @@ mapscripts Route13_MapScripts {
 
 script Route13_STATE {
     setflag(FLAG_TEMP_1E) //DELRITH
+    setflag(FLAG_TEMP_1F) // Guard and Dark Wizard
 
     if (var(VAR_POKESCAPE_GAMEMODE_STATE) == 1) //if OPENWORLD
     {
         removeobject(18)
         setflag(FLAG_ROUTE13_BLOCK)
-        setflag(FLAG_TEMP_1F) // Guard and Dark Wizard
     }
 
     if (!flag(FLAG_ROUTE13_BLOCK)) {    //if FALSE
@@ -38,7 +38,7 @@ script Route13_STATE {
     }
 
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) <= 235) { //TODO - Need the correct storymode value.
-        setflag(FLAG_TEMP_1F) // Guard and Dark Wizard
+        clearflag(FLAG_TEMP_1F) // Guard and Dark Wizard
     }
     return
 }
@@ -487,22 +487,21 @@ script PURO_PURO_EVENT_ROUTE13 {
 }
 
 script STORY_BLOCK_ROUTE13_GUARD_WIZARD {
-    random(5)
-        switch (var(VAR_RESULT)) {
+    random(4)
+    switch (var(VAR_RESULT)) {
         case 0:
             namebox("Varrock Guard")
-            msgbox(format("This one is for that poor noob you!"))
+            msgbox(format("This one is for that poor noob!"))
         case 1:
             namebox("Varrock Guard")
             msgbox(format("Leave those poor adventurers alone you fiend!"))
         case 2:
             namebox("Dark Wizard")
             msgbox(format("Once we revive Delrith your puny city will be destroyed!"))
-        case default:
+        case 3:
             namebox("Varrock Guard")
             msgbox(format("Al Kharid?\pWhat does that have to do with anything?!"))
-
-        }
+    }
     closemessage
     release
     end
@@ -510,7 +509,7 @@ script STORY_BLOCK_ROUTE13_GUARD_WIZARD {
 
 script SIGNPOST_ROUTE13
 {
-    msgbox(format("Northwest - to Varrock.\nSoutheast - to Al Kharid.\lEast - to Digsite / Exam Centre.\nSouth - to Lumbridge."))
+    msgbox(format("Northwest - to Varrock.\nSoutheast - to Al Kharid.\lEast - to Digsite / Exam Centre.\lSouth - to Lumbridge."))
     closemessage
     release
     end

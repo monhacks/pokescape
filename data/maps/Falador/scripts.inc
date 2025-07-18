@@ -1436,7 +1436,8 @@ FROGEEL_RIVAL_2_8:
 	closemessage
 	hidenamebox
 	setvar VAR_FROGEEL_RIVAL, 6
-	applymovement 53, FACE_ORIGINAL_DIRECTION
+	applymovement 53, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -1445,7 +1446,8 @@ FROGEEL_RIVAL_2_11:
 	closemessage
 	hidenamebox
 	setvar VAR_FROGEEL_RIVAL, 7
-	applymovement 53, FACE_ORIGINAL_DIRECTION
+	applymovement 53, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 

@@ -689,8 +689,8 @@ NPC_HAM_HIDEOUT_9_Text_0:
 NPC_HAM_HIDEOUT_11_Text_0:
 	.string "Babe and Patty are recent admins\n"
 	.string "recruited by Sigmund for their hard\l"
-	.string "work.\l"
-	.string "Patty's hard work that is, I don't know\l"
+	.string "work.\p"
+	.string "Patty's hard work that is, I don't know\n"
 	.string "what Babe did…$"
 
 NPC_HAM_HIDEOUT_12_Text_0:

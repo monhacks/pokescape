@@ -73,7 +73,8 @@ Debug_EventScript_Script_1::
 	end
 
 Debug_EventScript_Script_2::
-	goto(SLAYER_VAR_CHECK)
+	@goto(SLAYER_VAR_CHECK)
+	goto(Check_RandomiseSeed_Weather)
 	end
 
 Debug_EventScript_Script_3::

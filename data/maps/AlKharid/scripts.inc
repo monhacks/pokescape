@@ -222,8 +222,8 @@ ALKHARID_NPC_13::
 
 ALKHARID_NPC_14::
 	faceplayer
-	namebox ALKHARID_NPC_14_Text_0
-	msgbox ALKHARID_NPC_14_Text_1
+	namebox ALKHARID_NPC_4_Text_0
+	msgbox ALKHARID_NPC_14_Text_0
 	closemessage
 	hidenamebox
 	release
@@ -232,8 +232,8 @@ ALKHARID_NPC_14::
 
 ALKHARID_NPC_15::
 	faceplayer
-	namebox ALKHARID_NPC_14_Text_0
-	msgbox ALKHARID_NPC_14_Text_1
+	namebox ALKHARID_NPC_4_Text_0
+	msgbox ALKHARID_NPC_15_Text_0
 	closemessage
 	hidenamebox
 	release
@@ -242,8 +242,18 @@ ALKHARID_NPC_15::
 
 ALKHARID_NPC_16::
 	faceplayer
-	namebox ALKHARID_NPC_14_Text_0
-	msgbox ALKHARID_NPC_14_Text_1
+	namebox ALKHARID_NPC_4_Text_0
+	msgbox ALKHARID_NPC_16_Text_0
+	closemessage
+	hidenamebox
+	release
+	end
+
+
+ALKHARID_NPC_17::
+	faceplayer
+	namebox ALKHARID_NPC_4_Text_0
+	msgbox ALKHARID_NPC_17_Text_0
 	closemessage
 	hidenamebox
 	release
@@ -252,8 +262,8 @@ ALKHARID_NPC_16::
 
 ALKHARID_INDOOR_NPC_1::
 	faceplayer
-	namebox ALKHARID_NPC_14_Text_0
-	msgbox ALKHARID_INDOOR_NPC_1_Text_0
+	namebox ALKHARID_INDOOR_NPC_1_Text_0
+	msgbox ALKHARID_INDOOR_NPC_1_Text_1
 	closemessage
 	hidenamebox
 	release
@@ -446,8 +456,23 @@ ELITE4_BATTLE_ZANIK::
 
 
 ELITE4_BATTLE_HANS::
-	trainerbattle_no_intro TRAINER_ELITE4_HANS_1_GRASS, BATTLE_TEST_CUPHOLDER_Text_2
+	goto_if_set FLAG_STARTER1, ELITE4_BATTLE_HANS_2
+	goto_if_set FLAG_STARTER2, ELITE4_BATTLE_HANS_3
+	goto_if_set FLAG_STARTER3, ELITE4_BATTLE_HANS_4
+ELITE4_BATTLE_HANS_1:
 	return
+
+ELITE4_BATTLE_HANS_2:
+	trainerbattle_no_intro TRAINER_ELITE4_HANS_1_GRASS, BATTLE_TEST_CUPHOLDER_Text_2
+	goto ELITE4_BATTLE_HANS_1
+
+ELITE4_BATTLE_HANS_3:
+	trainerbattle_no_intro TRAINER_ELITE4_HANS_1_FIRE, BATTLE_TEST_CUPHOLDER_Text_2
+	goto ELITE4_BATTLE_HANS_1
+
+ELITE4_BATTLE_HANS_4:
+	trainerbattle_no_intro TRAINER_ELITE4_HANS_1_WATER, BATTLE_TEST_CUPHOLDER_Text_2
+	goto ELITE4_BATTLE_HANS_1
 
 
 ELITE4_BATTLE_HAZELMERE::
@@ -896,9 +921,9 @@ ALKHARID_NPC_9_Text_1:
 ALKHARID_NPC_10_Text_0:
 	.string "I'm glad I managed to get assigned as a\n"
 	.string "guard outside the palace.\p"
-	.string "Therer were too many adventurers\n"
-	.string "coming into the palace and trapping my\l"
-	.string "brothers behind furniture to kill them.$"
+	.string "There were too many adventurers coming\n"
+	.string "into the palace and trapping my\l"
+	.string "brothers behind furniture.$"
 
 ALKHARID_NPC_11_Text_0:
 	.string "We deal with a lot of thieves and\n"
@@ -910,10 +935,11 @@ ALKHARID_NPC_12_Text_0:
 	.string "Spirit Angler$"
 
 ALKHARID_NPC_12_Text_1:
-	.string "The Spirit of the Sea has awoken and is\n"
-	.string "creating intense storms for sailors.\p"
-	.string "I wonder if there are any adventurers\n"
-	.string "brave enough to defeat it.$"
+	.string "There is a creature known as the Spirit\n"
+	.string "of the Sea.\p"
+	.string "They say once it has awoken it will\n"
+	.string "cause intense storms for sailors.\p"
+	.string "Let's hope no one ever awakens it…$"
 
 ALKHARID_NPC_13_Text_0:
 	.string "Ozan$"
@@ -932,21 +958,42 @@ ALKHARID_NPC_13_Text_1:
 	.string "me?$"
 
 ALKHARID_NPC_14_Text_0:
-	.string "Cupholder$"
+	.string "I'm guarding the bank, so don't think\n"
+	.string "about doing anything that will make me\l"
+	.string "have to actually work.$"
 
-ALKHARID_NPC_14_Text_1:
-	.string "I am a Cupholder$"
+ALKHARID_NPC_15_Text_0:
+	.string "Patrolling the streets is just one of\n"
+	.string "the jobs of a Warrior of Al Khaird!$"
+
+ALKHARID_NPC_16_Text_0:
+	.string "Have you ever noticed how shops have\n"
+	.string "those newsletters on the desk?\p"
+	.string "I wonder if anyone reads them…$"
+
+ALKHARID_NPC_17_Text_0:
+	.string "Can you believe it?\p"
+	.string "Our very own Prince Ali was choosen to\n"
+	.string "be one of the MvM leaders!$"
 
 ALKHARID_INDOOR_NPC_1_Text_0:
-	.string "Hello, I am a Cupholder.$"
+	.string "Ranger$"
+
+ALKHARID_INDOOR_NPC_1_Text_1:
+	.string "Do you give your monsters items to\n"
+	.string "hold?\p"
+	.string "You probably should if you aren't\n"
+	.string "already doing so.$"
 
 ALKHARID_INDOOR_NPC_2_Text_0:
 	.string "Karim$"
 
 ALKHARID_INDOOR_NPC_2_Text_1:
-	.string "Would you like to buy a nice kebab? Only\n"
-	.string "one gold.{PAUSE 32}\n"
-	.string "Are you sure you wouldn't like a kebab?$"
+	.string "Would you like to buy a nice kebab?\p"
+	.string "Oh hang on these aren't ready for\n"
+	.string "consumption yet…\p"
+	.string "Who knows what the effects would be if\n"
+	.string "you were to eat one now.$"
 
 ALKHARID_INDOOR_NPC_3_Text_0:
 	.string "Zeke$"

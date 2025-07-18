@@ -717,56 +717,85 @@ STORE_BattleShop:
 script POUCH_INFO_IRON {
     namebox ("Ali") 
 	msgbox(format("That's an Iron Pouch!\pAn Iron Pouch makes it easier to catch monsters while fishing or underwater."))
+    closemessage
+    //show picture of item
+    end
 }
 script POUCH_INFO_MITHRIL {
     namebox ("Ali") 
 	msgbox(format("That's a Mithril Pouch!\pYou'd want to use that on the first turn of battle for it to be most effective.\pAfter that it's about as useful as a regular pouch."))
+    closemessage
+    end
 }
 script POUCH_INFO_ADAMANT {
     namebox ("Ali") 
 	msgbox(format("That's an Adamant Pouch!\pIf the battle drags on for a long time that's when you'd want to use this one."))
+    closemessage
+    end
 }
 script POUCH_INFO_CRYSTAL {
     namebox ("Ali") 
 	msgbox(format("Huh?\pOh this pouch?\pThis is a rare Crystal Pouch!\pIt is very effective on shiny monsters, but it is extremely expensive!"))
+    closemessage
+    end
 }
 script POUCH_INFO_BLACK {
     namebox ("Ali") 
 	msgbox(format("That's a Black Pouch!\pYou'd want to use these at Night or if you're exploring a cave."))
+    closemessage
+    end
 }
 script POUCH_INFO_WHITE {
     namebox ("Ali") 
 	msgbox(format("That's a White Pouch!\pYou'd want to use these Midday or if you're trying to capture a monster which for some reason located indoors."))
+    closemessage
+    end
 }
-script POUCH_INFO_AUGEMENTED {
+script POUCH_INFO_AUGMENTED {
     namebox ("Ali") 
 	msgbox(format("That's a Augmented Pouch!\pThese work wonders if you have already caught the same species of monster you're trying to capture!"))
+    closemessage
+    end
 }
 script POUCH_INFO_SPLITBARK {
     namebox ("Ali") 
 	msgbox(format("That's a Splitbark Pouch!\pNo matter what the status ailment of a monster is, as long as it has one then this will make it easier to capture them!"))
+    closemessage
+    end
 }
 script POUCH_INFO_MYSTIC {
     namebox ("Ali") 
 	msgbox(format("That's a Mystic Pouch!\pIt's strange how this pouch works, but after capturing a monster with it, that monster will be in full health."))
+    closemessage
+    end
 }
 script POUCH_INFO_ANCIENT {
     namebox ("Ali") 
 	msgbox(format("That's an Ancient Pouch!\pNot much is known about these pouches but they say a contract is forced upon the monster to encourge friendship growth."))
+    closemessage
+    end
 }
 script POUCH_INFO_DRAGON {
     namebox ("Ali") 
 	msgbox(format("That's a Dragon Pouch!\pThis amazing pouch can catch any monster without fail!\pThe only drawback is that no one knows how they are made, so that makes them really expensive.\pHaha, no you cannot buy this one, it's my prized pouch!"))
+    closemessage
+    end
 }
 script POUCH_INFO_ELEMENTAL {
     namebox ("Ali") 
 	msgbox(format("That's an Elemental Pouch!\pThese will make it easier to catch a monster if it is a WATER, FIRE, ROCK, GROUND, GRASS or FLYING type."))
+    closemessage
+    end
 }
 script POUCH_INFO_CATALYTIC {
     namebox ("Ali") 
 	msgbox(format("That's an Catalytic Pouch!\pThese will make it easier to catch a monster if it is a GHOST, POISON, BUG, FIGHTING, ELECTRIC or ICE type."))
+    closemessage
+    end
 }
 script POUCH_INFO_BANE {
     namebox ("Ali") 
 	msgbox(format("That's an Banite Pouch!\pThese will make it easier to catch a monster if it is a DRAGON, FAIRY, DARK, NORMAL, STEEL or PSYCHIC type."))
+    closemessage
+    end
 }

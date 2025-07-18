@@ -1713,22 +1713,25 @@ void SpeakerNameTrainerClasses(void)
 {
     //If trainer class is one of these trainers then use a different speaker name.
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_DARK_WIZARD) {
-        gSpeakerName = ("Dark Wizard");
+        gSpeakerName = gText_DarkWizard; 
     }
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_HILL_GIANT) {
-        gSpeakerName = ("Hill Giant");
+        gSpeakerName = gText_HillGiant;
     }
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MOSS_GIANT) {
-        gSpeakerName = ("Moss Giant");
+        gSpeakerName = gText_MossGiant;
     }
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_FIRE_GIANT) {
-        gSpeakerName = ("Fire Giant");
+        gSpeakerName = gText_FireGiant;
     }
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_FORGOTTEN) {
-        gSpeakerName = ("Forgotten Warrior");
+        gSpeakerName = gText_ForgottenWarrior;
     }
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_ZAMORAK) {
-        gSpeakerName = ("Zamorakian Monk");
+        gSpeakerName = gText_ZamorakianMonk;
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MUGGER) {
+        gSpeakerName = gText_Mugger;
     }
 }
 

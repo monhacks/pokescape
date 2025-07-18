@@ -48,7 +48,7 @@ BATTLE_ROUTE14_TRAINER_3_Text_0:
 	.string "You best be careful, these fish bite!$"
 
 BATTLE_ROUTE14_TRAINER_3_Text_1:
-	.string "Clearly they don't bite hard enough...$"
+	.string "Clearly they don't bite hard enough…$"
 
 BATTLE_ROUTE14_TRAINER_3_Text_2:
 	.string "Efisherate$"
@@ -60,9 +60,8 @@ BATTLE_ROUTE14_TRAINER_3_Text_3:
 	.string "change.$"
 
 NPC_ROUTE14_Text_0:
-	.string "IonChamp$"
+	.string "Tarquin$"
 
 NPC_ROUTE14_Text_1:
-	.string "Look, I know nobody will ever believe me\n"
-	.string "but I SWEAR the chicken up there used\l"
-	.string "to be evil!!$"
+	.string "The river Lum is ideal for canoeing, why\n"
+	.string "not give it a try?$"

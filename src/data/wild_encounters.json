@@ -32798,7 +32798,7 @@
           "map": "MAP_EDGEVILLE_GYM",
           "base_label": "gEdgeville_Gym0",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 0,
             "mons": [
               {
                 "min_level": 5,

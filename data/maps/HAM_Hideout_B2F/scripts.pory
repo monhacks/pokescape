@@ -71,7 +71,7 @@ script NPC_HAM_HIDEOUT_11
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("Babe and Patty are recent admins recruited by Sigmund for their hard work.\lPatty's hard work that is, I don't know what Babe did…"))
+	msgbox(format("Babe and Patty are recent admins recruited by Sigmund for their hard work.\pPatty's hard work that is, I don't know what Babe did…"))
     closemessage
     hidenamebox
 	release

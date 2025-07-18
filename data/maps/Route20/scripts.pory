@@ -24,6 +24,7 @@ script ROUTE20_METATILES {
 script ROUTE20_STATE {
     setflag(FLAG_TEMP_1F)
     setflag(FLAG_TEMP_1E)
+    setflag(FLAG_TEMP_1D)
     removeobject(9)
     removeobject(10)
     removeobject(11)
@@ -48,6 +49,7 @@ script ROUTE20_STATE {
         addobject(18)
         addobject(14)
         setvar(VAR_TEMP_0, 1)
+        setvar(VAR_TEMP_3, 1)
     }
     if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 165) 
         || (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 175)
@@ -60,9 +62,19 @@ script ROUTE20_STATE {
         || (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 195))
     {
         clearflag(FLAG_TEMP_1E)
+        clearflag(FLAG_TEMP_1D)
         addobject(11)
         addobject(12)
         addobject(18)
+        addobject(14)
+        setvar(VAR_TEMP_0, 1)
+        setvar(VAR_TEMP_3, 1)
+    }
+    if (!flag(FLAG_BADGE07_GET))
+    {
+        clearflag(FLAG_TEMP_1E)
+        addobject(11)
+        addobject(12)
         addobject(14)
         setvar(VAR_TEMP_0, 1)
     }
@@ -159,7 +171,13 @@ script ROUTE20_VARROCK_GUARD_1
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("Varrock is closed off to all visitors at the moment, by decree of King Roald himself.\pWe will re-open access once things are safe again."))
+    if (!flag(FLAG_BADGE07_GET) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 195))
+    {
+        msgbox(format("Varrock is closed off to all visitors at the moment, by decree of King Roald himself.\pWe will re-open access once things are safe again.\pWhy not visit Edgeville Gym in the meantime?"))
+    }
+    else {
+        msgbox(format("Varrock is closed off to all visitors at the moment, by decree of King Roald himself.\pWe will re-open access once things are safe again."))
+    }
     closemessage
     hidenamebox
     release
@@ -170,7 +188,13 @@ script ROUTE20_VARROCK_GUARD_2
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("We've been asked by the White Knights not to let anybody through while they investigate what's going on over in the west."))
+    if (!flag(FLAG_BADGE07_GET) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 195))
+    {
+        msgbox(format("We're just waiting for a report from the White Knights, why not visit Edgeville Gym in the meantime?"))
+    }
+    else {
+        msgbox(format("We've been asked by the White Knights not to let anybody through while they investigate what's going on over in the west."))
+    }
     closemessage
     hidenamebox
     release

@@ -6,6 +6,12 @@ Crandor_MapScripts::
 Crandor_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	call CRANDOR_STATE
 	call RANDOM_EVENT_SPAWNS_CRANDOR
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 150
+	goto_if_ge Crandor_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	return
+
+Crandor_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+	call WEATHER_CHANGE_SEA_ROUTES_ROUGH
 	return
 
 Crandor_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:

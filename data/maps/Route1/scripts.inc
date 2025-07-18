@@ -1231,7 +1231,7 @@ BATTLE_ROUTE1_RIVER_TRAINER_2_Text_2:
 	.string "Gelo Ball$"
 
 BATTLE_ROUTE1_RIVER_TRAINER_2_Text_3:
-	.string "The guards are blocking one entrance..\p"
+	.string "The guards are blocking one entrance…\p"
 	.string "Sheep are blocking another.\p"
 	.string "Maybe I should just give up on slaying\n"
 	.string "that demon.$"

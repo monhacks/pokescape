@@ -36,7 +36,7 @@ script RANDOM_EVENT_SPAWNS_ROUTE15 {
 
 script ROUTE15_SIGNPOST
 {
-    msgbox(format("North - to Varrock.\nSouth - to Al Kharid.\lEast - to Digsite / Exam Centre.\nWest - to Lumbridge."))
+    msgbox(format("North - to Varrock.\nSouth - to Al Kharid.\lEast - to Digsite / Exam Centre.\lWest - to Lumbridge."))
     closemessage
     release
     end

@@ -1,5 +1,6 @@
 Lumbridge_Forest_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
 Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION:
@@ -12,6 +13,10 @@ Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	call LumForest_STATE
 	return
+
+Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+	map_script_2 VAR_POKESCAPE_STORYMODE_PROGRESS, 240, POST_WARP_ZANIK_EVENT
+	.2byte 0
 
 
 LumForest_STATE::
@@ -32,6 +37,30 @@ LumForest_STATE_4:
 	addobject 41
 	clearflag FLAG_TEMP_8
 	goto LumForest_STATE_1
+
+
+POST_WARP_ZANIK_EVENT::
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox POST_WARP_ZANIK_EVENT_Text_1
+	msgbox POST_WARP_ZANIK_EVENT_Text_2
+	namebox POST_WARP_ZANIK_EVENT_Text_3
+	msgbox POST_WARP_ZANIK_EVENT_Text_4
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox POST_WARP_ZANIK_EVENT_Text_5
+	namebox POST_WARP_ZANIK_EVENT_Text_3
+	msgbox POST_WARP_ZANIK_EVENT_Text_6
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox POST_WARP_ZANIK_EVENT_Text_7
+	hidenamebox
+	closemessage
+	giveitem ITEM_BONECROSSBOW, 1
+	closemessage
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox POST_WARP_ZANIK_EVENT_Text_8
+	hidenamebox
+	closemessage
+	release
+	end
 
 
 LUMBRIDGEFOREST_NPC_BOT1::
@@ -221,21 +250,21 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction::
 	goto_if_ne TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_2
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_3
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
 	closemessage
 	hidenamebox
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_UP
 	waitmovement 0
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7, MSGBOX_YESNO
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_6
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8
 	hidenamebox
 	playfanfare MUS_OBTAIN_SYMBOL
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9
 	waitfanfare
 	closemessage
 	hidenamebox
@@ -243,8 +272,8 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	setflag FLAG_PARTNER_BATTLE
 	setvar VAR_PARTNER_TRAINER, TRAINER_ZANIK_HAM
 	setvar VAR_PARTNER_SPRITE, TRAINER_BACK_PIC_ZANIK
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10
 	closemessage
 	hidenamebox
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -254,8 +283,8 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_12
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11
 	closemessage
 	hidenamebox
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_WALK_UP
@@ -273,11 +302,11 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_2:
 	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_6:
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7
 	hidenamebox
 	closemessage
-	applymovement 29, movement_ZANIK_WALKS_AWAY
 	applymovement OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP
+	applymovement 29, movement_ZANIK_WALKS_AWAY
 	waitmovement 0
 	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_5
 
@@ -314,7 +343,7 @@ CHECK_FOLLOWER_ZANIK_1:
 CHECK_FOLLOWER_ZANIK_2:
 	lockall
 	facefollower
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
+	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox CHECK_FOLLOWER_ZANIK_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_ne CHECK_FOLLOWER_ZANIK_6
@@ -347,7 +376,7 @@ CHECK_FOLLOWER_ZANIK_12:
 	goto CHECK_FOLLOWER_ZANIK_5
 
 CHECK_FOLLOWER_ZANIK_10:
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
+	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox CHECK_FOLLOWER_ZANIK_Text_2
 	goto CHECK_FOLLOWER_ZANIK_9
 
@@ -363,11 +392,11 @@ CHECK_FOLLOWER_ZANIK_13:
 SetFollower_Zanik::
 	lockall
 	faceplayer
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
+	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox SetFollower_Zanik_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_ne SetFollower_Zanik_2
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7
 	hidenamebox
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
@@ -376,10 +405,10 @@ SetFollower_Zanik::
 	end
 
 SetFollower_Zanik_2:
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8
 	hidenamebox
 	playfanfare MUS_OBTAIN_SYMBOL
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9
 	waitfanfare
 	closemessage
 	hidenamebox
@@ -387,8 +416,8 @@ SetFollower_Zanik_2:
 	setflag FLAG_PARTNER_BATTLE
 	setvar VAR_PARTNER_TRAINER, TRAINER_ZANIK_HAM
 	setvar VAR_PARTNER_SPRITE, TRAINER_BACK_PIC_ZANIK
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10
 	closemessage
 	hidenamebox
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -398,8 +427,8 @@ SetFollower_Zanik_2:
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_12
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11
 	closemessage
 	hidenamebox
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_WALK_UP
@@ -410,64 +439,69 @@ SetFollower_Zanik_2:
 
 
 Following_Zanik::
-	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
+	namebox POST_WARP_ZANIK_EVENT_Text_0
 	facefollower
-	switch VAR_POKESCAPE_STORYMODE_PROGRESS
-	case 225, Following_Zanik_3
-	case 230, Following_Zanik_4
-	case 235, Following_Zanik_5
-	random 5
+	random 6
 	switch VAR_RESULT
-	case 0, Following_Zanik_7
-	case 1, Following_Zanik_7
-	case 2, Following_Zanik_7
-	case 3, Following_Zanik_7
+	case 0, Following_Zanik_2
+	case 1, Following_Zanik_2
+	case 2, Following_Zanik_2
+	case 3, Following_Zanik_2
+	case 4, Following_Zanik_3
+	goto ZANIK_DIALOGUE_COMMON
+	return
+
+Following_Zanik_2:
+	specialvar VAR_RESULT, GetCurrentMap
+	compare VAR_RESULT, MAP_LUMBRIDGE_FOREST
+	goto_if_eq Following_Zanik_5
+	compare VAR_RESULT, MAP_HAM_HIDEOUT_B1F
+	goto_if_eq Following_Zanik_6
+	compare VAR_RESULT, MAP_HAM_HIDEOUT_B2F
+	goto_if_eq Following_Zanik_7
 	goto ZANIK_DIALOGUE_COMMON
 	return
 
 Following_Zanik_3:
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 225, Following_Zanik_13
+	case 230, Following_Zanik_14
+	case 235, Following_Zanik_15
+	goto ZANIK_DIALOGUE_COMMON
+	return
+
+Following_Zanik_5:
+	goto ZANIK_DIALOGUE_LUMBRIDGE_FOREST
+	return
+
+Following_Zanik_6:
+	goto ZANIK_DIALOGUE_HAM_HIDEOUT_B1F
+	return
+
+Following_Zanik_7:
+	goto ZANIK_DIALOGUE_HAM_HIDEOUT_B2F
+	return
+
+Following_Zanik_13:
 	msgbox Following_Zanik_Text_0
 	hidenamebox
 	closemessage
 	release
 	end
 
-Following_Zanik_4:
+Following_Zanik_14:
 	msgbox Following_Zanik_Text_1
 	hidenamebox
 	closemessage
 	release
 	end
 
-Following_Zanik_5:
+Following_Zanik_15:
 	msgbox Following_Zanik_Text_2
 	hidenamebox
 	closemessage
 	release
 	end
-
-Following_Zanik_7:
-	specialvar VAR_RESULT, GetCurrentMap
-	compare VAR_RESULT, MAP_LUMBRIDGE_FOREST
-	goto_if_eq Following_Zanik_9
-	compare VAR_RESULT, MAP_HAM_HIDEOUT_B1F
-	goto_if_eq Following_Zanik_10
-	compare VAR_RESULT, MAP_HAM_HIDEOUT_B2F
-	goto_if_eq Following_Zanik_11
-	goto ZANIK_DIALOGUE_COMMON
-	return
-
-Following_Zanik_9:
-	goto ZANIK_DIALOGUE_LUMBRIDGE_FOREST
-	return
-
-Following_Zanik_10:
-	goto ZANIK_DIALOGUE_HAM_HIDEOUT_B1F
-	return
-
-Following_Zanik_11:
-	goto ZANIK_DIALOGUE_HAM_HIDEOUT_B2F
-	return
 
 
 ZANIK_DIALOGUE_COMMON::
@@ -787,6 +821,67 @@ ITEM_RECEIVED_TM64::
 	end
 
 
+POST_WARP_ZANIK_EVENT_Text_0:
+	.string "Zanik$"
+
+POST_WARP_ZANIK_EVENT_Text_1:
+	.string "We made it out somehow.$"
+
+POST_WARP_ZANIK_EVENT_Text_2:
+	.string "Hey you, sunburned human, are you all\n"
+	.string "right?$"
+
+POST_WARP_ZANIK_EVENT_Text_3:
+	.string "Prince Ali$"
+
+POST_WARP_ZANIK_EVENT_Text_4:
+	.string "My name is Prince Ali, goblin.\l"
+	.string "Thank you for saving me.$"
+
+POST_WARP_ZANIK_EVENT_Text_5:
+	.string "It wasn't all me, most of it was\n"
+	.string "{PLAYER} here.$"
+
+POST_WARP_ZANIK_EVENT_Text_6:
+	.string "{PLAYER}.\l"
+	.string "Thank you for saving me.\p"
+	.string "H.A.M wanted my 'INSERT PLOT MCGUFFIN\n"
+	.string "HERE' saying it was a vital ingredient\l"
+	.string "to a ritual to bind a monster to their\l"
+	.string "will.\p"
+	.string "It has been passed down in my family\n"
+	.string "for ages.\l"
+	.string "But it seems I had to trade it for my\l"
+	.string "life for now.\p"
+	.string "We can not let H.A.M get away with this.\l"
+	.string "I will try to reach the other MvM\l"
+	.string "leaders and organize a front to stop\l"
+	.string "them.\p"
+	.string "But until then, I guess you do need to\n"
+	.string "beat me right?\l"
+	.string "I will meet you back in Al Kharid.\l"
+	.string "Let us battle and become ever stronger\l"
+	.string "together!$"
+
+POST_WARP_ZANIK_EVENT_Text_7:
+	.string "You save him from a bunch of\n"
+	.string "extremists.\l"
+	.string "We risk our lives in doing so.\l"
+	.string "And your thanks is a battle?\p"
+	.string "You humans are weird.\p"
+	.string "Either way, I should get involved as\n"
+	.string "well in tracking H.A.M.\p"
+	.string "For now I will retreat.\p"
+	.string "Hey {PLAYER}, as a thanks for the\n"
+	.string "help, I want you to have this!$"
+
+POST_WARP_ZANIK_EVENT_Text_8:
+	.string "it's a spare, but I hope it will do you\n"
+	.string "good.\p"
+	.string "I am going back to Dorgesh-Kaan for\n"
+	.string "now, but I hope to see you again.\p"
+	.string "Goodbye {PLAYER}.$"
+
 LUMBRIDGEFOREST_NPC_BOT1_Text_0:
 	.string "Bot$"
 
@@ -947,14 +1042,11 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_3:
 	.string "than others.$"
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4:
-	.string "Zanik$"
-
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5:
 	.string "I am Zanik. A hunter and scout for the\n"
 	.string "Dorgeshuun goblins beneath Lumbridge.\p"
 	.string "And you are?$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5:
 	.string "{PLAYER}.\p"
 	.string "What a weird name…\n"
 	.string "according to goblin sensibilities at\l"
@@ -971,26 +1063,26 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6:
 	.string "you probably have your own reasons\l"
 	.string "right?$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6:
 	.string "So how about I lend you a disguise and\n"
 	.string "we team up down there?$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7:
 	.string "Well drat.\n"
 	.string "I guess I'm not as persuasive as I\l"
 	.string "thought…$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8:
 	.string "I bet we will make a great team!$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9:
 	.string "Together nothing can beat us!\n"
 	.string "Zanik teams up!$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10:
 	.string "Here put this disguise on.$"
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_12:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11:
 	.string "Perfect let us venture below!$"
 
 CHECK_FOLLOWER_ZANIK_Text_0:

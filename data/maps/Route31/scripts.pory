@@ -307,18 +307,23 @@ script WEATHER_CHANGE_SEA_ROUTES_ROUGH
 		case 0: 
 		case 1: 
 		case 2: 
-		case 3: 
 			setweather (WEATHER_RAIN)
 			doweather
+		case 4: 
+			setweather (WEATHER_SUNNY)
+			doweather
+		case 8:
 		case 9:
 			setweather (WEATHER_DOWNPOUR)
 			doweather
 		default:
-			setweather (WEATHER_NONE)
+			setweather (WEATHER_RAIN_THUNDERSTORM)
 			doweather
 	}
 	return
 }
+
+
 
 script WEATHER_CHANGE_AREA_DESERT_CALM
 {

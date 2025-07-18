@@ -36,6 +36,7 @@ ROUTE20_METATILES_4:
 ROUTE20_STATE::
 	setflag FLAG_TEMP_1F
 	setflag FLAG_TEMP_1E
+	setflag FLAG_TEMP_1D
 	removeobject 9
 	removeobject 10
 	removeobject 11
@@ -69,11 +70,13 @@ ROUTE20_STATE_1:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 195
 	goto_if_eq ROUTE20_STATE_5
 ROUTE20_STATE_4:
-	switch VAR_FROGEEL_RIVAL
-	case 15, ROUTE20_STATE_25
-	case 16, ROUTE20_STATE_26
-	case 17, ROUTE20_STATE_27
+	goto_if_unset FLAG_BADGE07_GET, ROUTE20_STATE_24
 ROUTE20_STATE_23:
+	switch VAR_FROGEEL_RIVAL
+	case 15, ROUTE20_STATE_28
+	case 16, ROUTE20_STATE_29
+	case 17, ROUTE20_STATE_30
+ROUTE20_STATE_26:
 	return
 
 ROUTE20_STATE_2:
@@ -87,33 +90,44 @@ ROUTE20_STATE_2:
 	addobject 18
 	addobject 14
 	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_3, 1
 	goto ROUTE20_STATE_1
 
 ROUTE20_STATE_5:
 	clearflag FLAG_TEMP_1E
+	clearflag FLAG_TEMP_1D
 	addobject 11
 	addobject 12
 	addobject 18
 	addobject 14
 	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_3, 1
 	goto ROUTE20_STATE_4
 
-ROUTE20_STATE_25:
+ROUTE20_STATE_24:
+	clearflag FLAG_TEMP_1E
+	addobject 11
+	addobject 12
+	addobject 14
+	setvar VAR_TEMP_0, 1
+	goto ROUTE20_STATE_23
+
+ROUTE20_STATE_28:
 	addobject 20
 	addobject 21
 	clearflag FLAG_TEMP_10
 	clearflag FLAG_TEMP_9
-	goto ROUTE20_STATE_23
+	goto ROUTE20_STATE_26
 
-ROUTE20_STATE_26:
+ROUTE20_STATE_29:
 	addobject 20
 	clearflag FLAG_TEMP_10
-	goto ROUTE20_STATE_23
+	goto ROUTE20_STATE_26
 
-ROUTE20_STATE_27:
+ROUTE20_STATE_30:
 	addobject 20
 	clearflag FLAG_TEMP_10
-	goto ROUTE20_STATE_23
+	goto ROUTE20_STATE_26
 
 
 BATTLE_ROUTE20_TRAINER_1::
@@ -179,21 +193,45 @@ ROUTE20_BLOCKADE_SOUTH::
 ROUTE20_VARROCK_GUARD_1::
 	faceplayer
 	namebox ROUTE20_VARROCK_GUARD_1_Text_0
-	msgbox ROUTE20_VARROCK_GUARD_1_Text_1
+	goto_if_unset FLAG_BADGE07_GET, ROUTE20_VARROCK_GUARD_1_4
+ROUTE20_VARROCK_GUARD_1_3:
+	msgbox ROUTE20_VARROCK_GUARD_1_Text_2
+ROUTE20_VARROCK_GUARD_1_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+ROUTE20_VARROCK_GUARD_1_2:
+	msgbox ROUTE20_VARROCK_GUARD_1_Text_1
+	goto ROUTE20_VARROCK_GUARD_1_1
+
+ROUTE20_VARROCK_GUARD_1_4:
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 195
+	goto_if_ge ROUTE20_VARROCK_GUARD_1_2
+	goto ROUTE20_VARROCK_GUARD_1_3
 
 
 ROUTE20_VARROCK_GUARD_2::
 	faceplayer
 	namebox ROUTE20_VARROCK_GUARD_1_Text_0
-	msgbox ROUTE20_VARROCK_GUARD_2_Text_0
+	goto_if_unset FLAG_BADGE07_GET, ROUTE20_VARROCK_GUARD_2_4
+ROUTE20_VARROCK_GUARD_2_3:
+	msgbox ROUTE20_VARROCK_GUARD_2_Text_1
+ROUTE20_VARROCK_GUARD_2_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+ROUTE20_VARROCK_GUARD_2_2:
+	msgbox ROUTE20_VARROCK_GUARD_2_Text_0
+	goto ROUTE20_VARROCK_GUARD_2_1
+
+ROUTE20_VARROCK_GUARD_2_4:
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 195
+	goto_if_ge ROUTE20_VARROCK_GUARD_2_2
+	goto ROUTE20_VARROCK_GUARD_2_3
 
 
 FROGEEL_RIVAL_4::
@@ -335,10 +373,12 @@ BATTLE_FROGEEL_RIVAL_4_4:
 
 BATTLE_FROGEEL_RIVAL_4_9:
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FROGEEL_RIVAL_BARB_REACTION
+	waitmovement 0
 	goto BATTLE_FROGEEL_RIVAL_4_8
 
 BATTLE_FROGEEL_RIVAL_4_10:
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
+	waitmovement 0
 	goto BATTLE_FROGEEL_RIVAL_4_8
 
 
@@ -516,9 +556,23 @@ ROUTE20_VARROCK_GUARD_1_Text_1:
 	.string "the moment, by decree of King Roald\l"
 	.string "himself.\p"
 	.string "We will re-open access once things are\n"
+	.string "safe again.\p"
+	.string "Why not visit Edgeville Gym in the\n"
+	.string "meantime?$"
+
+ROUTE20_VARROCK_GUARD_1_Text_2:
+	.string "Varrock is closed off to all visitors at\n"
+	.string "the moment, by decree of King Roald\l"
+	.string "himself.\p"
+	.string "We will re-open access once things are\n"
 	.string "safe again.$"
 
 ROUTE20_VARROCK_GUARD_2_Text_0:
+	.string "We're just waiting for a report from the\n"
+	.string "White Knights, why not visit Edgeville\l"
+	.string "Gym in the meantime?$"
+
+ROUTE20_VARROCK_GUARD_2_Text_1:
 	.string "We've been asked by the White Knights\n"
 	.string "not to let anybody through while they\l"
 	.string "investigate what's going on over in the\l"

@@ -3641,5 +3641,12 @@ extern const u8 gText_TrainerCardSlayerPoints[];
 extern const u8 gText_SlayerPoints[];
 extern const u8 gText_Tokkul[];
 
+extern const u8 gText_DarkWizard[];
+extern const u8 gText_HillGiant[];
+extern const u8 gText_MossGiant[];
+extern const u8 gText_FireGiant[];
+extern const u8 gText_ForgottenWarrior[];
+extern const u8 gText_ZamorakianMonk[];
+extern const u8 gText_Mugger[];
 
 #endif // GUARD_STRINGS_H

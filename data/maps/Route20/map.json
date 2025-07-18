@@ -282,7 +282,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ROUTE20_BLOCKADE_NORTH",
-      "flag": "FLAG_TEMP_1E"
+      "flag": "FLAG_TEMP_1D"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILING_2",
@@ -366,7 +366,7 @@
       "x": 15,
       "y": 2,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_3",
       "var_value": "1",
       "script": "ROUTE20_BLOCKADE_NORTH"
     },
@@ -375,7 +375,7 @@
       "x": 14,
       "y": 2,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_3",
       "var_value": "1",
       "script": "ROUTE20_BLOCKADE_NORTH"
     },
@@ -384,7 +384,7 @@
       "x": 16,
       "y": 2,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_3",
       "var_value": "1",
       "script": "ROUTE20_BLOCKADE_NORTH"
     }

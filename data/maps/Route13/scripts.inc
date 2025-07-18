@@ -14,6 +14,8 @@ Route13_MapScripts_MAP_SCRIPT_ON_LOAD:
 
 
 Route13_STATE::
+	setflag FLAG_TEMP_1E
+	setflag FLAG_TEMP_1F
 	compare VAR_POKESCAPE_GAMEMODE_STATE, 1
 	goto_if_eq Route13_STATE_2
 Route13_STATE_1:
@@ -31,6 +33,9 @@ Route13_STATE_1:
 	setobjectmovementtype 19, MOVEMENT_TYPE_WANDER_AROUND
 	setobjectmovementtype 20, MOVEMENT_TYPE_WANDER_AROUND
 Route13_STATE_4:
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_le Route13_STATE_9
+Route13_STATE_8:
 	return
 
 Route13_STATE_2:
@@ -41,6 +46,10 @@ Route13_STATE_2:
 Route13_STATE_5:
 	setvar VAR_TEMP_0, 1
 	goto Route13_STATE_4
+
+Route13_STATE_9:
+	clearflag FLAG_TEMP_1F
+	goto Route13_STATE_8
 
 
 TRIGGER_BLOCK_HAZELMERE::
@@ -289,8 +298,10 @@ VARROCK_NPC_RATBURGUS::
 
 
 ROUTE14_QUESTER::
+	lock
 	faceplayer
-	msgbox ROUTE14_QUESTER_Text_0
+	namebox ROUTE14_QUESTER_Text_0
+	msgbox ROUTE14_QUESTER_Text_1
 	closemessage
 	hidenamebox
 	release
@@ -344,8 +355,7 @@ BATTLE_ROUTE13_DARKWIZARD_5::
 
 BATTLE_ROUTE13_TRAINER_1::
 	trainerbattle_single TRAINER_ROUTE13_TRAINER_6, BATTLE_ROUTE13_TRAINER_1_Text_0, BATTLE_ROUTE13_TRAINER_1_Text_1
-	namebox BATTLE_ROUTE13_TRAINER_1_Text_2
-	msgbox BATTLE_ROUTE13_TRAINER_1_Text_3
+	msgbox BATTLE_ROUTE13_TRAINER_1_Text_2
 	hidenamebox
 	release
 	end
@@ -353,8 +363,7 @@ BATTLE_ROUTE13_TRAINER_1::
 
 BATTLE_ROUTE13_TRAINER_2::
 	trainerbattle_single TRAINER_ROUTE13_TRAINER_7, BATTLE_ROUTE13_TRAINER_2_Text_0, BATTLE_ROUTE13_TRAINER_2_Text_1
-	namebox BATTLE_ROUTE13_TRAINER_2_Text_2
-	msgbox BATTLE_ROUTE13_TRAINER_2_Text_3
+	msgbox BATTLE_ROUTE13_TRAINER_2_Text_2
 	hidenamebox
 	release
 	end
@@ -513,6 +522,46 @@ PURO_PURO_EVENT_ROUTE13::
 	return
 
 
+STORY_BLOCK_ROUTE13_GUARD_WIZARD::
+	random 4
+	switch VAR_RESULT
+	case 0, STORY_BLOCK_ROUTE13_GUARD_WIZARD_3
+	case 1, STORY_BLOCK_ROUTE13_GUARD_WIZARD_4
+	case 2, STORY_BLOCK_ROUTE13_GUARD_WIZARD_5
+	case 3, STORY_BLOCK_ROUTE13_GUARD_WIZARD_6
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_1:
+	closemessage
+	release
+	end
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_3:
+	namebox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_0
+	msgbox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_1
+	goto STORY_BLOCK_ROUTE13_GUARD_WIZARD_1
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_4:
+	namebox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_0
+	msgbox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_2
+	goto STORY_BLOCK_ROUTE13_GUARD_WIZARD_1
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_5:
+	namebox BATTLE_ROUTE13_DARKWIZARD_1_Text_2
+	msgbox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_3
+	goto STORY_BLOCK_ROUTE13_GUARD_WIZARD_1
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_6:
+	namebox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_0
+	msgbox STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_4
+	goto STORY_BLOCK_ROUTE13_GUARD_WIZARD_1
+
+
+SIGNPOST_ROUTE13::
+	msgbox SIGNPOST_ROUTE13_Text_0
+	closemessage
+	release
+	end
+
+
 TRIGGER_BLOCK_HAZELMERE_Text_0:
 	.string "???$"
 
@@ -534,9 +583,12 @@ VARROCK_NPC_RATBURGUS_Text_1:
 	.string "them.$"
 
 ROUTE14_QUESTER_Text_0:
-	.string "This is the champions guild.\p"
+	.string "Quester$"
+
+ROUTE14_QUESTER_Text_1:
+	.string "This is the Champions Guild.\p"
 	.string "Make yourself worthy and you may one\n"
-	.string "day become a member.$"
+	.string "day be eligible to enter.$"
 
 BATTLE_ROUTE13_DARKWIZARD_1_Text_0:
 	.string "Beware the might of Zamorak!$"
@@ -545,7 +597,7 @@ BATTLE_ROUTE13_DARKWIZARD_1_Text_1:
 	.string "Praise lord Zamorak!$"
 
 BATTLE_ROUTE13_DARKWIZARD_1_Text_2:
-	.string "DARK WIZARD$"
+	.string "Dark Wizard$"
 
 BATTLE_ROUTE13_DARKWIZARD_2_Text_0:
 	.string "This circle is taken, get lost kid.$"
@@ -586,9 +638,6 @@ BATTLE_ROUTE13_TRAINER_1_Text_1:
 	.string "Oh it is pronounced Varrock?$"
 
 BATTLE_ROUTE13_TRAINER_1_Text_2:
-	.string "NOOB$"
-
-BATTLE_ROUTE13_TRAINER_1_Text_3:
 	.string "Where is Varok?\p"
 	.string "Oh it is pronounced Varrock?\p"
 	.string "That explains why I couldn't find it on\n"
@@ -603,9 +652,6 @@ BATTLE_ROUTE13_TRAINER_2_Text_1:
 	.string "I have run energy for days.$"
 
 BATTLE_ROUTE13_TRAINER_2_Text_2:
-	.string "AGILE$"
-
-BATTLE_ROUTE13_TRAINER_2_Text_3:
 	.string "Beware on the road to Varrock.\p"
 	.string "Some shady people have started\n"
 	.string "residing in the old ruins near the\l"
@@ -740,3 +786,28 @@ BATTLE_ROUTE17_TRAINER_2_Text_1:
 
 BATTLE_ROUTE17_TRAINER_2_Text_2:
 	.string "Jam Hug$"
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_0:
+	.string "Varrock Guard$"
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_1:
+	.string "This one is for that poor noob!$"
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_2:
+	.string "Leave those poor adventurers alone you\n"
+	.string "fiend!$"
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_3:
+	.string "Once we revive Delrith your puny city\n"
+	.string "will be destroyed!$"
+
+STORY_BLOCK_ROUTE13_GUARD_WIZARD_Text_4:
+	.string "Al Kharid?\p"
+	.string "What does that have to do with\n"
+	.string "anything?!$"
+
+SIGNPOST_ROUTE13_Text_0:
+	.string "Northwest - to Varrock.\n"
+	.string "Southeast - to Al Kharid.\l"
+	.string "East - to Digsite / Exam Centre.\l"
+	.string "South - to Lumbridge.$"

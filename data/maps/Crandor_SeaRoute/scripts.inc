@@ -5,9 +5,15 @@ Crandor_SeaRoute_MapScripts::
 	.byte 0
 
 Crandor_SeaRoute_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	call WEATHER_CHANGE_SEA_ROUTES_ROUGH
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 150
+	goto_if_ge Crandor_SeaRoute_MapScripts_MAP_SCRIPT_ON_TRANSITION_2
+Crandor_SeaRoute_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	call CRANDOR_SEAROUTE_STATE
 	return
+
+Crandor_SeaRoute_MapScripts_MAP_SCRIPT_ON_TRANSITION_2:
+	call WEATHER_CHANGE_SEA_ROUTES_ROUGH
+	goto Crandor_SeaRoute_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 
 Crandor_SeaRoute_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 	map_script_2 VAR_TEMP_B, 1, hideplayer

@@ -1153,14 +1153,16 @@ EDGEVILLE_GYM_BATTLE_VANNAKA_Text_4:
 
 EDGEVILLE_GYM_BATTLE_VANNAKA_Text_5:
 	.string "Now that you've bested me you are\n"
-	.string "eligible to take Slayer Tasks from me.\p"
+	.string "eligible for Slayer Tasks.\p"
 	.string "Talk to me again if you'd like to\n"
 	.string "particpate.$"
 
 EDGEVILLE_GYM_BATTLE_VANNAKA_Text_6:
-	.string "Also you should make your way to\n"
-	.string "Daemonheim in the Wilderness for your\l"
-	.string "next badge.$"
+	.string "And if you want to continue your MvM\n"
+	.string "championships then it looks like the\l"
+	.string "next badge you'll be needing is in Al\l"
+	.string "Kharid.\p"
+	.string "Good luck!$"
 
 BATTLE_BASILISK_GYM_Text_0:
 	.string "Basilisk$"
