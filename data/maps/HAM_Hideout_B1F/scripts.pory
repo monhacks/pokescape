@@ -41,7 +41,7 @@ script HAMHIDEOUT_B1F_STATE {
         setflag(FLAG_TEMP_4) 
         setvar(VAR_TEMP_3, 1)
     }
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) { 
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         setflag(FLAG_TEMP_D) //Hides NPCS
         clearflag(FLAG_TEMP_C) //Shows TRAINERS
         clearflag(FLAG_TEMP_E)
@@ -965,10 +965,10 @@ script NPC_HAM_HIDEOUT_B1F_2
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) {                       //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("So you two are part of the monster scourge polluting our haven!\pI can't believe I thought you were like us!"))
     }
-    else {                                         //They are disguised
+    else {                                        
         checkplayergender
         if (var(VAR_RESULT) == MALE) {
             msgbox(format("Be vigilant brother, we cannot let the monster scourge pollute our haven."))
@@ -1012,10 +1012,10 @@ script NPC_HAM_HIDEOUT_B1F_5
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("Look, I know we are on high alert and I should probably report you, but I just want peace.\pPlease just go."))
     }
-    else {                   //They are disguised
+    else {                  
 	msgbox(format("I quite like it here honestly.\pOne thing bugs me however.\pWhy did the leaders decide on the robes being pink?\pIs there some symbolism I am not getting?"))
     }
     closemessage
@@ -1029,7 +1029,7 @@ script NPC_HAM_HIDEOUT_B1F_6
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("Aw man!! I just know beating you would get me that much closer to Babe but I've got nothing to fight you with…"))
     }
     else {                   //They are disguised
@@ -1046,7 +1046,7 @@ script NPC_HAM_HIDEOUT_B1F_7
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("To make Lumbridge great again, we need to get rid of filthy monsters and sympathisers like you.\pYou're lucky I'm a pacifist, or I'd fight you myself!"))
     }
     else {                   //They are disguised
@@ -1099,7 +1099,7 @@ script NPC_HAM_HIDEOUT_B1F_11
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("Perhaps if Sigmund had acted with even more extremism, we'd have a perfect world by now and wouldn't have apologists like you running around!"))
     }
     else {                   //They are disguised
@@ -1116,7 +1116,7 @@ script NPC_HAM_HIDEOUT_B1F_12
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("Get out of our hideout!\pThere's nothing for people like you down here."))
     }
     else {                   //They are disguised
@@ -1144,58 +1144,65 @@ script NPC_HAM_HIDEOUT_B1F_14
 {
 	lock
     namebox ("H.A.M Deacon")
-    random(10)
-    switch (var(VAR_RESULT)) { 
-        case 0: 
-            msgbox(format("We are the righteous ones in his eyes alone."))
-            hidenamebox
-		    release
-		    end
-        case 1:
-            msgbox(format("Let them not infest our cities and towns…"))
-            hidenamebox
-		    release
-		    end
-        case 2:
-            msgbox(format("And lo, we become the power, indeed the force to stop these monsters in their tracks."))
-            hidenamebox
-		    release
-		    end
-        case 3:
-            msgbox(format("Verily I urge you, my friends to take up your spades and farm your farms to feed our people in this blessed sanctuary."))
-            hidenamebox
-		    release
-		    end
-        case 4:
-            msgbox(format("If thine monsters visage does frighten thee, then tear it off I say… tear it off!"))
-            hidenamebox
-		    release
-		    end
-        case 5:
-            msgbox(format("For Saradomin will guide our sword arms and smash the enemies of humans till their bones become dust."))
-            hidenamebox
-		    release
-		    end
-        case 6:
-            msgbox(format("And let us smite these monsters unto their deaths."))
-            hidenamebox
-		    release
-		    end
-        case 7:
-            msgbox(format("For they are not the chosen ones in Saradomin's eyes."))
-            hidenamebox
-		    release
-		    end
-        case 8:
-            msgbox(format("Where do we go for safety from these monsters… here, with our brethren!"))
-            hidenamebox
-		    release
-		    end
-        case 9:
-            msgbox(format("And let there be no cave or shelter for their spawn until the end of days."))
-            hidenamebox
-		    release
-		    end
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
+        msgbox(format("My brothers the scourge is upon us, this pest must be eliminated!\pSomeone deal with them!"))
+        hidenamebox
+        closemessage
+    }
+    else {
+        random(10)
+        switch (var(VAR_RESULT)) { 
+            case 0: 
+                msgbox(format("We are the righteous ones in his eyes alone."))
+                hidenamebox
+                release
+                end
+            case 1:
+                msgbox(format("Let them not infest our cities and towns…"))
+                hidenamebox
+                release
+                end
+            case 2:
+                msgbox(format("And lo, we become the power, indeed the force to stop these monsters in their tracks."))
+                hidenamebox
+                release
+                end
+            case 3:
+                msgbox(format("Verily I urge you, my friends to take up your spades and farm your farms to feed our people in this blessed sanctuary."))
+                hidenamebox
+                release
+                end
+            case 4:
+                msgbox(format("If thine monsters visage does frighten thee, then tear it off I say… tear it off!"))
+                hidenamebox
+                release
+                end
+            case 5:
+                msgbox(format("For Saradomin will guide our sword arms and smash the enemies of humans till their bones become dust."))
+                hidenamebox
+                release
+                end
+            case 6:
+                msgbox(format("And let us smite these monsters unto their deaths."))
+                hidenamebox
+                release
+                end
+            case 7:
+                msgbox(format("For they are not the chosen ones in Saradomin's eyes."))
+                hidenamebox
+                release
+                end
+            case 8:
+                msgbox(format("Where do we go for safety from these monsters… here, with our brethren!"))
+                hidenamebox
+                release
+                end
+            case 9:
+                msgbox(format("And let there be no cave or shelter for their spawn until the end of days."))
+                hidenamebox
+                release
+                end
+        }
     }
 	release
 	end
