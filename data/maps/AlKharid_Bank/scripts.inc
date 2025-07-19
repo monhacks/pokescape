@@ -156,7 +156,7 @@ NPC_ALKHARID_BANK_2_Text_1:
 	.string "I can sense the anima flowing in all\n"
 	.string "living things…\p"
 	.string "You'd think that'd be great but I swear\n"
-	.string "theres something big shifting in the\l"
+	.string "there's something big shifting in the\l"
 	.string "sands below us…$"
 
 NPC_ALKHARID_BANK_3_Text_0:

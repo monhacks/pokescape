@@ -623,7 +623,7 @@ POTTERINGTON_FARM_Gonthorian_Text_6:
 	.string "It is I, Gonthorian!\p"
 	.string "Destroyer of beasts!\p"
 	.string "Fisher of trout!\p"
-	.string "Cooker of...$"
+	.string "Cooker of…$"
 
 POTTERINGTON_FARM_Gonthorian_Text_7:
 	.string "It is I, Gonthorian!\p"
@@ -644,7 +644,7 @@ POTTERINGTON_FARM_Gonthorian_Text_9:
 	.string "Protector of Falador!!\p"
 	.string "Keeper of wisdom!\p"
 	.string "Creator of Kraft Dinner\p"
-	.string "...On a regular basis$"
+	.string "… On a regular basis$"
 
 POTTERINGTON_FARM_Seren_Spirit_Text_0:
 	.string "The crystal shines brightly.\p"

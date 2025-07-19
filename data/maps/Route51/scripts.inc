@@ -75,10 +75,10 @@ BATTLE_ROUTE_51_GUNS_Text_0:
 	.string "8,999\p"
 	.string "9,000\p"
 	.string "9,001\p"
-	.string "...\p"
+	.string "…\p"
 	.string "9,002..13?\p"
 	.string "Argh! You made me lose count! I'll beat\n"
-	.string "you to...urghh...a pulp!$"
+	.string "you to… urghh… a pulp!$"
 
 BATTLE_ROUTE_51_GUNS_Text_1:
 	.string "I could really do with a good kebab and\n"
@@ -120,6 +120,6 @@ ROUTE51_BUILDER_4_Text_0:
 ROUTE51_BUILDER_4_Text_1:
 	.string "Don't suppose you've seen any boots\n"
 	.string "around here? Size nine, steel toed,\l"
-	.string "brown leather...\p"
+	.string "brown leather…\p"
 	.string "I think some adventurer mighta nicked\n"
 	.string "'em!$"

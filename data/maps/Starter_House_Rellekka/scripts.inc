@@ -72,7 +72,6 @@ GiveMon_Yak_5:
 
 
 Quest_Start::
-	startquest QUEST_ARTFIGHT_JATIZSO
 	end
 
 
@@ -95,7 +94,6 @@ CelebrateEndgame::
 
 
 Quest_Test_1::
-	startquest QUEST_ARTFIGHT_JATIZSO
 	end
 
 

@@ -160,6 +160,5 @@ MELZAR_3F_NOOB_Text_1:
 	.string "I knew it would need a lot of\n"
 	.string "renovation, but it's full of monsters!\p"
 	.string "I want a refund!\p"
-	.string "Wait... What do you mean you get to\n"
-	.string "those houses through a portal, are you\l"
-	.string "mad?$"
+	.string "Wait… What do you mean you get to those\n"
+	.string "houses through a portal, are you mad?$"

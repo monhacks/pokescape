@@ -54,7 +54,7 @@ NPC_BLACK_ARM_1_Text_1:
 	.string "prove my loyalty.\p"
 	.string "I've stolen plenty of things over the\n"
 	.string "years, but I think I'll need some help to\l"
-	.string "get into their weapon store...$"
+	.string "get into their weapon store…$"
 
 NPC_BLACK_ARM_2_Text_0:
 	.string "Thief$"
@@ -62,6 +62,6 @@ NPC_BLACK_ARM_2_Text_0:
 NPC_BLACK_ARM_2_Text_1:
 	.string "I heard that Scarface Pete has the\n"
 	.string "candlesticks, but I have no idea how to\l"
-	.string "get past his security...\p"
+	.string "get past his security…\p"
 	.string "{PAUSE 15}Hey!\p"
 	.string "Forget you heard anything, or else!$"

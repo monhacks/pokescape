@@ -564,7 +564,6 @@ RAC_QUEST_START_1:
 	end
 
 RAC_QUEST_START_2:
-	startquest QUEST_ARTFIGHT_JATIZSO
 	goto RAC_QUEST_START_P1
 	goto RAC_QUEST_START_1
 
@@ -834,7 +833,6 @@ RAC_QUEST_JATIZSO_ELEJ_SPOT_1_2:
 	msgbox RAC_QUEST_JATIZSO_ELEJ_SPOT_1_Text_2
 	closemessage
 	hidenamebox
-	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_ARTFIGHT_JATIZSO, 0
 	goto RAC_QUEST_JATIZSO_ELEJ_SPOT_1_1
 
 
@@ -1562,7 +1560,7 @@ RAC_QUEST_START_P3_JATIZSO_Text_1:
 	.string "…{PAUSE 15} …{PAUSE 15} …{PAUSE 15} …{PAUSE 15} …\p"
 	.string "I see, you desire to have Honourable\n"
 	.string "Holmgang with me?\p"
-	.string "PAH! I don’t even know who you are!\p"
+	.string "PAH! I don't even know who you are!\p"
 	.string "For all I know you could be a filthy Yak\n"
 	.string "lover from Neitiznot!\p"
 	.string "Anyway I am way too busy preparing for\n"

@@ -873,7 +873,7 @@ ALKHARID_NPC_3_Text_0:
 ALKHARID_NPC_3_Text_1:
 	.string "Welcome to Al Kharid, NOOB!\n"
 	.string "Yeah, so what if I snuck in while the\l"
-	.string "guards were distracted...$"
+	.string "guards were distracted…$"
 
 ALKHARID_NPC_4_Text_0:
 	.string "Guard$"
@@ -929,7 +929,7 @@ ALKHARID_NPC_11_Text_0:
 	.string "We deal with a lot of thieves and\n"
 	.string "cutthroats here.\p"
 	.string "Al Kharid does not welcome them, yet\n"
-	.string "they keep coming back...$"
+	.string "they keep coming back…$"
 
 ALKHARID_NPC_12_Text_0:
 	.string "Spirit Angler$"
@@ -964,7 +964,7 @@ ALKHARID_NPC_14_Text_0:
 
 ALKHARID_NPC_15_Text_0:
 	.string "Patrolling the streets is just one of\n"
-	.string "the jobs of a Warrior of Al Khaird!$"
+	.string "the jobs of a Warrior of Al Kharid!$"
 
 ALKHARID_NPC_16_Text_0:
 	.string "Have you ever noticed how shops have\n"
@@ -973,8 +973,8 @@ ALKHARID_NPC_16_Text_0:
 
 ALKHARID_NPC_17_Text_0:
 	.string "Can you believe it?\p"
-	.string "Our very own Prince Ali was choosen to\n"
-	.string "be one of the MvM leaders!$"
+	.string "Our very own Prince Ali was chosen to be\n"
+	.string "one of the MvM leaders!$"
 
 ALKHARID_INDOOR_NPC_1_Text_0:
 	.string "Ranger$"
@@ -1030,13 +1030,13 @@ Friendship_Checker_Ellis_Text_1:
 	.string "I've spent so many years working with\n"
 	.string "monster hide, that I can tell a lot\l"
 	.string "about a monster just by looking at it.\p"
-	.string "Hmm, let me see here...$"
+	.string "Hmm, let me see here…$"
 
 Friendship_Checker_Ellis_Text_2:
 	.string "Its hide looks incredibly rough and\n"
 	.string "calloused.\p"
 	.string "You either haven't adventurered with it\n"
-	.string "long, or you abuse the poor creature...$"
+	.string "long, or you abuse the poor creature…$"
 
 Friendship_Checker_Ellis_Text_3:
 	.string "FRIENDSHIP is: FRIENDSHIP NONE.$"
@@ -1275,7 +1275,7 @@ BATTLE_FROGEEL_RIVAL_6_Text_2:
 	.string "AAAAAAAAAAAAAAAAA\p"
 	.string "AAAAAAAAAAAAAAAAA\p"
 	.string "B!\p"
-	.string "...{PAUSE 15}\l"
+	.string "…{PAUSE 15}\l"
 	.string "No, that's wrong.{PAUSE 15}\p"
 	.string "AA!\l"
 	.string "That's better.$"

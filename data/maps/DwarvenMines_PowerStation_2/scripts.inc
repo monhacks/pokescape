@@ -179,7 +179,7 @@ NPC_DwarvenMines_PowerStationF2_3_Text_0:
 	.string "friendly.\p"
 	.string "I am too scared to try and squeeze past\n"
 	.string "them and leave.\p"
-	.string "I've been stuck here for hours now...$"
+	.string "I've been stuck here for hours now…$"
 
 NPC_DwarvenMines_PowerStationF2_4_Text_0:
 	.string "Paracelsus$"
@@ -225,7 +225,7 @@ BATTLE_DWARVENMINES_POWERSTATION_F2_3_Text_0:
 	.string "ironman of my calibre?$"
 
 BATTLE_DWARVENMINES_POWERSTATION_F2_3_Text_1:
-	.string "Oh, perhaps you were...$"
+	.string "Oh, perhaps you were…$"
 
 BATTLE_DWARVENMINES_POWERSTATION_F2_3_Text_2:
 	.string "ToniStank$"

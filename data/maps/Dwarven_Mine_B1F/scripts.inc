@@ -986,15 +986,15 @@ NPC_DWARVENMINES_DWARF_10_Text_0:
 	.string "It has taken dwaves centuries to find\n"
 	.string "the perfect temperatures for our\l"
 	.string "forges, there's no way humans can just\l"
-	.string "bypass that...\p"
+	.string "bypass that…\p"
 	.string "Right??$"
 
 NPC_DWARVENMINES_DWARF_11_Text_0:
 	.string "Heigh ho!\p"
 	.string "We dig dig dig dig dig dig dig from early\n"
-	.string "morn till night...\p"
+	.string "morn till night…\p"
 	.string "We dig dig dig dig dig dig dig up\n"
-	.string "everything in sight...\p"
+	.string "everything in sight…\p"
 	.string "Heigh ho!$"
 
 NPC_DWARVENMINES_HURA_Text_0:

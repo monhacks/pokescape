@@ -41,7 +41,7 @@ BATTLE_ROUTE200_TRAINER_1_Text_0:
 	.string "Punishment time!$"
 
 BATTLE_ROUTE200_TRAINER_1_Text_1:
-	.string "Rats...$"
+	.string "Rats…$"
 
 BATTLE_ROUTE200_TRAINER_1_Text_2:
 	.string "RatGrinder$"
@@ -64,14 +64,14 @@ BATTLE_ROUTE200_TRAINER_2_Text_2:
 
 BATTLE_ROUTE200_TRAINER_2_Text_3:
 	.string "An utter defeat? Couldn't have phrased\n"
-	.string "it more repulsively myself...$"
+	.string "it more repulsively myself…$"
 
 BATTLE_ROUTE200_TRAINER_3_Text_0:
 	.string "Looks like a little fly just ran into my\n"
 	.string "web!$"
 
 BATTLE_ROUTE200_TRAINER_3_Text_1:
-	.string "...$"
+	.string "…$"
 
 BATTLE_ROUTE200_TRAINER_3_Text_2:
 	.string "Izikills$"

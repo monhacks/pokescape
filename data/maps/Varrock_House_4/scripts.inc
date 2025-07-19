@@ -19,7 +19,7 @@ NPC_VARROCK_NOOB_Text_0:
 NPC_VARROCK_NOOB_Text_1:
 	.string "I bought a house from an estate agent,\n"
 	.string "but he never actually told me where it\l"
-	.string "was....\p"
+	.string "was…\p"
 	.string "I wandered around Varrock for a bit\n"
 	.string "until I found this run down house.\p"
 	.string "There was some old man in here babbling\n"

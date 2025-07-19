@@ -30,4 +30,4 @@ BATTLE_MUDSKIPPER_MUGGER_Text_3:
 	.string "Please send for help.{PAUSE 15}\p"
 	.string "Don't leave me.{PAUSE 15}\p"
 	.string "I have been here for a year.{PAUSE 15}\p"
-	.string "I miss my family...$"
+	.string "I miss my family…$"

@@ -45,14 +45,14 @@ NPC_Route49::
 
 BATTLE_ROUTE49_Trainer_1_Text_0:
 	.string "Heh, you almost made it savely out of\n"
-	.string "the Wilderness, unfortunately...{PAUSE 15}\p"
+	.string "the Wilderness, unfortunately…{PAUSE 15}\p"
 	.string "ICE BARRAGE!$"
 
 BATTLE_ROUTE49_Trainer_1_Text_1:
 	.string "Why didn't you freeze?!$"
 
 BATTLE_ROUTE49_Trainer_1_Text_2:
-	.string "I ran out of runes...\p"
+	.string "I ran out of runes…\p"
 	.string "Did you at least catch a cold?\p"
 	.string "Anything?$"
 
@@ -78,7 +78,7 @@ BATTLE_ROUTE49_Trainer_3_Text_1:
 
 BATTLE_ROUTE49_Trainer_3_Text_2:
 	.string "Fine, we can share the spot but please\n"
-	.string "don't tell anyone else I'm here...$"
+	.string "don't tell anyone else I'm here…$"
 
 NPC_Route49_Text_0:
 	.string "Fremennik Guard$"

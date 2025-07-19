@@ -66,5 +66,5 @@ NPC_VARROCK_ZMI_3_Text_0:
 	.string "Did you ever hear the tragedy of\n"
 	.string "Zamorak, Lord of Chaos?\p"
 	.string "I thought not.\p"
-	.string "It’s not a story the Saradominists would\n"
-	.string "tell you...$"
+	.string "It's not a story the Saradominists\n"
+	.string "would tell you…$"

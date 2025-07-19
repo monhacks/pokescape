@@ -248,112 +248,127 @@ static const u8 sText_Done[] = _("Done");
 //Declaration of subquest structures. Edits to subquests are made here.
 #define sub_quest(i, n, d, m, s, st, t) {.id = i, .name = n, .desc = d, .map = m, .sprite = s, .spritetype = st, .type = t}
 
-/*
-static const struct SubQuest sSubQuestsArtFight_Jatizso[QUEST_ARTFIGHT_JATIZSO_SUB_COUNT] =
+
+static const struct SubQuest sSubQuests_MAIN_STORY[QUEST_MAIN_STORY_SUB_COUNT] =
 {
 	sub_quest(
-	      0, //Picture Perfect
-	      gText_SubQuest1_Name1,
-	      gText_SubQuest1_Desc1,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_RAC_ELEJ,
+	      28,
+	      gText_SubQuest_Main_Story_Name1,
+	      gText_SubQuest_Main_Story_Desc1,
+	      gText_MapName_Lumbridge,
+	      OBJ_EVENT_GFX_PROF_NORMAL_TREE,
 	      OBJECT,
-	      sText_Complete
+	      sText_Delivered
 	),
-
 	sub_quest(
-	      1, //The Tasteful Painting
-	      gText_SubQuest1_Name2,
-	      gText_SubQuest1_Desc2,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_RAC_DRAGON,
+	      29,
+	      gText_SubQuest_Main_Story_Name2,
+	      gText_SubQuest_Main_Story_Desc2,
+	      gText_MapName_Lumbridge,
+	      OBJ_EVENT_GFX_GYMLEADER_DUKE_HORACIO,
 	      OBJECT,
-	      sText_Complete
+	      sText_Delivered
 	),
-
 	sub_quest(
-	      2, //Haunting Rabbits
-	      gText_SubQuest1_Name3,
-	      gText_SubQuest1_Desc3,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_RAC_JACKIE,
+	      30,
+	      gText_SubQuest_Main_Story_Name3,
+	      gText_SubQuest_Main_Story_Desc3,
+	      gText_MapName_LumbridgeForest,
+	      OBJ_EVENT_GFX_GYMLEADER_WISE_OLD_MAN,
 	      OBJECT,
-	      sText_Empty
+	      sText_Delivered
 	),
-
 	sub_quest(
-	      3, //Yakfiltration
-	      gText_SubQuest1_Name4,
-	      gText_SubQuest1_Desc4,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_YAK,
+	      31,
+	      gText_SubQuest_Main_Story_Name4,
+	      gText_SubQuest_Main_Story_Desc4,
+	      gText_MapName_DraynorManor,
+	      OBJ_EVENT_GFX_HAM_GRUNT_M,
 	      OBJECT,
-	      sText_Empty
+	      sText_Delivered
 	),
-
 	sub_quest(
-	      4,
-	      gText_SubQuest1_Name5,
-	      gText_SubQuest1_Desc5,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Empty
+	      32,
+	      gText_SubQuest_Main_Story_Name5,
+	      gText_SubQuest_Main_Story_Desc5,
+	      gText_MapName_PortSarim,
+	      ITEM_CRANDOR_MAP_PIECE1,
+	      ITEM,
+	      sText_Delivered
 	),
+	sub_quest(
+	      33,
+	      gText_SubQuest_Main_Story_Name6,
+	      gText_SubQuest_Main_Story_Desc6,
+	      gText_MapName_MelzarsMaze,
+	      ITEM_CRANDOR_MAP_PIECE2,
+	      ITEM,
+	      sText_Delivered
+	),
+	sub_quest(
+	      34,
+	      gText_SubQuest_Main_Story_Name7,
+	      gText_SubQuest_Main_Story_Desc7,
+	      gText_MapName_DwarvenMines,
+	      ITEM_CRANDOR_MAP_PIECE3,
+	      ITEM,
+	      sText_Delivered
+	),
+	sub_quest(
+	      35,
+	      gText_SubQuest_Main_Story_Name8,
+	      gText_SubQuest_Main_Story_Desc8,
+	      gText_MapName_Falador,
+	      ITEM_CRANDOR_MAP_FULL,
+	      ITEM,
+	      sText_Delivered
+	),
+	sub_quest(
+	      36,
+	      gText_SubQuest_Main_Story_Name9,
+	      gText_SubQuest_Main_Story_Desc9,
+	      gText_MapName_PortSarim,
+	      OBJ_EVENT_GFX_PIRATE_SHIP,
+	      OBJECT,
+	      sText_Delivered
+	),
+	sub_quest(
+	      37,
+	      gText_SubQuest_Main_Story_Name10,
+	      gText_SubQuest_Main_Story_Desc10,
+	      gText_MapName_Crandor,
+	      OBJ_EVENT_GFX_ELVARG,
+	      OBJECT,
+	      sText_Delivered
+	),
+	sub_quest(
+		52,
+		gText_SubQuest_Main_Story_Name11,
+		gText_SubQuest_Main_Story_Desc11,
+		gText_MapName_Falador,
+		OBJ_EVENT_GFX_GYMLEADER_SIR_AMIK_VARZE,
+		OBJECT,
+		sText_Delivered
+  	),
+	sub_quest(
+		53,
+		gText_SubQuest_Main_Story_Name12,
+		gText_SubQuest_Main_Story_Desc12,
+		gText_MapName_IceMountain,
+		OBJ_EVENT_GFX_KNIGHT_BLACK_DAQUARIUS,
+		OBJECT,
+		sText_Delivered
+  	),
+	sub_quest(
+		61,
+		gText_SubQuest_Main_Story_Name13,
+		gText_SubQuest_Main_Story_Desc13,
+		gText_MapName_IceMountain,
+		OBJ_EVENT_GFX_KNIGHT_BLACK_DAQUARIUS,
+		OBJECT,
+		sText_Delivered
+  	),
 };
-
-static const struct SubQuest sSubQuestsArtFight_Neitiznot[QUEST_ARTFIGHT_NEITIZNOT_SUB_COUNT] =
-{
-	sub_quest(
-	      5,
-	      gText_SubQuest1_Name6,
-	      gText_SubQuest1_Desc6,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_PREZLEEK,
-	      OBJECT,
-	      sText_Empty
-	),
-
-	sub_quest(
-	      6,
-	      gText_SubQuest1_Name7,
-	      gText_SubQuest1_Desc7,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_PREZLEEK,
-	      OBJECT,
-	      sText_Empty
-	),
-
-	sub_quest(
-	      7,
-	      gText_SubQuest1_Name8,
-	      gText_SubQuest1_Desc8,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Empty
-	),
-
-	sub_quest(
-	      8,
-	      gText_SubQuest1_Name9,
-	      gText_SubQuest1_Desc9,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Empty
-	),
-
-	sub_quest(
-	      9,
-	      gText_SubQuest1_Name10,
-	      gText_SubQuest1_Desc10,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Empty
-	),
-};*/
 
 static const struct SubQuest sSubQuests_MVM_CHAMPIONSHIPS[QUEST_MVM_CHAMPIONSHIPS_SUB_COUNT] =
 {
@@ -473,6 +488,149 @@ static const struct SubQuest sSubQuests_MVM_CHAMPIONSHIPS[QUEST_MVM_CHAMPIONSHIP
 	      OBJ_EVENT_GFX_GYMLEADER_WISE_OLD_MAN,
 	      OBJECT,
 	      sText_Done
+	),
+};
+
+static const struct SubQuest sSubQuests_MITHRILMAN_QUEST[QUEST_MITHRILMAN_QUEST_SUB_COUNT] =
+{
+	sub_quest(
+	      38,
+	      gText_SubQuest_MithrilmanQuest_Name1,
+	      gText_SubQuest_MithrilmanQuest_Desc1,
+	      gText_MapName_Lumbridge,
+	      SPECIES_ZAROLING,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      39,
+	      gText_SubQuest_MithrilmanQuest_Name2,
+	      gText_SubQuest_MithrilmanQuest_Desc2,
+	      gText_MapName_Falador,
+	      SPECIES_DUCK_NORMAL_FORM,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      40,
+	      gText_SubQuest_MithrilmanQuest_Name3,
+	      gText_SubQuest_MithrilmanQuest_Desc3,
+	      gText_MapName_Tzhaar,
+	      SPECIES_TZ_KIH,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      41,
+	      gText_SubQuest_MithrilmanQuest_Name4,
+	      gText_SubQuest_MithrilmanQuest_Desc4,
+	      gText_MapName_Edgeville,
+	      ITEM_STAT_BEER,
+	      ITEM,
+	      sText_Delivered
+	),
+	sub_quest(
+	      58,
+	      gText_SubQuest_MithrilmanQuest_Name5,
+	      gText_SubQuest_MithrilmanQuest_Desc5,
+	      gText_MapName_Route28,
+	      SPECIES_CAMEL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      59,
+	      gText_SubQuest_MithrilmanQuest_Name6,
+	      gText_SubQuest_MithrilmanQuest_Desc6,
+	      gText_MapName_Varrock,
+	      ITEM_RUNE_ESSENCE,
+	      ITEM,
+	      sText_Delivered
+	),
+	sub_quest(
+	      60,
+	      gText_SubQuest_MithrilmanQuest_Name7,
+	      gText_SubQuest_MithrilmanQuest_Desc7,
+	      gText_MapName_Daemonheim,
+	      SPECIES_FLESH_SPOILER_COVERED_FORM,
+	      PKMN,
+	      sText_Delivered
+	),
+};
+
+static const struct SubQuest sSubQuests_ANGRENOUILLE_QUEST[QUEST_ANGRENOUILLE_QUEST_SUB_COUNT] =
+{
+	sub_quest(
+	      62,
+	      gText_SubQuest_AngrenouilleQuest_Name1,
+	      gText_SubQuest_AngrenouilleQuest_Desc1,
+	      gText_MapName_Route1,
+	      SPECIES_FROGEEL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      63,
+	      gText_SubQuest_AngrenouilleQuest_Name2,
+	      gText_SubQuest_AngrenouilleQuest_Desc2,
+	      gText_MapName_Falador,
+	      SPECIES_FROGEEL_TRIAL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      64,
+	      gText_SubQuest_AngrenouilleQuest_Name3,
+	      gText_SubQuest_AngrenouilleQuest_Desc3,
+	      gText_MapName_MusaPoint,
+	      SPECIES_FROGEEL_TZHAAR,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      65,
+	      gText_SubQuest_AngrenouilleQuest_Name4,
+	      gText_SubQuest_AngrenouilleQuest_Desc4,
+	      gText_MapName_Route20,
+	      SPECIES_FROGEEL_REANIMATED,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      66,
+	      gText_SubQuest_AngrenouilleQuest_Name5,
+	      gText_SubQuest_AngrenouilleQuest_Desc5,
+	      gText_MapName_Edgeville,
+	      SPECIES_FROGEEL_CORPOREAL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      67,
+	      gText_SubQuest_AngrenouilleQuest_Name6,
+	      gText_SubQuest_AngrenouilleQuest_Desc6,
+	      gText_MapName_AlKharid,
+	      SPECIES_FROGEEL_STRYKEWYRM,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      68,
+	      gText_SubQuest_AngrenouilleQuest_Name7,
+	      gText_SubQuest_AngrenouilleQuest_Desc7,
+	      gText_MapName_Varrock,
+	      SPECIES_FROGEEL_ABYSSAL,
+	      PKMN,
+	      sText_Delivered
+	),
+	sub_quest(
+	      69,
+	      gText_SubQuest_AngrenouilleQuest_Name8,
+	      gText_SubQuest_AngrenouilleQuest_Desc8,
+	      gText_MapName_Daemonheim,
+	      SPECIES_FROGEEL_SEEKER,
+	      PKMN,
+	      sText_Delivered
 	),
 };
 
@@ -611,7 +769,6 @@ static const struct SubQuest sSubQuests_RUNE_MYSTERIES[QUEST_RUNE_MYSTERIES_SUB_
 
 };
 
-
 static const struct SubQuest sSubQuests_ERNEST_THE_CHICKEN[QUEST_ERNEST_THE_CHICKEN_SUB_COUNT] =
 {
 	sub_quest(
@@ -661,37 +818,6 @@ static const struct SubQuest sSubQuests_ERNEST_THE_CHICKEN[QUEST_ERNEST_THE_CHIC
 	),
 };
 
-static const struct SubQuest sSubQuests_KOUREND_SLAYER[QUEST_KOUREND_SLAYER_SUB_COUNT] =
-{
-	sub_quest(
-	      9,
-	      gText_SubQuest_Kourend_Slayer_Name1,
-	      gText_SubQuest_Kourend_Slayer_Name2,
-	      gText_SideQuestMap_Kourend,
-	      ITEM_DARK_TOTEM_BASE,
-	      ITEM,
-	      sText_Found
-	),
-	sub_quest(
-	      10,
-	      gText_SubQuest_Kourend_Slayer_Name2,
-	      gText_SubQuest_Kourend_Slayer_Name2,
-	      gText_SideQuestMap_Kourend,
-	      ITEM_DARK_TOTEM_MID,
-	      ITEM,
-	      sText_Found
-	),
-	sub_quest(
-	      11,
-	      gText_SubQuest_Kourend_Slayer_Name3,
-	      gText_SubQuest_Kourend_Slayer_Name2,
-	      gText_SideQuestMap_Kourend,
-	      ITEM_DARK_TOTEM_TOP,
-	      ITEM,
-	      sText_Found
-	),
-};
-
 static const struct SubQuest sSubQuests_BANANA_BOAT[QUEST_BANANA_BOAT_SUB_COUNT] =
 {
 	sub_quest(
@@ -719,195 +845,6 @@ static const struct SubQuest sSubQuests_BANANA_BOAT[QUEST_BANANA_BOAT_SUB_COUNT]
 	      gText_SideQuestMap_MusaPoint,
 	      ITEM_BANANA,
 	      ITEM,
-	      sText_Delivered
-	),
-};
-
-static const struct SubQuest sSubQuests_MAIN_STORY[QUEST_MAIN_STORY_SUB_COUNT] =
-{
-	sub_quest(
-	      28,
-	      gText_SubQuest_Main_Story_Name1,
-	      gText_SubQuest_Main_Story_Desc1,
-	      gText_MapName_Lumbridge,
-	      OBJ_EVENT_GFX_PROF_NORMAL_TREE,
-	      OBJECT,
-	      sText_Delivered
-	),
-	sub_quest(
-	      29,
-	      gText_SubQuest_Main_Story_Name2,
-	      gText_SubQuest_Main_Story_Desc2,
-	      gText_MapName_Lumbridge,
-	      OBJ_EVENT_GFX_GYMLEADER_DUKE_HORACIO,
-	      OBJECT,
-	      sText_Delivered
-	),
-	sub_quest(
-	      30,
-	      gText_SubQuest_Main_Story_Name3,
-	      gText_SubQuest_Main_Story_Desc3,
-	      gText_MapName_LumbridgeForest,
-	      OBJ_EVENT_GFX_GYMLEADER_WISE_OLD_MAN,
-	      OBJECT,
-	      sText_Delivered
-	),
-	sub_quest(
-	      31,
-	      gText_SubQuest_Main_Story_Name4,
-	      gText_SubQuest_Main_Story_Desc4,
-	      gText_MapName_DraynorManor,
-	      OBJ_EVENT_GFX_HAM_GRUNT_M,
-	      OBJECT,
-	      sText_Delivered
-	),
-	sub_quest(
-	      32,
-	      gText_SubQuest_Main_Story_Name5,
-	      gText_SubQuest_Main_Story_Desc5,
-	      gText_MapName_PortSarim,
-	      ITEM_CRANDOR_MAP_PIECE1,
-	      ITEM,
-	      sText_Delivered
-	),
-	sub_quest(
-	      33,
-	      gText_SubQuest_Main_Story_Name6,
-	      gText_SubQuest_Main_Story_Desc6,
-	      gText_MapName_MelzarsMaze,
-	      ITEM_CRANDOR_MAP_PIECE2,
-	      ITEM,
-	      sText_Delivered
-	),
-	sub_quest(
-	      34,
-	      gText_SubQuest_Main_Story_Name7,
-	      gText_SubQuest_Main_Story_Desc7,
-	      gText_MapName_DwarvenMines,
-	      ITEM_CRANDOR_MAP_PIECE3,
-	      ITEM,
-	      sText_Delivered
-	),
-	sub_quest(
-	      35,
-	      gText_SubQuest_Main_Story_Name8,
-	      gText_SubQuest_Main_Story_Desc8,
-	      gText_MapName_Falador,
-	      ITEM_CRANDOR_MAP_FULL,
-	      ITEM,
-	      sText_Delivered
-	),
-	sub_quest(
-	      36,
-	      gText_SubQuest_Main_Story_Name9,
-	      gText_SubQuest_Main_Story_Desc9,
-	      gText_MapName_PortSarim,
-	      OBJ_EVENT_GFX_PIRATE_SHIP,
-	      OBJECT,
-	      sText_Delivered
-	),
-	sub_quest(
-	      37,
-	      gText_SubQuest_Main_Story_Name10,
-	      gText_SubQuest_Main_Story_Desc10,
-	      gText_MapName_Crandor,
-	      OBJ_EVENT_GFX_ELVARG,
-	      OBJECT,
-	      sText_Delivered
-	),
-	sub_quest(
-		52,
-		gText_SubQuest_Main_Story_Name11,
-		gText_SubQuest_Main_Story_Desc11,
-		gText_MapName_Falador,
-		OBJ_EVENT_GFX_GYMLEADER_SIR_AMIK_VARZE,
-		OBJECT,
-		sText_Delivered
-  	),
-	sub_quest(
-		53,
-		gText_SubQuest_Main_Story_Name12,
-		gText_SubQuest_Main_Story_Desc12,
-		gText_MapName_IceMountain,
-		OBJ_EVENT_GFX_KNIGHT_BLACK_DAQUARIUS,
-		OBJECT,
-		sText_Delivered
-  	),
-	sub_quest(
-		61,
-		gText_SubQuest_Main_Story_Name13,
-		gText_SubQuest_Main_Story_Desc13,
-		gText_MapName_IceMountain,
-		OBJ_EVENT_GFX_KNIGHT_BLACK_DAQUARIUS,
-		OBJECT,
-		sText_Delivered
-  	),
-};
-
-
-static const struct SubQuest sSubQuests_MITHRILMAN_QUEST[QUEST_MITHRILMAN_QUEST_SUB_COUNT] =
-{
-	sub_quest(
-	      38,
-	      gText_SubQuest_MithrilmanQuest_Name1,
-	      gText_SubQuest_MithrilmanQuest_Desc1,
-	      gText_MapName_Lumbridge,
-	      SPECIES_ZAROLING,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      39,
-	      gText_SubQuest_MithrilmanQuest_Name2,
-	      gText_SubQuest_MithrilmanQuest_Desc2,
-	      gText_MapName_Falador,
-	      SPECIES_DUCK_NORMAL_FORM,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      40,
-	      gText_SubQuest_MithrilmanQuest_Name3,
-	      gText_SubQuest_MithrilmanQuest_Desc3,
-	      gText_MapName_Tzhaar,
-	      SPECIES_TZ_KIH,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      41,
-	      gText_SubQuest_MithrilmanQuest_Name4,
-	      gText_SubQuest_MithrilmanQuest_Desc4,
-	      gText_MapName_Edgeville,
-	      ITEM_STAT_BEER,
-	      ITEM,
-	      sText_Delivered
-	),
-	sub_quest(
-	      58,
-	      gText_SubQuest_MithrilmanQuest_Name5,
-	      gText_SubQuest_MithrilmanQuest_Desc5,
-	      gText_MapName_Route28,
-	      SPECIES_CAMEL,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      59,
-	      gText_SubQuest_MithrilmanQuest_Name6,
-	      gText_SubQuest_MithrilmanQuest_Desc6,
-	      gText_MapName_Varrock,
-	      ITEM_RUNE_ESSENCE,
-	      ITEM,
-	      sText_Delivered
-	),
-	sub_quest(
-	      60,
-	      gText_SubQuest_MithrilmanQuest_Name7,
-	      gText_SubQuest_MithrilmanQuest_Desc7,
-	      gText_MapName_Daemonheim,
-	      SPECIES_FLESH_SPOILER_COVERED_FORM,
-	      PKMN,
 	      sText_Delivered
 	),
 };
@@ -952,82 +889,154 @@ static const struct SubQuest sSubQuests_POWERPLANT_SCORPIONS[QUEST_POWERPLANT_SC
 	),
 };
 
-static const struct SubQuest sSubQuests_ANGRENOUILLE_QUEST[QUEST_ANGRENOUILLE_QUEST_SUB_COUNT] =
+static const struct SubQuest sSubQuests_KOUREND_SLAYER[QUEST_KOUREND_SLAYER_SUB_COUNT] =
 {
 	sub_quest(
-	      62,
-	      gText_SubQuest_AngrenouilleQuest_Name1,
-	      gText_SubQuest_AngrenouilleQuest_Desc1,
-	      gText_MapName_Route1,
-	      SPECIES_FROGEEL,
-	      PKMN,
-	      sText_Delivered
+	      9,
+	      gText_SubQuest_Kourend_Slayer_Name1,
+	      gText_SubQuest_Kourend_Slayer_Desc1,
+	      gText_SideQuestMap_Kourend,
+	      ITEM_DARK_TOTEM_BASE,
+	      ITEM,
+	      sText_Found
 	),
 	sub_quest(
-	      63,
-	      gText_SubQuest_AngrenouilleQuest_Name2,
-	      gText_SubQuest_AngrenouilleQuest_Desc2,
-	      gText_MapName_Falador,
-	      SPECIES_FROGEEL_TRIAL,
-	      PKMN,
-	      sText_Delivered
+	      10,
+	      gText_SubQuest_Kourend_Slayer_Name2,
+	      gText_SubQuest_Kourend_Slayer_Desc2,
+	      gText_SideQuestMap_Kourend,
+	      ITEM_DARK_TOTEM_MID,
+	      ITEM,
+	      sText_Found
 	),
 	sub_quest(
-	      64,
-	      gText_SubQuest_AngrenouilleQuest_Name3,
-	      gText_SubQuest_AngrenouilleQuest_Desc3,
-	      gText_MapName_MusaPoint,
-	      SPECIES_FROGEEL_TZHAAR,
-	      PKMN,
-	      sText_Delivered
+	      11,
+	      gText_SubQuest_Kourend_Slayer_Name3,
+	      gText_SubQuest_Kourend_Slayer_Desc3,
+	      gText_SideQuestMap_Kourend,
+	      ITEM_DARK_TOTEM_TOP,
+	      ITEM,
+	      sText_Found
 	),
 	sub_quest(
-	      65,
-	      gText_SubQuest_AngrenouilleQuest_Name4,
-	      gText_SubQuest_AngrenouilleQuest_Desc4,
-	      gText_MapName_Route20,
-	      SPECIES_FROGEEL_REANIMATED,
+	      70,
+	      gText_SubQuest_Kourend_Slayer_Name4,
+	      gText_SubQuest_Kourend_Slayer_Desc4,
+	      gText_SideQuestMap_Kourend,
+	      SPECIES_SKOTIZO,
 	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      66,
-	      gText_SubQuest_AngrenouilleQuest_Name5,
-	      gText_SubQuest_AngrenouilleQuest_Desc5,
-	      gText_MapName_Edgeville,
-	      SPECIES_FROGEEL_CORPOREAL,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      67,
-	      gText_SubQuest_AngrenouilleQuest_Name6,
-	      gText_SubQuest_AngrenouilleQuest_Desc6,
-	      gText_MapName_AlKharid,
-	      SPECIES_FROGEEL_STRYKEWYRM,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      68,
-	      gText_SubQuest_AngrenouilleQuest_Name7,
-	      gText_SubQuest_AngrenouilleQuest_Desc7,
-	      gText_MapName_Varrock,
-	      SPECIES_FROGEEL_ABYSSAL,
-	      PKMN,
-	      sText_Delivered
-	),
-	sub_quest(
-	      69,
-	      gText_SubQuest_AngrenouilleQuest_Name8,
-	      gText_SubQuest_AngrenouilleQuest_Desc8,
-	      gText_MapName_Daemonheim,
-	      SPECIES_FROGEEL_SEEKER,
-	      PKMN,
-	      sText_Delivered
+	      sText_Found
 	),
 };
 
+
+
+/*
+static const struct SubQuest sSubQuestsArtFight_Jatizso[QUEST_ARTFIGHT_JATIZSO_SUB_COUNT] =
+{
+	sub_quest(
+	      0, //Picture Perfect
+	      gText_SubQuest1_Name1,
+	      gText_SubQuest1_Desc1,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_RAC_ELEJ,
+	      OBJECT,
+	      sText_Complete
+	),
+
+	sub_quest(
+	      1, //The Tasteful Painting
+	      gText_SubQuest1_Name2,
+	      gText_SubQuest1_Desc2,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_RAC_DRAGON,
+	      OBJECT,
+	      sText_Complete
+	),
+
+	sub_quest(
+	      2, //Haunting Rabbits
+	      gText_SubQuest1_Name3,
+	      gText_SubQuest1_Desc3,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_RAC_JACKIE,
+	      OBJECT,
+	      sText_Empty
+	),
+
+	sub_quest(
+	      3, //Yakfiltration
+	      gText_SubQuest1_Name4,
+	      gText_SubQuest1_Desc4,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_YAK,
+	      OBJECT,
+	      sText_Empty
+	),
+
+	sub_quest(
+	      4,
+	      gText_SubQuest1_Name5,
+	      gText_SubQuest1_Desc5,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_WALLY,
+	      OBJECT,
+	      sText_Empty
+	),
+};
+
+static const struct SubQuest sSubQuestsArtFight_Neitiznot[QUEST_ARTFIGHT_NEITIZNOT_SUB_COUNT] =
+{
+	sub_quest(
+	      5,
+	      gText_SubQuest1_Name6,
+	      gText_SubQuest1_Desc6,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_PREZLEEK,
+	      OBJECT,
+	      sText_Empty
+	),
+
+	sub_quest(
+	      6,
+	      gText_SubQuest1_Name7,
+	      gText_SubQuest1_Desc7,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_PREZLEEK,
+	      OBJECT,
+	      sText_Empty
+	),
+
+	sub_quest(
+	      7,
+	      gText_SubQuest1_Name8,
+	      gText_SubQuest1_Desc8,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_WALLY,
+	      OBJECT,
+	      sText_Empty
+	),
+
+	sub_quest(
+	      8,
+	      gText_SubQuest1_Name9,
+	      gText_SubQuest1_Desc9,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_WALLY,
+	      OBJECT,
+	      sText_Empty
+	),
+
+	sub_quest(
+	      9,
+	      gText_SubQuest1_Name10,
+	      gText_SubQuest1_Desc10,
+	      gText_SideQuestMap2,
+	      OBJ_EVENT_GFX_WALLY,
+	      OBJECT,
+	      sText_Empty
+	),
+};*/
 
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -1072,8 +1081,26 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      sSubQuests_MVM_CHAMPIONSHIPS,
 	      QUEST_MVM_CHAMPIONSHIPS_SUB_COUNT
 	),
-	
-	
+	side_quest(
+	      gText_SideQuestName_MithrilmanQuest,
+	      gText_SideQuestDesc_MithrilmanQuest,
+	      gText_SideQuestDesc_Completed_Banana_Boat,
+	      gText_MapName_Lumbridge,
+	      OBJ_EVENT_GFX_MITHRILMAN,
+	      OBJECT,
+	      sSubQuests_MITHRILMAN_QUEST,
+	      QUEST_MITHRILMAN_QUEST_SUB_COUNT
+	),
+	side_quest(
+	      gText_SideQuestName_AngrenouilleQuest,
+	      gText_SideQuestDesc_AngrenouilleQuest,
+	      gText_SideQuestDesc_Completed_Banana_Boat,
+	      gText_MapName_Lumbridge,
+	      OBJ_EVENT_GFX_ANGRENNOUILLE,
+	      OBJECT,
+	      sSubQuests_ANGRENOUILLE_QUEST,
+	      QUEST_ANGRENOUILLE_QUEST_SUB_COUNT
+	),	
 	side_quest( 									//Cooks Assistant
 	      gText_SideQuestName_CooksAssistant,
 	      gText_SideQuestDesc_CooksAssistant,
@@ -1105,16 +1132,6 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      QUEST_ERNEST_THE_CHICKEN_SUB_COUNT
 	),
 	side_quest(
-	      gText_SideQuestName_Kourend_Slayer,
-	      gText_SideQuestDesc_Kourend_Slayer,
-	      gText_SideQuestDesc_Completed_Kourend_Slayer,
-	      gText_SideQuestMap_Kourend,
-	      ITEM_DARK_TOTEM,
-	      ITEM,
-	      sSubQuests_KOUREND_SLAYER,
-	      QUEST_KOUREND_SLAYER_SUB_COUNT
-	),
-	side_quest(
 	      gText_SideQuestName_Banana_Boat,
 	      gText_SideQuestDesc_Banana_Boat,
 	      gText_SideQuestDesc_Completed_Banana_Boat,
@@ -1123,16 +1140,6 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      ITEM,
 	      sSubQuests_BANANA_BOAT,
 	      QUEST_BANANA_BOAT_SUB_COUNT
-	),
-	side_quest(
-	      gText_SideQuestName_MithrilmanQuest,
-	      gText_SideQuestDesc_MithrilmanQuest,
-	      gText_SideQuestDesc_Completed_Banana_Boat,
-	      gText_MapName_Lumbridge,
-	      OBJ_EVENT_GFX_MITHRILMAN,
-	      OBJECT,
-	      sSubQuests_MITHRILMAN_QUEST,
-	      QUEST_MITHRILMAN_QUEST_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_QuestPowerPlantScorpions,
@@ -1145,15 +1152,16 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      QUEST_POWERPLANT_SCORPIONS_SUB_COUNT
 	),
 	side_quest(
-	      gText_SideQuestName_AngrenouilleQuest,
-	      gText_SideQuestDesc_AngrenouilleQuest,
-	      gText_SideQuestDesc_Completed_Banana_Boat,
-	      gText_MapName_Lumbridge,
-	      OBJ_EVENT_GFX_ANGRENNOUILLE,
-	      OBJECT,
-	      sSubQuests_ANGRENOUILLE_QUEST,
-	      QUEST_ANGRENOUILLE_QUEST_SUB_COUNT
-	),	
+	      gText_SideQuestName_Kourend_Slayer,
+	      gText_SideQuestDesc_Kourend_Slayer,
+	      gText_SideQuestDesc_Completed_Kourend_Slayer,
+	      gText_SideQuestMap_Kourend,
+	      ITEM_DARK_TOTEM,
+	      ITEM,
+	      sSubQuests_KOUREND_SLAYER,
+	      QUEST_KOUREND_SLAYER_SUB_COUNT
+	),
+	
 
 
 	

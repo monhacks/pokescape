@@ -617,7 +617,7 @@ BLACK_KNIGHT_QUIZ_3_Text_0:
 BLACK_KNIGHT_QUIZ_3_Text_1:
 	.string "I hope you've studied, as that's the\n"
 	.string "only way you're getting through here.\p"
-	.string "Tell me...$"
+	.string "Tell me…$"
 
 BLACK_KNIGHT_QUIZ_3_Text_2:
 	.string "The first Black Knight was Lord Sanafin\n"
@@ -628,7 +628,7 @@ BLACK_KNIGHT_QUIZ_3_Text_3:
 	.string "history.\p"
 	.string "Time to die!\p"
 	.string "Maybe I'll even resurrect you as my\n"
-	.string "pets after...$"
+	.string "pets after…$"
 
 BLACK_KNIGHT_QUIZ_3_Text_4:
 	.string "…$"
@@ -657,7 +657,7 @@ BLACK_KNIGHT_QUIZ_4_Text_1:
 	.string "Sorry. Increased security means you\n"
 	.string "need to answer a question before\l"
 	.string "passing.\p"
-	.string "It'll be easy...\p"
+	.string "It'll be easy…\p"
 	.string "if you're a true Black Knight!$"
 
 BLACK_KNIGHT_QUIZ_4_Text_2:
@@ -690,7 +690,7 @@ BLACK_KNIGHT_QUIZ_4_Text_7:
 	.string "did you see which way they went?$"
 
 BLACK_KNIGHT_QUIZ_5_Text_0:
-	.string "Before you go any further...$"
+	.string "Before you go any further…$"
 
 BLACK_KNIGHT_QUIZ_5_Text_1:
 	.string "Black and red is a great colour\n"
@@ -719,7 +719,7 @@ BLACK_KNIGHT_QUIZ_5_Text_6:
 	.string "intruder!$"
 
 BLACK_KNIGHT_QUIZ_6_Text_0:
-	.string "You know the drill by now...\p"
+	.string "You know the drill by now…\p"
 	.string "Answer the question, and you can keep\n"
 	.string "going.$"
 
@@ -794,7 +794,7 @@ BKFORT_2F_NPC_1_Text_1:
 
 BKFORT_2F_NPC_2_Text_0:
 	.string "People wouldn't be so afraid of us if we\n"
-	.string "were White Knights...$"
+	.string "were White Knights…$"
 
 BKFORT_2F_NPC_3_Text_0:
 	.string "Can I ask you a question?\p"
@@ -802,23 +802,23 @@ BKFORT_2F_NPC_3_Text_0:
 	.string "Look, I hate the White Knights as much\n"
 	.string "as everyone else but I really do think\l"
 	.string "they nailed the whole naming thing.\p"
-	.string "Imagine if we had names like that...\p"
+	.string "Imagine if we had names like that…\p"
 	.string "Like Jack, or Chap!\p"
 	.string "Maybe I should bring it up next council\n"
-	.string "meeting...$"
+	.string "meeting…$"
 
 BKFORT_2F_NPC_4_Text_0:
 	.string "Guard$"
 
 BKFORT_2F_NPC_4_Text_1:
 	.string "I am so tired I could go for another\n"
-	.string "nap...$"
+	.string "nap…$"
 
 BKFORT_2F_NPC_5_Text_0:
 	.string "Dark Wizard$"
 
 BKFORT_2F_NPC_5_Text_1:
-	.string "Do you think I look...\p"
+	.string "Do you think I look…\p"
 	.string "Evil enough?\p"
 	.string "I'm worried that my robes are a bit\n"
 	.string "washed out now and they're only grey\l"
@@ -831,7 +831,7 @@ BKFORT_2F_NPC_6_Text_0:
 
 BKFORT_2F_NPC_6_Text_1:
 	.string "One of the eggs was blessed by Zamorak\n"
-	.string "himself and the first Hawk was born...$"
+	.string "himself and the first Hawk was born…$"
 
 BKFORT_2F_NPC_7_Text_0:
 	.string "White Knights don't do it for me.\p"
@@ -865,7 +865,7 @@ BKFORT_2F_NPC_12_Text_0:
 	.string "Ughhhhhh\p"
 	.string "I was so hungry I snuck into the\n"
 	.string "kitchen and ate a whole cabbage!\p"
-	.string "But now I feel really sick...$"
+	.string "But now I feel really sick…$"
 
 BKFORT_2F_NPC_13_Text_0:
 	.string "Chef$"
@@ -878,7 +878,7 @@ BKFORT_2F_NPC_13_Text_1:
 	.string "live in a creepy fortress serving food\l"
 	.string "to an army of mercenaries!\p"
 	.string "It's too late for me to even leave now,\n"
-	.string "I've seen too much...$"
+	.string "I've seen too much…$"
 
 BKFORT_2F_NPC_14_Text_0:
 	.string "Marius$"
@@ -909,10 +909,10 @@ BKFORT_2F_NPC_19_Text_0:
 	.string "GIM Frankie$"
 
 BKFORT_2F_NPC_19_Text_1:
-	.string "Hold on...{PAUSE 15}\p"
+	.string "Hold on…{PAUSE 15}\p"
 	.string "This isn't White Knight's castle.\p"
 	.string "Drat!\p"
-	.string "Wrong quest guide...$"
+	.string "Wrong quest guide…$"
 
 BKFORT_2F_NPC_20_Text_0:
 	.string "Zamorak, my lord, please make me good at\n"

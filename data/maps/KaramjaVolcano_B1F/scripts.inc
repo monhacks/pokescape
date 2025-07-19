@@ -460,19 +460,19 @@ BATTLE_KaramjaVolcano_HAM_1_Text_2:
 	.string "Go up the stairs?\p"
 	.string "Don't be silly!\p"
 	.string "That's probably where the nest is, and\n"
-	.string "the last thing I need is to be eaten...$"
+	.string "the last thing I need is to be eaten…$"
 
 BATTLE_KaramjaVolcano_HAM_2_Text_0:
 	.string "I really shouldn't let you go any\n"
 	.string "further.$"
 
 BATTLE_KaramjaVolcano_HAM_2_Text_1:
-	.string "Oh bother...$"
+	.string "Oh bother…$"
 
 BATTLE_KaramjaVolcano_HAM_2_Text_2:
 	.string "Look, if I'm honest, I just joined H.A.M\n"
 	.string "because I liked the robes and wanted to\l"
-	.string "make a few friends...\p"
+	.string "make a few friends…\p"
 	.string "I didn't really sign up for mass\n"
 	.string "genocide, but it's too late to back out\l"
 	.string "now.$"
@@ -493,7 +493,7 @@ BATTLE_KaramjaVolcano_HAM_3_Text_2:
 	.string "with the others to get some fresh air!\p"
 	.string "I never expected to be bundled onto a\n"
 	.string "boat and stranded on a deserted\l"
-	.string "island...$"
+	.string "island…$"
 
 BATTLE_KaramjaVolcano_HAM_4_Text_0:
 	.string "We came here searching for some\n"
@@ -502,7 +502,7 @@ BATTLE_KaramjaVolcano_HAM_4_Text_0:
 	.string "Don't think you can stop us!$"
 
 BATTLE_KaramjaVolcano_HAM_4_Text_1:
-	.string "It's already too late...$"
+	.string "It's already too late…$"
 
 BATTLE_KaramjaVolcano_HAM_4_Text_2:
 	.string "What do you mean our plan makes no\n"

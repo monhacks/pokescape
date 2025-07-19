@@ -11,7 +11,7 @@ Route0_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 BATTLE_ROUTE0_TRAINER_1::
 	trainerbattle_single TRAINER_ROUTE0_TRAINER_1, BATTLE_ROUTE0_TRAINER_1_Text_0, BATTLE_ROUTE0_TRAINER_1_Text_1
 	namebox BATTLE_ROUTE0_TRAINER_1_Text_2
-	msgbox BATTLE_ROUTE0_TRAINER_1_Text_3
+	msgbox BATTLE_ROUTE0_TRAINER_1_Text_1
 	hidenamebox
 	release
 	end
@@ -141,16 +141,11 @@ BATTLE_ROUTE0_TRAINER_1_Text_0:
 
 BATTLE_ROUTE0_TRAINER_1_Text_1:
 	.string "I figured I could cheat and dig my way\n"
-	.string "to the bottom of the dungeon...\p"
+	.string "to the bottom of the dungeon…\p"
 	.string "Turns out there's only bedrock here.$"
 
 BATTLE_ROUTE0_TRAINER_1_Text_2:
 	.string "RockS0lid$"
-
-BATTLE_ROUTE0_TRAINER_1_Text_3:
-	.string "I figured I could cheat and dig my way\n"
-	.string "to the bottom of the dungeon…\p"
-	.string "Turns out there's only bedrock here.$"
 
 BATTLE_ROUTE0_TRAINER_2_Text_0:
 	.string "Who goes there?\p"
@@ -179,7 +174,7 @@ BATTLE_ROUTE0_TRAINER_4_Text_0:
 	.string "in my way.$"
 
 BATTLE_ROUTE0_TRAINER_4_Text_1:
-	.string "Ugh, you've made me smudge my map...$"
+	.string "Ugh, you've made me smudge my map…$"
 
 BATTLE_ROUTE0_TRAINER_4_Text_2:
 	.string "Sonje$"
@@ -190,16 +185,16 @@ BATTLE_ROUTE0_TRAINER_4_Text_3:
 	.string "explore the depths below.$"
 
 BATTLE_ROUTE0_TRAINER_5_Text_0:
-	.string "Stop...\p"
-	.string "If you can't defeat us...\p"
+	.string "Stop…\p"
+	.string "If you can't defeat us…\p"
 	.string "You will not survive the doom of\n"
-	.string "Daemonheim...\p"
+	.string "Daemonheim…\p"
 	.string "Boo!$"
 
 BATTLE_ROUTE0_TRAINER_5_Text_1:
-	.string "You might survive...\p"
-	.string "The doom...\p"
-	.string "Of the dungeon...\p"
+	.string "You might survive…\p"
+	.string "The doom…\p"
+	.string "Of the dungeon…\p"
 	.string "Boo!$"
 
 BATTLE_ROUTE0_TRAINER_5_Text_2:
@@ -220,7 +215,7 @@ NPC_ROUTE0_NPC_2_Text_0:
 	.string "of a fire.\p"
 	.string "I brought magic logs but my firemaking\n"
 	.string "level is too low.\p"
-	.string "I deserve to freeze...$"
+	.string "I deserve to freeze…$"
 
 NPC_ROUTE0_NPC_4_Text_0:
 	.string "Marmaros$"

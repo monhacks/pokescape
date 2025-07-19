@@ -475,7 +475,7 @@ BLACK_KNIGHT_QUIZ_2_Text_6:
 BLACK_KNIGHT_QUIZ_2_Text_7:
 	.string ".....\p"
 	.string "{PLAYER}, something within me felt\n"
-	.string "like we should have taken a loss here....$"
+	.string "like we should have taken a loss here…$"
 
 BLACK_KNIGHT_QUIZ_2_Text_8:
 	.string "Make sure to stab the prisoners if they\n"
@@ -521,7 +521,7 @@ BKFORT_1F_NPC_5_Text_0:
 	.string "I don't know if this special guest was\n"
 	.string "cosplaying or just had poor fashion\l"
 	.string "sense but they were dressed entirely in\l"
-	.string "pink...$"
+	.string "pink…$"
 
 BKFORT_1F_NPC_6_Text_0:
 	.string "I just really want to finish my book,\n"
@@ -529,20 +529,20 @@ BKFORT_1F_NPC_6_Text_0:
 	.string "happy ever after.\p"
 	.string "It has been giving me hope that one day\n"
 	.string "I might have the courage to pursue my\l"
-	.string "love...$"
+	.string "love…$"
 
 BKFORT_1F_NPC_7_Text_0:
 	.string "Don't mind me, I am just staying out of\n"
 	.string "the way.\p"
 	.string "That way I can't mess anything up\n"
-	.string "again...$"
+	.string "again…$"
 
 BKFORT_1F_NPC_8_Text_0:
 	.string "I hate being posted here!\p"
 	.string "I can hear the screams of the prisoners\n"
-	.string "from the basement...{PAUSE 15}\p"
+	.string "from the basement…{PAUSE 15}\p"
 	.string "Just makes me really sad I'm not the one\n"
-	.string "down there torturing them...$"
+	.string "down there torturing them…$"
 
 BKFORT_1F_NPC_9_Text_0:
 	.string "Qu3stL0ck$"
@@ -553,7 +553,7 @@ BKFORT_1F_NPC_9_Text_1:
 	.string "this witch wants a MONSTER Cabbage and\l"
 	.string "not the item!\p"
 	.string "I'm going to have to trek all the way\n"
-	.string "back to a Bank now...$"
+	.string "back to a Bank now…$"
 
 BKFORT_1F_LENSIG_Text_0:
 	.string "Lensig$"

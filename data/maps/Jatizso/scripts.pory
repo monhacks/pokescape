@@ -568,7 +568,7 @@ script RAC_QUEST_START
     msgbox(format("They seem to be arguing over which island has the better artists.\pWould you like to start the Art Fight Quest?"), MSGBOX_YESNO)
     if (var(VAR_RESULT))
     { 
-        startquest (QUEST_ARTFIGHT_JATIZSO)
+        //startquest (QUEST_ARTFIGHT_JATIZSO)
         goto(RAC_QUEST_START_P1)
     }
     msgbox(format("You decide to leave them to bicker amongst themselves."))
@@ -910,7 +910,7 @@ script RAC_QUEST_JATIZSO_ELEJ_SPOT_1
         msgbox(format("Hmm…\nNo I don't think this will do.\pLets keep looking!"))
         closemessage
         hidenamebox
-        subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_ARTFIGHT_JATIZSO, 0)
+        //subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_ARTFIGHT_JATIZSO, 0)
     }
     closemessage
     end

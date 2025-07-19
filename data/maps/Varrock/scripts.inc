@@ -1880,7 +1880,7 @@ NPC_VARROCK_PILLORY_GUARD_Text_1:
 NPC_VARROCK_PILLORY_MUGGER_Text_0:
 	.string "Argh! My fingers are so numb from all\n"
 	.string "the pickpocketing I've been doing that\l"
-	.string "I can't pick this damn lock to escape...$"
+	.string "I can't pick this damn lock to escape…$"
 
 GAMEMODE_MONSTER_OR_POKEMON_SCRIPT_Text_0:
 	.string "EDIT GAMEMODE?$"

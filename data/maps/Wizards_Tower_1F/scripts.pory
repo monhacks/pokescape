@@ -848,6 +848,11 @@ script VAR_EDIT_TOKKUL {
 
 
 script STORYMODE_VAR_CHECK {
+	msgbox(format("Would you like to toggle Quests?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT))
+    {
+        goto(QUEST_TESTER)
+    }
 	
 	buffernumberstring(STR_VAR_1, VAR_POKESCAPE_STORYMODE_PROGRESS)
 	buffernumberstring(STR_VAR_2, VAR_WISE_OLD_MAN_RIVAL)
@@ -859,13 +864,14 @@ script STORYMODE_VAR_CHECK {
 	closemessage
 	buffernumberstring(STR_VAR_1, VAR_MITHRILMAN_STATE)
 	buffernumberstring(STR_VAR_2, VAR_FROGEEL_RIVAL)
-    msgbox(format("VAR_MITHRILMAN_STATE: {STR_VAR_1}.\pVAR_FROGEEL_RIVAL: {STR_VAR_2}."))
+    msgbox(format("VAR_MITHRILMAN_STATE: {STR_VAR_1}.\nVAR_FROGEEL_RIVAL: {STR_VAR_2}."))
 	closemessage
 	msgbox(format("Would you like to edit these?"), MSGBOX_YESNO)
     if (var(VAR_RESULT))
     {
         goto(STORYMODE_VAR_EDIT)
     }
+
 	msgbox(format("Toggle P2P Badges?"), MSGBOX_YESNO)
     if (var(VAR_RESULT))
     {

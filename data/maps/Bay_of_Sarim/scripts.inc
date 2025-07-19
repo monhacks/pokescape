@@ -171,7 +171,7 @@ BATTLE_SARIM_BAY_PIRATE_1_Text_3:
 
 BATTLE_SARIM_BAY_PIRATE_2_Text_0:
 	.string "There be something breathing under the\n"
-	.string "ship. Might be a sea serpent...\p"
+	.string "ship. Might be a sea serpent…\p"
 	.string "Ready yer weapons!$"
 
 BATTLE_SARIM_BAY_PIRATE_2_Text_1:
@@ -202,7 +202,7 @@ BATTLE_SARIM_BAY_PIRATE_3_Text_3:
 	.string "work.$"
 
 BATTLE_SARIM_BAY_PIRATE_4_Text_0:
-	.string "I swear I saw eyes glowing in the mist...$"
+	.string "I swear I saw eyes glowing in the mist…$"
 
 BATTLE_SARIM_BAY_PIRATE_4_Text_1:
 	.string "Turns out all I saw was the look of\n"
@@ -220,7 +220,7 @@ BATTLE_SARIM_BAY_PIRATE_4_Text_3:
 BATTLE_SARIM_BAY_PIRATE_5_Text_0:
 	.string "The map says there's an island cursed\n"
 	.string "by creatures of the night.\p"
-	.string "Maybe we should stay clear...\p"
+	.string "Maybe we should stay clear…\p"
 	.string "Or not!$"
 
 BATTLE_SARIM_BAY_PIRATE_5_Text_1:
@@ -233,15 +233,15 @@ BATTLE_SARIM_BAY_PIRATE_5_Text_2:
 BATTLE_SARIM_BAY_PIRATE_5_Text_3:
 	.string "Have you heard of Morytania?\p"
 	.string "If the rumours are true and those\n"
-	.string "cursed creatures do walk that land...\p"
+	.string "cursed creatures do walk that land…\p"
 	.string "Imagine all the treasures they'll have\n"
 	.string "hoarded over the years just waiting to\l"
-	.string "be...\p"
+	.string "be…\p"
 	.string "Rehomed!$"
 
 BATTLE_SARIM_BAY_PIRATE_6_Text_0:
-	.string "I’ll sail the seas until the stars fall,\n"
-	.string "but no storm's takin’ me down!$"
+	.string "I'll sail the seas until the stars fall,\n"
+	.string "but no storm's takin' me down!$"
 
 BATTLE_SARIM_BAY_PIRATE_6_Text_1:
 	.string "Seems like it wasn't a storm I needed to\n"
@@ -255,7 +255,7 @@ BATTLE_SARIM_BAY_PIRATE_6_Text_3:
 	.string "to weather any storm.$"
 
 BATTLE_SARIM_BAY_PIRATE_7_Text_0:
-	.string "There’s something in the water...\p"
+	.string "There's something in the water…\p"
 	.string "Best keep your eyes sharp, matey.$"
 
 BATTLE_SARIM_BAY_PIRATE_7_Text_1:
@@ -283,7 +283,7 @@ BATTLE_SARIM_BAY_SAILOR_1_Text_3:
 	.string "robbed, but now all my monsters have\l"
 	.string "fainted I can't battle my way out\l"
 	.string "either.\p"
-	.string "I'm just... stuck here.$"
+	.string "I'm just… stuck here.$"
 
 BATTLE_SARIM_BAY_SAILOR_2_Text_0:
 	.string "It has been my dream since I was a child\n"
@@ -291,7 +291,7 @@ BATTLE_SARIM_BAY_SAILOR_2_Text_0:
 
 BATTLE_SARIM_BAY_SAILOR_2_Text_1:
 	.string "My dreams never involved me losing like\n"
-	.string "this though..$"
+	.string "this though…$"
 
 BATTLE_SARIM_BAY_SAILOR_2_Text_2:
 	.string "Erasmus$"

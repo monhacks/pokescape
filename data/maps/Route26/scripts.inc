@@ -358,7 +358,7 @@ TRIGGER_STORYMODE_EVENT_ROUTE26_Text_2:
 
 TRIGGER_STORYMODE_EVENT_ROUTE26_Text_3:
 	.string "Urgh, I could have stopped one of you\n"
-	.string "but not both...$"
+	.string "but not both…$"
 
 TRIGGER_STORYMODE_EVENT_ROUTE26_Text_4:
 	.string "Thank you {PLAYER}.\p"

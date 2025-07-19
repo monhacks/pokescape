@@ -94,7 +94,7 @@ PURO_HUNTER_3_Text_1:
 	.string "I heard they have magic powers and can\n"
 	.string "send things to your bank!\p"
 	.string "But they didn't take too kindly to it\n"
-	.string "and confiscated them when I got here...$"
+	.string "and confiscated them when I got here…$"
 
 PURO_FAIRY_3_Text_0:
 	.string "Fairy$"

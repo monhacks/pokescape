@@ -409,31 +409,31 @@ BKFORT_3F_NPC_1_Text_1:
 
 BKFORT_3F_NPC_2_Text_0:
 	.string "I can't believe I spend all day down\n"
-	.string "here torturing people...\p"
+	.string "here torturing people…\p"
 	.string "{PAUSE 15}THIS IS THE BEST JOB EVER!$"
 
 BKFORT_3F_NPC_3_Text_0:
 	.string "Sir Gawain$"
 
 BKFORT_3F_NPC_3_Text_1:
-	.string "For the last time...\p"
+	.string "For the last time…\p"
 	.string "I AM NOT A WHITE KNIGHT!\p"
 	.string "I AM A KNIGHT OF THE ROUND TABLE!\p"
-	.string "{PAUSE 15}Very well, the King will save me...$"
+	.string "{PAUSE 15}Very well, the King will save me…$"
 
 BKFORT_3F_NPC_4_Text_0:
 	.string "Hill Giant$"
 
 BKFORT_3F_NPC_4_Text_1:
-	.string "Wait...\p"
-	.string "Do...\p"
-	.string "do not...\p"
-	.string "flig...\p"
+	.string "Wait…\p"
+	.string "Do…\p"
+	.string "do not…\p"
+	.string "flig…\p"
 	.string "fight.\p"
-	.string "Want...\p"
-	.string "no, need...\p"
+	.string "Want…\p"
+	.string "no, need…\p"
 	.string "your help.\p"
-	.string "Please...$"
+	.string "Please…$"
 
 BKFORT_3F_NPC_5_Text_0:
 	.string "Dungeonletic$"
@@ -448,8 +448,7 @@ BKFORT_3F_NPC_5_Text_1:
 	.string "No banking, no trading, but this time I\n"
 	.string "can't leave this jail cell.\p"
 	.string "All leading up to eventually taking on\n"
-	.string "one of PokeScape's biggest\l"
-	.string "challenges...\p"
+	.string "one of PokeScape's biggest challenges…\p"
 	.string "Tagging Stan in the Discord and not\n"
 	.string "getting banned.$"
 
@@ -463,13 +462,13 @@ BKFORT_3F_NPC_6_Text_1:
 	.string "people here weren't as friendly as I'd\l"
 	.string "hoped.\p"
 	.string "We aren't strong enough to fight back\n"
-	.string "on our own...$"
+	.string "on our own…$"
 
 BKFORT_3F_NPC_7_Text_0:
 	.string "No matter how hard you try, you can't\n"
 	.string "seem to get their attention.\p"
 	.string "They just keep walking into the wall,\n"
-	.string "over and over and over again...$"
+	.string "over and over and over again…$"
 
 BKFORT_3F_NPC_8_Text_0:
 	.string "Skeleton$"
@@ -542,10 +541,10 @@ BKFORT_3F_NPC_14_Text_4:
 	.string "SIR, YES SIR!$"
 
 BKFORT_3F_NPC_15_Text_0:
-	.string "Left hand... hut!\p"
-	.string "Right hand... hut!\p"
+	.string "Left hand… hut!\p"
+	.string "Right hand… hut!\p"
 	.string "Draw and parry!\p"
-	.string "Order... hut!\p"
+	.string "Order… hut!\p"
 	.string "This is my longsword!\p"
 	.string "There are many like it, but this one is\n"
 	.string "mine!\p"
@@ -565,7 +564,7 @@ BKFORT_3F_NPC_17_Text_0:
 BKFORT_3F_NPC_17_Text_1:
 	.string "Those blasted White Knights stopped me\n"
 	.string "from engaging in the biggest massacre\l"
-	.string "Gielinor had ever seen...\p"
+	.string "Gielinor had ever seen…\p"
 	.string "With the strength of the Kinshra behind\n"
 	.string "me, I swear I will have my revenge.$"
 

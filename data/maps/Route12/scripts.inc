@@ -1015,7 +1015,7 @@ BATTLE_ROUTE12_RIVER_TRAINER_1_Text_3:
 	.string "The perceived depth and actual depth\n"
 	.string "may differ.\p"
 	.string "This goes for anything, water,\n"
-	.string "literature...\n"
+	.string "literature…\n"
 	.string "Even this conversation.$"
 
 BATTLE_ROUTE12_RIVER_TRAINER_2_Text_0:
@@ -1089,7 +1089,7 @@ NPC_ROUTE12_IRONMAN_Text_1:
 	.string "I think I'm the reason Bob is out of\n"
 	.string "axes.\p"
 	.string "Now where is that Woodcutting Tutor\n"
-	.string "with my cape...$"
+	.string "with my cape…$"
 
 NPC_ROUTE12_IRONMAN_Text_2:
 	.string "With how my routes rolled, it took me 2\n"
@@ -1123,7 +1123,7 @@ NPC_ROUTE12_IRONMAN_Text_5:
 NPC_ROUTE12_IRONMAN_Text_6:
 	.string "I smelted so many bronze bars in the\n"
 	.string "Lumbridge Furnace that I think I broke\l"
-	.string "it...\p"
+	.string "it…\p"
 	.string "Apparently they've had to send a dwarf\n"
 	.string "all the way from near Falador to fix it.$"
 
@@ -1133,8 +1133,8 @@ NPC_ROUTE12_IRONMAN_Text_7:
 	.string "Do you have any idea where it could be?\p"
 	.string "I can't roll my next route until I find\n"
 	.string "it.\p"
-	.string "{PAUSE 15}...\p"
-	.string "{PAUSE 15}I... must... find... it!$"
+	.string "{PAUSE 15}…\p"
+	.string "{PAUSE 15}I… must… find… it!$"
 
 NPC_ROUTE12_BRONZEMAN_Text_0:
 	.string "Br0nzem4n$"
@@ -1182,7 +1182,7 @@ NPC_ROUTE12_BOAT_1_Text_1:
 	.string "Catherby.\p"
 	.string "I have absolutely no idea how I ended\n"
 	.string "up here, though.\p"
-	.string "I just got caught up in the currents...\p"
+	.string "I just got caught up in the currents…\p"
 	.string "I'm just continuing to follow them and\n"
 	.string "hoping for the best.$"
 

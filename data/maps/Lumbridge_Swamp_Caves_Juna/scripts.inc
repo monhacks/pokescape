@@ -449,7 +449,7 @@ ENCOUNTER_JUNA_Text_0:
 	.string "Juna$"
 
 ENCOUNTER_JUNA_Text_1:
-	.string "Adventurer...\p"
+	.string "Adventurer…\p"
 	.string "I have been waiting here three\n"
 	.string "thousand years, guarding the Tears of\l"
 	.string "Guthix.\p"

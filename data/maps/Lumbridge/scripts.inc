@@ -1271,7 +1271,7 @@ NPC_LumbridgeBridge_Text_0:
 	.string "Is it just me or is this really long?\p"
 	.string "Nah, I must be imagining it.\p"
 	.string "{PAUSE 15}Wait, I'm SURE the river used to be wider\n"
-	.string "than this...$"
+	.string "than this…$"
 
 Lumbridge_Guard_NORTH_Text_0:
 	.string "Pazel$"
@@ -1526,7 +1526,7 @@ Lumbridge_GRAVEYARD_SIGN_2_Text_0:
 	.string "number 17 written on it, along with a\l"
 	.string "bloody harpoon.\p"
 	.string "You decide it's best to leave that\n"
-	.string "alone...$"
+	.string "alone…$"
 
 Lumbridge_GRAVEYARD_SIGN_3_Text_0:
 	.string "Lumbridge Graveyard.\p"
@@ -1579,8 +1579,8 @@ Lumbridge_River_NPC3_Text_3:
 	.string "minnow?$"
 
 Lumbridge_River_NPC3_Text_4:
-	.string "You’re krilling me with these sea-rious\n"
-	.string "vibes...$"
+	.string "You're krilling me with these sea-rious\n"
+	.string "vibes…$"
 
 Lumbridge_River_NPC3_Text_5:
 	.string "Speak up, I'm hard of herring.$"
@@ -1625,7 +1625,7 @@ BATTLE_LUMBRIDGE_RIVER_TRAINER_3_Text_0:
 	.string "I fell off the bridge when it got\n"
 	.string "destroyed.\p"
 	.string "Please help me, I want to go back to\n"
-	.string "land...$"
+	.string "land…$"
 
 BATTLE_LUMBRIDGE_RIVER_TRAINER_3_Text_1:
 	.string "Please!!$"
@@ -1637,4 +1637,4 @@ BATTLE_LUMBRIDGE_RIVER_TRAINER_3_Text_3:
 	.string "I said help me, not fight me!\n"
 	.string "Please get me to land!\n"
 	.string "I dont know how to steer a boat.\n"
-	.string "Please don't leave me out here...$"
+	.string "Please don't leave me out here…$"

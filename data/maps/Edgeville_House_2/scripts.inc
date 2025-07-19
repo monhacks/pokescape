@@ -31,7 +31,7 @@ NPC_EVIL_DAVE_Text_1:
 	.string "Hey! You're like TOTALLY EVIL right?\p"
 	.string "Of course, I can tell just by looking at\n"
 	.string "you!\p"
-	.string "I'll let you in on a secret...\p"
+	.string "I'll let you in on a secret…\p"
 	.string "I am going to summon DEMONS and\n"
 	.string "totally, like, take over the world!\p"
 	.string "So far though, I've only managed some\n"

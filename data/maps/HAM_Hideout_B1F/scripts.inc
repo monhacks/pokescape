@@ -1690,7 +1690,7 @@ NPC_HAM_HIDEOUT_B1F_14_Text_0:
 
 NPC_HAM_HIDEOUT_B1F_14_Text_1:
 	.string "Let them not infest our cities and\n"
-	.string "towns...$"
+	.string "towns…$"
 
 NPC_HAM_HIDEOUT_B1F_14_Text_2:
 	.string "And lo, we become the power, indeed the\n"
@@ -1705,7 +1705,7 @@ NPC_HAM_HIDEOUT_B1F_14_Text_3:
 
 NPC_HAM_HIDEOUT_B1F_14_Text_4:
 	.string "If thine monsters visage does frighten\n"
-	.string "thee, then tear it off I say... tear it\l"
+	.string "thee, then tear it off I say… tear it\l"
 	.string "off!$"
 
 NPC_HAM_HIDEOUT_B1F_14_Text_5:
@@ -1723,7 +1723,7 @@ NPC_HAM_HIDEOUT_B1F_14_Text_7:
 
 NPC_HAM_HIDEOUT_B1F_14_Text_8:
 	.string "Where do we go for safety from these\n"
-	.string "monsters... here, with our brethren!$"
+	.string "monsters… here, with our brethren!$"
 
 NPC_HAM_HIDEOUT_B1F_14_Text_9:
 	.string "And let there be no cave or shelter for\n"

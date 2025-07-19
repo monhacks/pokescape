@@ -471,7 +471,7 @@ HANS_GYM_LUMBRIDGE_Text_2:
 	.string "making, good job!$"
 
 SIGMUND_DRAWERS_Text_0:
-	.string "You rummage through the drawers...\p"
+	.string "You rummage through the drawers…\p"
 	.string "{PAUSE 15}$"
 
 SIGMUND_DRAWERS_Text_1:

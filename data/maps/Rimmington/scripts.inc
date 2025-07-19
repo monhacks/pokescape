@@ -1934,7 +1934,7 @@ ANCHOVYBOOK_Text_1:
 	.string "Hm.\p"
 	.string "If the heat from cooking them helped to\n"
 	.string "distil the oil, then I wonder what\l"
-	.string "effect a FIRE RUNE would have on it...\p"
+	.string "effect a FIRE RUNE would have on it…\p"
 	.string "More testing is required.$"
 
 ANCHOVYBOOK_Text_2:

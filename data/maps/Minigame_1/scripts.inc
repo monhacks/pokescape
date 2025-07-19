@@ -114,7 +114,7 @@ VOID_KNIGHT_NPC_1_Text_4:
 	.string "down!$"
 
 VOID_KNIGHT_NPC_1_Text_5:
-	.string "So many monsters...!\p"
+	.string "So many monsters…!\p"
 	.string "We cannot let them escape this island!$"
 
 VOID_KNIGHT_NPC_2_Text_0:

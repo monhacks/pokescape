@@ -96,4 +96,4 @@ NPC_YANILLE_PUB_1F_5_Text_0:
 
 NPC_YANILLE_PUB_1F_5_Text_1:
 	.string "Go 'way! This pint'sh nearly finished!\n"
-	.string "Unlessh you got more that ish....?$"
+	.string "Unlessh you got more that ish…?$"

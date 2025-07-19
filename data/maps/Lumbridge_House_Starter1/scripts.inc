@@ -221,6 +221,11 @@ FIND_ITEM_MEAT_PIE_SANDWICH::
 	end
 
 
+FIND_ITEM_KEBAB::
+	finditem ITEM_KEBAB_SANDWICH
+	end
+
+
 FIND_ITEM_APPLES::
 	finditem ITEM_APPLE, 5
 	end

@@ -504,7 +504,7 @@ BATTLE_ROUTE20_TRAINER_3_Text_0:
 	.string "I summoned this canoe.$"
 
 BATTLE_ROUTE20_TRAINER_3_Text_1:
-	.string "You don't seem to be that impressed...$"
+	.string "You don't seem to be that impressed…$"
 
 BATTLE_ROUTE20_TRAINER_3_Text_2:
 	.string "Srift$"
@@ -519,7 +519,7 @@ BATTLE_ROUTE20_TRAINER_3_Text_3:
 BATTLE_ROUTE20_TRAINER_4_Text_0:
 	.string "I tried sailing up the river to see\n"
 	.string "whether I'd have better odds of\l"
-	.string "catching rare fish...\p"
+	.string "catching rare fish…\p"
 	.string "You better not have scared them off!$"
 
 BATTLE_ROUTE20_TRAINER_4_Text_1:
@@ -545,7 +545,7 @@ ROUTE20_BLOCKADE_SOUTH_Text_0:
 	.string "Blasted fish leapt out the water and\n"
 	.string "stole me leg!\p"
 	.string "I can't let you past until I've caught\n"
-	.string "it...\p"
+	.string "it…\p"
 	.string "{PAUSE 15}I'm comin' for ye Peggy!$"
 
 ROUTE20_VARROCK_GUARD_1_Text_0:
@@ -608,7 +608,7 @@ FROGEEL_RIVAL_4_Text_4:
 	.string "That's right.\p"
 	.string "Now, make sure not to tell my future\n"
 	.string "Frog Princess to be about our\l"
-	.string "encounter with the barbarian lady...$"
+	.string "encounter with the barbarian lady…$"
 
 FROGEEL_RIVAL_4_Text_5:
 	.string "Well I am offended. And in need of a\n"

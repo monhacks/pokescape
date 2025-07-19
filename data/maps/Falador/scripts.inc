@@ -2300,18 +2300,18 @@ FROGEEL_RIVAL_2_Text_4:
 	.string "we?$"
 
 FROGEEL_RIVAL_2_Text_5:
-	.string "{PLAYER}... You agreed that you were\n"
+	.string "{PLAYER}… You agreed that you were\n"
 	.string "going to let me leave.\p"
 	.string "You haven't changed your mind now, have\n"
 	.string "you?$"
 
 FROGEEL_RIVAL_2_Text_6:
 	.string "Good, now leave me to plan my next heis-\p"
-	.string "{PAUSE 15}You heard nothing...$"
+	.string "{PAUSE 15}You heard nothing…$"
 
 FROGEEL_RIVAL_2_Text_7:
 	.string "Ugh, in that case I shall have to fight\n"
-	.string "my way out...$"
+	.string "my way out…$"
 
 FROGEEL_RIVAL_2_Text_8:
 	.string "I thought we had a deal {PLAYER}.\p"

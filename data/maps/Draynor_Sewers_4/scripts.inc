@@ -39,16 +39,16 @@ NPC_DRAYNOR_SEWERS_RUANTUN_Text_0:
 	.string "Ruantun$"
 
 NPC_DRAYNOR_SEWERS_RUANTUN_Text_1:
-	.string "You ssshould not be down here...$"
+	.string "You ssshould not be down here…$"
 
 NPC_DRAYNOR_SEWERS_RUANTUN_Text_2:
 	.string "Beingsss sssuch as myssself cannot\n"
-	.string "abide in the light...\p"
+	.string "abide in the light…\p"
 	.string "It is in the darknesss where we find our\n"
-	.string "homesss...$"
+	.string "homesss…$"
 
 NPC_DRAYNOR_SEWERS_RUANTUN_Text_3:
-	.string "Thisss isss where I belong...$"
+	.string "Thisss isss where I belong…$"
 
 NPC_DRAYNOR_SEWERS_RUANTUN_Text_4:
-	.string "Beware of crocodilesss in the water...$"
+	.string "Beware of crocodilesss in the water…$"

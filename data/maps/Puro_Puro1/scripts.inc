@@ -454,7 +454,7 @@ PURO_IRONMAN_1_Text_1:
 	.string "scrolls and get myself a pair of Ranger\l"
 	.string "boots!\p"
 	.string "{PAUSE 15}But I've been here for hours and not\n"
-	.string "seen a single eclectic impling...$"
+	.string "seen a single eclectic impling…$"
 
 IMP_DEFENDER_Text_0:
 	.string "Defender$"

@@ -109,7 +109,7 @@ DUCK_NPC_Text_6:
 	.string "disguise!\p"
 	.string "{PAUSE 15}Don't believe me?\p"
 	.string "Try having a SWAN and an IMP in your\n"
-	.string "party and see what happens...\p"
+	.string "party and see what happens…\p"
 	.string "Don't say I didn't warn you!!$"
 
 BATTLE_ROUTE36_RIVER_TRAINER_1_Text_0:

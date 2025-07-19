@@ -1396,10 +1396,10 @@ LeftDoorScript_Text_0:
 LeftDoorScript_Text_1:
 	.string "Hello there!\p"
 	.string "My name is Hans.\p"
-	.string "You are...?$"
+	.string "You are…?$"
 
 LeftDoorScript_Text_2:
-	.string "...\p"
+	.string "…\p"
 	.string "Nice to meet you {PLAYER}.\p"
 	.string "You must be here to see the\n"
 	.string "researcher?\p"
@@ -1437,7 +1437,7 @@ LeftDoorScript_Text_6:
 
 LeftDoorScript_Text_7:
 	.string "Noob.\p"
-	.string "...How about now?$"
+	.string "…How about now?$"
 
 LeftDoorScript_Text_8:
 	.string "Nice.\p"
@@ -1456,7 +1456,7 @@ Lumbridge_Castle_Professor_Normal_Tree_1_Text_2:
 	.string "forward to seeing how much of the\l"
 	.string "BESTIARY you've filled out the next we\l"
 	.string "meet.\p"
-	.string "Until then...\l"
+	.string "Until then…\l"
 	.string "Farewell.$"
 
 Lumbridge_Castle_Professor_Normal_Tree_2_Text_0:
@@ -1526,8 +1526,8 @@ Pouch_Starter3_Text_1:
 	.string "This is an Tumekling.$"
 
 QUEST_Cooks_Assistant_STATE_Text_0:
-	.string "Oh dear...\p"
-	.string "What am I to do...\n"
+	.string "Oh dear…\p"
+	.string "What am I to do…\n"
 	.string "I'm in a terrible, terrible mess!\p"
 	.string "I should be making a cake for the Duke\n"
 	.string "but I forgot to get the ingredients!$"
@@ -1564,18 +1564,18 @@ QUEST_Cooks_Assistant_STATE_Text_6:
 	.string "Do you have the ingredients?$"
 
 QUEST_Cooks_Assistant_STATE_Text_7:
-	.string "Let me check...$"
+	.string "Let me check…$"
 
 QUEST_Cooks_Assistant_STATE_Text_8:
 	.string "It looks like you have everything!\p"
-	.string "...\p"
+	.string "…\p"
 	.string "This is a bit awkward but could you also\n"
 	.string "bake the cake?\p"
-	.string "I forgot how...\p"
+	.string "I forgot how…\p"
 	.string "Please use the range over there!$"
 
 QUEST_Cooks_Assistant_STATE_Text_9:
-	.string "Please hurry...$"
+	.string "Please hurry…$"
 
 QUEST_Cooks_Assistant_STATE_Text_10:
 	.string "What you don't know how to bake a cake\n"
@@ -1657,7 +1657,7 @@ QUEST_COOKING_RANGE_COOKSASSISTANT_Text_1:
 	.string "Would you like to bake a cake?$"
 
 QUEST_COOKING_RANGE_COOKSASSISTANT_Text_2:
-	.string "...\p"
+	.string "…\p"
 	.string "Unsure on how to bake a cake you throw\n"
 	.string "all the ingredients at the range.$"
 

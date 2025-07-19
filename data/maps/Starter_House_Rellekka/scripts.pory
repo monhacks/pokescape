@@ -64,7 +64,7 @@ script GiveMon_Yak {
 
 
 script Quest_Start {
-    startquest (QUEST_ARTFIGHT_JATIZSO)
+    //startquest (QUEST_ARTFIGHT_JATIZSO)
     //questmenu (QUEST_MENU_UNLOCK_QUEST, QUEST_1)
     //questmenu (QUEST_MENU_SET_ACTIVE, QUEST_1)
     //subquestmenu (QUEST_MENU_SET_ACTIVE , QUEST_ARTFIGHT, SUB_QUEST_PICTURE_PERFECT)
@@ -96,7 +96,7 @@ script CelebrateEndgame {
 
 
 script Quest_Test_1 {
-    startquest (QUEST_ARTFIGHT_JATIZSO)
+    //startquest (QUEST_ARTFIGHT_JATIZSO)
     end
 }
 script Quest_Test_2 {

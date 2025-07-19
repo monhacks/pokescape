@@ -909,10 +909,10 @@ NPC_LUMBRIDGE_FOREST_2_Text_0:
 	.string "Warrior$"
 
 NPC_LUMBRIDGE_FOREST_2_Text_1:
-	.string "We're looking for Zanaris...GAH!\p"
+	.string "We're looking for Zanaris… GAH!\p"
 	.string "I mean we're not here for any particular\n"
 	.string "reason at all.\p"
-	.string "...\p"
+	.string "…\p"
 	.string "Of course we know where it is! We just\n"
 	.string "haven't found which tree the stupid\l"
 	.string "leprechaun's hiding in yet!$"
@@ -1189,7 +1189,7 @@ ZANIK_DIALOGUE_LUMBRIDGE_FOREST_Text_0:
 	.string "also use them as weapons?$"
 
 ZANIK_DIALOGUE_LUMBRIDGE_FOREST_Text_1:
-	.string "Is... Is that another goblin over there?\p"
+	.string "Is… Is that another goblin over there?\p"
 	.string "I wonder if they're a distant relative.$"
 
 ZANIK_DIALOGUE_LUMBRIDGE_FOREST_Text_2:
@@ -1231,7 +1231,7 @@ ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_4:
 	.string "It's sad to think about how many\n"
 	.string "amazing things were probably dug up to\l"
 	.string "build this place.\p"
-	.string "All that history gone, and for what...$"
+	.string "All that history gone, and for what…$"
 
 ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_5:
 	.string "Come on {PLAYER} if we keep looking\n"
@@ -1241,17 +1241,17 @@ ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_5:
 ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_6:
 	.string "These people claim to hate monsters,\n"
 	.string "but just look around.\p"
-	.string "They're the real monsters...$"
+	.string "They're the real monsters…$"
 
 ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_7:
 	.string "I can hear something going on deeper\n"
-	.string "into these caves...\p"
+	.string "into these caves…\p"
 	.string "We should investigate!$"
 
 ZANIK_DIALOGUE_HAM_HIDEOUT_B2F_Text_0:
 	.string "It's funny that they claim to hate\n"
 	.string "creatures like me, yet here they are\l"
-	.string "living in a cave... just like me.$"
+	.string "living in a cave… just like me.$"
 
 ZANIK_DIALOGUE_HAM_HIDEOUT_B2F_Text_1:
 	.string "I can't believe that they live like this.\p"
@@ -1295,7 +1295,7 @@ NPC_LUMBRIDGEFOREST_HAM_1_Text_1:
 	.string "And we totally would not need that\n"
 	.string "theoretical prince because he has what\l"
 	.string "is needed to summon a power that will\l"
-	.string "rip the world as we know it in two...\p"
+	.string "rip the world as we know it in two…\p"
 	.string "And H.A.M definitely would not want to\n"
 	.string "use that power so we can return the\l"
 	.string "world to the peaceful state it needs to\l"
@@ -1315,7 +1315,7 @@ BATTLE_LUMBRIDGEFOREST_HAM_1_Text_1:
 BATTLE_LUMBRIDGEFOREST_HAM_1_Text_2:
 	.string "That grunt needs to stop talking\n"
 	.string "before she gets us both into some\l"
-	.string "serious trouble...$"
+	.string "serious trouble…$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_2_Text_0:
 	.string "Maybe you and I should show them the\n"
@@ -1331,7 +1331,7 @@ BATTLE_LUMBRIDGEFOREST_HAM_2_Text_2:
 	.string "path, did you?$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_3_Text_0:
-	.string "We fight for what's right... The future\n"
+	.string "We fight for what's right… The future\n"
 	.string "will show you were in the wrong!$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_3_Text_1:
@@ -1339,7 +1339,7 @@ BATTLE_LUMBRIDGEFOREST_HAM_3_Text_1:
 	.string "the wrong side of this!$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_3_Text_2:
-	.string "The future is written by the victors...\n"
+	.string "The future is written by the victors…\n"
 	.string "Remember that when we smite you down\l"
 	.string "like the bug you are.$"
 
@@ -1348,7 +1348,7 @@ BATTLE_LUMBRIDGEFOREST_HAM_4_Text_0:
 	.string "our hideout!$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_4_Text_1:
-	.string "This really isn't my day...$"
+	.string "This really isn't my day…$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_4_Text_2:
 	.string "This really isn't my day.\p"

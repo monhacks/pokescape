@@ -59,7 +59,7 @@ WOM_BED_CORNER_3:
 
 
 WOM_BED_RIGHT_Text_0:
-	.string "It's a fairly ordinary bed, but...$"
+	.string "It's a fairly ordinary bed, but…$"
 
 WOM_BED_RIGHT_Text_1:
 	.string "Was that a hand!?\p"

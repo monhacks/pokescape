@@ -186,7 +186,7 @@ BATTLE_VARROCK_SEWERS_2F_TRAINER_6_Text_1:
 	.string "200 rats. Why the heck did they assign\l"
 	.string "me 200 rats?\p"
 	.string "Maybe this is what I get for skipping\n"
-	.string "tasks for easy Slayer points...$"
+	.string "tasks for easy Slayer points…$"
 
 VARROCK_SEWERS_2F_MAN_Text_0:
 	.string "Some Knight at the castle paid me a\n"

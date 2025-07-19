@@ -79,7 +79,7 @@ NPC_EDGEVILLE_BANK_2_Text_1:
 	.string "Wilderness with them to find some rare\l"
 	.string "monsters!\p"
 	.string "But they weren't friendly after all, and\n"
-	.string "I lost all my stuff...$"
+	.string "I lost all my stuff…$"
 
 NPC_EDGEVILLE_BANK_3_Text_0:
 	.string "AltarCarbon$"

@@ -443,7 +443,7 @@ BATTLE_VARROCK_SEWERS_3F_TRAINER_4_Text_0:
 	.string "have to stand and deliver!$"
 
 BATTLE_VARROCK_SEWERS_3F_TRAINER_4_Text_1:
-	.string "Aww rats...$"
+	.string "Aww rats…$"
 
 BATTLE_VARROCK_SEWERS_3F_TRAINER_4_Text_2:
 	.string "MUGGER$"

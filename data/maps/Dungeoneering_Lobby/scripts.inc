@@ -781,7 +781,7 @@ BATTLE_FROGEEL_RIVAL_8_Text_2:
 	.string "AAAAAAAAAAAAAAAAA\p"
 	.string "AAAAAAAAAAAAAAAAA\p"
 	.string "AAAAAAAAAAAAAAAAA\p"
-	.string "...{PAUSE 15}\p"
+	.string "…{PAUSE 15}\p"
 	.string "{PLAYER}, you have my word.\l"
 	.string "We will make it through this together.\p"
 	.string "What are we?\l"

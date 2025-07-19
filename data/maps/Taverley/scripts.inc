@@ -187,7 +187,7 @@ TAVERLEY_BOY_Text_0:
 TAVERLEY_BOY_Text_1:
 	.string "I kicked my ball over that hedge into\n"
 	.string "that garden!\p"
-	.string "The old lady who lives there is scary...\n"
+	.string "The old lady who lives there is scary…\n"
 	.string "She's taken my ball and won't give it\l"
 	.string "back.$"
 

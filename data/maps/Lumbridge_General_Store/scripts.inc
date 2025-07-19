@@ -850,7 +850,7 @@ GeneralStore_MUSAPOINT_Assistant_Text_1:
 	.string "How may I help you?$"
 
 GeneralStore_TZHAAR_Human_Text_0:
-	.string "It's so hot down here...\p"
+	.string "It's so hot down here…\p"
 	.string "Welcome to the Tzhaar General Store.\p"
 	.string "How may I help you?$"
 
@@ -962,7 +962,8 @@ POUCH_INFO_WHITE_Text_0:
 	.string "That's a White Pouch!\p"
 	.string "You'd want to use these Midday or if\n"
 	.string "you're trying to capture a monster\l"
-	.string "which for some reason located indoors.$"
+	.string "which for some reason is located\l"
+	.string "indoors.$"
 
 POUCH_INFO_AUGMENTED_Text_0:
 	.string "That's a Augmented Pouch!\p"
@@ -987,7 +988,7 @@ POUCH_INFO_ANCIENT_Text_0:
 	.string "That's an Ancient Pouch!\p"
 	.string "Not much is known about these pouches\n"
 	.string "but they say a contract is forced upon\l"
-	.string "the monster to encourge friendship\l"
+	.string "the monster to encourage friendship\l"
 	.string "growth.$"
 
 POUCH_INFO_DRAGON_Text_0:

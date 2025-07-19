@@ -277,8 +277,8 @@ ROUTE10_SirAcknis_Text_3:
 	.string "sitting on a bench there, drinking cups\l"
 	.string "of tea.\p"
 	.string "I've never seen anybody refill his cup\n"
-	.string "though...\p"
-	.string "I wonder if it's enchanted...$"
+	.string "though…\p"
+	.string "I wonder if it's enchanted…$"
 
 ROUTE10_SirAcknis_Text_4:
 	.string "You can tell what rank a White Knight is\n"
@@ -302,7 +302,7 @@ ROUTE10_SirAcknis_Text_6:
 	.string "now than anything combat related.\p"
 	.string "Now that I think about it, I'm not even\n"
 	.string "sure how that makes him qualified to be\l"
-	.string "a White Knight...$"
+	.string "a White Knight…$"
 
 BATTLE_ROUTE10_MONK_Text_0:
 	.string "You don't seem to be dead…\p"

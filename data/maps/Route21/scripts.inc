@@ -34,7 +34,7 @@ BATTLE_ROUTE21_TRAINER_1_Text_0:
 	.string "to get the axe!$"
 
 BATTLE_ROUTE21_TRAINER_1_Text_1:
-	.string "Looks like that someone was me...$"
+	.string "Looks like that someone was me…$"
 
 BATTLE_ROUTE21_TRAINER_1_Text_2:
 	.string "Ax3edSeries$"
@@ -76,4 +76,4 @@ BATTLE_ROUTE21_TRAINER_3_Text_2:
 BATTLE_ROUTE21_TRAINER_3_Text_3:
 	.string "Shiver me timbers!\p"
 	.string "Looks like I'll be the one feeding the\n"
-	.string "fish...$"
+	.string "fish…$"

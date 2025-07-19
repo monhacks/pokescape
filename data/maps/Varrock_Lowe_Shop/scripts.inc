@@ -125,7 +125,7 @@ LOWESBOOK_Text_1:
 	.string "{PAUSE 15}The journal continues on sharing Lowe's\n"
 	.string "admiration of Robin for many, many, many\l"
 	.string "more pages.\p"
-	.string "You decide not to continue reading...$"
+	.string "You decide not to continue reading…$"
 
 LOWESBOOK_Text_2:
 	.string "You decide not to read the journal.$"

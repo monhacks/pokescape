@@ -752,7 +752,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_1_Text_3:
 	.string "fortress…$"
 
 BATTLE_HAM_HIDEOUT_GRUNT_2_Text_0:
-	.string "I've only been a member for a few days...\p"
+	.string "I've only been a member for a few days…\p"
 	.string "Do you know where the toilets are?$"
 
 BATTLE_HAM_HIDEOUT_GRUNT_2_Text_1:
@@ -816,7 +816,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_6_Text_2:
 	.string "for caches of First Age armour.\p"
 	.string "I wonder why he wants it, we already\n"
 	.string "have plenty of sets of much newer\l"
-	.string "armour...$"
+	.string "armour…$"
 
 BATTLE_HAM_HIDEOUT_GRUNT_7_Text_0:
 	.string "Do you think Sigmund's plans are\n"
@@ -1014,9 +1014,9 @@ TRIGGER_HAMHIDEOUT_JOHANHUS_Text_5:
 	.string "for this world to be free is to kill and\l"
 	.string "abandon every single monster in the\l"
 	.string "world.\p"
-	.string "And when that happens...\l"
+	.string "And when that happens…\l"
 	.string "The world will be at peace.\l"
-	.string "Just like we have always wanted...$"
+	.string "Just like we have always wanted…$"
 
 TRIGGER_HAMHIDEOUT_JOHANHUS_Text_6:
 	.string "Prince Ali$"

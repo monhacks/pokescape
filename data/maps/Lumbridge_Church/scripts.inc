@@ -478,7 +478,7 @@ Pub_Mod_Dolan_Text_0:
 
 Pub_Mod_Dolan_Text_1:
 	.string "..hic..\p"
-	.string "...Have you seen my duck?\p"
+	.string "…Have you seen my duck?\p"
 	.string "..hic..\p"
 	.string "..\p"
 	.string "No, no my duck is yellow and he squeaks.\p"
@@ -486,7 +486,7 @@ Pub_Mod_Dolan_Text_1:
 
 Pub_Mod_Dolan_Text_2:
 	.string "..hic..\p"
-	.string "...The Ruby Ring!\p"
+	.string "…The Ruby Ring!\p"
 	.string "..hic..\p"
 	.string "..Rainbows you wear around your neck!\p"
 	.string "..hic..\p"

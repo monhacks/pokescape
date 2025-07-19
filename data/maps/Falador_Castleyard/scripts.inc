@@ -1515,7 +1515,7 @@ BOOK_CRANDOR_Text_1:
 	.string "city-state with political importance\l"
 	.string "rivalling that of Varrock and Falador.\p"
 	.string "Many Crandorians even earned the right\n"
-	.string "to be members of the Champions’ Guild.\p"
+	.string "to be members of the Champions' Guild.\p"
 	.string "Unfortunately, one day one of their\n"
 	.string "adventurers went too far and entered\l"
 	.string "the volcano,\p"

@@ -726,7 +726,7 @@ BKFORT_4F_NPC_4_Text_0:
 	.string "Please don't look at me.\p"
 	.string "I don't want any trouble.\p"
 	.string "I am just going to look in these boxes,\n"
-	.string "and if anybody asks you snuck past me...$"
+	.string "and if anybody asks you snuck past me…$"
 
 BKFORT_4F_NPC_5_Text_0:
 	.string "In this room are all the treasures that\n"
@@ -811,7 +811,7 @@ BKFORT_4F_BOOK_3_Text_1:
 	.string "retrieving the Holy Grail.\p"
 	.string "Use the Humans Against Monsters\n"
 	.string "organisation to locate a monster of\l"
-	.string "immense power capable of...\p"
+	.string "immense power capable of…\p"
 	.string "{PAUSE 15}The rest of the page appears to have\n"
 	.string "been hurriedly torn out.$"
 
@@ -868,7 +868,7 @@ BATTLE_BLACKKNIGHT_SIFT_Text_1:
 
 BATTLE_BLACKKNIGHT_SIFT_Text_2:
 	.string "Maybe I should take some of this loot\n"
-	.string "for myself and blame it on you...$"
+	.string "for myself and blame it on you…$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_0:
 	.string "{PLAYER}, I can hear voices inside.\p"

@@ -2073,6 +2073,11 @@ const u8 gText_SideQuestMap_Kourend[] = _("Kourend");
 const u8 gText_SubQuest_Kourend_Slayer_Name1[] = _("Dark Totem - Top");
 const u8 gText_SubQuest_Kourend_Slayer_Name2[] = _("Dark Totem - Middle");
 const u8 gText_SubQuest_Kourend_Slayer_Name3[] = _("Dark Totem - Bottom");
+const u8 gText_SubQuest_Kourend_Slayer_Desc1[] = _("You found the 'Dark Totem - Top'");
+const u8 gText_SubQuest_Kourend_Slayer_Desc2[] = _("You found the 'Dark Totem - Middle'");
+const u8 gText_SubQuest_Kourend_Slayer_Desc3[] = _("You found the 'Dark Totem - Bottom'");
+const u8 gText_SubQuest_Kourend_Slayer_Name4[] = _("Capture: Skotizo");
+const u8 gText_SubQuest_Kourend_Slayer_Desc4[] = _("You caught Skotizo.");
 
 //Banana Boat
 const u8 gText_SideQuestName_Banana_Boat[] = _("Banana Boat");
@@ -2082,7 +2087,6 @@ const u8 gText_SideQuestMap_MusaPoint[] = _("Musa Point");
 const u8 gText_SubQuest_Banana_Boat_Name1[] = _("Deliver 10 Bananas.");
 const u8 gText_SubQuest_Banana_Boat_Name2[] = _("Deliver 30 Bananas.");
 const u8 gText_SubQuest_Banana_Boat_Name3[] = _("Deliver over 120 Bananas.");
-
 
 //MvM Championships
 const u8 gText_SideQuestName_MvM_Championships[] = _("MvM Championships");
@@ -2125,7 +2129,6 @@ const u8 gText_MapName_BarbarianVillage[] = _("Barbarian Village");
 const u8 gText_MapName_Daemonheim[] = _("Daemonheim");
 const u8 gText_MapName_WildernessCrater[] = _("Wilderness Crater");
 const u8 gText_MapName_MusaPoint[] = _("Musa Point");
-
 const u8 gText_MapName_Route20[] = _("Route 20");
 
 const u8 gText_SideQuestName_Main_Story[] = _("Main Story");

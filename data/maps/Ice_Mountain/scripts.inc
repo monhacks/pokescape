@@ -619,7 +619,7 @@ NPC_ORACLE_Text_15:
 	.string "The last shall become the first.$"
 
 NPC_ORACLE_Text_16:
-	.string "Pies...they're great, aren't they?$"
+	.string "Pies… they're great, aren't they?$"
 
 NPC_ORACLE_Text_17:
 	.string "I'm not in the mood.$"
@@ -690,7 +690,7 @@ TRIGGER_BLACK_KNIGHTS_FORTRESS_ENTRY_Text_6:
 	.string "Sir Owen$"
 
 TRIGGER_BLACK_KNIGHTS_FORTRESS_ENTRY_Text_7:
-	.string "Hmm... We are going to have to get a\n"
+	.string "Hmm… We are going to have to get a\n"
 	.string "guard uniform from somewhere.\p"
 	.string "Let us retreat momentarily while we\n"
 	.string "think of something.$"
@@ -766,7 +766,7 @@ EVENT_ICE_MOUNTAIN_GUARDS_Text_7:
 	.string "Right, this should get us through the\n"
 	.string "gate.\p"
 	.string "Although I do feel a bit bad for leaving\n"
-	.string "them out in the cold...$"
+	.string "them out in the cold…$"
 
 GUARD_M_Text_0:
 	.string "There is no response as they're\n"

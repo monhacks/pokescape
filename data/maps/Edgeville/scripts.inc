@@ -1201,13 +1201,13 @@ NPC_EDGEVILLE_HOUSE_NPC_1_Text_1:
 	.string "stuff, all I had to do is follow him to\l"
 	.string "the Wilderness.\p"
 	.string "I was tempted, but that would require\n"
-	.string "way too much effort...$"
+	.string "way too much effort…$"
 
 NPC_EDGEVILLE_HOUSE_NPC_2_Text_0:
 	.string "Why are all of us dudes together in this\n"
 	.string "weird barn?\p"
 	.string "I have no idea, I was told there would\n"
-	.string "be Beer...$"
+	.string "be Beer…$"
 
 NPC_EDGEVILLE_HOUSE_NPC_3_Text_0:
 	.string "Living so close to the Wilderness can be\n"
@@ -1264,7 +1264,7 @@ NPC_EDGEVILLE_HOUSE_NPC_9_Text_1:
 	.string "dump ores in at the same time.\p"
 	.string "A furnace needs to be significantly\n"
 	.string "hotter to smelt gold than bronze!\p"
-	.string "When will they learn...$"
+	.string "When will they learn…$"
 
 NPC_EDGEVILLE_HOUSE_NPC_10_Text_0:
 	.string "SitnSkill$"
@@ -1272,7 +1272,7 @@ NPC_EDGEVILLE_HOUSE_NPC_10_Text_0:
 NPC_EDGEVILLE_HOUSE_NPC_10_Text_1:
 	.string "Aw man, how am I meant to smelt more\n"
 	.string "ores now?\p"
-	.string "I can't cast Superheat Item...$"
+	.string "I can't cast Superheat Item…$"
 
 BATTLE_TRAINER_EDGEVILLE_RIVER_1_Text_0:
 	.string "So many Quests, so little time!$"
@@ -1400,8 +1400,8 @@ FROGEEL_RIVAL_5_Text_0:
 FROGEEL_RIVAL_5_Text_1:
 	.string "You really aren't escaping those\n"
 	.string "stalker allegations {PLAYER}.\p"
-	.string "...{PAUSE 15}\p"
-	.string "...{PAUSE 15}\p"
+	.string "…{PAUSE 15}\p"
+	.string "…{PAUSE 15}\p"
 	.string "Do you just want an autograph?\p"
 	.string "No shame in being shy {PLAYER}.\l"
 	.string "I got you, I got you.$"
