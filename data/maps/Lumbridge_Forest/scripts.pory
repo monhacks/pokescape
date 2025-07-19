@@ -267,7 +267,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
     waitmovement(0)
 
     namebox ("???")
-    msgbox(format("Hey you!\pYou aren't a H.A.M member, are you?"), MSGBOX_YESNO)
+    msgbox(format("Hey you!\pYes, you!\pAre you a H.A.M member?"), MSGBOX_YESNO)
     if (var(VAR_RESULT)){
         msgbox(format("With that lack of pink, you can't fool me human."))
     }
@@ -298,7 +298,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
         hidenamebox
 		//ZANIK JOINS THE PARTY and Follows!
 		playfanfare(MUS_OBTAIN_SYMBOL)
-		msgbox(format("Together nothing can beat us!\nZanik teams up!"))
+		msgbox(format("Together nothing can beat us!\nYou and Zanik team up!"))
 		waitfanfare
 		closemessage
 		hidenamebox
@@ -616,7 +616,7 @@ script NPC_LUMBRIDGEFOREST_HAM_1
 	lock
 	faceplayer
     namebox ("H.A.M Grunt")
-	msgbox(format("Our hideout isn't here, but if it was we would totally not hold anybody important like a prince here.\pAnd we totally would not need that theoretical prince because he has what is needed to summon a power that will rip the world as we know it in two…\pAnd H.A.M definitely would not want to use that power so we can return the world to the peaceful state it needs to be.{PAUSE 15}\nThat's right, there is nothing here.\pMove on."))
+	msgbox(format("Our hideout?\pOh, it's nowhere near here.\p…{PAUSE 15}…\pWhy are we here, in the middle of Lumbridge Forest?\p…{PAUSE 15}…\pWe just really like nature and being outdoors!\pSince when has that been a crime?!\pThere is nothing here, so just move on!"))
     closemessage
     hidenamebox
 	release

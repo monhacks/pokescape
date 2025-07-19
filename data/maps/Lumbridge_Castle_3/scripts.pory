@@ -6,6 +6,7 @@ mapscripts Lumbridge_Castle_3_MapScripts{
 	MAP_SCRIPT_ON_LOAD {
         call(LUMBRIDGE_GYM_MUSIC)
         call(LUMBRIDGE_GYM_STATE)
+        call(LUMBRIDGE_CASTLE_3_STATE)
     }
 }
 
@@ -67,7 +68,15 @@ script LUMBRIDGE_GYM_STATE{
         return
 }
 
-
+script LUMBRIDGE_CASTLE_3_STATE {
+    removeobject(3)
+    setflag(FLAG_TEMP_1C)
+	if (flag(FLAG_BADGE02_GET) == FALSE) {
+		clearflag(FLAG_TEMP_1C)
+        addobject(3)
+	return         
+	}
+}
 
 
 
@@ -314,7 +323,9 @@ script HANS_GYM_LUMBRIDGE {
 script SIGMUND_DRAWERS {
     lock
     msgbox(format("You rummage through the drawers…\p{PAUSE 15}")) 
-    if (!flag(FLAG_BADGE03_GET)){
+    if (!flag(FLAG_BADGE02_GET)){
+        applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK)
+        waitmovement(0)
         msgbox(format("and find a set of pink robes?"))
         closemessage
         applymovement(3, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT)
