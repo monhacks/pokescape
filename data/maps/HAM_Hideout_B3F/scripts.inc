@@ -141,6 +141,16 @@ HAMHIDEOUT_Banker::
 	end
 
 
+HAMHIDEOUT_BankChest::
+	lock
+	msgbox HAMHIDEOUT_BankChest_Text_0
+	waitmessage
+	call BANK_OPTIONS_JAIL
+	closemessage
+	release
+	end
+
+
 HAMHIDEOUT_Guard::
 	lock
 	namebox HAM_WHITEOUT_Text_0
@@ -200,3 +210,6 @@ HAMHIDEOUT_Banker_Text_1:
 HAMHIDEOUT_Banker_Text_2:
 	.string "If you get out please tell my wife and\n"
 	.string "children that I miss them…$"
+
+HAMHIDEOUT_BankChest_Text_0:
+	.string "Would you like to use the bank chest?$"

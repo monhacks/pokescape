@@ -35,13 +35,13 @@ ALKHARID_STATE_7:
 	return
 
 ALKHARID_STATE_2:
-	setvar VAR_TEMP_2, 1
+	setvar VAR_TEMP_B, 1
 	goto ALKHARID_STATE_1
 
 ALKHARID_STATE_5:
 	clearflag FLAG_TEMP_9
 	addobject 12
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_A, 1
 	goto ALKHARID_STATE_4
 
 ALKHARID_STATE_8:
@@ -548,7 +548,12 @@ RANDOM_PARTY_SIZE_8:
 
 TRIGGER_ALKHARID_HAM_EVENT_2::
 	lockall
-	applymovement 12, Common_Movement_WalkInPlaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
+	waitmovement 0
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_down_2
+	waitmovement 0
+	applymovement 12, MOVEMENT_INTERACT_RIGHT
 	waitmovement 0
 	namebox TRIGGER_ALKHARID_HAM_EVENT_2_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_2_Text_1
@@ -569,73 +574,94 @@ TRIGGER_ALKHARID_HAM_EVENT_2::
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_2_Text_4
 	closemessage
 	hidenamebox
+	playse SE_WALL_HIT
 	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_1
 	applymovement 14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_1
 	applymovement 15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_1
 	waitmovement 0
-	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_2
-	applymovement 14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2
-	applymovement 15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2
+	delay 60
 	namebox ALKHARID_NPC_13_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_2_Text_5
 	closemessage
 	hidenamebox
-	getplayerxy VAR_TEMP_1, VAR_TEMP_2
-	compare VAR_TEMP_1, 30
-	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_2
-	compare VAR_TEMP_1, 31
-	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_3
-TRIGGER_ALKHARID_HAM_EVENT_2_1:
+	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2
 	waitmovement 0
+	special RemoveCameraObject
+	delay 30
+	playse SE_PIN
+	applymovement 12, MOVEMENT_EXCLAMATIONMARK_FACE_UP
+	waitmovement 0
+	delay 30
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	compare VAR_TEMP_1, 31
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_2
+TRIGGER_ALKHARID_HAM_EVENT_2_1:
 	namebox ALKHARID_NPC_13_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_2_Text_6
 	closemessage
 	hidenamebox
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	compare VAR_TEMP_1, 31
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_5
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_DOWN
+	waitmovement 0
+TRIGGER_ALKHARID_HAM_EVENT_2_4:
 	namebox ALKHARID_NPC_13_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_2_Text_7
 	closemessage
 	hidenamebox
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	compare VAR_TEMP_1, 30
-	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_7
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_9
 	compare VAR_TEMP_1, 31
-	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_8
-TRIGGER_ALKHARID_HAM_EVENT_2_6:
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_10
+TRIGGER_ALKHARID_HAM_EVENT_2_8:
+	applymovement 14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2
+	applymovement 15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2
+	waitmovement 12
 	removeobject 12
 	setflag FLAG_TEMP_9
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 215
-	setvar VAR_TEMP_1, 2
+	setvar VAR_TEMP_A, 2
 	release
 	end
 
 TRIGGER_ALKHARID_HAM_EVENT_2_2:
-	applymovement 12, MOVEMENT_EXCLAMATIONMARK_FACE_UP
+	applymovement 12, MOVEMENT_WALK_UP
+	waitmovement 0
+	applymovement 12, Movement_InteractFACERIGHT
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
+	waitmovement 0
 	goto TRIGGER_ALKHARID_HAM_EVENT_2_1
 
-TRIGGER_ALKHARID_HAM_EVENT_2_3:
-	applymovement 12, movement_WALKRIGHT
-	applymovement 12, MOVEMENT_EXCLAMATIONMARK_FACE_UP
-	goto TRIGGER_ALKHARID_HAM_EVENT_2_1
+TRIGGER_ALKHARID_HAM_EVENT_2_5:
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_LEFT
+	waitmovement 0
+	goto TRIGGER_ALKHARID_HAM_EVENT_2_4
 
-TRIGGER_ALKHARID_HAM_EVENT_2_7:
+TRIGGER_ALKHARID_HAM_EVENT_2_9:
 	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_3
-	goto TRIGGER_ALKHARID_HAM_EVENT_2_6
+	goto TRIGGER_ALKHARID_HAM_EVENT_2_8
 
-TRIGGER_ALKHARID_HAM_EVENT_2_8:
+TRIGGER_ALKHARID_HAM_EVENT_2_10:
 	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_4
-	goto TRIGGER_ALKHARID_HAM_EVENT_2_6
+	goto TRIGGER_ALKHARID_HAM_EVENT_2_8
 
 
-MOVEMENT_ALKHARID_PALACE_OZAN_1:
-	face_down
-	lock_facing_direction
-	slide_up
+movement_walk_slow_down_2:
+	walk_slow_down
+	walk_slow_down
 	step_end
 
-MOVEMENT_ALKHARID_PALACE_OZAN_2:
-	jump_in_place_up
-	unlock_facing_direction
+movement_walk_slow_up_2:
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+MOVEMENT_ALKHARID_PALACE_OZAN_1:
+	slide_up
+	jump_in_place_down
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_OZAN_3:
@@ -650,7 +676,6 @@ MOVEMENT_ALKHARID_PALACE_OZAN_3:
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_OZAN_4:
-	walk_left
 	walk_up
 	walk_up
 	walk_up
@@ -666,13 +691,13 @@ MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_1:
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2:
-	walk_fast_left
-	face_up
+	walk_left
+	face_original_direction
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_1:
-	walk_left
-	face_original_direction
+	walk_fast_left
+	face_up
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2:
@@ -711,6 +736,7 @@ HAM_EVENT_ALKHARID_WISE_OLD_MAN_2:
 	closemessage
 	hidenamebox
 	giveitem ITEM_CUT_TOOL, 1
+	namebox HAM_EVENT_ALKHARID_WISE_OLD_MAN_Text_0
 	msgbox HAM_EVENT_ALKHARID_WISE_OLD_MAN_Text_2
 	closemessage
 	hidenamebox
@@ -1233,8 +1259,9 @@ HAM_EVENT_ALKHARID_WISE_OLD_MAN_Text_1:
 HAM_EVENT_ALKHARID_WISE_OLD_MAN_Text_2:
 	.string "It's only fitting to have such a fine\n"
 	.string "axe to cut trees considering you are\l"
-	.string "about to enter a forest. Haha good luck\l"
-	.string "on your quest {PLAYER}!$"
+	.string "about to enter a forest.\p"
+	.string "Haha good luck on your quest\n"
+	.string "{PLAYER}!$"
 
 HAM_EVENT_ALKHARID_WISE_OLD_MAN_Text_3:
 	.string "Why hello again {PLAYER}.\p"

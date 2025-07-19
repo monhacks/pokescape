@@ -29,6 +29,8 @@ LUMBRIDGE_STATE::
 LUMBRIDGE_STATE_1:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
 	goto_if_eq LUMBRIDGE_STATE_5
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 216
+	goto_if_eq LUMBRIDGE_STATE_5
 LUMBRIDGE_STATE_4:
 	return
 
@@ -689,30 +691,6 @@ Lumbridge_GeneralStore_NPC2::
 	end
 
 
-Lumbridge_House_BobsAxes::
-	lock
-	faceplayer
-	namebox Lumbridge_House_BobsAxes_Text_0
-	msgbox Lumbridge_House_BobsAxes_Text_1
-	multichoicedefault 1, 0, MULTI_AXES, 0, 0
-	switch VAR_RESULT
-	case 0, Lumbridge_House_BobsAxes_3
-	case 1, Lumbridge_House_BobsAxes_4
-Lumbridge_House_BobsAxes_1:
-	closemessage
-	hidenamebox
-	release
-	end
-
-Lumbridge_House_BobsAxes_3:
-	msgbox Lumbridge_House_BobsAxes_Text_2
-	goto Lumbridge_House_BobsAxes_1
-
-Lumbridge_House_BobsAxes_4:
-	msgbox Lumbridge_House_BobsAxes_Text_3
-	goto Lumbridge_House_BobsAxes_1
-
-
 Lumbridge_House_BobsGirl::
 	lock
 	faceplayer
@@ -1339,30 +1317,6 @@ Lumbridge_GeneralStore_NPC2_Text_1:
 	.string "Chocolate Sunday or two!.\p"
 	.string "They can cure poison, and this will\n"
 	.string "prepare you for the worst.$"
-
-Lumbridge_House_BobsAxes_Text_0:
-	.string "Bob$"
-
-Lumbridge_House_BobsAxes_Text_1:
-	.string "Welcome to Bob's Brilliant Axes.\p"
-	.string "My name is Bob, how may I be of\n"
-	.string "assistance?$"
-
-Lumbridge_House_BobsAxes_Text_2:
-	.string "Hmm, a Pickaxe you say?\p"
-	.string "Sorry but I don't sell those here, I only\n"
-	.string "fix them.\p"
-	.string "If you want a pickaxe you should see\n"
-	.string "the Dwarves up in the Dwarven Mines\l"
-	.string "near Falador.$"
-
-Lumbridge_House_BobsAxes_Text_3:
-	.string "An Axe?\p"
-	.string "Normally I could help you with that but\n"
-	.string "I am still waiting for my shipment to\l"
-	.string "arrive.\p"
-	.string "It is quite late I hope nothing bad\n"
-	.string "happened to it.$"
 
 Lumbridge_House_BobsGirl_Text_0:
 	.string "Woman$"

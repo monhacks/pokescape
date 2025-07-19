@@ -5,6 +5,7 @@ Lumbridge_Castle_3_MapScripts::
 Lumbridge_Castle_3_MapScripts_MAP_SCRIPT_ON_LOAD:
 	call LUMBRIDGE_GYM_MUSIC
 	call LUMBRIDGE_GYM_STATE
+	call LUMBRIDGE_CASTLE_3_STATE
 	return
 
 
@@ -64,6 +65,18 @@ LUMBRIDGE_GYM_STATE_4:
 	return
 
 LUMBRIDGE_GYM_STATE_5:
+	return
+
+
+LUMBRIDGE_CASTLE_3_STATE::
+	removeobject 3
+	setflag FLAG_TEMP_1C
+	goto_if_unset FLAG_BADGE02_GET, LUMBRIDGE_CASTLE_3_STATE_1
+	return
+
+LUMBRIDGE_CASTLE_3_STATE_1:
+	clearflag FLAG_TEMP_1C
+	addobject 3
 	return
 
 
@@ -326,7 +339,7 @@ HANS_GYM_LUMBRIDGE_2:
 SIGMUND_DRAWERS::
 	lock
 	msgbox SIGMUND_DRAWERS_Text_0
-	goto_if_unset FLAG_BADGE03_GET, SIGMUND_DRAWERS_1
+	goto_if_unset FLAG_BADGE02_GET, SIGMUND_DRAWERS_1
 	msgbox SIGMUND_DRAWERS_Text_3
 	closemessage
 	hidenamebox
@@ -334,6 +347,8 @@ SIGMUND_DRAWERS::
 	end
 
 SIGMUND_DRAWERS_1:
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK
+	waitmovement 0
 	msgbox SIGMUND_DRAWERS_Text_1
 	closemessage
 	applymovement 3, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT

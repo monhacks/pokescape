@@ -69,30 +69,43 @@ script ROUTE12_STATE{
 		//setobjectmovementtype(15,MOVEMENT_TYPE_WANDER_AROUND)
     }
 
-	if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 205) {
-		setobjectxyperm(27,37,53)
-		setobjectxyperm(28,37,53)
-		setobjectxy(27,37,53)
-		setobjectxy(28,37,53)
-		setobjectmovementtype(27,MOVEMENT_TYPE_LOOK_AROUND)
-		setobjectmovementtype(28,MOVEMENT_TYPE_LOOK_AROUND)
-		clearflag(FLAG_TEMP_9)
-		addobject(45)
-		addobject(46)
-		setvar(VAR_TEMP_3, 0) // Removes Alkharid trigger gate interaction
-		setvar(VAR_TEMP_1, 1)
-	}
-	elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 210) {
-		setobjectxyperm(27,24,52)
-		setobjectxyperm(28,25,52)
-		setobjectxy(27,24,52)
-		setobjectxy(28,25,52)
-		setobjectmovementtype(27,MOVEMENT_TYPE_LOOK_AROUND)
-		setobjectmovementtype(28,MOVEMENT_TYPE_LOOK_AROUND)
-		setvar(VAR_TEMP_3, 0) // Removes Alkharid trigger gate interaction
+	switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+        case 205: 
+			setobjectxyperm(27,37,53)
+			setobjectxyperm(28,37,53)
+			setobjectxy(27,37,53)
+			setobjectxy(28,37,53)
+			setobjectmovementtype(27,MOVEMENT_TYPE_LOOK_AROUND)
+			setobjectmovementtype(28,MOVEMENT_TYPE_LOOK_AROUND)
+			clearflag(FLAG_TEMP_9)
+			addobject(45)
+			addobject(46)
+			setvar(VAR_TEMP_3, 0) // Removes Alkharid trigger gate interaction
+			setvar(VAR_TEMP_1, 1)
+		case 210: 
+		case 215: 
+		case 216: 
+		case 220: 
+		case 225: 
+		case 230: 
+		case 235: 
+			setobjectxyperm(27,27,52)
+			setobjectxyperm(28,31,54)
+			setobjectxy(27,27,52)
+			setobjectxy(28,31,54)
+			setobjectmovementtype(27,MOVEMENT_TYPE_LOOK_AROUND)
+			setobjectmovementtype(28,MOVEMENT_TYPE_LOOK_AROUND)
+			setvar(VAR_TEMP_3, 0) // Removes Alkharid trigger gate interaction
 	}
 	return
 }
+
+
+
+
+
+
+
 
 
 //----------------------------------------------------------------------------
@@ -579,6 +592,10 @@ script ALKHARID_GATE_GUARD_1
 		msgbox(format("Huff…{PAUSE 15} Puff…\pHe kidnapped the prince…"))
 		closemessage
 	}
+	elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) {
+		msgbox(format("I wish my Agility level was higher, then I could have given chase and the Prince still might be with us…"))
+		closemessage
+	}
 	else {
 		msgbox(format("Halt!\pOnly those whom possess the Al-Kharid Badge may enter!"))
 		closemessage
@@ -596,7 +613,11 @@ script ALKHARID_GATE_GUARD_2
 	faceplayer
 	namebox("Guard")
 	if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 210) {
-		msgbox(format("We must inform the palace in Al Kharid at once!"))
+		msgbox(format("Someone must inform the palace in Al Kharid at once!"))
+		closemessage
+	}
+	elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) {
+		msgbox(format("They bundled the prince up in a bag and ran off towards Lumbridge forest…"))
 		closemessage
 	}
 	else {
@@ -754,37 +775,49 @@ script TRIGGER_ALKHARID_HAM_EVENT_1 {
 	delay(60)
 	//Ham Runs left (with bag)
 	playse(SE_FLEE)
-	getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
-    if (var(VAR_TEMP_2) == 53){
-        applymovement(OBJ_EVENT_ID_PLAYER, movement_PLAYER_AVOIDS_HAM)         //Avoids HAM clipping through the player if they're on the specific tile they are running on
-		waitmovement(0)
-	} 
 	applymovement(46, movement_HAM_RUN_LEFT_WITH_SACK)
 	//Guards give chase halfway down the bridge.
 	delay(30)
-	applymovement(28, movement_HAM_RUN_LEFT_WITH_SACK)                          
+	applymovement(28, movement_HAM_RUN_LEFT_WITH_SACK)  
+	getplayerxy(VAR_TEMP_8, VAR_TEMP_9)
+    if (var(VAR_TEMP_9) == 53){
+		delay(35)
+		playse(SE_WALL_HIT)
+        applymovement(OBJ_EVENT_ID_PLAYER, movement_PLAYER_AVOIDS_HAM)	//Avoids HAM clipping through the player if they're on the specific tile they are running on
+	}                         
 	applymovement(45, Movement_InteractFACELEFT)
+
+	getplayerxy(VAR_TEMP_8, VAR_TEMP_9)
+    if (var(VAR_TEMP_9) == 54) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+	}
+	else {
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
+	}
+
 	delay(60)
 	applymovement(27, movement_GUARD_CHASE_HAM_BUT_STOP)
 	waitmovement(0)
+	delay(60)
 	playse(SE_PIN)
-	getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
-    if (var(VAR_TEMP_1) == 28){
-        applymovement(27, movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_1)         //Has the guard walk over to the player; changing slightly depending on where the player is stood
-    }
-	elif (var(VAR_TEMP_1) == 29){
-        applymovement(27, movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_2)         //Has the guard walk over to the player; changing slightly depending on where the player is stood
-    }
-	elif (var(VAR_TEMP_2) == 52){
-        applymovement(27, movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_3)         //Has the guard walk over to the player; changing slightly depending on where the player is stood
-    }
-	elif (var(VAR_TEMP_2) == 54){
-		applymovement(27, movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_4)         //Has the guard walk over to the player; changing slightly depending on where the player is stood
-    }
+	applymovement(27, movement_GUARD_NOTICES_PLAYER_AND_OZAN)
 	waitmovement(0)
+	applymovement(27, movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_1)
+	waitmovement(0)
+
+	getplayerxy(VAR_TEMP_8, VAR_TEMP_9)
+    if (var(VAR_TEMP_9) == 54) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+	}
+	else {
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
+	}
+	waitmovement(0)
+
+
 	//1 guard stops, speaks to you and Ozan asking you to go inform the palace.
 	namebox("Guard")
-    msgbox(format("In… Inform the palace…\pThe… prince…\pThe prince has been kidnapped!"))
+    msgbox(format("Please…{PAUSE 15} Inform…{PAUSE 15}\nInform the palace…\lThe…{PAUSE 15} prince…\pThe prince has been kidnapped!"))
     hidenamebox
 	closemessage
 	//Ozan hurrys off to the palace.
@@ -816,26 +849,25 @@ movement movement_HAM_RUN_LEFT_WITH_SACK {
 
 movement movement_GUARD_CHASE_HAM_BUT_STOP {
 	walk_fast_left * 4
-	walk_left * 3
-	walk_slow_left * 3
+	walk_left * 4
+	walk_slow_left * 4
+	step_end
+}
+
+movement movement_GUARD_NOTICES_PLAYER_AND_OZAN {
+	face_right
+	emote_exclamation_mark
 	step_end
 }
 
 movement movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_1 {
-	face_up
-	face_right
-	emote_exclamation_mark
-	delay_16 * 5
-	walk_slow_up
-	face_up
+	walk_slow_right
 	step_end
 }
 
+
 movement movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_2 {
-	face_up
-	face_right
-	emote_exclamation_mark
-	delay_16 * 5
+
 	walk_slow_right
 	walk_slow_up
 	face_up
@@ -843,10 +875,7 @@ movement movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_2 {
 }
 
 movement movement_GUARD_WALK_OVER_TO_PLAYER_AND_OZAN_3 {
-	face_up
-	face_right
-	emote_exclamation_mark
-	delay_16 * 5
+
 	walk_slow_up
 	face_left
 	step_end
@@ -874,11 +903,11 @@ movement movement_OZAN_RUNS_TO_PALACE {
 }
 
 movement movement_PLAYER_AVOIDS_HAM {
+	emote_exclamation_mark
+	face_down
     lock_facing_direction
     slide_up
 	unlock_facing_direction
-	emote_exclamation_mark
-	face_down
 	delay_16
 	face_left
 	step_end

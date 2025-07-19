@@ -1007,10 +1007,12 @@ NPC_HAM_HIDEOUT_B1F_2::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_B1F_1_Text_1
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_2_2
 	checkplayergender
 	compare VAR_RESULT, MALE
-	goto_if_eq NPC_HAM_HIDEOUT_B1F_2_2
-	msgbox NPC_HAM_HIDEOUT_B1F_2_Text_1
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_2_5
+	msgbox NPC_HAM_HIDEOUT_B1F_2_Text_2
 NPC_HAM_HIDEOUT_B1F_2_1:
 	closemessage
 	hidenamebox
@@ -1019,6 +1021,10 @@ NPC_HAM_HIDEOUT_B1F_2_1:
 
 NPC_HAM_HIDEOUT_B1F_2_2:
 	msgbox NPC_HAM_HIDEOUT_B1F_2_Text_0
+	goto NPC_HAM_HIDEOUT_B1F_2_1
+
+NPC_HAM_HIDEOUT_B1F_2_5:
+	msgbox NPC_HAM_HIDEOUT_B1F_2_Text_1
 	goto NPC_HAM_HIDEOUT_B1F_2_1
 
 
@@ -1048,33 +1054,54 @@ NPC_HAM_HIDEOUT_B1F_5::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_B1F_1_Text_1
-	msgbox NPC_HAM_HIDEOUT_B1F_5_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_5_2
+	msgbox NPC_HAM_HIDEOUT_B1F_5_Text_1
+NPC_HAM_HIDEOUT_B1F_5_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_B1F_5_2:
+	msgbox NPC_HAM_HIDEOUT_B1F_5_Text_0
+	goto NPC_HAM_HIDEOUT_B1F_5_1
 
 
 NPC_HAM_HIDEOUT_B1F_6::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_B1F_1_Text_1
-	msgbox NPC_HAM_HIDEOUT_B1F_6_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_6_2
+	msgbox NPC_HAM_HIDEOUT_B1F_6_Text_1
+NPC_HAM_HIDEOUT_B1F_6_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_B1F_6_2:
+	msgbox NPC_HAM_HIDEOUT_B1F_6_Text_0
+	goto NPC_HAM_HIDEOUT_B1F_6_1
 
 
 NPC_HAM_HIDEOUT_B1F_7::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_B1F_1_Text_1
-	msgbox NPC_HAM_HIDEOUT_B1F_7_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_7_2
+	msgbox NPC_HAM_HIDEOUT_B1F_7_Text_1
+NPC_HAM_HIDEOUT_B1F_7_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_B1F_7_2:
+	msgbox NPC_HAM_HIDEOUT_B1F_7_Text_0
+	goto NPC_HAM_HIDEOUT_B1F_7_1
 
 
 NPC_HAM_HIDEOUT_B1F_8::
@@ -1114,22 +1141,36 @@ NPC_HAM_HIDEOUT_B1F_11::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_B1F_1_Text_1
-	msgbox NPC_HAM_HIDEOUT_B1F_11_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_11_2
+	msgbox NPC_HAM_HIDEOUT_B1F_11_Text_1
+NPC_HAM_HIDEOUT_B1F_11_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_B1F_11_2:
+	msgbox NPC_HAM_HIDEOUT_B1F_11_Text_0
+	goto NPC_HAM_HIDEOUT_B1F_11_1
 
 
 NPC_HAM_HIDEOUT_B1F_12::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_B1F_1_Text_1
-	msgbox NPC_HAM_HIDEOUT_B1F_12_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_12_2
+	msgbox NPC_HAM_HIDEOUT_B1F_12_Text_1
+NPC_HAM_HIDEOUT_B1F_12_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_B1F_12_2:
+	msgbox NPC_HAM_HIDEOUT_B1F_12_Text_0
+	goto NPC_HAM_HIDEOUT_B1F_12_1
 
 
 NPC_HAM_HIDEOUT_B1F_13::
@@ -1146,77 +1187,86 @@ NPC_HAM_HIDEOUT_B1F_13::
 NPC_HAM_HIDEOUT_B1F_14::
 	lock
 	namebox HAM_HIDEOUT_GOLDENGNOME_EVENT_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_B1F_14_2
 	random 10
 	switch VAR_RESULT
-	case 0, NPC_HAM_HIDEOUT_B1F_14_3
-	case 1, NPC_HAM_HIDEOUT_B1F_14_4
-	case 2, NPC_HAM_HIDEOUT_B1F_14_5
-	case 3, NPC_HAM_HIDEOUT_B1F_14_6
-	case 4, NPC_HAM_HIDEOUT_B1F_14_7
-	case 5, NPC_HAM_HIDEOUT_B1F_14_8
-	case 6, NPC_HAM_HIDEOUT_B1F_14_9
-	case 7, NPC_HAM_HIDEOUT_B1F_14_10
-	case 8, NPC_HAM_HIDEOUT_B1F_14_11
-	case 9, NPC_HAM_HIDEOUT_B1F_14_12
+	case 0, NPC_HAM_HIDEOUT_B1F_14_6
+	case 1, NPC_HAM_HIDEOUT_B1F_14_7
+	case 2, NPC_HAM_HIDEOUT_B1F_14_8
+	case 3, NPC_HAM_HIDEOUT_B1F_14_9
+	case 4, NPC_HAM_HIDEOUT_B1F_14_10
+	case 5, NPC_HAM_HIDEOUT_B1F_14_11
+	case 6, NPC_HAM_HIDEOUT_B1F_14_12
+	case 7, NPC_HAM_HIDEOUT_B1F_14_13
+	case 8, NPC_HAM_HIDEOUT_B1F_14_14
+	case 9, NPC_HAM_HIDEOUT_B1F_14_15
+NPC_HAM_HIDEOUT_B1F_14_1:
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_3:
+NPC_HAM_HIDEOUT_B1F_14_2:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_0
 	hidenamebox
-	release
-	end
+	closemessage
+	goto NPC_HAM_HIDEOUT_B1F_14_1
 
-NPC_HAM_HIDEOUT_B1F_14_4:
+NPC_HAM_HIDEOUT_B1F_14_6:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_1
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_5:
+NPC_HAM_HIDEOUT_B1F_14_7:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_2
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_6:
+NPC_HAM_HIDEOUT_B1F_14_8:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_3
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_7:
+NPC_HAM_HIDEOUT_B1F_14_9:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_4
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_8:
+NPC_HAM_HIDEOUT_B1F_14_10:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_5
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_9:
+NPC_HAM_HIDEOUT_B1F_14_11:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_6
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_10:
+NPC_HAM_HIDEOUT_B1F_14_12:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_7
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_11:
+NPC_HAM_HIDEOUT_B1F_14_13:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_8
 	hidenamebox
 	release
 	end
 
-NPC_HAM_HIDEOUT_B1F_14_12:
+NPC_HAM_HIDEOUT_B1F_14_14:
 	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_9
+	hidenamebox
+	release
+	end
+
+NPC_HAM_HIDEOUT_B1F_14_15:
+	msgbox NPC_HAM_HIDEOUT_B1F_14_Text_10
 	hidenamebox
 	release
 	end
@@ -1607,10 +1657,16 @@ NPC_HAM_HIDEOUT_B1F_1_Text_4:
 	.string "you'll go away.$"
 
 NPC_HAM_HIDEOUT_B1F_2_Text_0:
+	.string "So you two are part of the monster\n"
+	.string "scourge polluting our haven!\p"
+	.string "I can't believe I thought you were like\n"
+	.string "us!$"
+
+NPC_HAM_HIDEOUT_B1F_2_Text_1:
 	.string "Be vigilant brother, we cannot let the\n"
 	.string "monster scourge pollute our haven.$"
 
-NPC_HAM_HIDEOUT_B1F_2_Text_1:
+NPC_HAM_HIDEOUT_B1F_2_Text_2:
 	.string "Be vigilant sister, we cannot let the\n"
 	.string "monster scourge pollute our haven.$"
 
@@ -1628,6 +1684,12 @@ NPC_HAM_HIDEOUT_B1F_4_Text_0:
 	.string "calling right here.$"
 
 NPC_HAM_HIDEOUT_B1F_5_Text_0:
+	.string "Look, I know we are on high alert and I\n"
+	.string "should probably report you, but I just\l"
+	.string "want peace.\p"
+	.string "Please just go.$"
+
+NPC_HAM_HIDEOUT_B1F_5_Text_1:
 	.string "I quite like it here honestly.\p"
 	.string "One thing bugs me however.\p"
 	.string "Why did the leaders decide on the robes\n"
@@ -1636,6 +1698,11 @@ NPC_HAM_HIDEOUT_B1F_5_Text_0:
 	.string "getting?$"
 
 NPC_HAM_HIDEOUT_B1F_6_Text_0:
+	.string "Aw man!! I just know beating you would\n"
+	.string "get me that much closer to Babe but\l"
+	.string "I've got nothing to fight you with…$"
+
+NPC_HAM_HIDEOUT_B1F_6_Text_1:
 	.string "Don't tell any of the other grunts, but\n"
 	.string "I got a thing for Babe.\p"
 	.string "Do you know anything that might help me\n"
@@ -1645,6 +1712,13 @@ NPC_HAM_HIDEOUT_B1F_6_Text_0:
 	.string "together…$"
 
 NPC_HAM_HIDEOUT_B1F_7_Text_0:
+	.string "To make Lumbridge great again, we need\n"
+	.string "to get rid of filthy monsters and\l"
+	.string "sympathisers like you.\p"
+	.string "You're lucky I'm a pacifist, or I'd fight\n"
+	.string "you myself!$"
+
+NPC_HAM_HIDEOUT_B1F_7_Text_1:
 	.string "We are going to make Lumbridge great\n"
 	.string "again.\l"
 	.string "Then the world will follow.$"
@@ -1669,12 +1743,23 @@ NPC_HAM_HIDEOUT_B1F_10_Text_0:
 	.string "So far it hasn't really worked, though.$"
 
 NPC_HAM_HIDEOUT_B1F_11_Text_0:
+	.string "Perhaps if Sigmund had acted with even\n"
+	.string "more extremism, we'd have a perfect\l"
+	.string "world by now and wouldn't have\l"
+	.string "apologists like you running around!$"
+
+NPC_HAM_HIDEOUT_B1F_11_Text_1:
 	.string "Sigmund is an extremist among us.\p"
 	.string "He doesn't mind flooding a cavern of\n"
-	.string "goblins if it means they will all die.\l"
+	.string "goblins if it means they will all die.\p"
 	.string "Personally I get that.$"
 
 NPC_HAM_HIDEOUT_B1F_12_Text_0:
+	.string "Get out of our hideout!\p"
+	.string "There's nothing for people like you\n"
+	.string "down here.$"
+
+NPC_HAM_HIDEOUT_B1F_12_Text_1:
 	.string "Sigmund believes power and might makes\n"
 	.string "right, so we in H.A.M will become the most\l"
 	.string "powerful organisation in Gielinor.$"
@@ -1685,47 +1770,52 @@ NPC_HAM_HIDEOUT_B1F_13_Text_0:
 	.string "That is the path of disaster.$"
 
 NPC_HAM_HIDEOUT_B1F_14_Text_0:
+	.string "My brothers the scourge is upon us,\n"
+	.string "this pest must be eliminated!\p"
+	.string "Someone deal with them!$"
+
+NPC_HAM_HIDEOUT_B1F_14_Text_1:
 	.string "We are the righteous ones in his eyes\n"
 	.string "alone.$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_1:
+NPC_HAM_HIDEOUT_B1F_14_Text_2:
 	.string "Let them not infest our cities and\n"
 	.string "towns…$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_2:
+NPC_HAM_HIDEOUT_B1F_14_Text_3:
 	.string "And lo, we become the power, indeed the\n"
 	.string "force to stop these monsters in their\l"
 	.string "tracks.$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_3:
+NPC_HAM_HIDEOUT_B1F_14_Text_4:
 	.string "Verily I urge you, my friends to take up\n"
 	.string "your spades and farm your farms to\l"
 	.string "feed our people in this blessed\l"
 	.string "sanctuary.$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_4:
+NPC_HAM_HIDEOUT_B1F_14_Text_5:
 	.string "If thine monsters visage does frighten\n"
 	.string "thee, then tear it off I say… tear it\l"
 	.string "off!$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_5:
+NPC_HAM_HIDEOUT_B1F_14_Text_6:
 	.string "For Saradomin will guide our sword arms\n"
 	.string "and smash the enemies of humans till\l"
 	.string "their bones become dust.$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_6:
+NPC_HAM_HIDEOUT_B1F_14_Text_7:
 	.string "And let us smite these monsters unto\n"
 	.string "their deaths.$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_7:
+NPC_HAM_HIDEOUT_B1F_14_Text_8:
 	.string "For they are not the chosen ones in\n"
 	.string "Saradomin's eyes.$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_8:
+NPC_HAM_HIDEOUT_B1F_14_Text_9:
 	.string "Where do we go for safety from these\n"
 	.string "monsters… here, with our brethren!$"
 
-NPC_HAM_HIDEOUT_B1F_14_Text_9:
+NPC_HAM_HIDEOUT_B1F_14_Text_10:
 	.string "And let there be no cave or shelter for\n"
 	.string "their spawn until the end of days.$"
 

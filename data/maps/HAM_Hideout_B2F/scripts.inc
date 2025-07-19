@@ -44,11 +44,51 @@ NPC_HAM_HIDEOUT_7::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_7_Text_0
-	msgbox NPC_HAM_HIDEOUT_7_Text_1
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_ge NPC_HAM_HIDEOUT_7_2
+	msgbox NPC_HAM_HIDEOUT_7_Text_6
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_7_2:
+	goto_if_unset FLAG_HAM_HIDEOUT_GIFTMON, NPC_HAM_HIDEOUT_7_5
+	msgbox NPC_HAM_HIDEOUT_7_Text_5
+	closemessage
+	hidenamebox
+	release
+	end
+
+NPC_HAM_HIDEOUT_7_5:
+	msgbox NPC_HAM_HIDEOUT_7_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq NPC_HAM_HIDEOUT_7_8
+	msgbox NPC_HAM_HIDEOUT_7_Text_4
+	closemessage
+	hidenamebox
+	release
+	end
+
+NPC_HAM_HIDEOUT_7_8:
+	msgbox NPC_HAM_HIDEOUT_7_Text_2
+	closemessage
+	hidenamebox
+	call EventScript_GiftMonster_HAM_Hideout
+	setflag FLAG_HAM_HIDEOUT_GIFTMON
+	namebox NPC_HAM_HIDEOUT_7_Text_0
+	msgbox NPC_HAM_HIDEOUT_7_Text_3
+	closemessage
+	hidenamebox
+	release
+	end
+
+
+EventScript_GiftMonster_HAM_Hideout::
+	setvar VAR_TEMP_1, SPECIES_TERROR_DOG
+	givemon SPECIES_TERROR_DOG, 38, ITEM_NONE
+	goto EventScript_GiftMonster_Start
+	return
 
 
 NPC_HAM_HIDEOUT_9::
@@ -88,11 +128,18 @@ NPC_HAM_HIDEOUT_13::
 	lock
 	faceplayer
 	namebox NPC_HAM_HIDEOUT_7_Text_0
-	msgbox NPC_HAM_HIDEOUT_13_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq NPC_HAM_HIDEOUT_13_2
+	msgbox NPC_HAM_HIDEOUT_13_Text_1
+NPC_HAM_HIDEOUT_13_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+NPC_HAM_HIDEOUT_13_2:
+	msgbox NPC_HAM_HIDEOUT_13_Text_0
+	goto NPC_HAM_HIDEOUT_13_1
 
 
 NPC_HAM_HIDEOUT_16::
@@ -136,6 +183,7 @@ NPC_HAM_HIDEOUT_19::
 	hidenamebox
 	playse SE_PIN
 	applymovement 41, MOVEMENT_EXCLAMATIONMARK_FACEPLAYER
+	namebox NPC_HAM_HIDEOUT_7_Text_0
 	msgbox NPC_HAM_HIDEOUT_19_Text_1
 	closemessage
 	hidenamebox
@@ -143,7 +191,7 @@ NPC_HAM_HIDEOUT_19::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 41
 	removeobject 42
-	setflag FLAG_TEMP_E
+	setflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
 	fadescreenswapbuffers FADE_FROM_BLACK
 	closemessage
 	hidenamebox
@@ -484,8 +532,15 @@ movement_HAMHIDEOUT_BABE_3:
 
 TRIGGER_HAMHIDEOUT_JOHANHUS::
 	lock
+	setvar VAR_TEMP_0, 1
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_8, 39
+	goto_if_eq TRIGGER_HAMHIDEOUT_JOHANHUS_2
+	compare VAR_TEMP_8, 41
+	goto_if_eq TRIGGER_HAMHIDEOUT_JOHANHUS_3
 	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1
 	waitmovement 0
+TRIGGER_HAMHIDEOUT_JOHANHUS_1:
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_1
 	waitmovement 0
@@ -494,6 +549,7 @@ TRIGGER_HAMHIDEOUT_JOHANHUS::
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_3
 	applymovement 21, MOVEMENT_QUESTIONMARK
+	waitmovement 0
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_0
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_4
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_2
@@ -505,6 +561,9 @@ TRIGGER_HAMHIDEOUT_JOHANHUS::
 	applymovement 35, movement_HAM_Hideout_finale_walk_up
 	applymovement OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up
 	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2
+	waitmovement 0
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_6
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_7
 	applymovement 36, movement_HAM_Hideout_finale_reaction_1
@@ -519,6 +578,7 @@ TRIGGER_HAMHIDEOUT_JOHANHUS::
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_0
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_8
 	applymovement 23, movement_HAM_Hideout_finale_reaction_1
+	waitmovement 0
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_9
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_0
@@ -528,18 +588,21 @@ TRIGGER_HAMHIDEOUT_JOHANHUS::
 	setobjectxy 43, 40, 34
 	setobjectxyperm 43, 40, 34
 	applymovement 43, movement_HAM_Hideout_finale_walk_up
-	applymovement 39, movement_HAM_Hideout_finale_swarm_left_2
 	applymovement 42, movement_HAM_Hideout_finale_swarm_left_1
-	applymovement 37, movement_HAM_Hideout_finale_swarm_right_2
 	applymovement 41, movement_HAM_Hideout_finale_swarm_right_1
+	applymovement 39, movement_HAM_Hideout_finale_swarm_left_2
+	applymovement 37, movement_HAM_Hideout_finale_swarm_right_2
 	waitmovement 0
 	applymovement 23, movement_HAM_Hideout_finale_Sigmund_exit
 	waitmovement 0
+	playse SE_EXIT
+	removeobject 23
+	setflag FLAG_TEMP_10
 	namebox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_5
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_12
 	applymovement 40, movement_HAM_Hideout_finale_misc_1
 	applymovement 21, movement_HAM_Hideout_finale_Johanhus_1
-	applymovement OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2
+	applymovement OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_3
 	waitmovement 0
 	special RemoveCameraObject
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_0
@@ -565,6 +628,30 @@ TRIGGER_HAMHIDEOUT_JOHANHUS::
 	releaseall
 	end
 
+TRIGGER_HAMHIDEOUT_JOHANHUS_2:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_Player_Left_1
+	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1
+	waitmovement 0
+	goto TRIGGER_HAMHIDEOUT_JOHANHUS_1
+
+TRIGGER_HAMHIDEOUT_JOHANHUS_3:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_Player_Right_1
+	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1
+	waitmovement 0
+	goto TRIGGER_HAMHIDEOUT_JOHANHUS_1
+
+
+movement_HAM_Hideout_finale_Player_Left_1:
+	walk_up
+	walk_right
+	face_up
+	step_end
+
+movement_HAM_Hideout_finale_Player_Right_1:
+	walk_up
+	walk_left
+	face_up
+	step_end
 
 movement_HAM_Hideout_finale_ZANIK_1:
 	walk_left
@@ -594,8 +681,11 @@ movement_HAM_Hideout_camera_1:
 	step_end
 
 movement_HAM_Hideout_camera_2:
-	delay_16
 	walk_down
+	walk_down
+	step_end
+
+movement_HAM_Hideout_camera_3:
 	walk_down
 	walk_down
 	walk_down
@@ -618,27 +708,27 @@ movement_HAM_Hideout_finale_reaction_3:
 movement_HAM_Hideout_finale_swarm_left_1:
 	walk_fast_down
 	walk_fast_down
-	walk_fast_left
+	walk_fast_right
 	face_up
 	step_end
 
 movement_HAM_Hideout_finale_swarm_left_2:
 	walk_fast_down
 	walk_fast_down
-	face_left
+	face_right
 	step_end
 
 movement_HAM_Hideout_finale_swarm_right_1:
 	walk_fast_down
 	walk_fast_down
-	walk_fast_right
+	walk_fast_left
 	face_up
 	step_end
 
 movement_HAM_Hideout_finale_swarm_right_2:
 	walk_fast_down
 	walk_fast_down
-	face_right
+	face_left
 	step_end
 
 movement_HAM_Hideout_finale_Sigmund_exit:
@@ -652,6 +742,7 @@ movement_HAM_Hideout_finale_Sigmund_exit:
 	walk_slow_down
 	walk_slow_right
 	walk_slow_right
+	face_down
 	step_end
 
 movement_HAM_Hideout_finale_Johanhus_1:
@@ -676,6 +767,29 @@ NPC_HAM_HIDEOUT_7_Text_0:
 	.string "H.A.M Member$"
 
 NPC_HAM_HIDEOUT_7_Text_1:
+	.string "I really love the dog I grew up with, but\n"
+	.string "he evolved and now he looks like a\l"
+	.string "monster.\p"
+	.string "I just want them to have a good life,\n"
+	.string "but I know they won't be welcome here.\p"
+	.string "Please would you adopt him?$"
+
+NPC_HAM_HIDEOUT_7_Text_2:
+	.string "Oh my goodness, thank you so much!$"
+
+NPC_HAM_HIDEOUT_7_Text_3:
+	.string "Please look after them.$"
+
+NPC_HAM_HIDEOUT_7_Text_4:
+	.string "Oh, well I guess I'll just keep trying to\n"
+	.string "hide them from the others then…$"
+
+NPC_HAM_HIDEOUT_7_Text_5:
+	.string "How's my dog doing?\p"
+	.string "I hope they're behaving, and that\n"
+	.string "you're treating them well.$"
+
+NPC_HAM_HIDEOUT_7_Text_6:
 	.string "The dog I grew up with evolved into a\n"
 	.string "green monstrosity.\p"
 	.string "I still like it, but now it's the thing we\n"
@@ -699,6 +813,12 @@ NPC_HAM_HIDEOUT_12_Text_0:
 	.string "in her head.$"
 
 NPC_HAM_HIDEOUT_13_Text_0:
+	.string "Aaaahh!\p"
+	.string "Where is Patty when you need her?\p"
+	.string "Her spells would soon wipe the floor\n"
+	.string "with you!$"
+
+NPC_HAM_HIDEOUT_13_Text_1:
 	.string "I hear Patty used to be a wizard in the\n"
 	.string "Wizards' Tower before she joined us.\p"
 	.string "She was thrown out due to rash and\n"
@@ -765,8 +885,8 @@ BATTLE_HAM_HIDEOUT_GRUNT_2_Text_2:
 BATTLE_HAM_HIDEOUT_GRUNT_3_Text_0:
 	.string "I've not had a good night's sleep in\n"
 	.string "weeks!\p"
-	.string "I'm going to take my frustrations on\n"
-	.string "you!$"
+	.string "I'm going to take my frustrations out\n"
+	.string "on you!$"
 
 BATTLE_HAM_HIDEOUT_GRUNT_3_Text_1:
 	.string "My back!$"
@@ -1022,11 +1142,11 @@ TRIGGER_HAMHIDEOUT_JOHANHUS_Text_6:
 	.string "Prince Ali$"
 
 TRIGGER_HAMHIDEOUT_JOHANHUS_Text_7:
-	.string "Stop this.\l"
+	.string "Stop this.\p"
 	.string "You won't get away with this.$"
 
 TRIGGER_HAMHIDEOUT_JOHANHUS_Text_8:
-	.string "Cease your yelps prince.\l"
+	.string "Cease your yelps prince.\p"
 	.string "You hold no authority here.\p"
 	.string "We will make a just world without\n"
 	.string "monsters just like Saradomin always\l"

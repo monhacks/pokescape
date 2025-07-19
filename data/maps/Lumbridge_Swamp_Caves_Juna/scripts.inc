@@ -122,109 +122,121 @@ JUNA_POOL_ALL_FLAGS_12:
 
 
 JUNA_POOL_STATE::
-	goto_if_set FLAG_TEMP_A, JUNA_POOL_STATE_2
-	goto_if_unset FLAG_TEMP_A, JUNA_POOL_STATE_3
+	goto_if_set FLAG_JUNA, JUNA_POOL_STATE_2
 JUNA_POOL_STATE_1:
-	goto_if_set FLAG_TEMP_B, JUNA_POOL_STATE_7
-	goto_if_unset FLAG_TEMP_B, JUNA_POOL_STATE_8
-JUNA_POOL_STATE_6:
-	goto_if_set FLAG_TEMP_C, JUNA_POOL_STATE_12
-	goto_if_unset FLAG_TEMP_C, JUNA_POOL_STATE_13
-JUNA_POOL_STATE_11:
-	goto_if_set FLAG_TEMP_D, JUNA_POOL_STATE_17
-	goto_if_unset FLAG_TEMP_D, JUNA_POOL_STATE_18
-JUNA_POOL_STATE_16:
-	goto_if_set FLAG_TEMP_E, JUNA_POOL_STATE_22
-	goto_if_unset FLAG_TEMP_E, JUNA_POOL_STATE_23
-JUNA_POOL_STATE_21:
-	goto_if_set FLAG_TEMP_F, JUNA_POOL_STATE_27
-	goto_if_unset FLAG_TEMP_F, JUNA_POOL_STATE_28
-JUNA_POOL_STATE_26:
+	goto_if_set FLAG_TEMP_1F, JUNA_POOL_STATE_5
+JUNA_POOL_STATE_4:
+	goto_if_set FLAG_TEMP_A, JUNA_POOL_STATE_8
+	goto_if_unset FLAG_TEMP_A, JUNA_POOL_STATE_9
+JUNA_POOL_STATE_7:
+	goto_if_set FLAG_TEMP_B, JUNA_POOL_STATE_13
+	goto_if_unset FLAG_TEMP_B, JUNA_POOL_STATE_14
+JUNA_POOL_STATE_12:
+	goto_if_set FLAG_TEMP_C, JUNA_POOL_STATE_18
+	goto_if_unset FLAG_TEMP_C, JUNA_POOL_STATE_19
+JUNA_POOL_STATE_17:
+	goto_if_set FLAG_TEMP_D, JUNA_POOL_STATE_23
+	goto_if_unset FLAG_TEMP_D, JUNA_POOL_STATE_24
+JUNA_POOL_STATE_22:
+	goto_if_set FLAG_TEMP_E, JUNA_POOL_STATE_28
+	goto_if_unset FLAG_TEMP_E, JUNA_POOL_STATE_29
+JUNA_POOL_STATE_27:
+	goto_if_set FLAG_TEMP_F, JUNA_POOL_STATE_33
+	goto_if_unset FLAG_TEMP_F, JUNA_POOL_STATE_34
+JUNA_POOL_STATE_32:
 	return
 
 JUNA_POOL_STATE_2:
+	setflag FLAG_TEMP_1F
+	goto JUNA_POOL_STATE_1
+
+JUNA_POOL_STATE_5:
+	removeobject 1
+	goto JUNA_POOL_STATE_4
+
+JUNA_POOL_STATE_8:
 	setmetatile 38, 9, METATILE_PokeScapeCaves_Extra_1_blue_tears_top, 1
 	setmetatile 38, 10, METATILE_PokeScapeCaves_Extra_1_blue_tears_mid, 1
 	setmetatile 38, 11, METATILE_PokeScapeCaves_Extra_1_blue_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_1
+	goto JUNA_POOL_STATE_7
 
-JUNA_POOL_STATE_3:
+JUNA_POOL_STATE_9:
 	setmetatile 38, 9, METATILE_PokeScapeCaves_Extra_1_green_tears_top, 1
 	setmetatile 38, 10, METATILE_PokeScapeCaves_Extra_1_green_tears_mid, 1
 	setmetatile 38, 11, METATILE_PokeScapeCaves_Extra_1_green_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_1
+	goto JUNA_POOL_STATE_7
 
-JUNA_POOL_STATE_7:
+JUNA_POOL_STATE_13:
 	setmetatile 39, 9, METATILE_PokeScapeCaves_Extra_1_blue_tears_top, 1
 	setmetatile 39, 10, METATILE_PokeScapeCaves_Extra_1_blue_tears_mid, 1
 	setmetatile 39, 11, METATILE_PokeScapeCaves_Extra_1_blue_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_6
+	goto JUNA_POOL_STATE_12
 
-JUNA_POOL_STATE_8:
+JUNA_POOL_STATE_14:
 	setmetatile 39, 9, METATILE_PokeScapeCaves_Extra_1_green_tears_top, 1
 	setmetatile 39, 10, METATILE_PokeScapeCaves_Extra_1_green_tears_mid, 1
 	setmetatile 39, 11, METATILE_PokeScapeCaves_Extra_1_green_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_6
+	goto JUNA_POOL_STATE_12
 
-JUNA_POOL_STATE_12:
+JUNA_POOL_STATE_18:
 	setmetatile 40, 9, METATILE_PokeScapeCaves_Extra_1_blue_tears_top, 1
 	setmetatile 40, 10, METATILE_PokeScapeCaves_Extra_1_blue_tears_mid, 1
 	setmetatile 40, 11, METATILE_PokeScapeCaves_Extra_1_blue_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_11
+	goto JUNA_POOL_STATE_17
 
-JUNA_POOL_STATE_13:
+JUNA_POOL_STATE_19:
 	setmetatile 40, 9, METATILE_PokeScapeCaves_Extra_1_green_tears_top, 1
 	setmetatile 40, 10, METATILE_PokeScapeCaves_Extra_1_green_tears_mid, 1
 	setmetatile 40, 11, METATILE_PokeScapeCaves_Extra_1_green_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_11
+	goto JUNA_POOL_STATE_17
 
-JUNA_POOL_STATE_17:
+JUNA_POOL_STATE_23:
 	setmetatile 41, 9, METATILE_PokeScapeCaves_Extra_1_blue_tears_top, 1
 	setmetatile 41, 10, METATILE_PokeScapeCaves_Extra_1_blue_tears_mid, 1
 	setmetatile 41, 11, METATILE_PokeScapeCaves_Extra_1_blue_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_16
+	goto JUNA_POOL_STATE_22
 
-JUNA_POOL_STATE_18:
+JUNA_POOL_STATE_24:
 	setmetatile 41, 9, METATILE_PokeScapeCaves_Extra_1_green_tears_top, 1
 	setmetatile 41, 10, METATILE_PokeScapeCaves_Extra_1_green_tears_mid, 1
 	setmetatile 41, 11, METATILE_PokeScapeCaves_Extra_1_green_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_16
+	goto JUNA_POOL_STATE_22
 
-JUNA_POOL_STATE_22:
+JUNA_POOL_STATE_28:
 	setmetatile 42, 9, METATILE_PokeScapeCaves_Extra_1_blue_tears_top, 1
 	setmetatile 42, 10, METATILE_PokeScapeCaves_Extra_1_blue_tears_mid, 1
 	setmetatile 42, 11, METATILE_PokeScapeCaves_Extra_1_blue_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_21
+	goto JUNA_POOL_STATE_27
 
-JUNA_POOL_STATE_23:
+JUNA_POOL_STATE_29:
 	setmetatile 42, 9, METATILE_PokeScapeCaves_Extra_1_green_tears_top, 1
 	setmetatile 42, 10, METATILE_PokeScapeCaves_Extra_1_green_tears_mid, 1
 	setmetatile 42, 11, METATILE_PokeScapeCaves_Extra_1_green_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_21
+	goto JUNA_POOL_STATE_27
 
-JUNA_POOL_STATE_27:
+JUNA_POOL_STATE_33:
 	setmetatile 43, 9, METATILE_PokeScapeCaves_Extra_1_blue_tears_top, 1
 	setmetatile 43, 10, METATILE_PokeScapeCaves_Extra_1_blue_tears_mid, 1
 	setmetatile 43, 11, METATILE_PokeScapeCaves_Extra_1_blue_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_26
+	goto JUNA_POOL_STATE_32
 
-JUNA_POOL_STATE_28:
+JUNA_POOL_STATE_34:
 	setmetatile 43, 9, METATILE_PokeScapeCaves_Extra_1_green_tears_top, 1
 	setmetatile 43, 10, METATILE_PokeScapeCaves_Extra_1_green_tears_mid, 1
 	setmetatile 43, 11, METATILE_PokeScapeCaves_Extra_1_green_tears_bottom, 0
 	special DrawWholeMapView
-	goto JUNA_POOL_STATE_26
+	goto JUNA_POOL_STATE_32
 
 
 JUNA_TOGGLE_TEMP_FLAG_1::
@@ -388,6 +400,8 @@ ENCOUNTER_JUNA_2:
 
 ENCOUNTER_JUNA_5:
 	msgbox ENCOUNTER_JUNA_Text_2
+	hidenamebox
+	closemessage
 	playmoncry SPECIES_JUNA, 0
 	waitmoncry
 	delay 32
@@ -403,6 +417,7 @@ ENCOUNTER_JUNA_5:
 ENCOUNTER_JUNA_7:
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
+	setflag FLAG_TEMP_1F
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox ENCOUNTER_JUNA_Text_3
 	closemessage
@@ -411,6 +426,7 @@ ENCOUNTER_JUNA_7:
 ENCOUNTER_JUNA_8:
 	fadescreenswapbuffers FADE_TO_BLACK
 	setflag FLAG_JUNA
+	setflag FLAG_TEMP_1F
 	removeobject VAR_LAST_TALKED
 	setmetatile 37, 11, 113, 0
 	setmetatile 38, 9, 137, 1
@@ -432,9 +448,10 @@ ENCOUNTER_JUNA_8:
 	setmetatile 43, 10, 137, 1
 	setmetatile 43, 11, 113, 0
 	setmetatile 44, 11, 113, 0
-	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox ENCOUNTER_JUNA_Text_4
 	closemessage
+	special DrawWholeMapView
+	fadescreenswapbuffers FADE_FROM_BLACK
 	goto ENCOUNTER_JUNA_4
 
 
@@ -475,4 +492,5 @@ ENCOUNTER_JUNA_Text_3:
 
 ENCOUNTER_JUNA_Text_4:
 	.string "After capturing Juna the cavern goes\n"
-	.string "quiet. The rocks finally stop weeping…$"
+	.string "quiet.\p"
+	.string "The rocks finally stop weeping…$"

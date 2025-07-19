@@ -2487,5 +2487,6 @@ const u8 gText_FireGiant[] = _("Fire Giant");
 const u8 gText_ForgottenWarrior[] = _("Forgotten Warrior");
 const u8 gText_ZamorakianMonk[] = _("Zamorakian Monk");
 const u8 gText_Mugger[] = _("Mugger");
-
-
+const u8 gText_HAMGrunt[] = _("H.A.M Grunt");
+const u8 gText_BlackKnight[] = _("Black Knight");
+const u8 gText_WhiteKnight[] = _("White Knight");

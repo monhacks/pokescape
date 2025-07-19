@@ -15,7 +15,7 @@ Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	return
 
 Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_POKESCAPE_STORYMODE_PROGRESS, 240, POST_WARP_ZANIK_EVENT
+	map_script_2 VAR_POKESCAPE_STORYMODE_PROGRESS, 245, POST_WARP_ZANIK_EVENT
 	.2byte 0
 
 
@@ -24,16 +24,18 @@ LumForest_STATE::
 	setflag FLAG_TEMP_8
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
 	goto_if_eq LumForest_STATE_2
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 216
+	goto_if_eq LumForest_STATE_2
 LumForest_STATE_1:
 	return
 
 LumForest_STATE_2:
 	checkitem ITEM_CUT_TOOL, 1
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_4
+	goto_if_eq LumForest_STATE_6
 	goto LumForest_STATE_1
 
-LumForest_STATE_4:
+LumForest_STATE_6:
 	addobject 41
 	clearflag FLAG_TEMP_8
 	goto LumForest_STATE_1
@@ -224,6 +226,7 @@ NPC_LUMBRIDGE_FOREST_HAM_1::
 TRIGGER_ALKHARID_HAM_EVENT_4::
 	switch VAR_POKESCAPE_STORYMODE_PROGRESS
 	case 215, TRIGGER_ALKHARID_HAM_EVENT_4_3
+	case 216, TRIGGER_ALKHARID_HAM_EVENT_4_3
 	case 220, TRIGGER_ALKHARID_HAM_EVENT_4_4
 TRIGGER_ALKHARID_HAM_EVENT_4_1:
 	setvar VAR_TEMP_1, 1
@@ -408,7 +411,7 @@ SetFollower_Zanik_2:
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8
 	hidenamebox
 	playfanfare MUS_OBTAIN_SYMBOL
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9
+	msgbox SetFollower_Zanik_Text_1
 	waitfanfare
 	closemessage
 	hidenamebox
@@ -845,10 +848,9 @@ POST_WARP_ZANIK_EVENT_Text_5:
 POST_WARP_ZANIK_EVENT_Text_6:
 	.string "{PLAYER}.\l"
 	.string "Thank you for saving me.\p"
-	.string "H.A.M wanted my 'INSERT PLOT MCGUFFIN\n"
-	.string "HERE' saying it was a vital ingredient\l"
-	.string "to a ritual to bind a monster to their\l"
-	.string "will.\p"
+	.string "H.A.M wanted the Kharid-ib saying it was\n"
+	.string "a vital ingredient to a ritual to bind a\l"
+	.string "monster to their will.\p"
 	.string "It has been passed down in my family\n"
 	.string "for ages.\l"
 	.string "But it seems I had to trade it for my\l"
@@ -950,7 +952,8 @@ NPC_LUMBRIDGE_FOREST_MISSING_AXE_Text_1:
 	.string "Are you having difficulty cutting down\n"
 	.string "these tiny trees?\p"
 	.string "They're surprisingly sturdy and require\n"
-	.string "a DRAGON AXE to chop down.{PAUSE 15}\p"
+	.string "an AXE to chop down.\p"
+	.string "…{PAUSE 15}…\p"
 	.string "You don't have one?\p"
 	.string "Why don't you try seeing if you can buy\n"
 	.string "one from someone in Lumbridge?\l"
@@ -1030,7 +1033,8 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_0:
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_1:
 	.string "Hey you!\p"
-	.string "You aren't a H.A.M member, are you?$"
+	.string "Yes, you!\p"
+	.string "Are you a H.A.M member?$"
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_2:
 	.string "With that lack of pink, you can't fool me\n"
@@ -1077,7 +1081,7 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8:
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_9:
 	.string "Together nothing can beat us!\n"
-	.string "Zanik teams up!$"
+	.string "You and Zanik team up!$"
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_10:
 	.string "Here put this disguise on.$"
@@ -1100,6 +1104,10 @@ SetFollower_Zanik_Text_0:
 	.string "You've returned!\p"
 	.string "So how about I lend you a disguise and\n"
 	.string "we team up to take H.A.M down!?$"
+
+SetFollower_Zanik_Text_1:
+	.string "Together nothing can beat us!\n"
+	.string "Zanik teams up!$"
 
 Following_Zanik_Text_0:
 	.string "The disguises are working!\p"
@@ -1212,7 +1220,7 @@ ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_0:
 	.string "to realise we're not like them.$"
 
 ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_1:
-	.string "These HAM guys really tick me off.$"
+	.string "These H.A.M guys really tick me off.$"
 
 ZANIK_DIALOGUE_HAM_HIDEOUT_B1F_Text_2:
 	.string "How do people like these even find one\n"
@@ -1289,19 +1297,16 @@ NPC_LUMBRIDGEFOREST_HAM_1_Text_0:
 	.string "H.A.M Grunt$"
 
 NPC_LUMBRIDGEFOREST_HAM_1_Text_1:
-	.string "Our hideout isn't here, but if it was we\n"
-	.string "would totally not hold anybody\l"
-	.string "important like a prince here.\p"
-	.string "And we totally would not need that\n"
-	.string "theoretical prince because he has what\l"
-	.string "is needed to summon a power that will\l"
-	.string "rip the world as we know it in two…\p"
-	.string "And H.A.M definitely would not want to\n"
-	.string "use that power so we can return the\l"
-	.string "world to the peaceful state it needs to\l"
-	.string "be.{PAUSE 15}\n"
-	.string "That's right, there is nothing here.\p"
-	.string "Move on.$"
+	.string "Our hideout?\p"
+	.string "Oh, it's nowhere near here.\p"
+	.string "…{PAUSE 15}…\p"
+	.string "Why are we here, in the middle of\n"
+	.string "Lumbridge Forest?\p"
+	.string "…{PAUSE 15}…\p"
+	.string "We just really like nature and being\n"
+	.string "outdoors!\p"
+	.string "Since when has that been a crime?!\p"
+	.string "There is nothing here, so just move on!$"
 
 BATTLE_LUMBRIDGEFOREST_HAM_1_Text_0:
 	.string "Why would you look at that, a little\n"

@@ -3674,5 +3674,8 @@ extern const u8 gText_FireGiant[];
 extern const u8 gText_ForgottenWarrior[];
 extern const u8 gText_ZamorakianMonk[];
 extern const u8 gText_Mugger[];
+extern const u8 gText_HAMGrunt[];
+extern const u8 gText_BlackKnight[];
+extern const u8 gText_WhiteKnight[];
 
 #endif // GUARD_STRINGS_H

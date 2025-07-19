@@ -710,7 +710,8 @@ FROGEEL_RIVAL_8_Text_8:
 	.string "that have caught your eye..?$"
 
 FROGEEL_RIVAL_8_Text_9:
-	.string "You keep going on about HAM {PLAYER}.\p"
+	.string "You keep going on about H.A.M\n"
+	.string "{PLAYER}.\p"
 	.string "No matter how much you downplay it, I\n"
 	.string "can tell that you're very passionate\l"
 	.string "about it!$"

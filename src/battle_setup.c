@@ -1733,6 +1733,21 @@ void SpeakerNameTrainerClasses(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MUGGER) {
         gSpeakerName = gText_Mugger;
     }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_HAM_GRUNT) {
+        gSpeakerName = gText_HAMGrunt;
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_HAM_GRUNT) {
+        gSpeakerName = gText_HAMGrunt;
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_WHITE_KNIGHT) {
+        gSpeakerName = gText_WhiteKnight;
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_BLACK_KNIGHT) {
+        gSpeakerName = gText_BlackKnight;
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_SKELETON) {
+        gSpeakerName = NULL;
+    }
 }
 
 static const u8 *GetIntroSpeechOfApproachingTrainer(void)

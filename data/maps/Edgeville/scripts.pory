@@ -28,7 +28,7 @@ script EDGEVILLE_STATE {
 	removeobject(25)
 	setflag(FLAG_TEMP_10) //Angrenouille
 	removeobject(24)
-	setflag(FLAG_TEMP_1C) //Angrenouille
+	setflag(FLAG_TEMP_1C) //Mithrilman
 
 	if ((var(VAR_FROGEEL_RIVAL) == 20)) {
         addobject(25)
@@ -888,7 +888,7 @@ script Mithrilman_Edgeville {
 		applymovement(24, MOVEMENT_MITHRILMAN_EDGEVILLE_2)   //have Mithrilman walk off (slight variant depending on where the player is stood to avoid collision)
     	waitmovement(0)
 	}
-	    setvar(VAR_MITHRILMAN_STATE, 20)
+	setvar(VAR_MITHRILMAN_STATE, 20)
     setflag(FLAG_TEMP_1C) 	//mithrilman
 	removeobject(24)		//mithrilman
     subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MITHRILMAN_QUEST, 3)

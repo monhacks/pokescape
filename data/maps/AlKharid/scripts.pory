@@ -24,7 +24,7 @@ script ALKHARID_STATE {
 	setflag(FLAG_TEMP_10) //Angrenouille
 
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) <= 220) {
-        setvar(VAR_TEMP_2, 1) // Block Gym Access
+        setvar(VAR_TEMP_B, 1) // Block Gym Access
     }
     
 
@@ -35,7 +35,7 @@ script ALKHARID_STATE {
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 210) {
         clearflag(FLAG_TEMP_9)
         addobject(12)
-		setvar(VAR_TEMP_1, 1) //Enables Ham Event At palace.
+		setvar(VAR_TEMP_A, 1) //Enables Ham Event At palace.
         
 	}
 
@@ -567,7 +567,14 @@ script RANDOM_PARTY_SIZE {
 script TRIGGER_ALKHARID_HAM_EVENT_2
 {
     lockall
-    applymovement(12, Common_Movement_WalkInPlaceRight)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
+    waitmovement(0)
+    special(SpawnCameraObject)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_down_2)
+    waitmovement(0)
+
+
+    applymovement(12, MOVEMENT_INTERACT_RIGHT)
     waitmovement(0)
     namebox ("???")
     msgbox(format("You've got to believe me!\pThe prince was kidnapped I must meet with Spymaster Osman!"))
@@ -588,34 +595,53 @@ script TRIGGER_ALKHARID_HAM_EVENT_2
     msgbox(format("Not with your track record, get out of here Ozan!"))
     closemessage
     hidenamebox
+    playse(SE_WALL_HIT)
     applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_1)          //Ozan gets kicked out
     applymovement(14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_1)    //Left guard moves forward one and faces up
     applymovement(15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_1)   //Right guard moves forward one and faces up
     waitmovement(0)
-    applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_2)          //Ozan jumps up
-    applymovement(14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2)    //Left guard moves back into original position
-    applymovement(15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2)   //Right guard moves back into original position
+    
     //Ozan gets kicked out.
     //Thuds, locks in place facing down. jumps to push upwards.
     //Guards take a step in facing up. and then return to their posts.
+    delay(60)
     namebox ("Ozan")
     msgbox(format("It's just no use…"))
     closemessage
     hidenamebox
-    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
-    if (var(VAR_TEMP_1) == 30){
-        applymovement(12, MOVEMENT_EXCLAMATIONMARK_FACE_UP)
-    } 
-    elif (var(VAR_TEMP_1) == 31){
-        applymovement(12, movement_WALKRIGHT)                       //Ozan moves to make sure he's facing you, depending on what tile you're on
-        applymovement(12, MOVEMENT_EXCLAMATIONMARK_FACE_UP)
-    }
+    applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2)
     waitmovement(0)
+    special(RemoveCameraObject)
+    delay(30)
+    playse(SE_PIN)
+    applymovement(12, MOVEMENT_EXCLAMATIONMARK_FACE_UP)
+    waitmovement(0)
+    delay(30)
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_1) == 31){
+        applymovement(12, MOVEMENT_WALK_UP)                       //Ozan moves to make sure he's facing you, depending on what tile you're on
+        waitmovement(0)
+        applymovement(12, Movement_InteractFACERIGHT)
+        waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
+        waitmovement(0)
+    }
+    
     namebox ("Ozan")
     msgbox(format("Hey! It's you!\pYou saw the kidnapping too right?\pThese guards are useless.\pSay you don't have any extra information do you?"))
     closemessage
     hidenamebox
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown)
+
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_1) == 31){
+        applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_LEFT)
+        waitmovement(0)
+    }
+    else {
+        applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_DOWN)
+        waitmovement(0)
+    }
+    
     //interact with ozan
     namebox ("Ozan")
     msgbox(format("You mean to say there is a whole organisation that wear those ridiculous pink robes and they're called H.A.M?\pOkay that should be enough information to convince Osman!\pWhile I try to inform Osman could I trouble you to search for some clues around Lumbridge for where they could have taken the Prince?"))
@@ -628,24 +654,32 @@ script TRIGGER_ALKHARID_HAM_EVENT_2
     elif (var(VAR_TEMP_1) == 31){
         applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_4)         //Ozan walks around you depending on what tile you're on
     }
+    applymovement(14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2)    //Left guard moves back into original position
+    applymovement(15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2)   //Right guard moves back into original position
+    waitmovement(12)
     //ozan walks away
+    
+
     removeobject(12)
     setflag(FLAG_TEMP_9)
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 215)
-	setvar(VAR_TEMP_1, 2)
+	setvar(VAR_TEMP_A, 2)
     release
     end
 }
 
-movement MOVEMENT_ALKHARID_PALACE_OZAN_1 {     //Pushed back
-    face_down
-    lock_facing_direction
-    slide_up
+movement movement_walk_slow_down_2 {
+    walk_slow_down * 2
+    step_end
+}
+movement movement_walk_slow_up_2 {
+    walk_slow_up * 2
+    step_end
 }
 
-movement MOVEMENT_ALKHARID_PALACE_OZAN_2 {     //Jump up
-    jump_in_place_up
-    unlock_facing_direction
+movement MOVEMENT_ALKHARID_PALACE_OZAN_1 {     //Pushed back
+    slide_up
+    jump_in_place_down
     step_end
 }
 
@@ -656,7 +690,6 @@ movement MOVEMENT_ALKHARID_PALACE_OZAN_3 {     //Exit (if you're stood on the le
 }
 
 movement MOVEMENT_ALKHARID_PALACE_OZAN_4 {    //Exit (if you're stood on the right)
-    walk_left
     walk_up * 7
     step_end
 }
@@ -668,14 +701,14 @@ movement MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_1 {   //Walking forward
 }
 
 movement MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2 {  //Back into original position
-    walk_fast_left
-    face_up
+    walk_left
+    face_original_direction
     step_end
 }
 
 movement MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_1 {  //Walking forward
-    walk_left
-    face_original_direction
+    walk_fast_left
+    face_up
     step_end
 }
 

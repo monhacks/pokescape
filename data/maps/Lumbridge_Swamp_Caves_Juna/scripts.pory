@@ -118,9 +118,9 @@ script JUNA_POOL_ALL_FLAGS{
 
 script JUNA_POOL_STATE{
     if (flag(FLAG_JUNA)) {
-        setflag(TEMP_FLAG_1F)
+        setflag(FLAG_TEMP_1F)
     }
-    if (flag(TEMP_FLAG_1F)) {
+    if (flag(FLAG_TEMP_1F)) {
         removeobject(1)
     }
     //State of the Tears
@@ -392,7 +392,7 @@ script ENCOUNTER_JUNA
         if (var(VAR_RESULT) == B_OUTCOME_WON) { //DEFEATED, Can still encounter again.
             fadescreenswapbuffers(FADE_TO_BLACK)
             removeobject (VAR_LAST_TALKED)
-            setflag(TEMP_FLAG_1F)
+            setflag(FLAG_TEMP_1F)
             fadescreenswapbuffers(FADE_FROM_BLACK)
             msgbox(format("Juna slithers away to bathe in the Tears of Guthix."))
             closemessage

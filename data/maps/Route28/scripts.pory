@@ -5,9 +5,9 @@ const OBJ_EVENT_ID_PENGUIN = 13
 mapscripts Route28_MapScripts{
 	MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_EVOLUTION_MAP_STATE, 11) //MAP LOCATIONS: 0-NOTHING, 1-LUMBRIDGE, 16-VARROCK, 3-FALADOR, 4-MEMBERS, 5-OCEAN, 6-WILDERNESS, 7-MORYTANIA, 8-CAVES, 9-ABYSS, 10-OFFWORLD, 11-DESERT, 15-KARAMJA
-		call(PENGUIN_EVENT)
+		call(ROUTE28_STATE)
+        call(PENGUIN_EVENT)
 		call(WEATHER_CHANGE_AREA_DESERT_CALM)
-        call(ROUTE28_STATE)
 	}
 }
 
@@ -39,7 +39,6 @@ script ENCOUNTER_PENGUIN_CACTUS_ROUTE28 {
 script ROUTE28_STATE {
 	removeobject(16)
 	setflag(FLAG_TEMP_1C) //Mithrilman
-
     switch(var(VAR_MITHRILMAN_STATE)) {                            //This will have Mithrilman appear any time between Edgeville and Varrock, but allows for his dialogue to change
         case 20:
             addobject(16)           //Mithrilman
@@ -48,7 +47,6 @@ script ROUTE28_STATE {
             addobject(16)           //Mithrilman
             clearflag(FLAG_TEMP_1C) //Flag Mithrilman has.
     }
-
 	return
 }
 

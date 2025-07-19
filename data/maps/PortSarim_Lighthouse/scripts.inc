@@ -322,7 +322,7 @@ BATTLE_LIGHTHOUSE_TRAINER_1_Text_2:
 	.string "Dave$"
 
 BATTLE_LIGHTHOUSE_TRAINER_2_Text_0:
-	.string "Vile HAM member!\n"
+	.string "Vile H.A.M member!\n"
 	.string "You will not go any further!$"
 
 BATTLE_LIGHTHOUSE_TRAINER_2_Text_1:
