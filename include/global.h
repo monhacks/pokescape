@@ -519,6 +519,9 @@ struct Follower
     /*0x15*/ u8 locked;
 }; /* size = 0x18 */
 
+#include "constants/items.h"
+#define ITEM_FLAGS_COUNT ((ITEMS_COUNT / 8) + ((ITEMS_COUNT % 8) ? 1 : 0))
+
 struct SaveBlock2
 {
     /*0x00*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
@@ -558,7 +561,7 @@ struct SaveBlock2
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
     /*0xF2C*/ struct Follower follower;
-
+    
 #define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
 #define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)
 #define QUEST_STATES 5 //Number of different quest states tracked in the saveblock
@@ -569,6 +572,8 @@ struct SaveBlock2
     u16 playerBike:1;
     u16 currOutfitId:4;
     u16 outfits[NUM_OUTFIT_OWNED_BYTES];
+
+    /**/ u8 itemFlags[ITEM_FLAGS_COUNT];
 }; 
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;

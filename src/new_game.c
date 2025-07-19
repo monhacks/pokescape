@@ -260,6 +260,7 @@ void NewGameInitData(void)
     ResetOutfitData();
     QuestMenu_ResetMenuSaveData();
     memset(&gSaveBlock2Ptr->follower, 0, sizeof(gSaveBlock2Ptr->follower));
+    memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
     
     //POKESCAPE STARTING LOCATIONS
     if (gSaveBlock2Ptr->regionLocation == 0)
