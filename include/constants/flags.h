@@ -263,8 +263,6 @@
 #define FLAG_ITEM_DRAYNORMANOR_RUBBERTUBE    0xE9
 #define FLAG_ITEM_DRAYNORMANOR_OILCAN        0xEA
 #define FLAG_JUNA                            0xEB
-#define FLAG_HAM_HIDEOUT_GIFTMON             0x104   //FLAG_UNUSED_0x104  
-
 #define FLAG_RECEIVED_GLASS_ORNAMENT         0xEC
 #define FLAG_RECEIVED_SILVER_SHIELD          0xED
 #define FLAG_RECEIVED_GOLD_SHIELD            0xEE
@@ -289,15 +287,16 @@
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_UNUSED_0x105                   0x105
-#define FLAG_UNUSED_0x106                   0x106
+#define FLAG_HAM_HIDEOUT_GIFTMON             0x104          //FLAG_UNUSED_0x104 
+#define FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE   0x105   //FLAG_UNUSED_0x105
+#define FLAG_UNUSED_0x106                    0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107
-#define FLAG_UNUSED_0x108                   0x108
-#define FLAG_UNUSED_0x109                   0x109
+#define FLAG_UNUSED_0x108                    0x108
+#define FLAG_UNUSED_0x109                    0x109
 #define FLAG_RECEIVED_LAVARIDGE_EGG          0x10A
 #define FLAG_RECEIVED_REVIVED_FOSSIL_MON     0x10B
 #define FLAG_SECRET_BASE_REGISTRY_ENABLED    0x10C
-#define FLAG_UNUSED_0x10D                   0x10D
+#define FLAG_UNUSED_0x10D                    0x10D
 #define FLAG_CONTEST_SKETCH_CREATED          0x10E  // Set but never read
 #define FLAG_EVIL_TEAM_ESCAPED_STERN_SPOKE   0x10F
 #define FLAG_RECEIVED_EXP_SHARE              0x110

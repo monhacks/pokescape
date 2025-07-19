@@ -21,7 +21,7 @@ MAP_SCRIPT_ON_FRAME_TABLE [
 script LumForest_STATE{
 	removeobject(41)
 	setflag(FLAG_TEMP_8)
-	if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) {
+	if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) || (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 216)) {
 		checkitem(ITEM_CUT_TOOL, 1) 
 		if (!var(VAR_RESULT)) {
 			addobject(41)
@@ -166,7 +166,7 @@ script NPC_LUMBRIDGE_FOREST_MISSING_AXE
 	lock
 	faceplayer
     namebox ("CutterD0wn")
-	msgbox(format("Are you having difficulty cutting down these tiny trees?\pThey're surprisingly sturdy and require an AXE to chop down.\p{PAUSE 15}…\pYou don't have one?\pWhy don't you try seeing if you can buy one from someone in Lumbridge?\lI'm sure there's an axe shop there."))
+	msgbox(format("Are you having difficulty cutting down these tiny trees?\pThey're surprisingly sturdy and require an AXE to chop down.\p…{PAUSE 15}…\pYou don't have one?\pWhy don't you try seeing if you can buy one from someone in Lumbridge?\lI'm sure there's an axe shop there."))
     closemessage
     hidenamebox
 	release
@@ -244,7 +244,8 @@ script NPC_LUMBRIDGE_FOREST_HAM_1
 script TRIGGER_ALKHARID_HAM_EVENT_4
 {
     switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)){ 
-		case 215: 
+		case 215:
+		case 216: 
             goto(TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction)
         case 220: 
             goto(CHECK_FOLLOWER_ZANIK)
@@ -565,7 +566,7 @@ script ZANIK_DIALOGUE_HAM_HIDEOUT_B1F {
 	case 0:
 		msgbox(format("Careful {PLAYER} we don't want them to realise we're not like them."))
 	case 1:
-		msgbox(format("These HAM guys really tick me off."))
+		msgbox(format("These H.A.M guys really tick me off."))
 	case 2:
 		msgbox(format("How do people like these even find one another to form an organisation like this?"))
 	case 3:

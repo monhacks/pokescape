@@ -503,7 +503,7 @@ script FROGEEL_RIVAL_8 {
     }
     elif (var(VAR_FROGEEL_RIVAL) == 37) {   //Variable for if he has removed his disguise but you declined the battle once
         namebox("Angrenouille")
-        msgbox(format("You keep going on about HAM {PLAYER}.\pNo matter how much you downplay it, I can tell that you're very passionate about it!"))
+        msgbox(format("You keep going on about H.A.M {PLAYER}.\pNo matter how much you downplay it, I can tell that you're very passionate about it!"))
         goto(BATTLE_FROGEEL_RIVAL_8)
     }
 	release

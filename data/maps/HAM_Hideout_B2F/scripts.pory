@@ -198,7 +198,7 @@ script NPC_HAM_HIDEOUT_19
     fadescreenswapbuffers(FADE_TO_BLACK)
     removeobject(41)
     removeobject(42)
-    setflag(FLAG_TEMP_E)
+    setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     fadescreenswapbuffers(FADE_FROM_BLACK)
     closemessage
     hidenamebox
