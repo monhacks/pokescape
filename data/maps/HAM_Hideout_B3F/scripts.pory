@@ -128,6 +128,16 @@ script HAMHIDEOUT_Banker {
     end
 }
 
+script HAMHIDEOUT_BankChest {
+    lock
+    msgbox(format("Would you like to use the bank chest?"))
+	waitmessage
+    call(BANK_OPTIONS_JAIL)
+    closemessage
+    release
+    end
+}
+
 script HAMHIDEOUT_Guard {
     lock
     namebox ("H.A.M Guard")

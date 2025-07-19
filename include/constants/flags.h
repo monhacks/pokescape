@@ -263,6 +263,7 @@
 #define FLAG_ITEM_DRAYNORMANOR_RUBBERTUBE    0xE9
 #define FLAG_ITEM_DRAYNORMANOR_OILCAN        0xEA
 #define FLAG_JUNA                            0xEB
+#define FLAG_HAM_HIDEOUT_GIFTMON             0x104   //FLAG_UNUSED_0x104  
 
 #define FLAG_RECEIVED_GLASS_ORNAMENT         0xEC
 #define FLAG_RECEIVED_SILVER_SHIELD          0xED
@@ -288,7 +289,6 @@
 #define FLAG_RECEIVED_OLD_ROD                0x101
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_UNUSED_0x104                   0x104
 #define FLAG_UNUSED_0x105                   0x105
 #define FLAG_UNUSED_0x106                   0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107

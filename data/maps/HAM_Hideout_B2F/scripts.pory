@@ -45,14 +45,52 @@ script NPC_HAM_HIDEOUT_7
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("The dog I grew up with evolved into a green monstrosity.\pI still like it, but now it's the thing we are trying to vanquish from the world.\pAm I in the wrong for not wanting to abandon my friend?"))
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        if (!flag(FLAG_HAM_HIDEOUT_GIFTMON)) { //If giftmon not received
+        msgbox(format("I really love the dog I grew up with, but he evolved and now he looks like a monster.\pI just want them to have a good life, but I know they won't be welcome here.\pPlease would you adopt him?"), MSGBOX_YESNO)
+            if (!var(VAR_RESULT)) { 
+            	msgbox(format("Oh my goodness, thank you so much!"))
+                closemessage
+                hidenamebox
+                call(EventScript_GiftMonster_HAM_Hideout)
+                setflag(FLAG_HAM_HIDEOUT_GIFTMON)
+                namebox ("H.A.M Member")
+                msgbox(format("Please look after them."))
+                closemessage
+                hidenamebox
+                release
+                end
+                }
+            else {         //if giftmon declined
+                msgbox(format("Oh, well I guess I'll just keep trying to hide them from the others then…"))
+                closemessage
+                hidenamebox
+                release
+                end
+            } 
+        if (flag(FLAG_HAM_HIDEOUT_GIFTMON)) {             //if giftmon already received
+            msgbox(format("How's my dog doing?\pI hope they're behaving, and that you're treating them well."))
+            closemessage
+            hidenamebox
+            release
+            end
+            }
+        }                  
+    else {                   //They are disguised
+	    msgbox(format("The dog I grew up with evolved into a green monstrosity.\pI still like it, but now it's the thing we are trying to vanquish from the world.\pAm I in the wrong for not wanting to abandon my friend?"))
+        }
+    }
     closemessage
     hidenamebox
 	release
 	end
 }
 
-
+script EventScript_GiftMonster_HAM_Hideout {
+    setvar(VAR_TEMP_1, SPECIES_TERROR_DOG)
+    givemon (SPECIES_TERROR_DOG, 38, ITEM_NONE)
+	goto(EventScript_GiftMonster_Start)
+}
 
 script NPC_HAM_HIDEOUT_9 //Not implemented
 {
@@ -95,7 +133,12 @@ script NPC_HAM_HIDEOUT_13
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("I hear Patty used to be a wizard in the Wizards' Tower before she joined us.\pShe was thrown out due to rash and feisty decisions apparently."))
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        msgbox(format("Aaaahh!\pWhere is Patty when you need her?\pHer spells would soon wipe the floor with you!"))
+    }
+    else { //They are disguised
+	    msgbox(format("I hear Patty used to be a wizard in the Wizards' Tower before she joined us.\pShe was thrown out due to rash and feisty decisions apparently."))
+    }
     closemessage
     hidenamebox
 	release
@@ -147,6 +190,7 @@ script NPC_HAM_HIDEOUT_19
     hidenamebox
     playse(SE_PIN)
     applymovement(41, MOVEMENT_EXCLAMATIONMARK_FACEPLAYER)
+    namebox ("H.A.M Member")
     msgbox(format("What how did they get past us!"))
     closemessage
     hidenamebox
@@ -186,7 +230,7 @@ script BATTLE_HAM_HIDEOUT_GRUNT_2
 
 script BATTLE_HAM_HIDEOUT_GRUNT_3
 { 
-    trainerbattle_single(TRAINER_HAM_HIDEOUT_GRUNT_3, format("I've not had a good night's sleep in weeks!\pI'm going to take my frustrations on you!"),format("My back!"))
+    trainerbattle_single(TRAINER_HAM_HIDEOUT_GRUNT_3, format("I've not had a good night's sleep in weeks!\pI'm going to take my frustrations out on you!"),format("My back!"))
     namebox ("H.A.M Grunt")
     msgbox(format("Have you seen how many of us there are compared to how many beds we have?\pThere's a rota, but most nights it's whatever space we can find on the floor."))
     hidenamebox
@@ -522,8 +566,22 @@ movement movement_HAMHIDEOUT_BABE_3 {
 
 script TRIGGER_HAMHIDEOUT_JOHANHUS {
     lock
-    applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1) //walk beside player to left
-    waitmovement(0)
+    setvar(VAR_TEMP_0, 1)                             //I am doing this so it doesn't re-trigger the event if you walk left/right and get put in the middle, but am concerned about it causing issues if you whiteout?
+    getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+    if (var(VAR_TEMP_8) == 39){     //Left        
+        applymovement(OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_Player_Left_1)               //have player move into the middle    
+        applymovement(OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1)   //walk beside player to left of middle
+        waitmovement(0)
+    } 
+    elif (var(VAR_TEMP_8) == 41){   //Right 
+        applymovement(OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_Player_Right_1)               //have player move into the middle               
+        applymovement(OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1)   //walk beside player to left of middle
+        waitmovement(0)
+    } 
+    else {                         //Middle
+        applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_ZANIK_1) //walk beside player to left
+        waitmovement(0)
+    }
 	special(SpawnCameraObject)
 	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_1)
     waitmovement(0)
@@ -532,6 +590,7 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     namebox ("Sigmund")
     msgbox(format("Yes.\lThis man held what we needed to summon it and bend it to our will.\pWith the power contained inside the Kharid-ib we can proceed to the Wilderness and finish the plan."))
     applymovement(21, MOVEMENT_QUESTIONMARK)
+    waitmovement(0)
     namebox ("Johanhus")
     msgbox(format("And you are sure this will save the world of the scourge that are monsters Sigmund?"))
     namebox ("Sigmund")
@@ -540,11 +599,14 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
 	setobjectxyperm(35, 41, 34)
     applymovement (35, movement_HAM_Hideout_finale_walk_up) //walk beside player to left
     waitmovement(0)
-    applymovement (35, movement_HAM_Hideout_finale_walk_up) //walk beside player to left
-    applymovement (OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up) //walk beside player to left
-    applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up) //walk beside player to left
+    applymovement (35, movement_HAM_Hideout_finale_walk_up) //Prince Ali; walk up one
+    applymovement (OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up) //Player; walk up one
+    applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up) //Zanik; walk up one
+    waitmovement(0)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2)
+    waitmovement(0)
     namebox ("Prince Ali")
-    msgbox(format("Stop this.\lYou won't get away with this."))
+    msgbox(format("Stop this.\pYou won't get away with this."))
     applymovement(36, movement_HAM_Hideout_finale_reaction_1) 
     applymovement(37, movement_HAM_Hideout_finale_reaction_2) 
     applymovement(38, movement_HAM_Hideout_finale_reaction_1) 
@@ -555,8 +617,9 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     applymovement(21, MOVEMENT_EXCLAMATIONMARK)
     waitmovement(0)
     namebox ("Johanhus")
-    msgbox(format("Cease your yelps prince.\lYou hold no authority here.\pWe will make a just world without monsters just like Saradomin always intended."))
+    msgbox(format("Cease your yelps prince.\pYou hold no authority here.\pWe will make a just world without monsters just like Saradomin always intended."))
     applymovement(23, movement_HAM_Hideout_finale_reaction_1)
+    waitmovement(0)
     namebox ("Sigmund")
     msgbox(format("Looks like some monsters just entered a den they should not be Johanhus."))
     namebox ("Johanhus")
@@ -565,20 +628,23 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     msgbox(format("I will head to the wilderness as planned.\pI will station Patty and Babe in Varrock for the thing we discussed.\lAs for these guys and the prince.\lLet us show them what happens to monster sympathisers taking a wrong turn."))
     setobjectxy(43, 40, 34)      //spawn in extra HAM member for blocking
 	setobjectxyperm(43, 40, 34)
-    applymovement(43, movement_HAM_Hideout_finale_walk_up)    
-    applymovement(39, movement_HAM_Hideout_finale_swarm_left_2)     
+    applymovement(43, movement_HAM_Hideout_finale_walk_up)
     applymovement(42, movement_HAM_Hideout_finale_swarm_left_1)  
+    applymovement(41, movement_HAM_Hideout_finale_swarm_right_1)     
+    applymovement(39, movement_HAM_Hideout_finale_swarm_left_2)     
     applymovement(37, movement_HAM_Hideout_finale_swarm_right_2) 
-    applymovement(41, movement_HAM_Hideout_finale_swarm_right_1) 
     waitmovement(0)
     applymovement(23, movement_HAM_Hideout_finale_Sigmund_exit)
     waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(23)
+    setflag(FLAG_TEMP_10)
     //Lots of Ham members swarm the player and Zanik. Sigmund leaves menacingly
     namebox ("Zanik")
     msgbox(format("Shoot.\p{PLAYER}!\lI will handle this.\lYou go and get them!"))
     applymovement(40, movement_HAM_Hideout_finale_misc_1)
     applymovement(21, movement_HAM_Hideout_finale_Johanhus_1)
-	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_3)
     waitmovement(0)
     special(RemoveCameraObject)
     namebox ("Johanhus")
@@ -605,6 +671,20 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     waitstate
     releaseall
     end
+}
+
+movement movement_HAM_Hideout_finale_Player_Left_1{
+    walk_up
+    walk_right
+    face_up
+    step_end
+}
+
+movement movement_HAM_Hideout_finale_Player_Right_1{
+    walk_up
+    walk_left
+    face_up
+    step_end
 }
 
 movement movement_HAM_Hideout_finale_ZANIK_1{
@@ -636,8 +716,12 @@ movement movement_HAM_Hideout_camera_1{
 }
 
 movement movement_HAM_Hideout_camera_2{
-    delay_16
-    walk_down * 4
+    walk_down * 2
+    step_end
+}
+
+movement movement_HAM_Hideout_camera_3{
+    walk_down * 3
     step_end
 }
 
@@ -660,27 +744,27 @@ movement movement_HAM_Hideout_finale_reaction_3{
 
 movement movement_HAM_Hideout_finale_swarm_left_1{
     walk_fast_down * 2
-    walk_fast_left
+    walk_fast_right
     face_up
     step_end
 }
 
 movement movement_HAM_Hideout_finale_swarm_left_2{
     walk_fast_down * 2
-    face_left
+    face_right
     step_end
 }
 
 movement movement_HAM_Hideout_finale_swarm_right_1{
     walk_fast_down * 2
-    walk_fast_right
+    walk_fast_left
     face_up
     step_end
 }
 
 movement movement_HAM_Hideout_finale_swarm_right_2{
     walk_fast_down * 2
-    face_right
+    face_left
     step_end
 }
 
@@ -692,6 +776,7 @@ movement movement_HAM_Hideout_finale_Sigmund_exit{
     walk_slow_right
     walk_slow_down
     walk_slow_right * 2
+    face_down
     step_end
 }
 

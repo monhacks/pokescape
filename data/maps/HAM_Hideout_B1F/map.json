@@ -168,7 +168,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NPC_HAM_HIDEOUT_B1F_16",
-      "flag": "0"
+      "flag": "FLAG_TEMP_D"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HAM_GRUNT_M",
@@ -181,7 +181,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NPC_HAM_HIDEOUT_B1F_6",
-      "flag": "FLAG_TEMP_D"
+      "flag": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HAM_GRUNT_F",
@@ -458,7 +458,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GOBLIN_2",
-      "x": 45,
+      "x": 49,
       "y": 41,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",

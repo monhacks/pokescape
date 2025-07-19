@@ -714,7 +714,8 @@ script HAM_EVENT_ALKHARID_WISE_OLD_MAN {
         closemessage
         hidenamebox
         giveitem(ITEM_CUT_TOOL, 1)
-        msgbox(format("It's only fitting to have such a fine axe to cut trees considering you are about to enter a forest. Haha good luck on your quest {PLAYER}!"))
+        namebox("Wise Old Man")
+        msgbox(format("It's only fitting to have such a fine axe to cut trees considering you are about to enter a forest.\pHaha good luck on your quest {PLAYER}!"))
         closemessage
         hidenamebox
     }

@@ -965,12 +965,17 @@ script NPC_HAM_HIDEOUT_B1F_2
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    checkplayergender
-    if (var(VAR_RESULT) == MALE) {
+    if (flag(FLAG_TEMP_D)) {                       //Players have no disguise
+        msgbox(format("So you two are part of the monster scourge polluting our haven!\pI can't believe I thought you were like us!"))
+    }
+    else {                                         //They are disguised
+        checkplayergender
+        if (var(VAR_RESULT) == MALE) {
             msgbox(format("Be vigilant brother, we cannot let the monster scourge pollute our haven."))
-    } 
-    else {
-        msgbox(format("Be vigilant sister, we cannot let the monster scourge pollute our haven."))
+        } 
+        else {
+            msgbox(format("Be vigilant sister, we cannot let the monster scourge pollute our haven."))
+        }
     }
     closemessage
     hidenamebox
@@ -1007,7 +1012,12 @@ script NPC_HAM_HIDEOUT_B1F_5
 	lock
 	faceplayer
     namebox ("H.A.M Member")
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        msgbox(format("Look, I know we are on high alert and I should probably report you, but I just want peace.\pPlease just go."))
+    }
+    else {                   //They are disguised
 	msgbox(format("I quite like it here honestly.\pOne thing bugs me however.\pWhy did the leaders decide on the robes being pink?\pIs there some symbolism I am not getting?"))
+    }
     closemessage
     hidenamebox
 	release
@@ -1019,7 +1029,12 @@ script NPC_HAM_HIDEOUT_B1F_6
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("Don't tell any of the other grunts, but I got a thing for Babe.\pDo you know anything that might help me get closer to her?\lThere is a limit to how much hatred against monsters can bring people together…"))
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        msgbox(format("Aw man!! I just know beating you would get me that much closer to Babe but I've got nothing to fight you with…"))
+    }
+    else {                   //They are disguised
+	    msgbox(format("Don't tell any of the other grunts, but I got a thing for Babe.\pDo you know anything that might help me get closer to her?\lThere is a limit to how much hatred against monsters can bring people together…"))
+    }
     closemessage
     hidenamebox
 	release
@@ -1031,7 +1046,12 @@ script NPC_HAM_HIDEOUT_B1F_7
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("We are going to make Lumbridge great again.\lThen the world will follow."))
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        msgbox(format("To make Lumbridge great again, we need to get rid of filthy monsters and sympathisers like you.\pYou're lucky I'm a pacifist, or I'd fight you myself!"))
+    }
+    else {                   //They are disguised
+	    msgbox(format("We are going to make Lumbridge great again.\lThen the world will follow."))
+    }
     closemessage
     hidenamebox
 	release
@@ -1079,7 +1099,12 @@ script NPC_HAM_HIDEOUT_B1F_11
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("Sigmund is an extremist among us.\pHe doesn't mind flooding a cavern of goblins if it means they will all die.\lPersonally I get that."))
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        msgbox(format("Perhaps if Sigmund had acted with even more extremism, we'd have a perfect world by now and wouldn't have apologists like you running around!"))
+    }
+    else {                   //They are disguised
+	    msgbox(format("Sigmund is an extremist among us.\pHe doesn't mind flooding a cavern of goblins if it means they will all die.\pPersonally I get that."))
+    }
     closemessage
     hidenamebox
 	release
@@ -1091,7 +1116,12 @@ script NPC_HAM_HIDEOUT_B1F_12
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("Sigmund believes power and might makes right, so we in H.A.M will become the most powerful organisation in Gielinor."))
+    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+        msgbox(format("Get out of our hideout!\pThere's nothing for people like you down here."))
+    }
+    else {                   //They are disguised
+	    msgbox(format("Sigmund believes power and might makes right, so we in H.A.M will become the most powerful organisation in Gielinor."))
+    }
     closemessage
     hidenamebox
 	release

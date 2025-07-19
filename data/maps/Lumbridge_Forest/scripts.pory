@@ -14,7 +14,7 @@ MAP_SCRIPT_ON_TRANSITION {
 		}
     }
 MAP_SCRIPT_ON_FRAME_TABLE [
-	VAR_POKESCAPE_STORYMODE_PROGRESS, 240: POST_WARP_ZANIK_EVENT
+	VAR_POKESCAPE_STORYMODE_PROGRESS, 245: POST_WARP_ZANIK_EVENT
 ]
 }
 
@@ -42,7 +42,7 @@ script POST_WARP_ZANIK_EVENT {
     namebox ("Zanik")
     msgbox(format("It wasn't all me, most of it was {PLAYER} here."))
     namebox ("Prince Ali") //Possibly tweak this if we are having it not actually be Prince Ali?
-    msgbox(format("{PLAYER}.\lThank you for saving me.\pH.A.M wanted my 'INSERT PLOT MCGUFFIN HERE' saying it was a vital ingredient to a ritual to bind a monster to their will.\pIt has been passed down in my family for ages.\lBut it seems I had to trade it for my life for now.\pWe can not let H.A.M get away with this.\lI will try to reach the other MvM leaders and organize a front to stop them.\pBut until then, I guess you do need to beat me right?\lI will meet you back in Al Kharid.\lLet us battle and become ever stronger together!"))
+    msgbox(format("{PLAYER}.\lThank you for saving me.\pH.A.M wanted the Kharid-ib saying it was a vital ingredient to a ritual to bind a monster to their will.\pIt has been passed down in my family for ages.\lBut it seems I had to trade it for my life for now.\pWe can not let H.A.M get away with this.\lI will try to reach the other MvM leaders and organize a front to stop them.\pBut until then, I guess you do need to beat me right?\lI will meet you back in Al Kharid.\lLet us battle and become ever stronger together!"))
     //Prince Ali walks off
 	//removeobject Prince Ali
     namebox ("Zanik")
@@ -58,7 +58,7 @@ script POST_WARP_ZANIK_EVENT {
     //Zanik walks off
 	//remove object Zanik
 	//setflag for Zanik and Prince Ali
-    //setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 245)                            //TBC
+    //setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)                            //TBC
     release
     end
 }
@@ -166,7 +166,7 @@ script NPC_LUMBRIDGE_FOREST_MISSING_AXE
 	lock
 	faceplayer
     namebox ("CutterD0wn")
-	msgbox(format("Are you having difficulty cutting down these tiny trees?\pThey're surprisingly sturdy and require a DRAGON AXE to chop down.{PAUSE 15}\pYou don't have one?\pWhy don't you try seeing if you can buy one from someone in Lumbridge?\lI'm sure there's an axe shop there."))
+	msgbox(format("Are you having difficulty cutting down these tiny trees?\pThey're surprisingly sturdy and require an AXE to chop down.\p{PAUSE 15}…\pYou don't have one?\pWhy don't you try seeing if you can buy one from someone in Lumbridge?\lI'm sure there's an axe shop there."))
     closemessage
     hidenamebox
 	release

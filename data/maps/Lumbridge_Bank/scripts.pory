@@ -164,6 +164,21 @@ script BANK_HEAL_JAIL {
     end
 }
 
+script BANK_OPTIONS_JAIL_CHEST {
+    multichoicedefault (1, 0, MULTI_BANKOPTIONS, 0, 0)
+    switch (var(VAR_RESULT))
+    {
+        case 0:
+            goto(EventScript_AccessPokemonStorage)
+        case 1:
+            goto(EventScript_AccessPlayersPC)
+        case 2:
+            return
+        case MULTI_B_PRESSED: 
+            return
+    }
+    return
+}
 
 	//msgbox(format("Would you like to access your Bank Account?"), MSGBOX_YESNO)
 	//while (var(VAR_RESULT) != 1) {
