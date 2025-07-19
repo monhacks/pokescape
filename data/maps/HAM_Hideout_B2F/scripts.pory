@@ -23,7 +23,7 @@ script HAMHIDEOUT_B2F_STATE {
         addobject(24)
         addobject(4)
     }
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) { 
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         setflag(FLAG_TEMP_D) //Hides NPCS
         clearflag(FLAG_TEMP_C) //Shows TRAINERS
     }
@@ -45,9 +45,9 @@ script NPC_HAM_HIDEOUT_7
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 235) {          //During High Alert StoryEvent
         if (!flag(FLAG_HAM_HIDEOUT_GIFTMON)) { //If giftmon not received
-        msgbox(format("I really love the dog I grew up with, but he evolved and now he looks like a monster.\pI just want them to have a good life, but I know they won't be welcome here.\pPlease would you adopt him?"), MSGBOX_YESNO)
+            msgbox(format("I really love the dog I grew up with, but he evolved and now he looks like a monster.\pI just want them to have a good life, but I know they won't be welcome here.\pPlease would you adopt him?"), MSGBOX_YESNO)
             if (!var(VAR_RESULT)) { 
             	msgbox(format("Oh my goodness, thank you so much!"))
                 closemessage
@@ -60,7 +60,7 @@ script NPC_HAM_HIDEOUT_7
                 hidenamebox
                 release
                 end
-                }
+            }
             else {         //if giftmon declined
                 msgbox(format("Oh, well I guess I'll just keep trying to hide them from the others then…"))
                 closemessage
@@ -68,17 +68,17 @@ script NPC_HAM_HIDEOUT_7
                 release
                 end
             } 
-        if (flag(FLAG_HAM_HIDEOUT_GIFTMON)) {             //if giftmon already received
+        }
+        else {             //if giftmon already received
             msgbox(format("How's my dog doing?\pI hope they're behaving, and that you're treating them well."))
             closemessage
             hidenamebox
             release
             end
-            }
-        }                  
+        }
+    }        
     else {                   //They are disguised
 	    msgbox(format("The dog I grew up with evolved into a green monstrosity.\pI still like it, but now it's the thing we are trying to vanquish from the world.\pAm I in the wrong for not wanting to abandon my friend?"))
-        }
     }
     closemessage
     hidenamebox
@@ -133,7 +133,7 @@ script NPC_HAM_HIDEOUT_13
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-    if (flag(FLAG_TEMP_D)) { //Players have no disguise
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
         msgbox(format("Aaaahh!\pWhere is Patty when you need her?\pHer spells would soon wipe the floor with you!"))
     }
     else { //They are disguised
@@ -198,7 +198,7 @@ script NPC_HAM_HIDEOUT_19
     fadescreenswapbuffers(FADE_TO_BLACK)
     removeobject(41)
     removeobject(42)
-    setflag(FLAG_TEMP_E)
+    setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     fadescreenswapbuffers(FADE_FROM_BLACK)
     closemessage
     hidenamebox

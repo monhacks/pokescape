@@ -97,6 +97,7 @@ script JUNA_POOL_ALL_FLAGS{
                         if (flag(FLAG_TEMP_F)){
                             msgbox(format("You successfully cleanse the corruption from the Tears of Guthix."))
                             closemessage
+                            //set the perm flag for puzzle being solved.
                             setflag(FLAG_TEMP_10)
                             call(JUNA_POOL_DIRTY)
                             return
@@ -116,6 +117,12 @@ script JUNA_POOL_ALL_FLAGS{
 
 
 script JUNA_POOL_STATE{
+    if (flag(FLAG_JUNA)) {
+        setflag(TEMP_FLAG_1F)
+    }
+    if (flag(TEMP_FLAG_1F)) {
+        removeobject(1)
+    }
     //State of the Tears
     //call(JUNA_POOL_ALL_FLAGS)
     if (flag(FLAG_TEMP_A)){
@@ -288,10 +295,12 @@ script JUNA_TOGGLE_TEMP_FLAG_6 {
 
 
 script JUNA_TEARS_1{
-	call(JUNA_TOGGLE_TEMP_FLAG_1)
-    call(JUNA_TOGGLE_TEMP_FLAG_2)
-    call(JUNA_POOL_STATE)
-    call(JUNA_POOL_ALL_FLAGS)
+    //if !flag {            //If the puzzle hasn't been solved then do this
+        call(JUNA_TOGGLE_TEMP_FLAG_1)
+        call(JUNA_TOGGLE_TEMP_FLAG_2)
+        call(JUNA_POOL_STATE)
+        call(JUNA_POOL_ALL_FLAGS)
+    //}
 	return
 }
 
@@ -365,13 +374,15 @@ script ENCOUNTER_JUNA
 {
 	lock
     namebox ("Juna")
-    if (!flag(FLAG_TEMP_10)){
+    if (!flag(FLAG_TEMP_10)){ //change to puzzle solved flag
         msgbox(format("Adventurer…\pI have been waiting here three thousand years, guarding the Tears of Guthix.\pThe Tears have become polluted over the years, and some of the streams are no longer blessed with Guthix's power.\lPlease, restore balance and return His power to these caves."))
         hidenamebox
         closemessage
     }
-    if (flag(FLAG_TEMP_10)){
+    if (flag(FLAG_TEMP_10)){ //change to puzzle solved flag
         msgbox(format("Adventurer, you have cleansed the impurities from the waters!\lThe tears that flow from them are blessed by the very power of Guthix Himself.\pI have been waiting for a long time for a Guardian like yourself to come along.\lLet us see if you are worthy!"))
+        hidenamebox
+        closemessage
         playmoncry(SPECIES_JUNA, 0)
         waitmoncry
         delay(32)
@@ -381,6 +392,7 @@ script ENCOUNTER_JUNA
         if (var(VAR_RESULT) == B_OUTCOME_WON) { //DEFEATED, Can still encounter again.
             fadescreenswapbuffers(FADE_TO_BLACK)
             removeobject (VAR_LAST_TALKED)
+            setflag(TEMP_FLAG_1F)
             fadescreenswapbuffers(FADE_FROM_BLACK)
             msgbox(format("Juna slithers away to bathe in the Tears of Guthix."))
             closemessage
@@ -388,6 +400,7 @@ script ENCOUNTER_JUNA
         elif (var(VAR_RESULT) == B_OUTCOME_CAUGHT) { //CAPTURED! Cannot encounter again.
             fadescreenswapbuffers(FADE_TO_BLACK)
             setflag(FLAG_JUNA)
+            setflag(FLAG_TEMP_1F)
             removeobject (VAR_LAST_TALKED)
             setmetatile(37, 11, 113, 0)
             setmetatile(38, 9, 137, 1)
@@ -409,9 +422,10 @@ script ENCOUNTER_JUNA
             setmetatile(43, 10, 137, 1)
             setmetatile(43, 11, 113, 0)
             setmetatile(44, 11, 113, 0)
-            fadescreenswapbuffers(FADE_FROM_BLACK)
-            msgbox(format("After capturing Juna the cavern goes quiet. The rocks finally stop weeping…"))
+            msgbox(format("After capturing Juna the cavern goes quiet.\pThe rocks finally stop weeping…"))
             closemessage
+            special(DrawWholeMapView) 
+            fadescreenswapbuffers(FADE_FROM_BLACK)
 	        }
         }
     release

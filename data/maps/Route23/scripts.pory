@@ -639,6 +639,7 @@ script COMMORB_FUNCTION
 			namebox("Tiffy Cashien")
 			msgbox(format("What's that {PLAYER}?\pH.A.M have kidnapped Prince Ali of Al Kharid?!\pYou must be pulling on my leg, hmm?\pYou're not?!\lThis is a diplomatic nightmare, old bean!\pThe top brass will need to be made aware.\pCan't see them being too thrilled about it.\pTry contacting someone at Al Kharid palace immediately.\pI'll make some enquiries this end dontchaknow.\pSir Tiffy Cashien -over."))
 		case 215:    //post palace, but pre HAM hideout
+		case 216:
 			namebox("Tiffy Cashien")
 			msgbox(format("You met Ozan at Al Kharid palace?\pHmm, he's known for embellishing his stories so let's hope Osman believes him.\pIn the meantime, you should look around Lumbridge to see if you can find some clues as to where H.A.M have taken the Prince!\pSir Tiffy Cashien -over."))
 		case 220:           //after teaming up with Zanik for the first time but before triggering jail event

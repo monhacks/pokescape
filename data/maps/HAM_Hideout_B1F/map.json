@@ -545,7 +545,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NPC_HAM_HIDEOUT_19",
-      "flag": "FLAG_TEMP_E"
+      "flag": "FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HAM_GRUNT_M",
@@ -558,7 +558,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NPC_HAM_HIDEOUT_19",
-      "flag": "FLAG_TEMP_E"
+      "flag": "FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HAM_GRUNT_M",

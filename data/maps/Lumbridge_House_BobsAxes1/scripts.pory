@@ -1,0 +1,118 @@
+
+mapscripts Lumbridge_House_BobsAxes1_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION {
+        call(BobsAxes_STATE)
+    }
+}
+
+script BobsAxes_STATE {
+    setflag(FLAG_TEMP_1F)
+    removeobject(2)
+}
+
+
+
+
+script Lumbridge_House_BobsAxes
+{
+	lock
+	faceplayer
+	namebox ("Bob")
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_2) == 5) {
+        msgbox(format("Welcome to Bob's Brilliant Axes.\pMy name is Bob, how may I be of assistance?"))
+        multichoicedefault (1, 0, MULTI_AXES, 0, 0)
+        switch (var(VAR_RESULT)) {
+            case 0:
+                checkitem(ITEM_ROCKSMASH_TOOL, 1) 
+                    if (var(VAR_RESULT)) {
+                        msgbox(format("Hmm…\pLooks like you already have a mighty fine pickaxe.\pI hope you've been smashing many rocks with it."))
+                    }
+                    else {
+                        msgbox(format("Hmm, a Pickaxe you say?\pSorry but I don't sell those here, I only fix them.\pIf you want a pickaxe you should see the Dwarves up in the Dwarven Mines near Falador."))
+                    }
+            case 1:
+                if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) || (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 216)) {
+                    checkitem(ITEM_CUT_TOOL, 1) 
+                    if (!var(VAR_RESULT)) {
+                        goto(WoM_BobsAxes_Script)
+                    }
+                    else {
+                        msgbox(format("Hmm…\pLooks like you already have a mighty fine axe.\pI hope you've been cutting down many trees with it."))
+                    }
+                }
+                else {
+                    msgbox(format("An Axe?\pNormally I could help you with that but I am still waiting for my shipment to arrive.\pIt is quite late I hope nothing bad happened to it."))
+                }
+        }
+        closemessage
+        hidenamebox
+        release
+        end
+    }
+    else {
+        msgbox(format("Are you the contractor we hired to fix our bed?\pNo?\pSpeak to from across the desk if you are a customer."))
+        closemessage
+        hidenamebox
+        release
+        end
+    }
+}	
+
+script WoM_BobsAxes_Script {
+    msgbox(format("I'm sorry I still haven't recieved my stock of axes yet…"))
+    closemessage
+    hidenamebox
+    playse(SE_DOOR)
+    clearflag(FLAG_TEMP_1F)
+    addobject(2)
+    applymovement(2, movement_wom_walk_into_axestore)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
+    waitmovement(0)
+    namebox ("Wise Old Man")
+    msgbox(format("Why hello there {PLAYER}, odd place to run into one another isn't it?\pAre you here to get your armour repaired too?\pH.A.M kidnapped the Prince and thus you can not battle them for your next badge?\pAnd now you need an AXE to get past some trees but Bob is out of stock?\pWell that really does stop you from progressing doesn't it?\pWhy back in my days I used to do quests like these as if they were second nature.\pBut alas this will not be my Swan Song but instead yours…\pSpeaking of such, I believe I heard reports about suspicious activity in Lumbridge forest.\pHow about you take this and explore that forest some more.\pI would imagine it would be quite useful on your quest regardless."))
+    closemessage
+    hidenamebox
+    giveitem(ITEM_CUT_TOOL, 1)
+    namebox ("Bob")
+    msgbox(format("Wow a Dragon Axe, I am jealous!\pI wish I was the one who could have given it to you!"))
+    closemessage
+    hidenamebox
+    applymovement(2, Movement_InteractFACEUP)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+    waitmovement(0)
+    namebox ("Bob")
+    msgbox(format("Also here you go Dionysius, your armour is all repaired.\pI look forward to seeing you again."))
+    closemessage
+    hidenamebox
+    namebox ("Wise Old Man")
+    msgbox(format("Likewise."))
+    closemessage
+    hidenamebox
+    applymovement(2, Movement_InteractFACERIGHT)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
+    waitmovement(0)
+    namebox ("Wise Old Man")
+    msgbox(format("And to you too {PLAYER} good luck on your quest!"))
+    closemessage
+    hidenamebox
+    applymovement(2, movement_wom_walk_leave_axestore)
+    waitmovement(0)
+    playse(SE_DOOR)
+    removeobject(2)
+    setflag(FLAG_TEMP_1F)
+    release
+    end
+}
+
+movement movement_wom_walk_into_axestore {
+    walk_up * 3
+    face_right
+    step_end
+}
+movement movement_wom_walk_leave_axestore {
+    walk_down
+    set_invisible
+    step_end
+}
