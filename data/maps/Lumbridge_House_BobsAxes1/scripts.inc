@@ -125,6 +125,8 @@ movement_wom_walk_into_axestore:
 
 movement_wom_walk_leave_axestore:
 	walk_down
+	walk_down
+	walk_down
 	set_invisible
 	step_end
 

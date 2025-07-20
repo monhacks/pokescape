@@ -112,7 +112,7 @@ movement movement_wom_walk_into_axestore {
     step_end
 }
 movement movement_wom_walk_leave_axestore {
-    walk_down
+    walk_down * 3
     set_invisible
     step_end
 }
