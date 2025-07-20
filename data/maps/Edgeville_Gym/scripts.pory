@@ -8,6 +8,7 @@ mapscripts Edgeville_Gym_MapScripts {
     {
 		setrespawn(HEAL_LOCATION_EDGEVILLE)
         call(EDGEVILLE_GYM_METATILES)
+		call(EDGEVILLE_GYM_STATE)
     }
 }
 
@@ -20,4 +21,18 @@ script EDGEVILLE_GYM_METATILES {
 		//special(DrawWholeMapView)  // DO NOT USE WITH : ON_LOAD
 	}
 	return
+}
+
+script EDGEVILLE_GYM_STATE {
+	if (flag(FLAG_BADGE05_GET) == FALSE) {	
+    setflag(FLAG_ITEM_EDGEVILLE_2)
+	setflag(FLAG_BRASS_KEY)
+	setflag(FLAG_TEMP_B)
+	removeobject(5)
+	removeobject(7)
+	removeobject(10)
+	removeobject(11)
+	removeobject(13)
+	return
+	}         
 }

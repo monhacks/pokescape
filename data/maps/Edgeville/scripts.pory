@@ -361,7 +361,7 @@ script EDGEVILLE_GYM_START {
 		return
 	}
 	if (var(VAR_POKESCAPE_EDGEVILLE_GYM_QUEST) == 20) {
-		msgbox(format("Back for more?\pLets go!"))
+		msgbox(format("Back for more?\pLet's go!"))
 		call(EDGEVILLE_GYM_BATTLE_VANNAKA)
 		return
 	}
@@ -425,6 +425,8 @@ script EDGEVILLE_GYM_BATTLE_VANNAKA {
 		msgbox(format("And if you want to continue your MvM championships then it looks like the next badge you'll be needing is in Al Kharid.\pGood luck!"))
 		closemessage
         hidenamebox
+	    clearflag(FLAG_ITEM_EDGEVILLE_2)
+		clearflag(FLAG_BRASS_KEY)
 		//questmenu(QUEST_MENU_COMPLETE_QUEST , QUEST_KOUREND_SLAYER)
         release
         return

@@ -294,9 +294,9 @@ script BATTLE_ROUTE13_TRAINER_2
 
 script BATTLE_ROUTE13_TRAINER_3 
 { //Willford- Goblinfish x2
-    trainerbattle_single(TRAINER_ROUTE13_TRAINER_8, format("Go fish, get lost."),format("No seriously.\pGet lost and try fishing."))
+    trainerbattle_single(TRAINER_ROUTE13_TRAINER_8, format("Did you see that crazy gnome?\pHe cast a spell on my poor sheep, I'm telling you!"),format("Please tell me you saw it too!"))
     namebox ("Willford")
-    msgbox(format("No seriously.\pGet lost and try fishing."))
+    msgbox(format("I just want to farm in peace.\pMy sheep didn't mean to block people's path to Lumbridge.\pDo you know how hard it is to move sheep without a sheepdog?!"))
 	hidenamebox
     release
 	end

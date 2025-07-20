@@ -47,7 +47,7 @@ script NPC_LumbridgeBasement_Item
 script DEMONHEADGE_BLOCK
 {
     lock
-    applymovement (5,Movement_InteractFACEDOWN)  //Demon
+    applymovement (5,Movement_InteractFACERIGHT)  //Demon
 	waitmovement (0)
     namebox("Demonheadge")
     msgbox(format("Are you trying to go through my portal?"), MSGBOX_YESNO)
@@ -134,6 +134,6 @@ script DEMONHEADGE_BLOCK
 
 movement movement_DEMON_BLOCK
 {
-	walk_left
+	walk_down
 	step_end
 }
