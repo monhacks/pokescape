@@ -226,12 +226,12 @@ static const match_call_text_data_t sMomTextScripts[] = {
 
 static const struct MatchCallStructNPC sMomMatchCallHeader =
 {
-    .type = MC_TYPE_NPC,
+    /*.type = MC_TYPE_NPC,
     .mapSec = MAPSEC_LITTLEROOT_TOWN,
     .flag = FLAG_SYS_GAME_CLEAR,
     .desc = gText_MomMatchCallDesc,
     .name = gText_MomMatchCallName,
-    .textData = sMomTextScripts
+    .textData = sMomTextScripts*/
 };
 
 static const match_call_text_data_t sStevenTextScripts[] = {

@@ -1,2 +1,8 @@
 Wilderness_Volcano_Lobby_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Wilderness_Volcano_Lobby_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
+
+Wilderness_Volcano_Lobby_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	setflag FLAG_VISITED_WILDERNESS_CRATER
+	return
+

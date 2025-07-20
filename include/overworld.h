@@ -176,5 +176,10 @@ void UpdateAltBgPalettes(u16 palettes);
 void UpdatePalettesWithTime(u32);
 bool8 MapIsInPerpetualDarkness(u16 mapLayoutId);
 
+enum {
+    REGION_F2P,
+    REGION_WILDERNESS,
+    REGION_P2P
+};
 
 #endif // GUARD_OVERWORLD_H

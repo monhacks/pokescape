@@ -1,0 +1,6 @@
+mapscripts Wilderness_Volcano_Lobby_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION 
+    {
+        setflag(FLAG_VISITED_WILDERNESS_CRATER)
+    }
+}

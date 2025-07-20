@@ -78,20 +78,30 @@
 #define	MAPSEC_BAY_OF_SARIM   	        0x4A
 #define	MAPSEC_MUDSKIPPER_SOUND	        0x4B
 #define	MAPSEC_DAEMONHEIM	            0x4C
-
+#define	MAPSEC_WILDERNESS_CRATER	    0x4D
+#define	MAPSEC_ROUTE_45	                0x4E
+#define	MAPSEC_ROUTE_46	                0x4F
+#define	MAPSEC_ROUTE_47	                0x50
+#define	MAPSEC_ROUTE_48	                0x51
+#define	MAPSEC_ROUTE_49	                0x52
+#define	MAPSEC_ROUTE_0	                0x53
+#define	MAPSEC_ROUTE_200	            0x54
+#define	MAPSEC_ROUTE_44	                0x55	                
+#define	MAPSEC_WILDERNESS_FOREST        0x56
+/*
 //below are broken, place above if wanting to add new ones.
-#define	MAPSEC_MISTHALIN	            0x4D
-#define	MAPSEC_KHARIDIAN_DESERT	        0x4E
-#define	MAPSEC_ASGARNIA	                0x4F
-#define	MAPSEC_FELDIP_HILLS	            0x50
-#define	MAPSEC_FREMENNIK_PROVINCE	    0x51
-#define	MAPSEC_KANDARIN	                0x52
-#define	MAPSEC_KARAMJA	                0x53
-#define	MAPSEC_MORYTANIA	            0x54
-#define	MAPSEC_WILDERNESS	            0x55
+#define	MAPSEC_MISTHALIN	            
+#define	MAPSEC_KHARIDIAN_DESERT	        
+#define	MAPSEC_ASGARNIA	                
+#define	MAPSEC_FELDIP_HILLS	            
+#define	MAPSEC_FREMENNIK_PROVINCE	    
+#define	MAPSEC_KANDARIN	                
+#define	MAPSEC_KARAMJA	                
+#define	MAPSEC_MORYTANIA	            
+#define	MAPSEC_WILDERNESS	            
 
 //vanilla
-#define	MAPSEC_LITTLEROOT_TOWN			0x56
+#define	MAPSEC_LITTLEROOT_TOWN			*/
 #define	MAPSEC_OLDALE_TOWN			    0x57
 #define	MAPSEC_DEWFORD_TOWN			    0x58
 #define	MAPSEC_LAVARIDGE_TOWN			0x59

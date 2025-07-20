@@ -1527,10 +1527,10 @@
 #define FLAG_VISITED_EDGEVILLE                      (SYSTEM_FLAGS + 0x8D) // Unused Flag
 #define FLAG_VISITED_AL_KHARID                      (SYSTEM_FLAGS + 0x8E) // Unused Flag
 #define FLAG_VISITED_MUSA_POINT                     (SYSTEM_FLAGS + 0x8F) // Unused Flag
-#define FLAG_TOGGLE_INVERSE_BATTLE                  (SYSTEM_FLAGS + 0x90) // Unused Flag
-#define FLAG_TOGGLE_NO_BAG_USE                      (SYSTEM_FLAGS + 0x91) // Unused Flag
-#define FLAG_TOGGLE_NO_CATCHING                     (SYSTEM_FLAGS + 0x92) // Unused Flag
-#define FLAG_SKY_BATTLE                             (SYSTEM_FLAGS + 0x93) // Unused Flag
+#define FLAG_VISITED_DAEMONHEIM                     (SYSTEM_FLAGS + 0x90) // Unused Flag 
+#define FLAG_VISITED_WILDERNESS_CRATER              (SYSTEM_FLAGS + 0x91) // Unused Flag
+#define FLAG_UNUSED_0x92                            (SYSTEM_FLAGS + 0x92) // Unused Flag
+#define FLAG_UNUSED_0x93                            (SYSTEM_FLAGS + 0x93) // Unused Flag
 #define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
 #define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
@@ -1571,15 +1571,15 @@
 #define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag
 #define FLAG_UNUSED_0x91A                           (SYSTEM_FLAGS + 0xBA) // Unused Flag
 #define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
-#define FLAG_UNUSED_0x91C                           (SYSTEM_FLAGS + 0xBC) // Unused Flag
-#define FLAG_UNUSED_0x91D                           (SYSTEM_FLAGS + 0xBD) // Unused Flag
-#define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
-#define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag
+#define FLAG_SKY_BATTLE                             (SYSTEM_FLAGS + 0xBC) // Unused Flag
+#define FLAG_TOGGLE_NO_CATCHING                     (SYSTEM_FLAGS + 0xBD) // Unused Flag
+#define FLAG_TOGGLE_NO_BAG_USE                      (SYSTEM_FLAGS + 0xBE) // Unused Flag
+#define FLAG_TOGGLE_INVERSE_BATTLE                  (SYSTEM_FLAGS + 0xBF) // Unused Flag
 
 // Daily Flags
 // These flags are cleared once per day
 // The start and end are byte-aligned because the flags are cleared in byte increments
-#define DAILY_FLAGS_START                           (FLAG_UNUSED_0x91F + (8 - FLAG_UNUSED_0x91F % 8))
+#define DAILY_FLAGS_START                           (FLAG_TOGGLE_INVERSE_BATTLE + (8 - FLAG_TOGGLE_INVERSE_BATTLE % 8))
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)

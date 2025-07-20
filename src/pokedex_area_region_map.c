@@ -14,6 +14,12 @@ static const u32 sPokedexAreaMap_Tilemap[] = INCBIN_U32("graphics/pokedex/region
 static const u32 sPokedexAreaMapAffine_Gfx[] = INCBIN_U32("graphics/pokedex/region_map_affine.8bpp.lz");
 static const u32 sPokedexAreaMapAffine_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map_affine.bin.lz");
 
+//Wilderness Map WIP TODO:
+static const u16 ALIGNED(4) sPokedexAreaMap_Pal_Wilderness[] = INCBIN_U16("graphics/pokedex/region_map.gbapal");
+static const u32 sPokedexAreaMap_Gfx_Wilderness[] = INCBIN_U32("graphics/pokedex/region_map.8bpp.lz");
+static const u32 sPokedexAreaMap_Tilemap_Wilderness[] = INCBIN_U32("graphics/pokedex/region_map.bin.lz");
+
+
 void LoadPokedexAreaMapGfx(const struct PokedexAreaMapTemplate *template)
 {
     u8 mode;
@@ -24,8 +30,8 @@ void LoadPokedexAreaMapGfx(const struct PokedexAreaMapTemplate *template)
     if (mode == 0)
     {
         SetBgAttribute(template->bg, BG_ATTR_METRIC, 0);
-        DecompressAndCopyTileDataToVram(template->bg, sPokedexAreaMap_Gfx, 0, template->offset, 0);
-        tilemap = DecompressAndCopyTileDataToVram(template->bg, sPokedexAreaMap_Tilemap, 0, 0, 1);
+        DecompressAndCopyTileDataToVram(template->bg, sPokedexAreaMap_Gfx_Wilderness, 0, template->offset, 0);
+        tilemap = DecompressAndCopyTileDataToVram(template->bg, sPokedexAreaMap_Tilemap_Wilderness, 0, 0, 1);
         AddValToTilemapBuffer(tilemap, template->offset, 32, 32, FALSE); // template->offset is always 0, so this does nothing.
     }
     else

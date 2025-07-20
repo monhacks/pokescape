@@ -100,6 +100,7 @@ struct CableClubPlayer
 
 extern const struct MapLayout *const gMapLayouts[];
 extern const struct MapHeader *const *const gMapGroups[];
+static const u8 sMapsecToRegion[];
 
 static void Overworld_ResetStateAfterWhiteOut(void);
 static void CB2_ReturnToFieldLocal(void);
@@ -651,12 +652,14 @@ static void LoadCurrentMapData(void)
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
     gMapHeader.mapLayout = GetMapLayout(gMapHeader.mapLayoutId);
+    gMapHeader.region = sMapsecToRegion[gMapHeader.regionMapSectionId];
 }
 
 static void LoadSaveblockMapHeader(void)
 {
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gMapHeader.mapLayout = GetMapLayout(gMapHeader.mapLayoutId);
+    gMapHeader.region = sMapsecToRegion[gMapHeader.regionMapSectionId];
 }
 
 static void SetPlayerCoordsFromWarp(void)
@@ -3676,3 +3679,94 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
         sprite->data[7]++;
     }
 }
+
+
+static const u8 sMapsecToRegion[] = {
+    [MAPSEC_TUTORIAL_ISLAND]            = REGION_F2P,
+    [MAPSEC_LUMBRIDGE]                  = REGION_F2P,
+    [MAPSEC_DRAYNOR]                    = REGION_F2P,
+    [MAPSEC_PORT_SARIM]                 = REGION_F2P,
+    [MAPSEC_RIMMINGTON]                 = REGION_F2P,
+    [MAPSEC_TAVERLEY]                   = REGION_F2P,
+    [MAPSEC_FALADOR]                    = REGION_F2P,
+    [MAPSEC_BARBARIAN_VILLAGE]          = REGION_F2P,
+    [MAPSEC_VARROCK]                    = REGION_F2P,
+    [MAPSEC_EDGEVILLE]                  = REGION_F2P,
+    [MAPSEC_ALKHARID]                   = REGION_F2P,
+    [MAPSEC_MUSA_POINT]                 = REGION_F2P,
+    [MAPSEC_GOBLIN_VILLAGE]             = REGION_F2P,
+    [MAPSEC_DWARVEN_MINES]              = REGION_F2P,
+    [MAPSEC_LUMBRIDGE_SWAMP]            = REGION_F2P,
+    [MAPSEC_MILL_LANE_MILL]             = REGION_F2P,
+    [MAPSEC_DRAYNOR_MANOR]              = REGION_F2P,
+    [MAPSEC_MUDSKIPPER_POINT]           = REGION_F2P,
+    [MAPSEC_WIZARDS_TOWER]              = REGION_F2P,
+    [MAPSEC_ROUTE_1]                    = REGION_F2P,
+    [MAPSEC_ROUTE_2]                    = REGION_F2P,
+    [MAPSEC_ROUTE_3]                    = REGION_F2P,
+    [MAPSEC_ROUTE_4]                    = REGION_F2P,
+    [MAPSEC_ROUTE_5]                    = REGION_F2P,
+    [MAPSEC_ROUTE_6]                    = REGION_F2P,
+    [MAPSEC_ROUTE_7]                    = REGION_F2P,
+    [MAPSEC_ROUTE_8]                    = REGION_F2P,
+    [MAPSEC_ROUTE_9]                    = REGION_F2P,
+    [MAPSEC_ROUTE_10]                   = REGION_F2P,
+    [MAPSEC_ROUTE_11]                   = REGION_F2P,
+    [MAPSEC_ROUTE_12]                   = REGION_F2P,
+    [MAPSEC_ROUTE_13]                   = REGION_F2P,
+    [MAPSEC_ROUTE_14]                   = REGION_F2P,
+    [MAPSEC_ROUTE_15]                   = REGION_F2P,
+    [MAPSEC_ROUTE_16]                   = REGION_F2P,
+    [MAPSEC_ROUTE_17]                   = REGION_F2P,
+    [MAPSEC_ROUTE_18]                   = REGION_F2P,
+    [MAPSEC_ROUTE_19]                   = REGION_F2P,
+    [MAPSEC_ROUTE_20]                   = REGION_F2P,
+    [MAPSEC_ROUTE_21]                   = REGION_F2P,
+    [MAPSEC_ROUTE_22]                   = REGION_F2P,
+    [MAPSEC_ROUTE_23]                   = REGION_F2P,
+    [MAPSEC_ROUTE_24]                   = REGION_F2P,
+    [MAPSEC_ROUTE_25]                   = REGION_F2P,
+    [MAPSEC_ROUTE_26]                   = REGION_F2P,
+    [MAPSEC_ROUTE_27]                   = REGION_F2P,
+    [MAPSEC_ROUTE_28]                   = REGION_F2P,
+    [MAPSEC_ROUTE_29]                   = REGION_F2P,
+    [MAPSEC_ROUTE_30]                   = REGION_F2P,
+    [MAPSEC_ROUTE_31]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_32]                   = REGION_F2P,
+    [MAPSEC_ROUTE_33]                   = REGION_F2P,
+    [MAPSEC_ROUTE_34]                   = REGION_F2P,
+    [MAPSEC_ROUTE_35]                   = REGION_F2P,
+    [MAPSEC_ROUTE_36]                   = REGION_F2P,
+    [MAPSEC_ROUTE_37]                   = REGION_F2P,
+    [MAPSEC_ROUTE_38]                   = REGION_F2P,
+    [MAPSEC_ROUTE_39]                   = REGION_F2P,
+    [MAPSEC_ROUTE_40]                   = REGION_F2P,
+    [MAPSEC_ROUTE_41]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_42]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_43]                   = REGION_WILDERNESS,
+    [MAPSEC_LUMBRIDGE_FOREST]           = REGION_F2P,
+    [MAPSEC_KARAMJA_VOLCANO]            = REGION_F2P,
+    [MAPSEC_ASGARNIAN_DUNGEON]          = REGION_F2P,
+    [MAPSEC_DUNGEON_SINKHOLE]           = REGION_F2P,
+    [MAPSEC_RIMMINGTON_MINES]           = REGION_F2P,
+    [MAPSEC_ABYSS]                      = REGION_F2P,
+    [MAPSEC_GRAND_EXCHANGE]             = REGION_F2P,
+    [MAPSEC_CRANDOR]                    = REGION_F2P,
+    [MAPSEC_ICE_MOUNTAIN]               = REGION_F2P,
+    [MAPSEC_GROTTO]                     = REGION_F2P,
+    [MAPSEC_MOR_UL_REK]                 = REGION_F2P,
+    [MAPSEC_LUMBRIDGE_SWAMP_CAVES]      = REGION_F2P,
+    [MAPSEC_BAY_OF_SARIM]               = REGION_F2P,
+    [MAPSEC_MUDSKIPPER_SOUND]           = REGION_F2P,
+    [MAPSEC_DAEMONHEIM]                 = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_44]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_45]                   = REGION_F2P,
+    [MAPSEC_ROUTE_46]                   = REGION_P2P,
+    [MAPSEC_ROUTE_47]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_48]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_49]                   = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_0]                    = REGION_WILDERNESS,
+    [MAPSEC_ROUTE_200]                  = REGION_WILDERNESS,
+    [MAPSEC_WILDERNESS_CRATER]          = REGION_WILDERNESS,
+    [MAPSEC_WILDERNESS_FOREST]          = REGION_WILDERNESS
+};
