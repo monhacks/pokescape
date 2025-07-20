@@ -504,6 +504,7 @@ script TRIGGER_HAMHIDEOUT_BABE_PATTY {
     closemessage
     setvar(VAR_TEMP_0, 2)
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 235)
+    clearflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     release
     end
 }
@@ -595,10 +596,10 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     msgbox(format("And you are sure this will save the world of the scourge that are monsters Sigmund?"))
     namebox ("Sigmund")
     msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\lAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\lThe world will be at peace.\lJust like we have always wanted…"))
-    setobjectxy(35, 41, 34)      //spawn in Prince Ali
-	setobjectxyperm(35, 41, 34)
-    applymovement (35, movement_HAM_Hideout_finale_walk_up) //walk beside player to left
-    waitmovement(0)
+    setobjectxy(35, 41, 33)      //spawn in Prince Ali
+	setobjectxyperm(35, 41, 33)
+    hidenamebox
+    closemessage
     applymovement (35, movement_HAM_Hideout_finale_walk_up) //Prince Ali; walk up one
     applymovement (OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up) //Player; walk up one
     applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up) //Zanik; walk up one
@@ -662,9 +663,11 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     //Zanik runs to the player
     namebox ("Zanik")
     msgbox(format("Quick while he is monologuing {PLAYER}.\lGrab the Prince and run!"))
+    fadescreenswapbuffers(FADE_TO_BLACK)
     subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11)                            //TBC
     addvar(VAR_GAMEMODE_LEVEL_CAP, 5) //Level 55 cap.                                         //TBC
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 245)                                             //TBC
+    setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     call(FOLLOWER_REMOVE)
     //warp outside to Lumbridge Forest
     warp(MAP_LUMBRIDGE_FOREST, 28, 5)
@@ -789,7 +792,7 @@ movement movement_HAM_Hideout_finale_Johanhus_1{
 }
 
 movement movement_HAM_Hideout_finale_misc_1{
-    walk_slow_up * 2
+    walk_slow_up
     walk_slow_left
     face_down
     step_end

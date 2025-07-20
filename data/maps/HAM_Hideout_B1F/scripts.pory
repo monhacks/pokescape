@@ -24,10 +24,12 @@ script HAMHIDEOUT_B1F_STATE {
     clearflag(FLAG_TEMP_D) //SHOWS NPCS
     setflag(FLAG_TEMP_C) //HIDES TRAINERS
     setflag(FLAG_TEMP_E)
+    clearflag(FLAG_TEMP_1C) //shows Ali, Jimmy, and Goebie in cells
 
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 220) { 
         setvar(VAR_TEMP_0, 1)
         setvar(VAR_TEMP_3, 1)
+        setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 225) { 
         setvar(VAR_TEMP_0, 2)
@@ -68,9 +70,9 @@ script HAMHIDEOUT_B1F_STATE {
         setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
         setvar(VAR_TEMP_3, 1)
     }
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 245) { 
-        setflag(FLAG_TEMP_D) //Hides NPCS
-        clearflag(FLAG_TEMP_C) //Shows TRAINERS
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 245) { 
+        setflag(FLAG_TEMP_C) //Shows NPCS
+        clearflag(FLAG_TEMP_D) //Hides TRAINERS
         clearflag(FLAG_TEMP_E)
         removeobject(18)      //Jail guard
         removeobject(19)      //Jail guard
@@ -80,6 +82,10 @@ script HAMHIDEOUT_B1F_STATE {
         removeobject(10)        //Guards blocking final room 
         removeobject(11)        //Guards blocking final room
         setflag(FLAG_TEMP_5)
+        removeobject(22)       //Jimmy
+        removeobject(23)       //Prince Ali
+        removeobject(34)       //Goebie
+        setflag(FLAG_TEMP_1C)
         setmetatile(36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0)
         setmetatile(36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1)
         setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
@@ -1329,9 +1335,17 @@ script HAM_HIDEOUT_B1F_PRINCE_ALI
     lock
     faceplayer
     namebox("Prince Ali")
-	msgbox(format("Ah, it is good to see a friendly face."))
+	msgbox(format("Ah, it is good to see a friendly face.\pThank you for rescuing us.\pI will take these prisoners to safety, please can I ask you to try and find Sigmund?\pHe has something that belongs to me.\pI will return and join you shortly, I promise."))
     hidenamebox
     closemessage
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    msgbox(format("Prince Ali escorts Jimmy and the Goebie out of the hideout."))
+    removeobject(22)
+    removeobject(23)
+    removeobject(34)
+    closemessage
+    setflag(FLAG_TEMP_1C)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 	release
 	end
 }

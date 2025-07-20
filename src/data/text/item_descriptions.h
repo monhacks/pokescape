@@ -4823,8 +4823,8 @@ static const u8 sBoatDesc[] = _(
     "");
 
 static const u8 sDragonAxeDesc[] = _(
-    "Used to cut down.\n"
-    "Trees.\n"
+    "Used to cut down\n"
+    "trees.\n"
     "");
 
 static const u8 sBattleaxeDesc[] = _(

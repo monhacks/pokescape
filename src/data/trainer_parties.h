@@ -3583,114 +3583,114 @@ static const struct TrainerMon sParty_SINKHOLE_NPC_FORGOTTENWARRIOR_1[] = {
 //Route28
 static const struct TrainerMon sParty_ROUTE28_TRAINER_1[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_GECKO,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_SALAMANDER_ORANGE_FORM,
     }
 };
 static const struct TrainerMon sParty_ROUTE28_TRAINER_2[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_DESERTSOLE,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_ANCHOVY,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_CHICKEN_VARROCK_FORM,
     }
 };
 static const struct TrainerMon sParty_ROUTE28_TRAINER_3[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_MONKEY_NINJA_FORM,
     }
 };
 static const struct TrainerMon sParty_ROUTE28_TRAINER_4[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_FROG_BLOATED_FORM,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_SPIDER_TEMPLE_FORM,
     },
 };
 static const struct TrainerMon sParty_ROUTE28_TRAINER_5[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_VOID_RAVAGER,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_PENANCE_FIGHTER,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_GOLEM_TITAN,
     }
 };
 //Route29
 static const struct TrainerMon sParty_ROUTE29_TRAINER_1[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_DREADNIP,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_DREADNIP,
     }
 };
 static const struct TrainerMon sParty_ROUTE29_TRAINER_2[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_GOAT_DESERT_FORM,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_DESERTWYRM,
     },
 };
 static const struct TrainerMon sParty_ROUTE29_TRAINER_3[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_ROCK_STRANGE_FORM,
     }
 };
 static const struct TrainerMon sParty_ROUTE29_TRAINER_4[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_DESERTSOLE,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_SHRIMP,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_CHICKEN_VARROCK_FORM,
     }
 };
 static const struct TrainerMon sParty_ROUTE29_TRAINER_5[] = {
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_MONKEY_NORMAL_FORM,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_MONKEY_HARMLESS_FORM,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_SCORPION_PIT_FORM,
     },
     {
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_SCORPION_POISON_FORM,
     }
 };

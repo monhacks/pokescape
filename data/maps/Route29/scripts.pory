@@ -56,36 +56,36 @@ script DUNGEONEERING_DOOR_ROUTE29
 script BATTLE_ROUTE29_TRAINER_1
 { //Dreadnip x2
     trainerbattle_single(TRAINER_ROUTE29_TRAINER_1, format("Tell me where the Strykewyrms are!\pNow!"),format("Keep your secrets then, noob."))
-    //namebox ("Slayer")
+    namebox ("Pay2Slay")
     msgbox(format("I've been looking for the Strykewyrms for hours.\pI was told they were found in the caves and desert but I have yet to come across any."))
-	//hidenamebox
+	hidenamebox
     release
 	end
 }
 script BATTLE_ROUTE29_TRAINER_2
 { //Desert sole , Heim lobster
     trainerbattle_single(TRAINER_ROUTE29_TRAINER_2, format("Minerals are truly fascinating don't you think?"),format("Keep your strong monsters.\pI will keep to my minerals."))
-    //namebox ("Miner")
+    namebox ("0 R E Z")
     msgbox(format("Keep your strong monsters.\pI will keep to my minerals."))
-	//hidenamebox
+	hidenamebox
     release
 	end
 }
 script BATTLE_ROUTE29_TRAINER_3
 { //Rock strange form
     trainerbattle_single(TRAINER_ROUTE29_TRAINER_3, format("I am examining this place for ancient relics.\pDo not disturb me!"),format("What do you mean the Digsite is north?"))
-    //namebox ("Archaeologist")
+    namebox ("Archaeologist")
     msgbox(format("What do you mean the Digsite is north?"))
-	//hidenamebox
+	hidenamebox
     release
 	end
 }
 script BATTLE_ROUTE29_TRAINER_4
 { //Mystery chicken, Shrimp, Varrock chicken
     trainerbattle_single(TRAINER_ROUTE29_TRAINER_4, format("I am getting real close to Falador.\pGet out of my way!"),format("I will keep going south.\pEventually I will find Falador."))
-    //namebox ("Noob")
+    namebox ("DirkGently3")
     msgbox(format("I will keep going south.\pEventually I will find Falador."))
-	//hidenamebox
+	hidenamebox
     release
 	end
 }

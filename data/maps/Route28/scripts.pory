@@ -77,10 +77,10 @@ script BATTLE_ROUTE28_TRAINER_1
 }
 script BATTLE_ROUTE28_TRAINER_2
 { //animated armor, Dobbin, Ungodbird
-    trainerbattle_single(TRAINER_ROUTE28_TRAINER_2, format("Hey you!\pYou look worse of than me.\pLets fight."),format("This makes no sense I have better armour than you."))
-    //namebox ("Bronze Noob")
+    trainerbattle_single(TRAINER_ROUTE28_TRAINER_2, format("Hey you!\pYou look worse of than me.\pLet's fight."),format("This makes no sense I have better armour than you."))
+    namebox ("Bronze Noob")
     msgbox(format("My friend is looking for Falador.\pHave you seen him?"))
-	//hidenamebox
+	hidenamebox
     release
 	end
 }
@@ -104,10 +104,10 @@ script BATTLE_ROUTE28_TRAINER_4
 }
 script BATTLE_ROUTE28_TRAINER_5
 { //mole thing from pest control, Spidine, Ninja monkey
-    trainerbattle_single(TRAINER_ROUTE28_TRAINER_5, format("Hey lets have a quick duel!"),format("Wow, when I said lets have a quick duel I didn't expect it to be that quick."))
-    //namebox ("Rusher")
+    trainerbattle_single(TRAINER_ROUTE28_TRAINER_5, format("Hey let's have a quick duel!"),format("Wow, when I said lets have a quick duel I didn't expect it to be that quick."))
+    namebox ("Set0Ka1ba")
     msgbox(format("Wow, when I said lets have a quick duel I didn't expect it to be that quick."))
-	//hidenamebox
+	hidenamebox
     release
 	end
 }
@@ -143,7 +143,16 @@ script Mithrilman_Route28 {
 
 
 
-
+script Runecrafter_Route28 {
+	lock
+	faceplayer
+    namebox("LavaChick3n")
+    msgbox(format("Did you know that crafting Lava Runes is the fastest way to 99 Runecrafting?\pIt can just be very expensive with lots of runners, and it's not very profitable…"))
+    hidenamebox
+    closemessage
+    release
+    end
+}
 
 
 
