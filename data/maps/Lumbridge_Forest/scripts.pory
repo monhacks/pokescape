@@ -28,7 +28,21 @@ script LumForest_STATE{
 			clearflag(FLAG_TEMP_8)
 		}
 	}
-	if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 250)) {           //post-hideout event
+	if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 245)) {           //post-hideout event
+	removeobject(1)
+	removeobject(2)
+	removeobject(3)
+	removeobject(4)
+	removeobject(5)
+	removeobject(29)
+	setflag(FLAG_TEMP_1E)
+	setvar(VAR_TEMP_1, 1)
+	setobjectxy(42, 28, 4)      //spawn unhooded Zanik
+	setobjectxyperm(42, 28, 4)
+    setobjectxy(43, 27, 4)      //spawn Prince Ali
+	setobjectxyperm(43, 27, 4)
+	}
+	if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 250)) {           //post-hideout event
 	removeobject(1)
 	removeobject(2)
 	removeobject(3)
@@ -42,18 +56,6 @@ script LumForest_STATE{
 }
 
 script POST_WARP_ZANIK_EVENT {
-	removeobject(1)     //hide HAM members outside base
-	removeobject(2)     //hide HAM members outside base
-	removeobject(3)     //hide HAM members outside base
-	removeobject(4)     //hide HAM members outside base
-	removeobject(5)     //hide HAM members outside base
-	removeobject(29)    //hide hooded Zanik
-	setflag(FLAG_TEMP_1E)  
-	setobjectxy(42, 28, 4)      //spawn unhooded Zanik
-	setobjectxyperm(42, 28, 4)
-    setobjectxy(43, 27, 4)      //spawn Prince Ali
-	setobjectxyperm(43, 27, 4)
-	fadescreenswapbuffers(FADE_FROM_BLACK)
 	namebox ("Zanik")
     msgbox(format("We made it out somehow."))
 	applymovement(42, MOVEMENT_INTERACT_LEFT)
@@ -85,7 +87,8 @@ script POST_WARP_ZANIK_EVENT {
     closemessage
     applymovement(42, movement_Post_HAM_Hideout_Zanik_Exit)     //Zanik walks off
 	removeobject(42)                                           //removeobject Zanik
-    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)
+    setflag(FLAG_TEMP_1D)
+	setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)
     release
     end
 }
