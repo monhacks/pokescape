@@ -30,7 +30,6 @@
 #include "qol_field_moves.h" // qol_field_moves
 #include "data.h"
 #include "outfit_menu.h"
-#include "constants/region_map_sections.h"
 
 /*
  *  This file handles region maps generally, and the map used when selecting a fly destination.
