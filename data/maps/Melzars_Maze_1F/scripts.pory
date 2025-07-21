@@ -36,7 +36,7 @@ script MELZARS_1F_RAT {
 	delay(30)
 	applymovement(11, movement_MELZAR_RAT_3)
 	waitmovement(0)
-	playfanfare (MUS_OBTAIN_ITEM)
+	playfanfare (MUS_PS_GET_ITEM)
 	removeobject(10)
 	setflag(FLAG_TEMP_1F)
 	msgbox(format("RAT obtained the RED KEY."))
@@ -123,7 +123,7 @@ script MELZARS_1F_RATS_QUEST {
 					removeobject(VAR_LAST_TALKED)
 					setvar(VAR_POKESCAPE_MELZARS_MAZE_DOORS, 1) //1F KEY OBTAINED
 					msgbox(format("The Rat dropped the RED KEY!"))
-					playfanfare (MUS_OBTAIN_ITEM)
+					playfanfare (MUS_PS_GET_ITEM)
 					msgbox(format("{PLAYER} obtained the RED KEY."))
 					waitfanfare
 					closemessage

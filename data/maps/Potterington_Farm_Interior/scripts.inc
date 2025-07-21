@@ -204,7 +204,7 @@ POTTERINGTON_FARM_Zamorak_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_ZAMORAK_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Zamorak_Text_2
 	waitfanfare
 	giveegg SPECIES_ZAMLING
@@ -234,7 +234,7 @@ POTTERINGTON_FARM_Saradomin_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_SARADOMIN_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Saradomin_Text_2
 	waitfanfare
 	giveegg SPECIES_SARALING
@@ -264,7 +264,7 @@ POTTERINGTON_FARM_Guthix_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_GUTHIX_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Guthix_Text_2
 	waitfanfare
 	giveegg SPECIES_GUTHLING
@@ -297,7 +297,7 @@ POTTERINGTON_FARM_Gonthorian_1:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_BANDLING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Gonthorian_Text_2
 	waitfanfare
 	giveegg SPECIES_BANDLING
@@ -379,7 +379,7 @@ POTTERINGTON_FARM_Seren_Spirit_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_SERELING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Seren_Spirit_Text_1
 	waitfanfare
 	giveegg SPECIES_SERELING
@@ -408,7 +408,7 @@ POTTERINGTON_FARM_Demonheadge_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_RAVENLING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Demonheadge_Text_2
 	waitfanfare
 	giveegg SPECIES_RAVENLING
@@ -438,7 +438,7 @@ POTTERINGTON_FARM_HyperStan_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_BASILISK_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_HyperStan_Text_2
 	waitfanfare
 	giveegg SPECIES_BASILISK_BABY_FORM

@@ -81,7 +81,7 @@ Melzar_Maze_B1F_GREEN_KEY_2:
 	msgbox Melzar_Maze_B1F_GREEN_KEY_Text_0
 	closemessage
 	setvar VAR_POKESCAPE_MELZARS_MAZE_DOORS, 3
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox Melzar_Maze_B1F_GREEN_KEY_Text_1
 	waitfanfare
 	closemessage
@@ -229,7 +229,7 @@ TRIGGER_Melzar_Maze_HAM_EVENT_BABE_1:
 	waitmovement 0
 	setflag FLAG_TEMP_1A
 	removeobject 9
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox TRIGGER_Melzar_Maze_HAM_EVENT_BABE_Text_3
 	waitfanfare
 	closemessage

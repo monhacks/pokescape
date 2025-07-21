@@ -295,7 +295,7 @@ script EventScript_DraynorManor_TransferredToPC_ExExParrot{
 script EventScript_DraynorManor_ReceivedFanfare_ExExParrot{
 	bufferspeciesname(1, SPECIES_EXEXPARROT)
 	//removeobject LOCALID_BELDUM_BALL
-	playfanfare (MUS_OBTAIN_ITEM)
+	playfanfare (MUS_PS_GET_ITEM)
 	msgbox(format("{PLAYER} obtained a {STR_VAR_2}."))
 	waitmessage
 	waitfanfare

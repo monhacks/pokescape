@@ -309,7 +309,7 @@ GiveMon_TransferredToPC_GOLDENGNOME::
 
 GiveMon_ReceivedFanfare_GOLDENGNOME::
 	bufferspeciesname 1, SPECIES_GNOMEY
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox GiveMon_ReceivedFanfare_GOLDENGNOME_Text_0
 	waitmessage
 	waitfanfare

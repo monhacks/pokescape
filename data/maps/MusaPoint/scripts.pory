@@ -1257,7 +1257,7 @@ script EventScript_GiftMonster_TransferredToPC{
 
 script EventScript_GiftMonster_ReceivedFanfare{
 	bufferspeciesname(1, VAR_TEMP_1)
-	playfanfare (MUS_OBTAIN_ITEM)
+	playfanfare (MUS_PS_GET_ITEM)
 	msgbox(format("{PLAYER} obtained {STR_VAR_2}."))
 	waitmessage
 	waitfanfare

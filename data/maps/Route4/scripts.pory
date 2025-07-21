@@ -401,7 +401,7 @@ script POTTERINGTON_FARM_MysteriousFigure
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_ZAROLING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from the Mysterious Figure!"))
         waitfanfare
         giveegg (SPECIES_ZAROLING)
@@ -437,7 +437,7 @@ script POTTERINGTON_FARM_Camel
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_TUMEKLING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from ???!"))
         waitfanfare
         giveegg (SPECIES_TUMEKLING)
@@ -475,7 +475,7 @@ script POTTERINGTON_FARM_Barbarian
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_UNGODLING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from Holstein!"))
         waitfanfare
         giveegg (SPECIES_UNGODLING)
@@ -504,7 +504,7 @@ script POTTERINGTON_FARM_ARMADYL
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_ARMALING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from the pigeon!"))
         waitfanfare
         giveegg (SPECIES_UNGODLING)

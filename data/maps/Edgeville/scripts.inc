@@ -504,7 +504,7 @@ FIND_BRASS_KEY::
 	lock
 	setflag FLAG_BRASS_KEY
 	removeobject VAR_LAST_TALKED
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox FIND_BRASS_KEY_Text_0
 	waitfanfare
 	closemessage

@@ -356,7 +356,7 @@ Movement_Altar_TELEPORT:
 	step_end
 
 ITEM_SAFARI_ZONE_POUCH::
-	playse MUS_OBTAIN_ITEM
+	playse MUS_PS_GET_ITEM
 	removeobject VAR_LAST_TALKED
 	msgbox ITEM_SAFARI_ZONE_POUCH_Text_0
 	delay 60

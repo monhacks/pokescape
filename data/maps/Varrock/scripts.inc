@@ -1059,7 +1059,7 @@ GiveMon_VARROCK_TransferredToPC_KITTEN::
 
 GiveMon_VARROCK_ReceivedFanfare_KITTEN::
 	bufferspeciesname 1, SPECIES_KITTEN
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox GiveMon_VARROCK_ReceivedFanfare_KITTEN_Text_0
 	waitmessage
 	waitfanfare

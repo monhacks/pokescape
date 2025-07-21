@@ -470,7 +470,7 @@ script SCRIPT_PHEONIX_EGG_CLAP {
 	goto_if_eq (SCRIPT_PHEONIX_EGG_NOROOM)
 	setflag (FLAG_RECEIVED_PHOENIX_EGG)
 	removeobject(3)
-	playfanfare (MUS_OBTAIN_ITEM)
+	playfanfare (MUS_PS_GET_ITEM)
 	msgbox(format("Obtained the HAPPY LITTLE EGG!"))
 	waitfanfare
 	giveegg (SPECIES_PHOENLING_REBIRTH_FORM)
@@ -488,7 +488,7 @@ script SCRIPT_PHEONIX_EGG_KICK {
 	goto_if_eq (SCRIPT_PHEONIX_EGG_NOROOM)
 	setflag (FLAG_RECEIVED_PHOENIX_EGG)
 	removeobject(3)
-	playfanfare (MUS_OBTAIN_ITEM)
+	playfanfare (MUS_PS_GET_ITEM)
 	msgbox(format("Obtained the ANGRY LITTLE EGG!"))
 	waitfanfare
 	giveegg (SPECIES_PHOENLING_REBORN_FORM)

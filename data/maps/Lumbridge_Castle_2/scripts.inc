@@ -290,7 +290,7 @@ Lumbridge_Castle_Professor_Normal_Tree_1_1:
 	namebox LeftDoorScript_Text_4
 	msgbox Lumbridge_Castle_Professor_Normal_Tree_1_Text_0
 	hidenamebox
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox Lumbridge_Castle_Professor_Normal_Tree_1_Text_1
 	waitfanfare
 	namebox LeftDoorScript_Text_4

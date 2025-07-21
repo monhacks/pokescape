@@ -39,7 +39,7 @@ script Melzar_Maze_2F_Bookshelf {
 	if (var(VAR_POKESCAPE_MELZARS_MAZE_DOORS) == 1) {
 		msgbox(format("You search the bookshelf and find a key!"))
 		setvar(VAR_POKESCAPE_MELZARS_MAZE_DOORS, 2) //2F KEY OBTAINED
-		playfanfare (MUS_OBTAIN_ITEM)
+		playfanfare (MUS_PS_GET_ITEM)
 		msgbox(format("{PLAYER} obtained the YELLOW KEY."))
 		waitfanfare
 	}

@@ -376,7 +376,7 @@ script TRIGGER_HAMHIDEOUT_BABE_PATTY {
     hidenamebox
     closemessage
     //setvar(VAR_DWARVEN_MINES_STATE, 5) 
-    playfanfare (MUS_OBTAIN_ITEM)
+    playfanfare (MUS_PS_GET_ITEM)
     msgbox(format("{PLAYER} obtained the CELL KEY."))
     waitfanfare
     closemessage

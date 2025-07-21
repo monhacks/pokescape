@@ -39,7 +39,7 @@ Melzar_Maze_2F_Bookshelf_1:
 Melzar_Maze_2F_Bookshelf_2:
 	msgbox Melzar_Maze_2F_Bookshelf_Text_0
 	setvar VAR_POKESCAPE_MELZARS_MAZE_DOORS, 2
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox Melzar_Maze_2F_Bookshelf_Text_1
 	waitfanfare
 	goto Melzar_Maze_2F_Bookshelf_1

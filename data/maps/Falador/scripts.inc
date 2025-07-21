@@ -526,7 +526,7 @@ GiveMon_FALADOR_TransferredToPC_ANICHAIR::
 
 GiveMon_FALADOR_ReceivedFanfare_ANICHAIR::
 	bufferspeciesname 1, SPECIES_ANICHAIR
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox GiveMon_FALADOR_ReceivedFanfare_ANICHAIR_Text_0
 	waitmessage
 	waitfanfare

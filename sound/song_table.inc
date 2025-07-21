@@ -683,6 +683,9 @@ gSongTable::
 	song mus_ps_ice_mountain, 0, 0
 	song mus_ps_vs_tzhaar, 0, 0
 	song mus_ps_vs_frogeelman, 0, 0
+	song mus_ps_get_badge, 2, 2
+	song mus_ps_get_item, 2, 2
+	song mus_ps_lvl_up, 2, 2
 	
 
 	

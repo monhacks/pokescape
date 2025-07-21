@@ -612,7 +612,7 @@
 #define	MUS_PS_ENCOUNTER_SPECIAL	663
 #define	MUS_PS_ENCOUNTER_MITHRILMAN	664
 
-//JINGLES			
+//OTHER		
 #define	MUS_PS_QUEST_COMPLETE	    665
 #define	MUS_PS_KOUREND_CATACOMBS	666
 #define MUS_PS_TRAINER_VICTORY      667
@@ -625,8 +625,11 @@
 #define	MUS_PS_ICE_MOUNTAIN	        674
 #define	MUS_PS_VS_TZHAAR	        675
 #define	MUS_PS_VS_FROGEELMAN	    676
+#define	MUS_PS_GET_BADGE	        677
+#define	MUS_PS_GET_ITEM	            678
+#define	MUS_PS_LVL_UP	            679
 
-#define END_MUS                     MUS_PS_VS_FROGEELMAN
+#define END_MUS                     MUS_PS_LVL_UP
 
 
 

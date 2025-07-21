@@ -36,7 +36,7 @@ MELZARS_1F_RAT::
 	delay 30
 	applymovement 11, movement_MELZAR_RAT_3
 	waitmovement 0
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	removeobject 10
 	setflag FLAG_TEMP_1F
 	msgbox MELZARS_1F_RAT_Text_1
@@ -171,7 +171,7 @@ MELZARS_1F_RATS_QUEST_9:
 	removeobject VAR_LAST_TALKED
 	setvar VAR_POKESCAPE_MELZARS_MAZE_DOORS, 1
 	msgbox MELZARS_1F_RATS_QUEST_Text_1
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox MELZARS_1F_RATS_QUEST_Text_2
 	waitfanfare
 	closemessage

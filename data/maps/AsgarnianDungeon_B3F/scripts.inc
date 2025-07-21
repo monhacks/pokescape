@@ -83,7 +83,7 @@ DUNGEONEERING_DOOR_AsgarnianDungeon_B3F_KEYS_1:
 
 DUNGEONEERING_DOOR_AsgarnianDungeon_B3F_KEYS_2:
 	setvar VAR_DUNGEONEERING_DOOR_AsgarnianDungeon_STATE, 10
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox DUNGEONEERING_DOOR_AsgarnianDungeon_B3F_KEYS_Text_0
 	waitfanfare
 	closemessage

@@ -256,7 +256,7 @@ script POTTERINGTON_FARM_Zamorak
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_ZAMORAK_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from Zamorak!"))
         waitfanfare
         giveegg (SPECIES_ZAMLING)
@@ -288,7 +288,7 @@ script POTTERINGTON_FARM_Saradomin
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_SARADOMIN_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from Saradomin!"))
         waitfanfare
         giveegg (SPECIES_SARALING)
@@ -320,7 +320,7 @@ script POTTERINGTON_FARM_Guthix
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_GUTHIX_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from Guthix!"))
         waitfanfare
         giveegg (SPECIES_GUTHLING)
@@ -352,7 +352,7 @@ script POTTERINGTON_FARM_Gonthorian
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_BANDLING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from Gonthorian!"))
         waitfanfare
         giveegg (SPECIES_BANDLING)
@@ -431,7 +431,7 @@ script POTTERINGTON_FARM_Seren_Spirit
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_SERELING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from the Seren Spirit!"))
         waitfanfare
         giveegg (SPECIES_SERELING)
@@ -465,7 +465,7 @@ script POTTERINGTON_FARM_Demonheadge
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_RAVENLING_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from the Demonheadge!"))
         waitfanfare
         giveegg (SPECIES_RAVENLING)
@@ -497,7 +497,7 @@ script POTTERINGTON_FARM_HyperStan
         compare (VAR_RESULT, PARTY_SIZE)
         goto_if_eq (SCRIPT_EGG_NOROOM)
         setflag (FLAG_RECEIVED_BASILISK_EGG)
-        playfanfare (MUS_OBTAIN_ITEM)
+        playfanfare (MUS_PS_GET_ITEM)
         msgbox(format("Obtained an EGG from the HyperStan!"))
         waitfanfare
         giveegg (SPECIES_BASILISK_BABY_FORM)

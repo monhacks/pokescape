@@ -216,7 +216,7 @@ script GIFT_FROGEELBURGER {
     msgbox(format("Gift successfully found!"))
 
     additem(ITEM_FROGEEL_BURGER, 1)
-	playfanfare (MUS_OBTAIN_ITEM)
+	playfanfare (MUS_PS_GET_ITEM)
 	msgbox(format("{PLAYER} obtained a FROGEEL BURGER."))
 	waitmessage
 	waitfanfare

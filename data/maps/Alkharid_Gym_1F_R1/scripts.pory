@@ -369,7 +369,7 @@ movement Movement_Altar_TELEPORT
 
 script ITEM_SAFARI_ZONE_POUCH
 {
-    playse (MUS_OBTAIN_ITEM)
+    playse (MUS_PS_GET_ITEM)
     removeobject (VAR_LAST_TALKED)
     msgbox(format("You found extra Pouches!"))
     delay(60)

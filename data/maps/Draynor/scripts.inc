@@ -200,7 +200,7 @@ GIFT_DRAGONKITE::
 GIFT_FROGEELBURGER::
 	msgbox GIFT_DRAGONKITE_Text_0
 	additem ITEM_FROGEEL_BURGER, 1
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox GIFT_FROGEELBURGER_Text_0
 	waitmessage
 	waitfanfare

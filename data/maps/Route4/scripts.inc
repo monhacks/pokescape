@@ -428,7 +428,7 @@ POTTERINGTON_FARM_MysteriousFigure_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_ZAROLING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_MysteriousFigure_Text_2
 	waitfanfare
 	giveegg SPECIES_ZAROLING
@@ -464,7 +464,7 @@ POTTERINGTON_FARM_Camel_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_TUMEKLING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Camel_Text_3
 	waitfanfare
 	giveegg SPECIES_TUMEKLING
@@ -497,7 +497,7 @@ POTTERINGTON_FARM_Barbarian_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_UNGODLING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_Barbarian_Text_2
 	waitfanfare
 	giveegg SPECIES_UNGODLING
@@ -533,7 +533,7 @@ POTTERINGTON_FARM_ARMADYL_2:
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq SCRIPT_EGG_NOROOM
 	setflag FLAG_RECEIVED_ARMALING_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox POTTERINGTON_FARM_ARMADYL_Text_1
 	waitfanfare
 	giveegg SPECIES_UNGODLING

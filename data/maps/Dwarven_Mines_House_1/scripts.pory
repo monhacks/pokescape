@@ -149,7 +149,7 @@ script NPC_Dwarven_Mines_House_12        //Overseer in office
 		hidenamebox
 		//give key
 		setvar(VAR_DWARVEN_MINES_STATE, 5) //FACTORY KEY OBTAINED
-		playfanfare (MUS_OBTAIN_ITEM)
+		playfanfare (MUS_PS_GET_ITEM)
 		msgbox(format("{PLAYER} obtained the FACTORY KEY."))
 		waitfanfare
 		closemessage

@@ -65,7 +65,7 @@ EventScript_NoRoomForItem::
 	return
 
 EventScript_PlayFanfareObtainedItem::
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	return
 
 EventScript_PlayFanfareObtainedTMHM::

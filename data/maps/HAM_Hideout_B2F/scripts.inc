@@ -17,6 +17,7 @@ HAMHIDEOUT_B2F_STATE::
 	removeobject 22
 	removeobject 24
 	removeobject 4
+	setflag FLAG_TEMP_1C
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 230
 	goto_if_eq HAMHIDEOUT_B2F_STATE_2
 HAMHIDEOUT_B2F_STATE_1:
@@ -344,7 +345,7 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY::
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_9
 	hidenamebox
 	closemessage
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_10
 	waitfanfare
 	closemessage
@@ -555,10 +556,12 @@ TRIGGER_HAMHIDEOUT_JOHANHUS_1:
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_4
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_5
-	setobjectxy 35, 41, 33
-	setobjectxyperm 35, 41, 33
 	hidenamebox
 	closemessage
+	addobject 35
+	clearflag FLAG_TEMP_1C
+	applymovement 35, movement_HAM_Hideout_finale_walk_up
+	waitmovement 0
 	applymovement 35, movement_HAM_Hideout_finale_walk_up
 	applymovement OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up
 	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up

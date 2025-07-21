@@ -53,6 +53,9 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_OBTAIN_SYMBOL]       = { MUS_OBTAIN_SYMBOL,       318 },
     [FANFARE_REGISTER_MATCH_CALL] = { MUS_REGISTER_MATCH_CALL, 135 },
     [FANFARE_QUEST_COMPLETE]      = { MUS_PS_QUEST_COMPLETE,   340 },
+    [FANFARE_PS_OBTAIN_BADGE]     = { MUS_PS_GET_BADGE,        340 },
+    [FANFARE_PS_OBTAIN_ITEM]      = { MUS_PS_GET_ITEM,         160 },
+    [FANFARE_PS_LEVEL_UP]         = { MUS_PS_LVL_UP,            90 },
 };
 
 void InitMapMusic(void)

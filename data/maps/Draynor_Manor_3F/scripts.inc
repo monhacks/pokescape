@@ -304,7 +304,7 @@ EventScript_DraynorManor_TransferredToPC_ExExParrot::
 
 EventScript_DraynorManor_ReceivedFanfare_ExExParrot::
 	bufferspeciesname 1, SPECIES_EXEXPARROT
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox EventScript_DraynorManor_ReceivedFanfare_ExExParrot_Text_0
 	waitmessage
 	waitfanfare

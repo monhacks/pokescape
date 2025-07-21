@@ -1459,7 +1459,7 @@ EventScript_GiftMonster_TransferredToPC::
 
 EventScript_GiftMonster_ReceivedFanfare::
 	bufferspeciesname 1, VAR_TEMP_1
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox EventScript_GiftMonster_ReceivedFanfare_Text_0
 	waitmessage
 	waitfanfare

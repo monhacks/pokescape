@@ -146,7 +146,7 @@ NPC_Dwarven_Mines_House_12_2:
 	msgbox NPC_Dwarven_Mines_House_12_Text_3
 	hidenamebox
 	setvar VAR_DWARVEN_MINES_STATE, 5
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_PS_GET_ITEM
 	msgbox NPC_Dwarven_Mines_House_12_Text_4
 	waitfanfare
 	closemessage

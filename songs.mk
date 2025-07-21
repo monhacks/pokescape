@@ -1470,3 +1470,11 @@ $(MID_SUBDIR)/mus_ps_vs_tzhaar.s: %.s: %.mid
 $(MID_SUBDIR)/mus_ps_vs_frogeelman.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100
 	
+$(MID_SUBDIR)/mus_ps_get_badge.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P5
+
+$(MID_SUBDIR)/mus_ps_get_item.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P5
+
+$(MID_SUBDIR)/mus_ps_lvl_up.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P5

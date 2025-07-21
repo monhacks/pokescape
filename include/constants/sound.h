@@ -20,6 +20,10 @@
 #define FANFARE_OBTAIN_SYMBOL       16
 #define FANFARE_REGISTER_MATCH_CALL 17
 #define FANFARE_QUEST_COMPLETE      18
+#define FANFARE_PS_LEVEL_UP         19
+#define FANFARE_PS_OBTAIN_ITEM      20
+#define FANFARE_PS_OBTAIN_BADGE     21
+
 
 #define CRY_MODE_NORMAL        0 // Default
 #define CRY_MODE_DOUBLES       1 // Shortened cry for double battles
