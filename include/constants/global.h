@@ -57,10 +57,13 @@
 #define POKE_NEWS_COUNT 16
 #define PC_ITEMS_COUNT 50
 #define BAG_ITEMS_COUNT 100
-#define BAG_KEYITEMS_COUNT 50
+#define BAG_KEYITEMS_COUNT 80
 #define BAG_POKEBALLS_COUNT 24
-#define BAG_TMHM_COUNT 74 //Change to 100. (will need to start a new savefile.)
-#define BAG_BERRIES_COUNT 46
+#define BAG_TMHM_COUNT 100  //74 //Change to 100. (will need to start a new savefile.)
+#define BAG_BERRIES_COUNT 50
+#define BAG_MEDICINE_COUNT 35
+#define BAG_LOOT_COUNT 35
+#define BAG_RUNES_COUNT 35
 #define OBJECT_EVENT_TEMPLATES_COUNT 64
 #define DECOR_MAX_SECRET_BASE 16
 #define DECOR_MAX_PLAYERS_HOUSE 12

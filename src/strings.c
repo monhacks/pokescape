@@ -290,8 +290,11 @@ const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
 const u8 gText_ItemsPocket[] = _("ITEMS");
 const u8 gText_PokeBallsPocket[] = _("POUCHES");
 const u8 gText_TMHMPocket[] = _("SCROLLS");
-const u8 gText_BerriesPocket[] = _("GOODIES");
+const u8 gText_BerriesPocket[] = _("RESOURCES");
 const u8 gText_KeyItemsPocket[] = _("KEY ITEMS");
+const u8 gText_Medicine[] = _("MEDICINE");
+const u8 gText_Loot[] = _("LOOT");
+const u8 gText_Runes[] = _("RUNES");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
@@ -299,7 +302,10 @@ const u8 *const gPocketNamesStringsTable[] =
     [BALLS_POCKET] = gText_PokeBallsPocket,
     [TMHM_POCKET]  = gText_TMHMPocket,
     [BERRIES_POCKET] = gText_BerriesPocket,
-    [KEYITEMS_POCKET] = gText_KeyItemsPocket
+    [KEYITEMS_POCKET] = gText_KeyItemsPocket,
+    [MEDICINE_POCKET] = gText_Medicine,
+    [LOOT_POCKET] = gText_Loot,
+    [RUNES_POCKET] = gText_Runes
 };
 
 const u8 gText_NumberItem_Berry[] = _("{STR_VAR_2}");
@@ -721,7 +727,7 @@ const u8 gText_Items[] = _("ITEMS");
 const u8 gText_Key_Items[] = _("KEY ITEMS");
 const u8 gText_Poke_Balls[] = _("POUCHES");
 const u8 gText_TMs_Hms[] = _("TMs & HMs");
-const u8 gText_Berries2[] = _("GOODIES");
+const u8 gText_Berries2[] = _("RESOURCES");
 const u8 gText_SomeonesPC[] = _("SOMEONE'S PC");
 const u8 gText_LanettesPC[] = _("LANETTE'S PC");
 const u8 gText_PlayersPC[] = _("{PLAYER}'s PC");

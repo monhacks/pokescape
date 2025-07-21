@@ -8,13 +8,20 @@
 #define POCKET_TM_HM       3
 #define POCKET_BERRIES     4
 #define POCKET_KEY_ITEMS   5
+#define POCKET_MEDICINE    6
+#define POCKET_LOOT        7
+#define POCKET_RUNES       8
 
 #define ITEMS_POCKET       0
 #define BALLS_POCKET       1
 #define TMHM_POCKET        2
 #define BERRIES_POCKET     3
 #define KEYITEMS_POCKET    4
-#define POCKETS_COUNT      5
+#define MEDICINE_POCKET    5
+#define LOOT_POCKET        6
+#define RUNES_POCKET       7
+#define POCKETS_COUNT      8
+
 
 #define REPEL_LURE_MASK         (1 << 15)
 #define IS_LAST_USED_LURE(var)  (var & REPEL_LURE_MASK)

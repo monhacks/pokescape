@@ -331,9 +331,11 @@ static const u8 sContextMenuItems_TmHmPocket[] = {
 };
 
 static const u8 sContextMenuItems_BerriesPocket[] = {
-    ACTION_CHECK_TAG,   ACTION_DUMMY,
     ACTION_USE,         ACTION_GIVE,
     ACTION_TOSS,        ACTION_CANCEL
+    /*ACTION_CHECK_TAG,   ACTION_DUMMY,
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL*/
 };
 
 static const u8 sContextMenuItems_BattleUse[] = {
@@ -367,6 +369,21 @@ static const u8 sContextMenuItems_QuizLady[] = {
 
 static const u8 sContextMenuItems_KeyItemsPocket_NoReg[] = {
     ACTION_USE, ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_MedicinePocket[] = {
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_LootPocket[] = {
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_RunesPocket[] = {
+    ACTION_USE,         ACTION_GIVE,
+    ACTION_TOSS,        ACTION_CANCEL
 };
 
 static const TaskFunc sContextMenuFuncs[] = {
@@ -1697,6 +1714,18 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerriesPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerriesPocket);
                 break;
+            case MEDICINE_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_MedicinePocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MedicinePocket);
+                break;
+            case LOOT_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_LootPocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_LootPocket);
+                break;
+            case RUNES_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_RunesPocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_RunesPocket);
+                break;
             }
         }
     }
@@ -2828,6 +2857,18 @@ static void SortItemsInBag(u8 pocket, u8 type)
     case TMHM_POCKET:
         itemMem = gSaveBlock1Ptr->bagPocket_TMHM;
         itemAmount = BAG_TMHM_COUNT;
+        break;
+    case MEDICINE_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_Medicine;
+        itemAmount = BAG_MEDICINE_COUNT;
+        break;
+    case LOOT_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_Loot;
+        itemAmount = BAG_LOOT_COUNT;
+        break;
+    case RUNES_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_Runes;
+        itemAmount = BAG_RUNES_COUNT;
         break;
     default:
         return;

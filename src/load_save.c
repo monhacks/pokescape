@@ -27,6 +27,9 @@ struct LoadedSaveData
  /*0x0130*/ struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
  /*0x0230*/ struct ItemSlot berries[BAG_BERRIES_COUNT];
  /*0x02E8*/ struct Mail mail[MAIL_COUNT];
+            struct ItemSlot medicine[BAG_MEDICINE_COUNT];
+            struct ItemSlot loot[BAG_LOOT_COUNT];
+            struct ItemSlot runes[BAG_RUNES_COUNT];
 };
 
 // EWRAM DATA
@@ -250,6 +253,18 @@ void LoadPlayerBag(void)
     for (i = 0; i < MAIL_COUNT; i++)
         gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
 
+    // load player medicine.
+    for (i = 0; i < BAG_MEDICINE_COUNT; i++)
+        gLoadedSaveData.medicine[i] = gSaveBlock1Ptr->bagPocket_Medicine[i];
+
+    // load player loot.
+    for (i = 0; i < BAG_LOOT_COUNT; i++)
+        gLoadedSaveData.loot[i] = gSaveBlock1Ptr->bagPocket_Loot[i];
+
+    // load player runes.
+    for (i = 0; i < BAG_RUNES_COUNT; i++)
+        gLoadedSaveData.runes[i] = gSaveBlock1Ptr->bagPocket_Runes[i];
+
     gLastEncryptionKey = gSaveBlock2Ptr->encryptionKey;
 }
 
@@ -281,6 +296,15 @@ void SavePlayerBag(void)
     // save mail.
     for (i = 0; i < MAIL_COUNT; i++)
         gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
+
+    for (i = 0; i < BAG_MEDICINE_COUNT; i++)
+        gSaveBlock1Ptr->bagPocket_Medicine[i] = gLoadedSaveData.medicine[i];
+
+    for (i = 0; i < BAG_LOOT_COUNT; i++)
+        gSaveBlock1Ptr->bagPocket_Loot[i] = gLoadedSaveData.loot[i];
+
+    for (i = 0; i < BAG_RUNES_COUNT; i++)
+        gSaveBlock1Ptr->bagPocket_Runes[i] = gLoadedSaveData.runes[i];
 
     encryptionKeyBackup = gSaveBlock2Ptr->encryptionKey;
     gSaveBlock2Ptr->encryptionKey = gLastEncryptionKey;
