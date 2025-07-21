@@ -33,12 +33,16 @@
 #define MAP_GROUP_TOWNS_AND_ROUTES MAP_GROUP(PETALBURG_CITY)
 #define MAP_GROUP_DUNGEONS MAP_GROUP(METEOR_FALLS_1F_1R)
 #define MAP_GROUP_SPECIAL_AREA MAP_GROUP(SAFARI_ZONE_NORTHWEST)
+//F2P Maps
 #define MAP_GROUP_POKESCAPE_TOWNS_F2P MAP_GROUP(TUTORIAL_ISLAND)
 #define MAP_GROUP_POKESCAPE_ROUTES_F2P MAP_GROUP(ROUTE1)
 #define MAP_GROUP_POKESCAPE_DUNGEONS_F2P MAP_GROUP(TUTORIAL_ISLAND_CAVE)
 #define MAP_GROUP_POKESCAPE_P2P MAP_GROUP(YANILLE)
 #define MAP_GROUP_POKESCAPE_VARIOUS MAP_GROUP(ROUTE1_HOUSE_FRED)
+//Wilderness Maps
 #define MAP_GROUP_POKESCAPE_DUNGEONEERING MAP_GROUP(DUNGEONEERING_1)
+#define MAP_GROUP_POKESCAPE_WILDERNESS_ROUTES MAP_GROUP(ROUTE41)
+#define MAP_GROUP_POKESCAPE_WILDERNESS_DUNGEONS MAP_GROUP(WILDERNESS_FOREST)
 
 
 #define AREA_SCREEN_WIDTH 32
@@ -299,21 +303,35 @@ static void FindMapsWithMon(u16 species)
         {
             if (MapHasSpecies(&gWildMonHeaders[i], species))
             {
-                switch (gWildMonHeaders[i].mapGroup)
-                {
-                case MAP_GROUP_TOWNS_AND_ROUTES:
-                case MAP_GROUP_POKESCAPE_TOWNS_F2P:
-                case MAP_GROUP_POKESCAPE_ROUTES_F2P:
-                case MAP_GROUP_POKESCAPE_P2P:
-                case MAP_GROUP_POKESCAPE_VARIOUS:
-                    SetAreaHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
-                    break;
-                case MAP_GROUP_DUNGEONS:
-                case MAP_GROUP_SPECIAL_AREA:
-                case MAP_GROUP_POKESCAPE_DUNGEONS_F2P:
-                case MAP_GROUP_POKESCAPE_DUNGEONEERING:
-                    SetSpecialMapHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
-                    break;
+                if (gMapHeader.region == REGION_F2P) {
+                    switch (gWildMonHeaders[i].mapGroup)
+                    {
+                    //case MAP_GROUP_TOWNS_AND_ROUTES:
+                    case MAP_GROUP_POKESCAPE_TOWNS_F2P:
+                    case MAP_GROUP_POKESCAPE_ROUTES_F2P:
+                    case MAP_GROUP_POKESCAPE_P2P:
+                    case MAP_GROUP_POKESCAPE_VARIOUS:
+                        SetAreaHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+                        break;
+                    //case MAP_GROUP_DUNGEONS:
+                    //case MAP_GROUP_SPECIAL_AREA:
+                    case MAP_GROUP_POKESCAPE_DUNGEONS_F2P:
+                        SetSpecialMapHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+                        break;
+                    }
+                }
+
+                if (gMapHeader.region == REGION_WILDERNESS) {
+                    switch (gWildMonHeaders[i].mapGroup)
+                    {
+                    case MAP_GROUP_POKESCAPE_WILDERNESS_ROUTES:
+                        SetAreaHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+                        break;
+                    case MAP_GROUP_POKESCAPE_WILDERNESS_DUNGEONS:
+                    case MAP_GROUP_POKESCAPE_DUNGEONEERING:
+                        SetSpecialMapHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+                        break;
+                    }
                 }
             }
         }
