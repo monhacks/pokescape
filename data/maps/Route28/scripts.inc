@@ -80,7 +80,9 @@ BATTLE_ROUTE28_TRAINER_1::
 
 BATTLE_ROUTE28_TRAINER_2::
 	trainerbattle_single TRAINER_ROUTE28_TRAINER_2, BATTLE_ROUTE28_TRAINER_2_Text_0, BATTLE_ROUTE28_TRAINER_2_Text_1
-	msgbox BATTLE_ROUTE28_TRAINER_2_Text_2
+	namebox BATTLE_ROUTE28_TRAINER_2_Text_2
+	msgbox BATTLE_ROUTE28_TRAINER_2_Text_3
+	hidenamebox
 	release
 	end
 
@@ -105,7 +107,9 @@ BATTLE_ROUTE28_TRAINER_4::
 
 BATTLE_ROUTE28_TRAINER_5::
 	trainerbattle_single TRAINER_ROUTE28_TRAINER_5, BATTLE_ROUTE28_TRAINER_5_Text_0, BATTLE_ROUTE28_TRAINER_5_Text_1
+	namebox BATTLE_ROUTE28_TRAINER_5_Text_2
 	msgbox BATTLE_ROUTE28_TRAINER_5_Text_1
+	hidenamebox
 	release
 	end
 
@@ -133,6 +137,17 @@ Mithrilman_Route28_1:
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MITHRILMAN_QUEST, 4
 	savebgm MUS_DUMMY
 	fadedefaultbgm
+	release
+	end
+
+
+Runecrafter_Route28::
+	lock
+	faceplayer
+	namebox Runecrafter_Route28_Text_0
+	msgbox Runecrafter_Route28_Text_1
+	hidenamebox
+	closemessage
 	release
 	end
 
@@ -166,13 +181,16 @@ BATTLE_ROUTE28_TRAINER_1_Text_2:
 BATTLE_ROUTE28_TRAINER_2_Text_0:
 	.string "Hey you!\p"
 	.string "You look worse of than me.\p"
-	.string "Lets fight.$"
+	.string "Let's fight.$"
 
 BATTLE_ROUTE28_TRAINER_2_Text_1:
 	.string "This makes no sense I have better\n"
 	.string "armour than you.$"
 
 BATTLE_ROUTE28_TRAINER_2_Text_2:
+	.string "Bronze Noob$"
+
+BATTLE_ROUTE28_TRAINER_2_Text_3:
 	.string "My friend is looking for Falador.\p"
 	.string "Have you seen him?$"
 
@@ -204,11 +222,14 @@ BATTLE_ROUTE28_TRAINER_4_Text_3:
 	.string "way.$"
 
 BATTLE_ROUTE28_TRAINER_5_Text_0:
-	.string "Hey lets have a quick duel!$"
+	.string "Hey let's have a quick duel!$"
 
 BATTLE_ROUTE28_TRAINER_5_Text_1:
 	.string "Wow, when I said lets have a quick duel I\n"
 	.string "didn't expect it to be that quick.$"
+
+BATTLE_ROUTE28_TRAINER_5_Text_2:
+	.string "Set0Ka1ba$"
 
 Mithrilman_Route28_Text_0:
 	.string "Mithrilman$"
@@ -229,3 +250,13 @@ Mithrilman_Route28_Text_1:
 
 Mithrilman_Route28_Text_2:
 	.string "Begone knave.$"
+
+Runecrafter_Route28_Text_0:
+	.string "LavaChick3n$"
+
+Runecrafter_Route28_Text_1:
+	.string "Did you know that crafting Lava Runes\n"
+	.string "is the fastest way to 99 Runecrafting?\p"
+	.string "It can just be very expensive with lots\n"
+	.string "of runners, and it's not very\l"
+	.string "profitable…$"

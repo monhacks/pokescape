@@ -372,7 +372,7 @@ BATTLE_ROUTE13_TRAINER_2::
 BATTLE_ROUTE13_TRAINER_3::
 	trainerbattle_single TRAINER_ROUTE13_TRAINER_8, BATTLE_ROUTE13_TRAINER_3_Text_0, BATTLE_ROUTE13_TRAINER_3_Text_1
 	namebox BATTLE_ROUTE13_TRAINER_3_Text_2
-	msgbox BATTLE_ROUTE13_TRAINER_3_Text_1
+	msgbox BATTLE_ROUTE13_TRAINER_3_Text_3
 	hidenamebox
 	release
 	end
@@ -660,14 +660,22 @@ BATTLE_ROUTE13_TRAINER_2_Text_2:
 	.string "instead.$"
 
 BATTLE_ROUTE13_TRAINER_3_Text_0:
-	.string "Go fish, get lost.$"
+	.string "Did you see that crazy gnome?\p"
+	.string "He cast a spell on my poor sheep, I'm\n"
+	.string "telling you!$"
 
 BATTLE_ROUTE13_TRAINER_3_Text_1:
-	.string "No seriously.\p"
-	.string "Get lost and try fishing.$"
+	.string "Please tell me you saw it too!$"
 
 BATTLE_ROUTE13_TRAINER_3_Text_2:
 	.string "Willford$"
+
+BATTLE_ROUTE13_TRAINER_3_Text_3:
+	.string "I just want to farm in peace.\p"
+	.string "My sheep didn't mean to block people's\n"
+	.string "path to Lumbridge.\p"
+	.string "Do you know how hard it is to move sheep\n"
+	.string "without a sheepdog?!$"
 
 BATTLE_ROUTE13_TRAINER_4_Text_0:
 	.string "The guide tells me to fight you, lets do\n"

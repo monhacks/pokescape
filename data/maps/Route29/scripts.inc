@@ -53,28 +53,36 @@ DUNGEONEERING_DOOR_ROUTE29_5:
 
 BATTLE_ROUTE29_TRAINER_1::
 	trainerbattle_single TRAINER_ROUTE29_TRAINER_1, BATTLE_ROUTE29_TRAINER_1_Text_0, BATTLE_ROUTE29_TRAINER_1_Text_1
-	msgbox BATTLE_ROUTE29_TRAINER_1_Text_2
+	namebox BATTLE_ROUTE29_TRAINER_1_Text_2
+	msgbox BATTLE_ROUTE29_TRAINER_1_Text_3
+	hidenamebox
 	release
 	end
 
 
 BATTLE_ROUTE29_TRAINER_2::
 	trainerbattle_single TRAINER_ROUTE29_TRAINER_2, BATTLE_ROUTE29_TRAINER_2_Text_0, BATTLE_ROUTE29_TRAINER_2_Text_1
+	namebox BATTLE_ROUTE29_TRAINER_2_Text_2
 	msgbox BATTLE_ROUTE29_TRAINER_2_Text_1
+	hidenamebox
 	release
 	end
 
 
 BATTLE_ROUTE29_TRAINER_3::
 	trainerbattle_single TRAINER_ROUTE29_TRAINER_3, BATTLE_ROUTE29_TRAINER_3_Text_0, BATTLE_ROUTE29_TRAINER_3_Text_1
+	namebox BATTLE_ROUTE29_TRAINER_3_Text_2
 	msgbox BATTLE_ROUTE29_TRAINER_3_Text_1
+	hidenamebox
 	release
 	end
 
 
 BATTLE_ROUTE29_TRAINER_4::
 	trainerbattle_single TRAINER_ROUTE29_TRAINER_4, BATTLE_ROUTE29_TRAINER_4_Text_0, BATTLE_ROUTE29_TRAINER_4_Text_1
+	namebox BATTLE_ROUTE29_TRAINER_4_Text_2
 	msgbox BATTLE_ROUTE29_TRAINER_4_Text_1
+	hidenamebox
 	release
 	end
 
@@ -109,6 +117,9 @@ BATTLE_ROUTE29_TRAINER_1_Text_1:
 	.string "Keep your secrets then, noob.$"
 
 BATTLE_ROUTE29_TRAINER_1_Text_2:
+	.string "Pay2Slay$"
+
+BATTLE_ROUTE29_TRAINER_1_Text_3:
 	.string "I've been looking for the Strykewyrms\n"
 	.string "for hours.\p"
 	.string "I was told they were found in the caves\n"
@@ -123,6 +134,9 @@ BATTLE_ROUTE29_TRAINER_2_Text_1:
 	.string "Keep your strong monsters.\p"
 	.string "I will keep to my minerals.$"
 
+BATTLE_ROUTE29_TRAINER_2_Text_2:
+	.string "0 R E Z$"
+
 BATTLE_ROUTE29_TRAINER_3_Text_0:
 	.string "I am examining this place for ancient\n"
 	.string "relics.\p"
@@ -131,6 +145,9 @@ BATTLE_ROUTE29_TRAINER_3_Text_0:
 BATTLE_ROUTE29_TRAINER_3_Text_1:
 	.string "What do you mean the Digsite is north?$"
 
+BATTLE_ROUTE29_TRAINER_3_Text_2:
+	.string "Archaeologist$"
+
 BATTLE_ROUTE29_TRAINER_4_Text_0:
 	.string "I am getting real close to Falador.\p"
 	.string "Get out of my way!$"
@@ -138,6 +155,9 @@ BATTLE_ROUTE29_TRAINER_4_Text_0:
 BATTLE_ROUTE29_TRAINER_4_Text_1:
 	.string "I will keep going south.\p"
 	.string "Eventually I will find Falador.$"
+
+BATTLE_ROUTE29_TRAINER_4_Text_2:
+	.string "DirkGently3$"
 
 BATTLE_ROUTE29_TRAINER_5_Text_0:
 	.string "Brother there is an enemy opposing us.\p"

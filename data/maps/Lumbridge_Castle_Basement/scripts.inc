@@ -40,7 +40,7 @@ NPC_LumbridgeBasement_Item::
 
 DEMONHEADGE_BLOCK::
 	lock
-	applymovement 5, Movement_InteractFACEDOWN
+	applymovement 5, Movement_InteractFACERIGHT
 	waitmovement 0
 	namebox NPC_LumbridgeBasement_Demonheadge_Text_0
 	msgbox DEMONHEADGE_BLOCK_Text_0, MSGBOX_YESNO
@@ -122,7 +122,7 @@ DEMONHEADGE_BLOCK_14:
 
 
 movement_DEMON_BLOCK:
-	walk_left
+	walk_down
 	step_end
 
 NPC_FROGEEL_Text_0:

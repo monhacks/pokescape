@@ -436,6 +436,7 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY_1:
 	closemessage
 	setvar VAR_TEMP_0, 2
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	clearflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
 	release
 	end
 
@@ -554,10 +555,10 @@ TRIGGER_HAMHIDEOUT_JOHANHUS_1:
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_4
 	namebox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_5
-	setobjectxy 35, 41, 34
-	setobjectxyperm 35, 41, 34
-	applymovement 35, movement_HAM_Hideout_finale_walk_up
-	waitmovement 0
+	setobjectxy 35, 41, 33
+	setobjectxyperm 35, 41, 33
+	hidenamebox
+	closemessage
 	applymovement 35, movement_HAM_Hideout_finale_walk_up
 	applymovement OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up
 	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up
@@ -619,9 +620,11 @@ TRIGGER_HAMHIDEOUT_JOHANHUS_1:
 	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER
 	namebox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_5
 	msgbox TRIGGER_HAMHIDEOUT_JOHANHUS_Text_18
+	fadescreenswapbuffers FADE_TO_BLACK
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11
 	addvar VAR_GAMEMODE_LEVEL_CAP, 5
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 245
+	setflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
 	call FOLLOWER_REMOVE
 	warp MAP_LUMBRIDGE_FOREST, 28, 5
 	waitstate
@@ -757,7 +760,6 @@ movement_HAM_Hideout_finale_Johanhus_1:
 	step_end
 
 movement_HAM_Hideout_finale_misc_1:
-	walk_slow_up
 	walk_slow_up
 	walk_slow_left
 	face_down

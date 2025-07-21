@@ -27,30 +27,71 @@ LumForest_STATE::
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 216
 	goto_if_eq LumForest_STATE_2
 LumForest_STATE_1:
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 245
+	goto_if_eq LumForest_STATE_7
+LumForest_STATE_6:
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 250
+	goto_if_ge LumForest_STATE_12
+LumForest_STATE_11:
 	return
 
 LumForest_STATE_2:
 	checkitem ITEM_CUT_TOOL, 1
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_6
+	goto_if_eq LumForest_STATE_9
 	goto LumForest_STATE_1
 
-LumForest_STATE_6:
+LumForest_STATE_7:
+	removeobject 1
+	removeobject 2
+	removeobject 3
+	removeobject 4
+	removeobject 5
+	removeobject 29
+	setflag FLAG_TEMP_1E
+	setvar VAR_TEMP_1, 1
+	setobjectxy 42, 28, 4
+	setobjectxyperm 42, 28, 4
+	setobjectxy 43, 27, 4
+	setobjectxyperm 43, 27, 4
+	goto LumForest_STATE_6
+
+LumForest_STATE_9:
 	addobject 41
 	clearflag FLAG_TEMP_8
 	goto LumForest_STATE_1
+
+LumForest_STATE_12:
+	removeobject 1
+	removeobject 2
+	removeobject 3
+	removeobject 4
+	removeobject 5
+	removeobject 29
+	setflag FLAG_TEMP_1E
+	setvar VAR_TEMP_1, 1
+	goto LumForest_STATE_11
 
 
 POST_WARP_ZANIK_EVENT::
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox POST_WARP_ZANIK_EVENT_Text_1
+	applymovement 42, MOVEMENT_INTERACT_LEFT
+	waitmovement 0
 	msgbox POST_WARP_ZANIK_EVENT_Text_2
+	applymovement 43, MOVEMENT_INTERACT_RIGHT
+	waitmovement 0
 	namebox POST_WARP_ZANIK_EVENT_Text_3
 	msgbox POST_WARP_ZANIK_EVENT_Text_4
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox POST_WARP_ZANIK_EVENT_Text_5
+	applymovement 42, MOVEMENT_INTERACT_DOWN
+	applymovement 43, MOVEMENT_INTERACT_DOWN
+	waitmovement 0
 	namebox POST_WARP_ZANIK_EVENT_Text_3
 	msgbox POST_WARP_ZANIK_EVENT_Text_6
+	applymovement 43, movement_Post_HAM_Hideout_Prince_Exit
+	removeobject 43
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox POST_WARP_ZANIK_EVENT_Text_7
 	hidenamebox
@@ -61,9 +102,44 @@ POST_WARP_ZANIK_EVENT::
 	msgbox POST_WARP_ZANIK_EVENT_Text_8
 	hidenamebox
 	closemessage
+	applymovement 42, movement_Post_HAM_Hideout_Zanik_Exit
+	removeobject 42
+	setflag FLAG_TEMP_1D
+	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 250
 	release
 	end
 
+
+movement_Post_HAM_Hideout_Prince_Exit:
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	set_invisible
+	step_end
+
+movement_Post_HAM_Hideout_Zanik_Exit:
+	walk_left
+	walk_down
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	set_invisible
+	step_end
 
 LUMBRIDGEFOREST_NPC_BOT1::
 	namebox LUMBRIDGEFOREST_NPC_BOT1_Text_0

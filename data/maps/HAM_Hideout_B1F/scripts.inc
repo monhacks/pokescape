@@ -17,6 +17,7 @@ HAMHIDEOUT_B1F_STATE::
 	clearflag FLAG_TEMP_D
 	setflag FLAG_TEMP_C
 	setflag FLAG_TEMP_E
+	clearflag FLAG_TEMP_1C
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 220
 	goto_if_eq HAMHIDEOUT_B1F_STATE_2
 HAMHIDEOUT_B1F_STATE_1:
@@ -33,13 +34,14 @@ HAMHIDEOUT_B1F_STATE_10:
 	goto_if_eq HAMHIDEOUT_B1F_STATE_14
 HAMHIDEOUT_B1F_STATE_13:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 245
-	goto_if_eq HAMHIDEOUT_B1F_STATE_17
+	goto_if_ge HAMHIDEOUT_B1F_STATE_17
 HAMHIDEOUT_B1F_STATE_16:
 	return
 
 HAMHIDEOUT_B1F_STATE_2:
 	setvar VAR_TEMP_0, 1
 	setvar VAR_TEMP_3, 1
+	setflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
 	goto HAMHIDEOUT_B1F_STATE_1
 
 HAMHIDEOUT_B1F_STATE_5:
@@ -86,8 +88,8 @@ HAMHIDEOUT_B1F_STATE_14:
 	goto HAMHIDEOUT_B1F_STATE_13
 
 HAMHIDEOUT_B1F_STATE_17:
-	setflag FLAG_TEMP_D
-	clearflag FLAG_TEMP_C
+	setflag FLAG_TEMP_C
+	clearflag FLAG_TEMP_D
 	clearflag FLAG_TEMP_E
 	removeobject 18
 	removeobject 19
@@ -97,6 +99,10 @@ HAMHIDEOUT_B1F_STATE_17:
 	removeobject 10
 	removeobject 11
 	setflag FLAG_TEMP_5
+	removeobject 22
+	removeobject 23
+	removeobject 34
+	setflag FLAG_TEMP_1C
 	setmetatile 36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0
 	setmetatile 36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1
 	setmetatile 37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
@@ -1388,6 +1394,14 @@ HAM_HIDEOUT_B1F_PRINCE_ALI::
 	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1
 	hidenamebox
 	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2
+	removeobject 22
+	removeobject 23
+	removeobject 34
+	closemessage
+	setflag FLAG_TEMP_1C
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 
@@ -1888,7 +1902,18 @@ HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0:
 	.string "Prince Ali$"
 
 HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1:
-	.string "Ah, it is good to see a friendly face.$"
+	.string "Ah, it is good to see a friendly face.\p"
+	.string "Thank you for rescuing us.\p"
+	.string "I will take these prisoners to safety,\n"
+	.string "please can I ask you to try and find\l"
+	.string "Sigmund?\p"
+	.string "He has something that belongs to me.\p"
+	.string "I will return and join you shortly, I\n"
+	.string "promise.$"
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2:
+	.string "Prince Ali escorts Jimmy and the Goebie\n"
+	.string "out of the hideout.$"
 
 HAM_HIDEOUT_B1F_GOEBIE_Text_0:
 	.string "Goebiewan$"

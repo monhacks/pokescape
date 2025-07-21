@@ -59,7 +59,7 @@ script POST_WARP_ZANIK_EVENT {
 	namebox ("Zanik")
     msgbox(format("We made it out somehow."))
 	applymovement(42, MOVEMENT_INTERACT_LEFT)
-	waitmovement
+	waitmovement(0)
     //Zanik looks at Prince Ali
     msgbox(format("Hey you, sunburned human, are you all right?"))
 	applymovement(43, MOVEMENT_INTERACT_RIGHT)

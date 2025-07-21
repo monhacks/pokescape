@@ -392,6 +392,8 @@ EDGEVILLE_GYM_BATTLE_VANNAKA::
 	msgbox EDGEVILLE_GYM_BATTLE_VANNAKA_Text_6
 	closemessage
 	hidenamebox
+	clearflag FLAG_ITEM_EDGEVILLE_2
+	clearflag FLAG_BRASS_KEY
 	release
 	return
 
@@ -1129,7 +1131,7 @@ EDGEVILLE_GYM_START_Text_6:
 
 EDGEVILLE_GYM_START_Text_7:
 	.string "Back for more?\p"
-	.string "Lets go!$"
+	.string "Let's go!$"
 
 EDGEVILLE_GYM_BATTLE_VANNAKA_Text_0:
 	.string "Here, you deserve this Badge.$"
