@@ -184,11 +184,22 @@ NPC_HAM_HIDEOUT_19::
 	hidenamebox
 	playse SE_PIN
 	applymovement 41, MOVEMENT_EXCLAMATIONMARK_FACEPLAYER
-	namebox NPC_HAM_HIDEOUT_7_Text_0
-	msgbox NPC_HAM_HIDEOUT_19_Text_1
+	namebox NPC_HAM_HIDEOUT_19_Text_1
+	msgbox NPC_HAM_HIDEOUT_19_Text_2
 	closemessage
 	hidenamebox
-	trainerbattle_two_trainers TRAINER_HAM_HIDEOUT_GUARD_3, NPC_HAM_HIDEOUT_19_Text_2, TRAINER_HAM_HIDEOUT_GUARD_4, NPC_HAM_HIDEOUT_19_Text_3
+	trainerbattle_two_trainers TRAINER_HAM_HIDEOUT_GUARD_3, NPC_HAM_HIDEOUT_19_Text_3, TRAINER_HAM_HIDEOUT_GUARD_4, NPC_HAM_HIDEOUT_19_Text_4
+	applymovement 42, Movement_InteractFACELEFT
+	applymovement 41, Movement_InteractFACERIGHT
+	waitmovement 0
+	namebox NPC_HAM_HIDEOUT_7_Text_0
+	msgbox NPC_HAM_HIDEOUT_19_Text_5
+	closemessage
+	hidenamebox
+	namebox NPC_HAM_HIDEOUT_19_Text_1
+	msgbox NPC_HAM_HIDEOUT_19_Text_6
+	closemessage
+	hidenamebox
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 41
 	removeobject 42
@@ -202,8 +213,8 @@ NPC_HAM_HIDEOUT_19::
 
 BATTLE_HAM_HIDEOUT_GRUNT_1::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_1, BATTLE_HAM_HIDEOUT_GRUNT_1_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_1_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
-	msgbox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_3
+	namebox NPC_HAM_HIDEOUT_19_Text_1
+	msgbox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
 	hidenamebox
 	release
 	end
@@ -211,7 +222,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_1::
 
 BATTLE_HAM_HIDEOUT_GRUNT_2::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_2, BATTLE_HAM_HIDEOUT_GRUNT_2_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_2_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_2_Text_2
 	hidenamebox
 	release
@@ -220,7 +231,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_2::
 
 BATTLE_HAM_HIDEOUT_GRUNT_3::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_3, BATTLE_HAM_HIDEOUT_GRUNT_3_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_3_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_3_Text_2
 	hidenamebox
 	release
@@ -229,7 +240,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_3::
 
 BATTLE_HAM_HIDEOUT_GRUNT_4::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_4, BATTLE_HAM_HIDEOUT_GRUNT_4_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_4_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_4_Text_2
 	hidenamebox
 	release
@@ -238,7 +249,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_4::
 
 BATTLE_HAM_HIDEOUT_GRUNT_5::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_5, BATTLE_HAM_HIDEOUT_GRUNT_5_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_5_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_5_Text_2
 	hidenamebox
 	release
@@ -247,7 +258,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_5::
 
 BATTLE_HAM_HIDEOUT_GRUNT_6::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_6, BATTLE_HAM_HIDEOUT_GRUNT_6_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_6_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_6_Text_2
 	hidenamebox
 	release
@@ -256,7 +267,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_6::
 
 BATTLE_HAM_HIDEOUT_GRUNT_7::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_7, BATTLE_HAM_HIDEOUT_GRUNT_7_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_7_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_7_Text_2
 	hidenamebox
 	release
@@ -265,7 +276,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_7::
 
 BATTLE_HAM_HIDEOUT_GRUNT_8::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_8, BATTLE_HAM_HIDEOUT_GRUNT_8_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_8_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_8_Text_1
 	hidenamebox
 	release
@@ -274,7 +285,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_8::
 
 BATTLE_HAM_HIDEOUT_GRUNT_9::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_9, BATTLE_HAM_HIDEOUT_GRUNT_9_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_9_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_9_Text_2
 	hidenamebox
 	release
@@ -283,7 +294,7 @@ BATTLE_HAM_HIDEOUT_GRUNT_9::
 
 BATTLE_HAM_HIDEOUT_GRUNT_10::
 	trainerbattle_single TRAINER_HAM_HIDEOUT_GRUNT_10, BATTLE_HAM_HIDEOUT_GRUNT_10_Text_0, BATTLE_HAM_HIDEOUT_GRUNT_10_Text_1
-	namebox BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2
+	namebox NPC_HAM_HIDEOUT_19_Text_1
 	msgbox BATTLE_HAM_HIDEOUT_GRUNT_10_Text_2
 	hidenamebox
 	release
@@ -850,14 +861,23 @@ NPC_HAM_HIDEOUT_19_Text_0:
 	.string "There are intruders in the building!$"
 
 NPC_HAM_HIDEOUT_19_Text_1:
-	.string "What how did they get past us!$"
+	.string "H.A.M Grunt$"
 
 NPC_HAM_HIDEOUT_19_Text_2:
+	.string "What how did they get past us!$"
+
+NPC_HAM_HIDEOUT_19_Text_3:
 	.string "H.A.M Guard: No wonder you managed to\n"
 	.string "sneak through!$"
 
-NPC_HAM_HIDEOUT_19_Text_3:
+NPC_HAM_HIDEOUT_19_Text_4:
 	.string "H.A.M Guard: Too strong!$"
+
+NPC_HAM_HIDEOUT_19_Text_5:
+	.string "Retreat?$"
+
+NPC_HAM_HIDEOUT_19_Text_6:
+	.string "Yes, retreat!$"
 
 BATTLE_HAM_HIDEOUT_GRUNT_1_Text_0:
 	.string "I bet you're wondering how I ended up\n"
@@ -867,9 +887,6 @@ BATTLE_HAM_HIDEOUT_GRUNT_1_Text_1:
 	.string "Urgh…$"
 
 BATTLE_HAM_HIDEOUT_GRUNT_1_Text_2:
-	.string "H.A.M Grunt$"
-
-BATTLE_HAM_HIDEOUT_GRUNT_1_Text_3:
 	.string "When I signed up to become a member, I\n"
 	.string "was never told that our headquarters\l"
 	.string "was in a cave.\p"

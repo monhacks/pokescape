@@ -191,11 +191,22 @@ script NPC_HAM_HIDEOUT_19
     hidenamebox
     playse(SE_PIN)
     applymovement(41, MOVEMENT_EXCLAMATIONMARK_FACEPLAYER)
-    namebox ("H.A.M Member")
+    namebox ("H.A.M Grunt")
     msgbox(format("What how did they get past us!"))
     closemessage
     hidenamebox
     trainerbattle_two_trainers(TRAINER_HAM_HIDEOUT_GUARD_3, msgbox(format("H.A.M Guard: No wonder you managed to sneak through!")), TRAINER_HAM_HIDEOUT_GUARD_4, msgbox(format("H.A.M Guard: Too strong!")))
+    applymovement(42, Movement_InteractFACELEFT)
+    applymovement(41, Movement_InteractFACERIGHT)
+    waitmovement(0)
+    namebox ("H.A.M Member")
+    msgbox(format("Retreat?"))
+    closemessage
+    hidenamebox
+    namebox ("H.A.M Grunt")
+    msgbox(format("Yes, retreat!"))
+    closemessage
+    hidenamebox
     fadescreenswapbuffers(FADE_TO_BLACK)
     removeobject(41)
     removeobject(42)

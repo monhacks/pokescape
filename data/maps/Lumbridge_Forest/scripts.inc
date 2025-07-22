@@ -4,13 +4,7 @@ Lumbridge_Forest_MapScripts::
 	.byte 0
 
 Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	setvar VAR_EVOLUTION_MAP_STATE, 6
 	call WEATHER_CHANGE_AREA_DRAYNOR
-	compare VAR_POKESCAPE_GAMEMODE_STATE, 0
-	goto_if_eq Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
-	return
-
-Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	call LumForest_STATE
 	return
 
@@ -22,55 +16,70 @@ Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 LumForest_STATE::
 	removeobject 41
 	setflag FLAG_TEMP_8
-	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
-	goto_if_eq LumForest_STATE_2
-	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 216
-	goto_if_eq LumForest_STATE_2
+	setflag FLAG_TEMP_1F
+	setflag FLAG_TEMP_1D
+	setflag FLAG_TEMP_1E
+	setflag FLAG_TEMP_1C
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 210
+	goto_if_lt LumForest_STATE_2
 LumForest_STATE_1:
-	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 245
-	goto_if_eq LumForest_STATE_7
-LumForest_STATE_6:
-	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 250
-	goto_if_ge LumForest_STATE_12
-LumForest_STATE_11:
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 210, LumForest_STATE_6
+	case 215, LumForest_STATE_6
+	case 216, LumForest_STATE_6
+	case 220, LumForest_STATE_7
+	case 225, LumForest_STATE_7
+	case 230, LumForest_STATE_7
+	case 235, LumForest_STATE_7
+	case 245, LumForest_STATE_8
+LumForest_STATE_4:
 	return
 
 LumForest_STATE_2:
+	clearflag FLAG_TEMP_1C
+	addobject 37
+	addobject 36
+	goto LumForest_STATE_1
+
+LumForest_STATE_6:
+	setvar VAR_TEMP_1, 1
+	clearflag FLAG_TEMP_1E
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_eq LumForest_STATE_10
+LumForest_STATE_9:
 	checkitem ITEM_CUT_TOOL, 1
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_9
-	goto LumForest_STATE_1
+	goto_if_eq LumForest_STATE_15
+	goto LumForest_STATE_4
 
 LumForest_STATE_7:
-	removeobject 1
-	removeobject 2
-	removeobject 3
-	removeobject 4
-	removeobject 5
-	removeobject 29
-	setflag FLAG_TEMP_1E
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_eq LumForest_STATE_13
+LumForest_STATE_12:
 	setvar VAR_TEMP_1, 1
+	clearflag FLAG_TEMP_1E
+	goto LumForest_STATE_4
+
+LumForest_STATE_8:
+	clearflag FLAG_TEMP_1D
 	setobjectxy 42, 28, 4
 	setobjectxyperm 42, 28, 4
-	setobjectxy 43, 27, 4
-	setobjectxyperm 43, 27, 4
-	goto LumForest_STATE_6
+	goto LumForest_STATE_4
 
-LumForest_STATE_9:
+LumForest_STATE_10:
+	clearflag FLAG_TEMP_1F
+	goto LumForest_STATE_9
+
+LumForest_STATE_13:
+	clearflag FLAG_TEMP_1F
+	goto LumForest_STATE_12
+
+LumForest_STATE_15:
 	addobject 41
 	clearflag FLAG_TEMP_8
-	goto LumForest_STATE_1
-
-LumForest_STATE_12:
-	removeobject 1
-	removeobject 2
-	removeobject 3
-	removeobject 4
-	removeobject 5
-	removeobject 29
-	setflag FLAG_TEMP_1E
-	setvar VAR_TEMP_1, 1
-	goto LumForest_STATE_11
+	goto LumForest_STATE_4
 
 
 POST_WARP_ZANIK_EVENT::
@@ -299,14 +308,27 @@ NPC_LUMBRIDGE_FOREST_HAM_1::
 	end
 
 
+NPC_LUMBRIDGE_FOREST_HAM_2::
+	lock
+	faceplayer
+	namebox NPC_LUMBRIDGE_FOREST_HAM_1_Text_0
+	msgbox NPC_LUMBRIDGE_FOREST_HAM_2_Text_0
+	closemessage
+	hidenamebox
+	release
+	end
+
+
 TRIGGER_ALKHARID_HAM_EVENT_4::
 	switch VAR_POKESCAPE_STORYMODE_PROGRESS
 	case 215, TRIGGER_ALKHARID_HAM_EVENT_4_3
 	case 216, TRIGGER_ALKHARID_HAM_EVENT_4_3
 	case 220, TRIGGER_ALKHARID_HAM_EVENT_4_4
+	case 225, TRIGGER_ALKHARID_HAM_EVENT_4_4
+	case 230, TRIGGER_ALKHARID_HAM_EVENT_4_4
+	case 235, TRIGGER_ALKHARID_HAM_EVENT_4_4
 TRIGGER_ALKHARID_HAM_EVENT_4_1:
-	setvar VAR_TEMP_1, 1
-	release
+	setvar VAR_TEMP_1, 2
 	end
 
 TRIGGER_ALKHARID_HAM_EVENT_4_3:
@@ -478,7 +500,8 @@ SetFollower_Zanik::
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7
 	hidenamebox
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
+	applymovement OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP
+	applymovement 29, movement_ZANIK_WALKS_AWAY
 	waitmovement 0
 	releaseall
 	end
@@ -1104,6 +1127,10 @@ NPC_LUMBRIDGE_FOREST_HAM_1_Text_0:
 NPC_LUMBRIDGE_FOREST_HAM_1_Text_1:
 	.string "Go away.$"
 
+NPC_LUMBRIDGE_FOREST_HAM_2_Text_0:
+	.string "I'm not sure how you got here but you\n"
+	.string "should turn around and never come back.$"
+
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_0:
 	.string "???$"
 
@@ -1122,14 +1149,15 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_3:
 	.string "than others.$"
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4:
-	.string "I am Zanik. A hunter and scout for the\n"
-	.string "Dorgeshuun goblins beneath Lumbridge.\p"
+	.string "I am Zanik.\p"
+	.string "A hunter and scout for the Dorgeshuun\n"
+	.string "goblins beneath Lumbridge.\p"
 	.string "And you are?$"
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5:
 	.string "{PLAYER}.\p"
 	.string "What a weird name…\n"
-	.string "according to goblin sensibilities at\l"
+	.string "According to goblin sensibilities at\l"
 	.string "least.\p"
 	.string "H.A.M has tried to exterminate us for a\n"
 	.string "while, looking upon us as well…\p"
@@ -1139,8 +1167,8 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5:
 	.string "previous aid Sigmund being at the\l"
 	.string "center of this.\p"
 	.string "Now, I need to figure out what is down\n"
-	.string "there and what they are planning and\l"
-	.string "you probably have your own reasons\l"
+	.string "there and what they are planning.\p"
+	.string "You probably have your own reasons\n"
 	.string "right?$"
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6:

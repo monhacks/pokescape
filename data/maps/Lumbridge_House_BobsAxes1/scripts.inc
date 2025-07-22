@@ -85,12 +85,14 @@ WoM_BobsAxes_Script::
 	closemessage
 	hidenamebox
 	giveitem ITEM_CUT_TOOL, 1
+	applymovement 2, Movement_InteractFACEUP
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	waitmovement 0
 	namebox Lumbridge_House_BobsAxes_Text_0
 	msgbox WoM_BobsAxes_Script_Text_3
 	closemessage
 	hidenamebox
-	applymovement 2, Movement_InteractFACEUP
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	applymovement 1, MOVEMENT_INTERACT_DOWN
 	waitmovement 0
 	namebox Lumbridge_House_BobsAxes_Text_0
 	msgbox WoM_BobsAxes_Script_Text_4
@@ -124,6 +126,7 @@ movement_wom_walk_into_axestore:
 	step_end
 
 movement_wom_walk_leave_axestore:
+	walk_down
 	walk_down
 	walk_down
 	walk_down

@@ -542,7 +542,12 @@ TRIGGER_HAMHIDEOUT_EVENT_1_1:
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_1
 	hidenamebox
 	closemessage
-	facefollower
+	compare VAR_TEMP_8, 11
+	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_6
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT
+	waitmovement 0
+TRIGGER_HAMHIDEOUT_EVENT_1_5:
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_3
 	hidenamebox
@@ -554,7 +559,12 @@ TRIGGER_HAMHIDEOUT_EVENT_1_1:
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_4
 	hidenamebox
 	closemessage
-	facefollower
+	compare VAR_TEMP_8, 11
+	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_10
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT
+	waitmovement 0
+TRIGGER_HAMHIDEOUT_EVENT_1_9:
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_3
 	hidenamebox
@@ -568,11 +578,16 @@ TRIGGER_HAMHIDEOUT_EVENT_1_1:
 	closemessage
 	getplayerxy VAR_TEMP_8, VAR_TEMP_9
 	compare VAR_TEMP_8, 11
-	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_6
+	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_14
 	applymovement 33, HAM_Hideout_Intro_2_Right
 	waitmovement 0
-	facefollower
-TRIGGER_HAMHIDEOUT_EVENT_1_5:
+TRIGGER_HAMHIDEOUT_EVENT_1_13:
+	compare VAR_TEMP_8, 11
+	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_1_18
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT
+	waitmovement 0
+TRIGGER_HAMHIDEOUT_EVENT_1_17:
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_1_Text_6
 	closemessage
@@ -591,10 +606,27 @@ TRIGGER_HAMHIDEOUT_EVENT_1_2:
 	goto TRIGGER_HAMHIDEOUT_EVENT_1_1
 
 TRIGGER_HAMHIDEOUT_EVENT_1_6:
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT
+	waitmovement 0
+	goto TRIGGER_HAMHIDEOUT_EVENT_1_5
+
+TRIGGER_HAMHIDEOUT_EVENT_1_10:
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT
+	waitmovement 0
+	goto TRIGGER_HAMHIDEOUT_EVENT_1_9
+
+TRIGGER_HAMHIDEOUT_EVENT_1_14:
 	applymovement 33, HAM_Hideout_Intro_2_Left
 	waitmovement 0
-	facefollower
-	goto TRIGGER_HAMHIDEOUT_EVENT_1_5
+	goto TRIGGER_HAMHIDEOUT_EVENT_1_13
+
+TRIGGER_HAMHIDEOUT_EVENT_1_18:
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT
+	waitmovement 0
+	goto TRIGGER_HAMHIDEOUT_EVENT_1_17
 
 
 HAM_Hideout_Zanik_1_Left:
@@ -647,12 +679,19 @@ TRIGGER_HAMHIDEOUT_EVENT_2::
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Top_1
 	waitmovement 0
 TRIGGER_HAMHIDEOUT_EVENT_2_1:
+	playse SE_PIN
+	applymovement 18, MOVEMENT_EXCLAMATIONMARK_FACE_LEFT
+	applymovement 19, MOVEMENT_EXCLAMATIONMARK_FACE_LEFT
+	waitmovement 0
+	waitse
 	applymovement 18, HAM_Hideout_Jail_Guard_Top_1
 	applymovement 19, HAM_Hideout_Jail_Guard_Bottom_1
 	waitmovement 0
 	namebox TRIGGER_HAMHIDEOUT_EVENT_2_Text_0
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_2_Text_1
-	applymovement 19, MOVEMENT_EXCLAMATIONMARK_JUMP_LEFT
+	closemessage
+	playse SE_LEDGE
+	applymovement 19, movement_jump_in_place_LEFT
 	waitmovement 0
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_2_Text_2
 	hidenamebox
@@ -681,6 +720,7 @@ TRIGGER_HAMHIDEOUT_EVENT_2_5:
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_2_Text_3
 	hidenamebox
 	closemessage
+	delay 30
 	getplayerxy VAR_TEMP_8, VAR_TEMP_9
 	compare VAR_TEMP_8, 36
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_2_10
@@ -688,6 +728,7 @@ TRIGGER_HAMHIDEOUT_EVENT_2_5:
 	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Left
 	waitmovement 0
 TRIGGER_HAMHIDEOUT_EVENT_2_9:
+	delay 60
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_2_Text_4
 	closemessage
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
@@ -810,10 +851,10 @@ HAM_Hideout_Jail_Guard_Top_3:
 	walk_left
 	walk_left
 	walk_left
-	walk_up
+	walk_left
 	walk_left
 	walk_up
-	walk_left
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -828,7 +869,6 @@ HAM_Hideout_Jail_Guard_Bottom_3:
 	walk_up
 	walk_left
 	walk_up
-	walk_left
 	walk_up
 	walk_up
 	walk_up
@@ -1417,6 +1457,11 @@ HAM_HIDEOUT_B1F_GOEBIE::
 	end
 
 
+MOVEMENT_EXCLAMATIONMARK_FACE_LEFT:
+	emote_exclamation_mark
+	face_left
+	step_end
+
 HAM_HIDEOUT_GOLDENGNOME_EVENT_Text_0:
 	.string "H.A.M Deacon$"
 
@@ -1568,21 +1613,22 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_0:
 	.string "H.A.M Guard$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_1:
-	.string "You two should have been here ages ago!\l"
+	.string "You two should have been here ages ago!\n"
 	.string "What kept you?$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_2:
-	.string "It doesn't matter, you're here now.\l"
-	.string "Make sure you guard the prisoners!\l"
+	.string "It doesn't matter, you're here now.\p"
+	.string "Make sure you guard the prisoners!\n"
 	.string "Don't let them out of your sight!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_3:
-	.string "This is our chance {PLAYER}!\l"
-	.string "Let's unlock that cell door and break\l"
+	.string "This is our chance {PLAYER}!\p"
+	.string "Let's unlock that cell door and break\n"
 	.string "the Prince out!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_4:
-	.string "You attempt to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…$"
+	.string "You attempt to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\p"
+	.string "But fail.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_5:
 	.string "Step aside {PLAYER} allow me.$"
@@ -1591,25 +1637,29 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_6:
 	.string "Zanik attempts to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_7:
-	.string "Hmmm…\l"
-	.string "This is unusual, but I can't seem to pick\l"
-	.string "this lock.\l"
-	.string "We're going to have to try and do this\l"
+	.string "Hmmm…\p"
+	.string "This is unusual, but I can't seem to pick\n"
+	.string "this lock.\p"
+	.string "We're going to have to try and do this\n"
 	.string "the old fashioned way… with a key!\p"
-	.string "{PAUSE 15}…\p"
-	.string "{PAUSE 15}…\p"
-	.string "Now, where would they keep a spare key?$"
+	.string "…{PAUSE 15}…{PAUSE 15}…\p"
+	.string "Now, where would they keep a spare key?\p"
+	.string "Maybe we could ask around…$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_0:
 	.string "Shouldn't you two be guarding the\n"
 	.string "prisoners?\p"
-	.string "The jail cell is over to the east,\n"
-	.string "remember?$"
+	.string "The jail cell is in the south-east room!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_1:
 	.string "Get back to guarding the prisoners!\p"
 	.string "Johanhus won't be happy if he hears\n"
-	.string "you've abandoned your posts.$"
+	.string "you've abandoned your posts.\p"
+	.string "What's that?\n"
+	.string "The cell key?\p"
+	.string "Try in the storage room north-west of\n"
+	.string "here.\p"
+	.string "We usually keep spares there.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_2:
 	.string "Hey, you two aren't H.A.M members!\l"
@@ -1720,8 +1770,8 @@ NPC_HAM_HIDEOUT_B1F_6_Text_1:
 	.string "Don't tell any of the other grunts, but\n"
 	.string "I got a thing for Babe.\p"
 	.string "Do you know anything that might help me\n"
-	.string "get closer to her?\l"
-	.string "There is a limit to how much hatred\l"
+	.string "get closer to her?\p"
+	.string "There is a limit to how much hatred\n"
 	.string "against monsters can bring people\l"
 	.string "together…$"
 
@@ -1734,7 +1784,7 @@ NPC_HAM_HIDEOUT_B1F_7_Text_0:
 
 NPC_HAM_HIDEOUT_B1F_7_Text_1:
 	.string "We are going to make Lumbridge great\n"
-	.string "again.\l"
+	.string "again.\p"
 	.string "Then the world will follow.$"
 
 NPC_HAM_HIDEOUT_B1F_8_Text_0:
@@ -1863,8 +1913,8 @@ NPC_HAM_HIDEOUT_B1F_18_Text_0:
 	.string "members.$"
 
 NPC_HAM_HIDEOUT_B1F_19_Text_0:
-	.string "Sorry, this area is off-limits.\l"
-	.string "Sigmund and Johanhus are having an\l"
+	.string "Sorry, this area is off-limits.\p"
+	.string "Sigmund and Johanhus are having an\n"
 	.string "important meeting.$"
 
 HAM_HIDEOUT_RANGE_Text_0:
@@ -1878,8 +1928,8 @@ HAM_HIDEOUT_CELL_DOOR_Text_0:
 	.string "KEY.$"
 
 HAM_HIDEOUT_CELL_DOOR_Text_1:
-	.string "The jail door is securely locked.\l"
-	.string "The only way to open it appears to be\l"
+	.string "The jail door is securely locked.\p"
+	.string "The only way to open it appears to be\n"
 	.string "with a key.$"
 
 NPC_HAM_HIDEOUT_B1F_STOREROOM_BLOCK_Text_0:
