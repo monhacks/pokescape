@@ -32,10 +32,12 @@ HAMHIDEOUT_B1F_STATE_7:
 HAMHIDEOUT_B1F_STATE_10:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 240
 	goto_if_eq HAMHIDEOUT_B1F_STATE_14
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 241
+	goto_if_eq HAMHIDEOUT_B1F_STATE_14
 HAMHIDEOUT_B1F_STATE_13:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 245
-	goto_if_ge HAMHIDEOUT_B1F_STATE_17
-HAMHIDEOUT_B1F_STATE_16:
+	goto_if_ge HAMHIDEOUT_B1F_STATE_19
+HAMHIDEOUT_B1F_STATE_18:
 	return
 
 HAMHIDEOUT_B1F_STATE_2:
@@ -47,6 +49,7 @@ HAMHIDEOUT_B1F_STATE_2:
 HAMHIDEOUT_B1F_STATE_5:
 	setvar VAR_TEMP_0, 2
 	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_4, 1
 	goto HAMHIDEOUT_B1F_STATE_4
 
 HAMHIDEOUT_B1F_STATE_8:
@@ -87,7 +90,7 @@ HAMHIDEOUT_B1F_STATE_14:
 	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_13
 
-HAMHIDEOUT_B1F_STATE_17:
+HAMHIDEOUT_B1F_STATE_19:
 	setflag FLAG_TEMP_C
 	clearflag FLAG_TEMP_D
 	clearflag FLAG_TEMP_E
@@ -108,7 +111,7 @@ HAMHIDEOUT_B1F_STATE_17:
 	setmetatile 37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
 	setmetatile 37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
 	setmetatile 38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1
-	goto HAMHIDEOUT_B1F_STATE_16
+	goto HAMHIDEOUT_B1F_STATE_18
 
 
 HAM_HIDEOUT_GOLDENGNOME_PLACENPCS::
@@ -693,6 +696,7 @@ TRIGGER_HAMHIDEOUT_EVENT_2_1:
 	playse SE_LEDGE
 	applymovement 19, movement_jump_in_place_LEFT
 	waitmovement 0
+	namebox TRIGGER_HAMHIDEOUT_EVENT_2_Text_0
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_2_Text_2
 	hidenamebox
 	closemessage
@@ -768,6 +772,20 @@ TRIGGER_HAMHIDEOUT_EVENT_2_10:
 	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP
 	waitmovement 0
 	goto TRIGGER_HAMHIDEOUT_EVENT_2_9
+
+
+TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED::
+	lock
+	playse SE_LEDGE
+	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT
+	waitmovement 0
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
+	msgbox TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED_Text_0
+	hidenamebox
+	closemessage
+	setvar VAR_TEMP_4, 2
+	release
+	end
 
 
 HAM_Hideout_Player_Jail_Top:
@@ -887,7 +905,7 @@ TRIGGER_HAMHIDEOUT_EVENT_3::
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_3_3
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_3_4
-	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 240
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 241
 	goto_if_eq TRIGGER_HAMHIDEOUT_EVENT_3_5
 	namebox TRIGGER_HAMHIDEOUT_EVENT_2_Text_0
 	msgbox TRIGGER_HAMHIDEOUT_EVENT_3_Text_8
@@ -1419,31 +1437,87 @@ NPC_HAM_HIDEOUT_B1F_STOREROOM_BLOCK::
 HAM_HIDEOUT_B1F_JIMMY::
 	lock
 	faceplayer
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 230
+	goto_if_eq HAM_HIDEOUT_B1F_JIMMY_2
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq HAM_HIDEOUT_B1F_JIMMY_3
 	namebox HAM_HIDEOUT_B1F_JIMMY_Text_0
-	msgbox HAM_HIDEOUT_B1F_JIMMY_Text_1
-	hidenamebox
+	msgbox HAM_HIDEOUT_B1F_JIMMY_Text_3
 	closemessage
+	hidenamebox
+HAM_HIDEOUT_B1F_JIMMY_1:
 	release
 	end
+
+HAM_HIDEOUT_B1F_JIMMY_2:
+	applymovement 22, MOVEMENT_INTERACT_DOWN
+	namebox HAM_HIDEOUT_B1F_JIMMY_Text_0
+	msgbox HAM_HIDEOUT_B1F_JIMMY_Text_1
+	closemessage
+	hidenamebox
+	waitmovement 0
+	goto HAM_HIDEOUT_B1F_JIMMY_1
+
+HAM_HIDEOUT_B1F_JIMMY_3:
+	applymovement 22, MOVEMENT_INTERACT_DOWN
+	namebox HAM_HIDEOUT_B1F_JIMMY_Text_0
+	msgbox HAM_HIDEOUT_B1F_JIMMY_Text_2
+	closemessage
+	hidenamebox
+	waitmovement 0
+	goto HAM_HIDEOUT_B1F_JIMMY_1
 
 
 HAM_HIDEOUT_B1F_PRINCE_ALI::
 	lock
 	faceplayer
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 240
+	goto_if_eq HAM_HIDEOUT_B1F_PRINCE_ALI_2
+	namebox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_4
+	closemessage
+	hidenamebox
+HAM_HIDEOUT_B1F_PRINCE_ALI_1:
+	release
+	end
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_2:
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_8, 38
+	goto_if_eq HAM_HIDEOUT_B1F_PRINCE_ALI_6
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP
+	waitmovement 0
+HAM_HIDEOUT_B1F_PRINCE_ALI_5:
 	namebox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0
 	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1
 	hidenamebox
 	closemessage
-	fadescreenswapbuffers FADE_TO_BLACK
+	getplayerxy VAR_TEMP_8, VAR_TEMP_9
+	compare VAR_TEMP_8, 38
+	goto_if_eq HAM_HIDEOUT_B1F_PRINCE_ALI_10
+	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_UP
+HAM_HIDEOUT_B1F_PRINCE_ALI_9:
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
 	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2
-	removeobject 22
-	removeobject 23
-	removeobject 34
 	closemessage
-	setflag FLAG_TEMP_1C
-	fadescreenswapbuffers FADE_FROM_BLACK
-	release
-	end
+	hidenamebox
+	waitmovement 0
+	facefollower
+	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_3
+	closemessage
+	hidenamebox
+	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 241
+	goto HAM_HIDEOUT_B1F_PRINCE_ALI_1
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_6:
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT
+	waitmovement 0
+	goto HAM_HIDEOUT_B1F_PRINCE_ALI_5
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_10:
+	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_RIGHT
+	goto HAM_HIDEOUT_B1F_PRINCE_ALI_9
 
 
 HAM_HIDEOUT_B1F_GOEBIE::
@@ -1627,24 +1701,32 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_3:
 	.string "the Prince out!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_4:
-	.string "You attempt to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\p"
-	.string "But fail.$"
+	.string "You attempt to pick the lock.\p"
+	.string "{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\p"
+	.string "But realise your Theiving level is too\n"
+	.string "low.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_5:
 	.string "Step aside {PLAYER} allow me.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_6:
-	.string "Zanik attempts to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…$"
+	.string "Zanik attempts to pick the lock.\p"
+	.string "{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_7:
 	.string "Hmmm…\p"
-	.string "This is unusual, but I can't seem to pick\n"
-	.string "this lock.\p"
+	.string "This is unusual, the level required to\n"
+	.string "picklock this gate is way too high.\p"
 	.string "We're going to have to try and do this\n"
 	.string "the old fashioned way… with a key!\p"
 	.string "…{PAUSE 15}…{PAUSE 15}…\p"
 	.string "Now, where would they keep a spare key?\p"
-	.string "Maybe we could ask around…$"
+	.string "Maybe we could ask the prisoners.$"
+
+TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED_Text_0:
+	.string "Look {PLAYER}!\p"
+	.string "Is that the Prince you were looking\n"
+	.string "for?!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_0:
 	.string "Shouldn't you two be guarding the\n"
@@ -1662,18 +1744,18 @@ TRIGGER_HAMHIDEOUT_EVENT_3_Text_1:
 	.string "We usually keep spares there.$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_2:
-	.string "Hey, you two aren't H.A.M members!\l"
-	.string "Get out of here, this place is\l"
+	.string "Hey, you two aren't H.A.M members!\p"
+	.string "Get out of here, this place is\n"
 	.string "off-limits!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_3:
-	.string "Maybe we should go and free the Prince\n"
-	.string "while they're distracted guarding\l"
-	.string "whatever's in there?$"
+	.string "Maybe we should go and free the\n"
+	.string "prisoners while they're distracted\l"
+	.string "guarding whatever's in there?$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_4:
-	.string "Hey, you two are the ones who helped\n"
-	.string "the Prince escape!$"
+	.string "Hey, you two are the ones that\n"
+	.string "triggered the high alert!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_5:
 	.string "H.A.M Guard: Johanhus and Sigmund won't\n"
@@ -1706,12 +1788,12 @@ NPC_HAM_HIDEOUT_B1F_1_Text_2:
 
 NPC_HAM_HIDEOUT_B1F_1_Text_3:
 	.string "I saw the other guard you relieved walk\n"
-	.string "past not too long ago.\l"
-	.string "Have you idiots left the jail\l"
+	.string "past not too long ago.\p"
+	.string "Have you idiots left the jail\n"
 	.string "unguarded?\p"
 	.string "What if someone tries to sneak in and\n"
-	.string "break the prisoners out!\l"
-	.string "Get back to your post before I have to\l"
+	.string "break the prisoners out!\p"
+	.string "Get back to your post before I have to\n"
 	.string "involved Sigmund!$"
 
 NPC_HAM_HIDEOUT_B1F_1_Text_4:
@@ -1797,8 +1879,8 @@ NPC_HAM_HIDEOUT_B1F_9_Text_0:
 	.string "monsters, but we have standards.\p"
 	.string "Dogs, spiders, cows, pigs, sheep, and\n"
 	.string "cats have been friends and allies to\l"
-	.string "humans for centuries.\l"
-	.string "Now they stand with us against the\l"
+	.string "humans for centuries.\p"
+	.string "Now they stand with us against the\n"
 	.string "scourge that are monsters!$"
 
 NPC_HAM_HIDEOUT_B1F_10_Text_0:
@@ -1894,8 +1976,8 @@ NPC_HAM_HIDEOUT_B1F_15_Text_0:
 NPC_HAM_HIDEOUT_B1F_16_Text_0:
 	.string "It's really inspiring seeing such strong\n"
 	.string "female figures like Babe and Patty\l"
-	.string "having positions of authority here.\l"
-	.string "That's how I know this group truly are\l"
+	.string "having positions of authority here.\p"
+	.string "That's how I know this group truly are\n"
 	.string "guided by Saradomin himself.\p"
 	.string "The churches may preach about him, but\n"
 	.string "you never seen any female priests or\l"
@@ -1903,7 +1985,7 @@ NPC_HAM_HIDEOUT_B1F_16_Text_0:
 
 NPC_HAM_HIDEOUT_B1F_17_Text_0:
 	.string "It's my turn to prepare tonight's meal.\p"
-	.string "Thankfully we have plenty of 'taters.\l"
+	.string "Thankfully we have plenty of 'taters.\n"
 	.string "You know, po-tay-toes!\p"
 	.string "Boil 'em, mash 'em, stick 'em in a stew.\l"
 	.string "Yum!$"
@@ -1942,31 +2024,52 @@ HAM_HIDEOUT_B1F_JIMMY_Text_0:
 	.string "Jimmy$"
 
 HAM_HIDEOUT_B1F_JIMMY_Text_1:
-	.string "Hello mate.\n"
-	.string "Did Aggie send you?\p"
-	.string "I've been training as her apprentice,\n"
-	.string "but these lunatics kidnapped me and\l"
-	.string "tried to force me to join their cult!$"
+	.string "Psst…\p"
+	.string "You mates aren't actually with H.A.M are\n"
+	.string "you?\p"
+	.string "I heard they keep spare keys in their\n"
+	.string "storage room.$"
+
+HAM_HIDEOUT_B1F_JIMMY_Text_2:
+	.string "Mates you got the key!\p"
+	.string "Hurry and let us out!$"
+
+HAM_HIDEOUT_B1F_JIMMY_Text_3:
+	.string "Thank you mates!\p"
+	.string "Now the easy part, escaping!$"
 
 HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0:
 	.string "Prince Ali$"
 
 HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1:
-	.string "Ah, it is good to see a friendly face.\p"
-	.string "Thank you for rescuing us.\p"
-	.string "I will take these prisoners to safety,\n"
-	.string "please can I ask you to try and find\l"
-	.string "Sigmund?\p"
-	.string "He has something that belongs to me.\p"
-	.string "I will return and join you shortly, I\n"
-	.string "promise.$"
+	.string "Ah, are you two perhaps my saviors?\p"
+	.string "Ah but we are getting ahead of\n"
+	.string "ourselves, we still must escape this\l"
+	.string "place.\p"
+	.string "Perhaps you two could cause a\n"
+	.string "distraction of some sort?\p"
+	.string "And I will escape and take these\n"
+	.string "prisoners to safety.$"
 
 HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2:
-	.string "Prince Ali escorts Jimmy and the Goebie\n"
-	.string "out of the hideout.$"
+	.string "Sounds like a plan to me.$"
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_3:
+	.string "What do you think {PLAYER}?\p"
+	.string "Maybe it's time we find the boss and\n"
+	.string "find out what they are really up to…$"
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_4:
+	.string "So the plan is to face whomever is in\n"
+	.string "charge?\p"
+	.string "My what courage you both have.\p"
+	.string "I'll get ready to escape with the\n"
+	.string "prisoners.$"
 
 HAM_HIDEOUT_B1F_GOEBIE_Text_0:
 	.string "Goebiewan$"
 
 HAM_HIDEOUT_B1F_GOEBIE_Text_1:
-	.string "Hello there.$"
+	.string "Hello there.\p"
+	.string "Can I go back home now?\p"
+	.string "I miss my mummy…$"

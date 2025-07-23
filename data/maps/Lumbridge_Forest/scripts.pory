@@ -386,7 +386,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
         fadescreenswapbuffers(FADE_TO_BLACK)
         destroyfollower
         loadword(0, Following_Zanik)
-        setfollower(29, 0x80)
+        setfollower(29, FOLLOWER_FLAG_QUEST)
         setvar(VAR_0x8004, OUTFIT_HAM)
         special(WearOutfit)
         delay(20)
@@ -426,6 +426,16 @@ script CHECK_FOLLOWER_ZANIK {
 		lockall
 		facefollower
 		namebox("Zanik")
+
+		switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+			case 235:
+				msgbox(format("Where are you going?\pAre we just going to leave the others in the cell?\pOr…"))
+			case 240:
+				msgbox(format("I guess we are going to leave them to fend for themselves?\pYou sure you don't want to go back and chat with that prince you were wanting to resuce?"))
+			case 241:
+				msgbox(format("The plan was to cause a diversion remember?\pWe should try finding the boss.\pUnless…"))
+		}
+
 		msgbox(format("{PLAYER} do you wish to part ways?"), MSGBOX_YESNO)
 		if (var(VAR_RESULT))
 		{ 
@@ -502,7 +512,7 @@ script SetFollower_Zanik {
         fadescreenswapbuffers(FADE_TO_BLACK)
         destroyfollower
         loadword(0, Following_Zanik)
-        setfollower(29, 0x80)
+        setfollower(29, FOLLOWER_FLAG_QUEST) 
         setvar(VAR_0x8004, OUTFIT_HAM)
         special(WearOutfit)
         delay(20)
@@ -593,7 +603,7 @@ script ZANIK_DIALOGUE_COMMON {
 		case 3:
 			msgbox(format("My equipment is made of bones.\pNot a lot of material underground."))
 		case 4:
-			msgbox(format("Aah, I use electric type monsters mainly.\pThey help me see in the dark caverns while I hunt"))
+			msgbox(format("Aah, I use electric type monsters mainly.\pThey help me see in the dark caverns while I hunt."))
 		case 5:
 			msgbox(format("After you have beaten the MvM championship I hear you need to face the Elite 4.\pDo you ever wonder who they are?"))
 		case 6:

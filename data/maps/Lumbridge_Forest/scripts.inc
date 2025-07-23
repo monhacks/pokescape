@@ -380,7 +380,7 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	fadescreenswapbuffers FADE_TO_BLACK
 	destroyfollower
 	loadword 0, Following_Zanik
-	setfollower 29, 0x80
+	setfollower 29, FOLLOWER_FLAG_QUEST
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
@@ -445,49 +445,66 @@ CHECK_FOLLOWER_ZANIK_2:
 	lockall
 	facefollower
 	namebox POST_WARP_ZANIK_EVENT_Text_0
-	msgbox CHECK_FOLLOWER_ZANIK_Text_0, MSGBOX_YESNO
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, CHECK_FOLLOWER_ZANIK_7
+	case 240, CHECK_FOLLOWER_ZANIK_8
+	case 241, CHECK_FOLLOWER_ZANIK_9
+CHECK_FOLLOWER_ZANIK_5:
+	msgbox CHECK_FOLLOWER_ZANIK_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, 0
-	goto_if_ne CHECK_FOLLOWER_ZANIK_6
+	goto_if_ne CHECK_FOLLOWER_ZANIK_11
 	closemessage
 	hidenamebox
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_WALK_UP
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP
 	waitmovement 0
-CHECK_FOLLOWER_ZANIK_5:
+CHECK_FOLLOWER_ZANIK_10:
 	releaseall
 	goto CHECK_FOLLOWER_ZANIK_1
 
-CHECK_FOLLOWER_ZANIK_6:
+CHECK_FOLLOWER_ZANIK_7:
+	msgbox CHECK_FOLLOWER_ZANIK_Text_0
+	goto CHECK_FOLLOWER_ZANIK_5
+
+CHECK_FOLLOWER_ZANIK_8:
 	msgbox CHECK_FOLLOWER_ZANIK_Text_1
+	goto CHECK_FOLLOWER_ZANIK_5
+
+CHECK_FOLLOWER_ZANIK_9:
+	msgbox CHECK_FOLLOWER_ZANIK_Text_2
+	goto CHECK_FOLLOWER_ZANIK_5
+
+CHECK_FOLLOWER_ZANIK_11:
+	msgbox CHECK_FOLLOWER_ZANIK_Text_4
 	iswearingoutfit OUTFIT_HAM
 	compare VAR_RESULT, TRUE
-	goto_if_eq CHECK_FOLLOWER_ZANIK_10
-CHECK_FOLLOWER_ZANIK_9:
+	goto_if_eq CHECK_FOLLOWER_ZANIK_15
+CHECK_FOLLOWER_ZANIK_14:
 	closemessage
 	hidenamebox
 	iswearingoutfit OUTFIT_HAM
 	compare VAR_RESULT, TRUE
-	goto_if_eq CHECK_FOLLOWER_ZANIK_13
+	goto_if_eq CHECK_FOLLOWER_ZANIK_18
 	call FOLLOWER_REMOVE
-CHECK_FOLLOWER_ZANIK_12:
+CHECK_FOLLOWER_ZANIK_17:
 	clearflag FLAG_TEMP_1E
 	addobject 29
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
 	waitmovement 0
-	goto CHECK_FOLLOWER_ZANIK_5
+	goto CHECK_FOLLOWER_ZANIK_10
 
-CHECK_FOLLOWER_ZANIK_10:
+CHECK_FOLLOWER_ZANIK_15:
 	namebox POST_WARP_ZANIK_EVENT_Text_0
-	msgbox CHECK_FOLLOWER_ZANIK_Text_2
-	goto CHECK_FOLLOWER_ZANIK_9
+	msgbox CHECK_FOLLOWER_ZANIK_Text_5
+	goto CHECK_FOLLOWER_ZANIK_14
 
-CHECK_FOLLOWER_ZANIK_13:
+CHECK_FOLLOWER_ZANIK_18:
 	fadescreenswapbuffers FADE_TO_BLACK
 	call FOLLOWER_REMOVE
 	setvar VAR_0x8004, OUTFIT_DEFAULT
 	special WearOutfit
 	fadescreenswapbuffers FADE_FROM_BLACK
-	goto CHECK_FOLLOWER_ZANIK_12
+	goto CHECK_FOLLOWER_ZANIK_17
 
 
 SetFollower_Zanik::
@@ -525,7 +542,7 @@ SetFollower_Zanik_2:
 	fadescreenswapbuffers FADE_TO_BLACK
 	destroyfollower
 	loadword 0, Following_Zanik
-	setfollower 29, 0x80
+	setfollower 29, FOLLOWER_FLAG_QUEST
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
@@ -1194,13 +1211,32 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11:
 	.string "Perfect let us venture below!$"
 
 CHECK_FOLLOWER_ZANIK_Text_0:
-	.string "{PLAYER} do you wish to part ways?$"
+	.string "Where are you going?\p"
+	.string "Are we just going to leave the others in\n"
+	.string "the cell?\p"
+	.string "Or…$"
 
 CHECK_FOLLOWER_ZANIK_Text_1:
+	.string "I guess we are going to leave them to\n"
+	.string "fend for themselves?\p"
+	.string "You sure you don't want to go back and\n"
+	.string "chat with that prince you were wanting\l"
+	.string "to resuce?$"
+
+CHECK_FOLLOWER_ZANIK_Text_2:
+	.string "The plan was to cause a diversion\n"
+	.string "remember?\p"
+	.string "We should try finding the boss.\p"
+	.string "Unless…$"
+
+CHECK_FOLLOWER_ZANIK_Text_3:
+	.string "{PLAYER} do you wish to part ways?$"
+
+CHECK_FOLLOWER_ZANIK_Text_4:
 	.string "Don't take too long, I don't think I can\n"
 	.string "do this without you.$"
 
-CHECK_FOLLOWER_ZANIK_Text_2:
+CHECK_FOLLOWER_ZANIK_Text_5:
 	.string "Oh pass me that disguise real quick, we\n"
 	.string "need to make sure it stays pink.$"
 
@@ -1255,7 +1291,7 @@ ZANIK_DIALOGUE_COMMON_Text_4:
 	.string "Aah, I use electric type monsters\n"
 	.string "mainly.\p"
 	.string "They help me see in the dark caverns\n"
-	.string "while I hunt$"
+	.string "while I hunt.$"
 
 ZANIK_DIALOGUE_COMMON_Text_5:
 	.string "After you have beaten the MvM\n"

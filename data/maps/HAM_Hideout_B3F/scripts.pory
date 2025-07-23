@@ -17,6 +17,10 @@ script HAMHIDEOUT_HEAL_ZONE {
 }
 
 script CHECK_JAILED_HAM {
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {
+        setobjectxy(2,8,7)
+        setobjectxyperm(2,8,7)
+    }
     if (flag(FLAG_HAM_JAILED) == TRUE) {
         setobjectxy(2,5,6)
         setobjectxyperm(2,5,6)
@@ -27,7 +31,7 @@ script CHECK_JAILED_HAM {
 
 script HAM_WHITEOUT
 {
-	lock
+    lock
     delay(60)
     namebox ("H.A.M Guard")
     applymovement(2, MOVEMENT_INTERACT_UP)
@@ -69,7 +73,7 @@ script HAM_HIDEOUT_GATE
 {
     if (var(VAR_TEMP_C) == 0) {
         lock
-        msgbox(format("You attempt to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…"))
+        msgbox(format("You attempt to pick the lock.\p…{PAUSE 15}…{PAUSE 15}…"))
         closemessage
 
         checkfollower
@@ -80,7 +84,21 @@ script HAM_HIDEOUT_GATE
             closemessage
             hidenamebox
             //Zanik unlocks the door.
-            msgbox(format("Zanik attempts to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…"))
+            //TODO: check where Zanik is standing to prevent any clipping. atm this assumes she is right behind you north and south
+            getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+            if (var(VAR_TEMP_1) == 5) {
+                applymovement(OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right)
+                applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Walk_Up)
+                waitmovement(0)
+            }
+            else {
+                applymovement(OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right)
+                applymovement(OBJ_EVENT_ID_FOLLOWER, movement_WALK_DOWN_1_STEP)
+                waitmovement(0)
+            }
+            
+
+            msgbox(format("Zanik attempts to pick the lock.\p…{PAUSE 15}…{PAUSE 15}…"))
             closemessage
             playse(SE_TRUCK_DOOR)
             msgbox(format("The door opens."))
@@ -103,7 +121,7 @@ script HAM_HIDEOUT_GATE
         if (var(VAR_RESULT)) {
             facefollower
             namebox ("Zanik")
-            msgbox(format("A high Thieving level comes in handy for situations like this, wouldn't you agree?\pLet's go!"))
+            msgbox(format("Easy-peasy, a high Thieving level comes in handy for situations like this, wouldn't you agree?\pLet's go!"))
             closemessage
             hidenamebox
         }
@@ -140,11 +158,20 @@ script HAMHIDEOUT_BankChest {
 
 script HAMHIDEOUT_Guard {
     lock
-    namebox ("H.A.M Guard")
-    playse(SE_M_SNORE)
-    msgbox(format("Zzz…"))
-    closemessage
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {
+        faceplayer
+        namebox ("H.A.M Guard")
+        msgbox(format("I've sounded the alarm!\pYou both won't be getting away now!"))
+        waitmovement(0)
+    }
+    else {
+        namebox ("H.A.M Guard")
+        playse(SE_M_SNORE)
+        msgbox(format("Zzz…"))
+    }
     hidenamebox
+    closemessage
     release
     end
+    
 }

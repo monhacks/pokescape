@@ -23,15 +23,23 @@ HAMHIDEOUT_HEAL_ZONE::
 
 
 CHECK_JAILED_HAM::
-	goto_if_set FLAG_HAM_JAILED, CHECK_JAILED_HAM_2
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq CHECK_JAILED_HAM_2
 CHECK_JAILED_HAM_1:
+	goto_if_set FLAG_HAM_JAILED, CHECK_JAILED_HAM_5
+CHECK_JAILED_HAM_4:
 	end
 
 CHECK_JAILED_HAM_2:
+	setobjectxy 2, 8, 7
+	setobjectxyperm 2, 8, 7
+	goto CHECK_JAILED_HAM_1
+
+CHECK_JAILED_HAM_5:
 	setobjectxy 2, 5, 6
 	setobjectxyperm 2, 5, 6
 	setvar VAR_TEMP_B, 1
-	goto CHECK_JAILED_HAM_1
+	goto CHECK_JAILED_HAM_4
 
 
 HAM_WHITEOUT::
@@ -110,6 +118,13 @@ HAM_HIDEOUT_GATE_5:
 	msgbox HAM_HIDEOUT_GATE_Text_1
 	closemessage
 	hidenamebox
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	compare VAR_TEMP_1, 5
+	goto_if_eq HAM_HIDEOUT_GATE_12
+	applymovement OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right
+	applymovement OBJ_EVENT_ID_FOLLOWER, movement_WALK_DOWN_1_STEP
+	waitmovement 0
+HAM_HIDEOUT_GATE_11:
 	msgbox HAM_HIDEOUT_GATE_Text_2
 	closemessage
 	playse SE_TRUCK_DOOR
@@ -124,6 +139,12 @@ HAM_HIDEOUT_GATE_9:
 	closemessage
 	hidenamebox
 	goto HAM_HIDEOUT_GATE_8
+
+HAM_HIDEOUT_GATE_12:
+	applymovement OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right
+	applymovement OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Walk_Up
+	waitmovement 0
+	goto HAM_HIDEOUT_GATE_11
 
 
 HAMHIDEOUT_Banker::
@@ -153,13 +174,23 @@ HAMHIDEOUT_BankChest::
 
 HAMHIDEOUT_Guard::
 	lock
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq HAMHIDEOUT_Guard_2
 	namebox HAM_WHITEOUT_Text_0
 	playse SE_M_SNORE
 	msgbox HAM_WHITEOUT_Text_2
-	closemessage
+HAMHIDEOUT_Guard_1:
 	hidenamebox
+	closemessage
 	release
 	end
+
+HAMHIDEOUT_Guard_2:
+	faceplayer
+	namebox HAM_WHITEOUT_Text_0
+	msgbox HAMHIDEOUT_Guard_Text_0
+	waitmovement 0
+	goto HAMHIDEOUT_Guard_1
 
 
 HAM_WHITEOUT_Text_0:
@@ -180,21 +211,23 @@ HAM_WHITEOUT_Text_4:
 	.string "We must find a way out.$"
 
 HAM_HIDEOUT_GATE_Text_0:
-	.string "You attempt to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…$"
+	.string "You attempt to pick the lock.\p"
+	.string "…{PAUSE 15}…{PAUSE 15}…$"
 
 HAM_HIDEOUT_GATE_Text_1:
 	.string "Step aside {PLAYER} allow me.$"
 
 HAM_HIDEOUT_GATE_Text_2:
-	.string "Zanik attempts to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…$"
+	.string "Zanik attempts to pick the lock.\p"
+	.string "…{PAUSE 15}…{PAUSE 15}…$"
 
 HAM_HIDEOUT_GATE_Text_3:
 	.string "The door opens.$"
 
 HAM_HIDEOUT_GATE_Text_4:
-	.string "A high Thieving level comes in handy for\n"
-	.string "situations like this, wouldn't you\l"
-	.string "agree?\p"
+	.string "Easy-peasy, a high Thieving level comes\n"
+	.string "in handy for situations like this,\l"
+	.string "wouldn't you agree?\p"
 	.string "Let's go!$"
 
 HAMHIDEOUT_Banker_Text_0:
@@ -213,3 +246,7 @@ HAMHIDEOUT_Banker_Text_2:
 
 HAMHIDEOUT_BankChest_Text_0:
 	.string "Would you like to use the bank chest?$"
+
+HAMHIDEOUT_Guard_Text_0:
+	.string "I've sounded the alarm!\p"
+	.string "You both won't be getting away now!$"

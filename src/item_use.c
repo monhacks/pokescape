@@ -197,6 +197,11 @@ static void OutfitCannotUseItemMessage(u8 taskId, bool8 isUsingRegisteredKeyItem
     DisplayCannotUseItemMessage(taskId, isUsingRegisteredKeyItemOnField, gText_OutfitCannotUseItemMessage);
 }
 
+static void QuestFollowerCannotDoThatMessage(u8 taskId, bool8 isUsingRegisteredKeyItemOnField)
+{
+    DisplayCannotUseItemMessage(taskId, isUsingRegisteredKeyItemOnField, gText_QuestFollowerCannotDoThatMessage);
+}
+
 static void DisplayCannotDismountBikeMessage(u8 taskId, bool8 isUsingRegisteredKeyItemOnField)
 {
     DisplayCannotUseItemMessage(taskId, isUsingRegisteredKeyItemOnField, gText_CantDismountBike);
@@ -273,7 +278,10 @@ void ItemUseOutOfBattle_Bike(u8 taskId)
         DisplayCannotDismountBikeMessage(taskId, tUsingRegisteredKeyItem);
     else
     {
-        if (gOutfits[gSaveBlock2Ptr->currOutfitId].hasExtraAnims == FALSE) {
+        if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+            QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+        }
+        else if (gOutfits[gSaveBlock2Ptr->currOutfitId].hasExtraAnims == FALSE) {
             OutfitCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
         }
         else if (Overworld_IsBikingAllowed() == TRUE && IsBikingDisallowedByPlayer() == 0 && FollowerCanBike())
@@ -1611,7 +1619,10 @@ static void Task_OpenRegisteredFlyTool(u8 taskId)
 
 void ItemUseOutOfBattle_FlyTool(u8 taskId)
 {
-    if (MenuHelpers_IsLinkActive() == TRUE)
+    if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+        QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+    else if (MenuHelpers_IsLinkActive() == TRUE)
     {
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
@@ -1635,7 +1646,10 @@ static void ItemUseOnFieldCB_SurfTool(u8 taskId)
 
 void ItemUseOutOfBattle_SurfTool(u8 taskId)
 {
-    if (gOutfits[gSaveBlock2Ptr->currOutfitId].hasExtraAnims == FALSE) {
+    if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+        QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+    else if (gOutfits[gSaveBlock2Ptr->currOutfitId].hasExtraAnims == FALSE) {
         OutfitCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
     else if (IsPlayerFacingSurfableFishableWater())
@@ -1782,7 +1796,10 @@ static void AskPlayerTeleportTool(u8 taskId)
 
 void ItemUseOutOfBattle_TeleportTool(u8 taskId)
 {
-    if (CanUseDigOrEscapeRopeOnCurMap() == TRUE)
+    if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+        QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+    else if (CanUseDigOrEscapeRopeOnCurMap() == TRUE)
     {
         sItemUseOnFieldCB = ItemUseOnFieldCB_TeleportTool;
         SetUpItemUseOnFieldCallback(taskId);

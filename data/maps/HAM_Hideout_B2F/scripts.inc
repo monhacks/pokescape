@@ -431,16 +431,18 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY_1:
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_26
 	hidenamebox
 	closemessage
+	playse SE_FLEE
 	applymovement 4, movement_HAMHIDEOUT_GUARD_2
 	waitmovement 0
 	removeobject 4
 	setflag FLAG_TEMP_1D
+	playse SE_LOW_HEALTH
 	namebox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_5
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_27
 	hidenamebox
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_RIGHT
 	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_RIGHT
 	waitmovement 0
 	namebox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_5
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_28
@@ -1112,6 +1114,7 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_26:
 	.string "escape alive!$"
 
 TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_27:
+	.string "Oh no they sounded the alarm!\p"
 	.string "I'm sorry {PLAYER}…\p"
 	.string "I should have just kept my mouth shut…$"
 

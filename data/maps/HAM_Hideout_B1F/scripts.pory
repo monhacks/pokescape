@@ -34,6 +34,7 @@ script HAMHIDEOUT_B1F_STATE {
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 225) { 
         setvar(VAR_TEMP_0, 2)
         setvar(VAR_TEMP_3, 1)
+        setvar(VAR_TEMP_4, 1)
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) { 
         removeobject(18)      //Jail guard
@@ -54,7 +55,7 @@ script HAMHIDEOUT_B1F_STATE {
         setflag(FLAG_TEMP_4) 
         setvar(VAR_TEMP_3, 1)
     }
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 240) { 
+    if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 240) || (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 241)) { 
         setflag(FLAG_TEMP_D) //Hides NPCS
         clearflag(FLAG_TEMP_C) //Shows TRAINERS
         clearflag(FLAG_TEMP_E)
@@ -671,6 +672,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
     playse(SE_LEDGE)
     applymovement(19, movement_jump_in_place_LEFT)  //bottom guard
     waitmovement(0)
+    namebox("H.A.M Guard")
     msgbox(format("It doesn't matter, you're here now.\pMake sure you guard the prisoners!\nDon't let them out of your sight!"))
     hidenamebox
     closemessage
@@ -715,7 +717,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
         waitmovement(0)
     }  
     delay(60)     
-    msgbox(format("You attempt to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\pBut fail."))
+    msgbox(format("You attempt to pick the lock.\p{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\pBut realise your Theiving level is too low."))
     closemessage
     namebox ("Zanik")
     msgbox(format("Step aside {PLAYER} allow me."))
@@ -724,17 +726,31 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
     applymovement(OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right)
     applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Walk_Up)
     waitmovement(0)
-    msgbox(format("Zanik attempts to pick the lock{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…"))
+    msgbox(format("Zanik attempts to pick the lock.\p{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…"))
     closemessage
     applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_QUESTIONMARK)
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER) 
     waitmovement(0)
     namebox ("Zanik")
-    msgbox(format("Hmmm…\pThis is unusual, but I can't seem to pick this lock.\pWe're going to have to try and do this the old fashioned way… with a key!\p…{PAUSE 15}…{PAUSE 15}…\pNow, where would they keep a spare key?\pMaybe we could ask around…"))
+    msgbox(format("Hmmm…\pThis is unusual, the level required to picklock this gate is way too high.\pWe're going to have to try and do this the old fashioned way… with a key!\p…{PAUSE 15}…{PAUSE 15}…\pNow, where would they keep a spare key?\pMaybe we could ask the prisoners."))
     hidenamebox
     closemessage
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 230)
+    release
+    end
+}
+
+script TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED {
+    lock
+    playse(SE_LEDGE)
+    applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT)
+    waitmovement(0)
+    namebox ("Zanik")
+    msgbox(format("Look {PLAYER}!\pIs that the Prince you were looking for?!"))
+    hidenamebox
+    closemessage
+    setvar(VAR_TEMP_4, 2)
     release
     end
 }
@@ -882,7 +898,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_3 {                              //This needs so
     }
     elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {           //After the disguises have been removed, but before the Prince is free
         namebox("H.A.M Guard")
-        msgbox(format("Hey, you two aren't H.A.M members!\lGet out of here, this place is off-limits!"))
+        msgbox(format("Hey, you two aren't H.A.M members!\pGet out of here, this place is off-limits!"))
         closemessage
         hidenamebox
         applymovement (OBJ_EVENT_ID_FOLLOWER, MOVEMENT_LOCKFACING_WALK_DOWN)
@@ -895,15 +911,15 @@ script TRIGGER_HAMHIDEOUT_EVENT_3 {                              //This needs so
         applymovement (OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER)
         waitmovement(0)
         namebox("Zanik")
-        msgbox(format("Maybe we should go and free the Prince while they're distracted guarding whatever's in there?"))
+        msgbox(format("Maybe we should go and free the prisoners while they're distracted guarding whatever's in there?"))
         closemessage
         hidenamebox   
         release
         end
     }
-    elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 240) {           //After the disguises have been removed and the Prince has been rescued, battle the guards to pass through
+    elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 241) {           //After the disguises have been removed and the Prince has been rescued, battle the guards to pass through
         namebox("H.A.M Guard")
-        msgbox(format("Hey, you two are the ones who helped the Prince escape!"))
+        msgbox(format("Hey, you two are the ones that triggered the high alert!"))
         trainerbattle_two_trainers(TRAINER_HAM_HIDEOUT_GUARD_1, msgbox(format("H.A.M Guard: Johanhus and Sigmund won't be happy about this…")), TRAINER_HAM_HIDEOUT_GUARD_2, msgbox(format("H.A.M Guard: Especially since one of you is a blasted goblin!")))
         namebox("H.A.M Guard")
         msgbox(format("Quick, let's try and find some back-up!\pDon't you dare go in and disturb Johanhus and Sigmund while we're gone!"))
@@ -981,7 +997,7 @@ script NPC_HAM_HIDEOUT_B1F_1
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) { 
         faceplayer
         namebox ("H.A.M Guard")
-	    msgbox(format("I saw the other guard you relieved walk past not too long ago.\lHave you idiots left the jail unguarded?\pWhat if someone tries to sneak in and break the prisoners out!\lGet back to your post before I have to involved Sigmund!"))
+	    msgbox(format("I saw the other guard you relieved walk past not too long ago.\pHave you idiots left the jail unguarded?\pWhat if someone tries to sneak in and break the prisoners out!\pGet back to your post before I have to involved Sigmund!"))
         closemessage
         hidenamebox
         return
@@ -1111,7 +1127,7 @@ script NPC_HAM_HIDEOUT_B1F_9
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("We might use monsters to fight monsters, but we have standards.\pDogs, spiders, cows, pigs, sheep, and cats have been friends and allies to humans for centuries.\lNow they stand with us against the scourge that are monsters!"))
+	msgbox(format("We might use monsters to fight monsters, but we have standards.\pDogs, spiders, cows, pigs, sheep, and cats have been friends and allies to humans for centuries.\pNow they stand with us against the scourge that are monsters!"))
     closemessage
     hidenamebox
 	release
@@ -1261,7 +1277,7 @@ script NPC_HAM_HIDEOUT_B1F_16
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("It's really inspiring seeing such strong female figures like Babe and Patty having positions of authority here.\lThat's how I know this group truly are guided by Saradomin himself.\pThe churches may preach about him, but you never seen any female priests or monks…!"))
+	msgbox(format("It's really inspiring seeing such strong female figures like Babe and Patty having positions of authority here.\pThat's how I know this group truly are guided by Saradomin himself.\pThe churches may preach about him, but you never seen any female priests or monks…!"))
     closemessage
     hidenamebox
 	release
@@ -1273,7 +1289,7 @@ script NPC_HAM_HIDEOUT_B1F_17
 	lock
 	faceplayer
     namebox ("H.A.M Member")
-	msgbox(format("It's my turn to prepare tonight's meal.\pThankfully we have plenty of 'taters.\lYou know, po-tay-toes!\pBoil 'em, mash 'em, stick 'em in a stew.\lYum!"))
+	msgbox(format("It's my turn to prepare tonight's meal.\pThankfully we have plenty of 'taters.\nYou know, po-tay-toes!\pBoil 'em, mash 'em, stick 'em in a stew.\lYum!"))
     closemessage
     hidenamebox
 	release
@@ -1352,10 +1368,28 @@ script HAM_HIDEOUT_B1F_JIMMY
 {
     lock
     faceplayer
-    namebox("Jimmy")
-	msgbox(format("Hello mate.\nDid Aggie send you?\pI've been training as her apprentice, but these lunatics kidnapped me and tried to force me to join their cult!"))
-    hidenamebox
-    closemessage
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) {
+        applymovement(22, MOVEMENT_INTERACT_DOWN) 
+        namebox ("Jimmy")
+        msgbox(format("Psst…\pYou mates aren't actually with H.A.M are you?\pI heard they keep spare keys in their storage room."))
+        closemessage
+        hidenamebox
+        waitmovement(0)
+    }
+    elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {
+        applymovement(22, MOVEMENT_INTERACT_DOWN) 
+        namebox ("Jimmy")
+        msgbox(format("Mates you got the key!\pHurry and let us out!"))
+        closemessage
+        hidenamebox
+        waitmovement(0)
+    }
+    else {
+        namebox ("Jimmy")
+        msgbox(format("Thank you mates!\pNow the easy part, escaping!"))
+        closemessage
+        hidenamebox
+    }
 	release
 	end
 }
@@ -1364,18 +1398,45 @@ script HAM_HIDEOUT_B1F_PRINCE_ALI
 {
     lock
     faceplayer
-    namebox("Prince Ali")
-	msgbox(format("Ah, it is good to see a friendly face.\pThank you for rescuing us.\pI will take these prisoners to safety, please can I ask you to try and find Sigmund?\pHe has something that belongs to me.\pI will return and join you shortly, I promise."))
-    hidenamebox
-    closemessage
-    fadescreenswapbuffers(FADE_TO_BLACK)
-    msgbox(format("Prince Ali escorts Jimmy and the Goebie out of the hideout."))
-    removeobject(22)
-    removeobject(23)
-    removeobject(34)
-    closemessage
-    setflag(FLAG_TEMP_1C)
-    fadescreenswapbuffers(FADE_FROM_BLACK)
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 240) {
+        getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+        if (var(VAR_TEMP_8) == 38){  
+            applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACERIGHT) 
+            waitmovement(0)
+        }
+        else {
+            applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP) 
+            waitmovement(0)
+        }
+        namebox("Prince Ali")
+        msgbox(format("Ah, are you two perhaps my saviors?\pAh but we are getting ahead of ourselves, we still must escape this place.\pPerhaps you two could cause a distraction of some sort?\pAnd I will escape and take these prisoners to safety."))
+        hidenamebox
+        closemessage
+        getplayerxy(VAR_TEMP_8, VAR_TEMP_9)     
+        if (var(VAR_TEMP_8) == 38){  
+            applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_RIGHT) 
+        }
+        else {
+            applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_UP) 
+        }
+        namebox ("Zanik")
+        msgbox(format("Sounds like a plan to me."))
+        closemessage
+        hidenamebox
+        waitmovement(0)
+        facefollower
+        namebox ("Zanik")
+        msgbox(format("What do you think {PLAYER}?\pMaybe it's time we find the boss and find out what they are really up to…"))
+        closemessage
+        hidenamebox
+        setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 241)
+    }
+    else {
+        namebox ("Prince Ali")
+        msgbox(format("So the plan is to face whomever is in charge?\pMy what courage you both have.\pI'll get ready to escape with the prisoners."))
+        closemessage
+        hidenamebox
+    }
 	release
 	end
 }
@@ -1385,7 +1446,7 @@ script HAM_HIDEOUT_B1F_GOEBIE
     lock
     faceplayer
     namebox("Goebiewan")
-	msgbox(format("Hello there."))
+	msgbox(format("Hello there.\pCan I go back home now?\pI miss my mummy…"))
     hidenamebox
     closemessage
 	release
