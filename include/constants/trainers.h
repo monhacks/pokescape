@@ -283,7 +283,9 @@
 #define TRAINER_PIC_zemouregal   		        257
 #define TRAINER_PIC_lord_daquarius   		    258
 #define TRAINER_PIC_elite_black_knight   		259
-#define TRAINER_PIC_angrennouille   		        260
+#define TRAINER_PIC_angrennouille   		    260
+#define TRAINER_PIC_ham_johanhus   		        261
+
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)

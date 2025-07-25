@@ -747,7 +747,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED {
     applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT)
     waitmovement(0)
     namebox ("Zanik")
-    msgbox(format("Look {PLAYER}!\pIs that the Prince you were looking for?!"))
+    msgbox(format("Look {PLAYER}!\pIs there are a bunch of prisoners over there!"))
     hidenamebox
     closemessage
     setvar(VAR_TEMP_4, 2)

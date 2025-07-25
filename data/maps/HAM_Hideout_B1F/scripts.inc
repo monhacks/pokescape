@@ -1725,8 +1725,8 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_7:
 
 TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED_Text_0:
 	.string "Look {PLAYER}!\p"
-	.string "Is that the Prince you were looking\n"
-	.string "for?!$"
+	.string "Is there are a bunch of prisoners over\n"
+	.string "there!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_0:
 	.string "Shouldn't you two be guarding the\n"

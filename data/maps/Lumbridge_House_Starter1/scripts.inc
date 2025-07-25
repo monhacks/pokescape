@@ -986,11 +986,11 @@ Explorer_Jack_2_Text_3:
 
 Explorer_Jack_2_Text_4:
 	.string "Anyhow, I've got some news for you.\p"
-	.string "Apparently a famous researcher is\n"
-	.string "currently visiting the Duke in\l"
-	.string "Lumbridge Castle and I heard he is\l"
-	.string "giving out Monsters to anyone who can\l"
-	.string "help him with a quest!\p"
+	.string "Apparently a famous monster\n"
+	.string "researcher is currently visiting the\l"
+	.string "Duke in Lumbridge Castle and I heard he\l"
+	.string "is giving out Monsters to anyone who\l"
+	.string "can help him with a quest!\p"
 	.string "I think you should go pay him a visit\n"
 	.string "seeing as you've always had a fondness\l"
 	.string "for adventures.$"

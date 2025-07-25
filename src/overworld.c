@@ -1823,6 +1823,9 @@ bool8 MapIsInPerpetualDarkness(u16 mapLayoutId)
     || mapLayoutId == LAYOUT_LUMBRIDGE_SWAMP_CAVES_WGS_3
     || mapLayoutId == LAYOUT_LUMBRIDGE_SWAMP_CAVES_WGS_4
     || mapLayoutId == LAYOUT_LUMBRIDGE_SWAMP_CAVES_WGS_5
+    //|| mapLayoutId == LAYOUT_HAM_HIDEOUT_B1F
+    || mapLayoutId == LAYOUT_HAM_HIDEOUT_B2F
+    || mapLayoutId == LAYOUT_HAM_HIDEOUT_B3F
     ;
 }
 

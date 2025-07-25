@@ -59,7 +59,7 @@ script Explorer_Jack_2 {
 		case 3:
 			msgbox(format("It's about time you got up, you've been sleeping all day."))
 	}
-	msgbox(format("Anyhow, I've got some news for you.\pApparently a famous researcher is currently visiting the Duke in Lumbridge Castle and I heard he is giving out Monsters to anyone who can help him with a quest!\pI think you should go pay him a visit seeing as you've always had a fondness for adventures."))
+	msgbox(format("Anyhow, I've got some news for you.\pApparently a famous monster researcher is currently visiting the Duke in Lumbridge Castle and I heard he is giving out Monsters to anyone who can help him with a quest!\pI think you should go pay him a visit seeing as you've always had a fondness for adventures."))
 	closemessage
 	hidenamebox
 	applymovement(1, Movement_Explorer_Jack_2)

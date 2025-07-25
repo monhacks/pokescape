@@ -503,7 +503,7 @@ script TRIGGER_HAMHIDEOUT_BABE_PATTY {
     removeobject(4)
     setflag(FLAG_TEMP_1D)
     //Runs off to sound the alarm.
-    playse(SE_LOW_HEALTH)
+    playse(SE_DING_DONG)
     namebox ("Zanik")
     msgbox(format("Oh no they sounded the alarm!\pI'm sorry {PLAYER}…\pI should have just kept my mouth shut…"))
     hidenamebox

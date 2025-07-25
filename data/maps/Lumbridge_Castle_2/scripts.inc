@@ -20,13 +20,23 @@ Lumbridge_Castle_2_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 LUMBRIDGE_CASTLE_2_STATE::
+	goto_if_set FLAG_STARTER1, LUMBRIDGE_CASTLE_2_STATE_2
+	goto_if_set FLAG_STARTER2, LUMBRIDGE_CASTLE_2_STATE_2
+	goto_if_set FLAG_STARTER3, LUMBRIDGE_CASTLE_2_STATE_2
+LUMBRIDGE_CASTLE_2_STATE_1:
 	setflag FLAG_TEMP_1F
 	removeobject 2
 	compare VAR_MITHRILMAN_STATE, 0
-	goto_if_eq LUMBRIDGE_CASTLE_2_STATE_1
+	goto_if_eq LUMBRIDGE_CASTLE_2_STATE_8
 	return
 
-LUMBRIDGE_CASTLE_2_STATE_1:
+LUMBRIDGE_CASTLE_2_STATE_2:
+	setflag FLAG_TEMP_A
+	setflag FLAG_TEMP_B
+	setflag FLAG_TEMP_C
+	goto LUMBRIDGE_CASTLE_2_STATE_1
+
+LUMBRIDGE_CASTLE_2_STATE_8:
 	clearflag FLAG_TEMP_1F
 	addobject 2
 	return
@@ -252,7 +262,7 @@ RightDoorScript::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_PLAYER_1
 	waitmovement 0
 	namebox LeftDoorScript_Text_0
-	msgbox LeftDoorScript_Text_2
+	msgbox RightDoorScript_Text_0
 	waitmessage
 	hidenamebox
 	closemessage
@@ -262,12 +272,12 @@ RightDoorScript::
 	applymovement 4, Movement_NORMALTREE_1
 	waitmovement 0
 	namebox LeftDoorScript_Text_0
-	msgbox LeftDoorScript_Text_3
+	msgbox RightDoorScript_Text_1
 	hidenamebox
 	applymovement 4, Movement_NORMALTREE_2
 	waitmovement 0
 	namebox LeftDoorScript_Text_4
-	msgbox LeftDoorScript_Text_5
+	msgbox RightDoorScript_Text_2
 	msgbox LeftDoorScript_Text_6, MSGBOX_YESNO
 RightDoorScript_2:
 	compare VAR_RESULT, 1
@@ -278,7 +288,7 @@ RightDoorScript_2:
 	end
 
 RightDoorScript_3:
-	msgbox LeftDoorScript_Text_7, MSGBOX_YESNO
+	msgbox RightDoorScript_Text_3, MSGBOX_YESNO
 	goto RightDoorScript_2
 
 
@@ -300,6 +310,12 @@ Lumbridge_Castle_Professor_Normal_Tree_1_1:
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject 4
+	setflag FLAG_TEMP_A
+	setflag FLAG_TEMP_B
+	setflag FLAG_TEMP_C
+	removeobject 5
+	removeobject 6
+	removeobject 7
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Lumbridge_Castle_Hans_1
 	release
@@ -562,76 +578,81 @@ Movement_Starter3:
 
 Pouch_Starter1::
 	lock
-	goto_if_set FLAG_STARTER2, Pouch_Starter1_1
-	goto_if_set FLAG_STARTER3, Pouch_Starter1_1
-	goto_if_unset FLAG_MEMBERSHIP, Pouch_Starter1_6
-	goto_if_set FLAG_MEMBERSHIP, Pouch_Starter1_7
-	return
-
+	goto_if_set FLAG_STARTER2, Pouch_Starter1_2
+	goto_if_set FLAG_STARTER3, Pouch_Starter1_2
+	goto_if_unset FLAG_MEMBERSHIP, Pouch_Starter1_7
+	goto_if_set FLAG_MEMBERSHIP, Pouch_Starter1_8
 Pouch_Starter1_1:
-	msgbox Pouch_Starter1_Text_0
 	release
-	return
+	end
 
-Pouch_Starter1_6:
+Pouch_Starter1_2:
+	msgbox Pouch_Starter1_Text_0
+	goto Pouch_Starter1_1
+
+Pouch_Starter1_7:
 	lock
 	showmonpic SPECIES_GUTHLING, 10, 3
 	msgbox Pouch_Starter1_Text_1
 	msgbox Pouch_Starter1_Text_2, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Pouch_Starter1_10
+	goto_if_eq Pouch_Starter1_11
 	setflag FLAG_SYS_POKEMON_GET
 	givemon SPECIES_GUTHLING, 5, ITEM_NONE
 	msgbox Pouch_Starter1_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Pouch_Starter1_17
+	goto_if_eq Pouch_Starter1_18
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 	removeobject 5
-Pouch_Starter1_16:
+	setflag FLAG_TEMP_A
+	setflag FLAG_STARTER1
+Pouch_Starter1_17:
 	goto Lumbridge_Castle_Professor_Normal_Tree_1
-	return
+	goto Pouch_Starter1_1
 
-Pouch_Starter1_7:
+Pouch_Starter1_8:
 	lock
 	showmonpic SPECIES_ARMALING, 10, 3
 	msgbox Pouch_Starter1_Text_4
 	msgbox Pouch_Starter1_Text_2, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Pouch_Starter1_13
+	goto_if_eq Pouch_Starter1_14
 	setflag FLAG_SYS_POKEMON_GET
 	givemon SPECIES_ARMALING, 5, ITEM_NONE
 	msgbox Pouch_Starter1_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Pouch_Starter1_21
+	goto_if_eq Pouch_Starter1_22
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 	removeobject 5
-Pouch_Starter1_20:
-	goto Lumbridge_Castle_Professor_Normal_Tree_1
-	return
-
-Pouch_Starter1_10:
-	hidemonpic
-	release
-	return
-
-Pouch_Starter1_13:
-	hidemonpic
-	release
-	return
-
-Pouch_Starter1_17:
-	removeobject 5
-	hidemonpic
-	release
-	goto Pouch_Starter1_16
-
+	setflag FLAG_TEMP_A
+	setflag FLAG_STARTER1
 Pouch_Starter1_21:
-	removeobject 5
+	goto Lumbridge_Castle_Professor_Normal_Tree_1
+	goto Pouch_Starter1_1
+
+Pouch_Starter1_11:
 	hidemonpic
-	release
-	goto Pouch_Starter1_20
+	goto Pouch_Starter1_1
+
+Pouch_Starter1_14:
+	hidemonpic
+	goto Pouch_Starter1_1
+
+Pouch_Starter1_18:
+	removeobject 5
+	setflag FLAG_TEMP_A
+	setflag FLAG_STARTER1
+	hidemonpic
+	goto Pouch_Starter1_17
+
+Pouch_Starter1_22:
+	removeobject 5
+	setflag FLAG_TEMP_A
+	setflag FLAG_STARTER1
+	hidemonpic
+	goto Pouch_Starter1_21
 
 
 Pouch_Starter2::
@@ -662,6 +683,8 @@ Pouch_Starter2_6:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 	removeobject 6
+	setflag FLAG_TEMP_B
+	setflag FLAG_STARTER2
 Pouch_Starter2_16:
 	goto Lumbridge_Castle_Professor_Normal_Tree_1
 	return
@@ -681,6 +704,8 @@ Pouch_Starter2_7:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 	removeobject 6
+	setflag FLAG_TEMP_B
+	setflag FLAG_STARTER2
 Pouch_Starter2_20:
 	goto Lumbridge_Castle_Professor_Normal_Tree_1
 	return
@@ -697,12 +722,16 @@ Pouch_Starter2_13:
 
 Pouch_Starter2_17:
 	removeobject 6
+	setflag FLAG_TEMP_B
+	setflag FLAG_STARTER2
 	hidemonpic
 	release
 	goto Pouch_Starter2_16
 
 Pouch_Starter2_21:
 	removeobject 6
+	setflag FLAG_TEMP_B
+	setflag FLAG_STARTER2
 	hidemonpic
 	release
 	goto Pouch_Starter2_20
@@ -736,6 +765,8 @@ Pouch_Starter3_6:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 	removeobject 7
+	setflag FLAG_TEMP_C
+	setflag FLAG_STARTER3
 Pouch_Starter3_16:
 	goto Lumbridge_Castle_Professor_Normal_Tree_1
 	return
@@ -755,6 +786,8 @@ Pouch_Starter3_7:
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
 	removeobject 7
+	setflag FLAG_TEMP_C
+	setflag FLAG_STARTER3
 Pouch_Starter3_20:
 	goto Lumbridge_Castle_Professor_Normal_Tree_1
 	return
@@ -771,12 +804,16 @@ Pouch_Starter3_13:
 
 Pouch_Starter3_17:
 	removeobject 7
+	setflag FLAG_TEMP_C
+	setflag FLAG_STARTER3
 	hidemonpic
 	release
 	goto Pouch_Starter3_16
 
 Pouch_Starter3_21:
 	removeobject 7
+	setflag FLAG_TEMP_C
+	setflag FLAG_STARTER3
 	hidemonpic
 	release
 	goto Pouch_Starter3_20
@@ -1401,7 +1438,7 @@ LeftDoorScript_Text_1:
 LeftDoorScript_Text_2:
 	.string "…\p"
 	.string "Nice to meet you {PLAYER}.\p"
-	.string "You must be here to see the\n"
+	.string "You must be here to see the monster\n"
 	.string "researcher?\p"
 	.string "We've had a few others come see him\n"
 	.string "today too.\p"
@@ -1410,14 +1447,13 @@ LeftDoorScript_Text_2:
 LeftDoorScript_Text_3:
 	.string "Sorry to interrupt but this is\n"
 	.string "{PLAYER}.\p"
-	.string "They are interested in your quest\n"
-	.string "Professor.$"
+	.string "They are interested in your quest.$"
 
 LeftDoorScript_Text_4:
 	.string "Prof. Tree$"
 
 LeftDoorScript_Text_5:
-	.string "I am Professor Normal Tree.\p"
+	.string "Hello, I am Professor Normal Tree.\p"
 	.string "But everyone calls me Professor Tree\n"
 	.string "for short.\p"
 	.string "I am in need of assistants to help me in\n"
@@ -1437,12 +1473,48 @@ LeftDoorScript_Text_6:
 
 LeftDoorScript_Text_7:
 	.string "Noob.\p"
-	.string "…How about now?$"
+	.string "…Why are you here then?\p"
+	.string "Would you like to accept my Quest?$"
 
 LeftDoorScript_Text_8:
 	.string "Nice.\p"
 	.string "Please choose from one of these 3\n"
 	.string "monsters on the table.$"
+
+RightDoorScript_Text_0:
+	.string "…\p"
+	.string "Nice to meet you {PLAYER}.\p"
+	.string "You must be here to see the\n"
+	.string "researcher?\p"
+	.string "We've had a few others come see him\n"
+	.string "today too.\p"
+	.string "Follow me.$"
+
+RightDoorScript_Text_1:
+	.string "Sorry to interrupt but this is\n"
+	.string "{PLAYER}.\p"
+	.string "They are interested in your quest\n"
+	.string "Professor.$"
+
+RightDoorScript_Text_2:
+	.string "I am Professor Normal Tree.\p"
+	.string "But everyone calls me Professor Tree\n"
+	.string "for short.\p"
+	.string "I am in need of assistants to help me in\n"
+	.string "my research, as you would know this\l"
+	.string "world is full to the brim with all sorts\l"
+	.string "of monsters.\p"
+	.string "What I would like assistance with is\n"
+	.string "filling this BESTIARY with as much data\l"
+	.string "as possible.\p"
+	.string "Of course I wouldn't ask you to do it\n"
+	.string "for free, I'll be giving you one of 3 rare\l"
+	.string "monsters to take with you on your\l"
+	.string "journey.$"
+
+RightDoorScript_Text_3:
+	.string "Noob.\p"
+	.string "…How about now?$"
 
 Lumbridge_Castle_Professor_Normal_Tree_1_Text_0:
 	.string "Nice.\p"

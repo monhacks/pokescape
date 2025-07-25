@@ -436,7 +436,7 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY_1:
 	waitmovement 0
 	removeobject 4
 	setflag FLAG_TEMP_1D
-	playse SE_LOW_HEALTH
+	playse SE_DING_DONG
 	namebox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_5
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_27
 	hidenamebox

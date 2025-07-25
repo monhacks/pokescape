@@ -1043,6 +1043,11 @@ static const union AnimCmd *const sAnims_angrennouille[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_ham_johanhus[] ={
+    sAnim_GeneralFrame0,
+};
+
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -1307,4 +1312,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_lord_daquarius] = sAnims_lord_daquarius,
     [TRAINER_PIC_elite_black_knight] = sAnims_elite_black_knight,
     [TRAINER_PIC_angrennouille] = sAnims_angrennouille,
+    [TRAINER_PIC_ham_johanhus] = sAnims_ham_johanhus,
+
+    
 };

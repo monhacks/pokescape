@@ -189,7 +189,6 @@ HAMHIDEOUT_Guard_2:
 	faceplayer
 	namebox HAM_WHITEOUT_Text_0
 	msgbox HAMHIDEOUT_Guard_Text_0
-	waitmovement 0
 	goto HAMHIDEOUT_Guard_1
 
 

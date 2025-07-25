@@ -162,7 +162,6 @@ script HAMHIDEOUT_Guard {
         faceplayer
         namebox ("H.A.M Guard")
         msgbox(format("I've sounded the alarm!\pYou both won't be getting away now!"))
-        waitmovement(0)
     }
     else {
         namebox ("H.A.M Guard")

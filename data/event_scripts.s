@@ -1568,3 +1568,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Wilderness_Crater_B3F/scripts.inc"
 
 	.include "data/maps/Wilderness_Crater_B4F/scripts.inc"
+
+	.include "data/maps/HAM_Hideout_B4F/scripts.inc"

@@ -22,6 +22,13 @@ mapscripts Lumbridge_Castle_2_MapScripts{
 }
 
 script LUMBRIDGE_CASTLE_2_STATE {
+	if ((flag(FLAG_STARTER1)) || (flag(FLAG_STARTER2)) || (flag(FLAG_STARTER3)))  {
+		setflag(FLAG_TEMP_A)
+		setflag(FLAG_TEMP_B)
+		setflag(FLAG_TEMP_C)
+	}
+
+
 	setflag(FLAG_TEMP_1F)
 	removeobject(OBJ_EVENT_ID_MITHRILMAN)
 
@@ -196,7 +203,7 @@ script LeftDoorScript
 	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PLAYER_1)
 	waitmovement (0)
 	namebox ("Hans")
-	msgbox(format("…\pNice to meet you {PLAYER}.\pYou must be here to see the researcher?\pWe've had a few others come see him today too.\pFollow me."))
+	msgbox(format("…\pNice to meet you {PLAYER}.\pYou must be here to see the monster researcher?\pWe've had a few others come see him today too.\pFollow me."))
 	waitmessage
 	hidenamebox
 	closemessage
@@ -207,15 +214,15 @@ script LeftDoorScript
 	waitmovement (0)
 //SECTION 2
 	namebox ("Hans")
-	msgbox(format("Sorry to interrupt but this is {PLAYER}.\pThey are interested in your quest Professor."))
+	msgbox(format("Sorry to interrupt but this is {PLAYER}.\pThey are interested in your quest."))
 	hidenamebox
 	applymovement(4, Movement_NORMALTREE_2)
 	waitmovement (0)
 	namebox ("Prof. Tree")
-	msgbox(format("I am Professor Normal Tree.\pBut everyone calls me Professor Tree for short.\pI am in need of assistants to help me in my research, as you would know this world is full to the brim with all sorts of monsters.\pWhat I would like assistance with is filling this BESTIARY with as much data as possible.\pOf course I wouldn't ask you to do it for free, I'll be giving you one of 3 rare monsters to take with you on your journey."))
+	msgbox(format("Hello, I am Professor Normal Tree.\pBut everyone calls me Professor Tree for short.\pI am in need of assistants to help me in my research, as you would know this world is full to the brim with all sorts of monsters.\pWhat I would like assistance with is filling this BESTIARY with as much data as possible.\pOf course I wouldn't ask you to do it for free, I'll be giving you one of 3 rare monsters to take with you on your journey."))
 	msgbox(format("Would you like to accept my Quest?"), MSGBOX_YESNO)
 	while (var(VAR_RESULT) != 1) {
-        msgbox(format("Noob.\p…How about now?"), MSGBOX_YESNO)	
+        msgbox(format("Noob.\p…Why are you here then?\pWould you like to accept my Quest?"), MSGBOX_YESNO)	
 	}
 		msgbox(format("Nice.\pPlease choose from one of these 3 monsters on the table."))
 		hidenamebox
@@ -269,35 +276,41 @@ script RightDoorScript
 
 script Lumbridge_Castle_Professor_Normal_Tree_1{
 	if (flag(FLAG_STARTER1)){
-			applymovement(OBJ_EVENT_ID_PLAYER, Movement_Starter1)
-			waitmovement(0)
-		}
-		elif (flag(FLAG_STARTER2)) {
-			applymovement(OBJ_EVENT_ID_PLAYER, Movement_Starter2)
-			waitmovement(0)
-		}
-		elif (flag(FLAG_STARTER3)) {
-			applymovement(OBJ_EVENT_ID_PLAYER, Movement_Starter3)
-			waitmovement(0)
-		}
-		namebox ("Prof. Tree")
-		msgbox(format("Nice.\pPlease take this BESTIARY."))
-		hidenamebox
-		playfanfare(MUS_PS_GET_ITEM)
-		msgbox(format("Obtained the BESTIARY."))
-		waitfanfare
-		namebox ("Prof. Tree")
-		msgbox(format("I've got to head to Kandarin now, I look forward to seeing how much of the BESTIARY you've filled out the next we meet.\pUntil then…\lFarewell."))
-		waitmessage
-		hidenamebox
-		closemessage
-		fadescreenswapbuffers (FADE_TO_BLACK)
-		removeobject(4)
-		fadescreenswapbuffers(FADE_FROM_BLACK)
-		goto(Lumbridge_Castle_Hans_1)
-		release
-		end	
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Starter1)
+		waitmovement(0)
 	}
+	elif (flag(FLAG_STARTER2)) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Starter2)
+		waitmovement(0)
+	}
+	elif (flag(FLAG_STARTER3)) {
+		applymovement(OBJ_EVENT_ID_PLAYER, Movement_Starter3)
+		waitmovement(0)
+	}
+	namebox ("Prof. Tree")
+	msgbox(format("Nice.\pPlease take this BESTIARY."))
+	hidenamebox
+	playfanfare(MUS_PS_GET_ITEM)
+	msgbox(format("Obtained the BESTIARY."))
+	waitfanfare
+	namebox ("Prof. Tree")
+	msgbox(format("I've got to head to Kandarin now, I look forward to seeing how much of the BESTIARY you've filled out the next we meet.\pUntil then…\lFarewell."))
+	waitmessage
+	hidenamebox
+	closemessage
+	fadescreenswapbuffers (FADE_TO_BLACK)
+	removeobject(4)
+	setflag(FLAG_TEMP_A)
+	setflag(FLAG_TEMP_B)
+	setflag(FLAG_TEMP_C)
+	removeobject(5)
+	removeobject(6)
+	removeobject(7)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
+	goto(Lumbridge_Castle_Hans_1)
+	release
+	end	
+}
 
 script Lumbridge_Castle_Professor_Normal_Tree_2{
 	lock
@@ -478,7 +491,6 @@ script Pouch_Starter1 {
 	lock
 	if ((flag(FLAG_STARTER2)) || flag(FLAG_STARTER3)){
 		msgbox("You have already chosen!\pNo need to be greedy!")
-		release
 	}	
 	else{
 		if (!flag(FLAG_MEMBERSHIP)) {
@@ -487,8 +499,7 @@ script Pouch_Starter1 {
 			msgbox("This is a GRASS type Monster.\nThe Bird of Balance, GUTHLING.")
 			msgbox(format("Would you like this monster as your starter?"), MSGBOX_YESNO)
 				if (var(VAR_RESULT) == NO){
-					hidemonpic
-					release	
+					hidemonpic	
 				}
 				else{
 					setflag (FLAG_SYS_POKEMON_GET)
@@ -496,13 +507,16 @@ script Pouch_Starter1 {
 					msgbox(format("Would you like to give your monster a nickname?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == NO){
 							removeobject (5)
+							setflag(FLAG_TEMP_A)
+							setflag(FLAG_STARTER1)
 							hidemonpic
-							release
 						}
 						else{
 							setvar (VAR_0x8004, 0)
 							call (Common_EventScript_NameReceivedPartyMon)
 							removeobject (5)
+							setflag(FLAG_TEMP_A)
+							setflag(FLAG_STARTER1)
 						}
 						goto(Lumbridge_Castle_Professor_Normal_Tree_1)
 				}
@@ -514,7 +528,6 @@ script Pouch_Starter1 {
 			msgbox(format("Would you like this monster as your starter?"), MSGBOX_YESNO)
 				if (var(VAR_RESULT) == NO){
 					hidemonpic
-					release
 				}
 				else{
 					setflag (FLAG_SYS_POKEMON_GET)
@@ -522,18 +535,23 @@ script Pouch_Starter1 {
 					msgbox(format("Would you like to give your monster a nickname?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == NO){
 							removeobject (5)
+							setflag(FLAG_TEMP_A)
+							setflag(FLAG_STARTER1)
 							hidemonpic
-							release
 						}
 						else{
 							setvar (VAR_0x8004, 0)
 							call (Common_EventScript_NameReceivedPartyMon)
 							removeobject (5)
+							setflag(FLAG_TEMP_A)
+							setflag(FLAG_STARTER1)
 						}
 						goto(Lumbridge_Castle_Professor_Normal_Tree_1)
 				}
 		}
 	}
+	release
+	end
 }
 
 
@@ -560,6 +578,8 @@ script Pouch_Starter2 {
 					msgbox(format("Would you like to give your monster a nickname?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == NO){
 							removeobject (6)
+							setflag(FLAG_TEMP_B)
+							setflag(FLAG_STARTER2)
 							hidemonpic
 							release							
 						}
@@ -567,6 +587,8 @@ script Pouch_Starter2 {
 							setvar (VAR_0x8004, 0)
 							call (Common_EventScript_NameReceivedPartyMon)
 							removeobject (6)
+							setflag(FLAG_TEMP_B)
+							setflag(FLAG_STARTER2)
 						}
 						goto(Lumbridge_Castle_Professor_Normal_Tree_1)
 				}		
@@ -586,6 +608,8 @@ script Pouch_Starter2 {
 					msgbox(format("Would you like to give your monster a nickname?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == NO){
 							removeobject (6)
+							setflag(FLAG_TEMP_B)
+							setflag(FLAG_STARTER2)
 							hidemonpic
 							release							
 						}
@@ -593,6 +617,8 @@ script Pouch_Starter2 {
 							setvar (VAR_0x8004, 0)
 							call (Common_EventScript_NameReceivedPartyMon)
 							removeobject (6)
+							setflag(FLAG_TEMP_B)
+							setflag(FLAG_STARTER2)
 						}
 						goto(Lumbridge_Castle_Professor_Normal_Tree_1)
 				}		
@@ -602,11 +628,11 @@ script Pouch_Starter2 {
 
 script Pouch_Starter3 {
 	lock
-	if ((flag(FLAG_STARTER1)) || flag(FLAG_STARTER2)){
+	if ((flag(FLAG_STARTER1)) || flag(FLAG_STARTER2)) {
 		msgbox("You have already chosen!\pNo need to be greedy!")
 		release		
 	}	
-	else{
+	else {
 		if (!flag(FLAG_MEMBERSHIP)) {
 			lock
 			showmonpic (SPECIES_SARALING, 10, 3)
@@ -622,13 +648,17 @@ script Pouch_Starter3 {
 					msgbox(format("Would you like to give your monster a nickname?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == NO){
 							removeobject (7)
+							setflag(FLAG_TEMP_C)
+							setflag(FLAG_STARTER3)
 							hidemonpic
 							release							
 						}
 						else{
 							setvar (VAR_0x8004, 0)
 							call (Common_EventScript_NameReceivedPartyMon)
-							removeobject (7)						
+							removeobject (7)
+							setflag(FLAG_TEMP_C)
+							setflag(FLAG_STARTER3)						
 						}
 						goto(Lumbridge_Castle_Professor_Normal_Tree_1)
 				}		
@@ -648,13 +678,17 @@ script Pouch_Starter3 {
 					msgbox(format("Would you like to give your monster a nickname?"), MSGBOX_YESNO)
 						if (var(VAR_RESULT) == NO){
 							removeobject (7)
+							setflag(FLAG_TEMP_C)
+							setflag(FLAG_STARTER3)
 							hidemonpic
 							release							
 						}
 						else{
 							setvar (VAR_0x8004, 0)
 							call (Common_EventScript_NameReceivedPartyMon)
-							removeobject (7)												
+							removeobject (7)	
+							setflag(FLAG_TEMP_C)	
+							setflag(FLAG_STARTER3)										
 						}
 						goto(Lumbridge_Castle_Professor_Normal_Tree_1)
 				}		
