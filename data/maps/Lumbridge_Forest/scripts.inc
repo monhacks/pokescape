@@ -9,7 +9,7 @@ Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	return
 
 Lumbridge_Forest_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_POKESCAPE_STORYMODE_PROGRESS, 245, POST_WARP_ZANIK_EVENT
+	map_script_2 VAR_POKESCAPE_STORYMODE_PROGRESS, 250, POST_WARP_ZANIK_EVENT
 	.2byte 0
 
 
@@ -30,8 +30,11 @@ LumForest_STATE_1:
 	case 220, LumForest_STATE_7
 	case 225, LumForest_STATE_7
 	case 230, LumForest_STATE_7
-	case 235, LumForest_STATE_7
+	case 235, LumForest_STATE_8
+	case 240, LumForest_STATE_8
+	case 241, LumForest_STATE_8
 	case 245, LumForest_STATE_8
+	case 250, LumForest_STATE_9
 LumForest_STATE_4:
 	return
 
@@ -46,37 +49,50 @@ LumForest_STATE_6:
 	clearflag FLAG_TEMP_1E
 	checkfollower
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_10
-LumForest_STATE_9:
+	goto_if_eq LumForest_STATE_11
+LumForest_STATE_10:
 	checkitem ITEM_CUT_TOOL, 1
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_15
+	goto_if_eq LumForest_STATE_19
 	goto LumForest_STATE_4
 
 LumForest_STATE_7:
 	checkfollower
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_13
-LumForest_STATE_12:
+	goto_if_eq LumForest_STATE_14
+LumForest_STATE_13:
 	setvar VAR_TEMP_1, 1
 	clearflag FLAG_TEMP_1E
 	goto LumForest_STATE_4
 
 LumForest_STATE_8:
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_eq LumForest_STATE_17
+LumForest_STATE_16:
+	setvar VAR_TEMP_1, 1
+	clearflag FLAG_TEMP_1E
+	goto LumForest_STATE_4
+
+LumForest_STATE_9:
 	clearflag FLAG_TEMP_1D
 	setobjectxy 42, 28, 4
 	setobjectxyperm 42, 28, 4
 	goto LumForest_STATE_4
 
-LumForest_STATE_10:
+LumForest_STATE_11:
 	clearflag FLAG_TEMP_1F
-	goto LumForest_STATE_9
+	goto LumForest_STATE_10
 
-LumForest_STATE_13:
+LumForest_STATE_14:
 	clearflag FLAG_TEMP_1F
-	goto LumForest_STATE_12
+	goto LumForest_STATE_13
 
-LumForest_STATE_15:
+LumForest_STATE_17:
+	clearflag FLAG_TEMP_1D
+	goto LumForest_STATE_16
+
+LumForest_STATE_19:
 	addobject 41
 	clearflag FLAG_TEMP_8
 	goto LumForest_STATE_4
@@ -343,14 +359,20 @@ TRIGGER_ALKHARID_HAM_EVENT_4_4:
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction::
 	lockall
 	playse SE_PIN
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_3
+	case 240, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_3
+	case 241, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_3
+	case 245, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_3
 	applymovement 29, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	waitmovement 0
 	namebox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, 0
-	goto_if_ne TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_2
+	goto_if_ne TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_6
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_3
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_5:
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_4
 	closemessage
@@ -361,7 +383,7 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_5
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_6, MSGBOX_YESNO
 	compare VAR_RESULT, 0
-	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_6
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_10
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_8
 	hidenamebox
 	playfanfare MUS_OBTAIN_SYMBOL
@@ -380,7 +402,13 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	fadescreenswapbuffers FADE_TO_BLACK
 	destroyfollower
 	loadword 0, Following_Zanik
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_19
+	case 240, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_19
+	case 241, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_19
+	case 245, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_19
 	setfollower 29, FOLLOWER_FLAG_QUEST
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_17:
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
@@ -392,24 +420,42 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1:
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP
 	waitmovement 0
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 220
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_5:
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_9:
 	closemessage
 	hidenamebox
 	release
 	end
 
-TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_2:
-	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_2
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_3:
+	applymovement 42, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP
 	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_1
 
 TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_6:
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_2
+	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_5
+
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_10:
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_7
 	hidenamebox
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_15
+	case 240, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_15
+	case 241, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_15
+	case 245, TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_15
 	applymovement 29, movement_ZANIK_WALKS_AWAY
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_13:
 	waitmovement 0
-	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_5
+	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_9
+
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_15:
+	applymovement 42, movement_ZANIK_WALKS_AWAY
+	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_13
+
+TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_19:
+	setfollower 42, FOLLOWER_FLAG_QUEST
+	goto TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_17
 
 
 movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP:
@@ -435,7 +481,13 @@ CHECK_FOLLOWER_ZANIK::
 	compare VAR_RESULT, 0
 	goto_if_ne CHECK_FOLLOWER_ZANIK_2
 	playse SE_PIN
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, CHECK_FOLLOWER_ZANIK_12
+	case 240, CHECK_FOLLOWER_ZANIK_12
+	case 241, CHECK_FOLLOWER_ZANIK_12
+	case 245, CHECK_FOLLOWER_ZANIK_12
 	applymovement 29, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP
+CHECK_FOLLOWER_ZANIK_10:
 	waitmovement 0
 	goto SetFollower_Zanik
 CHECK_FOLLOWER_ZANIK_1:
@@ -449,16 +501,17 @@ CHECK_FOLLOWER_ZANIK_2:
 	case 235, CHECK_FOLLOWER_ZANIK_7
 	case 240, CHECK_FOLLOWER_ZANIK_8
 	case 241, CHECK_FOLLOWER_ZANIK_9
+	case 245, CHECK_FOLLOWER_ZANIK_9
 CHECK_FOLLOWER_ZANIK_5:
 	msgbox CHECK_FOLLOWER_ZANIK_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, 0
-	goto_if_ne CHECK_FOLLOWER_ZANIK_11
+	goto_if_ne CHECK_FOLLOWER_ZANIK_15
 	closemessage
 	hidenamebox
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_WALK_UP
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP
 	waitmovement 0
-CHECK_FOLLOWER_ZANIK_10:
+CHECK_FOLLOWER_ZANIK_14:
 	releaseall
 	goto CHECK_FOLLOWER_ZANIK_1
 
@@ -474,37 +527,41 @@ CHECK_FOLLOWER_ZANIK_9:
 	msgbox CHECK_FOLLOWER_ZANIK_Text_2
 	goto CHECK_FOLLOWER_ZANIK_5
 
-CHECK_FOLLOWER_ZANIK_11:
+CHECK_FOLLOWER_ZANIK_12:
+	applymovement 42, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP
+	goto CHECK_FOLLOWER_ZANIK_10
+
+CHECK_FOLLOWER_ZANIK_15:
 	msgbox CHECK_FOLLOWER_ZANIK_Text_4
 	iswearingoutfit OUTFIT_HAM
 	compare VAR_RESULT, TRUE
-	goto_if_eq CHECK_FOLLOWER_ZANIK_15
-CHECK_FOLLOWER_ZANIK_14:
+	goto_if_eq CHECK_FOLLOWER_ZANIK_19
+CHECK_FOLLOWER_ZANIK_18:
 	closemessage
 	hidenamebox
 	iswearingoutfit OUTFIT_HAM
 	compare VAR_RESULT, TRUE
-	goto_if_eq CHECK_FOLLOWER_ZANIK_18
+	goto_if_eq CHECK_FOLLOWER_ZANIK_22
 	call FOLLOWER_REMOVE
-CHECK_FOLLOWER_ZANIK_17:
+CHECK_FOLLOWER_ZANIK_21:
 	clearflag FLAG_TEMP_1E
 	addobject 29
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
 	waitmovement 0
-	goto CHECK_FOLLOWER_ZANIK_10
-
-CHECK_FOLLOWER_ZANIK_15:
-	namebox POST_WARP_ZANIK_EVENT_Text_0
-	msgbox CHECK_FOLLOWER_ZANIK_Text_5
 	goto CHECK_FOLLOWER_ZANIK_14
 
-CHECK_FOLLOWER_ZANIK_18:
+CHECK_FOLLOWER_ZANIK_19:
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox CHECK_FOLLOWER_ZANIK_Text_5
+	goto CHECK_FOLLOWER_ZANIK_18
+
+CHECK_FOLLOWER_ZANIK_22:
 	fadescreenswapbuffers FADE_TO_BLACK
 	call FOLLOWER_REMOVE
 	setvar VAR_0x8004, OUTFIT_DEFAULT
 	special WearOutfit
 	fadescreenswapbuffers FADE_FROM_BLACK
-	goto CHECK_FOLLOWER_ZANIK_17
+	goto CHECK_FOLLOWER_ZANIK_21
 
 
 SetFollower_Zanik::
@@ -518,7 +575,13 @@ SetFollower_Zanik::
 	hidenamebox
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, SetFollower_Zanik_6
+	case 240, SetFollower_Zanik_6
+	case 241, SetFollower_Zanik_6
+	case 245, SetFollower_Zanik_6
 	applymovement 29, movement_ZANIK_WALKS_AWAY
+SetFollower_Zanik_4:
 	waitmovement 0
 	releaseall
 	end
@@ -542,7 +605,13 @@ SetFollower_Zanik_2:
 	fadescreenswapbuffers FADE_TO_BLACK
 	destroyfollower
 	loadword 0, Following_Zanik
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, SetFollower_Zanik_10
+	case 240, SetFollower_Zanik_10
+	case 241, SetFollower_Zanik_10
+	case 245, SetFollower_Zanik_10
 	setfollower 29, FOLLOWER_FLAG_QUEST
+SetFollower_Zanik_8:
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
@@ -555,6 +624,14 @@ SetFollower_Zanik_2:
 	waitmovement 0
 	releaseall
 	end
+
+SetFollower_Zanik_6:
+	applymovement 42, movement_ZANIK_WALKS_AWAY
+	goto SetFollower_Zanik_4
+
+SetFollower_Zanik_10:
+	setfollower 42, FOLLOWER_FLAG_QUEST
+	goto SetFollower_Zanik_8
 
 
 Following_Zanik::

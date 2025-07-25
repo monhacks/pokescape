@@ -10,7 +10,18 @@ HAM_Hideout_B1F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 HAM_Hideout_B1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_POKESCAPE_GOLDENGNOMES, 10, HAM_HIDEOUT_GOLDENGNOME_STATE
+	map_script_2 VAR_TEMP_C, 1, METATILE_HAM_HIDEOUT_B1F
 	.2byte 0
+
+
+METATILE_HAM_HIDEOUT_B1F::
+	setmetatile 36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0
+	setmetatile 36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1
+	setmetatile 37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
+	setmetatile 37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
+	setmetatile 38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1
+	setvar VAR_TEMP_C, 2
+	return
 
 
 HAMHIDEOUT_B1F_STATE::
@@ -36,8 +47,11 @@ HAMHIDEOUT_B1F_STATE_10:
 	goto_if_eq HAMHIDEOUT_B1F_STATE_14
 HAMHIDEOUT_B1F_STATE_13:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 245
-	goto_if_ge HAMHIDEOUT_B1F_STATE_19
+	goto_if_eq HAMHIDEOUT_B1F_STATE_19
 HAMHIDEOUT_B1F_STATE_18:
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 245
+	goto_if_gt HAMHIDEOUT_B1F_STATE_22
+HAMHIDEOUT_B1F_STATE_21:
 	return
 
 HAMHIDEOUT_B1F_STATE_2:
@@ -82,15 +96,27 @@ HAMHIDEOUT_B1F_STATE_14:
 	setflag FLAG_TEMP_6
 	removeobject 45
 	setflag FLAG_TEMP_4
-	setmetatile 36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0
-	setmetatile 36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1
-	setmetatile 37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
-	setmetatile 37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
-	setmetatile 38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1
+	setvar VAR_TEMP_C, 1
 	setvar VAR_TEMP_3, 1
 	goto HAMHIDEOUT_B1F_STATE_13
 
 HAMHIDEOUT_B1F_STATE_19:
+	setflag FLAG_TEMP_D
+	clearflag FLAG_TEMP_C
+	clearflag FLAG_TEMP_E
+	removeobject 18
+	removeobject 19
+	setflag FLAG_TEMP_6
+	removeobject 45
+	setflag FLAG_TEMP_4
+	removeobject 10
+	removeobject 11
+	setflag FLAG_TEMP_5
+	setvar VAR_TEMP_C, 1
+	setvar VAR_TEMP_3, 1
+	goto HAMHIDEOUT_B1F_STATE_18
+
+HAMHIDEOUT_B1F_STATE_22:
 	setflag FLAG_TEMP_C
 	clearflag FLAG_TEMP_D
 	clearflag FLAG_TEMP_E
@@ -106,12 +132,8 @@ HAMHIDEOUT_B1F_STATE_19:
 	removeobject 23
 	removeobject 34
 	setflag FLAG_TEMP_1C
-	setmetatile 36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0
-	setmetatile 36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1
-	setmetatile 37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
-	setmetatile 37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0
-	setmetatile 38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1
-	goto HAMHIDEOUT_B1F_STATE_18
+	setvar VAR_TEMP_C, 1
+	goto HAMHIDEOUT_B1F_STATE_21
 
 
 HAM_HIDEOUT_GOLDENGNOME_PLACENPCS::
@@ -1403,6 +1425,8 @@ HAM_HIDEOUT_CELL_DOOR::
 	lock
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
 	goto_if_eq HAM_HIDEOUT_CELL_DOOR_2
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 240
+	goto_if_ge HAM_HIDEOUT_CELL_DOOR_3
 	msgbox HAM_HIDEOUT_CELL_DOOR_Text_1
 	closemessage
 HAM_HIDEOUT_CELL_DOOR_1:
@@ -1421,6 +1445,10 @@ HAM_HIDEOUT_CELL_DOOR_2:
 	special DrawWholeMapView
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 240
 	goto HAM_HIDEOUT_CELL_DOOR_1
+
+HAM_HIDEOUT_CELL_DOOR_3:
+	release
+	end
 
 
 NPC_HAM_HIDEOUT_B1F_STOREROOM_BLOCK::
@@ -1725,8 +1753,7 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_7:
 
 TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED_Text_0:
 	.string "Look {PLAYER}!\p"
-	.string "Is there are a bunch of prisoners over\n"
-	.string "there!$"
+	.string "There are prisoners over there!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_0:
 	.string "Shouldn't you two be guarding the\n"
@@ -1754,8 +1781,10 @@ TRIGGER_HAMHIDEOUT_EVENT_3_Text_3:
 	.string "guarding whatever's in there?$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_4:
-	.string "Hey, you two are the ones that\n"
-	.string "triggered the high alert!$"
+	.string "Get out of here intruders, this place is\n"
+	.string "off-limits!\p"
+	.string "What, you dare challenge us?\p"
+	.string "As guards we must stand our ground!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_3_Text_5:
 	.string "H.A.M Guard: Johanhus and Sigmund won't\n"

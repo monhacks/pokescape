@@ -1089,6 +1089,26 @@ static u8 UNUSED GetObjectEventLoadFlag(void)
     return sObjectEventLoadFlag;
 }
 
+static bool16 ShouldPlayHamHighAlertSong(struct WarpData *warp)
+{
+    switch (gSaveBlock1Ptr->location.mapNum)
+    {
+        case MAP_NUM(HAM_HIDEOUT_B1F):
+        case MAP_NUM(HAM_HIDEOUT_B2F):
+        case MAP_NUM(HAM_HIDEOUT_B3F):
+        case MAP_NUM(HAM_HIDEOUT_B4F):
+            switch (VarGet(VAR_POKESCAPE_STORYMODE_PROGRESS))
+            {
+                case 235:
+                case 240:
+                case 241:
+                case 245:
+                    return TRUE;
+            }
+    }
+    return FALSE;
+}
+
 static bool16 ShouldLegendaryMusicPlayAtLocation(struct WarpData *warp)
 {
     if (!FlagGet(FLAG_SYS_WEATHER_CTRL))
@@ -1171,6 +1191,8 @@ u16 GetLocationMusic(struct WarpData *warp)
         return MUS_ENCOUNTER_MAGMA;
     else if (IsInfiltratedWeatherInstitute(warp) == TRUE)
         return MUS_MT_CHIMNEY;
+    else if (ShouldPlayHamHighAlertSong(warp) == TRUE)
+        return MUS_PS_HAM_HIDEOUT_HIGH_ALERT;
     else
         return Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
 }

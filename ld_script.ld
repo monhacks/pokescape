@@ -1321,6 +1321,9 @@ SECTIONS {
         sound/songs/midi/mus_ps_get_badge.o(.rodata);
         sound/songs/midi/mus_ps_get_item.o(.rodata);
         sound/songs/midi/mus_ps_lvl_up.o(.rodata);
+        sound/songs/midi/mus_ps_ham_hideout.o(.rodata);
+        sound/songs/midi/mus_ps_ham_hideout_high_alert.o(.rodata);
+        sound/songs/midi/mus_ps_vs_ham_new.o(.rodata);
     } > ROM =0
 
 

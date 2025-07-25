@@ -628,8 +628,11 @@
 #define	MUS_PS_GET_BADGE	        677
 #define	MUS_PS_GET_ITEM	            678
 #define	MUS_PS_LVL_UP	            679
+#define	MUS_PS_HAM_HIDEOUT	        680
+#define	MUS_PS_HAM_HIDEOUT_HIGH_ALERT   681
+#define	MUS_PS_VS_HAM_NEW           682
 
-#define END_MUS                     MUS_PS_LVL_UP
+#define END_MUS                     MUS_PS_VS_HAM_NEW
 
 
 

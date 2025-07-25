@@ -16,17 +16,21 @@ script HAMHIDEOUT_B2F_STATE {
     removeobject(24)
     removeobject(4)
     setflag(FLAG_TEMP_1C)
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) { 
-        setvar(VAR_TEMP_0, 1)
-        clearflag(FLAG_TEMP_1E)
-        clearflag(FLAG_TEMP_1D)
-        addobject(22)
-        addobject(24)
-        addobject(4)
-    }
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {          //During High Alert StoryEvent
-        setflag(FLAG_TEMP_D) //Hides NPCS
-        clearflag(FLAG_TEMP_C) //Shows TRAINERS
+
+    switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) { 
+        case 230:   //Patty & Babe Event
+            setvar(VAR_TEMP_0, 1)
+            clearflag(FLAG_TEMP_1E)
+            clearflag(FLAG_TEMP_1D)
+            addobject(22)
+            addobject(24)
+            addobject(4)
+        case 235: 
+        case 240:
+        case 241:
+        case 245:
+            setflag(FLAG_TEMP_D) //Hides NPCS
+            clearflag(FLAG_TEMP_C) //Shows TRAINERS
     }
     return
 }
@@ -484,6 +488,7 @@ script TRIGGER_HAMHIDEOUT_BABE_PATTY {
     playse(SE_LEDGE)
     applymovement(4, movement_HAMHIDEOUT_GUARD_3)
     waitmovement(0)
+    //playbgm(MUS_PS_ENCOUNTER_HAM, FALSE)
     namebox ("H.A.M Guard")
     msgbox(format("AARRRGH!\pA GOBLIN!\pA DISGUSTING VILE GOBLIN!"))
     hidenamebox
@@ -504,6 +509,9 @@ script TRIGGER_HAMHIDEOUT_BABE_PATTY {
     setflag(FLAG_TEMP_1D)
     //Runs off to sound the alarm.
     playse(SE_DING_DONG)
+    waitse
+    playbgm(MUS_PS_HAM_HIDEOUT_HIGH_ALERT, TRUE)
+    savebgm(MUS_PS_HAM_HIDEOUT_HIGH_ALERT)
     namebox ("Zanik")
     msgbox(format("Oh no they sounded the alarm!\pI'm sorry {PLAYER}…\pI should have just kept my mouth shut…"))
     hidenamebox
@@ -682,7 +690,7 @@ script TRIGGER_HAMHIDEOUT_JOHANHUS {
     fadescreenswapbuffers(FADE_TO_BLACK)
     subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11)                            //TBC
     addvar(VAR_GAMEMODE_LEVEL_CAP, 5) //Level 55 cap.                                         //TBC
-    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 245)                                             //TBC
+    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)                                             //TBC
     setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     call(FOLLOWER_REMOVE)
     //warp outside to Lumbridge Forest

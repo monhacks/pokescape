@@ -4134,6 +4134,10 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_PS_GET_BADGE) \
     X(MUS_PS_GET_ITEM) \
     X(MUS_PS_LVL_UP) \
+    X(MUS_PS_HAM_HIDEOUT) \
+    X(MUS_PS_HAM_HIDEOUT_HIGH_ALERT) \
+    X(MUS_PS_VS_HAM_NEW) \
+    
 
 #define SOUND_LIST_SE \
     X(SE_USE_ITEM) \

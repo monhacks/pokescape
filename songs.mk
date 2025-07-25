@@ -1478,3 +1478,13 @@ $(MID_SUBDIR)/mus_ps_get_item.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_ps_lvl_up.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P5
+
+$(MID_SUBDIR)/mus_ps_ham_hideout.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100
+	
+$(MID_SUBDIR)/mus_ps_ham_hideout_high_alert.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100
+
+$(MID_SUBDIR)/mus_ps_vs_ham_new.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100
+	

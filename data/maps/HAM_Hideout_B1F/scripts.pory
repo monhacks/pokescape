@@ -17,7 +17,18 @@ mapscripts HAM_Hideout_B1F_MapScripts {
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
 		VAR_POKESCAPE_GOLDENGNOMES, 10: HAM_HIDEOUT_GOLDENGNOME_STATE
+        VAR_TEMP_C, 1: METATILE_HAM_HIDEOUT_B1F
     ]
+}
+
+script METATILE_HAM_HIDEOUT_B1F {
+    setmetatile(36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0)
+    setmetatile(36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1)
+    setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
+    setmetatile(37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
+    setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
+    setvar(VAR_TEMP_C, 2)
+    return
 }
 
 script HAMHIDEOUT_B1F_STATE {
@@ -64,14 +75,30 @@ script HAMHIDEOUT_B1F_STATE {
         setflag(FLAG_TEMP_6)
         removeobject(45)       //Guard blocking storerooms
         setflag(FLAG_TEMP_4) 
-        setmetatile(36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0)
-        setmetatile(36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1)
-        setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
-        setmetatile(37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
-        setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
+        setvar(VAR_TEMP_C, 1)
+        //setmetatile(36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0)
+        //setmetatile(36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1)
+        //setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
+        //setmetatile(37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
+        //setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
         setvar(VAR_TEMP_3, 1)
     }
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 245) { 
+    if ((var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 245) ) { 
+        setflag(FLAG_TEMP_D) //Hides NPCS
+        clearflag(FLAG_TEMP_C) //Shows TRAINERS
+        clearflag(FLAG_TEMP_E)
+        removeobject(18)      //Jail guard
+        removeobject(19)      //Jail guard
+        setflag(FLAG_TEMP_6)
+        removeobject(45)       //Guard blocking storerooms
+        setflag(FLAG_TEMP_4) 
+        removeobject(10)        //Guards blocking final room 
+        removeobject(11)        //Guards blocking final room
+        setflag(FLAG_TEMP_5)
+        setvar(VAR_TEMP_C, 1)
+        setvar(VAR_TEMP_3, 1)
+    }
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) > 245) { 
         setflag(FLAG_TEMP_C) //Shows NPCS
         clearflag(FLAG_TEMP_D) //Hides TRAINERS
         clearflag(FLAG_TEMP_E)
@@ -87,11 +114,12 @@ script HAMHIDEOUT_B1F_STATE {
         removeobject(23)       //Prince Ali
         removeobject(34)       //Goebie
         setflag(FLAG_TEMP_1C)
-        setmetatile(36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0)
-        setmetatile(36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1)
-        setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
-        setmetatile(37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
-        setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
+        //setmetatile(36, 42, METATILE_PokeScape_HAM_JAILDOOR_OPEN_TOP, 0)
+        //setmetatile(36, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_BOTTOM, 1)
+        //setmetatile(37, 43, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
+        //setmetatile(37, 42, METATILE_PokeScape_HAM_HAM_CAVE_FLOOR, 0)
+        //setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
+        setvar(VAR_TEMP_C, 1)
     }
     return
 }
@@ -591,7 +619,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_1 {
         waitmovement(0)
     }
     namebox("Zanik")
-    msgbox(format("Did you hear that {PLAYER}?!\pThis gives us the perfect cover to check whether H.A.M have the Prince in their jail cells.\pLet's go!"))
+    msgbox(format("Did you hear that {PLAYER}?!\pThis gives us the perfect cover to check what H.A.M is up to!\pLet's go!"))
     closemessage
     hidenamebox
     setvar(VAR_TEMP_0, 2)
@@ -701,7 +729,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_2 {
     applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER) 
     waitmovement(0)
     namebox("Zanik")
-    msgbox(format("This is our chance {PLAYER}!\pLet's unlock that cell door and break the Prince out!"))
+    msgbox(format("This is our chance {PLAYER}!\pLet's unlock that cell door and break them out!"))
     hidenamebox
     closemessage
     delay(30)
@@ -747,7 +775,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_PRINCESPOTTED {
     applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT)
     waitmovement(0)
     namebox ("Zanik")
-    msgbox(format("Look {PLAYER}!\pIs there are a bunch of prisoners over there!"))
+    msgbox(format("Look {PLAYER}!\pThere are prisoners over there!"))
     hidenamebox
     closemessage
     setvar(VAR_TEMP_4, 2)
@@ -919,7 +947,7 @@ script TRIGGER_HAMHIDEOUT_EVENT_3 {                              //This needs so
     }
     elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 241) {           //After the disguises have been removed and the Prince has been rescued, battle the guards to pass through
         namebox("H.A.M Guard")
-        msgbox(format("Hey, you two are the ones that triggered the high alert!"))
+        msgbox(format("Get out of here intruders, this place is off-limits!\pWhat, you dare challenge us?\pAs guards we must stand our ground!"))
         trainerbattle_two_trainers(TRAINER_HAM_HIDEOUT_GUARD_1, msgbox(format("H.A.M Guard: Johanhus and Sigmund won't be happy about this…")), TRAINER_HAM_HIDEOUT_GUARD_2, msgbox(format("H.A.M Guard: Especially since one of you is a blasted goblin!")))
         namebox("H.A.M Guard")
         msgbox(format("Quick, let's try and find some back-up!\pDon't you dare go in and disturb Johanhus and Sigmund while we're gone!"))
@@ -1343,6 +1371,10 @@ script HAM_HIDEOUT_CELL_DOOR
         setmetatile(38, 43, METATILE_PokeScape_HAM_JAILDOOR_OPEN_SIDE, 1)
         special(DrawWholeMapView) 
         setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 240)
+    }
+    elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 240) { // if equal or greater do nothing.
+        release
+	    end
     }
     else {
         msgbox(format("The jail door is securely locked.\pThe only way to open it appears to be with a key."))

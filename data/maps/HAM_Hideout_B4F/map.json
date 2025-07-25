@@ -2,7 +2,7 @@
   "id": "MAP_HAM_HIDEOUT_B4F",
   "name": "HAM_Hideout_B4F",
   "layout": "LAYOUT_HAM_HIDEOUT_B4F",
-  "music": "MUS_PS_ENCOUNTER_HAM",
+  "music": "MUS_PS_HAM_HIDEOUT",
   "region_map_section": "MAPSEC_LUMBRIDGE_FOREST",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

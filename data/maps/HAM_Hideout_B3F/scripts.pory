@@ -17,6 +17,19 @@ script HAMHIDEOUT_HEAL_ZONE {
 }
 
 script CHECK_JAILED_HAM {
+    setflag(FLAG_TEMP_1F)
+
+    switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+        case 235:
+        case 240:
+        case 241:
+        case 245:
+            checkfollower
+            if (!var(VAR_RESULT)) {
+                clearflag(FLAG_TEMP_1F) //Show Zanik
+            }
+    }
+
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {
         setobjectxy(2,8,7)
         setobjectxyperm(2,8,7)
@@ -44,6 +57,21 @@ script HAM_WHITEOUT
     playse(SE_M_SNORE)
     namebox ("H.A.M Guard")
     msgbox(format("Zzz…"))
+    switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+        case 220:
+        case 225:
+        case 230:
+        case 235:
+        case 240:
+        case 241:
+        case 245: //Before you defeat Johanhus
+            setflag(FLAG_TOGGLE_FORCED_WILD_DOUBLE_BATTLES)
+            setflag(FLAG_PARTNER_BATTLE)
+            setvar (VAR_PARTNER_TRAINER, TRAINER_ZANIK_HAM)
+            setvar (VAR_PARTNER_SPRITE, TRAINER_BACK_PIC_ZANIK)
+            loadword(0, Following_Zanik)
+            setfollower(3, 0x80)
+    }
     checkfollower
     if (var(VAR_RESULT)) {
         facefollower

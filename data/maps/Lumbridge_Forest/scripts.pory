@@ -6,7 +6,7 @@ mapscripts Lumbridge_Forest_MapScripts {
 		call(LumForest_STATE)
 	}
 	MAP_SCRIPT_ON_FRAME_TABLE [
-		VAR_POKESCAPE_STORYMODE_PROGRESS, 245: POST_WARP_ZANIK_EVENT
+		VAR_POKESCAPE_STORYMODE_PROGRESS, 250: POST_WARP_ZANIK_EVENT
 	]
 }
 
@@ -49,14 +49,23 @@ script LumForest_STATE{
 		case 220:
 		case 225:
 		case 230:
-		case 235:
+			setvar(VAR_TEMP_1, 1) // Activates the Trigger Tile
+			clearflag(FLAG_TEMP_1E) // HAM Members Trainers
 			checkfollower
 			if (!var(VAR_RESULT)) {
 				clearflag(FLAG_TEMP_1F) //Show Zanik (HAM outfit)
 			}
+		case 235:
+		case 240:
+		case 241:
+		case 245:
 			setvar(VAR_TEMP_1, 1) // Activates the Trigger Tile
 			clearflag(FLAG_TEMP_1E) // HAM Members Trainers
-		case 245:	//post-hideout event
+			checkfollower
+			if (!var(VAR_RESULT)) {
+				clearflag(FLAG_TEMP_1D) //Show Zanik (Regular)
+			}
+		case 250:	//post-hideout event
 			clearflag(FLAG_TEMP_1D) // Show Zanik (Regular)
 			setobjectxy(42, 28, 4)      //spawn unhooded Zanik
 			setobjectxyperm(42, 28, 4)
@@ -99,7 +108,7 @@ script POST_WARP_ZANIK_EVENT {
     applymovement(42, movement_Post_HAM_Hideout_Zanik_Exit)     //Zanik walks off
 	removeobject(42)                                           //removeobject Zanik
     setflag(FLAG_TEMP_1D)
-	setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)
+	setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 255)
     release
     end
 }
@@ -336,7 +345,15 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
     lockall
     //zanik walks over to player
     playse(SE_PIN)
-    applymovement (29, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP)
+    switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+		case 235:
+		case 240:
+		case 241:
+		case 245:
+			applymovement (42, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP)
+		default:
+			applymovement (29, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP)
+	}
     waitmovement(0)
 
     namebox ("???")
@@ -363,7 +380,17 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
 		hidenamebox
     	closemessage
 		applymovement (OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP)
-		applymovement (29, movement_ZANIK_WALKS_AWAY)
+
+		switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+			case 235:
+			case 240:
+			case 241:
+			case 245:
+				applymovement (42, movement_ZANIK_WALKS_AWAY)
+			default:
+				applymovement (29, movement_ZANIK_WALKS_AWAY)
+		}
+		
 		waitmovement(0)
     }
     else {
@@ -386,7 +413,15 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
         fadescreenswapbuffers(FADE_TO_BLACK)
         destroyfollower
         loadword(0, Following_Zanik)
-        setfollower(29, FOLLOWER_FLAG_QUEST)
+		switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+			case 235:
+			case 240:
+			case 241:
+			case 245:
+				setfollower(42, FOLLOWER_FLAG_QUEST)
+			default:
+				setfollower(29, FOLLOWER_FLAG_QUEST)
+		}
         setvar(VAR_0x8004, OUTFIT_HAM)
         special(WearOutfit)
         delay(20)
@@ -433,6 +468,7 @@ script CHECK_FOLLOWER_ZANIK {
 			case 240:
 				msgbox(format("I guess we are going to leave them to fend for themselves?\pYou sure you don't want to go back and chat with that prince you were wanting to resuce?"))
 			case 241:
+			case 245:
 				msgbox(format("The plan was to cause a diversion remember?\pWe should try finding the boss.\pUnless…"))
 		}
 
@@ -476,7 +512,16 @@ script CHECK_FOLLOWER_ZANIK {
 	}
 	else {
 		playse(SE_PIN)
-        applymovement (29, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP)
+		switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+			case 235:
+			case 240:
+			case 241:
+			case 245:
+				applymovement (42, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP)
+			default:
+				applymovement (29, movement_ZANIK_WALK_TOWARDS_PLAYER_FOR_TEAMUP)
+		}
+        
         waitmovement(0)
 		goto(SetFollower_Zanik)
 	}
@@ -512,7 +557,15 @@ script SetFollower_Zanik {
         fadescreenswapbuffers(FADE_TO_BLACK)
         destroyfollower
         loadword(0, Following_Zanik)
-        setfollower(29, FOLLOWER_FLAG_QUEST) 
+        switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+			case 235:
+			case 240:
+			case 241:
+			case 245:
+				setfollower(42, FOLLOWER_FLAG_QUEST)
+			default:
+				setfollower(29, FOLLOWER_FLAG_QUEST)
+		}
         setvar(VAR_0x8004, OUTFIT_HAM)
         special(WearOutfit)
         delay(20)
@@ -530,7 +583,15 @@ script SetFollower_Zanik {
     hidenamebox
 	closemessage
 	applymovement (OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP)
-	applymovement (29, movement_ZANIK_WALKS_AWAY)
+	switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+			case 235:
+			case 240:
+			case 241:
+			case 245:
+				applymovement (42, movement_ZANIK_WALKS_AWAY)
+			default:
+				applymovement (29, movement_ZANIK_WALKS_AWAY)
+		}
 	waitmovement(0)
     releaseall
     end

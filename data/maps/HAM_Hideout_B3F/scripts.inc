@@ -23,23 +23,40 @@ HAMHIDEOUT_HEAL_ZONE::
 
 
 CHECK_JAILED_HAM::
-	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
-	goto_if_eq CHECK_JAILED_HAM_2
+	setflag FLAG_TEMP_1F
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 235, CHECK_JAILED_HAM_3
+	case 240, CHECK_JAILED_HAM_3
+	case 241, CHECK_JAILED_HAM_3
+	case 245, CHECK_JAILED_HAM_3
 CHECK_JAILED_HAM_1:
-	goto_if_set FLAG_HAM_JAILED, CHECK_JAILED_HAM_5
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	goto_if_eq CHECK_JAILED_HAM_5
 CHECK_JAILED_HAM_4:
+	goto_if_set FLAG_HAM_JAILED, CHECK_JAILED_HAM_10
+CHECK_JAILED_HAM_9:
 	end
 
-CHECK_JAILED_HAM_2:
-	setobjectxy 2, 8, 7
-	setobjectxyperm 2, 8, 7
+CHECK_JAILED_HAM_3:
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_eq CHECK_JAILED_HAM_7
 	goto CHECK_JAILED_HAM_1
 
 CHECK_JAILED_HAM_5:
+	setobjectxy 2, 8, 7
+	setobjectxyperm 2, 8, 7
+	goto CHECK_JAILED_HAM_4
+
+CHECK_JAILED_HAM_7:
+	clearflag FLAG_TEMP_1F
+	goto CHECK_JAILED_HAM_1
+
+CHECK_JAILED_HAM_10:
 	setobjectxy 2, 5, 6
 	setobjectxyperm 2, 5, 6
 	setvar VAR_TEMP_B, 1
-	goto CHECK_JAILED_HAM_4
+	goto CHECK_JAILED_HAM_9
 
 
 HAM_WHITEOUT::
@@ -56,22 +73,40 @@ HAM_WHITEOUT::
 	playse SE_M_SNORE
 	namebox HAM_WHITEOUT_Text_0
 	msgbox HAM_WHITEOUT_Text_2
+	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 220, HAM_WHITEOUT_3
+	case 225, HAM_WHITEOUT_3
+	case 230, HAM_WHITEOUT_3
+	case 235, HAM_WHITEOUT_3
+	case 240, HAM_WHITEOUT_3
+	case 241, HAM_WHITEOUT_3
+	case 245, HAM_WHITEOUT_3
+HAM_WHITEOUT_1:
 	checkfollower
 	compare VAR_RESULT, 0
-	goto_if_ne HAM_WHITEOUT_2
-HAM_WHITEOUT_1:
+	goto_if_ne HAM_WHITEOUT_5
+HAM_WHITEOUT_4:
 	setvar VAR_TEMP_B, 2
 	clearflag FLAG_HAM_JAILED
 	release
 	end
 
-HAM_WHITEOUT_2:
+HAM_WHITEOUT_3:
+	setflag FLAG_TOGGLE_FORCED_WILD_DOUBLE_BATTLES
+	setflag FLAG_PARTNER_BATTLE
+	setvar VAR_PARTNER_TRAINER, TRAINER_ZANIK_HAM
+	setvar VAR_PARTNER_SPRITE, TRAINER_BACK_PIC_ZANIK
+	loadword 0, Following_Zanik
+	setfollower 3, 0x80
+	goto HAM_WHITEOUT_1
+
+HAM_WHITEOUT_5:
 	facefollower
 	namebox HAM_WHITEOUT_Text_3
 	msgbox HAM_WHITEOUT_Text_4
 	closemessage
 	hidenamebox
-	goto HAM_WHITEOUT_1
+	goto HAM_WHITEOUT_4
 
 
 movement_HAM_lockup_leave:

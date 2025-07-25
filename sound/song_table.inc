@@ -686,7 +686,9 @@ gSongTable::
 	song mus_ps_get_badge, 2, 2
 	song mus_ps_get_item, 2, 2
 	song mus_ps_lvl_up, 2, 2
-	
+	song mus_ps_ham_hideout, 0, 0
+	song mus_ps_ham_hideout_high_alert, 0, 0
+	song mus_ps_vs_ham_new, 0, 0
 
 	
     
