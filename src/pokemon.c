@@ -6952,6 +6952,13 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
             return MUS_VS_REGI;
+        case SPECIES_GIANT_MOLE:
+        case SPECIES_ELVARG:
+        case SPECIES_TZTOK_JAD:
+        case SPECIES_VORKATH:
+            return MUS_PS_VS_LEGENDARY;
+        case SPECIES_CHAOS_ELE:
+            return MUS_PS_VS_CHAOS_ELEMENTAL;
         default:
             return MUS_RG_VS_LEGEND;
         }
@@ -7036,11 +7043,16 @@ u16 GetBattleBGM(void)
             else {
                 return MUS_PS_VS_TRAINER_P2P; //POKESCAPE
             }
-            
         }
     }
-    else
-        return MUS_PS_VS_WILD_P2P;  //POKESCAPE
+    else {
+        if (FlagGet(FLAG_TZHAAR_RANDOM) == TRUE) {
+            return MUS_PS_VS_TZHAAR;
+        }
+        else {
+            return MUS_PS_VS_WILD_P2P;  //POKESCAPE
+        }
+    }
 }
 
 void PlayBattleBGM(void)

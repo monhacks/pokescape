@@ -806,7 +806,7 @@ script HAM_EVENT_Ariane1
 
 
 script TOKKUL_CHECK {
-    buffernumberstring(STR_VAR_1, VAR_POKESCAPE_TOKKUL_CURRENCY)
+    //buffernumberstring(STR_VAR_1, VAR_POKESCAPE_TOKKUL_CURRENCY)
     msgbox(format("You have: {STR_VAR_1} TOKKUL."))
 	closemessage
 	msgbox(format("Would you like to edit these?"), MSGBOX_YESNO)
@@ -820,21 +820,21 @@ script TOKKUL_CHECK {
 }
 
 script VAR_EDIT_TOKKUL {
-    msgbox(format("Set TOKKUL to 0?"), MSGBOX_YESNO)
+    msgbox(format(" This doesnt work delte it\p Set TOKKUL to 0?"), MSGBOX_YESNO)
     if (var(VAR_RESULT))
     {
-        setvar(VAR_POKESCAPE_TOKKUL_CURRENCY, 0)
-        buffernumberstring(0, VAR_POKESCAPE_TOKKUL_CURRENCY)
+        //setvar(VAR_POKESCAPE_TOKKUL_CURRENCY, 0)
+        //buffernumberstring(0, VAR_POKESCAPE_TOKKUL_CURRENCY)
         msgbox(format("You have: {STR_VAR_1} TOKKUL."))
 		closemessage
 		release
 		end
     }
-	msgbox(format("Add 1000 TOKKUL?"), MSGBOX_YESNO)
+	msgbox(format("Add 1000 TOKKUL?"), MSGBOX_YESNO) // This doesnt work
     if (var(VAR_RESULT))
     {
-        addvar(VAR_POKESCAPE_TOKKUL_CURRENCY, 1000)
-        buffernumberstring(0, VAR_POKESCAPE_TOKKUL_CURRENCY)
+        //addvar(VAR_POKESCAPE_TOKKUL_CURRENCY, 1000)
+        //buffernumberstring(0, VAR_POKESCAPE_TOKKUL_CURRENCY)
         msgbox(format("You have: {STR_VAR_1} TOKKUL."))
 		closemessage
 		release

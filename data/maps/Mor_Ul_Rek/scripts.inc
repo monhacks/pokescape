@@ -10,32 +10,46 @@ Mor_Ul_Rek_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 Mor_Ul_Rek_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_POKESCAPE_STORYMODE_PROGRESS, 150, STORYMODE_TZHAAR_NPC
+	map_script_2 VAR_TZHAAR_CHALLENGES_STATUS, 5, POST_FIGHTCAVES_DIALOGUE
+	map_script_2 VAR_TZHAAR_CHALLENGES_STATUS, 10, POST_FIGHTCAVES_DIALOGUE
 	.2byte 0
 
 
 TZHAAR_STATE::
+	compare VAR_TZHAAR_CHALLENGES_STATUS, 5
+	goto_if_eq TZHAAR_STATE_2
+	compare VAR_TZHAAR_CHALLENGES_STATUS, 10
+	goto_if_eq TZHAAR_STATE_2
+	setobjectxy 8, 61, 30
+	setobjectxyperm 8, 61, 30
+TZHAAR_STATE_1:
 	setflag FLAG_TEMP_1C
 	removeobject 25
 	compare VAR_MITHRILMAN_STATE, 10
-	goto_if_eq TZHAAR_STATE_2
-TZHAAR_STATE_1:
-	goto_if_set FLAG_TZHAAR_FOLLOW_GYM_INFO, TZHAAR_STATE_5
-TZHAAR_STATE_4:
+	goto_if_eq TZHAAR_STATE_8
+TZHAAR_STATE_7:
+	goto_if_set FLAG_TZHAAR_FOLLOW_GYM_INFO, TZHAAR_STATE_11
+TZHAAR_STATE_10:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 150
-	goto_if_eq TZHAAR_STATE_7
+	goto_if_eq TZHAAR_STATE_13
 	setflag FLAG_TEMP_1F
 	return
 
 TZHAAR_STATE_2:
-	clearflag FLAG_TEMP_1C
-	addobject 25
+	setobjectxy 8, 60, 30
+	setobjectxyperm 8, 60, 30
 	goto TZHAAR_STATE_1
 
-TZHAAR_STATE_5:
-	setobjectxyperm 19, 4, 32
-	goto TZHAAR_STATE_4
+TZHAAR_STATE_8:
+	clearflag FLAG_TEMP_1C
+	addobject 25
+	goto TZHAAR_STATE_7
 
-TZHAAR_STATE_7:
+TZHAAR_STATE_11:
+	setobjectxyperm 19, 4, 32
+	goto TZHAAR_STATE_10
+
+TZHAAR_STATE_13:
 	clearflag FLAG_TEMP_1F
 	return
 
@@ -95,39 +109,128 @@ TRIGGER_TZHAAR_GYM_GAAL_1::
 	end
 
 
+Movement_walkoutoffirecaves:
+	walk_down
+	face_up
+	step_end
+
+Movement_followerplayeroutoffirecaves:
+	face_right
+	delay_16
+	walk_right
+	face_down
+	step_end
+
+POST_FIGHTCAVES_DIALOGUE::
+	applymovement 8, Movement_followerplayeroutoffirecaves
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_walkoutoffirecaves
+	waitmovement 8
+	compare VAR_TZHAAR_CHALLENGES_STATUS, 5
+	goto_if_eq POST_FIGHTCAVES_DIALOGUE_2
+	compare VAR_TZHAAR_CHALLENGES_STATUS, 10
+	goto_if_eq POST_FIGHTCAVES_DIALOGUE_3
+POST_FIGHTCAVES_DIALOGUE_1:
+	closemessage
+	hidenamebox
+	release
+	end
+
+POST_FIGHTCAVES_DIALOGUE_2:
+	namebox POST_FIGHTCAVES_DIALOGUE_Text_0
+	msgbox POST_FIGHTCAVES_DIALOGUE_Text_1
+	setvar VAR_TZHAAR_CHALLENGES_STATUS, 0
+	goto POST_FIGHTCAVES_DIALOGUE_1
+
+POST_FIGHTCAVES_DIALOGUE_3:
+	namebox POST_FIGHTCAVES_DIALOGUE_Text_0
+	msgbox POST_FIGHTCAVES_DIALOGUE_Text_2
+	closemessage
+	giveitem ITEM_FIRECAPE, 1
+	addtokkul 10000, 0
+	setvar VAR_TEMP_E, 10000
+	call GIVE_TOKKUL
+	closemessage
+	goto_if_unset FLAG_BEATEN_FIGHTCAVES, POST_FIGHTCAVES_DIALOGUE_7
+POST_FIGHTCAVES_DIALOGUE_6:
+	namebox POST_FIGHTCAVES_DIALOGUE_Text_0
+	msgbox POST_FIGHTCAVES_DIALOGUE_Text_3
+	setvar VAR_TZHAAR_CHALLENGES_STATUS, 0
+	goto POST_FIGHTCAVES_DIALOGUE_1
+
+POST_FIGHTCAVES_DIALOGUE_7:
+	setvar VAR_TZHAAR_CHALLENGES_STATUS, 15
+	goto POST_FIGHTCAVES_GIVE_TZREKJAD
+	goto POST_FIGHTCAVES_DIALOGUE_6
+
+
+POST_FIGHTCAVES_GIVE_TZREKJAD::
+	namebox POST_FIGHTCAVES_DIALOGUE_Text_0
+	msgbox POST_FIGHTCAVES_GIVE_TZREKJAD_Text_0
+	closemessage
+	hidenamebox
+	call EventScript_GiftMonster_TzRekJad
+	namebox POST_FIGHTCAVES_DIALOGUE_Text_0
+	msgbox POST_FIGHTCAVES_GIVE_TZREKJAD_Text_1
+	setflag FLAG_BEATEN_FIGHTCAVES
+	setvar VAR_TZHAAR_CHALLENGES_STATUS, 0
+	closemessage
+	hidenamebox
+	release
+	end
+
+
+EventScript_GiftMonster_TzRekJad::
+	setvar VAR_TEMP_1, SPECIES_TZREK_JAD
+	givemon SPECIES_TZREK_JAD, 30, ITEM_NONE
+	call EventScript_GiftMonster_Start
+	return
+
+
 TZHAAR_FIGHTCAVES_NPC::
 	faceplayer
 	namebox STORYMODE_TZHAAR_NPC_Text_0
-	msgbox TZHAAR_FIGHTCAVES_NPC_Text_0
-	goto_if_set FLAG_BADGE03_GET, TZHAAR_FIGHTCAVES_NPC_2
-	msgbox TZHAAR_FIGHTCAVES_NPC_Text_6
+	compare VAR_TZHAAR_CHALLENGES_STATUS, 15
+	goto_if_eq TZHAAR_FIGHTCAVES_NPC_2
 TZHAAR_FIGHTCAVES_NPC_1:
+	goto_if_set FLAG_BEATEN_FIGHTCAVES, TZHAAR_FIGHTCAVES_NPC_5
+	msgbox TZHAAR_FIGHTCAVES_NPC_Text_1
+TZHAAR_FIGHTCAVES_NPC_4:
+	goto_if_set FLAG_BADGE03_GET, TZHAAR_FIGHTCAVES_NPC_9
+	msgbox TZHAAR_FIGHTCAVES_NPC_Text_5
+TZHAAR_FIGHTCAVES_NPC_8:
 	closemessage
 	hidenamebox
 	release
 	end
 
 TZHAAR_FIGHTCAVES_NPC_2:
-	msgbox TZHAAR_FIGHTCAVES_NPC_Text_1
+	goto POST_FIGHTCAVES_GIVE_TZREKJAD
+	goto TZHAAR_FIGHTCAVES_NPC_1
+
+TZHAAR_FIGHTCAVES_NPC_5:
+	msgbox TZHAAR_FIGHTCAVES_NPC_Text_0
+	goto TZHAAR_FIGHTCAVES_NPC_4
+
+TZHAAR_FIGHTCAVES_NPC_9:
+	msgbox TZHAAR_FIGHTCAVES_NPC_Text_2
 	multichoicedefault 1, 0, MULTI_TZHAAR_FIGHTCAVES, 0, 0
 	switch VAR_RESULT
-	case 0, TZHAAR_FIGHTCAVES_NPC_6
-	case 1, TZHAAR_FIGHTCAVES_NPC_7
-	case 2, TZHAAR_FIGHTCAVES_NPC_8
-	goto TZHAAR_FIGHTCAVES_NPC_1
+	case 0, TZHAAR_FIGHTCAVES_NPC_13
+	case 1, TZHAAR_FIGHTCAVES_NPC_14
+	case 2, TZHAAR_FIGHTCAVES_NPC_15
+	goto TZHAAR_FIGHTCAVES_NPC_8
 
-TZHAAR_FIGHTCAVES_NPC_6:
-	msgbox TZHAAR_FIGHTCAVES_NPC_Text_2
+TZHAAR_FIGHTCAVES_NPC_13:
+	call FIGHTCAVES_ENTER
+	goto TZHAAR_FIGHTCAVES_NPC_8
+
+TZHAAR_FIGHTCAVES_NPC_14:
 	msgbox TZHAAR_FIGHTCAVES_NPC_Text_3
-	goto TZHAAR_FIGHTCAVES_NPC_1
+	goto TZHAAR_FIGHTCAVES_NPC_8
 
-TZHAAR_FIGHTCAVES_NPC_7:
+TZHAAR_FIGHTCAVES_NPC_15:
 	msgbox TZHAAR_FIGHTCAVES_NPC_Text_4
-	goto TZHAAR_FIGHTCAVES_NPC_1
-
-TZHAAR_FIGHTCAVES_NPC_8:
-	msgbox TZHAAR_FIGHTCAVES_NPC_Text_5
-	goto TZHAAR_FIGHTCAVES_NPC_1
+	goto TZHAAR_FIGHTCAVES_NPC_8
 
 
 TZHAAR_GYM_NPC::
@@ -642,19 +745,48 @@ TRIGGER_TZHAAR_GYM_GAAL_1_Text_0:
 	.string "Allow us to escort you back to the\n"
 	.string "Tzhaar City.$"
 
+POST_FIGHTCAVES_DIALOGUE_Text_0:
+	.string "Tz-Mej-Jal$"
+
+POST_FIGHTCAVES_DIALOGUE_Text_1:
+	.string "Unlucky JalYt, we hope you will take up\n"
+	.string "our challenge again.$"
+
+POST_FIGHTCAVES_DIALOGUE_Text_2:
+	.string "JalYt we are most impressed!\p"
+	.string "You and your Kimit-Zil survived the\n"
+	.string "waves and defeated TzTok-Jad!\p"
+	.string "Please accept these as your victory\n"
+	.string "prizes.$"
+
+POST_FIGHTCAVES_DIALOGUE_Text_3:
+	.string "Congratulations JalYt, we hope you will\n"
+	.string "take up our challenge again.$"
+
+POST_FIGHTCAVES_GIVE_TZREKJAD_Text_0:
+	.string "Oh?\p"
+	.string "JalYt it appears a TzRek Jad would like\n"
+	.string "to adventure with you and your\l"
+	.string "Kimit-Zil.$"
+
+POST_FIGHTCAVES_GIVE_TZREKJAD_Text_1:
+	.string "Congratulations JalYt, with your\n"
+	.string "victory you are now eligible to\l"
+	.string "challenge the Elder Kiln if you wish to.\p"
+	.string "We hope you will take up our challenges\n"
+	.string "again.$"
+
 TZHAAR_FIGHTCAVES_NPC_Text_0:
-	.string "Welcome to the Tzhaar Fight Caves!$"
+	.string "Welcome, JalYt Champion of Tzhaar Fight\n"
+	.string "Caves!$"
 
 TZHAAR_FIGHTCAVES_NPC_Text_1:
-	.string "What would you like to do?$"
+	.string "Welcome to the Tzhaar Fight Caves!$"
 
 TZHAAR_FIGHTCAVES_NPC_Text_2:
-	.string "Good luck JalYt!$"
+	.string "What would you like to do?$"
 
 TZHAAR_FIGHTCAVES_NPC_Text_3:
-	.string "SORRY THIS FEATURE IS CURRENTLY WIP.$"
-
-TZHAAR_FIGHTCAVES_NPC_Text_4:
 	.string "Our Fight Caves consist of 63 rounds of\n"
 	.string "constant battles with our brethern,\l"
 	.string "getting harder the higher the wave.\p"
@@ -665,10 +797,10 @@ TZHAAR_FIGHTCAVES_NPC_Text_4:
 	.string "If you do you will be rewarded and known\n"
 	.string "as a champion amoung us Tzhaar.$"
 
-TZHAAR_FIGHTCAVES_NPC_Text_5:
+TZHAAR_FIGHTCAVES_NPC_Text_4:
 	.string "Very well.$"
 
-TZHAAR_FIGHTCAVES_NPC_Text_6:
+TZHAAR_FIGHTCAVES_NPC_Text_5:
 	.string "Only those with the Tzhaar Badge may\n"
 	.string "enter.$"
 

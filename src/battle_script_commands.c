@@ -16863,7 +16863,7 @@ static void Cmd_gettokkul(void)
     else {
         tokkul = 10;
     }
-    VarSet(VAR_POKESCAPE_TOKKUL_CURRENCY, (VAR_POKESCAPE_TOKKUL_CURRENCY + tokkul));
+    AddTokkul(&gSaveBlock1Ptr->tokkul, tokkul);
     
     PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 5, tokkul);
     gBattlescriptCurrInstr = cmd->nextInstr;

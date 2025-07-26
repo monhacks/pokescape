@@ -2438,6 +2438,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
         return 0;
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && FlagGet(FLAG_TZHAAR_RANDOM)) {
         retVal = CreateNPCTrainerPartyFromTrainerFightCaves(party, &gTrainersFightCaves[trainerNum]);
+        gBattleTypeFlags |= gTrainersFightCaves[trainerNum].doubleBattle;
+        //if force_double_trainer_battle {}
+        //gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TRAINER); // FORCES DOUBLE BATTLE
     } 
     else {
         retVal = CreateNPCTrainerPartyFromTrainer(party, &gTrainers[trainerNum], firstTrainer, gBattleTypeFlags);

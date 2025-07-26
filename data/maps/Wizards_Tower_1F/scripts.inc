@@ -761,7 +761,6 @@ VAR_CHECKER_11:
 
 
 TOKKUL_CHECK::
-	buffernumberstring STR_VAR_1, VAR_POKESCAPE_TOKKUL_CURRENCY
 	msgbox TOKKUL_CHECK_Text_0
 	closemessage
 	msgbox TOKKUL_CHECK_Text_1, MSGBOX_YESNO
@@ -789,16 +788,12 @@ VAR_EDIT_TOKKUL::
 	end
 
 VAR_EDIT_TOKKUL_2:
-	setvar VAR_POKESCAPE_TOKKUL_CURRENCY, 0
-	buffernumberstring 0, VAR_POKESCAPE_TOKKUL_CURRENCY
 	msgbox TOKKUL_CHECK_Text_0
 	closemessage
 	release
 	end
 
 VAR_EDIT_TOKKUL_5:
-	addvar VAR_POKESCAPE_TOKKUL_CURRENCY, 1000
-	buffernumberstring 0, VAR_POKESCAPE_TOKKUL_CURRENCY
 	msgbox TOKKUL_CHECK_Text_0
 	closemessage
 	release
@@ -1583,6 +1578,7 @@ TOKKUL_CHECK_Text_1:
 	.string "Would you like to edit these?$"
 
 VAR_EDIT_TOKKUL_Text_0:
+	.string "This doesnt work delte it\p"
 	.string "Set TOKKUL to 0?$"
 
 VAR_EDIT_TOKKUL_Text_1:

@@ -1816,6 +1816,26 @@ bool8 ScrCmd_showmoneybox(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_addtokkul(struct ScriptContext *ctx)
+{
+    u32 amount = ScriptReadWord(ctx);
+    u8 ignore = ScriptReadByte(ctx);
+
+    if (!ignore)
+        AddTokkul(&gSaveBlock1Ptr->tokkul, amount);
+    return FALSE;
+}
+
+bool8 ScrCmd_removetokkul(struct ScriptContext *ctx)
+{
+    u32 amount = ScriptReadWord(ctx);
+    u8 ignore = ScriptReadByte(ctx);
+
+    if (!ignore)
+        RemoveTokkul(&gSaveBlock1Ptr->tokkul, amount);
+    return FALSE;
+}
+
 bool8 ScrCmd_showtokkulbox(struct ScriptContext *ctx)
 {
     u8 x = ScriptReadByte(ctx);

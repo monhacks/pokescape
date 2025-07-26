@@ -292,7 +292,7 @@ TZHAAR_GYMCHALLENGE_START::
 	applymovement 2, Movement_TZHAAR_ESCORT_5
 	waitmovement 0
 	waitmovement 0
-	call FIGHT_CAVES_START
+	call TZHAAR_GYMCHALLENGE_SETUP_BEGIN
 	return
 
 
@@ -417,8 +417,8 @@ NPC_TZHAAR_GYM_GAAL_2_2:
 
 
 GIVE_TOKKUL_Text_0:
-	.string "{PLAYER} obtained\n"
-	.string "{STR_VAR_1} TOKKUL.$"
+	.string "{PLAYER} obtained {STR_VAR_1}\n"
+	.string "TOKKUL.$"
 
 TZHAAR_GYM_ROOM_POST_WIN_Text_0:
 	.string "Kimit-Kal$"

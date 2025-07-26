@@ -305,13 +305,13 @@
 #define	TRAINER_VARROCK_SEWERS_3F_TRAINER_3			    301
 #define	TRAINER_VARROCK_SEWERS_3F_TRAINER_4			    302
 #define	TRAINER_VARROCK_SEWERS_3F_TRAINER_5			    303
-#define	TRAINER_TZHAAR_CAVES_1_TRAINER_1		    	304
-#define	TRAINER_TZHAAR_CAVES_1_TRAINER_2			    305
-#define	TRAINER_TZHAAR_CAVES_1_TRAINER_3			    306
-#define	TRAINER_TZHAAR_CAVES_1_TRAINER_4			    307
-#define	TRAINER_TZHAAR_CAVES_1_TRAINER_5		    	308
-#define	TRAINER_TZHAAR_CAVES_1_TRAINER_6		    	309
-#define	TRAINER_TZHAAR_CAVES_1_JAD			            310
+#define	TRAINER_TZHAAR_CAVES_1_TRAINER_1		    	304 //
+#define	TRAINER_TZHAAR_CAVES_1_TRAINER_2			    305 //
+#define	TRAINER_TZHAAR_CAVES_1_TRAINER_3			    306 //
+#define	TRAINER_TZHAAR_CAVES_1_TRAINER_4			    307 //
+#define	TRAINER_TZHAAR_CAVES_1_TRAINER_5		    	308 //
+#define	TRAINER_TZHAAR_CAVES_1_TRAINER_6		    	309 //
+#define	TRAINER_TZHAAR_CAVES_1_JAD			            310 //
 #define	TRAINER_ROUTE_35_TRAINER_1			            311
 #define	TRAINER_ROUTE_35_TRAINER_2			            312
 #define	TRAINER_ROUTE_38_TRAINER_1			            313
@@ -439,14 +439,12 @@
 #define TRAINER_AJAMJAM                                 435
 #define TRAINER_CrandorVolcano_FireGiant_1              436
 #define TRAINER_CrandorVolcano_FireGiant_2              437
-
-#define TRAINER_TZHAAR_FIGHTCAVES_LOW_GAAL_1            438
-#define TRAINER_TZHAAR_FIGHTCAVES_LOW_GAAL_2            439
-#define TRAINER_TZHAAR_FIGHTCAVES_LOW_GAAL_3            440
-#define TRAINER_TZHAAR_FIGHTCAVES_LOW_KET_1             441
-#define TRAINER_TZHAAR_FIGHTCAVES_LOW_KET_2             442
-#define TRAINER_TZHAAR_FIGHTCAVES_LOW_KET_3             443
-
+#define TRAINER_FIGHTCAVES_LOW_GAAL                     438 //
+#define TRAINER_FIGHTCAVES_MED_GAAL                     439
+#define TRAINER_FIGHTCAVES_HIGH_GAAL                    440
+#define TRAINER_FIGHTCAVES_LOW_KET_OSRS                 441
+#define TRAINER_FIGHTCAVES_MED_KET_OSRS                 442
+#define TRAINER_FIGHTCAVES_HIGH_KET_OSRS                443
 #define TRAINER_ROUTE3_TRAINER_2                        444
 #define TRAINER_HELLWIND                                445
 #define TRAINER_HYPER_STAN                              446
@@ -624,12 +622,14 @@
 #define TRAINER_HAM_HIDEOUT_GUARD_2                     618
 #define TRAINER_HAM_HIDEOUT_GUARD_3                     619
 #define TRAINER_HAM_HIDEOUT_GUARD_4                     620
+#define TRAINER_FIGHTCAVES_DOUBLE_LOW_KET_HD            621
+
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      (TRAINER_HAM_HIDEOUT_GUARD_4 + 1)
+#define TRAINERS_COUNT                      (TRAINER_FIGHTCAVES_DOUBLE_LOW_KET_HD + 1)
 #define MAX_TRAINERS_COUNT                  864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

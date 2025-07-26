@@ -165,6 +165,7 @@ script GnomeBoi_Kevin
 		case 6:
 			msgbox("Get money!")
 			addmoney (250000, 0)
+            addtokkul (250000, 0)
 			release
 		case 7:
 			msgbox ("Heres some candy!")

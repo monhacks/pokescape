@@ -144,6 +144,7 @@ GnomeBoi_Kevin_8:
 GnomeBoi_Kevin_9:
 	msgbox GnomeBoi_Kevin_Text_7
 	addmoney 250000, 0
+	addtokkul 250000, 0
 	release
 	goto GnomeBoi_Kevin_1
 

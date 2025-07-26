@@ -17,7 +17,7 @@ mapscripts Tzhaar_Gym_Room_MapScripts {
 script GIVE_TOKKUL {
     buffernumberstring(0, VAR_TEMP_E)
     playfanfare(MUS_OBTAIN_B_POINTS)
-    msgbox(format("{PLAYER} obtained\n{STR_VAR_1} TOKKUL."))
+    msgbox(format("{PLAYER} obtained {STR_VAR_1} TOKKUL."))
     waitfanfare
 	closemessage
     return
@@ -28,6 +28,7 @@ script TZHAAR_GYM_ROOM_POST_WIN {
     msgbox(format("Congratulations on your victory JalYt.\pBefore you go, please accept this Tokkul as an extra reward for defeating our gym."))
     closemessage
     hidenamebox
+    addtokkul(5000, 0)
     setvar(VAR_TEMP_E, 5000)
     call(GIVE_TOKKUL)
     namebox("Kimit-Kal")
@@ -314,7 +315,7 @@ script TZHAAR_GYMCHALLENGE_START {
     
     waitmovement(0)
     //warp()
-    call(FIGHT_CAVES_START)
+    call(TZHAAR_GYMCHALLENGE_SETUP_BEGIN)
     return
 }
 

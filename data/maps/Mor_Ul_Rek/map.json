@@ -451,8 +451,8 @@
       "x": 61,
       "y": 29,
       "elevation": 0,
-      "dest_map": "MAP_TZHAAR_CAVES_1",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_TZHAAR_FIGHT_CAVES",
+      "dest_warp_id": "0"
     },
     {
       "x": 10,

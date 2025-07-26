@@ -377,7 +377,7 @@ void DoWhiteOut(void)
         || gSaveBlock1Ptr->location.mapNum == MAP_NUM(BLACK_KNIGHTS_FORTRESS_4)) {
             SetLastHealLocationWarp(HEAL_LOCATION_BKF_JAIL);
             FlagSet(FLAG_BKF_JAILED);
-        }
+    }
 
     if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(HAM_HIDEOUT_B3F) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(HAM_HIDEOUT_B3F)) {
         SetLastHealLocationWarp(HEAL_LOCATION_LUMBRIDGE);
@@ -387,7 +387,9 @@ void DoWhiteOut(void)
         || gSaveBlock1Ptr->location.mapNum == MAP_NUM(HAM_HIDEOUT_B1F)) {
             SetLastHealLocationWarp(HEAL_LOCATION_HAM_JAIL);
             FlagSet(FLAG_HAM_JAILED);
-        }
+    }
+
+        
         
     RunScriptImmediately(EventScript_WhiteOut);
     if (B_WHITEOUT_MONEY == GEN_3)

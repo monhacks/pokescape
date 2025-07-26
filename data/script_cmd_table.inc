@@ -242,12 +242,15 @@ gScriptCmdTable::
     .4byte ScrCmd_facefollower						@ 0xef
     .4byte ScrCmd_checkfollower						@ 0xf0
 	.4byte ScrCmd_pokemarttokkulshop                @ 0xf1
-	.4byte ScrCmd_toggleoutfit                      @ 0xf2
-	.4byte ScrCmd_getoutfitstatus                   @ 0xf3
-	.4byte ScrCmd_bufferoutfitstr                   @ 0xf4
-	.4byte ScrCmd_pokemartoutfit                    @ 0xf5
-	.4byte ScrCmd_showitemdesc              		@ 0xf6
-	.4byte ScrCmd_hideitemdesc              		@ 0xf7
+	.4byte ScrCmd_addtokkul                			@ 0xf2
+	.4byte ScrCmd_removetokkul                		@ 0xf3
+	.4byte ScrCmd_showtokkulbox                		@ 0xf4
+	.4byte ScrCmd_toggleoutfit                      @ 0xf5
+	.4byte ScrCmd_getoutfitstatus                   @ 0xf6
+	.4byte ScrCmd_bufferoutfitstr                   @ 0xf7
+	.4byte ScrCmd_pokemartoutfit                    @ 0xf8
+	.4byte ScrCmd_showitemdesc              		@ 0xf9
+	.4byte ScrCmd_hideitemdesc              		@ 0xfa
 	
 
 gScriptCmdTableEnd::

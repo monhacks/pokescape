@@ -289,7 +289,7 @@
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
 #define FLAG_HAM_HIDEOUT_GIFTMON             0x104          //FLAG_UNUSED_0x104 
 #define FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE   0x105   //FLAG_UNUSED_0x105
-#define FLAG_UNUSED_0x106                    0x106
+#define FLAG_BEATEN_FIGHTCAVES               0x106
 #define FLAG_ENTERED_ELITE_FOUR              0x107
 #define FLAG_UNUSED_0x108                    0x108
 #define FLAG_UNUSED_0x109                    0x109

@@ -5,11 +5,26 @@ mapscripts Mor_Ul_Rek_MapScripts {
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
 		VAR_POKESCAPE_STORYMODE_PROGRESS, 150: STORYMODE_TZHAAR_NPC
+        VAR_TZHAAR_CHALLENGES_STATUS, 5: POST_FIGHTCAVES_DIALOGUE
+        VAR_TZHAAR_CHALLENGES_STATUS, 10: POST_FIGHTCAVES_DIALOGUE
     ]
 }
 
 
+
+
+
 script TZHAAR_STATE {
+    if ((var(VAR_TZHAAR_CHALLENGES_STATUS) == 5) || (var(VAR_TZHAAR_CHALLENGES_STATUS) == 10)) { 
+        setobjectxy(8, 60, 30)
+        setobjectxyperm(8, 60, 30)
+    }
+    else {
+        setobjectxy(8, 61, 30)
+        setobjectxyperm(8, 61, 30)
+    }
+
+
     setflag(FLAG_TEMP_1C) 	//mithrilman
 	removeobject(25)		//mithrilman
 	if (var(VAR_MITHRILMAN_STATE) == 10) {
@@ -87,22 +102,97 @@ script TRIGGER_TZHAAR_GYM_GAAL_1
     end
 }
 
+movement Movement_walkoutoffirecaves {
+    walk_down
+    face_up
+    step_end
+}
+movement Movement_followerplayeroutoffirecaves {
+    face_right
+    delay_16
+    walk_right
+    face_down
+    step_end
+}
+
+script POST_FIGHTCAVES_DIALOGUE {
+    applymovement(8, Movement_followerplayeroutoffirecaves)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_walkoutoffirecaves)
+    waitmovement(8)
+    if (var(VAR_TZHAAR_CHALLENGES_STATUS) == 5) {   //You failed the fightcaves.
+        namebox ("Tz-Mej-Jal")
+        msgbox(format("Unlucky JalYt, we hope you will take up our challenge again."))
+        setvar(VAR_TZHAAR_CHALLENGES_STATUS, 0)
+    }
+    elif (var(VAR_TZHAAR_CHALLENGES_STATUS) == 10) {    //You defeated the Fight caves
+        namebox ("Tz-Mej-Jal")
+        msgbox(format("JalYt we are most impressed!\pYou and your Kimit-Zil survived the waves and defeated TzTok-Jad!\pPlease accept these as your victory prizes."))
+        closemessage
+        giveitem(ITEM_FIRECAPE, 1)
+        
+        addtokkul(10000, 0)
+        setvar(VAR_TEMP_E, 10000)
+        call(GIVE_TOKKUL)
+        closemessage
+        if (!flag(FLAG_BEATEN_FIGHTCAVES)) { // First time fight cave reward.
+            setvar(VAR_TZHAAR_CHALLENGES_STATUS, 15)    //You haven't recieved TzRekJad Yet.
+            goto(POST_FIGHTCAVES_GIVE_TZREKJAD)
+        }
+        namebox ("Tz-Mej-Jal")
+        msgbox(format("Congratulations JalYt, we hope you will take up our challenge again."))
+        setvar(VAR_TZHAAR_CHALLENGES_STATUS, 0)    //You recieved your reward.
+    }
+    closemessage
+    hidenamebox
+    release
+    end
+
+}
+
+script POST_FIGHTCAVES_GIVE_TZREKJAD {
+    namebox ("Tz-Mej-Jal")
+    msgbox(format("Oh?\pJalYt it appears a TzRek Jad would like to adventure with you and your Kimit-Zil."))
+    closemessage
+    hidenamebox
+    call(EventScript_GiftMonster_TzRekJad)
+    namebox ("Tz-Mej-Jal")
+    msgbox(format("Congratulations JalYt, with your victory you are now eligible to challenge the Elder Kiln if you wish to.\pWe hope you will take up our challenges again."))
+    setflag(FLAG_BEATEN_FIGHTCAVES)
+    setvar(VAR_TZHAAR_CHALLENGES_STATUS, 0)    //You recieved your reward.
+    closemessage
+    hidenamebox
+    release
+    end
+}
+
+script EventScript_GiftMonster_TzRekJad {
+    setvar(VAR_TEMP_1, SPECIES_TZREK_JAD)
+    givemon (SPECIES_TZREK_JAD, 30, ITEM_NONE)
+	call(EventScript_GiftMonster_Start)
+}
 
 
 script TZHAAR_FIGHTCAVES_NPC
 {
+    //check VAR_TZHAAR_CHALLENGES_STATUS if you have defeated jad.
     faceplayer
     namebox ("Tzhaar")
-    msgbox(format("Welcome to the Tzhaar Fight Caves!"))
+    if (var(VAR_TZHAAR_CHALLENGES_STATUS) == 15) {
+        goto(POST_FIGHTCAVES_GIVE_TZREKJAD)
+    }
+    if (flag(FLAG_BEATEN_FIGHTCAVES)) {
+        msgbox(format("Welcome, JalYt Champion of Tzhaar Fight Caves!"))
+    }
+    else {
+        msgbox(format("Welcome to the Tzhaar Fight Caves!"))
+    }
     if (flag(FLAG_BADGE03_GET) == TRUE) {
         msgbox(format("What would you like to do?"))
         multichoicedefault (1, 0, MULTI_TZHAAR_FIGHTCAVES, 0, 0)
         switch (var(VAR_RESULT))
         {
             case 0:
-                msgbox(format("Good luck JalYt!"))
-                msgbox(format("SORRY THIS FEATURE IS CURRENTLY WIP."))
-                //call(TZHAAR_GYMCHALLENGE_START)
+                call(FIGHTCAVES_ENTER)
             case 1:
                 msgbox(format("Our Fight Caves consist of 63 rounds of constant battles with our brethern, getting harder the higher the wave.\pYour goal is to make it to the end of the waves.\pIf you lose, you must start again from the beginning.\pIf you do you will be rewarded and known as a champion amoung us Tzhaar."))
             case 2:

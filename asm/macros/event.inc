@@ -2294,10 +2294,10 @@
 	.4byte \products
 	.endm
 
-	@ Adds value to the player's money. If adding 'value' money would exceed MAX_MONEY, the player's money is set to MAX_MONEY.
+	@ Adds value to the player's tokkul. If adding 'value' money would exceed MAX_MONEY, the player's tokkul is set to MAX_MONEY.
 	@ If 'disable' is set to anything but 0 then this command does nothing.
 	.macro addtokkul value:req, disable=0
-	.byte 0x90
+	.byte 0xf2
 	.4byte \value
 	.byte \disable
 	.endm
@@ -2305,7 +2305,7 @@
 	@ Subtracts value from the player's money. If the player has less than 'value' money, their money is set to 0.
 	@ If 'disable' is set to anything but 0 then this command does nothing.
 	.macro removetokkul value:req, disable=0
-	.byte 0x91
+	.byte 0xf3
 	.4byte \value
 	.byte \disable
 	.endm
@@ -2313,7 +2313,7 @@
 	@ Creates a window showing how much Tokkul the player has.
 	@ If 'disable' is set to anything but 0 then this command does nothing.
 	.macro showtokkulbox x:req, y:req, disable=0
-	.byte 0x93
+	.byte 0xf4
 	.byte \x
 	.byte \y
 	.byte \disable
@@ -2321,7 +2321,7 @@
 
 @! Unlocks a locked outfit
 	.macro toggleoutfit outfitId:req, type:req
-	.byte 0xf2
+	.byte 0xf5
 	.2byte \outfitId
 	.byte \type
 	.endm
@@ -2330,7 +2330,7 @@
 	@! OUTFIT_CHECK_FLAG is for checking if it's either unlocked/locked
 	@! OUTFIT_CHECK_USED is for checking if it's currently used
 	.macro getoutfitstatus outfitId:req, data:req
-	.byte 0xf3
+	.byte 0xf6
 	.2byte \outfitId
 	.byte \data
 	.endm
@@ -2338,7 +2338,7 @@
 	@! Buffers either the name or the description strings of an outfit
 	@! to a str var
 	.macro bufferoutfitstr stringVarId:req, outfitId:req, type:req
-	.byte 0xf4
+	.byte 0xf7
 	stringvar \stringVarId
 	.2byte \outfitId
 	.byte \type
@@ -2347,7 +2347,7 @@
 	@ Opens the Pokemart system, offering the specified outfit products for sale.
 	@ Products should be a list of .2byte item values preceded by an .align 2
 	.macro pokemartoutfit products:req
-	.byte 0xf5
+	.byte 0xf8
 	.4byte \products
 	.endm
 
@@ -2403,7 +2403,7 @@
 	.endm
 
 	.macro showdescription
-	.byte 0xf6
+	.byte 0xf9
 	.endm
 
 	.macro showitemdesc
@@ -2417,5 +2417,5 @@
 	.endm
 
 	.macro hideitemdesc
-	.byte 0xf7
+	.byte 0xfa
 	.endm

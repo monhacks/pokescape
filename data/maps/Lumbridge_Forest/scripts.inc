@@ -53,25 +53,23 @@ LumForest_STATE_6:
 LumForest_STATE_10:
 	checkitem ITEM_CUT_TOOL, 1
 	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_19
+	goto_if_eq LumForest_STATE_17
 	goto LumForest_STATE_4
 
 LumForest_STATE_7:
-	checkfollower
-	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_14
-LumForest_STATE_13:
 	setvar VAR_TEMP_1, 1
 	clearflag FLAG_TEMP_1E
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_eq LumForest_STATE_13
 	goto LumForest_STATE_4
 
 LumForest_STATE_8:
-	checkfollower
-	compare VAR_RESULT, 0
-	goto_if_eq LumForest_STATE_17
-LumForest_STATE_16:
 	setvar VAR_TEMP_1, 1
 	clearflag FLAG_TEMP_1E
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_eq LumForest_STATE_15
 	goto LumForest_STATE_4
 
 LumForest_STATE_9:
@@ -84,15 +82,15 @@ LumForest_STATE_11:
 	clearflag FLAG_TEMP_1F
 	goto LumForest_STATE_10
 
-LumForest_STATE_14:
+LumForest_STATE_13:
 	clearflag FLAG_TEMP_1F
-	goto LumForest_STATE_13
+	goto LumForest_STATE_4
+
+LumForest_STATE_15:
+	clearflag FLAG_TEMP_1D
+	goto LumForest_STATE_4
 
 LumForest_STATE_17:
-	clearflag FLAG_TEMP_1D
-	goto LumForest_STATE_16
-
-LumForest_STATE_19:
 	addobject 41
 	clearflag FLAG_TEMP_8
 	goto LumForest_STATE_4
@@ -130,7 +128,7 @@ POST_WARP_ZANIK_EVENT::
 	applymovement 42, movement_Post_HAM_Hideout_Zanik_Exit
 	removeobject 42
 	setflag FLAG_TEMP_1D
-	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 250
+	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 255
 	release
 	end
 

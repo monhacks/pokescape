@@ -7427,114 +7427,6 @@ static const struct TrainerMon sParty_TZHAAR_CAVES_TRAINER_3[] = {
 };
 
 
-static const struct TrainerMon sParty_FIGHT_CAVES_POOL_1[] = {
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 1,
-    .species = SPECIES_TZ_KIH_SPIRIT_FORM,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .nickname = COMPOUND_STRING("Mini-marm"),
-    .isShiny = TRUE,
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 2,
-    .species = SPECIES_TZ_KIH_SPIRIT_FORM,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 3,
-    .species = SPECIES_REBORN_WARRIOR,
-    .moves = {MOVE_LAVA_PLUME, MOVE_ROCK_WRECKER, MOVE_PROTECT, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_MAGMA_ARMOR,
-    .lvl = 4,
-    .species = SPECIES_TZREK_JAD,
-    .moves = {MOVE_MAGMA_STORM, MOVE_STOMPING_TANTRUM, MOVE_BULK_UP, MOVE_TZ_TOK_ZEK}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 5,
-    .species = SPECIES_TOK_XIL,
-    .moves = {MOVE_SUNNY_DAY, MOVE_THOUSAND_ARROWS, MOVE_LAVA_PLUME, MOVE_SOLAR_BEAM}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_MAGICIAN,
-    .lvl = 6,
-    .species = SPECIES_YT_MEJKOT,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_LAVA_PLUME, MOVE_ANCIENT_POWER, MOVE_ENERGY_BALL}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_MAGICIAN,
-    .lvl = 7,
-    .species = SPECIES_GUTHBIRD,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_LAVA_PLUME, MOVE_ANCIENT_POWER, MOVE_ENERGY_BALL}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 8,
-    .species = SPECIES_FROG_BALLOON_FORM,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 9,
-    .species = SPECIES_GANODERMIC_BEAST,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 10,
-    .species = SPECIES_SAILFISH,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 11,
-    .species = SPECIES_LARUPIA_SPIRIT_FORM,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 12,
-    .species = SPECIES_COW_UNDEAD_FORM,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-    {
-    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ability = ABILITY_FLAME_BODY,
-    .lvl = 13,
-    .species = SPECIES_CAUSTIC_GAZER,
-    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
-    },
-};
 
 //TZHAAR GYM CHALLENGE POOL
 static const struct TrainerMon sParty_POOL_1_GymChallenge[] = {
@@ -13547,5 +13439,116 @@ static const struct TrainerMon sParty_POOL_Varrock_Pub[] = {
     .lvl = 244,
     .species = SPECIES_HELLHOUND,
     .ability = ABILITY_GUARD_DOG,
+    },
+};
+
+
+//FIGHT CAVES - POOL LOW
+static const struct TrainerMon sParty_FIGHT_CAVES_POOL_LOW[] = {
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 1,
+    .species = SPECIES_TZ_KIH_SPIRIT_FORM,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .nickname = COMPOUND_STRING("Mini-marm"),
+    .isShiny = TRUE,
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 2,
+    .species = SPECIES_TZ_KIH_SPIRIT_FORM,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 3,
+    .species = SPECIES_REBORN_WARRIOR,
+    .moves = {MOVE_LAVA_PLUME, MOVE_ROCK_WRECKER, MOVE_PROTECT, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_MAGMA_ARMOR,
+    .lvl = 4,
+    .species = SPECIES_TZREK_JAD,
+    .moves = {MOVE_MAGMA_STORM, MOVE_STOMPING_TANTRUM, MOVE_BULK_UP, MOVE_TZ_TOK_ZEK}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 5,
+    .species = SPECIES_TOK_XIL,
+    .moves = {MOVE_SUNNY_DAY, MOVE_THOUSAND_ARROWS, MOVE_LAVA_PLUME, MOVE_SOLAR_BEAM}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_MAGICIAN,
+    .lvl = 6,
+    .species = SPECIES_YT_MEJKOT,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_LAVA_PLUME, MOVE_ANCIENT_POWER, MOVE_ENERGY_BALL}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_MAGICIAN,
+    .lvl = 7,
+    .species = SPECIES_GUTHBIRD,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_LAVA_PLUME, MOVE_ANCIENT_POWER, MOVE_ENERGY_BALL}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 8,
+    .species = SPECIES_FROG_BALLOON_FORM,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 9,
+    .species = SPECIES_GANODERMIC_BEAST,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 10,
+    .species = SPECIES_SAILFISH,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 11,
+    .species = SPECIES_LARUPIA_SPIRIT_FORM,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 12,
+    .species = SPECIES_COW_UNDEAD_FORM,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
+    },
+    {
+    .ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .ability = ABILITY_FLAME_BODY,
+    .lvl = 13,
+    .species = SPECIES_CAUSTIC_GAZER,
+    .moves = {MOVE_TZ_TOK_ZEK, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_SUNNY_DAY}
     },
 };

@@ -573,6 +573,7 @@ gSpecials::
 	def_special MakeoverMage
 	def_special WearOutfit
 	def_special GetAmountOfBadges
+	def_special RestorePP_PlayerParty
 	
 
 

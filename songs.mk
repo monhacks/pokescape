@@ -1459,7 +1459,7 @@ $(MID_SUBDIR)/MUS_PS_LUMBRIDGE_CASTLE.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100
 
 $(MID_SUBDIR)/MUS_PS_TZHAAR.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090
 	
 $(MID_SUBDIR)/mus_ps_ice_mountain.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V100

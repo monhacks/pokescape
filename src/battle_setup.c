@@ -591,6 +591,8 @@ void BattleSetup_StartLegendaryBattle(void)
         break;
     case SPECIES_GIANT_MOLE:
     case SPECIES_ELVARG:
+    case SPECIES_TZTOK_JAD:
+    case SPECIES_VORKATH:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_PS_VS_LEGENDARY);
         break;
     case SPECIES_CHAOS_ELE:
@@ -697,7 +699,9 @@ static void CB2_EndScriptedWildBattle(void)
 
     if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid())
+        if (FlagGet(FLAG_TZHAAR_RANDOM)) // If in Tzhaar Challenge
+            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+        else if (InBattlePyramid())
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else
             SetMainCallback2(CB2_WhiteOut);

@@ -1707,8 +1707,7 @@ TRIGGER_HAMHIDEOUT_EVENT_1_Text_5:
 TRIGGER_HAMHIDEOUT_EVENT_1_Text_6:
 	.string "Did you hear that {PLAYER}?!\p"
 	.string "This gives us the perfect cover to\n"
-	.string "check whether H.A.M have the Prince in\l"
-	.string "their jail cells.\p"
+	.string "check what H.A.M is up to!\p"
 	.string "Let's go!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_0:
@@ -1726,7 +1725,7 @@ TRIGGER_HAMHIDEOUT_EVENT_2_Text_2:
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_3:
 	.string "This is our chance {PLAYER}!\p"
 	.string "Let's unlock that cell door and break\n"
-	.string "the Prince out!$"
+	.string "them out!$"
 
 TRIGGER_HAMHIDEOUT_EVENT_2_Text_4:
 	.string "You attempt to pick the lock.\p"

@@ -34,8 +34,11 @@ script FIGHT_CAVES_RESTRICTIONS_OFF {
     return
 }
 
-script FIGHT_CAVES_START {
+
+
+script TZHAAR_GYMCHALLENGE_SETUP_BEGIN {
     call(FIGHT_CAVES_RESTRICTIONS_ON)
+    //If Gym Challenge go here:
     warp(MAP_TZHAAR_GYM_CHALLENGE, 0)
     waitstate
 }
