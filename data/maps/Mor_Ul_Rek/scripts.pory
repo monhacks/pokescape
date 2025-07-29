@@ -119,6 +119,8 @@ script POST_FIGHTCAVES_DIALOGUE {
     applymovement(8, Movement_followerplayeroutoffirecaves)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_walkoutoffirecaves)
     waitmovement(8)
+    setobjectxy(8, 61, 30)
+    setobjectxyperm(8, 61, 30)
     if (var(VAR_TZHAAR_CHALLENGES_STATUS) == 5) {   //You failed the fightcaves.
         namebox ("Tz-Mej-Jal")
         msgbox(format("Unlucky JalYt, we hope you will take up our challenge again."))
