@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_ITEMS_H
 #define GUARD_CONSTANTS_ITEMS_H
 
-#define ITEM_NONE 0
+
 
 // Poké Balls
 /*
@@ -36,6 +36,7 @@
 #define ITEM_POUCH_STEEL ITEM_POUCH_BRONZE
 #define ITEM_POUCH_RUNE ITEM_POUCH_IRON
 */
+#define ITEM_NONE               0
 
 #define ITEM_POUCH              1   //  Premier     //  Pouch
 #define ITEM_POUCH_BRONZE       2   //  Regular     //  Pouch
@@ -1431,7 +1432,7 @@
 #define ITEM_OUTFIT_BOX             (FINAL_VANILLA_ITEM + 289 )
 #define ITEM_BAR_CRAWL_BATTLE_CARD	(FINAL_VANILLA_ITEM + 290 )
 
-#define ITEMS_COUNT 1106
+#define ITEMS_COUNT (ITEM_BAR_CRAWL_BATTLE_CARD + 1) //1106
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

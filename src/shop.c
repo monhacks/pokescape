@@ -670,9 +670,10 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 5);
         }
 
-        if ((ItemId_GetImportance(itemId) && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1))) || GetOutfitStatus(itemId))
+        if ((ItemId_GetImportance(itemId) && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1))) || GetOutfitStatus(itemId)) {
             StringCopy(gStringVar4, gText_SoldOut);
-        else
+        }
+        else {
             if (sMartInfo.martType == MART_TYPE_TOKKUL)
             {
                 StringExpandPlaceholders(gStringVar4, gText_Tokkul);
@@ -680,6 +681,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
             else {
                 StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
             }
+        }
             
 
         x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
@@ -1329,11 +1331,31 @@ static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
     {
         PlaySE(SE_SELECT);
 
-        // Purchasing 10+ Poke Balls gets the player a Premier Ball
+        if ((ItemId_GetPocket(tItemId) == POCKET_POKE_BALLS) && tItemCount > 9 && AddBagItem(ITEM_POUCH, tItemCount / 10) == TRUE)
+        {
+           if (tItemCount > 19)
+           {
+               BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBalls, BuyMenuReturnToItemList);
+           }
+           else
+           {
+               BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
+           }
+        }
+        else if((ItemId_GetPocket(tItemId) == POCKET_TM_HM))
+        {
+            RedrawListMenu(tListTaskId);
+            BuyMenuReturnToItemList(taskId);
+        }
+        else
+        {
+            BuyMenuReturnToItemList(taskId);
+        }
+        /*// Purchasing 10+ Poke Balls gets the player a Premier Ball
         if ((tItemId == ITEM_POUCH_BRONZE || tItemId == ITEM_POUCH_STEEL || tItemId == ITEM_POUCH_RUNE) && tItemCount >= 10 && AddBagItem(ITEM_POUCH, 1) == TRUE)
             BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
         else
-            BuyMenuReturnToItemList(taskId);
+            BuyMenuReturnToItemList(taskId);*/
     }
 }
 
