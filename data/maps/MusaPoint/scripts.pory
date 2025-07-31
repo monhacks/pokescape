@@ -1787,6 +1787,9 @@ script FROGEEL_RIVAL_3 {
     removeobject(15)
     setflag(FLAG_TEMP_10) //Angrenouille
     setvar(VAR_FROGEEL_RIVAL, 15)
+	subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 2)
+	release
+	end
 }
 
 movement MOVEMENT_FROGEEL_RIVAL_MUSA_POINT_1 {

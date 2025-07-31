@@ -874,40 +874,40 @@ static const u8 sText_Melzar_PlayerMonUnaffected[] = _("Cabbage stew!{PAUSE_UNTI
 static const u8 sText_Melzar_PlayerLost[] = _("Feel the wrath of my feet!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PlayerGotTokkul[] = _("{B_PLAYER_NAME} got {B_BUFF1} TOKKUL\nfor winning!\p");
 static const u8 sText_CutHPIncreasedStats[] = _("{B_ATK_NAME_WITH_PREFIX} increased it's\nstats at the cost of it's health!");
-static const u8 sText_SirTiffy_BeforeFirstTurn[] = _("You are fighting a White Knight and master benchsitter here, dontchaknow!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_SirTiffy_SwitchIn[] = _("Hard to not enjoy this battle with the finest tea when you've got me this riled up {PLAYER}.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_SirTiffy_PlayerLost[] = _("Better luck next time old bean. Ta-ta for now!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirTiffy_BeforeFirstTurn[] = _("You are fighting a White Knight and\nmaster benchsitter here, dontchaknow!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirTiffy_SwitchIn[] = _("Hard to not enjoy this battle with the\n finest tea when you've got me this\nriled up {PLAYER}.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirTiffy_PlayerLost[] = _("Better luck next time old bean.\nTa-ta for now!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Hazelmere_BeforeFirstTurn[] = _("Lemanto ip ko por bom.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Hazelmere_SwitchIn[] = _("Mi lovos batta gandius.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Hazelmere_PlayerLost[] = _("Ip kar cef pro eis!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Hans_FirstDown[] = _("I had a feeling you would do that.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_Hans_SwitchIn[] = _("This reminds me of that one gym battle. You know the one!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Hans_SwitchIn[] = _("This reminds me of that one gym battle.\nYou know the one!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Hans_PlayerLost[] = _("Back to Lumbridge {PLAYER}!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_Zanik_BeforeFirstTurn[] = _("We dont need gods, because we can fight anything when we stand together.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_Zanik_SwitchIn[] = _("We can never surrender, not as long as we can fight.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Zanik_BeforeFirstTurn[] = _("We don't need gods, because we can\nfight anything when we stand together.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Zanik_SwitchIn[] = _("We can never surrender, not as long as\nwe can fight.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Zanik_PlayerLost[] = _("Nothing can stand up to my crossbow!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PattyLighthouse_FirstDown[] = _("Stubborn pest aren't you?{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PattyLighthouse_SwitchIn[] = _("I saved the best for last you little thorn in my side.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PattyLighthouse_PlayerMonUnaffected[] = _("I still don't get these darn monsters. It is like when spells splash?{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PattyLighthouse_PlayerLost[] = _("No backbone huh? Didn't expect more from someone like you.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BabeMelzarsMaze_BeforeFirstTurn[] = _("Just so you know I am really not feeling this.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BabeMelzarsMaze_SwitchIn[] = _("Could we end this quick? This is getting tiresome.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BabeMelzarsMaze_PlayerMonUnaffected[] = _("Oops. Maybe I should pay more attention.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BabeMelzarsMaze_PlayerLost[] = _("Why did you even ask for a fight if you are going to lose?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_SwitchIn[] = _("I saved the best for last you little\nthorn in my side.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_PlayerMonUnaffected[] = _("I still don't get these darn monsters.\nIs it like when spells splash?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyLighthouse_PlayerLost[] = _("No backbone huh? Didn't expect more\nfrom someone like you.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_BeforeFirstTurn[] = _("Just so you know I am really not\nfeeling this.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_SwitchIn[] = _("Could we end this quick?\nThis is getting tiresome.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_PlayerMonUnaffected[] = _("Oops.\nMaybe I should pay more attention.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeMelzarsMaze_PlayerLost[] = _("Why did you even ask for a fight if\n you are going to lose?{PAUSE_UNTIL_PRESS}");
 static const u8 sText_DukeHoracio_SuperEffective[] = _("Got a tactic in mind do you?{PAUSE_UNTIL_PRESS}");
 static const u8 sText_DukeHoracio_FirstSTABMove[] = _("Seems you are no pushover.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_DukeHoracio_FirstDown[] = _("Do not underestimate the\nDuke of Lumbridge.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_DukeHoracio_SwitchIn[] = _("Do not go thinking this will be a piece of cake.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_DukeHoracio_PlayerLost[] = _("A lot of bark but no bite. I think you need more training or a proper plan to beat me!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_SirAmik_SuperEffective[] = _("You would make it far among the White Knights.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_SirAmik_FirstDown[] = _("Plenty of fish in the sea, plenty of knights in the castle.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_SirAmik_SwitchIn[] = _("Piety in even the toughest of fights is but one of the White Knights' values.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_SirAmik_PlayerLost[] = _("When you fight like that I almost regret inviting you into the White Knights.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_KimitKal_SuperEffective[] = _("May the endurance of these trials weigh heavily upon you JalYt.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_FirstDown[] = _("Do not underestimate the Duke of\nLumbridge.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_SwitchIn[] = _("Do not go thinking this will be a\npiece of cake.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DukeHoracio_PlayerLost[] = _("A lot of bark but no bite. I think you\nneed more training or a proper plan\nto beat me!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_SuperEffective[] = _("You would make it far among the White\nKnights.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_FirstDown[] = _("Plenty of fish in the sea, plenty of\nknights in the castle.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_SwitchIn[] = _("Piety in even the toughest of fights is\nbut one of the White Knights' values.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_SirAmik_PlayerLost[] = _("When you fight like that I almost\nregret inviting you into the White\nKnights.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_SuperEffective[] = _("May the endurance of these trials\nweigh heavily upon you JalYt.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_KimitKal_FirstDown[] = _("Are you feeling the heat yet?{PAUSE_UNTIL_PRESS}");
 static const u8 sText_KimitKal_LastLowHp[] = _("Impressive JalYt.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_KimitKal_SwitchIn[] = _("Truly a battle worthy of the Fight Caves.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_KimitKal_PlayerLost[] = _("There is no dishonour in attempting the trials anew young JalYt!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_KimitKal_PlayerLost[] = _("There is no dishonour in attempting\nthe trials anew young JalYt!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Gunthor_CriticalHit[] = _("RUUUARRRGHHHH!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Gunthor_SuperEffective[] = _("GRRRUUUUAAARGHHH!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Gunthor_FirstSTABMove[] = _("ROOOAAAAARRRR!{PAUSE_UNTIL_PRESS}");
@@ -915,7 +915,44 @@ static const u8 sText_Gunthor_PlayerMonUnaffected[] = _("WOOOOAAAAHHHHH!{PAUSE_U
 static const u8 sText_Gunthor_FirstDown[] = _("RUUUUAAARRGGGHHH!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Gunthor_SwitchIn[] = _("GRRRUUUAAARRGGGHHHH!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Gunthor_PlayerLost[] = _("MRRRGWAAAAAAAARGHHH!{PAUSE_UNTIL_PRESS}");
-
+static const u8 sText_Mithrilman_CriticalHit[] = _("Criticalest striketh.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Mithrilman_SuperEffective[] = _("Superiorest effectistsv.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Mithrilman_SwitchIn[] = _("Thine willst never surrenderoust.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Mithrilman_PlayerLost[] = _("Thoust may never prevailst against a\ntruest mithrilman!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Angrenouille_CriticalHit[] = _("HOT! HOT! HOT!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Angrenouille_SuperEffective[] = _("OUCH! That looked like it hurt.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Angrenouille_FirstDown[] = _("I'm changing gears! Can't take me\ndown that easily!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Angrenouille_SwitchIn[] = _("This is where I make my final stand.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Angrenouille_LastLowHp[] = _("You are going down, even if it is the\nlast thing I do.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Angrenouille_PlayerLost[] = _("This proves it will be me, and not\nyou, making it to the Land of Frogs!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyCrandor_FirstSTABMove[] = _("Better take cover for my next blast\nmongrel.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyCrandor_FirstDown[] = _("Babe! Cover for me!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyCrandor_SwitchIn[] = _("You think you can stop me? Well I will\nshow you!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyCrandor_LastLowHp[] = _("You are going down, even if it is the\nlast thing I do.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PattyCrandor_PlayerLost[] = _("Stay down whelp.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeCrandor_CriticalHit[] = _("You aimed well on that one I guess.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeCrandor_FirstDown[] = _("Well it seems like this is going to be\ncomplicated.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeCrandor_SwitchIn[] = _("This is getting tiresome.\nPlease stay down so we can move on.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BabeCrandor_PlayerLost[] = _("Would think coming this far you would\nbe better prepared.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_BeforeFirstTurn[] = _("For your next task, you are to defeat my\nteam of monsters.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_CriticalHit[] = _("Strike the monster down!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_SuperEffective[] = _("Expose the weakness and take the\nmonster down!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_FirstSTABMove[] = _("Showing some prowess as a slayer are we?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_FirstDown[] = _("This may be a rather long task.\nAre you sufficiently prepared?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_SwitchIn[] = _("Not much more left of the task.\nShow me what you got.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_PlayerLost[] = _("Maybe you should consider changing\nyour task to something simpler?\nGoblins perhaps?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_PlayerMonUnaffected[] = _("I still can't quite grasp how to fight\nwith these monsters.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_CriticalHit[] = _("Your opinion is heard, but not\naccepted.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_SuperEffective[] = _("Your input has been noted and\ndiscarded.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_FirstSTABMove[] = _("Showing some prowess as a slayer are\nwe?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_FirstDown[] = _("We stay ever vigilant while you bathe\nin depravity.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_SwitchIn[] = _("Why can you not see that your road is\nthe path to ruin?{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_LastLowHp[] = _("I stay vigilant, my anger and hatred\nfor monsters are as before. You can\nnot change that.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Johanhus_PlayerLost[] = _("Now you see the error of your ways.\nIt is not too late to join us!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PrinceAli_SuperEffective[] = _("I will stand here among my fellows to\nfight to the bitter end.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PrinceAli_FirstDown[] = _("Strike one of us and you will face the\nfury of us all!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PrinceAli_SwitchIn[] = _("I am in no need for a rescue.\nYou however might need one soon.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PrinceAli_PlayerLost[] = _("The wrath of the desert proves to be\nmore than you can handle it would seem.{PAUSE_UNTIL_PRESS}");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1686,6 +1723,44 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_GUNTHOR_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_FirstDown,
     [STRINGID_GUNTHOR_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_SwitchIn,
     [STRINGID_GUNTHOR_MESSAGE_7 - BATTLESTRINGS_TABLE_START] = sText_Gunthor_PlayerLost,
+    [STRINGID_MITHRILMAN_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Mithrilman_CriticalHit,
+    [STRINGID_MITHRILMAN_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Mithrilman_SuperEffective,
+    [STRINGID_MITHRILMAN_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Mithrilman_SwitchIn,
+    [STRINGID_MITHRILMAN_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Mithrilman_PlayerLost,
+    [STRINGID_ANGRENOUILLE_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Angrenouille_CriticalHit,
+    [STRINGID_ANGRENOUILLE_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Angrenouille_SuperEffective,
+    [STRINGID_ANGRENOUILLE_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Angrenouille_FirstDown,
+    [STRINGID_ANGRENOUILLE_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Angrenouille_SwitchIn,
+    [STRINGID_ANGRENOUILLE_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Angrenouille_LastLowHp,
+    [STRINGID_ANGRENOUILLE_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Angrenouille_PlayerLost,
+    [STRINGID_PATTY_CRANDOR_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_PattyCrandor_FirstSTABMove,
+    [STRINGID_PATTY_CRANDOR_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_PattyCrandor_FirstDown,
+    [STRINGID_PATTY_CRANDOR_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_PattyCrandor_SwitchIn,
+    [STRINGID_PATTY_CRANDOR_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_PattyCrandor_LastLowHp,
+    [STRINGID_PATTY_CRANDOR_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_PattyCrandor_PlayerLost,
+    [STRINGID_BABE_CRANDOR_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_BabeCrandor_CriticalHit,
+    [STRINGID_BABE_CRANDOR_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_BabeCrandor_FirstDown,
+    [STRINGID_BABE_CRANDOR_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_BabeCrandor_SwitchIn,
+    [STRINGID_BABE_CRANDOR_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_BabeCrandor_PlayerLost,
+    [STRINGID_VANNAKA_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_BeforeFirstTurn,
+    [STRINGID_VANNAKA_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_CriticalHit,
+    [STRINGID_VANNAKA_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_SuperEffective,
+    [STRINGID_VANNAKA_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_FirstSTABMove,
+    [STRINGID_VANNAKA_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_FirstDown,
+    [STRINGID_VANNAKA_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_SwitchIn,
+    [STRINGID_VANNAKA_MESSAGE_7 - BATTLESTRINGS_TABLE_START] = sText_Vannaka_PlayerLost,
+    [STRINGID_JOHANHUS_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_PlayerMonUnaffected,
+    [STRINGID_JOHANHUS_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_CriticalHit,
+    [STRINGID_JOHANHUS_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_SuperEffective,
+    [STRINGID_JOHANHUS_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_FirstSTABMove,
+    [STRINGID_JOHANHUS_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_FirstDown,
+    [STRINGID_JOHANHUS_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_SwitchIn,
+    [STRINGID_JOHANHUS_MESSAGE_7 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_LastLowHp,
+    [STRINGID_JOHANHUS_MESSAGE_8 - BATTLESTRINGS_TABLE_START] = sText_Johanhus_PlayerLost,
+    [STRINGID_PRINCE_ALI_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_SuperEffective,
+    [STRINGID_PRINCE_ALI_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_FirstDown,
+    [STRINGID_PRINCE_ALI_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_SwitchIn,
+    [STRINGID_PRINCE_ALI_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_PlayerLost,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -4348,6 +4423,324 @@ static const struct TrainerSlide sTrainerSlides[] =
     },
 
     {
+        .trainerId = TRAINER_CRANDOR_HAM_ADMIN_PATTY,    //Patty battle two
+        .msgFirstSTABMove = sText_PattyCrandor_FirstSTABMove,
+        .msgFirstDown = sText_PattyCrandor_FirstDown,
+        .msgLastSwitchIn = sText_PattyCrandor_SwitchIn,
+        .msgLastHalfHp = sText_PattyCrandor_LastLowHp,
+        .msgPlayerLost = sText_PattyCrandor_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_CRANDOR_HAM_ADMIN_BABE,    //Babe battle two
+        .msgFirstCriticalHit = sText_BabeCrandor_CriticalHit,
+        .msgFirstDown = sText_BabeCrandor_FirstDown,
+        .msgLastSwitchIn = sText_BabeCrandor_SwitchIn,
+        .msgPlayerLost = sText_BabeCrandor_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_HAM_HIDEOUT_JOHANHUS,    //Johanhus
+        .msgPlayerMonUnaffected = sText_Johanhus_PlayerMonUnaffected, 
+        .msgFirstCriticalHit = sText_Johanhus_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Johanhus_SuperEffective,
+        .msgFirstSTABMove = sText_Johanhus_FirstSTABMove,
+        .msgFirstDown = sText_Johanhus_FirstDown,
+        .msgLastSwitchIn = sText_Johanhus_SwitchIn,
+        .msgLastHalfHp = sText_Johanhus_LastLowHp,
+        .msgPlayerLost = sText_Johanhus_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN1,    //Mithrilman battle one
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN2,    //Mithrilman battle two
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN3,    //Mithrilman battle three
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN4_GRASS,    //Mithrilman battle four (if picked grass starter)
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN4_FIRE,    //Mithrilman battle four (if picked fire starter)
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN4_WATER,    //Mithrilman battle four (if picked water starter)
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN5_GRASS,    //Mithrilman battle five (if picked grass starter)
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN5_FIRE,    //Mithrilman battle five (if picked fire starter)
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_MITHRILMAN5_WATER,    //Mithrilman battle five (if picked water starter)
+        .msgFirstCriticalHit = sText_Mithrilman_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Mithrilman_SuperEffective,
+        .msgLastSwitchIn = sText_Mithrilman_SwitchIn,
+        .msgPlayerLost = sText_Mithrilman_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_1,    //Angrenouille battle one
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+    
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_2_GRASS,    //Angrenouille battle two (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_2_FIRE,    //Angrenouille battle two (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_2_WATER,    //Angrenouille battle two (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_3_GRASS,    //Angrenouille battle three (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_3_FIRE,    //Angrenouille battle three (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_3_WATER,    //Angrenouille battle three (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_4_GRASS,    //Angrenouille battle four (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_4_FIRE,    //Angrenouille battle four (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_4_WATER,    //Angrenouille battle four (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_5_GRASS,    //Angrenouille battle five (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_5_FIRE,    //Angrenouille battle five (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_5_WATER,    //Angrenouille battle five (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_6_GRASS,    //Angrenouille battle six (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_6_FIRE,    //Angrenouille battle six (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_6_WATER,    //Angrenouille battle six (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_7_GRASS,    //Angrenouille battle seven (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_7_FIRE,    //Angrenouille battle seven (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_7_WATER,    //Angrenouille battle seven (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_8_GRASS,    //Angrenouille battle eight (if picked grass starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_8_FIRE,    //Angrenouille battle eight (if picked fire starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_FROGEEL_RIVAL_8_WATER,    //Angrenouille battle eight (if picked water starter)
+        .msgFirstCriticalHit = sText_Angrenouille_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Angrenouille_SuperEffective,
+        .msgFirstDown = sText_Angrenouille_FirstDown,
+        .msgLastSwitchIn = sText_Angrenouille_SwitchIn,
+        .msgLastHalfHp = sText_Angrenouille_LastLowHp,
+        .msgPlayerLost = sText_Angrenouille_PlayerLost,
+    },
+
+    {
         .trainerId = TRAINER_LEADER_DUKE_1,    //Duke Horacio
         .msgFirstSuperEffectiveHit = sText_DukeHoracio_SuperEffective,
         .msgFirstSTABMove = sText_DukeHoracio_FirstSTABMove,
@@ -4374,7 +4767,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     },
 
     {
-        .trainerId = TRAINER_GYM_LEADER_TZHAAR_CHAMPION_1,    //Gunthor
+        .trainerId = TRAINER_BARBARIAN_GYM_GUNTHOR,    //Gunthor
         .msgFirstCriticalHit = sText_Gunthor_CriticalHit,
         .msgFirstSuperEffectiveHit = sText_Gunthor_SuperEffective,
         .msgFirstSTABMove = sText_Gunthor_FirstSTABMove,
@@ -4382,6 +4775,25 @@ static const struct TrainerSlide sTrainerSlides[] =
         .msgFirstDown = sText_Gunthor_FirstDown,
         .msgLastSwitchIn = sText_Gunthor_SwitchIn,
         .msgPlayerLost = sText_Gunthor_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_GYM_LEADER_VANNAKA_1,    //Vannaka
+        .msgBeforeFirstTurn = sText_Vannaka_BeforeFirstTurn,
+        .msgFirstCriticalHit = sText_Vannaka_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_Vannaka_SuperEffective,
+        .msgFirstSTABMove = sText_Vannaka_FirstSTABMove,
+        .msgFirstDown = sText_Vannaka_FirstDown,
+        .msgLastSwitchIn = sText_Vannaka_SwitchIn,
+        .msgPlayerLost = sText_Vannaka_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_ALKHARID_GYM_PRINCE_ALI,    //Prince Ali
+        .msgFirstSuperEffectiveHit = sText_PrinceAli_SuperEffective,
+        .msgFirstDown = sText_PrinceAli_FirstDown,
+        .msgLastSwitchIn = sText_PrinceAli_SwitchIn,
+        .msgPlayerLost = sText_PrinceAli_PlayerLost,
     },
 
     {

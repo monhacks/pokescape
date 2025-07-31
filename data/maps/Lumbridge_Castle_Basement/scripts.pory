@@ -48,6 +48,7 @@ script DEMONHEADGE_BLOCK
 {
     lock
     applymovement (5,Movement_InteractFACERIGHT)  //Demon
+	applymovement (OBJ_EVENT_ID_PLAYER,Movement_InteractFACELEFT)  //Player
 	waitmovement (0)
     namebox("Demonheadge")
     msgbox(format("Are you trying to go through my portal?"), MSGBOX_YESNO)

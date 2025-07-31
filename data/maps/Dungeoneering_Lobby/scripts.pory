@@ -553,6 +553,7 @@ script BATTLE_FROGEEL_RIVAL_8 {
     setflag(FLAG_TEMP_1D) //Angrenouille
     waitse
     setvar(VAR_FROGEEL_RIVAL, 40)
+    subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 7)
     release
     end
 }

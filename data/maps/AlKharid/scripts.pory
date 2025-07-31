@@ -280,7 +280,16 @@ script ALKHARID_NPC_17
     end
 }
 
-
+script ALKHARID_NPC_18
+{
+    faceplayer
+    namebox ("F0rrest Gee")
+    msgbox(format("I heard that running laps of rooftop courses was a good way to level Agility…\pbut I have been up here going in circles for hours and not gained a single xp!"))
+    closemessage
+    hidenamebox
+    release
+    end
+}
 
 
 
@@ -567,10 +576,10 @@ script RANDOM_PARTY_SIZE {
 script TRIGGER_ALKHARID_HAM_EVENT_2
 {
     lockall
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
     waitmovement(0)
     special(SpawnCameraObject)
-	applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_down_2)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2)
     waitmovement(0)
 
 
@@ -609,17 +618,17 @@ script TRIGGER_ALKHARID_HAM_EVENT_2
     msgbox(format("It's just no use…"))
     closemessage
     hidenamebox
-    applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2)
+    applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_down_2)
     waitmovement(0)
     special(RemoveCameraObject)
     delay(30)
     playse(SE_PIN)
-    applymovement(12, MOVEMENT_EXCLAMATIONMARK_FACE_UP)
+    applymovement(12, MOVEMENT_EXCLAMATIONMARK_FACE_DOWN)
     waitmovement(0)
     delay(30)
     getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
     if (var(VAR_TEMP_1) == 31){
-        applymovement(12, MOVEMENT_WALK_UP)                       //Ozan moves to make sure he's facing you, depending on what tile you're on
+        applymovement(12, MOVEMENT_WALK_DOWN)                       //Ozan moves to make sure he's facing you, depending on what tile you're on
         waitmovement(0)
         applymovement(12, Movement_InteractFACERIGHT)
         waitmovement(0)
@@ -638,7 +647,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_2
         waitmovement(0)
     }
     else {
-        applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_DOWN)
+        applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_UP)
         waitmovement(0)
     }
     
@@ -678,25 +687,26 @@ movement movement_walk_slow_up_2 {
 }
 
 movement MOVEMENT_ALKHARID_PALACE_OZAN_1 {     //Pushed back
-    slide_up
-    jump_in_place_down
+    slide_down
+    jump_in_place_up
     step_end
 }
 
 movement MOVEMENT_ALKHARID_PALACE_OZAN_3 {     //Exit (if you're stood on the left)
     walk_right
-    walk_up * 7
+    walk_down * 2
+    walk_left * 10
     step_end
 }
 
 movement MOVEMENT_ALKHARID_PALACE_OZAN_4 {    //Exit (if you're stood on the right)
-    walk_up * 7
+    walk_left * 10
     step_end
 }
 
 movement MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_1 {   //Walking forward
     walk_fast_right
-    face_up
+    face_down
     step_end
 }
 
@@ -708,7 +718,7 @@ movement MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2 {  //Back into original position
 
 movement MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_1 {  //Walking forward
     walk_fast_left
-    face_up
+    face_down
     step_end
 }
 
@@ -731,7 +741,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_3 //PALACE BLOCK
     msgbox(format("Are you here for a MvM Battle?\pSorry but the prince is out at the moment, so there will be no MvM challenges until he returns."))
     closemessage
     hidenamebox
-    applymovement (OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+    applymovement (OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
     waitmovement(0)
     release
     end
@@ -818,6 +828,7 @@ script BATTLE_FROGEEL_RIVAL_6 {
     removeobject(17)
     setflag(FLAG_TEMP_10) //Angrenouille
     setvar(VAR_FROGEEL_RIVAL, 30)
+    subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 5)
     release
     end
 }

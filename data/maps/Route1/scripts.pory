@@ -1063,6 +1063,8 @@ script FROGEEL_RIVAL_1 {
         removeobject(38)
         setflag(FLAG_TEMP_1F) //Angrenouille
         setvar(VAR_FROGEEL_RIVAL, 5)
+        startquest (QUEST_ANGRENOUILLE_QUEST)
+	    subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 0)
     }
     else {
         msgbox(format("Hello there…{PAUSE 30}\nThieves Guild?\pNever heard of it…\pCome back when you've beat the Duke and we'll talk then."))

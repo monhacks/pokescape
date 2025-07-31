@@ -284,7 +284,7 @@ script ALKHARID_GYM_ALI {
     }
     else
     {
-        msgbox(format("You should go pester the Prince in Al Kharid for your next MvM gym challenge."))
+        msgbox(format("If you head north of here through the desert, you should reach Varrock.\pYour next MvM gym challenge is with King Roald in the palace there."))
     }
     hidenamebox
     release

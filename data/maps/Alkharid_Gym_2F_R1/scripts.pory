@@ -160,13 +160,13 @@ script GYM_NPC_6
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("Congratulations on beating the gym."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello."))
+        msgbox(format("Hello. Do you think you have what it takes to defeat Al Kharid's elite fighting force?"))
     }
     else {
         namebox("Warrior")
@@ -209,3 +209,9 @@ movement Movement_AlkharidGym_NPC_6_Ali
     face_player
 } 
 
+script ALKHARID_GYM_ARTWORK
+{
+    msgbox(format("This piece is entitled: 'So… you think you can take him?'"))
+    release
+    end
+}

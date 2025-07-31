@@ -88,7 +88,7 @@ script WILDERNESS_CRATER_HANS
 }
 
 //Dialogue for if you speak to him after he's beaten; add in with a flag check
-//msgbox(format("I saw you battle the Duke and his rooster, it seems to have surprised you.\lThen you went up against Sir Amik, weird how he has all those fish right?\lThe scorching heat of the volcano tested your endurance.\lAs did the barbarians and their proclamations of challenge.\lThen you did a slayer task to prove yourself to Vanakka.\lFought the prince of Al Kharid.\lDefeated a demon to prove yourself to the King of Varrock.\lAnd went head to head with Thok of Daemonheim.\lYou have played for 8 gyms and 4 Elite Four members.\lTime to finish your journey {PLAYER}!"))
+//msgbox(format("I saw you battle the Duke and his rooster, it seems to have surprised you.\lThen you went up against Sir Amik, weird how he has all those fish right?\lThe scorching heat of the volcano tested your endurance.\lAs did the barbarians and their proclamations of challenge.\lThen you did a slayer task to prove yourself to Vannaka.\lFought the prince of Al Kharid.\lDefeated a demon to prove yourself to the King of Varrock.\lAnd went head to head with Thok of Daemonheim.\lYou have played for 8 gyms and 4 Elite Four members.\lTime to finish your journey {PLAYER}!"))
 
 
 script WILDERNESS_CRATER_ZANIK

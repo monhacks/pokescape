@@ -776,10 +776,46 @@
 #define STRINGID_GUNTHOR_MESSAGE_5                    774
 #define STRINGID_GUNTHOR_MESSAGE_6                    775
 #define STRINGID_GUNTHOR_MESSAGE_7                    776
+#define STRINGID_MITHRILMAN_MESSAGE_1                 777
+#define STRINGID_MITHRILMAN_MESSAGE_2                 778
+#define STRINGID_MITHRILMAN_MESSAGE_3                 779
+#define STRINGID_MITHRILMAN_MESSAGE_4                 780
+#define STRINGID_ANGRENOUILLE_MESSAGE_1               781
+#define STRINGID_ANGRENOUILLE_MESSAGE_2               782
+#define STRINGID_ANGRENOUILLE_MESSAGE_3               783
+#define STRINGID_ANGRENOUILLE_MESSAGE_4               784
+#define STRINGID_ANGRENOUILLE_MESSAGE_5               785
+#define STRINGID_ANGRENOUILLE_MESSAGE_6               786
+#define STRINGID_PATTY_CRANDOR_MESSAGE_1              787
+#define STRINGID_PATTY_CRANDOR_MESSAGE_2              788
+#define STRINGID_PATTY_CRANDOR_MESSAGE_3              789
+#define STRINGID_PATTY_CRANDOR_MESSAGE_4              790
+#define STRINGID_PATTY_CRANDOR_MESSAGE_5              791
+#define STRINGID_BABE_CRANDOR_MESSAGE_1               792
+#define STRINGID_BABE_CRANDOR_MESSAGE_2               793
+#define STRINGID_BABE_CRANDOR_MESSAGE_3               794
+#define STRINGID_BABE_CRANDOR_MESSAGE_4               795
+#define STRINGID_VANNAKA_MESSAGE_1                    796
+#define STRINGID_VANNAKA_MESSAGE_2                    797
+#define STRINGID_VANNAKA_MESSAGE_3                    798
+#define STRINGID_VANNAKA_MESSAGE_4                    799
+#define STRINGID_VANNAKA_MESSAGE_5                    800
+#define STRINGID_VANNAKA_MESSAGE_6                    801
+#define STRINGID_VANNAKA_MESSAGE_7                    802
+#define STRINGID_JOHANHUS_MESSAGE_1                   803
+#define STRINGID_JOHANHUS_MESSAGE_2                   804
+#define STRINGID_JOHANHUS_MESSAGE_3                   805
+#define STRINGID_JOHANHUS_MESSAGE_4                   806
+#define STRINGID_JOHANHUS_MESSAGE_5                   807
+#define STRINGID_JOHANHUS_MESSAGE_6                   808
+#define STRINGID_JOHANHUS_MESSAGE_7                   809
+#define STRINGID_JOHANHUS_MESSAGE_8                   810
+#define STRINGID_PRINCE_ALI_MESSAGE_1                 811
+#define STRINGID_PRINCE_ALI_MESSAGE_2                 812
+#define STRINGID_PRINCE_ALI_MESSAGE_3                 813
+#define STRINGID_PRINCE_ALI_MESSAGE_4                 814
 
-
-
-#define BATTLESTRINGS_VANILLA_END                     776
+#define BATTLESTRINGS_VANILLA_END                     814
 
 
 

@@ -100,7 +100,7 @@ script GYM_NPC_3
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello."))
+        msgbox(format("Are you here to try the Al Kharid gym challenge?\pI'd wish you luck, but you'll need more than that to defeat us!"))
     }
     else {
         namebox("Warrior")

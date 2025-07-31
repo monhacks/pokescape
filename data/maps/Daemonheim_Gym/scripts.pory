@@ -154,22 +154,6 @@ script HANS_DAEMONHEIM_GYM {
     end
 }
 
-script HANS_EDGEVILLE_GYM {
-    lock
-    faceplayer
-    namebox("Hans")
-    if (flag(FLAG_BADGE05_GET) == TRUE) { //EDGEVILLE BADGE
-        msgbox(format("To no surprise you have prevailed yet again.\pI guess you are soon at journeys end.\pHow did I get here all the way to edgeville you ask.\pWell I was going out to buy milk and somehow I just got here.\pLife is weird like that for me."))
-    }
-    else {
-        msgbox(format("Why hello there completionist in the making.\pHope you havent forgotten me.\pIt seems you are taking on Vanakka now.\pHe probably has a task set for you to complete.\pWhere is he?\pIn the most fitting place for him, in the dungeon below us!\pVanakka uses DARK-TYPE slayer monsters.\pDARK types are weak to FIGHTING, FAIRY and BUG type attacks.\pDo not bring your PSYCHIC monsters though, he will make a slayer task out of them."))
-    }
-    hidenamebox
-    closemessage
-    release
-    end
-}
-
 script HANS_VARROCK_GYM {
     lock
     faceplayer
@@ -202,7 +186,21 @@ script HANS_ALKHARID_GYM {
     end
 }
 
-
+script HANS_EDGEVILLE_GYM {
+    lock
+    faceplayer
+    namebox("Hans")
+    if (flag(FLAG_BADGE05_GET) == TRUE) { //EDGEVILLE BADGE
+        msgbox(format("To no surprise you have prevailed yet again.\pHow did I get here all the way to Edgeville you ask.\pWell, I was going out to buy milk and somehow I just got here.\pLife is weird like that for me."))
+    }
+    else {
+        msgbox(format("Why hello there Completionist in the making. Not too long of a road getting here since we last met, right?\pI bet you want to face Vannaka. He is both a Slayer master and combat instructor.\pHe specialises in DARK-TYPE monsters.\lDARK types are weak to FIGHTING, FAIRY and BUG type attacks.\pWhatever you do, do not attempt to use PSYCHIC types, you will be very sorry. Think you are up for the task? The slayer task that is.\lGood luck!"))
+    }
+    hidenamebox
+    closemessage
+    release
+    end
+}
 
 script HANS_BARBARIAN_GYM {
     lock
