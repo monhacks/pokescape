@@ -285,7 +285,6 @@ script HIDDEN_GROTTO_LEVELS {
             copyvar(VAR_TEMP_E, VAR_RESULT)
             addvar(VAR_TEMP_E, 10) 
         }
-                  
     }
     if (flag(FLAG_BADGE02_GET)) { //15 - 25
         random(10) 

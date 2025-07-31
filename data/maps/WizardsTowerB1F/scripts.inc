@@ -122,6 +122,7 @@ NPC_WizardsTowerB1F_Sedridor_16:
 
 
 BOOK_ALTAR_LOCATIONS::
+	msgbox BOOK_ALTAR_LOCATIONS_Text_0
 	random 6
 	switch VAR_RESULT
 	case 0, BOOK_ALTAR_LOCATIONS_3
@@ -135,27 +136,27 @@ BOOK_ALTAR_LOCATIONS_1:
 	end
 
 BOOK_ALTAR_LOCATIONS_3:
-	msgbox BOOK_ALTAR_LOCATIONS_Text_0
-	goto BOOK_ALTAR_LOCATIONS_1
-
-BOOK_ALTAR_LOCATIONS_4:
 	msgbox BOOK_ALTAR_LOCATIONS_Text_1
 	goto BOOK_ALTAR_LOCATIONS_1
 
-BOOK_ALTAR_LOCATIONS_5:
+BOOK_ALTAR_LOCATIONS_4:
 	msgbox BOOK_ALTAR_LOCATIONS_Text_2
 	goto BOOK_ALTAR_LOCATIONS_1
 
-BOOK_ALTAR_LOCATIONS_6:
+BOOK_ALTAR_LOCATIONS_5:
 	msgbox BOOK_ALTAR_LOCATIONS_Text_3
 	goto BOOK_ALTAR_LOCATIONS_1
 
-BOOK_ALTAR_LOCATIONS_7:
+BOOK_ALTAR_LOCATIONS_6:
 	msgbox BOOK_ALTAR_LOCATIONS_Text_4
 	goto BOOK_ALTAR_LOCATIONS_1
 
-BOOK_ALTAR_LOCATIONS_8:
+BOOK_ALTAR_LOCATIONS_7:
 	msgbox BOOK_ALTAR_LOCATIONS_Text_5
+	goto BOOK_ALTAR_LOCATIONS_1
+
+BOOK_ALTAR_LOCATIONS_8:
+	msgbox BOOK_ALTAR_LOCATIONS_Text_6
 	goto BOOK_ALTAR_LOCATIONS_1
 
 
@@ -241,30 +242,35 @@ NPC_WizardsTowerB1F_Sedridor_Text_9:
 	.string "these Talismans and Altars.$"
 
 BOOK_ALTAR_LOCATIONS_Text_0:
+	.string "The book is titled the Mysterious Rune\n"
+	.string "Altars.\p"
+	.string "You open a page at random, it reads:$"
+
+BOOK_ALTAR_LOCATIONS_Text_1:
 	.string "It has been discovered that a\n"
 	.string "mysterious altar is south of Falador.$"
 
-BOOK_ALTAR_LOCATIONS_Text_1:
+BOOK_ALTAR_LOCATIONS_Text_2:
 	.string "Rumour has it there is a mysterious\n"
 	.string "altar in the Lumbridge Swamp.$"
 
-BOOK_ALTAR_LOCATIONS_Text_2:
+BOOK_ALTAR_LOCATIONS_Text_3:
 	.string "West of Varrock there appears to be\n"
 	.string "many stone ruins, could an altar be\l"
 	.string "nearby?$"
 
-BOOK_ALTAR_LOCATIONS_Text_3:
+BOOK_ALTAR_LOCATIONS_Text_4:
 	.string "An adventurer once mentioned some sort\n"
 	.string "of ruins north of Goblin Village, could\l"
 	.string "this be an altar?$"
 
-BOOK_ALTAR_LOCATIONS_Text_4:
+BOOK_ALTAR_LOCATIONS_Text_5:
 	.string "The barbarians in Gunnars Ground often\n"
 	.string "appear to be using rune stone as\l"
 	.string "whetstones to polish their swords.\p"
 	.string "Where are they getting these from?$"
 
-BOOK_ALTAR_LOCATIONS_Text_5:
+BOOK_ALTAR_LOCATIONS_Text_6:
 	.string "It would make sense that with the\n"
 	.string "amount of stones in the Kharidian\l"
 	.string "desert there may be an altar located\l"

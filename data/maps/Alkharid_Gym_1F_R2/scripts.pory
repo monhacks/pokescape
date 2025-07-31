@@ -56,12 +56,12 @@ script ALKHARID_GYM_STATE{
             addobject(3)
             addobject(4)
             addobject(5)
-            setobjectxy(OBJ_EVENT_ID_PRINCEALI,10,7)
+            setobjectxy(OBJ_EVENT_ID_PRINCEALI, 10, 6)
 			setobjectmovementtype(OBJ_EVENT_ID_PRINCEALI,MOVEMENT_TYPE_FACE_DOWN)
-            applymovement(OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_4)
+            applymovement(OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_3)
             waitmovement(0)
             //setobjectxy(OBJ_EVENT_ID_PLAYER,9,9)
-            setobjectxy(OBJ_EVENT_ID_OSMAN,11,9)
+            setobjectxy(OBJ_EVENT_ID_OSMAN, 11, 9)
             addobject(7)
             addobject(8)
             removeobject(9)
@@ -80,7 +80,8 @@ script ALKHARID_GYM_STATE{
             removeobject(11) // extra guard
             setflag(FLAG_TEMP_6)
         case 15:
-            setobjectxy(OBJ_EVENT_ID_OSMAN,11,5)
+            setobjectxy(OBJ_EVENT_ID_OSMAN, 12,6)
+            setobjectmovementtype(OBJ_EVENT_ID_OSMAN, MOVEMENT_TYPE_FACE_DOWN)
             addobject(9)
             addobject(10)
             clearflag(FLAG_TEMP_5)
@@ -150,10 +151,15 @@ script QUEST_ALKHARID_GYM_1
     closemessage
     hidenamebox
     setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 5)
+    setvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 3) // Maximum amount of checks before Prince Ali is found.
     fadescreenswapbuffers (FADE_TO_BLACK)
     call(ALKHARID_GYM_STATE)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+    waitmovement(0)
     fadescreenswapbuffers (FADE_FROM_BLACK)
 
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT)
+    waitmovement(0)
     namebox("Osman")
     msgbox(format("This challenge is simple.\pAll you must do is find our Prince and challenge him to a battle."))
     closemessage
@@ -168,6 +174,9 @@ script QUEST_ALKHARID_GYM_1
     hidenamebox
     setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 10)
     fadescreenswapbuffers (FADE_TO_BLACK)
+    delay(30)
+    playse(SE_CONTEST_ICON_CLEAR)
+    waitse
     call(ALKHARID_GYM_STATE)
     fadescreenswapbuffers (FADE_FROM_BLACK)
 
@@ -188,7 +197,7 @@ script QUEST_ALKHARID_GYM_1
     call(ALKHARID_GYM_STATE)
     delay(60)
     fadescreenswapbuffers (FADE_FROM_BLACK)
-    addvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 4)
+    //addvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 4)
     return
 }
 
@@ -197,13 +206,15 @@ movement Movement_LOCK_WALK_UP
     lock_facing_direction
     walk_up
     unlock_facing_direction
+    step_end
 } 
 
-movement Movement_LOCK_WALK_DOWN_4
+movement Movement_LOCK_WALK_DOWN_3
 {
     lock_facing_direction
-    walk_down * 4
+    walk_down * 3
     unlock_facing_direction
+    step_end
 } 
 
 
@@ -212,6 +223,7 @@ movement Movement_LOCK_WALK_DOWN_4
 script NPC_ALKHARID_OSMAN {
     lock
     faceplayer
+    namebox("Osman")
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0){
         call(QUEST_ALKHARID_GYM_1)
         release
@@ -235,7 +247,7 @@ script ALKHARID_GYM_ALI {
     lock
     faceplayer
     namebox("Prince Ali")
-    if (!flag(FLAG_BADGE04_GET)){
+    if (!flag(FLAG_BADGE06_GET)){   //ALKHARID BADGE
 
         msgbox(format("Welcome to the Al Kharid Gym."))
         hidenamebox
@@ -258,7 +270,7 @@ script ALKHARID_GYM_ALI {
         namebox("Prince Ali")
         msgbox(format("That move is called Power Gem.\pIt sparkles just as all our precious Gems around the palace do."))
         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 30)
-        setflag(FLAG_BADGE04_GET)
+        setflag(FLAG_BADGE06_GET)   //ALKHARID BADGE
         subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 4)
         call(HIDDEN_GROTTO_RESET)
         addvar(VAR_GAMEMODE_LEVEL_SCALING, 1) //INCREASES LEVEL SCALING & SHOPS
@@ -267,7 +279,7 @@ script ALKHARID_GYM_ALI {
         release
         end
     }
-    if (flag(FLAG_BADGE04_GET)){
+    if (flag(FLAG_BADGE06_GET)){    //ALKHARID BADGE
         msgbox(format("You seem like you would be strong enough to take on the Barbarians, maybe you should head there next for your MvM gym challenge."))
     }
     else
@@ -490,35 +502,55 @@ script GYM_ALKHARID_TRAINER_2
 
 script CHECK_IF_ALI
 {
-    random(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE) 
+    if (var(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE) == 0) {
+        call(ALKHARID_GYM_ItsIsPrinceAli)
+    }
+    else {
+        random(6) //1 out of 6 chance to find the prince.
         switch (var(VAR_RESULT)) {
-            case 0: 
-                namebox("Warrior")
-                msgbox(format("I need to guard the south gate tomorrow and give out these cabbages…"))
-                namebox("Prince Ali")
-                msgbox(format("…{PAUSE 16}…{PAUSE 16}\nJust Kidding!\pIt was me all along."))
-                setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20)
-            case 1:
-                namebox("Warrior")
-                msgbox(format("You found me!\pYep, that's right, you found me.\pI am simply known as the Greatest Warrior of Alkharid or GWoA for short."))
-                subvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1) 
-                hidenamebox
-                closemessage
             case 2:
-                namebox("Warrior")
-                msgbox(format("Tomorrow I am going to show those pesky Merchants who owns this town.")) //Could randomise the messages.
-                subvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1)
-                hidenamebox
-                closemessage
-            case 3:
-                namebox("Warrior")
-                msgbox(format("Are you asking for a fight?"))
-                subvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1) 
-                hidenamebox
-                closemessage
+                call(ALKHARID_GYM_ItsIsPrinceAli)
+            default:
+                call(ALKHARID_GYM_ItsNotAli)
         }
-	return
+    }
+    return
 }
+
+script ALKHARID_GYM_ItsNotAli {
+    random(3) 
+    switch (var(VAR_RESULT)) {
+        case 0:
+            namebox("Warrior")
+            msgbox(format("You found me!\pYep, that's right, you found me.\pI am simply known as the Greatest Warrior of Alkharid or GWoA for short."))
+            subvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1) 
+            hidenamebox
+            closemessage
+        case 1:
+            namebox("Warrior")
+            msgbox(format("Tomorrow I am going to show those pesky Merchants who owns this town.")) //Could randomise the messages.
+            subvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1)
+            hidenamebox
+            closemessage
+        case 2:
+            namebox("Warrior")
+            msgbox(format("Are you asking for a fight?"))
+            subvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1) 
+            hidenamebox
+            closemessage
+    }
+    return
+}
+
+script ALKHARID_GYM_ItsIsPrinceAli {
+    namebox("Warrior")
+    msgbox(format("I need to guard the south gate tomorrow and give out these cabbages…"))
+    namebox("Prince Ali")
+    msgbox(format("…{PAUSE 16}…{PAUSE 16}\nJust Kidding!\pIt was me all along."))
+    setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20)
+    return
+}
+
 
 
 script SetGymTrainers_ALKHARID {   
@@ -603,17 +635,21 @@ script GYM_NPC_7
                 end
             }
         }
-    if (flag(FLAG_BADGE04_GET)) { //If Gym badge is obtained.
+    if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
+        namebox("Warrior")
         msgbox(format("Hello congrats on beating the gym."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
+        namebox("Warrior")
         msgbox(format("Hello."))
     }
     else {
+        namebox("Warrior")
         msgbox(format("We use our lives to protect our prince."))
     }
+    closemessage
     release
     end
 }
@@ -678,17 +714,21 @@ script GYM_NPC_8
                 end
             }
         }
-    if (flag(FLAG_BADGE04_GET)) { //If Gym badge is obtained.
+    if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
+        namebox("Warrior")
         msgbox(format("Hello congrats on beating the gym."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
+        namebox("Warrior")
         msgbox(format("Hello."))
     }
     else {
+        namebox("Warrior")
         msgbox(format("We use our lives to protect our prince."))
     }
+    closemessage
     release
     end
 }

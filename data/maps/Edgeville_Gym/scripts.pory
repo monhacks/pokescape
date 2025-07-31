@@ -24,15 +24,15 @@ script EDGEVILLE_GYM_METATILES {
 }
 
 script EDGEVILLE_GYM_STATE {
-	if (flag(FLAG_BADGE05_GET) == FALSE) {	
-    setflag(FLAG_ITEM_EDGEVILLE_2)
-	setflag(FLAG_BRASS_KEY)
-	setflag(FLAG_TEMP_B)
-	removeobject(5)
-	removeobject(7)
-	removeobject(10)
-	removeobject(11)
-	removeobject(13)
-	return
+	if (flag(FLAG_BADGE05_GET) == FALSE) {	//EDGEVILLE BADGE
+		setflag(FLAG_ITEM_EDGEVILLE_2)
+		setflag(FLAG_BRASS_KEY)
+		setflag(FLAG_TEMP_B)
+		removeobject(5)
+		removeobject(7)
+		removeobject(10)
+		removeobject(11)
+		removeobject(13)
+		return
 	}         
 }

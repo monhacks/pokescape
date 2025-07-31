@@ -285,7 +285,7 @@ script NPC_EDGEVILLE_VANNAKA_SLAYER_MASTER
     faceplayer
     namebox ("Vannaka")
     questmenu(QUEST_MENU_CHECK_COMPLETE , QUEST_KOUREND_SLAYER)
-    if (!flag(FLAG_BADGE07_GET))
+    if (!flag(FLAG_BADGE05_GET)) //EDGEVILLE BADGE
     { 
         call(EDGEVILLE_GYM_START)
     }
@@ -415,7 +415,7 @@ script EDGEVILLE_GYM_BATTLE_VANNAKA {
         namebox("Vannaka")
         msgbox(format("That scroll contains the move Ceaseless Edge.\pIt's a high crit-ratio will slash through anyone who gets in your way."))
         setvar(VAR_POKESCAPE_EDGEVILLE_GYM_QUEST, 25)
-        setflag(FLAG_BADGE07_GET)
+        setflag(FLAG_BADGE05_GET) //EDGEVILLE BADGE
 		subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 6)
 		call(HIDDEN_GROTTO_RESET)
         addvar(VAR_GAMEMODE_LEVEL_SCALING, 1) //INCREASES LEVEL SCALING & SHOPS

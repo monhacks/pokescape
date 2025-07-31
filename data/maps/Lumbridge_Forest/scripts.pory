@@ -332,6 +332,9 @@ script TRIGGER_ALKHARID_HAM_EVENT_4
 		case 225:
 		case 230:
 		case 235:
+		case 240:
+		case 241:
+		case 245:
             goto(CHECK_FOLLOWER_ZANIK)
     }
     setvar(VAR_TEMP_1, 2) //if all the events are done.

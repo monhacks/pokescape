@@ -49,7 +49,7 @@ script OPENWORLD_STATE_ROUTE12 {
 }
 
 script ROUTE12_STATE{
-	if (flag(FLAG_BADGE06_GET) == FALSE) {
+	if (flag(FLAG_BADGE06_GET) == FALSE) {	//ALKHARID BADGE
 		setvar(VAR_TEMP_3, 1) //Sets up AlKharid Gate Block
 	}
 	
@@ -530,7 +530,7 @@ script BLOCK_Alkharid_Guards
 {
 	lock
 	faceplayer
-	if (!flag(FLAG_BADGE04_GET))
+	if (!flag(FLAG_BADGE06_GET))	//ALKHARID BADGE
         {
 			goto(BLOCK_ALKHARID_GATE)
         }
@@ -546,7 +546,7 @@ script TRIGGER_ALKHARID_GATE
 	applymovement (ALKHARID_GUARD_1_ID,Movement_InteractFACEDOWN)
 	applymovement (ALKHARID_GUARD_2_ID,Movement_InteractFACEUP)
 	waitmovement (0)
-	if (!flag(FLAG_BADGE04_GET))
+	if (!flag(FLAG_BADGE06_GET))	//ALKHARID BADGE
         {
 			call(BLOCK_ALKHARID_GATE)
         }

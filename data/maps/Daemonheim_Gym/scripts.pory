@@ -90,7 +90,7 @@ script DAEMONHEIM_GYM_THOK_BATTLE_INTRO {
     lock
     faceplayer
     namebox("Thok")
-    if (!flag(FLAG_BADGE06_GET)){   //if you do not have the badge.
+    if (!flag(FLAG_BADGE08_GET)){   //if you do not have the badge. //DAEMONHEIM BADGE
         msgbox(format("Welcome to the Daemonheim Gym.\pI am Thok."))
         hidenamebox
         call(GYM_BATTLE_THOK)
@@ -112,7 +112,7 @@ script DAEMONHEIM_GYM_THOK_BATTLE_INTRO {
         namebox("Prince Ali")
         msgbox(format("That move is called CUPHOLDER.\pCUPHOLDER."))
         //setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 30)
-        setflag(FLAG_BADGE06_GET)
+        setflag(FLAG_BADGE08_GET)   //DAEMONHEIM BADGE
         call(HIDDEN_GROTTO_RESET)
         //addvar(VAR_GAMEMODE_LEVEL_SCALING, 1) //INCREASES LEVEL SCALING & SHOPS
         //call(SetGymTrainers_VARROCK)
@@ -142,7 +142,7 @@ script HANS_DAEMONHEIM_GYM {
     lock
     faceplayer
     namebox("Hans")
-    if (flag(FLAG_BADGE08_GET) == TRUE) {
+    if (flag(FLAG_BADGE08_GET) == TRUE) {   //DAEMONHEIM BADGE
         msgbox(format("You did it again!\pThat's all 8 badges!\pYou are ready to take on the MvM championships now.\pI've been supporting you all this time, and I hope to see you there."))
     }
     else {
@@ -158,7 +158,7 @@ script HANS_EDGEVILLE_GYM {
     lock
     faceplayer
     namebox("Hans")
-    if (flag(FLAG_BADGE07_GET) == TRUE) {
+    if (flag(FLAG_BADGE05_GET) == TRUE) { //EDGEVILLE BADGE
         msgbox(format("To no surprise you have prevailed yet again.\pI guess you are soon at journeys end.\pHow did I get here all the way to edgeville you ask.\pWell I was going out to buy milk and somehow I just got here.\pLife is weird like that for me."))
     }
     else {
@@ -174,7 +174,7 @@ script HANS_VARROCK_GYM {
     lock
     faceplayer
     namebox("Hans")
-    if (flag(FLAG_BADGE06_GET) == TRUE) {
+    if (flag(FLAG_BADGE07_GET) == TRUE) {   //VARROCK BADGE
         msgbox(format("You did it!\lYou beat the king!\pI would join you for a celebration but apparently I have to find some rare seed for the queen.\pShe has an awfully strong personality."))
     }
     else {
@@ -190,11 +190,11 @@ script HANS_ALKHARID_GYM {
     lock
     faceplayer
     namebox("Hans")
-    if (flag(FLAG_BADGE04_GET) == TRUE) {
+    if (flag(FLAG_BADGE06_GET) == TRUE) {   //ALKHARID BADGE
         msgbox(format("Congratulations completionist in the making!\pUp next is getting out of this desert.\pMan that is a lot of sand to wade through…"))
     }
     else {
-        msgbox(format("How are you handling the heat Completionist in the making!\pWhat? Its nothing compared to a volcano?\pWell if you say so.\pHere you will have to face Prince Ali.\pHe uses GROUND-TYPE monsters to his advantage so stay on your guard.\pGROUND types are weak to WATER and GRASS types.\pTheir moves also do not affect FLYING types.\pHope you get a good battle out of this!\p"))
+        msgbox(format("How are you handling the heat Completionist in the making!\pWhat? Its nothing compared to a volcano?\pWell if you say so.\pHere you will have to face Prince Ali.\pHe uses GROUND-TYPE monsters to his advantage so stay on your guard.\pGROUND types are weak to WATER and GRASS types.\pTheir moves also do not affect FLYING types.\pHope you get a good battle out of this!"))
     }
     hidenamebox
     closemessage

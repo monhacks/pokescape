@@ -1856,8 +1856,8 @@ const u8 gText_Answer[] = _("ANSWER");
 const u8 gText_PokeBalls[] = _("POUCHES");
 const u8 gText_Berry[] = _("");
 const u8 gText_Berries[] = _("");
-const u8 gText_ExpShareOn[] = _("The Pulse Core has been activated and will share exp.{PAUSE_UNTIL_PRESS}");
-const u8 gText_ExpShareOff[] = _("The Pulse Core has been deactivated and will no longer share exp.{PAUSE_UNTIL_PRESS}");
+const u8 gText_ExpShareOn[] = _("The Pulse Core has been activated\nand will share exp.{PAUSE_UNTIL_PRESS}");
+const u8 gText_ExpShareOff[] = _("The Pulse Core has been deactivated\nand will no longer share exp.{PAUSE_UNTIL_PRESS}");
 const u8 gText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
 
 //pokescape

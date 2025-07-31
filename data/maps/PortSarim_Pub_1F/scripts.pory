@@ -100,12 +100,59 @@ script PUBCRAWL_RANDOMISED_PARTY_SIZE {
 	return
 }
 script PUBCRAWL_RANDOMISED_LEVELS {  
+
+	if (!flag(FLAG_BADGE01_GET)) { //8 - 15
+        random(10) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 8)          
+    }
+    if (flag(FLAG_BADGE01_GET)) { //15 - 25
+        random(10) 
+		copyvar(VAR_TEMP_E, VAR_RESULT)
+		addvar(VAR_TEMP_E, 15) 
+    }
+    if (flag(FLAG_BADGE02_GET)) { //20 - 30
+        random(10) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 20)    
+    }
+    if (flag(FLAG_BADGE03_GET)) { //25 - 35
+        random(10) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 25)    
+    }
+    if (flag(FLAG_BADGE04_GET)) { //30 - 40
+        random(10) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 30)    
+    }
+    if (flag(FLAG_BADGE05_GET)) { //30 - 45
+        random(15) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 30)    
+    }
+    if (flag(FLAG_BADGE06_GET)) { //30 - 50
+        random(20) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 30)    
+    }
+    if (flag(FLAG_BADGE07_GET)) { //30 - 55
+        random(25) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 30)    
+    }
+    if (flag(FLAG_BADGE08_GET)) {//50 - 70
+        random(20) 
+        copyvar(VAR_TEMP_E, VAR_RESULT)
+        addvar(VAR_TEMP_E, 50)    
+    }
+	copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_E)
 	//30 - 35
-	setvar(VAR_TEMP_A, 30) //base level.
-	setvar(VAR_TEMP_B, 6)  //amount of randomness 0,1,2,3,4,5
-	random(VAR_TEMP_B) 
-	copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT) //Copy it out of TEMP_A to be used elsewhere.
-	addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A) // Add A + B(result) = The intended Level. into TEMP_A.
+	//setvar(VAR_TEMP_A, 30) //base level.
+	//setvar(VAR_TEMP_B, 6)  //amount of randomness 0,1,2,3,4,5
+	//random(VAR_TEMP_B) 
+	//copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT) //Copy it out of TEMP_A to be used elsewhere.
+	//addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A) // Add A + B(result) = The intended Level. into TEMP_A.
 	return
 }
 //Turn all of this into level scaling function later instead of poryscript.
@@ -148,15 +195,19 @@ script NPC_PortSarimPub_BRINE
 {
     lock
     faceplayer
-    namebox ("Sailor")
 	checkitem(ITEM_TM13_BRINE, 1)
     if (!var(VAR_RESULT)) {
+		namebox ("Sailor")
         msgbox(format("Aye… this used to be my favourite move.\pBut ever since I've gotten sick it's been too much for me to handle.\pHere I want you to have it."))
         closemessage
         hidenamebox
         giveitem(ITEM_TM13_BRINE)
+		closemessage
+		release
+		end
         
     }
+	namebox ("Sailor")
 	msgbox(format("Brrrugh…"))
 	closemessage
 	hidenamebox

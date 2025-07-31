@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
-      "x": 10,
+      "x": 9,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -56,11 +56,18 @@
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 6,
+      "x": 3,
+      "y": 1,
       "elevation": 0,
       "dest_map": "MAP_ALKHARID_GYM_1F_R2",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_AL_KHARID",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

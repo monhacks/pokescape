@@ -1581,8 +1581,8 @@ PORTSARIM_WISEOLDMAN_RIVAL_2_Text_0:
 PORTSARIM_WISEOLDMAN_RIVAL_2_Text_1:
 	.string "Well {PLAYER}, you have been busy I\n"
 	.string "see.\p"
-	.string "These H.A.M. people just goes about and\n"
-	.string "do what they want.\p"
+	.string "These H.A.M. people just go about and do\n"
+	.string "what they want.\p"
 	.string "It's very good to see someone like you\n"
 	.string "clean up their act.$"
 

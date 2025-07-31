@@ -9,7 +9,7 @@ mapscripts Varrock_Palace_1F_MapScripts {
 }
 script VARROCKGYM_STATE
 {
-    if (!flag(FLAG_BADGE06_GET)) //IF VARROCK BADGE has NOT been obtained.
+    if (!flag(FLAG_BADGE07_GET)) //IF VARROCK BADGE has NOT been obtained.  //VARROCK BADGE
     {  
         playbgm(MUS_PS_GYM, 1)
         savebgm(MUS_PS_GYM)
@@ -23,7 +23,7 @@ script VARROCKGYM_STATE
 }
 script VARROCKGYM_TRAINERS
 {
-    if (!flag(FLAG_BADGE06_GET)) //IF VARROCK BADGE has NOT been obtained.
+    if (!flag(FLAG_BADGE07_GET)) //IF VARROCK BADGE has NOT been obtained.  //VARROCK BADGE
     {       
     
         if ((var(VAR_POKESCAPE_VARROCK_GYM_QUEST) == 0) || (var(VAR_POKESCAPE_VARROCK_GYM_QUEST) == 5)) //if GYM CHALLANGE HASNT STARTED
@@ -40,7 +40,7 @@ script VARROCKGYM_TRAINERS
 
 script TRIGGER_VARROCK_GYM_ADVISOR
 {
-    if (!flag(FLAG_BADGE06_GET)) //IF VARROCK BADGE has NOT been obtained.
+    if (!flag(FLAG_BADGE07_GET)) //IF VARROCK BADGE has NOT been obtained.  //VARROCK BADGE
     {       
     
         if (var(VAR_POKESCAPE_VARROCK_GYM_QUEST) == 0)
@@ -88,7 +88,7 @@ script TRIGGER_VARROCK_GYM_ADVISOR
 }
 script VARROCK_GYM_ADVISOR
 {
-    if (!flag(FLAG_BADGE06_GET)) //IF VARROCK BADGE has NOT been obtained.
+    if (!flag(FLAG_BADGE07_GET)) //IF VARROCK BADGE has NOT been obtained.  //VARROCK BADGE
     {       
     
         if (var(VAR_POKESCAPE_VARROCK_GYM_QUEST) == 0)
@@ -200,7 +200,7 @@ script VARROCK_GYM_RELDO
     faceplayer
     namebox("Reldo")
     msgbox(format("Welcome to the Library of Varrock."))
-    if (!flag(FLAG_BADGE06_GET)) //IF VARROCK BADGE has NOT been obtained.
+    if (!flag(FLAG_BADGE07_GET)) //IF VARROCK BADGE has NOT been obtained.  //VARROCK BADGE
     {       
         if (var(VAR_POKESCAPE_VARROCK_GYM_QUEST) == 5)
         {
@@ -857,7 +857,7 @@ script VARROCK_GYM_KINGROALD {
     lock
     faceplayer
     namebox("King Roald")
-    if (!flag(FLAG_BADGE06_GET)){
+    if (!flag(FLAG_BADGE07_GET)){   //VARROCK BADGE
 
         msgbox(format("Oh what is it now?\pWho are you?\nWhat do you want?\pCan you not see I am busy?\p…{PAUSE 15}…{PAUSE 15}…{PAUSE 15}\pOh right, so you are one of those MvM Challengers.\pI don't know why I even have this role.\pVery well, lets get this out of the way, show me what you can do."))
         hidenamebox
@@ -880,7 +880,7 @@ script VARROCK_GYM_KINGROALD {
         namebox("King Roald")
         msgbox(format("That move is called Draining Kiss, my Queen uses it on me all the time and it is always super effective.\pHopefully it will be of more use to you than on me."))
         setvar(VAR_POKESCAPE_VARROCK_GYM_QUEST, 26)
-        setflag(FLAG_BADGE06_GET)
+        setflag(FLAG_BADGE07_GET)   //VARROCK BADGE
         subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 5)
         call(HIDDEN_GROTTO_RESET)
         addvar(VAR_GAMEMODE_LEVEL_SCALING, 1) //INCREASES LEVEL SCALING & SHOPS
@@ -889,7 +889,7 @@ script VARROCK_GYM_KINGROALD {
         release
         end
     }
-    if (flag(FLAG_BADGE04_GET)){
+    if (flag(FLAG_BADGE07_GET)){    //VARROCK BADGE
         msgbox(format("You seem like you would be strong enough to take on the Barbarians, maybe you should head there next for your MvM gym challenge."))
     }
     else

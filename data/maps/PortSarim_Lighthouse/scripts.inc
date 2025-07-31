@@ -333,7 +333,7 @@ BATTLE_LIGHTHOUSE_TRAINER_2_Text_2:
 
 BATTLE_LIGHTHOUSE_TRAINER_2_Text_3:
 	.string "Sorry I mistook you for being apart of\n"
-	.string "HAM.\p"
+	.string "H.A.M.\p"
 	.string "But please stop them before they cause\n"
 	.string "any more damage.$"
 

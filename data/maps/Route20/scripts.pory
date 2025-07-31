@@ -70,7 +70,7 @@ script ROUTE20_STATE {
         setvar(VAR_TEMP_0, 1)
         setvar(VAR_TEMP_3, 1)
     }
-    if (!flag(FLAG_BADGE07_GET))
+    if (!flag(FLAG_BADGE05_GET)) //EDGEVILLE BADGE
     {
         clearflag(FLAG_TEMP_1E)
         addobject(11)
@@ -171,7 +171,7 @@ script ROUTE20_VARROCK_GUARD_1
 {
     faceplayer
     namebox ("Guard")
-    if (!flag(FLAG_BADGE07_GET) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 195))
+    if (!flag(FLAG_BADGE05_GET) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 195)) //EDGEVILLE BADGE
     {
         msgbox(format("Varrock is closed off to all visitors at the moment, by decree of King Roald himself.\pWe will re-open access once things are safe again.\pWhy not visit Edgeville Gym in the meantime?"))
     }
@@ -188,7 +188,7 @@ script ROUTE20_VARROCK_GUARD_2
 {
     faceplayer
     namebox ("Guard")
-    if (!flag(FLAG_BADGE07_GET) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 195))
+    if (!flag(FLAG_BADGE05_GET) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 195)) //EDGEVILLE BADGE
     {
         msgbox(format("We're just waiting for a report from the White Knights, why not visit Edgeville Gym in the meantime?"))
     }

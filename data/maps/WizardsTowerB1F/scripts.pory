@@ -118,6 +118,7 @@ script NPC_WizardsTowerB1F_Sedridor{
 
 
 script BOOK_ALTAR_LOCATIONS {
+    msgbox(format("The book is titled the Mysterious Rune Altars.\pYou open a page at random, it reads:"))
     random(6) 
 	switch (var(VAR_RESULT)) { 
         case 0:  

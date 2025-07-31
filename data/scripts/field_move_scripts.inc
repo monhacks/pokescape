@@ -560,8 +560,8 @@ Text_MonUsedStrength:
 	.string "possible to move boulders around!$"
 
 Text_CantStrength:
-	.string "It's a big boulder. Something sturdy like a\n"
-	.string "Battleaxe may be able to push it aside.$"
+	.string "It's a big boulder. Something sturdy like\n"
+	.string "a Battleaxe may be able to push it aside.$"
 
 Text_StrengthActivated:
 	.string "The BATTLEAXE made it possible to\n"

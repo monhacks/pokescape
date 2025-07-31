@@ -48,9 +48,9 @@ ALKHARID_GYM_STATE_4:
 	addobject 3
 	addobject 4
 	addobject 5
-	setobjectxy 1, 10, 7
+	setobjectxy 1, 10, 6
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_DOWN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_4
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_3
 	waitmovement 0
 	setobjectxy 2, 11, 9
 	addobject 7
@@ -75,7 +75,8 @@ ALKHARID_GYM_STATE_5:
 	goto ALKHARID_GYM_STATE_1
 
 ALKHARID_GYM_STATE_6:
-	setobjectxy 2, 11, 5
+	setobjectxy 2, 12, 6
+	setobjectmovementtype 2, MOVEMENT_TYPE_FACE_DOWN
 	addobject 9
 	addobject 10
 	clearflag FLAG_TEMP_5
@@ -135,9 +136,14 @@ QUEST_ALKHARID_GYM_1::
 	closemessage
 	hidenamebox
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 5
+	setvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 3
 	fadescreenswapbuffers FADE_TO_BLACK
 	call ALKHARID_GYM_STATE
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	waitmovement 0
 	fadescreenswapbuffers FADE_FROM_BLACK
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	waitmovement 0
 	namebox QUEST_ALKHARID_GYM_1_Text_0
 	msgbox QUEST_ALKHARID_GYM_1_Text_4
 	closemessage
@@ -151,6 +157,9 @@ QUEST_ALKHARID_GYM_1::
 	hidenamebox
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 10
 	fadescreenswapbuffers FADE_TO_BLACK
+	delay 30
+	playse SE_CONTEST_ICON_CLEAR
+	waitse
 	call ALKHARID_GYM_STATE
 	fadescreenswapbuffers FADE_FROM_BLACK
 	namebox QUEST_ALKHARID_GYM_1_Text_5
@@ -169,7 +178,6 @@ QUEST_ALKHARID_GYM_1::
 	call ALKHARID_GYM_STATE
 	delay 60
 	fadescreenswapbuffers FADE_FROM_BLACK
-	addvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 4
 	return
 
 QUEST_ALKHARID_GYM_1_2:
@@ -187,9 +195,8 @@ Movement_LOCK_WALK_UP:
 	unlock_facing_direction
 	step_end
 
-Movement_LOCK_WALK_DOWN_4:
+Movement_LOCK_WALK_DOWN_3:
 	lock_facing_direction
-	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -199,6 +206,7 @@ Movement_LOCK_WALK_DOWN_4:
 NPC_ALKHARID_OSMAN::
 	lock
 	faceplayer
+	namebox QUEST_ALKHARID_GYM_1_Text_0
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq NPC_ALKHARID_OSMAN_2
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
@@ -228,8 +236,8 @@ ALKHARID_GYM_ALI::
 	lock
 	faceplayer
 	namebox QUEST_ALKHARID_GYM_1_Text_5
-	goto_if_unset FLAG_BADGE04_GET, ALKHARID_GYM_ALI_2
-	goto_if_set FLAG_BADGE04_GET, ALKHARID_GYM_ALI_5
+	goto_if_unset FLAG_BADGE06_GET, ALKHARID_GYM_ALI_2
+	goto_if_set FLAG_BADGE06_GET, ALKHARID_GYM_ALI_5
 	msgbox ALKHARID_GYM_ALI_Text_6
 ALKHARID_GYM_ALI_4:
 	hidenamebox
@@ -258,7 +266,7 @@ ALKHARID_GYM_ALI_2:
 	namebox QUEST_ALKHARID_GYM_1_Text_5
 	msgbox ALKHARID_GYM_ALI_Text_4
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 30
-	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE06_GET
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 4
 	call HIDDEN_GROTTO_RESET
 	addvar VAR_GAMEMODE_LEVEL_SCALING, 1
@@ -429,46 +437,65 @@ GYM_ALKHARID_TRAINER_2::
 
 
 CHECK_IF_ALI::
-	random VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE
+	compare VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 0
+	goto_if_eq CHECK_IF_ALI_2
+	random 6
 	switch VAR_RESULT
-	case 0, CHECK_IF_ALI_3
-	case 1, CHECK_IF_ALI_4
-	case 2, CHECK_IF_ALI_5
-	case 3, CHECK_IF_ALI_6
+	case 2, CHECK_IF_ALI_6
+	call ALKHARID_GYM_ItsNotAli
 CHECK_IF_ALI_1:
 	return
 
-CHECK_IF_ALI_3:
-	namebox CHECK_IF_ALI_Text_0
-	msgbox CHECK_IF_ALI_Text_1
-	namebox QUEST_ALKHARID_GYM_1_Text_5
-	msgbox CHECK_IF_ALI_Text_2
-	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
-	goto CHECK_IF_ALI_1
-
-CHECK_IF_ALI_4:
-	namebox CHECK_IF_ALI_Text_0
-	msgbox CHECK_IF_ALI_Text_3
-	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
-	hidenamebox
-	closemessage
-	goto CHECK_IF_ALI_1
-
-CHECK_IF_ALI_5:
-	namebox CHECK_IF_ALI_Text_0
-	msgbox CHECK_IF_ALI_Text_4
-	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
-	hidenamebox
-	closemessage
+CHECK_IF_ALI_2:
+	call ALKHARID_GYM_ItsIsPrinceAli
 	goto CHECK_IF_ALI_1
 
 CHECK_IF_ALI_6:
-	namebox CHECK_IF_ALI_Text_0
-	msgbox CHECK_IF_ALI_Text_5
+	call ALKHARID_GYM_ItsIsPrinceAli
+	goto CHECK_IF_ALI_1
+
+
+ALKHARID_GYM_ItsNotAli::
+	random 3
+	switch VAR_RESULT
+	case 0, ALKHARID_GYM_ItsNotAli_3
+	case 1, ALKHARID_GYM_ItsNotAli_4
+	case 2, ALKHARID_GYM_ItsNotAli_5
+ALKHARID_GYM_ItsNotAli_1:
+	return
+
+ALKHARID_GYM_ItsNotAli_3:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	msgbox ALKHARID_GYM_ItsNotAli_Text_1
 	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
 	hidenamebox
 	closemessage
-	goto CHECK_IF_ALI_1
+	goto ALKHARID_GYM_ItsNotAli_1
+
+ALKHARID_GYM_ItsNotAli_4:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	msgbox ALKHARID_GYM_ItsNotAli_Text_2
+	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
+	hidenamebox
+	closemessage
+	goto ALKHARID_GYM_ItsNotAli_1
+
+ALKHARID_GYM_ItsNotAli_5:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	msgbox ALKHARID_GYM_ItsNotAli_Text_3
+	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
+	hidenamebox
+	closemessage
+	goto ALKHARID_GYM_ItsNotAli_1
+
+
+ALKHARID_GYM_ItsIsPrinceAli::
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	msgbox ALKHARID_GYM_ItsIsPrinceAli_Text_0
+	namebox QUEST_ALKHARID_GYM_1_Text_5
+	msgbox ALKHARID_GYM_ItsIsPrinceAli_Text_1
+	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
+	return
 
 
 SetGymTrainers_ALKHARID::
@@ -492,11 +519,13 @@ GYM_NPC_7::
 	faceplayer
 	goto_if_unset FLAG_ALKHARIDGYM_4, GYM_NPC_7_2
 GYM_NPC_7_1:
-	goto_if_set FLAG_BADGE04_GET, GYM_NPC_7_5
+	goto_if_set FLAG_BADGE06_GET, GYM_NPC_7_5
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_7_10
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_5
 GYM_NPC_7_9:
+	closemessage
 	release
 	end
 
@@ -506,6 +535,7 @@ GYM_NPC_7_2:
 	goto GYM_NPC_7_1
 
 GYM_NPC_7_5:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_3
 	release
 	end
@@ -518,12 +548,12 @@ GYM_NPC_7_7:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT
 	waitmovement 0
-	namebox CHECK_IF_ALI_Text_0
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_4, GYM_ALKHARID_TRAINER_1_Text_2
-	namebox CHECK_IF_ALI_Text_0
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_2
 	closemessage
 	hidenamebox
@@ -532,6 +562,7 @@ GYM_NPC_7_7:
 	end
 
 GYM_NPC_7_10:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_4
 	goto GYM_NPC_7_9
 
@@ -549,7 +580,7 @@ GYM_NPC_7_14:
 	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT
 	waitmovement 0
-	namebox CHECK_IF_ALI_Text_0
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
@@ -576,11 +607,13 @@ GYM_NPC_8::
 	faceplayer
 	goto_if_unset FLAG_ALKHARIDGYM_4, GYM_NPC_8_2
 GYM_NPC_8_1:
-	goto_if_set FLAG_BADGE04_GET, GYM_NPC_8_5
+	goto_if_set FLAG_BADGE06_GET, GYM_NPC_8_5
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_8_10
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_5
 GYM_NPC_8_9:
+	closemessage
 	release
 	end
 
@@ -590,6 +623,7 @@ GYM_NPC_8_2:
 	goto GYM_NPC_8_1
 
 GYM_NPC_8_5:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_3
 	release
 	end
@@ -602,12 +636,12 @@ GYM_NPC_8_7:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
 	waitmovement 0
-	namebox CHECK_IF_ALI_Text_0
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_4, GYM_ALKHARID_TRAINER_1_Text_2
-	namebox CHECK_IF_ALI_Text_0
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_2
 	closemessage
 	hidenamebox
@@ -616,6 +650,7 @@ GYM_NPC_8_7:
 	end
 
 GYM_NPC_8_10:
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_NPC_7_Text_4
 	goto GYM_NPC_8_9
 
@@ -633,7 +668,7 @@ GYM_NPC_8_14:
 	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
 	waitmovement 0
-	namebox CHECK_IF_ALI_Text_0
+	namebox ALKHARID_GYM_ItsNotAli_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
@@ -868,30 +903,30 @@ GYM_ALKHARID_TRAINER_1_Text_1:
 GYM_ALKHARID_TRAINER_1_Text_2:
 	.string "Consider that a warning!$"
 
-CHECK_IF_ALI_Text_0:
+ALKHARID_GYM_ItsNotAli_Text_0:
 	.string "Warrior$"
 
-CHECK_IF_ALI_Text_1:
-	.string "I need to guard the south gate\n"
-	.string "tomorrow and give out these cabbages…$"
-
-CHECK_IF_ALI_Text_2:
-	.string "…{PAUSE 16}…{PAUSE 16}\n"
-	.string "Just Kidding!\p"
-	.string "It was me all along.$"
-
-CHECK_IF_ALI_Text_3:
+ALKHARID_GYM_ItsNotAli_Text_1:
 	.string "You found me!\p"
 	.string "Yep, that's right, you found me.\p"
 	.string "I am simply known as the Greatest\n"
 	.string "Warrior of Alkharid or GWoA for short.$"
 
-CHECK_IF_ALI_Text_4:
+ALKHARID_GYM_ItsNotAli_Text_2:
 	.string "Tomorrow I am going to show those\n"
 	.string "pesky Merchants who owns this town.$"
 
-CHECK_IF_ALI_Text_5:
+ALKHARID_GYM_ItsNotAli_Text_3:
 	.string "Are you asking for a fight?$"
+
+ALKHARID_GYM_ItsIsPrinceAli_Text_0:
+	.string "I need to guard the south gate\n"
+	.string "tomorrow and give out these cabbages…$"
+
+ALKHARID_GYM_ItsIsPrinceAli_Text_1:
+	.string "…{PAUSE 16}…{PAUSE 16}\n"
+	.string "Just Kidding!\p"
+	.string "It was me all along.$"
 
 GYM_NPC_7_Text_0:
 	.string "Guards help me as I make my escape!$"

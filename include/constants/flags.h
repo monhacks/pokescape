@@ -1035,7 +1035,7 @@
 
 //TMS
 #define FLAG_RECEIVED_TM06                                         0x3D6
-#define FLAG_RECEIVED_TM62                                         0x3D7
+    #define FLAG_UNUSED_0x3D7                                         0x3D7
 #define FLAG_RECEIVED_TM64                                         0x3D8
 #define FLAG_RECEIVED_TM22                                         0x3D9
     #define FLAG_UNUSED_0x3DA                                         0x3DA

@@ -227,7 +227,7 @@ script PURO_PURO_EVENT_MILL_LANE_MILL {
 script MODEST_SAMUEL_Battle
 {
     trainerbattle_single(TRAINER_MODESTSAMUEL, format("Oh, sorry, I was looking around here for a new friend to add to my party.\pDid you want to battle?"),format("It doesn't matter that we lost.\pMy monsters did their best!"))
-    namebox ("Samuel")
+    //namebox ("Samuel")
     msgbox(format("Win or lose, I'll always battle with my favourite monsters."))
     hidenamebox
     release

@@ -961,7 +961,7 @@ script PORTSARIM_WISEOLDMAN_RIVAL_2{
         applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_LEFT)
         waitmovement(0)
         namebox("Wise Old Man")
-        msgbox(format("Well {PLAYER}, you have been busy I see.\pThese H.A.M. people just goes about and do what they want.\pIt's very good to see someone like you clean up their act."))
+        msgbox(format("Well {PLAYER}, you have been busy I see.\pThese H.A.M. people just go about and do what they want.\pIt's very good to see someone like you clean up their act."))
         hidenamebox
         closemessage
         applymovement (42, movement_wom_portsarim_2)

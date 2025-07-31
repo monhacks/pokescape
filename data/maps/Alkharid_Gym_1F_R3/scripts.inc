@@ -68,11 +68,13 @@ GYM_NPC_1::
 	faceplayer
 	goto_if_unset FLAG_ALKHARIDGYM_1, GYM_NPC_1_2
 GYM_NPC_1_1:
-	goto_if_set FLAG_BADGE04_GET, GYM_NPC_1_5
+	goto_if_set FLAG_BADGE06_GET, GYM_NPC_1_5
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_1_10
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_8
 GYM_NPC_1_9:
+	closemessage
 	release
 	end
 
@@ -82,6 +84,7 @@ GYM_NPC_1_2:
 	goto GYM_NPC_1_1
 
 GYM_NPC_1_5:
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_6
 	release
 	end
@@ -108,6 +111,7 @@ GYM_NPC_1_7:
 	end
 
 GYM_NPC_1_10:
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_7
 	goto GYM_NPC_1_9
 
@@ -152,11 +156,13 @@ GYM_NPC_2::
 	faceplayer
 	goto_if_unset FLAG_ALKHARIDGYM_1, GYM_NPC_2_2
 GYM_NPC_2_1:
-	goto_if_set FLAG_BADGE04_GET, GYM_NPC_2_5
+	goto_if_set FLAG_BADGE06_GET, GYM_NPC_2_5
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_2_10
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_8
 GYM_NPC_2_9:
+	closemessage
 	release
 	end
 
@@ -166,6 +172,7 @@ GYM_NPC_2_2:
 	goto GYM_NPC_2_1
 
 GYM_NPC_2_5:
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_6
 	release
 	end
@@ -194,6 +201,7 @@ GYM_NPC_2_7:
 	end
 
 GYM_NPC_2_10:
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_2_Text_0
 	goto GYM_NPC_2_9
 

@@ -87,6 +87,7 @@ HAM_WHITEOUT_1:
 	goto_if_ne HAM_WHITEOUT_5
 HAM_WHITEOUT_4:
 	setvar VAR_TEMP_B, 2
+	setflag FLAG_TEMP_10
 	clearflag FLAG_HAM_JAILED
 	release
 	end
@@ -154,7 +155,7 @@ HAM_HIDEOUT_GATE_5:
 	closemessage
 	hidenamebox
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_1, 5
+	compare VAR_TEMP_1, 6
 	goto_if_eq HAM_HIDEOUT_GATE_12
 	applymovement OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right
 	applymovement OBJ_EVENT_ID_FOLLOWER, movement_WALK_DOWN_1_STEP
@@ -209,8 +210,9 @@ HAMHIDEOUT_BankChest::
 
 HAMHIDEOUT_Guard::
 	lock
+	goto_if_set FLAG_TEMP_10, HAMHIDEOUT_Guard_2
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
-	goto_if_eq HAMHIDEOUT_Guard_2
+	goto_if_eq HAMHIDEOUT_Guard_3
 	namebox HAM_WHITEOUT_Text_0
 	playse SE_M_SNORE
 	msgbox HAM_WHITEOUT_Text_2
@@ -224,6 +226,12 @@ HAMHIDEOUT_Guard_2:
 	faceplayer
 	namebox HAM_WHITEOUT_Text_0
 	msgbox HAMHIDEOUT_Guard_Text_0
+	goto HAMHIDEOUT_Guard_1
+
+HAMHIDEOUT_Guard_3:
+	faceplayer
+	namebox HAM_WHITEOUT_Text_0
+	msgbox HAMHIDEOUT_Guard_Text_1
 	goto HAMHIDEOUT_Guard_1
 
 
@@ -282,5 +290,12 @@ HAMHIDEOUT_BankChest_Text_0:
 	.string "Would you like to use the bank chest?$"
 
 HAMHIDEOUT_Guard_Text_0:
+	.string "Zzz…{PAUSE 15}…\p"
+	.string "Huh?!{PAUSE 15} What?!\n"
+	.string "How did you get out!?\p"
+	.string "I've sounded the alarm!\p"
+	.string "You both won't be getting away now!$"
+
+HAMHIDEOUT_Guard_Text_1:
 	.string "I've sounded the alarm!\p"
 	.string "You both won't be getting away now!$"

@@ -84,7 +84,7 @@ DAEMONHEIM_GYM_THOK_BATTLE_INTRO::
 	lock
 	faceplayer
 	namebox THOK_GYM_CHALLENGE_STATE_1_Text_0
-	goto_if_unset FLAG_BADGE06_GET, DAEMONHEIM_GYM_THOK_BATTLE_INTRO_2
+	goto_if_unset FLAG_BADGE08_GET, DAEMONHEIM_GYM_THOK_BATTLE_INTRO_2
 	msgbox DAEMONHEIM_GYM_THOK_BATTLE_INTRO_Text_6
 	hidenamebox
 	release
@@ -111,7 +111,7 @@ DAEMONHEIM_GYM_THOK_BATTLE_INTRO_2:
 	savebgm MUS_PS_ALKHARID
 	namebox DAEMONHEIM_GYM_THOK_BATTLE_INTRO_Text_4
 	msgbox DAEMONHEIM_GYM_THOK_BATTLE_INTRO_Text_5
-	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE08_GET
 	call HIDDEN_GROTTO_RESET
 	hidenamebox
 	release
@@ -139,7 +139,7 @@ HANS_EDGEVILLE_GYM::
 	lock
 	faceplayer
 	namebox HANS_DAEMONHEIM_GYM_Text_0
-	goto_if_set FLAG_BADGE07_GET, HANS_EDGEVILLE_GYM_2
+	goto_if_set FLAG_BADGE05_GET, HANS_EDGEVILLE_GYM_2
 	msgbox HANS_EDGEVILLE_GYM_Text_1
 HANS_EDGEVILLE_GYM_1:
 	hidenamebox
@@ -156,7 +156,7 @@ HANS_VARROCK_GYM::
 	lock
 	faceplayer
 	namebox HANS_DAEMONHEIM_GYM_Text_0
-	goto_if_set FLAG_BADGE06_GET, HANS_VARROCK_GYM_2
+	goto_if_set FLAG_BADGE07_GET, HANS_VARROCK_GYM_2
 	msgbox HANS_VARROCK_GYM_Text_1
 HANS_VARROCK_GYM_1:
 	hidenamebox
@@ -173,7 +173,7 @@ HANS_ALKHARID_GYM::
 	lock
 	faceplayer
 	namebox HANS_DAEMONHEIM_GYM_Text_0
-	goto_if_set FLAG_BADGE04_GET, HANS_ALKHARID_GYM_2
+	goto_if_set FLAG_BADGE06_GET, HANS_ALKHARID_GYM_2
 	msgbox HANS_ALKHARID_GYM_Text_1
 HANS_ALKHARID_GYM_1:
 	hidenamebox
@@ -367,8 +367,7 @@ HANS_ALKHARID_GYM_Text_1:
 	.string "GRASS types.\p"
 	.string "Their moves also do not affect FLYING\n"
 	.string "types.\p"
-	.string "Hope you get a good battle out of this!\p"
-	.string "$"
+	.string "Hope you get a good battle out of this!$"
 
 HANS_BARBARIAN_GYM_Text_0:
 	.string "Good job beating Gunthor!\l"

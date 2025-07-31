@@ -415,7 +415,7 @@ BROKEN_DOOR::
 BLOCK_Alkharid_Guards::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE04_GET, BLOCK_Alkharid_Guards_2
+	goto_if_unset FLAG_BADGE06_GET, BLOCK_Alkharid_Guards_2
 BLOCK_Alkharid_Guards_1:
 	namebox BLOCK_Alkharid_Guards_Text_0
 	msgbox BLOCK_Alkharid_Guards_Text_1
@@ -432,7 +432,7 @@ TRIGGER_ALKHARID_GATE::
 	applymovement 27, Movement_InteractFACEDOWN
 	applymovement 28, Movement_InteractFACEUP
 	waitmovement 0
-	goto_if_unset FLAG_BADGE04_GET, TRIGGER_ALKHARID_GATE_2
+	goto_if_unset FLAG_BADGE06_GET, TRIGGER_ALKHARID_GATE_2
 TRIGGER_ALKHARID_GATE_1:
 	release
 	end

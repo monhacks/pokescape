@@ -196,8 +196,7 @@ PURO_PURO_EVENT_MILL_LANE_MILL::
 
 MODEST_SAMUEL_Battle::
 	trainerbattle_single TRAINER_MODESTSAMUEL, MODEST_SAMUEL_Battle_Text_0, MODEST_SAMUEL_Battle_Text_1
-	namebox MODEST_SAMUEL_Battle_Text_2
-	msgbox MODEST_SAMUEL_Battle_Text_3
+	msgbox MODEST_SAMUEL_Battle_Text_2
 	hidenamebox
 	release
 	end
@@ -340,9 +339,6 @@ MODEST_SAMUEL_Battle_Text_1:
 	.string "My monsters did their best!$"
 
 MODEST_SAMUEL_Battle_Text_2:
-	.string "Samuel$"
-
-MODEST_SAMUEL_Battle_Text_3:
 	.string "Win or lose, I'll always battle with my\n"
 	.string "favourite monsters.$"
 

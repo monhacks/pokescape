@@ -81,6 +81,7 @@ script HAM_WHITEOUT
         hidenamebox
     }
     setvar(VAR_TEMP_B, 2)
+    setflag(FLAG_TEMP_10)
     clearflag(FLAG_HAM_JAILED)
     release
     end
@@ -114,7 +115,7 @@ script HAM_HIDEOUT_GATE
             //Zanik unlocks the door.
             //TODO: check where Zanik is standing to prevent any clipping. atm this assumes she is right behind you north and south
             getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
-            if (var(VAR_TEMP_1) == 5) {
+            if (var(VAR_TEMP_1) == 6) {
                 applymovement(OBJ_EVENT_ID_PLAYER, HAM_Hideout_Player_Jail_Walk_Right)
                 applymovement(OBJ_EVENT_ID_FOLLOWER, HAM_Hideout_Jail_Zanik_Walk_Up)
                 waitmovement(0)
@@ -186,7 +187,12 @@ script HAMHIDEOUT_BankChest {
 
 script HAMHIDEOUT_Guard {
     lock
-    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {
+    if (flag(FLAG_TEMP_10)) {
+        faceplayer
+        namebox ("H.A.M Guard")
+        msgbox(format("Zzz…{PAUSE 15}…\pHuh?!{PAUSE 15} What?!\nHow did you get out!?\pI've sounded the alarm!\pYou both won't be getting away now!"))
+    }
+    elif (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 235) {
         faceplayer
         namebox ("H.A.M Guard")
         msgbox(format("I've sounded the alarm!\pYou both won't be getting away now!"))

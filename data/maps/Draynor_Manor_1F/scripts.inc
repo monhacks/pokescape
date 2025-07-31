@@ -1021,6 +1021,9 @@ TRIGGER_ARIANE_DRAYNORMANOR_1F_6_6:
 	msgbox TRIGGER_ARIANE_DRAYNORMANOR_1F_6_Text_0
 	closemessage
 	hidenamebox
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_RIGHT
+	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_WALK_RIGHT
+	waitmovement 0
 	release
 	end
 

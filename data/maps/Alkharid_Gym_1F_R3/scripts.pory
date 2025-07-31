@@ -116,17 +116,21 @@ script GYM_NPC_1
                 end
             }
         }
-    if (flag(FLAG_BADGE04_GET)) { //If Gym badge is obtained.
+    if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
+        namebox("Warrior")
         msgbox(format("Hello congrats on beating the gym."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
+        namebox("Warrior")
         msgbox(format("Hello."))
     }
     else {
+        namebox("Warrior")
         msgbox(format("We use our lives to protect our prince."))
     }
+    closemessage
     release
     end
 }
@@ -192,17 +196,21 @@ script GYM_NPC_2
                 end
             }
         }
-    if (flag(FLAG_BADGE04_GET)) { //If Gym badge is obtained.
+    if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
+        namebox("Warrior")
         msgbox(format("Hello congrats on beating the gym."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
+        namebox("Warrior")
         msgbox(format("Hello this is the gym."))
     }
     else {
+        namebox("Warrior")
         msgbox(format("We use our lives to protect our prince."))
     }
+    closemessage
     release
     end
 }

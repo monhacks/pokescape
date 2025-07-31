@@ -174,25 +174,9 @@ script BLOCK_ROUTE_39
 	waitmovement (0)
 	msgbox(format("There's a deadly storm brewing beyond here!\pIt's far too dangerous to sail beyond this point!\pCome back once it has subsided."))
 	closemessage
-	applymovement (OBJ_EVENT_ID_PLAYER,movement_BLOCK_ROUTE_39)
+	applymovement (OBJ_EVENT_ID_PLAYER,movement_WALK_DOWN_1_STEP)
 	waitmovement (0)
 	return
 }
 
 
-script TRIGGER_ROUTE_39_BLOCK
-{
-	if (!flag(FLAG_BADGE04_GET))
-        {
-			call(BLOCK_ROUTE_39)
-        }
-	release
-	end
-}
-
-//I don't know how what criteria you want this locked behind so I just went with the same badge as the Al Kharid one
-
-movement movement_BLOCK_ROUTE_39
-{
-	walk_down
-}

@@ -168,25 +168,10 @@ BLOCK_ROUTE_39::
 	waitmovement 0
 	msgbox BLOCK_ROUTE_39_Text_0
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, movement_BLOCK_ROUTE_39
+	applymovement OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP
 	waitmovement 0
 	return
 
-
-TRIGGER_ROUTE_39_BLOCK::
-	goto_if_unset FLAG_BADGE04_GET, TRIGGER_ROUTE_39_BLOCK_2
-TRIGGER_ROUTE_39_BLOCK_1:
-	release
-	end
-
-TRIGGER_ROUTE_39_BLOCK_2:
-	call BLOCK_ROUTE_39
-	goto TRIGGER_ROUTE_39_BLOCK_1
-
-
-movement_BLOCK_ROUTE_39:
-	walk_down
-	step_end
 
 ENCOUNTER_PENGUIN_BARREL_ROUTE39_Text_0:
 	.string "Penguin$"

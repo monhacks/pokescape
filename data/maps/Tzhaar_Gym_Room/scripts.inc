@@ -26,6 +26,7 @@ TZHAAR_GYM_ROOM_POST_WIN::
 	msgbox TZHAAR_GYM_ROOM_POST_WIN_Text_1
 	closemessage
 	hidenamebox
+	addtokkul 5000, 0
 	setvar VAR_TEMP_E, 5000
 	call GIVE_TOKKUL
 	namebox TZHAAR_GYM_ROOM_POST_WIN_Text_0
@@ -117,7 +118,6 @@ NPC_TZHAAR_GYM_TOKHAAR_11:
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	namebox NPC_TZHAAR_GYM_TOKHAAR_Text_0
 	msgbox NPC_TZHAAR_GYM_TOKHAAR_Text_11
-	setflag FLAG_BADGE05_GET
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 2
 	call HIDDEN_GROTTO_RESET
 	addvar VAR_GAMEMODE_LEVEL_SCALING, 1

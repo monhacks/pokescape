@@ -104,7 +104,7 @@ script NPC_TZHAAR_GYM_TOKHAAR
             namebox("TokHaar-Hok")
             msgbox(format("That move is called Power Gem.\pIt sparkles just as all our precious Gems around the palace do."))
             //setvar(VAR_POKESCAPE_TZHAAR_GYM_QUEST, 30)
-            setflag(FLAG_BADGE05_GET)
+            //setflag(FLAG_BADGE05_GET) //THIS NPC GYM CHALLENGE IS UNUSED
             subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 2)
             call(HIDDEN_GROTTO_RESET)
             addvar(VAR_GAMEMODE_LEVEL_SCALING, 1) //INCREASES LEVEL SCALING & SHOPS
