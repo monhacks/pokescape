@@ -50,7 +50,6 @@ ALKHARID_GYM_STATE_4:
 	addobject 5
 	setobjectxy 1, 10, 6
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_DOWN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_3
 	waitmovement 0
 	setobjectxy 2, 11, 9
 	addobject 7
@@ -139,10 +138,22 @@ QUEST_ALKHARID_GYM_1::
 	setvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 3
 	fadescreenswapbuffers FADE_TO_BLACK
 	call ALKHARID_GYM_STATE
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 8, QUEST_ALKHARID_GYM_1_6
+	case 9, QUEST_ALKHARID_GYM_1_7
+	case 10, QUEST_ALKHARID_GYM_1_8
+	case 11, QUEST_ALKHARID_GYM_1_9
+	case 12, QUEST_ALKHARID_GYM_1_10
+QUEST_ALKHARID_GYM_1_4:
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	applymovement 2, Movement_InteractFACEUP
 	waitmovement 0
 	fadescreenswapbuffers FADE_FROM_BLACK
+	delay 15
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	applymovement 2, Movement_InteractFACELEFT
 	waitmovement 0
 	namebox QUEST_ALKHARID_GYM_1_Text_0
 	msgbox QUEST_ALKHARID_GYM_1_Text_4
@@ -184,10 +195,66 @@ QUEST_ALKHARID_GYM_1_2:
 	msgbox QUEST_ALKHARID_GYM_1_Text_2
 	closemessage
 	hidenamebox
+	turnobject 2, DIR_SOUTH
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN
 	waitmovement 0
 	return
 
+QUEST_ALKHARID_GYM_1_6:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_1
+	goto QUEST_ALKHARID_GYM_1_4
+
+QUEST_ALKHARID_GYM_1_7:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_2
+	goto QUEST_ALKHARID_GYM_1_4
+
+QUEST_ALKHARID_GYM_1_8:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_3
+	goto QUEST_ALKHARID_GYM_1_4
+
+QUEST_ALKHARID_GYM_1_9:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_4
+	goto QUEST_ALKHARID_GYM_1_4
+
+QUEST_ALKHARID_GYM_1_10:
+	applymovement OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_5
+	goto QUEST_ALKHARID_GYM_1_4
+
+
+movement_osman_challenge_start_1:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+movement_osman_challenge_start_2:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+movement_osman_challenge_start_3:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+movement_osman_challenge_start_4:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+movement_osman_challenge_start_5:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
 
 Movement_LOCK_WALK_UP:
 	lock_facing_direction
@@ -210,11 +277,11 @@ NPC_ALKHARID_OSMAN::
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq NPC_ALKHARID_OSMAN_2
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
-	goto_if_eq NPC_ALKHARID_OSMAN_5
-NPC_ALKHARID_OSMAN_4:
+	goto_if_eq NPC_ALKHARID_OSMAN_3
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 15
-	goto_if_eq NPC_ALKHARID_OSMAN_8
-NPC_ALKHARID_OSMAN_7:
+	goto_if_eq NPC_ALKHARID_OSMAN_4
+	msgbox NPC_ALKHARID_OSMAN_Text_2
+NPC_ALKHARID_OSMAN_1:
 	release
 	end
 
@@ -223,13 +290,13 @@ NPC_ALKHARID_OSMAN_2:
 	release
 	end
 
-NPC_ALKHARID_OSMAN_5:
+NPC_ALKHARID_OSMAN_3:
 	msgbox NPC_ALKHARID_OSMAN_Text_0
-	goto NPC_ALKHARID_OSMAN_4
+	goto NPC_ALKHARID_OSMAN_1
 
-NPC_ALKHARID_OSMAN_8:
+NPC_ALKHARID_OSMAN_4:
 	msgbox NPC_ALKHARID_OSMAN_Text_1
-	goto NPC_ALKHARID_OSMAN_7
+	goto NPC_ALKHARID_OSMAN_1
 
 
 ALKHARID_GYM_ALI::
@@ -408,7 +475,8 @@ UTILITY_TOOLS_5:
 GYM_NPC_0::
 	lock
 	faceplayer
-	msgbox GYM_NPC_0_Text_0
+	namebox GYM_NPC_0_Text_0
+	msgbox GYM_NPC_0_Text_1
 	release
 	end
 
@@ -465,24 +533,24 @@ ALKHARID_GYM_ItsNotAli_1:
 	return
 
 ALKHARID_GYM_ItsNotAli_3:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
-	msgbox ALKHARID_GYM_ItsNotAli_Text_1
+	namebox GYM_NPC_0_Text_0
+	msgbox ALKHARID_GYM_ItsNotAli_Text_0
 	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
 	hidenamebox
 	closemessage
 	goto ALKHARID_GYM_ItsNotAli_1
 
 ALKHARID_GYM_ItsNotAli_4:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
-	msgbox ALKHARID_GYM_ItsNotAli_Text_2
+	namebox GYM_NPC_0_Text_0
+	msgbox ALKHARID_GYM_ItsNotAli_Text_1
 	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
 	hidenamebox
 	closemessage
 	goto ALKHARID_GYM_ItsNotAli_1
 
 ALKHARID_GYM_ItsNotAli_5:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
-	msgbox ALKHARID_GYM_ItsNotAli_Text_3
+	namebox GYM_NPC_0_Text_0
+	msgbox ALKHARID_GYM_ItsNotAli_Text_2
 	subvar VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 1
 	hidenamebox
 	closemessage
@@ -490,7 +558,7 @@ ALKHARID_GYM_ItsNotAli_5:
 
 
 ALKHARID_GYM_ItsIsPrinceAli::
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox ALKHARID_GYM_ItsIsPrinceAli_Text_0
 	namebox QUEST_ALKHARID_GYM_1_Text_5
 	msgbox ALKHARID_GYM_ItsIsPrinceAli_Text_1
@@ -522,7 +590,7 @@ GYM_NPC_7_1:
 	goto_if_set FLAG_BADGE06_GET, GYM_NPC_7_5
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_7_10
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_5
 GYM_NPC_7_9:
 	closemessage
@@ -535,7 +603,7 @@ GYM_NPC_7_2:
 	goto GYM_NPC_7_1
 
 GYM_NPC_7_5:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_3
 	release
 	end
@@ -548,12 +616,12 @@ GYM_NPC_7_7:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT
 	waitmovement 0
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_4, GYM_ALKHARID_TRAINER_1_Text_2
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_2
 	closemessage
 	hidenamebox
@@ -562,7 +630,7 @@ GYM_NPC_7_7:
 	end
 
 GYM_NPC_7_10:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_4
 	goto GYM_NPC_7_9
 
@@ -580,13 +648,14 @@ GYM_NPC_7_14:
 	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT
 	waitmovement 0
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_4, GYM_ALKHARID_TRAINER_1_Text_2
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq GYM_NPC_7_17
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_1
 	closemessage
 	hidenamebox
@@ -610,8 +679,8 @@ GYM_NPC_8_1:
 	goto_if_set FLAG_BADGE06_GET, GYM_NPC_8_5
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_8_10
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
-	msgbox GYM_NPC_7_Text_5
+	namebox GYM_NPC_0_Text_0
+	msgbox GYM_NPC_8_Text_2
 GYM_NPC_8_9:
 	closemessage
 	release
@@ -623,8 +692,8 @@ GYM_NPC_8_2:
 	goto GYM_NPC_8_1
 
 GYM_NPC_8_5:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
-	msgbox GYM_NPC_7_Text_3
+	namebox GYM_NPC_0_Text_0
+	msgbox GYM_NPC_8_Text_0
 	release
 	end
 
@@ -636,12 +705,12 @@ GYM_NPC_8_7:
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
 	waitmovement 0
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_4, GYM_ALKHARID_TRAINER_1_Text_2
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_2
 	closemessage
 	hidenamebox
@@ -650,8 +719,8 @@ GYM_NPC_8_7:
 	end
 
 GYM_NPC_8_10:
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
-	msgbox GYM_NPC_7_Text_4
+	namebox GYM_NPC_0_Text_0
+	msgbox GYM_NPC_8_Text_1
 	goto GYM_NPC_8_9
 
 GYM_NPC_8_14:
@@ -668,13 +737,14 @@ GYM_NPC_8_14:
 	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
 	waitmovement 0
-	namebox ALKHARID_GYM_ItsNotAli_Text_0
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
 	closemessage
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_4, GYM_ALKHARID_TRAINER_1_Text_2
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq GYM_NPC_8_17
+	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_7_Text_1
 	closemessage
 	hidenamebox
@@ -808,16 +878,22 @@ QUEST_ALKHARID_GYM_1_Text_8:
 	.string "me.$"
 
 NPC_ALKHARID_OSMAN_Text_0:
-	.string "I am quite the Master Spy at times.\p"
-	.string "Although when spoken to while in\n"
-	.string "disguise I sometimes give away my\l"
-	.string "disguse by sneezing.$"
+	.string "Well done, you found the prince.\p"
+	.string "Was it hard?\p"
+	.string "Either way, you may now challenge him to\n"
+	.string "a battle.$"
 
 NPC_ALKHARID_OSMAN_Text_1:
 	.string "Do you need a hint?\p"
 	.string "Try checking all the rooms of the\n"
 	.string "palace.\p"
 	.string "He could be hiding in one of them.$"
+
+NPC_ALKHARID_OSMAN_Text_2:
+	.string "I am quite the Master Spy at times.\p"
+	.string "Although when spoken to while in\n"
+	.string "disguise I sometimes give away my\l"
+	.string "disguse by sneezing.$"
 
 ALKHARID_GYM_ALI_Text_0:
 	.string "Welcome to the Al Kharid Gym.$"
@@ -892,8 +968,12 @@ UTILITY_TOOLS_Text_0:
 	.string "What can I assist you with?$"
 
 GYM_NPC_0_Text_0:
-	.string "The prince has gone back to the throne\n"
-	.string "room.$"
+	.string "Warrior$"
+
+GYM_NPC_0_Text_1:
+	.string "Congratulations on finding the prince.\p"
+	.string "Where is he now?\p"
+	.string "Who knows… Maybe the throne room…$"
 
 GYM_ALKHARID_TRAINER_1_Text_0:
 	.string "Guard$"
@@ -906,19 +986,16 @@ GYM_ALKHARID_TRAINER_1_Text_2:
 	.string "Consider that a warning!$"
 
 ALKHARID_GYM_ItsNotAli_Text_0:
-	.string "Warrior$"
-
-ALKHARID_GYM_ItsNotAli_Text_1:
 	.string "You found me!\p"
 	.string "Yep, that's right, you found me.\p"
 	.string "I am simply known as the Greatest\n"
 	.string "Warrior of Alkharid or GWoA for short.$"
 
-ALKHARID_GYM_ItsNotAli_Text_2:
+ALKHARID_GYM_ItsNotAli_Text_1:
 	.string "Tomorrow I am going to show those\n"
 	.string "pesky Merchants who owns this town.$"
 
-ALKHARID_GYM_ItsNotAli_Text_3:
+ALKHARID_GYM_ItsNotAli_Text_2:
 	.string "Are you asking for a fight?$"
 
 ALKHARID_GYM_ItsIsPrinceAli_Text_0:
@@ -944,13 +1021,28 @@ GYM_NPC_7_Text_2:
 	.string "around the Palace.$"
 
 GYM_NPC_7_Text_3:
-	.string "Hello congrats on beating the gym.$"
+	.string "Have you ever considered joining us?\p"
+	.string "I would love to have a brother as\n"
+	.string "powerful as yourself.$"
 
 GYM_NPC_7_Text_4:
-	.string "Hello.$"
+	.string "Welcome to the throne room.\p"
+	.string "Be on your best behaviour.$"
 
 GYM_NPC_7_Text_5:
-	.string "We use our lives to protect our prince.$"
+	.string "It's okay, my brothers will pull through.$"
+
+GYM_NPC_8_Text_0:
+	.string "Sand crabs man…\p"
+	.string "They're everywhere, they get into\n"
+	.string "everything!$"
+
+GYM_NPC_8_Text_1:
+	.string "Gym challenge?\p"
+	.string "Speak with Osman.$"
+
+GYM_NPC_8_Text_2:
+	.string "Together we will tackle any challenge!$"
 
 BARROWS_GUTHAN_Text_0:
 	.string "Guthan$"

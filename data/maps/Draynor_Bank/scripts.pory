@@ -321,3 +321,32 @@ script ProfNormalTree_Assistant_GiveReward_EDGEVILLE {
 	setflag(FLAG_NORMALTREE_ASSISTANT_5)
 	return
 }
+
+
+
+script ProfNormalTree_PORTSARIM {
+	setvar(VAR_TEMP_1, 20)
+	buffernumberstring (STR_VAR_1, VAR_TEMP_1)
+	lock
+    faceplayer
+    namebox("Assistant")
+	if (flag(FLAG_NORMALTREE_ASSISTANT_6) == TRUE) 
+	{
+		msgbox(format("Good to see you again, I hope you've been finding new monsters!"))
+		call(ProfNormalTree_Assistant_Info)
+	}
+	else {
+		msgbox(format("I'm one of Professor Normal Tree's Assistants.\pI've been instructed to review the Bestiary's of MvM participants."))
+		call(ProfNormalTree_Assistant)
+	}
+	closemessage
+	hidenamebox
+	release
+	end
+}
+script ProfNormalTree_Assistant_GiveReward_PORTSARIM {
+	msgbox(format("Fantastic!\pYou've registered {STR_VAR_3} monsters!\pPlease take these as a reward."))
+	giveitem(ITEM_EXP_CANDY_M, 5)
+	setflag(FLAG_NORMALTREE_ASSISTANT_6)
+	return
+}

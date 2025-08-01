@@ -54,6 +54,7 @@ script TELEPORT_TO_SHIP_SCENE
 script CRANDOR_SHIP_SCENE
 {
     lockall
+    setweather(WEATHER_SUNNY)
     setflag(FLAG_TEMP_10)
     removeobject(OBJ_EVENT_ID_CABIN_BOY)
     setobjectxyperm(OBJ_EVENT_ID_ELVARG, 34, 14)

@@ -60,6 +60,7 @@ script GYM_NPC_3
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -94,7 +95,7 @@ script GYM_NPC_3
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("Navigating through the harsh desert is even more of a challenge then our gym.\pI wonder if you will be able overcome that challenge too?"))
         release
         end
     }
@@ -104,7 +105,7 @@ script GYM_NPC_3
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("My brothers…"))
     }
     closemessage
     release
@@ -143,6 +144,7 @@ script GYM_NPC_4
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -175,17 +177,17 @@ script GYM_NPC_4
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("My brothers and I congratulate you on your victory.\pYou put up a good fight."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello this is the gym."))
+        msgbox(format("This is where us guards rest.\pWe are on call all hours of the day and night!"))
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("We must protect our prince til the very end!"))
     }
     closemessage
     release

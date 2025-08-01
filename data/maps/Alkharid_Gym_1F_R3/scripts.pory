@@ -88,6 +88,7 @@ script GYM_NPC_1
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -118,17 +119,17 @@ script GYM_NPC_1
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("The other day a Magicarpet flew out from underneath my feet!\pI thought it was just a regular carpet…"))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello."))
+        msgbox(format("Greetings, if you wish to take up the challenge of the AlKharid Gym, then speak with Osman in the throne room."))
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("I will continue to protect the prince forever!"))
     }
     closemessage
     release
@@ -167,6 +168,7 @@ script GYM_NPC_2
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -198,17 +200,17 @@ script GYM_NPC_2
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("Vultures are the best monsters to train, wouldn't you agree?"))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello this is the gym."))
+        msgbox(format("Are you are gym challenger?\pSpeak to Osman in the throne room."))
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("We defend our brothers like they are family.\pBecause they are our family."))
     }
     closemessage
     release

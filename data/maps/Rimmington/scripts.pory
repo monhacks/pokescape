@@ -1118,9 +1118,13 @@ script NPC_RIMMINGTON_NPC_4
 {
     lock
     faceplayer
-    namebox("ROMMIK")
-    msgbox(format("Welcome to my clothing store.\pWould you like to change your outfit?"))
+    namebox("Rommik")
+    msgbox(format("Welcome to my clothing store.\pHow can I help you?"))
+    waitmessage
+    pokemartoutfit (STORE_CLOTHES_RIMMINGTON)
+    msgbox(format("See you later!"))
     hidenamebox
+    closemessage
     release
     end
 }

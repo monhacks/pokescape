@@ -38,10 +38,7 @@ script GYM_NPC_5
                     removeobject(VAR_LAST_TALKED)
                     addobject(1) // extra guard
                     clearflag(FLAG_TEMP_6)
-                    applymovement(3, Movement_AlkharidGym_NPC_5)
-                    applymovement(1, Movement_AlkharidGym_NPC_5_Ali)
-                    delay(60)
-                    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP)
+                    call(GYM_MOVEMENT_FOUND_ALI_NPC5)
                     waitmovement(0)
                     namebox("Warrior")
                     msgbox(format("Brother, I will help thee with this infidel!"))
@@ -52,6 +49,7 @@ script GYM_NPC_5
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -62,10 +60,7 @@ script GYM_NPC_5
                     release
                     end
                 }
-                applymovement(3, Movement_AlkharidGym_NPC_5)
-                waitmovement(0)
-                applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP)
-                waitmovement(0)
+                call(GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC5)
                 namebox("Warrior")
                 msgbox(format("Brother, I will help thee with this infidel!"))
                 hidenamebox
@@ -82,30 +77,87 @@ script GYM_NPC_5
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("Have you heard of our lord and savior Tumeken and Elindis?"))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello."))
+        msgbox(format("Do you think you have what it takes to defeat Al Kharid's elite fighting force?"))
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("My prince has fled the scene!\pJust as we planned!"))
     }
     closemessage
     release
     end
 }
+script GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC5 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 5: 
+            applymovement(3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC5_1)
+        case 6: 
+            applymovement(3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC5_2)
+    }
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC5_1 {
+    walk_faster_down
+    walk_faster_left * 4
+    walk_faster_down * 2
+    step_end
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC5_2 {
+    walk_faster_down
+    walk_faster_left * 3
+    walk_faster_down * 3
+    step_end
+}
+
+script GYM_MOVEMENT_FOUND_ALI_NPC5 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 5: 
+            applymovement(3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC5_1)
+            applymovement(1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC5_1)
+        case 6: 
+            applymovement(3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC5_2)
+            applymovement(1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC5_2)
+    }
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP)
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC5_1
+{
+    walk_faster_left * 10
+    walk_faster_down * 2
+    walk_faster_left * 1
+    step_end
+} 
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC5_2
+{
+    walk_faster_left * 10
+    walk_faster_down * 3
+    face_left
+    step_end
+} 
+
+
+
+
 
 script GYM_NPC_6
 {
     lock
-    faceplayer
     if (flag(FLAG_ALKHARIDGYM_3) == FALSE)
 		{	
             if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==15) { //If Gym Challenge.
+                faceplayer
                 call(CHECK_IF_ALI)
                 if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==20) {
                     msgbox(format("Guards help me as I make my escape!"))
@@ -116,11 +168,7 @@ script GYM_NPC_6
                     removeobject(VAR_LAST_TALKED)
                     addobject(1) // extra guard
                     clearflag(FLAG_TEMP_6)
-                    applymovement(2, Movement_AlkharidGym_NPC_6)
-                    applymovement(1, Movement_AlkharidGym_NPC_6_Ali)
-                    delay(60)
-                    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN)
-                    waitmovement(0)
+                    call(GYM_MOVEMENT_FOUND_ALI_NPC6)
                     namebox("Warrior")
                     msgbox(format("Brother, I will help thee with this infidel!"))
                     hidenamebox
@@ -130,6 +178,7 @@ script GYM_NPC_6
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -140,10 +189,7 @@ script GYM_NPC_6
                     release
                     end
                 }
-                applymovement(2, Movement_AlkharidGym_NPC_6)
-                waitmovement(0)
-                applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN)
-                waitmovement(0)
+                call(GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC6)
                 namebox("Warrior")
                 msgbox(format("Brother, I will help thee with this infidel!"))
                 hidenamebox
@@ -159,23 +205,103 @@ script GYM_NPC_6
             }
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
+        faceplayer
         namebox("Warrior")
-        msgbox(format("Congratulations on beating the gym."))
+        msgbox(format("Have you ever wondered who drew that tastyful picture upon the wall?\pI believe it was an artist called Mod Blkwitch.\pI swear it has some magical power over me everytime I look at it though…"))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello. Do you think you have what it takes to defeat Al Kharid's elite fighting force?"))
+        msgbox(format("My, this picture…\pI feel so many things from it…\pHail lord Zam…"))
+        faceplayer
+        namebox("Warrior")
+        msgbox(format("Huh?\pWhat was I saying!?\pPrince Ali is the only man for me."))
+        turnobject(VAR_LAST_TALKED, DIR_NORTH)
     }
     else {
+        faceplayer
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("My brothers, have you seen this picture yet?"))
     }
     closemessage
     release
     end
 }
+script GYM_MOVEMENT_FOUND_ALI_NPC6 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 8: 
+            applymovement(2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_1)
+            applymovement(1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_1)
+        case 9: 
+            applymovement(2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_2)
+            applymovement(1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_2)
+        case 10: 
+            applymovement(2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_3)
+            applymovement(1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_3)
+    }
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN)
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_1
+{
+    walk_faster_left * 8
+    walk_faster_up * 2
+    face_right
+    step_end
+} 
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_2
+{
+    walk_faster_left * 7
+    walk_faster_up * 1
+    face_left
+    step_end
+} 
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_3
+{
+    walk_faster_left * 8
+    walk_faster_up * 2
+    face_right    
+    step_end
+} 
+script GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC6 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 8: 
+            applymovement(2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_1)
+        case 9: 
+            applymovement(2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_2)
+        case 10: 
+            applymovement(2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_3)
+    }
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_1
+{
+    walk_faster_up * 2
+    walk_faster_right * 3
+    walk_faster_up * 2
+    face_player
+} 
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_2
+{
+    walk_faster_up * 2
+    walk_faster_right * 4
+    walk_faster_up * 1
+    face_player
+} 
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC6_3
+{
+    walk_faster_up * 2
+    walk_faster_right * 5
+    walk_faster_up * 2
+    face_player
+} 
+
 
 
 

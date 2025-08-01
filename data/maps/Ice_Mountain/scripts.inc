@@ -17,14 +17,14 @@ Ice_Mountain_MapScripts_MAP_SCRIPT_ON_LOAD:
 
 RANDOM_EVENT_SPAWNS_ICEMOUNTAIN::
 	random 10
-	compare VAR_RESULT, 1
-	goto_if_eq RANDOM_EVENT_SPAWNS_ICEMOUNTAIN_2
+	switch VAR_RESULT
+	case 1, RANDOM_EVENT_SPAWNS_ICEMOUNTAIN_3
 	setflag FLAG_TEMP_2
 	removeobject 12
 RANDOM_EVENT_SPAWNS_ICEMOUNTAIN_1:
 	return
 
-RANDOM_EVENT_SPAWNS_ICEMOUNTAIN_2:
+RANDOM_EVENT_SPAWNS_ICEMOUNTAIN_3:
 	clearflag FLAG_TEMP_2
 	addobject 12
 	goto RANDOM_EVENT_SPAWNS_ICEMOUNTAIN_1
@@ -497,28 +497,28 @@ EVENT_ICE_MOUNTAIN_GUARDS::
 	end
 
 
-GUARD_M::
+GUARD_G::
 	lock
 	faceplayer
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 186
-	goto_if_eq GUARD_M_2
+	goto_if_eq GUARD_G_2
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 187
-	goto_if_ge GUARD_M_3
-	namebox EVENT_ICE_MOUNTAIN_GUARDS_Text_2
-	msgbox GUARD_M_Text_1
+	goto_if_ge GUARD_G_3
+	namebox EVENT_ICE_MOUNTAIN_GUARDS_Text_0
+	msgbox GUARD_G_Text_1
 	closemessage
 	hidenamebox
-GUARD_M_1:
+GUARD_G_1:
 	release
 	end
 
-GUARD_M_2:
+GUARD_G_2:
 	goto EVENT_ICE_MOUNTAIN_GUARDS
-	goto GUARD_M_1
+	goto GUARD_G_1
 
-GUARD_M_3:
-	msgbox GUARD_M_Text_0
-	goto GUARD_M_1
+GUARD_G_3:
+	msgbox GUARD_G_Text_0
+	goto GUARD_G_1
 
 
 GUARD_F::
@@ -738,7 +738,7 @@ TRIGGER_STORYMODE_EVENT_ICE_MOUNTAIN_GUARDS_Text_1:
 	.string "Let's go pay our little friends a visit.$"
 
 EVENT_ICE_MOUNTAIN_GUARDS_Text_0:
-	.string "Guard M$"
+	.string "Guard G$"
 
 EVENT_ICE_MOUNTAIN_GUARDS_Text_1:
 	.string "Hey, who are you two?\p"
@@ -768,11 +768,11 @@ EVENT_ICE_MOUNTAIN_GUARDS_Text_7:
 	.string "Although I do feel a bit bad for leaving\n"
 	.string "them out in the cold…$"
 
-GUARD_M_Text_0:
+GUARD_G_Text_0:
 	.string "There is no response as they're\n"
 	.string "unconscious.$"
 
-GUARD_M_Text_1:
+GUARD_G_Text_1:
 	.string "We are on the lookout for passing White\n"
 	.string "Knights.\p"
 	.string "You over there seem to be a Temple\n"

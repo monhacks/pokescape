@@ -270,6 +270,36 @@ ALKHARID_NPC_18::
 	end
 
 
+ALKHARID_NPC_19::
+	faceplayer
+	namebox ALKHARID_NPC_19_Text_0
+	msgbox ALKHARID_NPC_19_Text_1
+	closemessage
+	hidenamebox
+	release
+	end
+
+
+ALKHARID_NPC_20::
+	faceplayer
+	namebox ALKHARID_NPC_4_Text_0
+	msgbox ALKHARID_NPC_20_Text_0
+	closemessage
+	hidenamebox
+	release
+	end
+
+
+ALKHARID_NPC_21::
+	faceplayer
+	namebox ALKHARID_NPC_4_Text_0
+	msgbox ALKHARID_NPC_21_Text_0
+	closemessage
+	hidenamebox
+	release
+	end
+
+
 ALKHARID_INDOOR_NPC_1::
 	faceplayer
 	namebox ALKHARID_INDOOR_NPC_1_Text_0
@@ -1029,6 +1059,22 @@ ALKHARID_NPC_18_Text_1:
 	.string "courses was a good way to level Agility…\p"
 	.string "but I have been up here going in circles\n"
 	.string "for hours and not gained a single xp!$"
+
+ALKHARID_NPC_19_Text_0:
+	.string "Noob$"
+
+ALKHARID_NPC_19_Text_1:
+	.string "Huh, I thought the palace entrance was\n"
+	.string "always on the north side, not the south\l"
+	.string "side.\p"
+	.string "Eh, must've drank to much Sq'irkjuice.$"
+
+ALKHARID_NPC_20_Text_0:
+	.string "Welcome to the Palace of Al Kharid.$"
+
+ALKHARID_NPC_21_Text_0:
+	.string "Behave yourself otherwise I will call my\n"
+	.string "brothers.$"
 
 ALKHARID_INDOOR_NPC_1_Text_0:
 	.string "Ranger$"

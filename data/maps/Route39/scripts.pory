@@ -13,13 +13,13 @@ mapscripts Route39_MapScripts{
 
 script RANDOM_EVENT_SPAWNS_ROUTE39 {
 	random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_5)
-		addobject(26)
-	}
-	else {
-		setflag(FLAG_TEMP_5)
-		removeobject(26)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_5)
+			addobject(26)
+		default:
+			setflag(FLAG_TEMP_5)
+			removeobject(26)
 	}
 	return
 }

@@ -19959,6 +19959,36 @@
                 "species": "SPECIES_TUROTH"
               }
             ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_PET_ROCK"
+              },
+              {
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_TUROTH"
+              },
+              {
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_STRYKEWYRM_MINI_FORM"
+              },
+              {
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_MINITRICE"
+              },
+              {
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_DARK_BEAST_PUP_FORM"
+              }
+            ]
           }
         },
         {
@@ -20030,7 +20060,7 @@
             ]
           },
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 23,
@@ -32544,29 +32574,29 @@
             "encounter_rate": 100,
             "mons": [
               {
-                "min_level": 25,
-                "max_level": 29,
-                "species": "SPECIES_ROCK_CRAB_NORMAL_FORM"
-              },
-              {
-                "min_level": 25,
-                "max_level": 30,
-                "species": "SPECIES_ROCK_CRAB_NORMAL_FORM"
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_PET_ROCK"
               },
               {
                 "min_level": 26,
-                "max_level": 30,
-                "species": "SPECIES_ROCK_CRAB_AMMONITE_FORM"
+                "max_level": 35,
+                "species": "SPECIES_TUROTH"
               },
               {
                 "min_level": 26,
-                "max_level": 31,
-                "species": "SPECIES_ROCK_CRAB_AMMONITE_FORM"
+                "max_level": 35,
+                "species": "SPECIES_STRYKEWYRM_MINI_FORM"
               },
               {
-                "min_level": 27,
-                "max_level": 31,
-                "species": "SPECIES_ROCK_CRAB_AMMONITE_FORM"
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_MINITRICE"
+              },
+              {
+                "min_level": 26,
+                "max_level": 35,
+                "species": "SPECIES_DARK_BEAST_PUP_FORM"
               }
             ]
           }

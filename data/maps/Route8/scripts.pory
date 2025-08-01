@@ -580,6 +580,7 @@ script CRAFTINGGUILD_NPC_2
         closemessage
         hidenamebox
         giveitem(ITEM_TM42_POLLEN_PUFF)
+        namebox ("Crafter")
         msgbox(format("That scroll contains Pollen Puff.\pI've been told it is a good move for double battles."))
         closemessage
         hidenamebox

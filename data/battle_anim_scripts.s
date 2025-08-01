@@ -957,6 +957,9 @@ gBattleAnims_Moves::
 	.4byte Move_AUGURY    
 	.4byte Move_ANGUISH   
 	.4byte Move_DIVINERAGE
+	.4byte Move_VANILLA_OOZE
+	.4byte Move_STRAWBERRY_OOZE
+	.4byte Move_CHOCOLATE_OOZE
 
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
@@ -34362,6 +34365,11 @@ Move_AUGURY:
 Move_ANGUISH:
 Move_DIVINERAGE:
 	goto Move_HEALING_WISH
+
+Move_VANILLA_OOZE:
+Move_STRAWBERRY_OOZE:
+Move_CHOCOLATE_OOZE:
+	goto Move_MILK_DRINK
 
 Move_BERSERK:
 

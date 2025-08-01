@@ -42,8 +42,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 18,
-      "y": 4,
+      "x": 28,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 19,
-      "y": 5,
+      "x": 29,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -198,7 +198,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_POUCH",
-      "x": 34,
+      "x": 28,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",

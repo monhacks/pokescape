@@ -619,7 +619,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_genie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_doris;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_angrennouille;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ham_sack;
-
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_osman;
 
 
 
@@ -1253,6 +1253,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DORIS] =                         &gObjectEventGraphicsInfo_doris,
     [OBJ_EVENT_GFX_ANGRENNOUILLE] =                 &gObjectEventGraphicsInfo_angrennouille,
     [OBJ_EVENT_GFX_HAM_SACK] =                      &gObjectEventGraphicsInfo_ham_sack,
+    [OBJ_EVENT_GFX_OSMAN] =                         &gObjectEventGraphicsInfo_osman,
 
     
 //ORES 
@@ -1266,7 +1267,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_ORIKALKUM_ORE] =          	    &gObjectEventGraphicsInfo_OrikalkumOre,
 	[OBJ_EVENT_GFX_ELEMENTAL_ORE] =          	    &gObjectEventGraphicsInfo_ElementalOre,
 	[OBJ_EVENT_GFX_BANE_ORE] =          		    &gObjectEventGraphicsInfo_BaneOre,
-    [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
+    [OBJ_EVENT_GFX_LIGHT_SPRITE] =                  &gObjectEventGraphicsInfo_BallLight,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

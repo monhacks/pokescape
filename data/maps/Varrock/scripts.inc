@@ -625,6 +625,7 @@ VARROCK_NPC_Thessalia::
 	waitmessage
 	pokemartoutfit STORE_CLOTHES_THESSALIA
 	msgbox VARROCK_NPC_Thessalia_Text_2
+	closemessage
 	release
 	end
 

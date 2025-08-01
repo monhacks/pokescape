@@ -1153,7 +1153,11 @@ NPC_RIMMINGTON_NPC_4::
 	faceplayer
 	namebox NPC_RIMMINGTON_NPC_4_Text_0
 	msgbox NPC_RIMMINGTON_NPC_4_Text_1
+	waitmessage
+	pokemartoutfit STORE_CLOTHES_RIMMINGTON
+	msgbox NPC_RIMMINGTON_NPC_4_Text_2
 	hidenamebox
+	closemessage
 	release
 	end
 
@@ -1868,11 +1872,14 @@ NPC_RIMMINGTON_BONES_Text_0:
 	.string "It is a pile of Bones.$"
 
 NPC_RIMMINGTON_NPC_4_Text_0:
-	.string "ROMMIK$"
+	.string "Rommik$"
 
 NPC_RIMMINGTON_NPC_4_Text_1:
 	.string "Welcome to my clothing store.\p"
-	.string "Would you like to change your outfit?$"
+	.string "How can I help you?$"
+
+NPC_RIMMINGTON_NPC_4_Text_2:
+	.string "See you later!$"
 
 NPC_RIMMINGTON_NPC_5_Text_0:
 	.string "Gamezter006$"

@@ -18,15 +18,17 @@ mapscripts Ice_Mountain_MapScripts{
 }
 
 script RANDOM_EVENT_SPAWNS_ICEMOUNTAIN {
+
 	random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_2)
-		addobject(12)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_2)
+			addobject(12)
+		default:
+			setflag(FLAG_TEMP_2)
+			removeobject(12)
 	}
-	else {
-		setflag(FLAG_TEMP_2)
-		removeobject(12)
-	}
+
 	return
 }
 
@@ -417,7 +419,7 @@ script EVENT_ICE_MOUNTAIN_GUARDS {
 	clearflag(FLAG_TEMP_1F)
 	addobject(13)
     clearflag(FLAG_TEMP_1C)
-	namebox ("Guard M")
+	namebox ("Guard G")
 	msgbox(format("Hey, who are you two?\pWait you're a White Knight!"))
 	closemessage
 	hidenamebox
@@ -470,7 +472,7 @@ script EVENT_ICE_MOUNTAIN_GUARDS {
 	releaseall
 	end
 }
-script GUARD_M {
+script GUARD_G { 
 	lock
 	faceplayer
 	if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 186) {
@@ -480,7 +482,7 @@ script GUARD_M {
 		msgbox(format("There is no response as they're unconscious."))
 	}
 	else {
-		namebox ("Guard F")
+		namebox ("Guard G")
 		msgbox(format("We are on the lookout for passing White Knights.\pYou over there seem to be a Temple Knight.\pI don't think that goes under my jurisdiction."))
 		closemessage
 		hidenamebox

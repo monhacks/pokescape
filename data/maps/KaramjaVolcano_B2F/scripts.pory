@@ -9,24 +9,26 @@ mapscripts KaramjaVolcano_B2F_MapScripts {
 }
 
 script RANDOM_EVENT_SPAWNS_KARAMJA_VOLCANO_B2F {
-	random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_1)
-		addobject(10)
+    random(8)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_1)
+		    addobject(10)
+		default:
+			setflag(FLAG_TEMP_1)
+		    removeobject(10)
 	}
-	else {
-		setflag(FLAG_TEMP_1)
-		removeobject(10)
+
+    random(8)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_2)
+		    addobject(11)
+		default:
+			setflag(FLAG_TEMP_2)
+		    removeobject(11)
 	}
-    random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_2)
-		addobject(11)
-	}
-	else {
-		setflag(FLAG_TEMP_2)
-		removeobject(11)
-	}
+
 	return
 }
 

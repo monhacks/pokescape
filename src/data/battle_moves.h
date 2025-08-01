@@ -17159,8 +17159,54 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .mirrorMoveBanned = TRUE,
         .snatchAffected = TRUE,
     },
+
+    [MOVE_CHOCOLATE_OOZE] =
+    {
+        .effect = EFFECT_DIVINERAGE,
+        .power = 0,
+        .type = TYPE_GROUND,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .snatchAffected = TRUE,
+    },
+
+    [MOVE_STRAWBERRY_OOZE] =
+    {
+        .effect = EFFECT_DIVINERAGE,
+        .power = 0,
+        .type = TYPE_GROUND,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .snatchAffected = TRUE,
+    },
    
-    
+    [MOVE_VANILLA_OOZE] =
+    {
+        .effect = EFFECT_DIVINERAGE,
+        .power = 0,
+        .type = TYPE_GROUND,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .snatchAffected = TRUE,
+    },
    
 
 

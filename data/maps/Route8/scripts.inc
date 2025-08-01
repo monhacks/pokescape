@@ -548,6 +548,7 @@ CRAFTINGGUILD_NPC_2_2:
 	closemessage
 	hidenamebox
 	giveitem ITEM_TM42_POLLEN_PUFF
+	namebox CRAFTINGGUILD_NPC_1_Text_0
 	msgbox CRAFTINGGUILD_NPC_2_Text_2
 	closemessage
 	hidenamebox

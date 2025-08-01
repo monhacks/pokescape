@@ -345,6 +345,34 @@ ProfNormalTree_Assistant_GiveReward_EDGEVILLE::
 	return
 
 
+ProfNormalTree_PORTSARIM::
+	setvar VAR_TEMP_1, 20
+	buffernumberstring STR_VAR_1, VAR_TEMP_1
+	lock
+	faceplayer
+	namebox ProfNormalTree_Assistant_GiveReward_Text_0
+	goto_if_set FLAG_NORMALTREE_ASSISTANT_6, ProfNormalTree_PORTSARIM_2
+	msgbox ProfNormalTree_LUMBRIDGE_Text_1
+	call ProfNormalTree_Assistant
+ProfNormalTree_PORTSARIM_1:
+	closemessage
+	hidenamebox
+	release
+	end
+
+ProfNormalTree_PORTSARIM_2:
+	msgbox ProfNormalTree_LUMBRIDGE_Text_0
+	call ProfNormalTree_Assistant_Info
+	goto ProfNormalTree_PORTSARIM_1
+
+
+ProfNormalTree_Assistant_GiveReward_PORTSARIM::
+	msgbox ProfNormalTree_Assistant_GiveReward_Lumbridge_Text_0
+	giveitem ITEM_EXP_CANDY_M, 5
+	setflag FLAG_NORMALTREE_ASSISTANT_6
+	return
+
+
 NPC_DraynorBank_Qutiedoll_Text_0:
 	.string "Qutiedoll$"
 

@@ -291,7 +291,38 @@ script ALKHARID_NPC_18
     end
 }
 
+script ALKHARID_NPC_19
+{
+    faceplayer
+    namebox ("Noob")
+    msgbox(format("Huh, I thought the palace entrance was always on the north side, not the south side.\pEh, must've drank to much Sq'irkjuice."))
+    closemessage
+    hidenamebox
+    release
+    end
+}
 
+script ALKHARID_NPC_20
+{
+    faceplayer
+    namebox ("Guard")
+    msgbox(format("Welcome to the Palace of Al Kharid."))
+    closemessage
+    hidenamebox
+    release
+    end
+}
+
+script ALKHARID_NPC_21
+{
+    faceplayer
+    namebox ("Guard")
+    msgbox(format("Behave yourself otherwise I will call my brothers."))
+    closemessage
+    hidenamebox
+    release
+    end
+}
 
 script ALKHARID_INDOOR_NPC_1
 {

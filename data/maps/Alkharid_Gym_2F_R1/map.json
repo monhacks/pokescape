@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
-      "x": 4,
+      "x": 5,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",

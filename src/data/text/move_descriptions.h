@@ -3638,6 +3638,16 @@ static const u8 sAnguishDescription[] = _(
 static const u8 sDivineRageDescription[] = _(
     "\n"
     "");
+static const u8 sVanillaOozeDescription[] = _(
+    "\n"
+    "");
+static const u8 sStrawberryOozeDescription[] = _(
+    "\n"
+    "");
+static const u8 sChocolateOozeDescription[] = _(
+    "\n"
+    "");
+    
 
 #undef BINDING_TURNS
 
@@ -4575,6 +4585,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_AUGURY - 1] = sDAuguryDescription,
     [MOVE_ANGUISH - 1] = sAnguishDescription,
     [MOVE_DIVINERAGE - 1] = sDivineRageDescription,
+    [MOVE_VANILLA_OOZE - 1] = sVanillaOozeDescription,
+    [MOVE_STRAWBERRY_OOZE - 1] = sStrawberryOozeDescription,
+    [MOVE_CHOCOLATE_OOZE - 1] = sChocolateOozeDescription,
 
 
 

@@ -690,6 +690,7 @@ script VARROCK_NPC_Thessalia
     waitmessage
     pokemartoutfit (STORE_CLOTHES_THESSALIA)
     msgbox(format("See you later!"))
+    closemessage
     release
     end
 }

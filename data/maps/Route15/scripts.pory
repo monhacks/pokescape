@@ -9,24 +9,26 @@ mapscripts Route15_MapScripts {
 
 
 script RANDOM_EVENT_SPAWNS_ROUTE15 {
-	random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_3)
-		addobject(20)
-	}
-	else {
-		setflag(FLAG_TEMP_3)
-		removeobject(20)
-	}
     random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_2)
-		addobject(21)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_3)
+		    addobject(20)
+		default:
+			setflag(FLAG_TEMP_3)
+		    removeobject(20)
 	}
-	else {
-		setflag(FLAG_TEMP_2)
-		removeobject(21)
+
+    random(10)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_2)
+		    addobject(21)
+		default:
+			setflag(FLAG_TEMP_2)
+		    removeobject(21)
 	}
+
 	return
 }
 

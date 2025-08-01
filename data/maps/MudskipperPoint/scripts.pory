@@ -10,24 +10,26 @@ mapscripts MudskipperPoint_MapScripts {
 }
 
 script RANDOM_EVENT_SPAWNS_MUDSKIPPER_POINT {
-	random(8)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_5)
-		addobject(14)
-	}
-	else {
-		setflag(FLAG_TEMP_5)
-		removeobject(14)
-	}
     random(8)
-	if ((var(VAR_RESULT) == 0)) {
-		clearflag(FLAG_TEMP_4)
-		addobject(13)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_5)
+		    addobject(14)
+		default:
+			setflag(FLAG_TEMP_5)
+		    removeobject(14)
 	}
-	else {
-		setflag(FLAG_TEMP_4)
-		removeobject(13)
+
+    random(8)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_4)
+		    addobject(13)
+		default:
+			setflag(FLAG_TEMP_4)
+		    removeobject(13)
 	}
+
 	return
 }
 

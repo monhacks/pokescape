@@ -81,7 +81,6 @@ raw `
     .align 2
 STORE_CLOTHES_THESSALIA:
     .2byte OUTFIT_FARMER
-    .2byte OUTFIT_RSMV
     .2byte OUTFIT_WIZARD
     .2byte OUTFIT_NONE
     release
@@ -92,6 +91,15 @@ raw `
     .align 2
 STORE_CLOTHES_BARBARIAN:
     .2byte OUTFIT_BARBARIAN
+    .2byte OUTFIT_NONE
+    release
+    end
+`
+
+raw `
+    .align 2
+STORE_CLOTHES_RIMMINGTON:
+    .2byte OUTFIT_RSMV
     .2byte OUTFIT_NONE
     release
     end

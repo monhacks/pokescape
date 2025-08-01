@@ -98,7 +98,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 10,
-      "y": 32,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -162,12 +162,12 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 40,
-      "y": 14,
+      "x": 39,
+      "y": 12,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ALKHARID_NPC_6",
@@ -176,7 +176,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_OZAN",
       "x": 31,
-      "y": 33,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -202,7 +202,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
       "x": 29,
-      "y": 33,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -215,7 +215,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
       "x": 32,
-      "y": 33,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -266,7 +266,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
-      "x": 14,
+      "x": 13,
       "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -279,10 +279,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
-      "x": 38,
-      "y": 20,
+      "x": 40,
+      "y": 17,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
       "movement_range_x": 5,
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -306,40 +306,53 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
       "x": 29,
-      "y": 28,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ALKHARID_NPC_8",
+      "script": "ALKHARID_NPC_20",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
       "x": 32,
-      "y": 28,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ALKHARID_NPC_7",
+      "script": "ALKHARID_NPC_21",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GRACEFUL",
       "x": 35,
-      "y": 25,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ALKHARID_NPC_18",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LUKIENLIGHT",
+      "x": 24,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ALKHARID_NPC_19",
       "flag": "0"
     }
   ],
@@ -360,7 +373,7 @@
     },
     {
       "x": 30,
-      "y": 27,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ALKHARID_GYM_1F_R2",
       "dest_warp_id": "0"
@@ -374,7 +387,7 @@
     },
     {
       "x": 28,
-      "y": 31,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_ALKHARID_GYM_1F_R3",
       "dest_warp_id": "1"
@@ -388,14 +401,14 @@
     },
     {
       "x": 31,
-      "y": 27,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ALKHARID_GYM_1F_R2",
       "dest_warp_id": "0"
     },
     {
       "x": 33,
-      "y": 31,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_ALKHARID_GYM_1F_R1",
       "dest_warp_id": "1"
@@ -465,7 +478,7 @@
     },
     {
       "x": 26,
-      "y": 24,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ALKHARID_GYM_2F_R1",
       "dest_warp_id": "1"
@@ -493,7 +506,7 @@
     {
       "type": "trigger",
       "x": 30,
-      "y": 35,
+      "y": 33,
       "elevation": 0,
       "var": "VAR_TEMP_A",
       "var_value": "1",
@@ -502,7 +515,7 @@
     {
       "type": "trigger",
       "x": 31,
-      "y": 35,
+      "y": 33,
       "elevation": 0,
       "var": "VAR_TEMP_A",
       "var_value": "1",
@@ -511,7 +524,7 @@
     {
       "type": "trigger",
       "x": 30,
-      "y": 33,
+      "y": 31,
       "elevation": 0,
       "var": "VAR_TEMP_B",
       "var_value": "1",
@@ -520,7 +533,7 @@
     {
       "type": "trigger",
       "x": 31,
-      "y": 33,
+      "y": 31,
       "elevation": 0,
       "var": "VAR_TEMP_B",
       "var_value": "1",

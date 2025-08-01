@@ -932,6 +932,9 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_AUGURY] = _("Augury"),
     [MOVE_ANGUISH] = _("Anguish"),
     [MOVE_DIVINERAGE] = _("Divine Rage"),
+    [MOVE_VANILLA_OOZE] = _("Vanilla Ooze"),
+    [MOVE_STRAWBERRY_OOZE] = _("Strawberry Ooze"),
+    [MOVE_CHOCOLATE_OOZE] = _("Chocolate Ooze"),
     
     // Max Moves
     [MOVE_MAX_GUARD] = _("Max Guard"),

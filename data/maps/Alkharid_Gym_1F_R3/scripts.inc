@@ -136,6 +136,7 @@ GYM_NPC_1_14:
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_1, GYM_NPC_1_Text_3
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq GYM_NPC_1_17
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_4
 	closemessage
 	hidenamebox
@@ -160,7 +161,7 @@ GYM_NPC_2_1:
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_2_10
 	namebox GYM_NPC_1_Text_1
-	msgbox GYM_NPC_1_Text_8
+	msgbox GYM_NPC_2_Text_2
 GYM_NPC_2_9:
 	closemessage
 	release
@@ -173,7 +174,7 @@ GYM_NPC_2_2:
 
 GYM_NPC_2_5:
 	namebox GYM_NPC_1_Text_1
-	msgbox GYM_NPC_1_Text_6
+	msgbox GYM_NPC_2_Text_0
 	release
 	end
 
@@ -202,7 +203,7 @@ GYM_NPC_2_7:
 
 GYM_NPC_2_10:
 	namebox GYM_NPC_1_Text_1
-	msgbox GYM_NPC_2_Text_0
+	msgbox GYM_NPC_2_Text_1
 	goto GYM_NPC_2_9
 
 GYM_NPC_2_14:
@@ -226,6 +227,7 @@ GYM_NPC_2_14:
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_1, GYM_NPC_1_Text_3
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq GYM_NPC_2_17
+	namebox GYM_NPC_1_Text_1
 	msgbox GYM_NPC_1_Text_4
 	closemessage
 	hidenamebox
@@ -319,13 +321,28 @@ GYM_NPC_1_Text_5:
 	.string "around the Palace.$"
 
 GYM_NPC_1_Text_6:
-	.string "Hello congrats on beating the gym.$"
+	.string "The other day a Magicarpet flew out\n"
+	.string "from underneath my feet!\p"
+	.string "I thought it was just a regular carpet…$"
 
 GYM_NPC_1_Text_7:
-	.string "Hello.$"
+	.string "Greetings, if you wish to take up the\n"
+	.string "challenge of the AlKharid Gym, then\l"
+	.string "speak with Osman in the throne room.$"
 
 GYM_NPC_1_Text_8:
-	.string "We use our lives to protect our prince.$"
+	.string "I will continue to protect the prince\n"
+	.string "forever!$"
 
 GYM_NPC_2_Text_0:
-	.string "Hello this is the gym.$"
+	.string "Vultures are the best monsters to\n"
+	.string "train, wouldn't you agree?$"
+
+GYM_NPC_2_Text_1:
+	.string "Are you are gym challenger?\p"
+	.string "Speak to Osman in the throne room.$"
+
+GYM_NPC_2_Text_2:
+	.string "We defend our brothers like they are\n"
+	.string "family.\p"
+	.string "Because they are our family.$"

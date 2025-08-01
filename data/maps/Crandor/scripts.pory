@@ -2,8 +2,11 @@ mapscripts Crandor_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         call(CRANDOR_STATE)
         call(RANDOM_EVENT_SPAWNS_CRANDOR)
-        if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) >= 150) { // If storymode is after Elvarg Event then call the weather.
-            call(WEATHER_CHANGE_SEA_ROUTES_ROUGH) //TODO;  OPENWORLD
+        if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) <= 150) { // If storymode is after Elvarg Event then call the weather.
+            setweather(WEATHER_RAIN_THUNDERSTORM)
+        }
+        else {
+            call(WEATHER_CHANGE_SEA_ROUTES_ROUGH) //todo openworld (issue being stroymode var 0)
         }
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -12,15 +15,16 @@ mapscripts Crandor_MapScripts {
 }
 
 script RANDOM_EVENT_SPAWNS_CRANDOR {
-	random(10)
-	if ((var(VAR_RESULT) == 1)) {
-		clearflag(FLAG_TEMP_A)
-		addobject(36)
+    random(10)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_A)
+		    addobject(36)
+		default:
+			setflag(FLAG_TEMP_A)
+		    removeobject(36)
 	}
-	else {
-		setflag(FLAG_TEMP_A)
-		removeobject(36)
-	}
+
 	return
 }
 

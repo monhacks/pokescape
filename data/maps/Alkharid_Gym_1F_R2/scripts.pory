@@ -58,7 +58,7 @@ script ALKHARID_GYM_STATE{
             addobject(5)
             setobjectxy(OBJ_EVENT_ID_PRINCEALI, 10, 6)
 			setobjectmovementtype(OBJ_EVENT_ID_PRINCEALI,MOVEMENT_TYPE_FACE_DOWN)
-            applymovement(OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_3)
+            //applymovement(OBJ_EVENT_ID_PLAYER, Movement_LOCK_WALK_DOWN_3)
             waitmovement(0)
             //setobjectxy(OBJ_EVENT_ID_PLAYER,9,9)
             setobjectxy(OBJ_EVENT_ID_OSMAN, 11, 9)
@@ -143,6 +143,7 @@ script QUEST_ALKHARID_GYM_1
         msgbox(format("Come back when you are ready to challenge the Al Kharid Gym."))
         closemessage
         hidenamebox
+        turnobject(OBJ_EVENT_ID_OSMAN, DIR_SOUTH)
         applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_DOWN)
         waitmovement(0)
         return
@@ -154,11 +155,29 @@ script QUEST_ALKHARID_GYM_1
     setvar(VAR_POKESCAPE_ALKHARID_GYM_ALI_STATE, 3) // Maximum amount of checks before Prince Ali is found.
     fadescreenswapbuffers (FADE_TO_BLACK)
     call(ALKHARID_GYM_STATE)
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 8: 
+            applymovement(OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_1)
+        case 9: 
+            applymovement(OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_2)
+        case 10: 
+            applymovement(OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_3)
+        case 11: 
+            applymovement(OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_4)
+        case 12: //speaking to osman (one south than normal)
+            applymovement(OBJ_EVENT_ID_PLAYER, movement_osman_challenge_start_5)
+    }
+    waitmovement(0)
+
+
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+    applymovement(OBJ_EVENT_ID_OSMAN, Movement_InteractFACEUP)
     waitmovement(0)
     fadescreenswapbuffers (FADE_FROM_BLACK)
-
+    delay(15)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT)
+    applymovement(OBJ_EVENT_ID_OSMAN, Movement_InteractFACELEFT)
     waitmovement(0)
     namebox("Osman")
     msgbox(format("This challenge is simple.\pAll you must do is find our Prince and challenge him to a battle."))
@@ -201,6 +220,31 @@ script QUEST_ALKHARID_GYM_1
     return
 }
 
+movement movement_osman_challenge_start_1 {
+    walk_right * 2
+    walk_down * 3
+    step_end
+}
+movement movement_osman_challenge_start_2 {
+    walk_right * 1
+    walk_down * 3
+    step_end
+}
+movement movement_osman_challenge_start_3 {
+    walk_down * 3
+    step_end
+}
+movement movement_osman_challenge_start_4 {
+    walk_left * 1
+    walk_down * 3
+    step_end
+}
+movement movement_osman_challenge_start_5 {
+    walk_left * 2
+    walk_down * 2
+    step_end
+}
+
 movement Movement_LOCK_WALK_UP
 {
     lock_facing_direction
@@ -229,11 +273,14 @@ script NPC_ALKHARID_OSMAN {
         release
         end
     }
-    if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==20){
-        msgbox(format("I am quite the Master Spy at times.\pAlthough when spoken to while in disguise I sometimes give away my disguse by sneezing."))
+    elif (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==20){
+        msgbox(format("Well done, you found the prince.\pWas it hard?\pEither way, you may now challenge him to a battle."))
     }
-    if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==15){
+    elif (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==15){
         msgbox(format("Do you need a hint?\pTry checking all the rooms of the palace.\pHe could be hiding in one of them."))
+    }
+    else {
+        msgbox(format("I am quite the Master Spy at times.\pAlthough when spoken to while in disguise I sometimes give away my disguse by sneezing."))
     }
     release
     end
@@ -449,7 +496,8 @@ script GYM_NPC_0
 {
     lock
     faceplayer
-    msgbox(format("The prince has gone back to the throne room."))
+    namebox("Warrior")
+    msgbox(format("Congratulations on finding the prince.\pWhere is he now?\pWho knows… Maybe the throne room…"))
     release
     end
 }
@@ -607,6 +655,7 @@ script GYM_NPC_7
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -637,17 +686,17 @@ script GYM_NPC_7
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("Have you ever considered joining us?\pI would love to have a brother as powerful as yourself."))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello."))
+        msgbox(format("Welcome to the throne room.\pBe on your best behaviour."))
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("It's okay, my brothers will pull through."))
     }
     closemessage
     release
@@ -686,6 +735,7 @@ script GYM_NPC_8
                         setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0)
                         end
                     }
+                    namebox("Warrior")
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
@@ -716,17 +766,17 @@ script GYM_NPC_8
         }
     if (flag(FLAG_BADGE06_GET)) { //If Gym badge is obtained.   //ALKHARID BADGE
         namebox("Warrior")
-        msgbox(format("Hello congrats on beating the gym."))
+        msgbox(format("Sand crabs man…\pThey're everywhere, they get into everything!"))
         release
         end
     }
     if (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)==0) { // If Gym challenge hasnt been started.
         namebox("Warrior")
-        msgbox(format("Hello."))
+        msgbox(format("Gym challenge?\pSpeak with Osman."))
     }
     else {
         namebox("Warrior")
-        msgbox(format("We use our lives to protect our prince."))
+        msgbox(format("Together we will tackle any challenge!"))
     }
     closemessage
     release

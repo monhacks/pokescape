@@ -60,6 +60,7 @@ TELEPORT_TO_SHIP_SCENE::
 
 CRANDOR_SHIP_SCENE::
 	lockall
+	setweather WEATHER_SUNNY
 	setflag FLAG_TEMP_10
 	removeobject 2
 	setobjectxyperm 1, 34, 14

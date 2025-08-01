@@ -98,6 +98,7 @@ GYM_NPC_3_14:
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_2, GYM_NPC_3_Text_3
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq GYM_NPC_3_17
+	namebox GYM_NPC_3_Text_1
 	msgbox GYM_NPC_3_Text_4
 	closemessage
 	hidenamebox
@@ -122,7 +123,7 @@ GYM_NPC_4_1:
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	goto_if_eq GYM_NPC_4_10
 	namebox GYM_NPC_3_Text_1
-	msgbox GYM_NPC_3_Text_8
+	msgbox GYM_NPC_4_Text_2
 GYM_NPC_4_9:
 	closemessage
 	release
@@ -135,7 +136,7 @@ GYM_NPC_4_2:
 
 GYM_NPC_4_5:
 	namebox GYM_NPC_3_Text_1
-	msgbox GYM_NPC_3_Text_6
+	msgbox GYM_NPC_4_Text_0
 	release
 	end
 
@@ -164,7 +165,7 @@ GYM_NPC_4_7:
 
 GYM_NPC_4_10:
 	namebox GYM_NPC_3_Text_1
-	msgbox GYM_NPC_4_Text_0
+	msgbox GYM_NPC_4_Text_1
 	goto GYM_NPC_4_9
 
 GYM_NPC_4_14:
@@ -188,6 +189,7 @@ GYM_NPC_4_14:
 	trainerbattle_no_intro TRAINER_ALKHARID_GYM_TRAINER_2, GYM_NPC_3_Text_3
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq GYM_NPC_4_17
+	namebox GYM_NPC_3_Text_1
 	msgbox GYM_NPC_3_Text_4
 	closemessage
 	hidenamebox
@@ -403,7 +405,10 @@ GYM_NPC_3_Text_5:
 	.string "around the Palace.$"
 
 GYM_NPC_3_Text_6:
-	.string "Hello congrats on beating the gym.$"
+	.string "Navigating through the harsh desert is\n"
+	.string "even more of a challenge then our gym.\p"
+	.string "I wonder if you will be able overcome\n"
+	.string "that challenge too?$"
 
 GYM_NPC_3_Text_7:
 	.string "Are you here to try the Al Kharid gym\n"
@@ -412,10 +417,21 @@ GYM_NPC_3_Text_7:
 	.string "than that to defeat us!$"
 
 GYM_NPC_3_Text_8:
-	.string "We use our lives to protect our prince.$"
+	.string "My brothers…$"
 
 GYM_NPC_4_Text_0:
-	.string "Hello this is the gym.$"
+	.string "My brothers and I congratulate you on\n"
+	.string "your victory.\p"
+	.string "You put up a good fight.$"
+
+GYM_NPC_4_Text_1:
+	.string "This is where us guards rest.\p"
+	.string "We are on call all hours of the day and\n"
+	.string "night!$"
+
+GYM_NPC_4_Text_2:
+	.string "We must protect our prince til the very\n"
+	.string "end!$"
 
 SAFARI_ZONE_WIZARD_Text_0:
 	.string "Dark Wizard$"
