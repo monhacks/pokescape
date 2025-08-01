@@ -501,6 +501,7 @@ script TZHAAR_NPC_BANKER_Human
 }
 script TZHAAR_NPC_13
 {
+    lock
     faceplayer
     namebox ("Tzhaar-Ket")
     msgbox(format("JalYt, beyond here the tunnels are unstable and our kind may attack you.\pProceed at your own risk."))
@@ -513,6 +514,7 @@ script TZHAAR_NPC_13
 
 script TZHAAR_NPC_14
 {
+    lock
     faceplayer
     namebox ("Tzhaar")
     msgbox(format("There are rumours of TzHaar who left our city centuries ago and settled in a volcano somewhere to the west.\pI wonder what life is like for them compared to here."))
@@ -524,6 +526,7 @@ script TZHAAR_NPC_14
 
 script TZHAAR_NPC_15
 {
+    lock
     faceplayer
     namebox ("Tzhaar")
     msgbox(format("We TzHaar place our eggs in the lava to uncover our ancestors' memories.\pBut some TzHaar placed eggs too deep and what hatched from the eggs were feral monsters who fought each other.\pI think they've now been locked away in separate tunnels for adventurers to try and tame."))

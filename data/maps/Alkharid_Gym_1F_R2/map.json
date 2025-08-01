@@ -180,8 +180,8 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 12,
-      "y": 11,
+      "x": 0,
+      "y": 0,
       "elevation": 0,
       "dest_map": "MAP_AL_KHARID",
       "dest_warp_id": "6"

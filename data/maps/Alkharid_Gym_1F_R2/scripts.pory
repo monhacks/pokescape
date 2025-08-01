@@ -702,6 +702,84 @@ script GYM_NPC_7
     release
     end
 }
+script GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 12: 
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_1)
+        case 13: 
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2)
+        case 14: 
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2)
+    }
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_1 {
+    walk_faster_right * 3
+    walk_faster_down * 4
+    walk_faster_right * 2
+    walk_faster_down
+    step_end
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2 {
+    walk_faster_right * 3
+    walk_faster_down * 4
+    walk_faster_right * 3
+    face_down
+    step_end
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_3 {
+    walk_faster_right * 3
+    walk_faster_down * 4
+    walk_faster_right * 4
+    walk_faster_down
+    step_end
+}
+script GYM_MOVEMENT_FOUND_ALI_NPC7 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 12: 
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_1)
+            applymovement(11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_1)
+        case 13: 
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2)
+            applymovement(11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_2)
+        case 14: 
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_3)
+            applymovement(11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_3)
+    }
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP)
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_1
+{
+    walk_faster_up * 1
+    walk_faster_right * 1
+    step_end
+} 
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_2
+{
+    walk_faster_up * 2
+    walk_faster_right * 2
+    step_end
+} 
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_3
+{
+    walk_faster_up * 2
+    walk_faster_right * 4
+    face_down
+    step_end
+} 
+
+
+
+
+
+
+
 
 
 script GYM_NPC_8

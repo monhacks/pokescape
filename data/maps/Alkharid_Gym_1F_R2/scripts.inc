@@ -671,6 +671,121 @@ GYM_NPC_7_17:
 	end
 
 
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 12, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_3
+	case 13, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_4
+	case 14, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_5
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_1:
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_3:
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_1
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_1
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_4:
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_1
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_5:
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_1
+
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_1:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	step_end
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	face_down
+	step_end
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_3:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	step_end
+
+GYM_MOVEMENT_FOUND_ALI_NPC7::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 12, GYM_MOVEMENT_FOUND_ALI_NPC7_3
+	case 13, GYM_MOVEMENT_FOUND_ALI_NPC7_4
+	case 14, GYM_MOVEMENT_FOUND_ALI_NPC7_5
+GYM_MOVEMENT_FOUND_ALI_NPC7_1:
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_FOUND_ALI_NPC7_3:
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_1
+	applymovement 11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_1
+	goto GYM_MOVEMENT_FOUND_ALI_NPC7_1
+
+GYM_MOVEMENT_FOUND_ALI_NPC7_4:
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2
+	applymovement 11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_2
+	goto GYM_MOVEMENT_FOUND_ALI_NPC7_1
+
+GYM_MOVEMENT_FOUND_ALI_NPC7_5:
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_3
+	applymovement 11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_3
+	goto GYM_MOVEMENT_FOUND_ALI_NPC7_1
+
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_1:
+	walk_faster_up
+	walk_faster_right
+	step_end
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_2:
+	walk_faster_up
+	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	step_end
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC7_3:
+	walk_faster_up
+	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	face_down
+	step_end
+
 GYM_NPC_8::
 	lock
 	faceplayer
