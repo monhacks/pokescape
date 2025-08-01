@@ -55,6 +55,7 @@ FROGEEL_RIVAL_7_8:
 	closemessage
 	removeobject 28
 	setflag FLAG_TEMP_10
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 6
 	release
 	end
 

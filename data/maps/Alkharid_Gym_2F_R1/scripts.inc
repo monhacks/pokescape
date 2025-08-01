@@ -133,7 +133,7 @@ GYM_NPC_6_2:
 
 GYM_NPC_6_5:
 	namebox GYM_NPC_5_Text_1
-	msgbox GYM_NPC_5_Text_6
+	msgbox GYM_NPC_6_Text_0
 	release
 	end
 
@@ -160,7 +160,7 @@ GYM_NPC_6_7:
 
 GYM_NPC_6_10:
 	namebox GYM_NPC_5_Text_1
-	msgbox GYM_NPC_5_Text_7
+	msgbox GYM_NPC_6_Text_1
 	goto GYM_NPC_6_9
 
 GYM_NPC_6_14:
@@ -252,6 +252,12 @@ Movement_AlkharidGym_NPC_6_Ali:
 	face_player
 	step_end
 
+ALKHARID_GYM_ARTWORK::
+	msgbox ALKHARID_GYM_ARTWORK_Text_0
+	release
+	end
+
+
 GYM_NPC_5_Text_0:
 	.string "Guards help me as I make my escape!$"
 
@@ -283,3 +289,15 @@ GYM_NPC_5_Text_7:
 
 GYM_NPC_5_Text_8:
 	.string "We use our lives to protect our prince.$"
+
+GYM_NPC_6_Text_0:
+	.string "Congratulations on beating the gym.$"
+
+GYM_NPC_6_Text_1:
+	.string "Hello. Do you think you have what it\n"
+	.string "takes to defeat Al Kharid's elite\l"
+	.string "fighting force?$"
+
+ALKHARID_GYM_ARTWORK_Text_0:
+	.string "This piece is entitled: 'So… you think\n"
+	.string "you can take him?'$"

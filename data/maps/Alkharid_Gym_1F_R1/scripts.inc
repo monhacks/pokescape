@@ -406,7 +406,10 @@ GYM_NPC_3_Text_6:
 	.string "Hello congrats on beating the gym.$"
 
 GYM_NPC_3_Text_7:
-	.string "Hello.$"
+	.string "Are you here to try the Al Kharid gym\n"
+	.string "challenge?\p"
+	.string "I'd wish you luck, but you'll need more\n"
+	.string "than that to defeat us!$"
 
 GYM_NPC_3_Text_8:
 	.string "We use our lives to protect our prince.$"

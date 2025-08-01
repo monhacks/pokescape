@@ -260,6 +260,16 @@ ALKHARID_NPC_17::
 	end
 
 
+ALKHARID_NPC_18::
+	faceplayer
+	namebox ALKHARID_NPC_18_Text_0
+	msgbox ALKHARID_NPC_18_Text_1
+	closemessage
+	hidenamebox
+	release
+	end
+
+
 ALKHARID_INDOOR_NPC_1::
 	faceplayer
 	namebox ALKHARID_INDOOR_NPC_1_Text_0
@@ -548,10 +558,10 @@ RANDOM_PARTY_SIZE_8:
 
 TRIGGER_ALKHARID_HAM_EVENT_2::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
 	waitmovement 0
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_down_2
+	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2
 	waitmovement 0
 	applymovement 12, MOVEMENT_INTERACT_RIGHT
 	waitmovement 0
@@ -584,12 +594,12 @@ TRIGGER_ALKHARID_HAM_EVENT_2::
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_2_Text_5
 	closemessage
 	hidenamebox
-	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2
+	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_down_2
 	waitmovement 0
 	special RemoveCameraObject
 	delay 30
 	playse SE_PIN
-	applymovement 12, MOVEMENT_EXCLAMATIONMARK_FACE_UP
+	applymovement 12, MOVEMENT_EXCLAMATIONMARK_FACE_DOWN
 	waitmovement 0
 	delay 30
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
@@ -603,7 +613,7 @@ TRIGGER_ALKHARID_HAM_EVENT_2_1:
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	compare VAR_TEMP_1, 31
 	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_5
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_DOWN
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_UP
 	waitmovement 0
 TRIGGER_ALKHARID_HAM_EVENT_2_4:
 	namebox ALKHARID_NPC_13_Text_0
@@ -627,7 +637,7 @@ TRIGGER_ALKHARID_HAM_EVENT_2_8:
 	end
 
 TRIGGER_ALKHARID_HAM_EVENT_2_2:
-	applymovement 12, MOVEMENT_WALK_UP
+	applymovement 12, MOVEMENT_WALK_DOWN
 	waitmovement 0
 	applymovement 12, Movement_InteractFACERIGHT
 	waitmovement 0
@@ -660,34 +670,42 @@ movement_walk_slow_up_2:
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_OZAN_1:
-	slide_up
-	jump_in_place_down
+	slide_down
+	jump_in_place_up
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_OZAN_3:
 	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_OZAN_4:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_1:
 	walk_fast_right
-	face_up
+	face_down
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2:
@@ -697,7 +715,7 @@ MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2:
 
 MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_1:
 	walk_fast_left
-	face_up
+	face_down
 	step_end
 
 MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2:
@@ -711,7 +729,7 @@ TRIGGER_ALKHARID_HAM_EVENT_3::
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_3_Text_0
 	closemessage
 	hidenamebox
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP
 	waitmovement 0
 	release
 	end
@@ -793,6 +811,7 @@ BATTLE_FROGEEL_RIVAL_6_1:
 	removeobject 17
 	setflag FLAG_TEMP_10
 	setvar VAR_FROGEEL_RIVAL, 30
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 5
 	release
 	end
 
@@ -1001,6 +1020,15 @@ ALKHARID_NPC_17_Text_0:
 	.string "Can you believe it?\p"
 	.string "Our very own Prince Ali was chosen to be\n"
 	.string "one of the MvM leaders!$"
+
+ALKHARID_NPC_18_Text_0:
+	.string "F0rrest Gee$"
+
+ALKHARID_NPC_18_Text_1:
+	.string "I heard that running laps of rooftop\n"
+	.string "courses was a good way to level Agility…\p"
+	.string "but I have been up here going in circles\n"
+	.string "for hours and not gained a single xp!$"
 
 ALKHARID_INDOOR_NPC_1_Text_0:
 	.string "Ranger$"

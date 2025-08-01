@@ -135,23 +135,6 @@ HANS_DAEMONHEIM_GYM_2:
 	goto HANS_DAEMONHEIM_GYM_1
 
 
-HANS_EDGEVILLE_GYM::
-	lock
-	faceplayer
-	namebox HANS_DAEMONHEIM_GYM_Text_0
-	goto_if_set FLAG_BADGE05_GET, HANS_EDGEVILLE_GYM_2
-	msgbox HANS_EDGEVILLE_GYM_Text_1
-HANS_EDGEVILLE_GYM_1:
-	hidenamebox
-	closemessage
-	release
-	end
-
-HANS_EDGEVILLE_GYM_2:
-	msgbox HANS_EDGEVILLE_GYM_Text_0
-	goto HANS_EDGEVILLE_GYM_1
-
-
 HANS_VARROCK_GYM::
 	lock
 	faceplayer
@@ -184,6 +167,23 @@ HANS_ALKHARID_GYM_1:
 HANS_ALKHARID_GYM_2:
 	msgbox HANS_ALKHARID_GYM_Text_0
 	goto HANS_ALKHARID_GYM_1
+
+
+HANS_EDGEVILLE_GYM::
+	lock
+	faceplayer
+	namebox HANS_DAEMONHEIM_GYM_Text_0
+	goto_if_set FLAG_BADGE05_GET, HANS_EDGEVILLE_GYM_2
+	msgbox HANS_EDGEVILLE_GYM_Text_1
+HANS_EDGEVILLE_GYM_1:
+	hidenamebox
+	closemessage
+	release
+	end
+
+HANS_EDGEVILLE_GYM_2:
+	msgbox HANS_EDGEVILLE_GYM_Text_0
+	goto HANS_EDGEVILLE_GYM_1
 
 
 HANS_BARBARIAN_GYM::
@@ -300,34 +300,6 @@ HANS_DAEMONHEIM_GYM_Text_2:
 	.string "however, he got to the bottom of this\l"
 	.string "place, with hardly more than his fists.$"
 
-HANS_EDGEVILLE_GYM_Text_0:
-	.string "To no surprise you have prevailed yet\n"
-	.string "again.\p"
-	.string "I guess you are soon at journeys end.\p"
-	.string "How did I get here all the way to\n"
-	.string "edgeville you ask.\p"
-	.string "Well I was going out to buy milk and\n"
-	.string "somehow I just got here.\p"
-	.string "Life is weird like that for me.$"
-
-HANS_EDGEVILLE_GYM_Text_1:
-	.string "Why hello there completionist in the\n"
-	.string "making.\p"
-	.string "Hope you havent forgotten me.\p"
-	.string "It seems you are taking on Vanakka now.\p"
-	.string "He probably has a task set for you to\n"
-	.string "complete.\p"
-	.string "Where is he?\p"
-	.string "In the most fitting place for him, in the\n"
-	.string "dungeon below us!\p"
-	.string "Vanakka uses DARK-TYPE slayer\n"
-	.string "monsters.\p"
-	.string "DARK types are weak to FIGHTING, FAIRY\n"
-	.string "and BUG type attacks.\p"
-	.string "Do not bring your PSYCHIC monsters\n"
-	.string "though, he will make a slayer task out\l"
-	.string "of them.$"
-
 HANS_VARROCK_GYM_Text_0:
 	.string "You did it!\l"
 	.string "You beat the king!\p"
@@ -368,6 +340,31 @@ HANS_ALKHARID_GYM_Text_1:
 	.string "Their moves also do not affect FLYING\n"
 	.string "types.\p"
 	.string "Hope you get a good battle out of this!$"
+
+HANS_EDGEVILLE_GYM_Text_0:
+	.string "To no surprise you have prevailed yet\n"
+	.string "again.\p"
+	.string "How did I get here all the way to\n"
+	.string "Edgeville you ask.\p"
+	.string "Well, I was going out to buy milk and\n"
+	.string "somehow I just got here.\p"
+	.string "Life is weird like that for me.$"
+
+HANS_EDGEVILLE_GYM_Text_1:
+	.string "Why hello there Completionist in the\n"
+	.string "making. Not too long of a road getting\l"
+	.string "here since we last met, right?\p"
+	.string "I bet you want to face Vannaka. He is\n"
+	.string "both a Slayer master and combat\l"
+	.string "instructor.\p"
+	.string "He specialises in DARK-TYPE monsters.\l"
+	.string "DARK types are weak to FIGHTING, FAIRY\l"
+	.string "and BUG type attacks.\p"
+	.string "Whatever you do, do not attempt to use\n"
+	.string "PSYCHIC types, you will be very sorry.\l"
+	.string "Think you are up for the task? The\l"
+	.string "slayer task that is.\l"
+	.string "Good luck!$"
 
 HANS_BARBARIAN_GYM_Text_0:
 	.string "Good job beating Gunthor!\l"

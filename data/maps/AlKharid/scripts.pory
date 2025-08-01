@@ -741,7 +741,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_3 //PALACE BLOCK
     msgbox(format("Are you here for a MvM Battle?\pSorry but the prince is out at the moment, so there will be no MvM challenges until he returns."))
     closemessage
     hidenamebox
-    applymovement (OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+    applymovement (OBJ_EVENT_ID_PLAYER, movement_WALK_DOWN_1_STEP)
     waitmovement(0)
     release
     end

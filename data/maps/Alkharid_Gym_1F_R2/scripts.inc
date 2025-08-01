@@ -844,8 +844,10 @@ ALKHARID_GYM_ALI_Text_5:
 	.string "your MvM gym challenge.$"
 
 ALKHARID_GYM_ALI_Text_6:
-	.string "You should go pester the Prince in Al\n"
-	.string "Kharid for your next MvM gym challenge.$"
+	.string "If you head north of here through the\n"
+	.string "desert, you should reach Varrock.\p"
+	.string "Your next MvM gym challenge is with King\n"
+	.string "Roald in the palace there.$"
 
 ALKHARID_MUSIC_TEST_Text_0:
 	.string "AAAAAA!$"

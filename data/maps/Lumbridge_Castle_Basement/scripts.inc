@@ -41,6 +41,7 @@ NPC_LumbridgeBasement_Item::
 DEMONHEADGE_BLOCK::
 	lock
 	applymovement 5, Movement_InteractFACERIGHT
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
 	waitmovement 0
 	namebox NPC_LumbridgeBasement_Demonheadge_Text_0
 	msgbox DEMONHEADGE_BLOCK_Text_0, MSGBOX_YESNO

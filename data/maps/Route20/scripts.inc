@@ -356,6 +356,7 @@ BATTLE_FROGEEL_RIVAL_4_8:
 	removeobject 20
 	setflag FLAG_TEMP_10
 	setvar VAR_FROGEEL_RIVAL, 20
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 3
 	release
 	end
 

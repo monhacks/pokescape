@@ -2125,7 +2125,9 @@ FROGEEL_RIVAL_3_8:
 	removeobject 15
 	setflag FLAG_TEMP_10
 	setvar VAR_FROGEEL_RIVAL, 15
-	return
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_ANGRENOUILLE_QUEST, 2
+	release
+	end
 
 FROGEEL_RIVAL_3_2:
 	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_GRASS, FROGEEL_RIVAL_3_Text_3
