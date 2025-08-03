@@ -120,6 +120,8 @@ ProfNormalTree_Assistant_GiveReward::
 	case MAP_LUMBRIDGE_BANK, ProfNormalTree_Assistant_GiveReward_5
 	case MAP_RIMMINGTON_BANK, ProfNormalTree_Assistant_GiveReward_6
 	case MAP_EDGEVILLE_BANK, ProfNormalTree_Assistant_GiveReward_7
+	case MAP_PORT_SARIM_BANK, ProfNormalTree_Assistant_GiveReward_8
+	case MAP_DRAYNOR_BANK, ProfNormalTree_Assistant_GiveReward_9
 ProfNormalTree_Assistant_GiveReward_1:
 	namebox ProfNormalTree_Assistant_GiveReward_Text_0
 	msgbox ProfNormalTree_Assistant_GiveReward_Text_1
@@ -147,6 +149,14 @@ ProfNormalTree_Assistant_GiveReward_7:
 	call ProfNormalTree_Assistant_GiveReward_EDGEVILLE
 	goto ProfNormalTree_Assistant_GiveReward_1
 
+ProfNormalTree_Assistant_GiveReward_8:
+	call ProfNormalTree_Assistant_GiveReward_PORTSARIM
+	goto ProfNormalTree_Assistant_GiveReward_1
+
+ProfNormalTree_Assistant_GiveReward_9:
+	call ProfNormalTree_Assistant_GiveReward_DRAYNOR
+	goto ProfNormalTree_Assistant_GiveReward_1
+
 
 ProfNormalTree_Assistant_YouOnlyHaveXmons::
 	msgbox ProfNormalTree_Assistant_YouOnlyHaveXmons_Text_0
@@ -155,7 +165,7 @@ ProfNormalTree_Assistant_YouOnlyHaveXmons::
 
 
 ProfNormalTree_Assistant_Info::
-	random 8
+	random 9
 	switch VAR_RESULT
 	case 0, ProfNormalTree_Assistant_Info_3
 	case 1, ProfNormalTree_Assistant_Info_4
@@ -165,6 +175,7 @@ ProfNormalTree_Assistant_Info::
 	case 5, ProfNormalTree_Assistant_Info_8
 	case 6, ProfNormalTree_Assistant_Info_9
 	case 7, ProfNormalTree_Assistant_Info_10
+	case 8, ProfNormalTree_Assistant_Info_11
 ProfNormalTree_Assistant_Info_1:
 	hidenamebox
 	closemessage
@@ -204,6 +215,10 @@ ProfNormalTree_Assistant_Info_10:
 	msgbox ProfNormalTree_Assistant_Info_Text_8
 	goto ProfNormalTree_Assistant_Info_1
 
+ProfNormalTree_Assistant_Info_11:
+	msgbox ProfNormalTree_Assistant_Info_Text_9
+	goto ProfNormalTree_Assistant_Info_1
+
 
 ProfNormalTree_LUMBRIDGE::
 	setvar VAR_TEMP_1, 10
@@ -228,13 +243,13 @@ ProfNormalTree_LUMBRIDGE_2:
 
 ProfNormalTree_Assistant_GiveReward_Lumbridge::
 	msgbox ProfNormalTree_Assistant_GiveReward_Lumbridge_Text_0
-	giveitem ITEM_EXP_CANDY_M, 5
+	giveitem ITEM_EXP_CANDY_XS, 10
 	setflag FLAG_NORMALTREE_ASSISTANT_1
 	return
 
 
 ProfNormalTree_RIMMINGTON::
-	setvar VAR_TEMP_1, 20
+	setvar VAR_TEMP_1, 40
 	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	lock
 	faceplayer
@@ -256,13 +271,13 @@ ProfNormalTree_RIMMINGTON_2:
 
 ProfNormalTree_Assistant_GiveReward_RIMMINGTON::
 	msgbox ProfNormalTree_Assistant_GiveReward_Lumbridge_Text_0
-	giveitem ITEM_EXP_CANDY_M, 5
+	giveitem ITEM_EXP_CANDY_M, 10
 	setflag FLAG_NORMALTREE_ASSISTANT_2
 	return
 
 
 ProfNormalTree_FALADOR::
-	setvar VAR_TEMP_1, 30
+	setvar VAR_TEMP_1, 50
 	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	lock
 	faceplayer
@@ -284,13 +299,14 @@ ProfNormalTree_FALADOR_2:
 
 ProfNormalTree_Assistant_GiveReward_FALADOR::
 	msgbox ProfNormalTree_Assistant_GiveReward_Lumbridge_Text_0
-	giveitem ITEM_EXP_CANDY_M, 5
+	giveitem ITEM_EXP_CANDY_M, 10
+	giveitem ITEM_EXP_CANDY_L, 2
 	setflag FLAG_NORMALTREE_ASSISTANT_3
 	return
 
 
 ProfNormalTree_VARROCK::
-	setvar VAR_TEMP_1, 40
+	setvar VAR_TEMP_1, 100
 	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	lock
 	faceplayer
@@ -318,7 +334,7 @@ ProfNormalTree_Assistant_GiveReward_VARROCK::
 
 
 ProfNormalTree_EDGEVILLE::
-	setvar VAR_TEMP_1, 50
+	setvar VAR_TEMP_1, 75
 	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	lock
 	faceplayer
@@ -346,7 +362,7 @@ ProfNormalTree_Assistant_GiveReward_EDGEVILLE::
 
 
 ProfNormalTree_PORTSARIM::
-	setvar VAR_TEMP_1, 20
+	setvar VAR_TEMP_1, 30
 	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	lock
 	faceplayer
@@ -368,8 +384,38 @@ ProfNormalTree_PORTSARIM_2:
 
 ProfNormalTree_Assistant_GiveReward_PORTSARIM::
 	msgbox ProfNormalTree_Assistant_GiveReward_Lumbridge_Text_0
+	giveitem ITEM_EXP_CANDY_S, 10
 	giveitem ITEM_EXP_CANDY_M, 5
 	setflag FLAG_NORMALTREE_ASSISTANT_6
+	return
+
+
+ProfNormalTree_DRAYNOR::
+	setvar VAR_TEMP_1, 20
+	buffernumberstring STR_VAR_1, VAR_TEMP_1
+	lock
+	faceplayer
+	namebox ProfNormalTree_Assistant_GiveReward_Text_0
+	goto_if_set FLAG_NORMALTREE_ASSISTANT_7, ProfNormalTree_DRAYNOR_2
+	msgbox ProfNormalTree_LUMBRIDGE_Text_1
+	call ProfNormalTree_Assistant
+ProfNormalTree_DRAYNOR_1:
+	closemessage
+	hidenamebox
+	release
+	end
+
+ProfNormalTree_DRAYNOR_2:
+	msgbox ProfNormalTree_LUMBRIDGE_Text_0
+	call ProfNormalTree_Assistant_Info
+	goto ProfNormalTree_DRAYNOR_1
+
+
+ProfNormalTree_Assistant_GiveReward_DRAYNOR::
+	msgbox ProfNormalTree_Assistant_GiveReward_Lumbridge_Text_0
+	giveitem ITEM_EXP_CANDY_XS, 10
+	giveitem ITEM_EXP_CANDY_S, 5
+	setflag FLAG_NORMALTREE_ASSISTANT_7
 	return
 
 
@@ -458,7 +504,7 @@ ProfNormalTree_Assistant_YouOnlyHaveXmons_Text_0:
 
 ProfNormalTree_Assistant_Info_Text_0:
 	.string "Did you know the difference between\n"
-	.string "Identifing and Registering a monster\l"
+	.string "Identifying and Registering a monster\l"
 	.string "depends on if you have caught it.$"
 
 ProfNormalTree_Assistant_Info_Text_1:
@@ -497,6 +543,11 @@ ProfNormalTree_Assistant_Info_Text_7:
 ProfNormalTree_Assistant_Info_Text_8:
 	.string "Now you have no excuse not to capture\n"
 	.string "some monsters!$"
+
+ProfNormalTree_Assistant_Info_Text_9:
+	.string "Did you know that different monsters\n"
+	.string "can appear on routes at night compared\l"
+	.string "to during the day?$"
 
 ProfNormalTree_LUMBRIDGE_Text_0:
 	.string "Good to see you again, I hope you've\n"

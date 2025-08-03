@@ -245,4 +245,4 @@ BATTLE_ROUTE9_ITSWILL_Text_3:
 	.string "Be careful…\p"
 	.string "There's a girl dressed in all pink in\n"
 	.string "there.{PAUSE 15}\p"
-	.string "She beat my ass hard$"
+	.string "She beat my ass hard.$"

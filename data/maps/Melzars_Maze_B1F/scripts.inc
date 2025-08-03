@@ -592,7 +592,7 @@ TRIGGER_Melzar_Maze_HAM_EVENT_BABE_Text_16:
 	.string "and Sigmund can be real scary.\p"
 	.string "I wouldn't want to oppose them.\p"
 	.string "This one time I accidentally ate\n"
-	.string "Sigmunds san-$"
+	.string "Sigmund's san-$"
 
 TRIGGER_Melzar_Maze_HAM_EVENT_BABE_Text_17:
 	.string "We should really move on now…$"

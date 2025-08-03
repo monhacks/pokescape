@@ -142,7 +142,7 @@ script ProfNormalTree_Assistant_GiveReward {
 			call(ProfNormalTree_Assistant_GiveReward_RIMMINGTON)
 		case MAP_EDGEVILLE_BANK:
 			call(ProfNormalTree_Assistant_GiveReward_EDGEVILLE)
-		case MAP_PORTSARIM_BANK:
+		case MAP_PORT_SARIM_BANK:
 			call(ProfNormalTree_Assistant_GiveReward_PORTSARIM)
 		case MAP_DRAYNOR_BANK:
 			call(ProfNormalTree_Assistant_GiveReward_DRAYNOR)

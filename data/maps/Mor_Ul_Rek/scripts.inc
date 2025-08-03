@@ -282,6 +282,7 @@ TZHAAR_NPC_1_5:
 	goto_if_eq TZHAAR_NPC_1_15
 TZHAAR_NPC_1_12:
 	waitmovement 0
+	namebox STORYMODE_TZHAAR_NPC_Text_0
 	msgbox TZHAAR_NPC_1_Text_2
 	closemessage
 	hidenamebox

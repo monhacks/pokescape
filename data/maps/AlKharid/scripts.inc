@@ -861,10 +861,6 @@ BATTLE_FROGEEL_RIVAL_6_4:
 MOVEMENT_FROGEEL_RIVAL_ALKHARID_1:
 	walk_fast_right
 	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
 	step_end
 
 MOVEMENT_FROGEEL_RIVAL_ALKHARID_2:
@@ -875,31 +871,24 @@ MOVEMENT_FROGEEL_RIVAL_ALKHARID_2:
 	step_end
 
 MOVEMENT_FROGEEL_RIVAL_ALKHARID_3:
-	face_down
+	walk_faster_right
 	walk_faster_down
 	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
 	step_end
 
 MOVEMENT_FROGEEL_RIVAL_ALKHARID_4:
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
 	walk_faster_up
 	walk_faster_up
 	walk_faster_up

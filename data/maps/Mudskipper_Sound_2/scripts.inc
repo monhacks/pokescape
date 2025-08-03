@@ -58,6 +58,19 @@ BATTLE_AJAMJAM::
 	return
 
 
+ROUGH_SEAS_NPC::
+	lock
+	faceplayer
+	namebox TRIGGER_ROUGH_SEAS_Text_0
+	msgbox ROUGH_SEAS_NPC_Text_0
+	hidenamebox
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+
 BATTLE_SAILING_PIRATE_1_Text_0:
 	.string "ARRRR!!\p"
 	.string "Do you know what you just did?!\p"
@@ -85,3 +98,8 @@ BATTLE_AJAMJAM_Text_0:
 
 BATTLE_AJAMJAM_Text_1:
 	.string "I think I need a hug now…$"
+
+ROUGH_SEAS_NPC_Text_0:
+	.string "Go no further, the seas south of here\n"
+	.string "are too rough for your little dinghy\l"
+	.string "boat.$"

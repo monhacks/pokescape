@@ -34,6 +34,17 @@ NPC_FALADORPUB_BARMAID_3::
 	end
 
 
+NPC_FALADORPUB_DWARF::
+	lock
+	faceplayer
+	namebox NPC_FALADORPUB_DWARF_Text_0
+	msgbox NPC_FALADORPUB_DWARF_Text_1
+	closemessage
+	hidenamebox
+	release
+	end
+
+
 NPC_FALADORPUB_NPC1::
 	lock
 	faceplayer
@@ -206,6 +217,15 @@ NPC_FALADORPUB_BARMAID_3_Text_0:
 NPC_FALADORPUB_BARMAID_3_Text_1:
 	.string "Hufff Pufff…\p"
 	.string "Being Barmaid is hard work.$"
+
+NPC_FALADORPUB_DWARF_Text_0:
+	.string "Dorlak$"
+
+NPC_FALADORPUB_DWARF_Text_1:
+	.string "Studies have shown that 6 out of 7\n"
+	.string "dwarves aren't happy.\p"
+	.string "…{PAUSE 15}\p"
+	.string "No wonder so many of us like to drink!$"
 
 NPC_FALADORPUB_NPC1_Text_0:
 	.string "Guard$"

@@ -6511,7 +6511,7 @@ static const struct TrainerMon sParty_ALKHARID_GYM_TRAINER_1[] = {
     .lvl = 41,
     .species = SPECIES_KALPHITE_SOLDIER_FORM,
     .heldItem = ITEM_NONE
-    }
+    },
     {
     .lvl = 42,
     .species = SPECIES_KALPHITE_REANIMATED_FORM,
