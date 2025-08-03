@@ -1501,8 +1501,8 @@ HAM_HIDEOUT_B1F_PRINCE_ALI::
 	faceplayer
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 240
 	goto_if_eq HAM_HIDEOUT_B1F_PRINCE_ALI_2
-	namebox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0
-	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_4
+	namebox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_6
 	closemessage
 	hidenamebox
 HAM_HIDEOUT_B1F_PRINCE_ALI_1:
@@ -1518,6 +1518,8 @@ HAM_HIDEOUT_B1F_PRINCE_ALI_2:
 HAM_HIDEOUT_B1F_PRINCE_ALI_5:
 	namebox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0
 	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1
+	namebox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_3
 	hidenamebox
 	closemessage
 	getplayerxy VAR_TEMP_8, VAR_TEMP_9
@@ -1526,13 +1528,13 @@ HAM_HIDEOUT_B1F_PRINCE_ALI_5:
 	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_UP
 HAM_HIDEOUT_B1F_PRINCE_ALI_9:
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
-	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_4
 	closemessage
 	hidenamebox
 	waitmovement 0
 	facefollower
 	namebox TRIGGER_HAMHIDEOUT_EVENT_1_Text_2
-	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_3
+	msgbox HAM_HIDEOUT_B1F_PRINCE_ALI_Text_5
 	closemessage
 	hidenamebox
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 241
@@ -2067,9 +2069,16 @@ HAM_HIDEOUT_B1F_JIMMY_Text_3:
 	.string "Now the easy part, escaping!$"
 
 HAM_HIDEOUT_B1F_PRINCE_ALI_Text_0:
-	.string "Prince Ali$"
+	.string "???$"
 
 HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1:
+	.string "Prince Ali?\p"
+	.string "…{PAUSE 15}…{PAUSE 15}…$"
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2:
+	.string "Prince Ali$"
+
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_3:
 	.string "Ah, are you two perhaps my saviors?\p"
 	.string "Ah but we are getting ahead of\n"
 	.string "ourselves, we still must escape this\l"
@@ -2079,15 +2088,15 @@ HAM_HIDEOUT_B1F_PRINCE_ALI_Text_1:
 	.string "And I will escape and take these\n"
 	.string "prisoners to safety.$"
 
-HAM_HIDEOUT_B1F_PRINCE_ALI_Text_2:
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_4:
 	.string "Sounds like a plan to me.$"
 
-HAM_HIDEOUT_B1F_PRINCE_ALI_Text_3:
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_5:
 	.string "What do you think {PLAYER}?\p"
 	.string "Maybe it's time we find the boss and\n"
 	.string "find out what they are really up to…$"
 
-HAM_HIDEOUT_B1F_PRINCE_ALI_Text_4:
+HAM_HIDEOUT_B1F_PRINCE_ALI_Text_6:
 	.string "So the plan is to face whomever is in\n"
 	.string "charge?\p"
 	.string "My what courage you both have.\p"

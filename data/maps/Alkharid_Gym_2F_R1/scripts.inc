@@ -11,15 +11,21 @@ Alkharid_Gym_2F_R1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 ALKHARID_GYM_NPCS_POST_GYM_2F_1R::
 	switch VAR_POKESCAPE_ALKHARID_GYM_QUEST
-	case 30, ALKHARID_GYM_NPCS_POST_GYM_2F_1R_3
+	case 0, ALKHARID_GYM_NPCS_POST_GYM_2F_1R_3
+	case 30, ALKHARID_GYM_NPCS_POST_GYM_2F_1R_4
 ALKHARID_GYM_NPCS_POST_GYM_2F_1R_1:
 	return
 
 ALKHARID_GYM_NPCS_POST_GYM_2F_1R_3:
-	setobjectxyperm 2, 2, 4
-	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_AROUND
-	setobjectxyperm 3, 12, 5
+	setobjectxyperm 2, 10, 5
 	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT
+	goto ALKHARID_GYM_NPCS_POST_GYM_2F_1R_1
+
+ALKHARID_GYM_NPCS_POST_GYM_2F_1R_4:
+	setobjectxyperm 2, 10, 5
+	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT
+	setobjectxyperm 3, 6, 3
+	setobjectmovementtype 3, MOVEMENT_TYPE_WANDER_AROUND
 	goto ALKHARID_GYM_NPCS_POST_GYM_2F_1R_1
 
 
@@ -63,6 +69,9 @@ GYM_NPC_5_7:
 	msgbox GYM_NPC_5_Text_5
 	closemessage
 	hidenamebox
+	setobjectmovementtype 1, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 3, MOVEMENT_TYPE_WANDER_AROUND
 	setflag FLAG_ALKHARIDGYM_3
 	release
 	end
@@ -241,6 +250,9 @@ GYM_NPC_6_7:
 	msgbox GYM_NPC_5_Text_5
 	closemessage
 	hidenamebox
+	setobjectmovementtype 1, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 3, MOVEMENT_TYPE_WANDER_AROUND
 	setflag FLAG_ALKHARIDGYM_3
 	release
 	end
@@ -326,7 +338,7 @@ Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_1:
 	walk_faster_left
 	walk_faster_up
 	walk_faster_up
-	face_right
+	face_left
 	step_end
 
 Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_2:

@@ -5,24 +5,40 @@ Alkharid_Gym_1F_R2_MapScripts::
 Alkharid_Gym_1F_R2_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setvar VAR_EVOLUTION_MAP_STATE, 11
 	call ALKHARID_GYM_STATE
-	call ALKHARID_GYM_NPCS_POST_GYM_2F_2R
+	call ALKHARID_GYM_NPCS_POST_GYM_1F_R2
 	return
 
 
-ALKHARID_GYM_NPCS_POST_GYM_2F_2R::
+ALKHARID_GYM_NPCS_POST_GYM_1F_R2::
 	switch VAR_POKESCAPE_ALKHARID_GYM_QUEST
-	case 30, ALKHARID_GYM_NPCS_POST_GYM_2F_2R_3
-ALKHARID_GYM_NPCS_POST_GYM_2F_2R_1:
+	case 0, ALKHARID_GYM_NPCS_POST_GYM_1F_R2_3
+	case 15, ALKHARID_GYM_NPCS_POST_GYM_1F_R2_4
+	case 30, ALKHARID_GYM_NPCS_POST_GYM_1F_R2_5
+ALKHARID_GYM_NPCS_POST_GYM_1F_R2_1:
 	return
 
-ALKHARID_GYM_NPCS_POST_GYM_2F_2R_3:
-	setobjectxyperm 9, 3, 9
-	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_AROUND
-	setobjectxyperm 10, 14, 6
-	setobjectmovementtype 2, MOVEMENT_TYPE_FACE_DOWN
+ALKHARID_GYM_NPCS_POST_GYM_1F_R2_3:
+	setobjectxyperm 9, 3, 8
+	setobjectmovementtype 9, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectxyperm 10, 15, 9
+	setobjectmovementtype 10, MOVEMENT_TYPE_WANDER_AROUND
+	goto ALKHARID_GYM_NPCS_POST_GYM_1F_R2_1
+
+ALKHARID_GYM_NPCS_POST_GYM_1F_R2_4:
+	setobjectxyperm 9, 13, 11
+	setobjectmovementtype 9, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm 10, 7, 5
+	setobjectmovementtype 10, MOVEMENT_TYPE_FACE_LEFT
+	goto ALKHARID_GYM_NPCS_POST_GYM_1F_R2_1
+
+ALKHARID_GYM_NPCS_POST_GYM_1F_R2_5:
+	setobjectxyperm 9, 3, 8
+	setobjectmovementtype 9, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectxyperm 10, 15, 9
+	setobjectmovementtype 10, MOVEMENT_TYPE_FACE_DOWN
 	setobjectxyperm 11, 11, 11
-	setobjectmovementtype 2, MOVEMENT_TYPE_FACE_LEFT
-	goto ALKHARID_GYM_NPCS_POST_GYM_2F_2R_1
+	setobjectmovementtype 11, MOVEMENT_TYPE_FACE_LEFT
+	goto ALKHARID_GYM_NPCS_POST_GYM_1F_R2_1
 
 
 ALKHARID_GYM_STATE::
@@ -90,6 +106,10 @@ ALKHARID_GYM_STATE_6:
 	removeobject 8
 	removeobject 11
 	setflag FLAG_TEMP_6
+	setobjectxyperm 9, 13, 11
+	setobjectmovementtype 9, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm 10, 7, 5
+	setobjectmovementtype 10, MOVEMENT_TYPE_FACE_LEFT
 	goto ALKHARID_GYM_STATE_1
 
 ALKHARID_GYM_STATE_7:
@@ -305,25 +325,28 @@ ALKHARID_GYM_ALI::
 	namebox QUEST_ALKHARID_GYM_1_Text_5
 	goto_if_unset FLAG_BADGE06_GET, ALKHARID_GYM_ALI_2
 	goto_if_set FLAG_BADGE06_GET, ALKHARID_GYM_ALI_5
-	msgbox ALKHARID_GYM_ALI_Text_6
+	msgbox ALKHARID_GYM_ALI_Text_7
 ALKHARID_GYM_ALI_4:
 	hidenamebox
 	release
 	end
 
 ALKHARID_GYM_ALI_2:
-	msgbox ALKHARID_GYM_ALI_Text_0
+	compare VAR_POKESCAPE_GAMEMODE_STATE, 0
+	goto_if_eq ALKHARID_GYM_ALI_9
+ALKHARID_GYM_ALI_8:
+	msgbox ALKHARID_GYM_ALI_Text_1
 	hidenamebox
 	call GYM_BATTLE_PRINCE_ALI
 	namebox QUEST_ALKHARID_GYM_1_Text_5
-	msgbox ALKHARID_GYM_ALI_Text_1
+	msgbox ALKHARID_GYM_ALI_Text_2
 	hidenamebox
 	playfanfare MUS_PS_QUEST_COMPLETE
-	msgbox ALKHARID_GYM_ALI_Text_2
+	msgbox ALKHARID_GYM_ALI_Text_3
 	waitfanfare
 	waitmessage
 	namebox QUEST_ALKHARID_GYM_1_Text_5
-	msgbox ALKHARID_GYM_ALI_Text_3
+	msgbox ALKHARID_GYM_ALI_Text_4
 	hidenamebox
 	giveitem ITEM_TM48, 1
 	compare VAR_RESULT, FALSE
@@ -331,7 +354,7 @@ ALKHARID_GYM_ALI_2:
 	playbgm MUS_PS_ALKHARID, 0
 	savebgm MUS_PS_ALKHARID
 	namebox QUEST_ALKHARID_GYM_1_Text_5
-	msgbox ALKHARID_GYM_ALI_Text_4
+	msgbox ALKHARID_GYM_ALI_Text_5
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 30
 	setflag FLAG_BADGE06_GET
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MVM_CHAMPIONSHIPS, 4
@@ -343,8 +366,12 @@ ALKHARID_GYM_ALI_2:
 	end
 
 ALKHARID_GYM_ALI_5:
-	msgbox ALKHARID_GYM_ALI_Text_5
+	msgbox ALKHARID_GYM_ALI_Text_6
 	goto ALKHARID_GYM_ALI_4
+
+ALKHARID_GYM_ALI_9:
+	msgbox ALKHARID_GYM_ALI_Text_0
+	goto ALKHARID_GYM_ALI_8
 
 
 ALKHARID_MUSIC_TEST::
@@ -477,6 +504,8 @@ GYM_NPC_0::
 	faceplayer
 	namebox GYM_NPC_0_Text_0
 	msgbox GYM_NPC_0_Text_1
+	closemessage
+	hidenamebox
 	release
 	end
 
@@ -612,10 +641,7 @@ GYM_NPC_7_7:
 	call CHECK_IF_ALI
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
 	goto_if_eq GYM_NPC_7_14
-	applymovement 10, Movement_AlkharidGym_NPC_7
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT
-	waitmovement 0
+	call GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7
 	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
@@ -625,6 +651,9 @@ GYM_NPC_7_7:
 	msgbox GYM_NPC_7_Text_2
 	closemessage
 	hidenamebox
+	setobjectmovementtype 9, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 10, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 11, MOVEMENT_TYPE_WANDER_AROUND
 	setflag FLAG_ALKHARIDGYM_4
 	release
 	end
@@ -643,11 +672,7 @@ GYM_NPC_7_14:
 	removeobject VAR_LAST_TALKED
 	addobject 11
 	clearflag FLAG_TEMP_6
-	applymovement 10, Movement_AlkharidGym_NPC_7
-	applymovement 11, Movement_AlkharidGym_NPC_7_Ali
-	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT
-	waitmovement 0
+	call GYM_MOVEMENT_FOUND_ALI_NPC7
 	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
@@ -663,12 +688,25 @@ GYM_NPC_7_14:
 	waitmovement 0
 	applymovement 11, MOVEMENT_FACE_UP
 	waitmovement 0
+	specialvar VAR_RESULT, GetCurrentMap
+	compare VAR_RESULT, MAP_ALKHARID_GYM_1F_R2
+	goto_if_eq GYM_NPC_7_20
+GYM_NPC_7_19:
 	release
 	end
 
 GYM_NPC_7_17:
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	end
+
+GYM_NPC_7_20:
+	fadescreenswapbuffers FADE_TO_BLACK
+	addobject 1
+	clearflag FLAG_TEMP_A
+	applymovement 1, Movement_AlkharidGym_TELEPORT_IN
+	fadescreenswapbuffers FADE_FROM_BLACK
+	waitmovement 0
+	goto GYM_NPC_7_19
 
 
 GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7::
@@ -690,7 +728,7 @@ GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_4:
 	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_1
 
 GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_5:
-	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2
+	applymovement 10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_3
 	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7_1
 
 
@@ -816,10 +854,7 @@ GYM_NPC_8_7:
 	call CHECK_IF_ALI
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
 	goto_if_eq GYM_NPC_8_14
-	applymovement 9, Movement_AlkharidGym_NPC_8
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
-	waitmovement 0
+	call GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8
 	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
@@ -829,6 +864,10 @@ GYM_NPC_8_7:
 	msgbox GYM_NPC_7_Text_2
 	closemessage
 	hidenamebox
+	applymovement 9, MOVEMENT_WALK_RIGHT
+	waitmovement 0
+	applymovement 9, MOVEMENT_FACE_LEFT
+	waitmovement 0
 	setflag FLAG_ALKHARIDGYM_4
 	release
 	end
@@ -847,11 +886,7 @@ GYM_NPC_8_14:
 	removeobject VAR_LAST_TALKED
 	addobject 11
 	clearflag FLAG_TEMP_6
-	applymovement 9, Movement_AlkharidGym_NPC_8
-	applymovement 11, Movement_AlkharidGym_NPC_8_Ali
-	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
-	waitmovement 0
+	call GYM_MOVEMENT_FOUND_ALI_NPC8
 	namebox GYM_NPC_0_Text_0
 	msgbox GYM_ALKHARID_TRAINER_1_Text_1
 	hidenamebox
@@ -863,10 +898,14 @@ GYM_NPC_8_14:
 	msgbox GYM_NPC_7_Text_1
 	closemessage
 	hidenamebox
-	applymovement 11, MOVEMENT_WALK_RIGHT
+	applymovement 9, MOVEMENT_WALK_RIGHT
 	waitmovement 0
-	applymovement 11, MOVEMENT_FACE_LEFT
+	applymovement 9, MOVEMENT_FACE_LEFT
 	waitmovement 0
+	specialvar VAR_RESULT, GetCurrentMap
+	compare VAR_RESULT, MAP_ALKHARID_GYM_1F_R2
+	goto_if_eq GYM_NPC_8_20
+GYM_NPC_8_19:
 	release
 	end
 
@@ -874,6 +913,108 @@ GYM_NPC_8_17:
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	end
 
+GYM_NPC_8_20:
+	fadescreenswapbuffers FADE_TO_BLACK
+	addobject 1
+	clearflag FLAG_TEMP_A
+	applymovement 1, Movement_AlkharidGym_TELEPORT_IN
+	fadescreenswapbuffers FADE_FROM_BLACK
+	waitmovement 0
+	goto GYM_NPC_8_19
+
+
+GYM_MOVEMENT_FOUND_ALI_NPC8::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 7, GYM_MOVEMENT_FOUND_ALI_NPC8_3
+	case 8, GYM_MOVEMENT_FOUND_ALI_NPC8_4
+GYM_MOVEMENT_FOUND_ALI_NPC8_1:
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_FOUND_ALI_NPC8_3:
+	applymovement 9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_1
+	applymovement 11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_1
+	goto GYM_MOVEMENT_FOUND_ALI_NPC8_1
+
+GYM_MOVEMENT_FOUND_ALI_NPC8_4:
+	applymovement 9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_2
+	applymovement 11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_2
+	goto GYM_MOVEMENT_FOUND_ALI_NPC8_1
+
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_1:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_left
+	face_up
+	step_end
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_2:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	step_end
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 7, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_3
+	case 8, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_4
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_1:
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_3:
+	applymovement 9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_1
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_1
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_4:
+	applymovement 9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_2
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8_1
+
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_1:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	step_end
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_2:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_left
+	walk_faster_left
+	step_end
 
 Movement_AlkharidGym_NPC_7:
 	walk_faster_down
@@ -1011,30 +1152,42 @@ NPC_ALKHARID_OSMAN_Text_2:
 	.string "disguse by sneezing.$"
 
 ALKHARID_GYM_ALI_Text_0:
-	.string "Welcome to the Al Kharid Gym.$"
+	.string "So you're the one who saved Leel-.\p"
+	.string "Ahem, I mean me.\p"
+	.string "Osman and I are indebted to you.\p"
+	.string "Should you ever require anything we\n"
+	.string "shall come to your aid.\p"
+	.string "Ahem…$"
 
 ALKHARID_GYM_ALI_Text_1:
-	.string "Have this Badge.$"
+	.string "Welcome to the Al Kharid Gym.\p"
+	.string "I Prince Ali shall test your skills.\p"
+	.string "I hope you are ready!$"
 
 ALKHARID_GYM_ALI_Text_2:
+	.string "I applaud you. You carry yourself most\n"
+	.string "elgantly in battle. Here you deserve\l"
+	.string "this Badge.$"
+
+ALKHARID_GYM_ALI_Text_3:
 	.string "{PLAYER} received the Al Kharid BADGE\n"
 	.string "from Prince Ali.$"
 
-ALKHARID_GYM_ALI_Text_3:
+ALKHARID_GYM_ALI_Text_4:
 	.string "Also have this Scroll.$"
 
-ALKHARID_GYM_ALI_Text_4:
+ALKHARID_GYM_ALI_Text_5:
 	.string "That move is called Power Gem.\p"
 	.string "It sparkles just as all our precious\n"
 	.string "Gems around the palace do.$"
 
-ALKHARID_GYM_ALI_Text_5:
+ALKHARID_GYM_ALI_Text_6:
 	.string "You seem like you would be strong\n"
 	.string "enough to take on the Barbarians,\l"
 	.string "maybe you should head there next for\l"
 	.string "your MvM gym challenge.$"
 
-ALKHARID_GYM_ALI_Text_6:
+ALKHARID_GYM_ALI_Text_7:
 	.string "If you head north of here through the\n"
 	.string "desert, you should reach Varrock.\p"
 	.string "Your next MvM gym challenge is with King\n"

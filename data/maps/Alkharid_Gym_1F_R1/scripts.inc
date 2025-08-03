@@ -11,13 +11,16 @@ Alkharid_Gym_1F_R1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 ALKHARID_GYM_NPCS_POST_GYM_1F_1R::
 	switch VAR_POKESCAPE_ALKHARID_GYM_QUEST
+	case 0, ALKHARID_GYM_NPCS_POST_GYM_1F_1R_3
 	case 30, ALKHARID_GYM_NPCS_POST_GYM_1F_1R_3
 ALKHARID_GYM_NPCS_POST_GYM_1F_1R_1:
 	return
 
 ALKHARID_GYM_NPCS_POST_GYM_1F_1R_3:
-	setobjectxyperm 2, 2, 4
-	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT
+	setobjectxyperm 2, 8, 3
+	setobjectmovementtype 2, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm 3, 3, 5
+	setobjectmovementtype 3, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT
 	goto ALKHARID_GYM_NPCS_POST_GYM_1F_1R_1
 
 
@@ -51,10 +54,7 @@ GYM_NPC_3_7:
 	call CHECK_IF_ALI
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
 	goto_if_eq GYM_NPC_3_14
-	applymovement 3, Movement_AlkharidGym_NPC_3
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
-	waitmovement 0
+	call GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3
 	namebox GYM_NPC_3_Text_1
 	msgbox GYM_NPC_3_Text_2
 	hidenamebox
@@ -65,10 +65,13 @@ GYM_NPC_3_7:
 	closemessage
 	hidenamebox
 	setflag FLAG_ALKHARIDGYM_2
-	applymovement 3, MOVEMENT_WALK_DOWN
+	applymovement 3, MOVEMENT_WALK_UP
 	waitmovement 0
-	applymovement 3, MOVEMENT_FACE_UP
+	applymovement 3, MOVEMENT_FACE_DOWN
 	waitmovement 0
+	setobjectmovementtype 1, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 3, MOVEMENT_TYPE_WANDER_AROUND
 	release
 	end
 
@@ -86,11 +89,7 @@ GYM_NPC_3_14:
 	removeobject VAR_LAST_TALKED
 	addobject 1
 	clearflag FLAG_TEMP_6
-	applymovement 3, Movement_AlkharidGym_NPC_3
-	applymovement 1, Movement_AlkharidGym_NPC_3_Ali
-	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
-	waitmovement 0
+	call GYM_MOVEMENT_FOUND_ALI_NPC3
 	namebox GYM_NPC_3_Text_1
 	msgbox GYM_NPC_3_Text_2
 	hidenamebox
@@ -102,9 +101,9 @@ GYM_NPC_3_14:
 	msgbox GYM_NPC_3_Text_4
 	closemessage
 	hidenamebox
-	applymovement 3, MOVEMENT_WALK_DOWN
+	applymovement 3, MOVEMENT_WALK_UP
 	waitmovement 0
-	applymovement 3, MOVEMENT_FACE_UP
+	applymovement 3, MOVEMENT_FACE_DOWN
 	waitmovement 0
 	release
 	end
@@ -113,6 +112,79 @@ GYM_NPC_3_17:
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	end
 
+
+GYM_MOVEMENT_FOUND_ALI_NPC3::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 4, GYM_MOVEMENT_FOUND_ALI_NPC3_3
+	case 5, GYM_MOVEMENT_FOUND_ALI_NPC3_4
+GYM_MOVEMENT_FOUND_ALI_NPC3_1:
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_FOUND_ALI_NPC3_3:
+	applymovement 3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC3_1
+	applymovement 1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC3_1
+	goto GYM_MOVEMENT_FOUND_ALI_NPC3_1
+
+GYM_MOVEMENT_FOUND_ALI_NPC3_4:
+	applymovement 3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC3_2
+	applymovement 1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC3_2
+	goto GYM_MOVEMENT_FOUND_ALI_NPC3_1
+
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC3_1:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	step_end
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC3_2:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	face_right
+	step_end
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 4, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_3
+	case 5, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_4
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_1:
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_3:
+	applymovement 3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC3_1
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_1
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_4:
+	applymovement 3, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC3_2
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC3_1
+
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC3_1:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	face_left
+	step_end
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC3_2:
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	face_down
+	step_end
 
 GYM_NPC_4::
 	lock
@@ -144,10 +216,7 @@ GYM_NPC_4_7:
 	call CHECK_IF_ALI
 	compare VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20
 	goto_if_eq GYM_NPC_4_14
-	applymovement 2, Movement_AlkharidGym_NPC_4
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
-	waitmovement 0
+	call GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4
 	namebox GYM_NPC_3_Text_1
 	msgbox GYM_NPC_3_Text_2
 	hidenamebox
@@ -160,6 +229,9 @@ GYM_NPC_4_7:
 	setflag FLAG_ALKHARIDGYM_2
 	applymovement 2, Movement_AlkharidGym_moveafterbattle_1
 	waitmovement 0
+	setobjectmovementtype 1, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 2, MOVEMENT_TYPE_WANDER_AROUND
+	setobjectmovementtype 3, MOVEMENT_TYPE_WANDER_AROUND
 	release
 	end
 
@@ -177,11 +249,7 @@ GYM_NPC_4_14:
 	removeobject VAR_LAST_TALKED
 	addobject 1
 	clearflag FLAG_TEMP_6
-	applymovement 2, Movement_AlkharidGym_NPC_4
-	applymovement 1, Movement_AlkharidGym_NPC_4_Ali
-	delay 60
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_LEFT
-	waitmovement 0
+	call GYM_MOVEMENT_FOUND_ALI_NPC4
 	namebox GYM_NPC_3_Text_1
 	msgbox GYM_NPC_3_Text_2
 	hidenamebox
@@ -204,6 +272,87 @@ GYM_NPC_4_17:
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 0
 	end
 
+
+GYM_MOVEMENT_FOUND_ALI_NPC4::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 8, GYM_MOVEMENT_FOUND_ALI_NPC4_3
+	case 9, GYM_MOVEMENT_FOUND_ALI_NPC4_4
+GYM_MOVEMENT_FOUND_ALI_NPC4_1:
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_FOUND_ALI_NPC4_3:
+	applymovement 2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC4_1
+	applymovement 1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC4_1
+	goto GYM_MOVEMENT_FOUND_ALI_NPC4_1
+
+GYM_MOVEMENT_FOUND_ALI_NPC4_4:
+	applymovement 2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC4_2
+	applymovement 1, Movement_AlkharidGym_FOUND_ALI_ALI_NPC4_2
+	goto GYM_MOVEMENT_FOUND_ALI_NPC4_1
+
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC4_1:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	step_end
+
+Movement_AlkharidGym_FOUND_ALI_ALI_NPC4_2:
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_down
+	walk_faster_down
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	face_up
+	step_end
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4::
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	switch VAR_TEMP_1
+	case 8, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_3
+	case 9, GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_4
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_1:
+	waitmovement 0
+	return
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_3:
+	applymovement 2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC4_1
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_1
+
+GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_4:
+	applymovement 2, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC4_2
+	goto GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC4_1
+
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC4_1:
+	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	step_end
+
+Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC4_2:
+	walk_faster_up
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_up
+	walk_faster_right
+	step_end
 
 Movement_AlkharidGym_NPC_3:
 	walk_faster_down
@@ -425,7 +574,7 @@ GYM_NPC_4_Text_0:
 	.string "You put up a good fight.$"
 
 GYM_NPC_4_Text_1:
-	.string "This is where us guards rest.\p"
+	.string "This is where us guards go to relax.\p"
 	.string "We are on call all hours of the day and\n"
 	.string "night!$"
 

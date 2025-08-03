@@ -4,19 +4,29 @@ mapscripts Alkharid_Gym_1F_R2_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setvar(VAR_EVOLUTION_MAP_STATE, 11) //MAP LOCATIONS: 0-NOTHING, 1-LUMBRIDGE, 16-VARROCK, 3-FALADOR, 4-MEMBERS, 5-OCEAN, 6-WILDERNESS, 7-MORYTANIA, 8-CAVES, 9-ABYSS, 10-OFFWORLD, 11-DESERT, 15-KARAMJA
         call(ALKHARID_GYM_STATE)
-        call(ALKHARID_GYM_NPCS_POST_GYM_2F_2R)
+        call(ALKHARID_GYM_NPCS_POST_GYM_1F_R2)
     }
 }
 
-script ALKHARID_GYM_NPCS_POST_GYM_2F_2R{
+script ALKHARID_GYM_NPCS_POST_GYM_1F_R2{
 	switch (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)){ 
+        case 0: //Pre Gym
+            setobjectxyperm(9, 3, 8)
+			setobjectmovementtype(9,MOVEMENT_TYPE_WANDER_AROUND)
+            setobjectxyperm(10, 15, 9)
+			setobjectmovementtype(10 ,MOVEMENT_TYPE_WANDER_AROUND)
+        case 15:
+            setobjectxyperm(9, 13, 11)
+            setobjectmovementtype(9,MOVEMENT_TYPE_FACE_RIGHT)
+            setobjectxyperm(10, 7, 5)
+            setobjectmovementtype(10 ,MOVEMENT_TYPE_FACE_LEFT)
         case 30: //GYM DEFEATED
-            setobjectxyperm(9, 3, 9)
-			setobjectmovementtype(2,MOVEMENT_TYPE_WANDER_AROUND)
-            setobjectxyperm(10, 14, 6)
-			setobjectmovementtype(2,MOVEMENT_TYPE_FACE_DOWN)
+            setobjectxyperm(9, 3, 8)
+			setobjectmovementtype(9, MOVEMENT_TYPE_WANDER_AROUND)
+            setobjectxyperm(10, 15, 9)
+			setobjectmovementtype(10, MOVEMENT_TYPE_FACE_DOWN)
             setobjectxyperm(11, 11, 11)
-			setobjectmovementtype(2,MOVEMENT_TYPE_FACE_LEFT)
+			setobjectmovementtype(11, MOVEMENT_TYPE_FACE_LEFT)
     }
     return
 }
@@ -96,6 +106,10 @@ script ALKHARID_GYM_STATE{
             removeobject(8)
             removeobject(11) // extra guard
             setflag(FLAG_TEMP_6)
+            setobjectxyperm(9, 13, 11)
+            setobjectmovementtype(9,MOVEMENT_TYPE_FACE_RIGHT)
+            setobjectxyperm(10, 7, 5)
+            setobjectmovementtype(10 ,MOVEMENT_TYPE_FACE_LEFT)
         case 20:
             setflag(FLAG_TEMP_1)
             setflag(FLAG_TEMP_B)
@@ -295,12 +309,14 @@ script ALKHARID_GYM_ALI {
     faceplayer
     namebox("Prince Ali")
     if (!flag(FLAG_BADGE06_GET)){   //ALKHARID BADGE
-
-        msgbox(format("Welcome to the Al Kharid Gym."))
+        if (var(VAR_POKESCAPE_GAMEMODE_STATE) == 0) { //if story mode
+            msgbox(format("So you're the one who saved Leel-.\pAhem, I mean me.\pOsman and I are indebted to you.\pShould you ever require anything we shall come to your aid.\pAhem…"))
+        }
+        msgbox(format("Welcome to the Al Kharid Gym.\pI Prince Ali shall test your skills.\pI hope you are ready!"))
         hidenamebox
         call(GYM_BATTLE_PRINCE_ALI)
         namebox("Prince Ali")
-        msgbox(format("Have this Badge."))
+        msgbox(format("I applaud you. You carry yourself most elgantly in battle. Here you deserve this Badge."))
         hidenamebox
         playfanfare(MUS_PS_QUEST_COMPLETE) //MUS_OBTAIN_BADGE MUS_PS_QUEST_COMPLETE
         msgbox(format("{PLAYER} received the Al Kharid BADGE from Prince Ali."))
@@ -498,6 +514,8 @@ script GYM_NPC_0
     faceplayer
     namebox("Warrior")
     msgbox(format("Congratulations on finding the prince.\pWhere is he now?\pWho knows… Maybe the throne room…"))
+    closemessage
+    hidenamebox
     release
     end
 }
@@ -641,11 +659,7 @@ script GYM_NPC_7
                     removeobject(VAR_LAST_TALKED)
                     addobject(11) // extra guard
                     clearflag(FLAG_TEMP_6)
-                    applymovement(10, Movement_AlkharidGym_NPC_7)
-                    applymovement(11, Movement_AlkharidGym_NPC_7_Ali)
-                    delay(60)
-                    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT)
-                    waitmovement(0)
+                    call(GYM_MOVEMENT_FOUND_ALI_NPC7)
                     namebox("Warrior")
                     msgbox(format("Brother, I will help thee with this infidel!"))
                     hidenamebox
@@ -663,13 +677,19 @@ script GYM_NPC_7
                     waitmovement(0)
                     applymovement(11, MOVEMENT_FACE_UP)
                     waitmovement(0)
+                    specialvar (VAR_RESULT, GetCurrentMap)
+                    if (var(VAR_RESULT) == MAP_ALKHARID_GYM_1F_R2) {
+                        fadescreenswapbuffers(FADE_TO_BLACK)
+                        addobject(1)
+                        clearflag(FLAG_TEMP_A)
+                        applymovement(1, Movement_AlkharidGym_TELEPORT_IN)
+                        fadescreenswapbuffers(FADE_FROM_BLACK)
+                        waitmovement(0)
+                    }
                     release
                     end
                 }
-                applymovement(10, Movement_AlkharidGym_NPC_7)
-                waitmovement(0)
-                applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_RIGHT)
-                waitmovement(0)
+                call(GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7)
                 namebox("Warrior")
                 msgbox(format("Brother, I will help thee with this infidel!"))
                 hidenamebox
@@ -679,6 +699,9 @@ script GYM_NPC_7
                 msgbox(format("You have defeated us!\pBut the Prince is still somewhere around the Palace."))
                 closemessage
                 hidenamebox
+                setobjectmovementtype(9, MOVEMENT_TYPE_WANDER_AROUND)
+                setobjectmovementtype(10, MOVEMENT_TYPE_WANDER_AROUND)
+                setobjectmovementtype(11, MOVEMENT_TYPE_WANDER_AROUND)
                 setflag(FLAG_ALKHARIDGYM_4)
                 release
                 end
@@ -710,7 +733,7 @@ script GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC7 {
         case 13: 
             applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2)
         case 14: 
-            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_2)
+            applymovement(10, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC7_3)
     }
     waitmovement(0)
     return
@@ -799,11 +822,7 @@ script GYM_NPC_8
                     removeobject(VAR_LAST_TALKED)
                     addobject(11) // extra guard
                     clearflag(FLAG_TEMP_6)
-                    applymovement(9, Movement_AlkharidGym_NPC_8)
-                    applymovement(11, Movement_AlkharidGym_NPC_8_Ali)
-                    delay(60)
-                    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP)
-                    waitmovement(0)
+                    call(GYM_MOVEMENT_FOUND_ALI_NPC8)
                     namebox("Warrior")
                     msgbox(format("Brother, I will help thee with this infidel!"))
                     hidenamebox
@@ -817,17 +836,23 @@ script GYM_NPC_8
                     msgbox(format("You have defeated us!\pBut the Prince has made his escape so we have done our jobs."))
                     closemessage
                     hidenamebox
-                    applymovement(11, MOVEMENT_WALK_RIGHT)
+                    applymovement(9, MOVEMENT_WALK_RIGHT)
                     waitmovement(0)
-                    applymovement(11, MOVEMENT_FACE_LEFT)
+                    applymovement(9, MOVEMENT_FACE_LEFT)
                     waitmovement(0)
+                    specialvar (VAR_RESULT, GetCurrentMap)
+                    if (var(VAR_RESULT) == MAP_ALKHARID_GYM_1F_R2) {
+                        fadescreenswapbuffers(FADE_TO_BLACK)
+                        addobject(1)
+                        clearflag(FLAG_TEMP_A)
+                        applymovement(1, Movement_AlkharidGym_TELEPORT_IN)
+                        fadescreenswapbuffers(FADE_FROM_BLACK)
+                        waitmovement(0)
+                    }
                     release
                     end
                 }
-                applymovement(9, Movement_AlkharidGym_NPC_8)
-                waitmovement(0)
-                applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_UP)
-                waitmovement(0)
+                call(GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8)
                 namebox("Warrior")
                 msgbox(format("Brother, I will help thee with this infidel!"))
                 hidenamebox
@@ -837,6 +862,10 @@ script GYM_NPC_8
                 msgbox(format("You have defeated us!\pBut the Prince is still somewhere around the Palace."))
                 closemessage
                 hidenamebox
+                applymovement(9, MOVEMENT_WALK_RIGHT)
+                waitmovement(0)
+                applymovement(9, MOVEMENT_FACE_LEFT)
+                waitmovement(0)
                 setflag(FLAG_ALKHARIDGYM_4)
                 release
                 end
@@ -860,6 +889,70 @@ script GYM_NPC_8
     release
     end
 }
+script GYM_MOVEMENT_FOUND_ALI_NPC8 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 7: 
+            applymovement(9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_1)
+            applymovement(11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_1)
+        case 8: 
+            applymovement(9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_2)
+            applymovement(11, Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_2)
+    }
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN)
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_1
+{
+    walk_faster_left * 2
+    walk_faster_up * 7
+    walk_faster_left * 1
+    face_up
+    step_end
+} 
+movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC8_2
+{
+    walk_faster_left * 2
+    walk_faster_up * 6
+    step_end
+} 
+script GYM_MOVEMENT_DID_NOT_FIND_ALI_NPC8 {
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    switch (var(VAR_TEMP_1)) { 
+        case 7: 
+            applymovement(9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_1)
+        case 8: 
+            applymovement(9, Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_2)
+    }
+    waitmovement(0)
+    return
+}
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_1
+{
+    walk_faster_left * 2
+    walk_faster_up * 7
+    walk_faster_left * 3
+    step_end
+} 
+movement Movement_AlkharidGym_DID_NOT_FIND_ALI_NPC8_2
+{
+    walk_faster_left * 2
+    walk_faster_up * 6
+    walk_faster_left * 2
+    step_end
+} 
+
+
+
+
+
+
+
+
+
+
 
 movement Movement_AlkharidGym_NPC_7
 {

@@ -6,13 +6,16 @@ mapscripts Alkharid_Gym_2F_R1_MapScripts {
     }
 }
 
-script ALKHARID_GYM_NPCS_POST_GYM_2F_1R{
+script ALKHARID_GYM_NPCS_POST_GYM_2F_1R {
 	switch (var(VAR_POKESCAPE_ALKHARID_GYM_QUEST)){ 
+        case 0:
+            setobjectxyperm(2, 10, 5)
+			setobjectmovementtype(2, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT)
         case 30: //GYM DEFEATED
-            setobjectxyperm(2, 2, 4)
-			setobjectmovementtype(2,MOVEMENT_TYPE_WANDER_AROUND)
-            setobjectxyperm(3, 12, 5)
-			setobjectmovementtype(2,MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT)
+            setobjectxyperm(2, 10, 5)
+			setobjectmovementtype(2, MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT)
+            setobjectxyperm(3, 6, 3)
+			setobjectmovementtype(3, MOVEMENT_TYPE_WANDER_AROUND)
     }
     return
 }
@@ -70,6 +73,9 @@ script GYM_NPC_5
                 msgbox(format("You have defeated us!\pBut the Prince is still somewhere around the Palace."))
                 closemessage
                 hidenamebox
+                setobjectmovementtype(1, MOVEMENT_TYPE_WANDER_AROUND)
+                setobjectmovementtype(2, MOVEMENT_TYPE_WANDER_AROUND)
+                setobjectmovementtype(3, MOVEMENT_TYPE_WANDER_AROUND)
                 setflag(FLAG_ALKHARIDGYM_3)
                 release
                 end
@@ -199,6 +205,9 @@ script GYM_NPC_6
                 msgbox(format("You have defeated us!\pBut the Prince is still somewhere around the Palace."))
                 closemessage
                 hidenamebox
+                setobjectmovementtype(1, MOVEMENT_TYPE_WANDER_AROUND)
+                setobjectmovementtype(2, MOVEMENT_TYPE_WANDER_AROUND)
+                setobjectmovementtype(3, MOVEMENT_TYPE_WANDER_AROUND)
                 setflag(FLAG_ALKHARIDGYM_3)
                 release
                 end
@@ -250,7 +259,7 @@ movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_1
 {
     walk_faster_left * 8
     walk_faster_up * 2
-    face_right
+    face_left
     step_end
 } 
 movement Movement_AlkharidGym_FOUND_ALI_ALI_NPC6_2

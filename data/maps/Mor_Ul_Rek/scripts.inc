@@ -125,6 +125,8 @@ POST_FIGHTCAVES_DIALOGUE::
 	applymovement 8, Movement_followerplayeroutoffirecaves
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_walkoutoffirecaves
 	waitmovement 8
+	setobjectxy 8, 61, 30
+	setobjectxyperm 8, 61, 30
 	compare VAR_TZHAAR_CHALLENGES_STATUS, 5
 	goto_if_eq POST_FIGHTCAVES_DIALOGUE_2
 	compare VAR_TZHAAR_CHALLENGES_STATUS, 10
@@ -545,6 +547,7 @@ TZHAAR_NPC_BANKER_Human::
 
 
 TZHAAR_NPC_13::
+	lock
 	faceplayer
 	namebox TZHAAR_NPC_13_Text_0
 	msgbox TZHAAR_NPC_13_Text_1
@@ -555,6 +558,7 @@ TZHAAR_NPC_13::
 
 
 TZHAAR_NPC_14::
+	lock
 	faceplayer
 	namebox STORYMODE_TZHAAR_NPC_Text_0
 	msgbox TZHAAR_NPC_14_Text_0
@@ -565,6 +569,7 @@ TZHAAR_NPC_14::
 
 
 TZHAAR_NPC_15::
+	lock
 	faceplayer
 	namebox STORYMODE_TZHAAR_NPC_Text_0
 	msgbox TZHAAR_NPC_15_Text_0

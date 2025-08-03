@@ -1440,6 +1440,8 @@ script HAM_HIDEOUT_B1F_PRINCE_ALI
             applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP) 
             waitmovement(0)
         }
+        namebox("???")
+        msgbox(format("Prince Ali?\p…{PAUSE 15}…{PAUSE 15}…"))
         namebox("Prince Ali")
         msgbox(format("Ah, are you two perhaps my saviors?\pAh but we are getting ahead of ourselves, we still must escape this place.\pPerhaps you two could cause a distraction of some sort?\pAnd I will escape and take these prisoners to safety."))
         hidenamebox
