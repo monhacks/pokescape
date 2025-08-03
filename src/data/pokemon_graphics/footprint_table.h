@@ -1521,6 +1521,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_DUCKATRICE] = gMonFootprint_Duckatrice,
     [SPECIES_SCARAB] = gMonFootprint_Scarab,
     [SPECIES_SCARAB_GIANT] = gMonFootprint_Scarab_Giant,
+    [SPECIES_SCARAB_AGILE_FORM] = gMonFootprint_Scarab_Agile_Form,
     [SPECIES_AKKHA] = gMonFootprint_Akkha,
     [SPECIES_TUMEKENS_WARDEN_MEGA_FORM] = gMonFootprint_Tumekens_Warden_Mega_Form,
     [SPECIES_POOP_ROCK] = gMonFootprint_Poop_Rock,

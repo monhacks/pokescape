@@ -2881,10 +2881,11 @@
 #define SPECIES_DUCKATRICE                          POKESCAPE_START + 1106
 #define SPECIES_SCARAB                              POKESCAPE_START + 1107
 #define SPECIES_SCARAB_GIANT                        POKESCAPE_START + 1108
-#define SPECIES_AKKHA                               POKESCAPE_START + 1109
-#define SPECIES_TUMEKENS_WARDEN_MEGA_FORM           POKESCAPE_START + 1110
-#define SPECIES_POOP_ROCK                           POKESCAPE_START + 1111
-#define SPECIES_BABOON_BRAWLER_FORM                 POKESCAPE_START + 1112
+#define SPECIES_SCARAB_AGILE_FORM                   POKESCAPE_START + 1109
+#define SPECIES_AKKHA                               POKESCAPE_START + 1110
+#define SPECIES_TUMEKENS_WARDEN_MEGA_FORM           POKESCAPE_START + 1111
+#define SPECIES_POOP_ROCK                           POKESCAPE_START + 1112
+#define SPECIES_BABOON_BRAWLER_FORM                 POKESCAPE_START + 1113
 
 
 //POKESCAPE END

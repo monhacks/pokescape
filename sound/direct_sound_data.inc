@@ -10543,6 +10543,10 @@ Cry_Scarab_Giant::
 	.incbin "sound/direct_sound_samples/cries/swinub.bin"
 
 		.align 2
+Cry_Scarab_Agile_Form::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+		.align 2
 Cry_Akkha::
 	.incbin "sound/direct_sound_samples/cries/swinub.bin"
 

@@ -7752,6 +7752,11 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x0,
 		.y_offset = 0,
 	},
+	[SPECIES_SCARAB_AGILE_FORM] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
 	[SPECIES_AKKHA] =
 	{
 		.size = 0x0,

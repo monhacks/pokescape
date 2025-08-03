@@ -1877,3 +1877,9 @@ static const u16 sStrykewyrmFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
+static const u16 sTumekensFormSpeciesIdTable[] = {
+    SPECIES_SPIRIT_MYSTIC,
+    SPECIES_TUMEKENS_WARDEN_MEGA_FORM,
+    FORM_SPECIES_END,
+};
+

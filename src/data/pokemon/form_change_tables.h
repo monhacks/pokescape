@@ -1176,6 +1176,10 @@ static const struct FormChange sStrykewyrmFormChangeTable[] = {
     {FORM_CHANGE_TERMINATOR},
 };
 
+static const struct FormChange sTumekensFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_TUMEKENS_WARDEN_MEGA_FORM, ITEM_FRAGMENT_OF_JAS},
+    {FORM_CHANGE_TERMINATOR},
+};
 
 
 

@@ -5914,6 +5914,7 @@ cry Cry_Molanisk
 cry Cry_Duckatrice
 cry Cry_Scarab
 cry Cry_Scarab_Giant
+cry Cry_Scarab_Agile_Form
 cry Cry_Akkha
 cry Cry_Tumekens_Warden_Mega_Form
 cry Cry_Poop_Rock
@@ -7028,6 +7029,7 @@ cry_reverse Cry_Molanisk
 cry_reverse Cry_Duckatrice
 cry_reverse Cry_Scarab
 cry_reverse Cry_Scarab_Giant
+cry_reverse Cry_Scarab_Agile_Form
 cry_reverse Cry_Akkha
 cry_reverse Cry_Tumekens_Warden_Mega_Form
 cry_reverse Cry_Poop_Rock
