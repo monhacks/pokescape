@@ -2636,7 +2636,7 @@
 #define SPECIES_DOUBT                               POKESCAPE_START + 861
 #define SPECIES_EVERLASTING                         POKESCAPE_START + 862
 #define SPECIES_UNTOUCHABLE                         POKESCAPE_START + 863
-#define SPECIES_INADEQUANCY                         POKESCAPE_START + 864
+#define SPECIES_INADEQUACY                         POKESCAPE_START + 864
 #define SPECIES_CHINCHOMPA_BABY                     POKESCAPE_START + 865
 #define SPECIES_CHINCHOMPA_GREY_BABY                POKESCAPE_START + 866
 #define SPECIES_CHINCHOMPA_RED_BABY                 POKESCAPE_START + 867
@@ -2879,11 +2879,17 @@
 #define SPECIES_CORRUPTED_BEAST                     POKESCAPE_START + 1104
 #define SPECIES_MOLANISK                            POKESCAPE_START + 1105
 #define SPECIES_DUCKATRICE                          POKESCAPE_START + 1106
+#define SPECIES_SCARAB                              POKESCAPE_START + 1107
+#define SPECIES_SCARAB_GIANT                        POKESCAPE_START + 1108
+#define SPECIES_AKKHA                               POKESCAPE_START + 1109
+#define SPECIES_TUMEKENS_WARDEN_MEGA_FORM           POKESCAPE_START + 1110
+#define SPECIES_POOP_ROCK                           POKESCAPE_START + 1111
+#define SPECIES_BABOON_BRAWLER_FORM                 POKESCAPE_START + 1112
 
 
 //POKESCAPE END
 
-#define SPECIES_EGG SPECIES_DUCKATRICE + 1
+#define SPECIES_EGG SPECIES_BABOON_BRAWLER_FORM + 1
 
 #define NUM_SPECIES SPECIES_EGG
 

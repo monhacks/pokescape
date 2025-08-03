@@ -18797,7 +18797,7 @@ static const union AnimCmd sAnim_Untouchable_1[] =
 	ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Inadequancy_1[] =
+static const union AnimCmd sAnim_Inadequacy_1[] =
 {
 	ANIMCMD_FRAME(1, 40),
 	ANIMCMD_FRAME(0, 5),
@@ -20522,6 +20522,53 @@ static const union AnimCmd sAnim_Duckatrice_1[] =
 	ANIMCMD_FRAME(0, 5),
 	ANIMCMD_END,
 };
+
+static const union AnimCmd sAnim_Scarab_1[] =
+{
+	ANIMCMD_FRAME(1, 40),
+	ANIMCMD_FRAME(0, 5),
+	ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Scarab_Giant_1[] =
+{
+	ANIMCMD_FRAME(1, 40),
+	ANIMCMD_FRAME(0, 5),
+	ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Akkha_1[] =
+{
+	ANIMCMD_FRAME(1, 40),
+	ANIMCMD_FRAME(0, 5),
+	ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Tumekens_Warden_Mega_Form_1[] =
+{
+	ANIMCMD_FRAME(1, 40),
+	ANIMCMD_FRAME(0, 5),
+	ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Poop_Rock_1[] =
+{
+	ANIMCMD_FRAME(1, 40),
+	ANIMCMD_FRAME(0, 5),
+	ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Baboon_Brawler_Form_1[] =
+{
+	ANIMCMD_FRAME(1, 40),
+	ANIMCMD_FRAME(0, 5),
+	ANIMCMD_END,
+};
+
+
+
+
+
 
 
 
@@ -24843,9 +24890,9 @@ static const union AnimCmd *const sAnims_Untouchable[] ={
 	sAnim_Untouchable_1,
 };
 
-static const union AnimCmd *const sAnims_Inadequancy[] ={
+static const union AnimCmd *const sAnims_Inadequacy[] ={
 	sAnim_GeneralFrame0,
-	sAnim_Inadequancy_1,
+	sAnim_Inadequacy_1,
 };
 
 static const union AnimCmd *const sAnims_Chinchompa_Baby[] ={
@@ -26061,6 +26108,42 @@ static const union AnimCmd *const sAnims_Duckatrice	[] ={
     sAnim_Duckatrice_1,
 };
 	
+static const union AnimCmd *const sAnims_Scarab	[] ={
+	sAnim_GeneralFrame0,
+    sAnim_Scarab_1,
+};
+
+static const union AnimCmd *const sAnims_Scarab_Giant	[] ={
+	sAnim_GeneralFrame0,
+    sAnim_Scarab_Giant_1,
+};
+
+static const union AnimCmd *const sAnims_Akkha	[] ={
+	sAnim_GeneralFrame0,
+    sAnim_Akkha_1,
+};
+
+static const union AnimCmd *const sAnims_Tumekens_Warden_Mega_Form	[] ={
+	sAnim_GeneralFrame0,
+    sAnim_Tumekens_Warden_Mega_Form_1,
+};
+
+static const union AnimCmd *const sAnims_Poop_Rock	[] ={
+	sAnim_GeneralFrame0,
+    sAnim_Poop_Rock_1,
+};
+
+static const union AnimCmd *const sAnims_Baboon_Brawler_Form	[] ={
+	sAnim_GeneralFrame0,
+    sAnim_Baboon_Brawler_Form_1,
+};
+
+
+
+
+
+
+
 
 
 

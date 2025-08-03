@@ -1276,7 +1276,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(DOUBT, gMonShinyPalette_Doubt),
     SPECIES_SHINY_PAL(EVERLASTING, gMonShinyPalette_Everlasting),
     SPECIES_SHINY_PAL(UNTOUCHABLE, gMonShinyPalette_Untouchable),
-    SPECIES_SHINY_PAL(INADEQUANCY, gMonShinyPalette_Inadequancy),
+    SPECIES_SHINY_PAL(INADEQUACY, gMonShinyPalette_Inadequacy),
     SPECIES_SHINY_PAL(CHINCHOMPA_BABY, gMonShinyPalette_Chinchompa_Baby),
     SPECIES_SHINY_PAL(CHINCHOMPA_GREY_BABY, gMonShinyPalette_Chinchompa_Grey_Baby),
     SPECIES_SHINY_PAL(CHINCHOMPA_RED_BABY, gMonShinyPalette_Chinchompa_Red_Baby),

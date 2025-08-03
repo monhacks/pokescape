@@ -1276,7 +1276,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_DOUBT] = gMonFootprint_Doubt,
     [SPECIES_EVERLASTING] = gMonFootprint_Everlasting,
     [SPECIES_UNTOUCHABLE] = gMonFootprint_Untouchable,
-    [SPECIES_INADEQUANCY] = gMonFootprint_Inadequancy,
+    [SPECIES_INADEQUACY] = gMonFootprint_Inadequacy,
     [SPECIES_CHINCHOMPA_BABY] = gMonFootprint_Chinchompa_Baby,
     [SPECIES_CHINCHOMPA_GREY_BABY] = gMonFootprint_Chinchompa_Grey_Baby,
     [SPECIES_CHINCHOMPA_RED_BABY] = gMonFootprint_Chinchompa_Red_Baby,
@@ -1519,7 +1519,13 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_CORRUPTED_BEAST] = gMonFootprint_Corrupted_Beast,
     [SPECIES_MOLANISK] = gMonFootprint_Molanisk,
     [SPECIES_DUCKATRICE] = gMonFootprint_Duckatrice,
-
+    [SPECIES_SCARAB] = gMonFootprint_Scarab,
+    [SPECIES_SCARAB_GIANT] = gMonFootprint_Scarab_Giant,
+    [SPECIES_AKKHA] = gMonFootprint_Akkha,
+    [SPECIES_TUMEKENS_WARDEN_MEGA_FORM] = gMonFootprint_Tumekens_Warden_Mega_Form,
+    [SPECIES_POOP_ROCK] = gMonFootprint_Poop_Rock,
+    [SPECIES_BABOON_BRAWLER_FORM] = gMonFootprint_Baboon_Brawler_Form,
+    
 	//POKESCAPE END
 	[SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

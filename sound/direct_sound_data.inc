@@ -9564,7 +9564,7 @@ Cry_Untouchable::
 	.incbin "sound/direct_sound_samples/cries/drowzee.bin"
 
 	.align 2
-Cry_Inadequancy::
+Cry_Inadequacy::
 	.incbin "sound/direct_sound_samples/cries/hypno.bin"
 
 	.align 2
@@ -10533,6 +10533,35 @@ Cry_Molanisk::
 	.align 2
 Cry_Duckatrice::
 	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+	.align 2
+Cry_Scarab::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+		.align 2
+Cry_Scarab_Giant::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+		.align 2
+Cry_Akkha::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+		.align 2
+Cry_Tumekens_Warden_Mega_Form::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+		.align 2
+Cry_Poop_Rock::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+		.align 2
+Cry_Baboon_Brawler_Form::
+	.incbin "sound/direct_sound_samples/cries/swinub.bin"
+
+
+
+
+
 
 
 

@@ -5669,7 +5669,7 @@ cry Cry_The_Illusive
 cry Cry_Doubt
 cry Cry_Everlasting
 cry Cry_Untouchable
-cry Cry_Inadequancy
+cry Cry_Inadequacy
 cry Cry_Chinchompa_Baby
 cry Cry_Chinchompa_Grey_Baby
 cry Cry_Chinchompa_Red_Baby
@@ -5912,6 +5912,12 @@ cry Cry_Frogeel_Princess
 cry Cry_Corrupted_Beast
 cry Cry_Molanisk
 cry Cry_Duckatrice
+cry Cry_Scarab
+cry Cry_Scarab_Giant
+cry Cry_Akkha
+cry Cry_Tumekens_Warden_Mega_Form
+cry Cry_Poop_Rock
+cry Cry_Baboon_Brawler_Form
 
 
 cry_reverse Cry_Guthling
@@ -6777,7 +6783,7 @@ cry_reverse Cry_The_Illusive
 cry_reverse Cry_Doubt
 cry_reverse Cry_Everlasting
 cry_reverse Cry_Untouchable
-cry_reverse Cry_Inadequancy
+cry_reverse Cry_Inadequacy
 cry_reverse Cry_Chinchompa_Baby
 cry_reverse Cry_Chinchompa_Grey_Baby
 cry_reverse Cry_Chinchompa_Red_Baby
@@ -7020,3 +7026,9 @@ cry_reverse Cry_Frogeel_Princess
 cry_reverse Cry_Corrupted_Beast
 cry_reverse Cry_Molanisk
 cry_reverse Cry_Duckatrice
+cry_reverse Cry_Scarab
+cry_reverse Cry_Scarab_Giant
+cry_reverse Cry_Akkha
+cry_reverse Cry_Tumekens_Warden_Mega_Form
+cry_reverse Cry_Poop_Rock
+cry_reverse Cry_Baboon_Brawler_Form

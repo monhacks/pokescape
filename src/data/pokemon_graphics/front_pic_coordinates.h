@@ -6381,7 +6381,7 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.size = 0x0,
 		.y_offset = 0,
 	},
-	[SPECIES_INADEQUANCY] =
+	[SPECIES_INADEQUACY] =
 	{
 		.size = 0x0,
 		.y_offset = 0,
@@ -7738,6 +7738,36 @@ const struct MonCoords gMonFrontPicCoords[] =
 		.y_offset = 0,
 	},
 	[SPECIES_DUCKATRICE] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
+	[SPECIES_SCARAB] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
+	[SPECIES_SCARAB_GIANT] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
+	[SPECIES_AKKHA] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
+	[SPECIES_TUMEKENS_WARDEN_MEGA_FORM] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
+	[SPECIES_POOP_ROCK] =
+	{
+		.size = 0x0,
+		.y_offset = 0,
+	},
+	[SPECIES_BABOON_BRAWLER_FORM] =
 	{
 		.size = 0x0,
 		.y_offset = 0,

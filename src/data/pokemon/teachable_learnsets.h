@@ -38994,6 +38994,7 @@ static const u16 sGuthlingTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGuthbirdTeachableLearnset[] = {
@@ -39016,6 +39017,8 @@ static const u16 sGuthbirdTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGuthraptorTeachableLearnset[] = {
@@ -39039,10 +39042,13 @@ static const u16 sGuthraptorTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZamlingTeachableLearnset[] = {
@@ -39087,6 +39093,7 @@ static const u16 sZambirdTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZamohawkTeachableLearnset[] = {
@@ -39112,8 +39119,8 @@ static const u16 sZamohawkTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSaralingTeachableLearnset[] = {
@@ -39133,6 +39140,9 @@ static const u16 sSaralingTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSarabirdTeachableLearnset[] = {
@@ -39153,6 +39163,10 @@ static const u16 sSarabirdTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSaraowlTeachableLearnset[] = {
@@ -39177,9 +39191,14 @@ static const u16 sSaraowlTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_AUGURY,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChickTeachableLearnset[] = {
@@ -39215,6 +39234,7 @@ static const u16 sChicken_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDreadfowlTeachableLearnset[] = {
@@ -39245,6 +39265,11 @@ static const u16 sDreadfowlTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Varrock_FormTeachableLearnset[] = {
@@ -39264,6 +39289,7 @@ static const u16 sChicken_Varrock_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Diving_FormTeachableLearnset[] = {
@@ -39286,6 +39312,7 @@ static const u16 sChicken_Diving_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Karamja_FormTeachableLearnset[] = {
@@ -39305,6 +39332,7 @@ static const u16 sChicken_Karamja_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Death_FormTeachableLearnset[] = {
@@ -39338,9 +39366,14 @@ static const u16 sChicken_Death_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Bandosian_FormTeachableLearnset[] = {
@@ -39363,6 +39396,7 @@ static const u16 sChicken_Bandosian_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_War_FormTeachableLearnset[] = {
@@ -39393,6 +39427,10 @@ static const u16 sChicken_War_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRooster_Normal_FormTeachableLearnset[] = {
@@ -39412,6 +39450,7 @@ static const u16 sRooster_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sErnestTeachableLearnset[] = {
@@ -39444,6 +39483,13 @@ static const u16 sErnestTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRooster_Karamja_FormTeachableLearnset[] = {
@@ -39463,6 +39509,7 @@ static const u16 sRooster_Karamja_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sOomlieTeachableLearnset[] = {
@@ -39491,6 +39538,10 @@ static const u16 sOomlieTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRooster_Bandosian_FormTeachableLearnset[] = {
@@ -39511,6 +39562,7 @@ static const u16 sRooster_Bandosian_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Famine_FormTeachableLearnset[] = {
@@ -39538,6 +39590,7 @@ static const u16 sChicken_Famine_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRooster_Varrock_FormTeachableLearnset[] = {
@@ -39558,6 +39611,7 @@ static const u16 sRooster_Varrock_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Pestilence_FormTeachableLearnset[] = {
@@ -39586,6 +39640,7 @@ static const u16 sChicken_Pestilence_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Lizard_FormTeachableLearnset[] = {
@@ -39617,6 +39672,8 @@ static const u16 sChicken_Lizard_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Undead_FormTeachableLearnset[] = {
@@ -39642,6 +39699,7 @@ static const u16 sChicken_Undead_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_Mystery_FormTeachableLearnset[] = {
@@ -39669,10 +39727,15 @@ static const u16 sChicken_Mystery_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEvilChickenTeachableLearnset[] = {
@@ -39709,9 +39772,15 @@ static const u16 sEvilChickenTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSwordchickTeachableLearnset[] = {
@@ -39745,10 +39814,13 @@ static const u16 sSwordchickTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sNewtroostTeachableLearnset[] = {
@@ -39788,6 +39860,11 @@ static const u16 sNewtroostTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCalfTeachableLearnset[] = {
@@ -39805,6 +39882,7 @@ static const u16 sCalfTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCowTeachableLearnset[] = {
@@ -39827,6 +39905,7 @@ static const u16 sCowTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSuper_CowTeachableLearnset[] = {
@@ -39856,6 +39935,8 @@ static const u16 sSuper_CowTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Dairy_FormTeachableLearnset[] = {
@@ -39885,6 +39966,8 @@ static const u16 sCow_Dairy_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Undead_FormTeachableLearnset[] = {
@@ -39915,10 +39998,13 @@ static const u16 sCow_Undead_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Chocolate_FormTeachableLearnset[] = {
@@ -39946,6 +40032,8 @@ static const u16 sCow_Chocolate_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Strawberry_FormTeachableLearnset[] = {
@@ -39974,6 +40062,8 @@ static const u16 sCow_Strawberry_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Vanilla_FormTeachableLearnset[] = {
@@ -40001,6 +40091,8 @@ static const u16 sCow_Vanilla_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Harlequin_FormTeachableLearnset[] = {
@@ -40027,6 +40119,7 @@ static const u16 sCow_Harlequin_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSkeletalOx_Female_FormTeachableLearnset[] = {
@@ -40058,10 +40151,13 @@ static const u16 sSkeletalOx_Female_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBullTeachableLearnset[] = {
@@ -40089,6 +40185,10 @@ static const u16 sBullTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBull_Elder_FormTeachableLearnset[] = {
@@ -40117,6 +40217,10 @@ static const u16 sBull_Elder_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSkeletalOx_Male_FormTeachableLearnset[] = {
@@ -40151,10 +40255,16 @@ static const u16 sSkeletalOx_Male_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTrojan_CowTeachableLearnset[] = {
@@ -40187,6 +40297,7 @@ static const u16 sTrojan_CowTeachableLearnset[] = {
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCow_Plague_FormTeachableLearnset[] = {
@@ -40213,6 +40324,7 @@ static const u16 sCow_Plague_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMinotaur_Normal_FormTeachableLearnset[] = {
@@ -40241,6 +40353,10 @@ static const u16 sMinotaur_Normal_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMinotaur_Rune_FormTeachableLearnset[] = {
@@ -40270,13 +40386,17 @@ static const u16 sMinotaur_Rune_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicowTeachableLearnset[] = {
@@ -40307,11 +40427,13 @@ static const u16 sUnicowTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRat_Normal_FormTeachableLearnset[] = {
@@ -40408,6 +40530,8 @@ static const u16 sGiant_Rat_Blessed_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRat_Hell_FormTeachableLearnset[] = {
@@ -40431,7 +40555,9 @@ static const u16 sRat_Hell_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGiant_Rat_Hell_FormTeachableLearnset[] = {
@@ -40456,7 +40582,9 @@ static const u16 sGiant_Rat_Hell_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sShell_RatTeachableLearnset[] = {
@@ -40484,7 +40612,9 @@ static const u16 sShell_RatTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRat_Crypt_FormTeachableLearnset[] = {
@@ -40556,6 +40686,11 @@ static const u16 sWarped_RatTeachableLearnset[] = {
 	MOVE_PSYSHIELD_BASH,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZombie_RatTeachableLearnset[] = {
@@ -40582,6 +40717,7 @@ static const u16 sZombie_RatTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGiant_Rat_Dungeon_FormTeachableLearnset[] = {
@@ -40687,6 +40823,10 @@ static const u16 sAlbino_RatTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAngry_RatTeachableLearnset[] = {
@@ -40716,10 +40856,14 @@ static const u16 sAngry_RatTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sExperiment_2_FormTeachableLearnset[] = {
@@ -40754,6 +40898,9 @@ static const u16 sExperiment_2_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLambTeachableLearnset[] = {
@@ -40787,6 +40934,7 @@ static const u16 sSheep_White_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSheep_Plague_FormTeachableLearnset[] = {
@@ -40810,6 +40958,7 @@ static const u16 sSheep_Plague_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSheep_Black_FormTeachableLearnset[] = {
@@ -40833,10 +40982,15 @@ static const u16 sSheep_Black_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRam_Fluffy_FormTeachableLearnset[] = {
@@ -40855,6 +41009,7 @@ static const u16 sRam_Fluffy_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRam_Shaggy_FormTeachableLearnset[] = {
@@ -40875,6 +41030,8 @@ static const u16 sRam_Shaggy_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRam_Golden_FormTeachableLearnset[] = {
@@ -40895,6 +41052,8 @@ static const u16 sRam_Golden_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSheep_Pirate_FormTeachableLearnset[] = {
@@ -40933,10 +41092,12 @@ static const u16 sSheep_Pirate_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGoat_Billy_FormTeachableLearnset[] = {
@@ -40959,6 +41120,10 @@ static const u16 sGoat_Billy_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGoat_Desert_FormTeachableLearnset[] = {
@@ -40985,6 +41150,10 @@ static const u16 sGoat_Desert_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGoat_Mountain_FormTeachableLearnset[] = {
@@ -41011,6 +41180,10 @@ static const u16 sGoat_Mountain_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGorakTeachableLearnset[] = {
@@ -41039,10 +41212,17 @@ static const u16 sGorakTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSardineTeachableLearnset[] = {
@@ -41106,11 +41286,13 @@ static const u16 sSwordfishTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_REFLECT,
+	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_REFLECT,
-	MOVE_LIGHT_SCREEN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTrout_Leaping_FormTeachableLearnset[] = {
@@ -41148,6 +41330,7 @@ static const u16 sSturgeonTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -41187,11 +41370,13 @@ static const u16 sSailfishTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_REFLECT,
+	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_REFLECT,
-	MOVE_LIGHT_SCREEN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sThallasusTeachableLearnset[] = {
@@ -41219,6 +41404,7 @@ static const u16 sThallasusTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBassTeachableLearnset[] = {
@@ -41264,6 +41450,7 @@ static const u16 sShark_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFury_SharkTeachableLearnset[] = {
@@ -41288,6 +41475,10 @@ static const u16 sFury_SharkTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSalmon_Leaping_FormTeachableLearnset[] = {
@@ -41317,6 +41508,7 @@ static const u16 sShark_GreatWhite_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sShark_Tiger_FormTeachableLearnset[] = {
@@ -41336,6 +41528,7 @@ static const u16 sShark_Tiger_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMackerelTeachableLearnset[] = {
@@ -41383,9 +41576,11 @@ static const u16 sShark_Baron_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTarponTeachableLearnset[] = {
@@ -41400,6 +41595,7 @@ static const u16 sTarponTeachableLearnset[] = {
 	MOVE_PSYSHIELD_BASH,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeerfishTeachableLearnset[] = {
@@ -41415,6 +41611,7 @@ static const u16 sSeerfishTeachableLearnset[] = {
 	MOVE_PSYSHIELD_BASH,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDesertSoleTeachableLearnset[] = {
@@ -41430,6 +41627,7 @@ static const u16 sDesertSoleTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSillagoTeachableLearnset[] = {
@@ -41453,6 +41651,7 @@ static const u16 sSillagoTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWobbegongTeachableLearnset[] = {
@@ -41479,6 +41678,7 @@ static const u16 sWobbegongTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKarambwanjTeachableLearnset[] = {
@@ -41599,9 +41799,11 @@ static const u16 sShark_Golden_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPikeTeachableLearnset[] = {
@@ -41704,6 +41906,7 @@ static const u16 sGoblinFishTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPet_FishTeachableLearnset[] = {
@@ -41772,6 +41975,7 @@ static const u16 sRocktailTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEel_Slimy_FormTeachableLearnset[] = {
@@ -41808,6 +42012,8 @@ static const u16 sEel_Cave_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEel_Sacred_FormTeachableLearnset[] = {
@@ -41835,11 +42041,12 @@ static const u16 sEel_Sacred_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEel_Lava_FormTeachableLearnset[] = {
@@ -41880,7 +42087,6 @@ static const u16 sEel_Infernal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_EMBERLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
@@ -41948,11 +42154,14 @@ static const u16 sEel_Salve_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEel_Dusk_FormTeachableLearnset[] = {
@@ -41979,8 +42188,10 @@ static const u16 sEel_Dusk_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCave_MorayTeachableLearnset[] = {
@@ -42066,6 +42277,7 @@ static const u16 sPigTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPigzillaTeachableLearnset[] = {
@@ -42090,6 +42302,7 @@ static const u16 sPigzillaTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPuppy_Pup_FormTeachableLearnset[] = {
@@ -42139,6 +42352,7 @@ static const u16 sTerrierTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSheepdogTeachableLearnset[] = {
@@ -42193,6 +42407,7 @@ static const u16 sGreyhoundTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBulldogTeachableLearnset[] = {
@@ -42215,6 +42430,7 @@ static const u16 sBulldogTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLabradorTeachableLearnset[] = {
@@ -42251,6 +42467,7 @@ static const u16 sCorgiTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTerror_DogTeachableLearnset[] = {
@@ -42279,6 +42496,12 @@ static const u16 sTerror_DogTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -42304,6 +42527,8 @@ static const u16 sStray_DogTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMuncherTeachableLearnset[] = {
@@ -42336,6 +42561,7 @@ static const u16 sMuncherTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHellpuppyTeachableLearnset[] = {
@@ -42359,7 +42585,10 @@ static const u16 sHellpuppyTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHellhoundTeachableLearnset[] = {
@@ -42390,7 +42619,10 @@ static const u16 sHellhoundTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCerberusTeachableLearnset[] = {
@@ -42422,7 +42654,10 @@ static const u16 sCerberusTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKittenTeachableLearnset[] = {
@@ -42514,6 +42749,7 @@ static const u16 sCat_Lazy_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCat_Wily_FormTeachableLearnset[] = {
@@ -42544,6 +42780,10 @@ static const u16 sCat_Wily_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCat_Purple_FormTeachableLearnset[] = {
@@ -42579,6 +42819,10 @@ static const u16 sCat_Purple_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCat_Hell_FormTeachableLearnset[] = {
@@ -42607,7 +42851,9 @@ static const u16 sCat_Hell_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_EMBERLIGHT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCat_Post_FormTeachableLearnset[] = {
@@ -42662,6 +42908,8 @@ static const u16 sCat_Sunken_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBobTeachableLearnset[] = {
@@ -42734,12 +42982,15 @@ static const u16 sBobTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEvil_BobTeachableLearnset[] = {
@@ -42817,6 +43068,12 @@ static const u16 sEvil_BobTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPet_RockTeachableLearnset[] = {
@@ -42931,6 +43188,10 @@ static const u16 sSlagilithTeachableLearnset[] = {
 	MOVE_PSYSHIELD_BASH,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRock_Strange_FormTeachableLearnset[] = {
@@ -42995,6 +43256,9 @@ static const u16 sParty_RockTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStrykewyrm_Freezy_FormTeachableLearnset[] = {
@@ -43099,8 +43363,10 @@ static const u16 sStrykewyrm_Wildy_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorplingTeachableLearnset[] = {
@@ -43255,6 +43521,10 @@ static const u16 sScorpion_King_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -43288,6 +43558,7 @@ static const u16 sScorpion_Grave_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorpion_Corrupted_FormTeachableLearnset[] = {
@@ -43323,6 +43594,9 @@ static const u16 sScorpion_Corrupted_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorpion_Reanimated_FormTeachableLearnset[] = {
@@ -43358,9 +43632,13 @@ static const u16 sScorpion_Reanimated_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorpion_Gauntlet_Crystalline_FormTeachableLearnset[] = {
@@ -43434,6 +43712,9 @@ static const u16 sScorpion_Gauntlet_Corrupted_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorpion_Khazard_FormTeachableLearnset[] = {
@@ -43470,6 +43751,10 @@ static const u16 sScorpion_Khazard_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorpion_Spirit_FormTeachableLearnset[] = {
@@ -43508,10 +43793,12 @@ static const u16 sScorpion_Spirit_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScorpiaTeachableLearnset[] = {
@@ -43551,8 +43838,11 @@ static const u16 sScorpiaTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
 	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDreadnipTeachableLearnset[] = {
@@ -43611,6 +43901,10 @@ static const u16 sPeeplingTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSneakrpeepTeachableLearnset[] = {
@@ -43639,6 +43933,10 @@ static const u16 sSneakrpeepTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRuntstableTeachableLearnset[] = {
@@ -43699,6 +43997,8 @@ static const u16 sBasiliskTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaby_MoleTeachableLearnset[] = {
@@ -43765,6 +44065,7 @@ static const u16 sSquirrelTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRavenlingTeachableLearnset[] = {
@@ -43791,6 +44092,7 @@ static const u16 sRavenlingTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRaven_Normal_FormTeachableLearnset[] = {
@@ -43822,6 +44124,7 @@ static const u16 sRaven_Normal_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRaven_Nevermore_FormTeachableLearnset[] = {
@@ -43854,6 +44157,8 @@ static const u16 sRaven_Nevermore_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRaven_Spooky_FormTeachableLearnset[] = {
@@ -43884,6 +44189,9 @@ static const u16 sRaven_Spooky_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRaven_Crystal_FormTeachableLearnset[] = {
@@ -43917,6 +44225,7 @@ static const u16 sRaven_Crystal_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrowTeachableLearnset[] = {
@@ -43944,6 +44253,7 @@ static const u16 sCrowTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMagpieTeachableLearnset[] = {
@@ -43974,6 +44284,8 @@ static const u16 sMagpieTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChinchompa_Grey_FormTeachableLearnset[] = {
@@ -44028,6 +44340,7 @@ static const u16 sVultlingTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVultureTeachableLearnset[] = {
@@ -44065,6 +44378,7 @@ static const u16 sVultureTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenglingTeachableLearnset[] = {
@@ -44088,6 +44402,7 @@ static const u16 sPenglingTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguinTeachableLearnset[] = {
@@ -44111,6 +44426,7 @@ static const u16 sPenguinTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Clockwork_FormTeachableLearnset[] = {
@@ -44146,6 +44462,8 @@ static const u16 sPenguin_Clockwork_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sThe_ThingTeachableLearnset[] = {
@@ -44182,6 +44500,9 @@ static const u16 sThe_ThingTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPingTeachableLearnset[] = {
@@ -44211,6 +44532,7 @@ static const u16 sPingTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPongTeachableLearnset[] = {
@@ -44240,6 +44562,7 @@ static const u16 sPongTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_McGraw_FormTeachableLearnset[] = {
@@ -44262,6 +44585,7 @@ static const u16 sPenguin_McGraw_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Spy_FormTeachableLearnset[] = {
@@ -44287,6 +44611,8 @@ static const u16 sPenguin_Spy_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Agent_FormTeachableLearnset[] = {
@@ -44312,6 +44638,8 @@ static const u16 sPenguin_Agent_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Disguise_Cactus_FormTeachableLearnset[] = {
@@ -44340,6 +44668,8 @@ static const u16 sPenguin_Disguise_Cactus_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Disguise_Rock_FormTeachableLearnset[] = {
@@ -44367,6 +44697,8 @@ static const u16 sPenguin_Disguise_Rock_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Disguise_Bush_FormTeachableLearnset[] = {
@@ -44395,6 +44727,8 @@ static const u16 sPenguin_Disguise_Bush_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenguin_Disguise_Box_FormTeachableLearnset[] = {
@@ -44423,6 +44757,8 @@ static const u16 sPenguin_Disguise_Box_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sExExParrotTeachableLearnset[] = {
@@ -44454,6 +44790,9 @@ static const u16 sExExParrotTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBroavTeachableLearnset[] = {
@@ -44484,6 +44823,7 @@ static const u16 sBroavTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToothsTeachableLearnset[] = {
@@ -44512,9 +44852,11 @@ static const u16 sToothsTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRune_GuardianTeachableLearnset[] = {
@@ -44553,6 +44895,10 @@ static const u16 sRune_GuardianTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGnomeyTeachableLearnset[] = {
@@ -44586,6 +44932,8 @@ static const u16 sSparklesTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBatTeachableLearnset[] = {
@@ -44606,6 +44954,7 @@ static const u16 sBatTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGiant_BatTeachableLearnset[] = {
@@ -44628,6 +44977,7 @@ static const u16 sGiant_BatTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWarped_BatTeachableLearnset[] = {
@@ -44658,6 +45008,11 @@ static const u16 sWarped_BatTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAlbino_BatTeachableLearnset[] = {
@@ -44684,6 +45039,7 @@ static const u16 sAlbino_BatTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBat_Box_FormTeachableLearnset[] = {
@@ -44707,6 +45063,7 @@ static const u16 sBat_Box_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFruit_BatTeachableLearnset[] = {
@@ -44733,6 +45090,7 @@ static const u16 sFruit_BatTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVampyreBatTeachableLearnset[] = {
@@ -44759,9 +45117,11 @@ static const u16 sVampyreBatTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDeathwingTeachableLearnset[] = {
@@ -44788,6 +45148,7 @@ static const u16 sDeathwingTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -44809,6 +45170,10 @@ static const u16 sShaikahTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGrowlerTeachableLearnset[] = {
@@ -44842,12 +45207,20 @@ static const u16 sGrowlerTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPhoenling_Rebirth_FormTeachableLearnset[] = {
@@ -44905,7 +45278,6 @@ static const u16 sPhoenix_Rebirth_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
@@ -44930,8 +45302,8 @@ static const u16 sPhoenix_Reborn_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPlant_Strange_FormTeachableLearnset[] = {
@@ -44949,6 +45321,7 @@ static const u16 sPlant_Strange_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPlant_Stranger_FormTeachableLearnset[] = {
@@ -44968,6 +45341,7 @@ static const u16 sPlant_Stranger_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEvilTurnipTeachableLearnset[] = {
@@ -44995,10 +45369,12 @@ static const u16 sEvilTurnipTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCreature_Cute_FormTeachableLearnset[] = {
@@ -45024,6 +45400,10 @@ static const u16 sCreature_Cute_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCreature_Evil_FormTeachableLearnset[] = {
@@ -45049,6 +45429,10 @@ static const u16 sCreature_Evil_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaby_YakTeachableLearnset[] = {
@@ -45147,11 +45531,14 @@ static const u16 sYak_Sacred_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_ClueScroll_FormTeachableLearnset[] = {
@@ -45179,6 +45566,7 @@ static const u16 sYak_ClueScroll_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_Undead_FormTeachableLearnset[] = {
@@ -45212,8 +45600,9 @@ static const u16 sYak_Undead_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_DARKLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_Snack_FormTeachableLearnset[] = {
@@ -45244,6 +45633,7 @@ static const u16 sYak_Snack_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMinitriceTeachableLearnset[] = {
@@ -45321,6 +45711,7 @@ static const u16 sGuthatriceTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZamatriceTeachableLearnset[] = {
@@ -45349,6 +45740,7 @@ static const u16 sZamatriceTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSaratriceTeachableLearnset[] = {
@@ -45376,6 +45768,7 @@ static const u16 sSaratriceTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCorxatriceTeachableLearnset[] = {
@@ -45405,6 +45798,9 @@ static const u16 sCorxatriceTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVulatriceTeachableLearnset[] = {
@@ -45432,6 +45828,8 @@ static const u16 sVulatriceTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPengatriceTeachableLearnset[] = {
@@ -45457,6 +45855,7 @@ static const u16 sPengatriceTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChocatriceTeachableLearnset[] = {
@@ -45505,6 +45904,7 @@ static const u16 sSproutling_Summer_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSproutling_Spring_FormTeachableLearnset[] = {
@@ -45524,6 +45924,7 @@ static const u16 sSproutling_Spring_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSproutling_Winter_FormTeachableLearnset[] = {
@@ -45543,6 +45944,7 @@ static const u16 sSproutling_Winter_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSproutling_Autumn_FormTeachableLearnset[] = {
@@ -45562,6 +45964,7 @@ static const u16 sSproutling_Autumn_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRueTeachableLearnset[] = {
@@ -45590,6 +45993,10 @@ static const u16 sRueTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMontyTeachableLearnset[] = {
@@ -45624,11 +46031,11 @@ static const u16 sMontyTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
-	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomiteTeachableLearnset[] = {
@@ -45656,6 +46063,8 @@ static const u16 sZygomiteTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssalingTeachableLearnset[] = {
@@ -45678,6 +46087,9 @@ static const u16 sAbyssalingTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Minion_FormTeachableLearnset[] = {
@@ -45699,11 +46111,13 @@ static const u16 sAbyssal_Minion_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Demon_FormTeachableLearnset[] = {
@@ -45734,11 +46148,13 @@ static const u16 sAbyssal_Demon_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Sire_FormTeachableLearnset[] = {
@@ -45775,6 +46191,9 @@ static const u16 sAbyssal_Sire_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Leech_FormTeachableLearnset[] = {
@@ -45800,6 +46219,9 @@ static const u16 sAbyssal_Leech_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Parasite_FormTeachableLearnset[] = {
@@ -45825,6 +46247,9 @@ static const u16 sAbyssal_Parasite_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Lurker_FormTeachableLearnset[] = {
@@ -45850,6 +46275,9 @@ static const u16 sAbyssal_Lurker_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Walker_FormTeachableLearnset[] = {
@@ -45879,6 +46307,9 @@ static const u16 sAbyssal_Walker_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Titan_FormTeachableLearnset[] = {
@@ -45909,10 +46340,13 @@ static const u16 sAbyssal_Titan_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTz_KihTeachableLearnset[] = {
@@ -45956,7 +46390,7 @@ static const u16 sTok_XilTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_EMBERLIGHT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTz_Kih_Spirit_FormTeachableLearnset[] = {
@@ -45971,6 +46405,7 @@ static const u16 sTz_Kih_Spirit_FormTeachableLearnset[] = {
 	MOVE_ROCK_TOMB,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -45989,6 +46424,7 @@ static const u16 sKet_DillTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKet_ZekTeachableLearnset[] = {
@@ -46008,6 +46444,7 @@ static const u16 sKet_ZekTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYt_HurKotTeachableLearnset[] = {
@@ -46022,6 +46459,7 @@ static const u16 sYt_HurKotTeachableLearnset[] = {
 	MOVE_REVENGE,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYt_MejKotTeachableLearnset[] = {
@@ -46041,6 +46479,7 @@ static const u16 sYt_MejKotTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTzRek_JadTeachableLearnset[] = {
@@ -46061,6 +46500,7 @@ static const u16 sTzRek_JadTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTzTok_JadTeachableLearnset[] = {
@@ -46085,6 +46525,7 @@ static const u16 sTzTok_JadTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJalTok_JadTeachableLearnset[] = {
@@ -46108,6 +46549,7 @@ static const u16 sJalTok_JadTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJal_MejRahTeachableLearnset[] = {
@@ -46123,6 +46565,7 @@ static const u16 sJal_MejRahTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJal_AkTeachableLearnset[] = {
@@ -46151,6 +46594,7 @@ static const u16 sJal_XilTeachableLearnset[] = {
 	MOVE_REVENGE,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJal_NibTeachableLearnset[] = {
@@ -46165,6 +46609,7 @@ static const u16 sJal_NibTeachableLearnset[] = {
 	MOVE_REVENGE,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJal_ImKotTeachableLearnset[] = {
@@ -46211,6 +46656,7 @@ static const u16 sTzKal_ZukTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDucklingTeachableLearnset[] = {
@@ -46230,6 +46676,7 @@ static const u16 sDucklingTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSwanTeachableLearnset[] = {
@@ -46254,6 +46701,10 @@ static const u16 sSwanTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDuck_Normal_FormTeachableLearnset[] = {
@@ -46273,6 +46724,7 @@ static const u16 sDuck_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMega_DuckTeachableLearnset[] = {
@@ -46295,6 +46747,7 @@ static const u16 sMega_DuckTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDuck_Cart_FormTeachableLearnset[] = {
@@ -46331,6 +46784,8 @@ static const u16 sDuck_Cart_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_PSYSHIELD_BASH,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPlatypodeTeachableLearnset[] = {
@@ -46363,6 +46818,7 @@ static const u16 sPlatypodeTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPlatypusTeachableLearnset[] = {
@@ -46396,6 +46852,7 @@ static const u16 sPlatypusTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFledglingTeachableLearnset[] = {
@@ -46418,6 +46875,7 @@ static const u16 sFledglingTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_Normal_FormTeachableLearnset[] = {
@@ -46446,6 +46904,8 @@ static const u16 sDagannoth_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_Guardian_FormTeachableLearnset[] = {
@@ -46478,6 +46938,8 @@ static const u16 sDagannoth_Guardian_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_King_Range_FormTeachableLearnset[] = {
@@ -46517,6 +46979,11 @@ static const u16 sDagannoth_King_Range_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -46557,10 +47024,17 @@ static const u16 sDagannoth_King_Magic_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_King_Melee_FormTeachableLearnset[] = {
@@ -46599,6 +47073,11 @@ static const u16 sDagannoth_King_Melee_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -46639,6 +47118,11 @@ static const u16 sDagannoth_King_Range_Mega_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -46679,10 +47163,17 @@ static const u16 sDagannoth_King_Magic_Mega_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_King_Melee_Mega_FormTeachableLearnset[] = {
@@ -46721,6 +47212,11 @@ static const u16 sDagannoth_King_Melee_Mega_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -46807,14 +47303,21 @@ static const u16 sChaos_EleTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChaos_Ele_Mega_FormTeachableLearnset[] = {
@@ -46900,14 +47403,21 @@ static const u16 sChaos_Ele_Mega_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBandlingTeachableLearnset[] = {
@@ -46930,6 +47440,10 @@ static const u16 sBandlingTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBandbirdTeachableLearnset[] = {
@@ -46957,6 +47471,10 @@ static const u16 sBandbirdTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBandeagleTeachableLearnset[] = {
@@ -46987,10 +47505,15 @@ static const u16 sBandeagleTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZarolingTeachableLearnset[] = {
@@ -47008,12 +47531,15 @@ static const u16 sZarolingTeachableLearnset[] = {
 	MOVE_PARTING_SHOT,
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
-	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZarobirdTeachableLearnset[] = {
@@ -47036,12 +47562,16 @@ static const u16 sZarobirdTeachableLearnset[] = {
 	MOVE_PARTING_SHOT,
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
-	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZaravenTeachableLearnset[] = {
@@ -47066,13 +47596,17 @@ static const u16 sZaravenTeachableLearnset[] = {
 	MOVE_PARTING_SHOT,
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
-	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSerelingTeachableLearnset[] = {
@@ -47098,6 +47632,8 @@ static const u16 sSerelingTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSerebirdTeachableLearnset[] = {
@@ -47124,6 +47660,8 @@ static const u16 sSerebirdTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSerepeaTeachableLearnset[] = {
@@ -47148,9 +47686,11 @@ static const u16 sSerepeaTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogspawnTeachableLearnset[] = {
@@ -47259,9 +47799,11 @@ static const u16 sGiant_Frog_Royal_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrog_Bloated_FormTeachableLearnset[] = {
@@ -47351,6 +47893,7 @@ static const u16 sToad_Barker_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeelTeachableLearnset[] = {
@@ -47391,8 +47934,12 @@ static const u16 sFrogeelTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
-	MOVE_ARCLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpiderlingTeachableLearnset[] = {
@@ -47518,10 +48065,11 @@ static const u16 sSpider_Blessed_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Huge_FormTeachableLearnset[] = {
@@ -47574,6 +48122,7 @@ static const u16 sSpider_Night_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -47602,6 +48151,7 @@ static const u16 sSpider_Ice_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Spirit_FormTeachableLearnset[] = {
@@ -47631,9 +48181,11 @@ static const u16 sSpider_Spirit_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEekTeachableLearnset[] = {
@@ -47662,6 +48214,8 @@ static const u16 sEekTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMinstrlWebTeachableLearnset[] = {
@@ -47698,6 +48252,8 @@ static const u16 sMinstrlWebTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSarachnisTeachableLearnset[] = {
@@ -47828,6 +48384,8 @@ static const u16 sLobster_Normal_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLobster_Golden_FormTeachableLearnset[] = {
@@ -47853,6 +48411,8 @@ static const u16 sLobster_Golden_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLobster_Giant_FormTeachableLearnset[] = {
@@ -47878,6 +48438,8 @@ static const u16 sLobster_Giant_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLobster_Heim_FormTeachableLearnset[] = {
@@ -47906,6 +48468,8 @@ static const u16 sLobster_Heim_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLobster_Obsidian_FormTeachableLearnset[] = {
@@ -47931,6 +48495,8 @@ static const u16 sLobster_Obsidian_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrab_Red_FormTeachableLearnset[] = {
@@ -48112,9 +48678,11 @@ static const u16 sCrab_Dark_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGiant_Crab_Dark_FormTeachableLearnset[] = {
@@ -48144,9 +48712,11 @@ static const u16 sGiant_Crab_Dark_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrab_Grey_FormTeachableLearnset[] = {
@@ -48173,6 +48743,7 @@ static const u16 sCrab_Grey_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGiant_Crab_Grey_FormTeachableLearnset[] = {
@@ -48204,6 +48775,7 @@ static const u16 sGiant_Crab_Grey_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKnife_CrabTeachableLearnset[] = {
@@ -48226,11 +48798,12 @@ static const u16 sKnife_CrabTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
+	MOVE_REFLECT,
+	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_REFLECT,
-	MOVE_LIGHT_SCREEN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHeim_CrabTeachableLearnset[] = {
@@ -48330,6 +48903,7 @@ static const u16 sCrablet_First_FormTeachableLearnset[] = {
 	MOVE_BULK_UP,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrablet_Second_FormTeachableLearnset[] = {
@@ -48351,6 +48925,7 @@ static const u16 sCrablet_Second_FormTeachableLearnset[] = {
 	MOVE_BULK_UP,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrablet_Third_FormTeachableLearnset[] = {
@@ -48372,6 +48947,7 @@ static const u16 sCrablet_Third_FormTeachableLearnset[] = {
 	MOVE_BULK_UP,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrablet_Forth_FormTeachableLearnset[] = {
@@ -48393,6 +48969,7 @@ static const u16 sCrablet_Forth_FormTeachableLearnset[] = {
 	MOVE_BULK_UP,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrablet_Fifth_FormTeachableLearnset[] = {
@@ -48414,6 +48991,7 @@ static const u16 sCrablet_Fifth_FormTeachableLearnset[] = {
 	MOVE_BULK_UP,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrawler_Cave_FormTeachableLearnset[] = {
@@ -48441,6 +49019,7 @@ static const u16 sCrawler_Cave_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrawler_Chasm_FormTeachableLearnset[] = {
@@ -48471,6 +49050,7 @@ static const u16 sCrawler_Chasm_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrawler_Monstrous_FormTeachableLearnset[] = {
@@ -48503,6 +49083,7 @@ static const u16 sCrawler_Monstrous_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWinstonTeachableLearnset[] = {
@@ -48568,6 +49149,10 @@ static const u16 sTortoise_Warped_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTortoise_War_FormTeachableLearnset[] = {
@@ -48590,6 +49175,7 @@ static const u16 sTortoise_War_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_AUGURY,
 	MOVE_SILVERLIGHT,
 	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
@@ -48624,6 +49210,10 @@ static const u16 sVallutaTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSea_TurtleTeachableLearnset[] = {
@@ -48784,6 +49374,8 @@ static const u16 sJelly_Warped_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJelly_Spirit_FormTeachableLearnset[] = {
@@ -48807,6 +49399,7 @@ static const u16 sJelly_Spirit_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbbySpectrTeachableLearnset[] = {
@@ -48829,6 +49422,8 @@ static const u16 sAbbySpectrTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSalamander_Green_FormTeachableLearnset[] = {
@@ -48971,6 +49566,7 @@ static const u16 sGeckoTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChameleonTeachableLearnset[] = {
@@ -48994,6 +49590,7 @@ static const u16 sChameleonTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveldTeachableLearnset[] = {
@@ -49016,6 +49613,8 @@ static const u16 sBloodveldTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_Insatiable_PhysicalTeachableLearnset[] = {
@@ -49040,6 +49639,8 @@ static const u16 sBloodveld_Insatiable_PhysicalTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_RSHDTeachableLearnset[] = {
@@ -49064,6 +49665,8 @@ static const u16 sBloodveld_RSHDTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_MutatedTeachableLearnset[] = {
@@ -49090,6 +49693,9 @@ static const u16 sBloodveld_MutatedTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_Insatiable_SpecialTeachableLearnset[] = {
@@ -49116,6 +49722,9 @@ static const u16 sBloodveld_Insatiable_SpecialTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sReaverTeachableLearnset[] = {
@@ -49145,9 +49754,13 @@ static const u16 sReaverTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sArmalingTeachableLearnset[] = {
@@ -49169,6 +49782,8 @@ static const u16 sArmalingTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sArmabirdTeachableLearnset[] = {
@@ -49194,6 +49809,8 @@ static const u16 sArmabirdTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sArmafalconTeachableLearnset[] = {
@@ -49219,9 +49836,11 @@ static const u16 sArmafalconTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUngodlingTeachableLearnset[] = {
@@ -49246,6 +49865,10 @@ static const u16 sUngodlingTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUngodbirdTeachableLearnset[] = {
@@ -49277,6 +49900,10 @@ static const u16 sUngodbirdTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUngodgeonTeachableLearnset[] = {
@@ -49308,8 +49935,12 @@ static const u16 sUngodgeonTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_ARCLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTumeklingTeachableLearnset[] = {
@@ -49334,6 +49965,8 @@ static const u16 sTumeklingTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTumekbirdTeachableLearnset[] = {
@@ -49365,6 +49998,8 @@ static const u16 sTumekbirdTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTumekibisTeachableLearnset[] = {
@@ -49395,10 +50030,11 @@ static const u16 sTumekibisTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKerritTeachableLearnset[] = {
@@ -49446,6 +50082,7 @@ static const u16 sYakamaruTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChompyTeachableLearnset[] = {
@@ -49464,6 +50101,7 @@ static const u16 sChompyTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJubblyTeachableLearnset[] = {
@@ -49483,6 +50121,7 @@ static const u16 sJubblyTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJubsterTeachableLearnset[] = {
@@ -49511,6 +50150,8 @@ static const u16 sJubsterTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTerrorbird_Normal_FormTeachableLearnset[] = {
@@ -49531,6 +50172,7 @@ static const u16 sTerrorbird_Normal_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTerrorbird_Warped_FormTeachableLearnset[] = {
@@ -49562,6 +50204,14 @@ static const u16 sTerrorbird_Warped_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTerrorbird_Spirit_FormTeachableLearnset[] = {
@@ -49588,6 +50238,8 @@ static const u16 sTerrorbird_Spirit_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Juvenile_FormTeachableLearnset[] = {
@@ -49606,6 +50258,7 @@ static const u16 sWolf_Juvenile_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Normal_FormTeachableLearnset[] = {
@@ -49626,6 +50279,7 @@ static const u16 sWolf_Normal_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Fenris_FormTeachableLearnset[] = {
@@ -49651,6 +50305,9 @@ static const u16 sWolf_Fenris_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_White_FormTeachableLearnset[] = {
@@ -49672,6 +50329,7 @@ static const u16 sWolf_White_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRoverTeachableLearnset[] = {
@@ -49695,6 +50353,7 @@ static const u16 sRoverTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Dire_FormTeachableLearnset[] = {
@@ -49722,9 +50381,14 @@ static const u16 sWolf_Dire_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Jungle_FormTeachableLearnset[] = {
@@ -49749,6 +50413,7 @@ static const u16 sWolf_Jungle_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Skoll_FormTeachableLearnset[] = {
@@ -49780,9 +50445,13 @@ static const u16 sWolf_Skoll_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Desert_FormTeachableLearnset[] = {
@@ -49806,6 +50475,7 @@ static const u16 sWolf_Desert_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Hati_HatiTeachableLearnset[] = {
@@ -49840,9 +50510,16 @@ static const u16 sWolf_Hati_HatiTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Spirit_FormTeachableLearnset[] = {
@@ -49875,6 +50552,9 @@ static const u16 sWolf_Spirit_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -49899,6 +50579,9 @@ static const u16 sFoxTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -49925,8 +50608,12 @@ static const u16 sInariTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHelwyrTeachableLearnset[] = {
@@ -49960,8 +50647,14 @@ static const u16 sHelwyrTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBird_NestTeachableLearnset[] = {
@@ -50002,6 +50695,7 @@ static const u16 sPigeonTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPheasantTeachableLearnset[] = {
@@ -50023,6 +50717,7 @@ static const u16 sPheasantTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRoclingTeachableLearnset[] = {
@@ -50043,6 +50738,7 @@ static const u16 sRoclingTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRocTeachableLearnset[] = {
@@ -50068,6 +50764,7 @@ static const u16 sRocTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFoalTeachableLearnset[] = {
@@ -50092,10 +50789,13 @@ static const u16 sFoalTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_White_FormTeachableLearnset[] = {
@@ -50120,10 +50820,13 @@ static const u16 sUnicorn_White_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_Stallion_FormTeachableLearnset[] = {
@@ -50155,11 +50858,15 @@ static const u16 sUnicorn_Stallion_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_Black_FormTeachableLearnset[] = {
@@ -50191,10 +50898,17 @@ static const u16 sUnicorn_Black_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_Angry_FormTeachableLearnset[] = {
@@ -50231,10 +50945,17 @@ static const u16 sUnicorn_Angry_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_Reanimated_FormTeachableLearnset[] = {
@@ -50271,10 +50992,17 @@ static const u16 sUnicorn_Reanimated_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStarlightTeachableLearnset[] = {
@@ -50307,11 +51035,15 @@ static const u16 sStarlightTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPawyaTeachableLearnset[] = {
@@ -50337,6 +51069,7 @@ static const u16 sPawyaTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGrenwallTeachableLearnset[] = {
@@ -50370,6 +51103,8 @@ static const u16 sGrenwallTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBear_CubTeachableLearnset[] = {
@@ -50390,6 +51125,10 @@ static const u16 sBear_CubTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBear_Normal_FormTeachableLearnset[] = {
@@ -50413,6 +51152,10 @@ static const u16 sBear_Normal_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBear_Reanimated_FormTeachableLearnset[] = {
@@ -50441,6 +51184,12 @@ static const u16 sBear_Reanimated_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -50474,6 +51223,10 @@ static const u16 sBear_Gauntlet_Crystalline_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCallistoTeachableLearnset[] = {
@@ -50510,10 +51263,15 @@ static const u16 sCallistoTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPolar_Bear_Normal_FormTeachableLearnset[] = {
@@ -50541,6 +51299,10 @@ static const u16 sPolar_Bear_Normal_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPolar_Bear_PBJ_Agent_FormTeachableLearnset[] = {
@@ -50570,6 +51332,10 @@ static const u16 sPolar_Bear_PBJ_Agent_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPolar_Bear_Arctic_FormTeachableLearnset[] = {
@@ -50597,6 +51363,10 @@ static const u16 sPolar_Bear_Arctic_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPolar_Bear_Nanuq_FormTeachableLearnset[] = {
@@ -50630,6 +51400,10 @@ static const u16 sPolar_Bear_Nanuq_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBear_Grizzly_FormTeachableLearnset[] = {
@@ -50655,6 +51429,10 @@ static const u16 sBear_Grizzly_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKendallTeachableLearnset[] = {
@@ -50688,6 +51466,10 @@ static const u16 sKendallTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBear_Gauntlet_Corrupted_FormTeachableLearnset[] = {
@@ -50721,6 +51503,10 @@ static const u16 sBear_Gauntlet_Corrupted_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBear_Angry_FormTeachableLearnset[] = {
@@ -50750,6 +51536,10 @@ static const u16 sBear_Angry_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGraahk_Normal_FormTeachableLearnset[] = {
@@ -50781,8 +51571,10 @@ static const u16 sGraahk_Normal_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGraahk_Spirit_FormTeachableLearnset[] = {
@@ -50818,10 +51610,13 @@ static const u16 sGraahk_Spirit_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDust_DevilTeachableLearnset[] = {
@@ -50842,6 +51637,7 @@ static const u16 sDust_DevilTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSmokeDevilTeachableLearnset[] = {
@@ -50868,6 +51664,7 @@ static const u16 sSmokeDevilTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSmokeDevil_Nuclear_FormTeachableLearnset[] = {
@@ -50901,6 +51698,9 @@ static const u16 sSmokeDevil_Nuclear_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChokeDevilTeachableLearnset[] = {
@@ -50927,6 +51727,7 @@ static const u16 sChokeDevilTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSmokeDevil_Thermonuclear_FormTeachableLearnset[] = {
@@ -50960,6 +51761,9 @@ static const u16 sSmokeDevil_Thermonuclear_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHatchlingTeachableLearnset[] = {
@@ -50984,6 +51788,7 @@ static const u16 sHatchlingTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragonling_Green_FormTeachableLearnset[] = {
@@ -51013,6 +51818,10 @@ static const u16 sDragonling_Green_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Green_FormTeachableLearnset[] = {
@@ -51042,6 +51851,10 @@ static const u16 sDragon_Green_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Brutal_Green_FormTeachableLearnset[] = {
@@ -51072,6 +51885,10 @@ static const u16 sDragon_Brutal_Green_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragonling_Blue_FormTeachableLearnset[] = {
@@ -51102,6 +51919,10 @@ static const u16 sDragonling_Blue_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Blue_FormTeachableLearnset[] = {
@@ -51132,6 +51953,10 @@ static const u16 sDragon_Blue_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Brutal_Blue_FormTeachableLearnset[] = {
@@ -51163,6 +51988,10 @@ static const u16 sDragon_Brutal_Blue_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragonling_Red_FormTeachableLearnset[] = {
@@ -51191,6 +52020,10 @@ static const u16 sDragonling_Red_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Red_FormTeachableLearnset[] = {
@@ -51219,6 +52052,10 @@ static const u16 sDragon_Red_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Brutal_Red_FormTeachableLearnset[] = {
@@ -51248,6 +52085,10 @@ static const u16 sDragon_Brutal_Red_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragonling_Black_FormTeachableLearnset[] = {
@@ -51279,6 +52120,10 @@ static const u16 sDragonling_Black_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Black_FormTeachableLearnset[] = {
@@ -51310,6 +52155,10 @@ static const u16 sDragon_Black_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Brutal_Black_FormTeachableLearnset[] = {
@@ -51342,6 +52191,10 @@ static const u16 sDragon_Brutal_Black_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_ThreeHeaded_FormTeachableLearnset[] = {
@@ -51379,6 +52232,10 @@ static const u16 sDragon_ThreeHeaded_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sElvargTeachableLearnset[] = {
@@ -51414,6 +52271,12 @@ static const u16 sElvargTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_King_Black_FormTeachableLearnset[] = {
@@ -51451,6 +52314,12 @@ static const u16 sDragon_King_Black_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Queen_Black_FormTeachableLearnset[] = {
@@ -51484,6 +52353,12 @@ static const u16 sDragon_Queen_Black_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Creeping_FormTeachableLearnset[] = {
@@ -51515,6 +52390,8 @@ static const u16 sHand_Creeping_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Crawling_FormTeachableLearnset[] = {
@@ -51546,6 +52423,8 @@ static const u16 sHand_Crawling_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Skeletal_FormTeachableLearnset[] = {
@@ -51582,6 +52461,8 @@ static const u16 sHand_Skeletal_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Crushing_FormTeachableLearnset[] = {
@@ -51620,6 +52501,8 @@ static const u16 sHand_Crushing_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Zombie_FormTeachableLearnset[] = {
@@ -51658,6 +52541,8 @@ static const u16 sHand_Zombie_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTurothTeachableLearnset[] = {
@@ -51684,6 +52569,8 @@ static const u16 sTurothTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTuroth_Mightiest_FormTeachableLearnset[] = {
@@ -51713,6 +52600,8 @@ static const u16 sTuroth_Mightiest_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBig_TurothTeachableLearnset[] = {
@@ -51744,6 +52633,8 @@ static const u16 sBig_TurothTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSockrothTeachableLearnset[] = {
@@ -51773,6 +52664,8 @@ static const u16 sSockrothTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLilraskTeachableLearnset[] = {
@@ -51801,6 +52694,7 @@ static const u16 sLilraskTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKuraskTeachableLearnset[] = {
@@ -51838,6 +52732,7 @@ static const u16 sKuraskTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKurask_King_FormTeachableLearnset[] = {
@@ -51882,12 +52777,15 @@ static const u16 sKurask_King_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKurask_Overlord_FormTeachableLearnset[] = {
@@ -51931,12 +52829,15 @@ static const u16 sKurask_Overlord_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKebbitTeachableLearnset[] = {
@@ -52217,6 +53118,7 @@ static const u16 sMonkey_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Ninja_FormTeachableLearnset[] = {
@@ -52252,10 +53154,13 @@ static const u16 sMonkey_Ninja_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGorilla_Normal_FormTeachableLearnset[] = {
@@ -52278,6 +53183,10 @@ static const u16 sGorilla_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Zombie_FormTeachableLearnset[] = {
@@ -52301,6 +53210,7 @@ static const u16 sMonkey_Zombie_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGorilla_Ancient_FormTeachableLearnset[] = {
@@ -52328,6 +53238,13 @@ static const u16 sGorilla_Ancient_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Harmless_FormTeachableLearnset[] = {
@@ -52348,6 +53265,7 @@ static const u16 sMonkey_Harmless_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Ghost_FormTeachableLearnset[] = {
@@ -52372,6 +53290,9 @@ static const u16 sMonkey_Ghost_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGorilla_Ayuni_FormTeachableLearnset[] = {
@@ -52399,6 +53320,13 @@ static const u16 sGorilla_Ayuni_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGorilla_Leeuni_FormTeachableLearnset[] = {
@@ -52426,6 +53354,13 @@ static const u16 sGorilla_Leeuni_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGorilla_Eruni_FormTeachableLearnset[] = {
@@ -52453,6 +53388,13 @@ static const u16 sGorilla_Eruni_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Karamja_Baby_FormTeachableLearnset[] = {
@@ -52475,6 +53417,7 @@ static const u16 sMonkey_Karamja_Baby_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Karamja_Adult_FormTeachableLearnset[] = {
@@ -52497,6 +53440,7 @@ static const u16 sMonkey_Karamja_Adult_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLarupia_Normal_FormTeachableLearnset[] = {
@@ -52548,6 +53492,8 @@ static const u16 sLarupia_Spirit_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKyatt_Normal_FormTeachableLearnset[] = {
@@ -52601,6 +53547,8 @@ static const u16 sKyatt_Spirit_FormTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrablingTeachableLearnset[] = {
@@ -52909,6 +53857,7 @@ static const u16 sLobster_Granite_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLobster_Rock_FormTeachableLearnset[] = {
@@ -52956,6 +53905,7 @@ static const u16 sRabbitTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolpertingTeachableLearnset[] = {
@@ -52994,6 +53944,9 @@ static const u16 sWolpertingTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBunyipTeachableLearnset[] = {
@@ -53029,6 +53982,8 @@ static const u16 sBunyipTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTalonBeast_Talon_FormTeachableLearnset[] = {
@@ -53063,6 +54018,7 @@ static const u16 sTalonBeast_Talon_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTalonBeast_Nail_FormTeachableLearnset[] = {
@@ -53100,6 +54056,8 @@ static const u16 sTalonBeast_Nail_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFerretTeachableLearnset[] = {
@@ -53127,6 +54085,7 @@ static const u16 sFerretTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToy_MouseTeachableLearnset[] = {
@@ -53142,6 +54101,7 @@ static const u16 sToy_MouseTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToy_DollTeachableLearnset[] = {
@@ -53173,8 +54133,9 @@ static const u16 sToy_DollTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToy_SoldierTeachableLearnset[] = {
@@ -53210,8 +54171,9 @@ static const u16 sToy_SoldierTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCat_Clockwork_FormTeachableLearnset[] = {
@@ -53231,6 +54193,7 @@ static const u16 sCat_Clockwork_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMagicarpetTeachableLearnset[] = {
@@ -53251,6 +54214,9 @@ static const u16 sMagicarpetTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnichairTeachableLearnset[] = {
@@ -53270,6 +54236,9 @@ static const u16 sAnichairTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sExoraxeTeachableLearnset[] = {
@@ -53292,10 +54261,13 @@ static const u16 sExoraxeTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
-	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpookaxeTeachableLearnset[] = {
@@ -53318,10 +54290,13 @@ static const u16 sSpookaxeTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
-	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDobbinTeachableLearnset[] = {
@@ -53341,6 +54316,8 @@ static const u16 sDobbinTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMarionetteTeachableLearnset[] = {
@@ -53372,6 +54349,12 @@ static const u16 sMarionetteTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragonKiteTeachableLearnset[] = {
@@ -53389,6 +54372,8 @@ static const u16 sDragonKiteTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnimourTeachableLearnset[] = {
@@ -53417,11 +54402,13 @@ static const u16 sAnimourTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
-	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDead_TreeTeachableLearnset[] = {
@@ -53435,6 +54422,8 @@ static const u16 sDead_TreeTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinkoTeachableLearnset[] = {
@@ -53471,6 +54460,8 @@ static const u16 sKillerwattTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMackersTeachableLearnset[] = {
@@ -53496,6 +54487,10 @@ static const u16 sMackersTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTurkey_Female_FormTeachableLearnset[] = {
@@ -53527,6 +54522,11 @@ static const u16 sTurkey_Female_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTurkey_Male_FormTeachableLearnset[] = {
@@ -53558,6 +54558,11 @@ static const u16 sTurkey_Male_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTurkey_Protestor_FormTeachableLearnset[] = {
@@ -53590,6 +54595,11 @@ static const u16 sTurkey_Protestor_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToucan_Tenacious_Male_FormTeachableLearnset[] = {
@@ -53612,6 +54622,8 @@ static const u16 sToucan_Tenacious_Male_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToucan_Tenacious_Female_FormTeachableLearnset[] = {
@@ -53634,6 +54646,8 @@ static const u16 sToucan_Tenacious_Female_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sToucan_Tuai_Leit_FormTeachableLearnset[] = {
@@ -53655,6 +54669,8 @@ static const u16 sToucan_Tuai_Leit_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJellyfish_Blubber_FormTeachableLearnset[] = {
@@ -53677,6 +54693,8 @@ static const u16 sJellyfish_Blubber_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJellyfishTeachableLearnset[] = {
@@ -53699,6 +54717,8 @@ static const u16 sJellyfishTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPureTeachableLearnset[] = {
@@ -53735,6 +54755,10 @@ static const u16 sPureTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRuneTeachableLearnset[] = {
@@ -53773,6 +54797,10 @@ static const u16 sRuneTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEssenceTeachableLearnset[] = {
@@ -53807,11 +54835,15 @@ static const u16 sEssenceTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeagull_Normal_FormTeachableLearnset[] = {
@@ -53838,6 +54870,10 @@ static const u16 sSeagull_Normal_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPelicanTeachableLearnset[] = {
@@ -53869,6 +54905,10 @@ static const u16 sPelicanTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAlbatrossTeachableLearnset[] = {
@@ -53900,6 +54940,10 @@ static const u16 sAlbatrossTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeagull_Hattenkrapper_FormTeachableLearnset[] = {
@@ -53938,6 +54982,11 @@ static const u16 sSeagull_Hattenkrapper_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -53975,8 +55024,13 @@ static const u16 sSeagull_Koppenploppen_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeagull_Steven_FormTeachableLearnset[] = {
@@ -54015,6 +55069,11 @@ static const u16 sSeagull_Steven_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIbisTeachableLearnset[] = {
@@ -54047,6 +55106,10 @@ static const u16 sIbisTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDesertWyrmTeachableLearnset[] = {
@@ -54142,6 +55205,7 @@ static const u16 sCobra_Normal_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCobra_Spirit_FormTeachableLearnset[] = {
@@ -54172,6 +55236,9 @@ static const u16 sCobra_Spirit_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJunaTeachableLearnset[] = {
@@ -54204,10 +55271,13 @@ static const u16 sJunaTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnake_Sea_FormTeachableLearnset[] = {
@@ -54323,14 +55393,18 @@ static const u16 sThingumwutTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sExperiment_3_FormTeachableLearnset[] = {
@@ -54344,6 +55418,10 @@ static const u16 sExperiment_3_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCabbageTeachableLearnset[] = {
@@ -54377,6 +55455,7 @@ static const u16 sUghtankiTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCamelTeachableLearnset[] = {
@@ -54405,6 +55484,7 @@ static const u16 sCamelTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCamel_Warrior_FormTeachableLearnset[] = {
@@ -54453,8 +55533,10 @@ static const u16 sCamel_Warrior_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBalanceEleTeachableLearnset[] = {
@@ -54506,14 +55588,17 @@ static const u16 sBalanceEleTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Larva_FormTeachableLearnset[] = {
@@ -54607,6 +55692,7 @@ static const u16 sKalphite_Soldier_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Spirit_FormTeachableLearnset[] = {
@@ -54648,6 +55734,9 @@ static const u16 sKalphite_Spirit_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Guardian_FormTeachableLearnset[] = {
@@ -54684,6 +55773,7 @@ static const u16 sKalphite_Guardian_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Queen_FormTeachableLearnset[] = {
@@ -54729,6 +55819,8 @@ static const u16 sKalphite_Queen_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Queen_Mega_FormTeachableLearnset[] = {
@@ -54762,6 +55854,7 @@ static const u16 sKalphite_Queen_Mega_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Paragon_FormTeachableLearnset[] = {
@@ -54800,6 +55893,7 @@ static const u16 sKalphite_Paragon_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Corrupted_FormTeachableLearnset[] = {
@@ -54839,6 +55933,7 @@ static const u16 sKalphite_Corrupted_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Marauder_FormTeachableLearnset[] = {
@@ -54878,6 +55973,7 @@ static const u16 sKalphite_Marauder_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_King_FormTeachableLearnset[] = {
@@ -54921,6 +56017,7 @@ static const u16 sKalphite_King_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Dung_FormTeachableLearnset[] = {
@@ -54948,6 +56045,8 @@ static const u16 sKalphite_Dung_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalphite_Reanimated_FormTeachableLearnset[] = {
@@ -54986,6 +56085,10 @@ static const u16 sKalphite_Reanimated_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_Demon_Reanimated_FormTeachableLearnset[] = {
@@ -55019,9 +56122,12 @@ static const u16 sAbyssal_Demon_Reanimated_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBat_Gauntlet_Corrupted_FormTeachableLearnset[] = {
@@ -55051,6 +56157,7 @@ static const u16 sBat_Gauntlet_Corrupted_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBat_Gauntlet_Crystalline_FormTeachableLearnset[] = {
@@ -55082,6 +56189,7 @@ static const u16 sBat_Gauntlet_Crystalline_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_Reanimated_FormTeachableLearnset[] = {
@@ -55105,6 +56213,9 @@ static const u16 sBloodveld_Reanimated_FormTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDark_Beast_Gauntlet_Corrupted_FormTeachableLearnset[] = {
@@ -55144,8 +56255,10 @@ static const u16 sDark_Beast_Gauntlet_Corrupted_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDark_Beast_Gauntlet_Crystalline_FormTeachableLearnset[] = {
@@ -55186,8 +56299,10 @@ static const u16 sDark_Beast_Gauntlet_Crystalline_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDark_Beast_Pup_FormTeachableLearnset[] = {
@@ -55223,8 +56338,10 @@ static const u16 sDark_Beast_Pup_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDark_Beast_Normal_FormTeachableLearnset[] = {
@@ -55261,8 +56378,10 @@ static const u16 sDark_Beast_Normal_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDark_Beast_Sotetseg_FormTeachableLearnset[] = {
@@ -55303,8 +56422,10 @@ static const u16 sDark_Beast_Sotetseg_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sExperiment_4_FormTeachableLearnset[] = {
@@ -55321,6 +56442,7 @@ static const u16 sExperiment_4_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sExperiment_5_FormTeachableLearnset[] = {
@@ -55337,6 +56459,7 @@ static const u16 sExperiment_5_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGanodermic_BeastTeachableLearnset[] = {
@@ -55370,6 +56493,9 @@ static const u16 sGanodermic_BeastTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGrifolapineTeachableLearnset[] = {
@@ -55399,6 +56525,8 @@ static const u16 sGrifolapineTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGrifolarooTeachableLearnset[] = {
@@ -55427,6 +56555,8 @@ static const u16 sGrifolarooTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSporaxeTeachableLearnset[] = {
@@ -55453,11 +56583,15 @@ static const u16 sSporaxeTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_GRASSY_TERRAIN,
+	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_GRASSY_TERRAIN,
-	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHeadless_BeastTeachableLearnset[] = {
@@ -55492,6 +56626,11 @@ static const u16 sHeadless_BeastTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBehemoth_Normal_FormTeachableLearnset[] = {
@@ -55510,6 +56649,8 @@ static const u16 sBehemoth_Normal_FormTeachableLearnset[] = {
 	MOVE_REVENGE,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBehemoth_Adolscent_FormTeachableLearnset[] = {
@@ -55531,6 +56672,8 @@ static const u16 sBehemoth_Adolscent_FormTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSiege_BeastTeachableLearnset[] = {
@@ -55556,6 +56699,8 @@ static const u16 sSiege_BeastTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBulwark_BeastTeachableLearnset[] = {
@@ -55584,6 +56729,8 @@ static const u16 sBulwark_BeastTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBehemoth_Gluttonous_FormTeachableLearnset[] = {
@@ -55612,6 +56759,8 @@ static const u16 sBehemoth_Gluttonous_FormTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBehemoth_Runebound_FormTeachableLearnset[] = {
@@ -55647,9 +56796,14 @@ static const u16 sBehemoth_Runebound_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStompTeachableLearnset[] = {
@@ -55681,6 +56835,10 @@ static const u16 sStompTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHope_DevourerTeachableLearnset[] = {
@@ -55717,9 +56875,14 @@ static const u16 sHope_DevourerTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKaramthulu_OverlordTeachableLearnset[] = {
@@ -55755,6 +56918,10 @@ static const u16 sKaramthulu_OverlordTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLight_CreatureTeachableLearnset[] = {
@@ -55779,6 +56946,9 @@ static const u16 sLight_CreatureTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMinotaur_Reanimated_FormTeachableLearnset[] = {
@@ -55804,6 +56974,9 @@ static const u16 sMinotaur_Reanimated_FormTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMonkey_Reanimated_FormTeachableLearnset[] = {
@@ -55828,6 +57001,8 @@ static const u16 sMonkey_Reanimated_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRat_Gauntlet_Corrupted_FormTeachableLearnset[] = {
@@ -55907,6 +57082,8 @@ static const u16 sRat_Fungal_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSparkyTeachableLearnset[] = {
@@ -55935,10 +57112,12 @@ static const u16 sSparkyTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Corpse_FormTeachableLearnset[] = {
@@ -55958,6 +57137,7 @@ static const u16 sSpider_Corpse_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Fever_FormTeachableLearnset[] = {
@@ -55980,6 +57160,7 @@ static const u16 sSpider_Fever_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Lava_FormTeachableLearnset[] = {
@@ -55997,7 +57178,7 @@ static const u16 sSpider_Lava_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_EMBERLIGHT,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Shadow_FormTeachableLearnset[] = {
@@ -56020,6 +57201,10 @@ static const u16 sSpider_Shadow_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStalkerTeachableLearnset[] = {
@@ -56042,6 +57227,10 @@ static const u16 sStalkerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSoulgazerTeachableLearnset[] = {
@@ -56064,6 +57253,10 @@ static const u16 sSoulgazerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStalker_Sentinel_FormTeachableLearnset[] = {
@@ -56086,6 +57279,10 @@ static const u16 sStalker_Sentinel_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sNight_GazerTeachableLearnset[] = {
@@ -56119,6 +57316,11 @@ static const u16 sNight_GazerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPlane_FreezerTeachableLearnset[] = {
@@ -56151,6 +57353,10 @@ static const u16 sPlane_FreezerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWorld_GorgerTeachableLearnset[] = {
@@ -56183,6 +57389,11 @@ static const u16 sWorld_GorgerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFlesh_Spoiler_Covered_FormTeachableLearnset[] = {
@@ -56218,6 +57429,10 @@ static const u16 sFlesh_Spoiler_Covered_FormTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sShadow_ForgerTeachableLearnset[] = {
@@ -56248,6 +57463,11 @@ static const u16 sShadow_ForgerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVeil_RipperTeachableLearnset[] = {
@@ -56275,6 +57495,10 @@ static const u16 sVeil_RipperTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_Gauntlet_Corrupted_FormTeachableLearnset[] = {
@@ -56310,12 +57534,14 @@ static const u16 sUnicorn_Gauntlet_Corrupted_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUnicorn_Gauntlet_Crystalline_FormTeachableLearnset[] = {
@@ -56353,12 +57579,14 @@ static const u16 sUnicorn_Gauntlet_Crystalline_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Cave_FormTeachableLearnset[] = {
@@ -56381,6 +57609,8 @@ static const u16 sWolf_Cave_FormTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolf_Dragon_FormTeachableLearnset[] = {
@@ -56412,6 +57642,10 @@ static const u16 sWolf_Dragon_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sShadow_HoundTeachableLearnset[] = {
@@ -56438,6 +57672,7 @@ static const u16 sShadow_HoundTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBorder_CollieTeachableLearnset[] = {
@@ -56509,6 +57744,9 @@ static const u16 sGuard_DogTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLycurgusTeachableLearnset[] = {
@@ -56544,6 +57782,10 @@ static const u16 sLycurgusTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_Moorrissey_FormTeachableLearnset[] = {
@@ -56581,10 +57823,15 @@ static const u16 sYak_Moorrissey_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_Robin_FormTeachableLearnset[] = {
@@ -56618,6 +57865,8 @@ static const u16 sYak_Robin_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_Yaktrick_FormTeachableLearnset[] = {
@@ -56657,6 +57906,9 @@ static const u16 sYak_Yaktrick_FormTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCabbage_Sister_FormTeachableLearnset[] = {
@@ -56677,10 +57929,10 @@ static const u16 sCabbage_Sister_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_SILVERLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
-	MOVE_GRASSY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCabbage_Crispy_FormTeachableLearnset[] = {
@@ -56695,6 +57947,8 @@ static const u16 sCabbage_Crispy_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStrykewyrm_Mini_FormTeachableLearnset[] = {
@@ -56727,6 +57981,7 @@ static const u16 sCrocodile_Normal_FormTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrocodile_Mutadile_FormTeachableLearnset[] = {
@@ -56749,6 +58004,8 @@ static const u16 sCrocodile_Mutadile_FormTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrocodile_Ankh_FormTeachableLearnset[] = {
@@ -56783,6 +58040,10 @@ static const u16 sCrocodile_Ankh_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCrocodile_Ukunduka_FormTeachableLearnset[] = {
@@ -56821,6 +58082,8 @@ static const u16 sCrocodile_Ukunduka_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_GWDTeachableLearnset[] = {
@@ -56846,6 +58109,9 @@ static const u16 sBloodveld_GWDTeachableLearnset[] = {
 	MOVE_BRUTAL_SWING,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_Acidic_FormTeachableLearnset[] = {
@@ -56869,14 +58135,22 @@ static const u16 sBloodveld_Acidic_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_Vampiric_FormTeachableLearnset[] = {
 	MOVE_RAIN_DANCE,
+	MOVE_SANDSTORM,
+	MOVE_TAILWIND,
 	MOVE_MIGHTY_CLEAVE,
+	MOVE_AERIAL_ACE,
+	MOVE_STEEL_WING,
+	MOVE_VOLT_TACKLE,
 	MOVE_DRAINING_KISS,
 	MOVE_TOXIC,
 	MOVE_SHADOW_BONE,
+	MOVE_U_TURN,
+	MOVE_GUILLOTINE,
 	MOVE_KINGS_SHIELD,
 	MOVE_SWORDS_DANCE,
 	MOVE_FRUSTRATION,
@@ -56889,11 +58163,15 @@ static const u16 sBloodveld_Vampiric_FormTeachableLearnset[] = {
 	MOVE_HEX,
 	MOVE_SLUDGE_WAVE,
 	MOVE_BULK_UP,
+	MOVE_DEFOG,
 	MOVE_TRICK_OR_TREAT,
 	MOVE_REVENGE,
 	MOVE_BRUTAL_SWING,
+	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBloodveld_RS3_FormTeachableLearnset[] = {
@@ -56924,6 +58202,8 @@ static const u16 sBloodveld_RS3_FormTeachableLearnset[] = {
 	MOVE_TRICK_OR_TREAT,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBeaverTeachableLearnset[] = {
@@ -57016,6 +58296,7 @@ static const u16 sRalphTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRockyTeachableLearnset[] = {
@@ -57047,6 +58328,7 @@ static const u16 sRockyTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHoney_BadgerTeachableLearnset[] = {
@@ -57084,6 +58366,11 @@ static const u16 sHoney_BadgerTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSquirrel_Giant_FormTeachableLearnset[] = {
@@ -57156,6 +58443,10 @@ static const u16 sJade_VineTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKlikTeachableLearnset[] = {
@@ -57190,6 +58481,8 @@ static const u16 sKlikTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJackalopeTeachableLearnset[] = {
@@ -57222,6 +58515,8 @@ static const u16 sJackalopeTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpTeachableLearnset[] = {
@@ -57245,9 +58540,11 @@ static const u16 sImpTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Lesser_RS3_FormTeachableLearnset[] = {
@@ -57276,10 +58573,12 @@ static const u16 sDemon_Lesser_RS3_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Greater_RS3_FormTeachableLearnset[] = {
@@ -57311,10 +58610,12 @@ static const u16 sDemon_Greater_RS3_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Kalgerion_FormTeachableLearnset[] = {
@@ -57353,10 +58654,12 @@ static const u16 sDemon_Kalgerion_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Thundereous_FormTeachableLearnset[] = {
@@ -57399,11 +58702,13 @@ static const u16 sDemon_Thundereous_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Ripper_FormTeachableLearnset[] = {
@@ -57437,10 +58742,12 @@ static const u16 sDemon_Ripper_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Lesser_OSRS_FormTeachableLearnset[] = {
@@ -57468,10 +58775,12 @@ static const u16 sDemon_Lesser_OSRS_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Greater_OSRS_FormTeachableLearnset[] = {
@@ -57502,10 +58811,12 @@ static const u16 sDemon_Greater_OSRS_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Tstanon_FormTeachableLearnset[] = {
@@ -57543,10 +58854,12 @@ static const u16 sDemon_Tstanon_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Tormented_FormTeachableLearnset[] = {
@@ -57587,10 +58900,12 @@ static const u16 sDemon_Tormented_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDelrithTeachableLearnset[] = {
@@ -57629,10 +58944,13 @@ static const u16 sDelrithTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Lesser_Tongue_FormTeachableLearnset[] = {
@@ -57660,10 +58978,12 @@ static const u16 sDemon_Lesser_Tongue_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Greater_Tongue_FormTeachableLearnset[] = {
@@ -57692,10 +59012,12 @@ static const u16 sDemon_Greater_Tongue_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Zakln_FormTeachableLearnset[] = {
@@ -57741,10 +59063,13 @@ static const u16 sDemon_Zakln_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Pummeler_FormTeachableLearnset[] = {
@@ -57783,10 +59108,12 @@ static const u16 sDemon_Pummeler_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Chocolate_FormTeachableLearnset[] = {
@@ -57822,10 +59149,13 @@ static const u16 sDemon_Chocolate_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Lesser_Black_FormTeachableLearnset[] = {
@@ -57853,10 +59183,12 @@ static const u16 sDemon_Lesser_Black_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Greater_Black_FormTeachableLearnset[] = {
@@ -57887,10 +59219,12 @@ static const u16 sDemon_Greater_Black_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Balfrug_FormTeachableLearnset[] = {
@@ -57928,10 +59262,12 @@ static const u16 sDemon_Balfrug_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Jungle_FormTeachableLearnset[] = {
@@ -57968,10 +59304,12 @@ static const u16 sDemon_Jungle_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Riftsplitter_FormTeachableLearnset[] = {
@@ -58013,10 +59351,13 @@ static const u16 sDemon_Riftsplitter_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnow_ImpTeachableLearnset[] = {
@@ -58048,10 +59389,12 @@ static const u16 sSnow_ImpTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Ice_OSRS_FormTeachableLearnset[] = {
@@ -58085,10 +59428,12 @@ static const u16 sDemon_Ice_OSRS_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Ice_RS3_FormTeachableLearnset[] = {
@@ -58124,10 +59469,12 @@ static const u16 sDemon_Ice_RS3_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Bloodchiller_FormTeachableLearnset[] = {
@@ -58166,10 +59513,12 @@ static const u16 sDemon_Bloodchiller_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDemon_Reanimated_FormTeachableLearnset[] = {
@@ -58204,10 +59553,12 @@ static const u16 sDemon_Reanimated_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKril_TsutsarothTeachableLearnset[] = {
@@ -58255,10 +59606,12 @@ static const u16 sKril_TsutsarothTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPyrefiendTeachableLearnset[] = {
@@ -58277,10 +59630,11 @@ static const u16 sPyrefiendTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPyrelordTeachableLearnset[] = {
@@ -58301,10 +59655,11 @@ static const u16 sPyrelordTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWaterfiendTeachableLearnset[] = {
@@ -58323,10 +59678,11 @@ static const u16 sWaterfiendTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWaterlordTeachableLearnset[] = {
@@ -58347,9 +59703,11 @@ static const u16 sWaterlordTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIcefiendTeachableLearnset[] = {
@@ -58370,9 +59728,11 @@ static const u16 sIcefiendTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIcelordTeachableLearnset[] = {
@@ -58395,9 +59755,11 @@ static const u16 sIcelordTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Baby_FormTeachableLearnset[] = {
@@ -58423,6 +59785,8 @@ static const u16 sImpling_Baby_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Magpie_FormTeachableLearnset[] = {
@@ -58448,6 +59812,8 @@ static const u16 sImpling_Magpie_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Dragon_FormTeachableLearnset[] = {
@@ -58480,6 +59846,8 @@ static const u16 sImpling_Dragon_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -58517,6 +59885,8 @@ static const u16 sImpling_Kingly_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Lucky_FormTeachableLearnset[] = {
@@ -58549,6 +59919,9 @@ static const u16 sImpling_Lucky_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_SpawnTeachableLearnset[] = {
@@ -58567,6 +59940,8 @@ static const u16 sPenance_SpawnTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_HealerTeachableLearnset[] = {
@@ -58591,6 +59966,8 @@ static const u16 sPenance_HealerTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_RangerTeachableLearnset[] = {
@@ -58623,6 +60000,8 @@ static const u16 sPenance_RangerTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_RunnerTeachableLearnset[] = {
@@ -58650,6 +60029,8 @@ static const u16 sPenance_RunnerTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_FighterTeachableLearnset[] = {
@@ -58683,6 +60064,9 @@ static const u16 sPenance_FighterTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_QueenTeachableLearnset[] = {
@@ -58718,6 +60102,11 @@ static const u16 sPenance_QueenTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPenance_KingTeachableLearnset[] = {
@@ -58753,6 +60142,11 @@ static const u16 sPenance_KingTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_LeechTeachableLearnset[] = {
@@ -58763,6 +60157,7 @@ static const u16 sVoid_LeechTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_TorcherTeachableLearnset[] = {
@@ -58786,6 +60181,7 @@ static const u16 sVoid_TorcherTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_ShifterTeachableLearnset[] = {
@@ -58810,10 +60206,13 @@ static const u16 sVoid_ShifterTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_BrawlerTeachableLearnset[] = {
@@ -58833,6 +60232,8 @@ static const u16 sVoid_BrawlerTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_DefilerTeachableLearnset[] = {
@@ -58851,6 +60252,7 @@ static const u16 sVoid_DefilerTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_SplatterTeachableLearnset[] = {
@@ -58865,6 +60267,8 @@ static const u16 sVoid_SplatterTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_RavagerTeachableLearnset[] = {
@@ -58882,6 +60286,7 @@ static const u16 sVoid_RavagerTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_SpinnerTeachableLearnset[] = {
@@ -58897,6 +60302,8 @@ static const u16 sVoid_SpinnerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_DroneTeachableLearnset[] = {
@@ -58913,6 +60320,9 @@ static const u16 sVoid_DroneTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVoid_QueenTeachableLearnset[] = {
@@ -58935,6 +60345,8 @@ static const u16 sVoid_QueenTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnchovyTeachableLearnset[] = {
@@ -58951,6 +60363,7 @@ static const u16 sAnchovyTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnchovy_Pizza_FormTeachableLearnset[] = {
@@ -58979,6 +60392,7 @@ static const u16 sAnchovy_Pizza_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRed_EyeTeachableLearnset[] = {
@@ -58993,6 +60407,7 @@ static const u16 sRed_EyeTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFlatfishTeachableLearnset[] = {
@@ -59010,6 +60425,7 @@ static const u16 sFlatfishTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBouldabassTeachableLearnset[] = {
@@ -59033,6 +60449,8 @@ static const u16 sBouldabassTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMudskipperTeachableLearnset[] = {
@@ -59055,6 +60473,8 @@ static const u16 sMudskipperTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBasilisk_Baby_FormTeachableLearnset[] = {
@@ -59076,6 +60496,7 @@ static const u16 sBasilisk_Baby_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBasilisk_RS3_FormTeachableLearnset[] = {
@@ -59110,6 +60531,8 @@ static const u16 sBasilisk_RS3_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBasilisk_OSRS_FormTeachableLearnset[] = {
@@ -59144,6 +60567,8 @@ static const u16 sBasilisk_OSRS_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBasilisk_Knight_FormTeachableLearnset[] = {
@@ -59183,6 +60608,8 @@ static const u16 sBasilisk_Knight_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Ungael_FormTeachableLearnset[] = {
@@ -59198,6 +60625,7 @@ static const u16 sSpider_Ungael_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Crypt_FormTeachableLearnset[] = {
@@ -59224,6 +60652,8 @@ static const u16 sSpider_Crypt_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_Temple_FormTeachableLearnset[] = {
@@ -59254,6 +60684,9 @@ static const u16 sSpider_Temple_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpider_ApeAtoll_FormTeachableLearnset[] = {
@@ -59280,6 +60713,7 @@ static const u16 sSpider_ApeAtoll_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCatableponTeachableLearnset[] = {
@@ -59311,6 +60745,9 @@ static const u16 sCatableponTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sProtomastyxTeachableLearnset[] = {
@@ -59334,6 +60771,7 @@ static const u16 sProtomastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTyrannomastyxTeachableLearnset[] = {
@@ -59357,6 +60795,7 @@ static const u16 sTyrannomastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPig_War_FormTeachableLearnset[] = {
@@ -59390,8 +60829,9 @@ static const u16 sPig_War_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPig_Prayer_FormTeachableLearnset[] = {
@@ -59421,10 +60861,13 @@ static const u16 sPig_Prayer_FormTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPig_Pack_FormTeachableLearnset[] = {
@@ -59456,6 +60899,9 @@ static const u16 sPig_Pack_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHerbiboarTeachableLearnset[] = {
@@ -59486,6 +60932,8 @@ static const u16 sHerbiboarTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGoat_Clay_FormTeachableLearnset[] = {
@@ -59519,12 +60967,14 @@ static const u16 sGoat_Clay_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGoat_SacredClay_FormTeachableLearnset[] = {
@@ -59569,12 +61019,15 @@ static const u16 sGoat_SacredClay_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGoat_PrimordialClay_FormTeachableLearnset[] = {
@@ -59622,12 +61075,15 @@ static const u16 sGoat_PrimordialClay_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sShadeelTeachableLearnset[] = {
@@ -59684,11 +61140,13 @@ static const u16 sGolem_TitanTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMoss_TitanTeachableLearnset[] = {
 	MOVE_SUNNY_DAY,
 	MOVE_SOLAR_BLADE,
+	MOVE_MIGHTY_CLEAVE,
 	MOVE_TRIPLE_ARROWS,
 	MOVE_STONE_AXE,
 	MOVE_ENERGY_BALL,
@@ -59708,6 +61166,8 @@ static const u16 sMoss_TitanTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIron_TitanTeachableLearnset[] = {
@@ -59736,6 +61196,7 @@ static const u16 sIron_TitanTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSteel_TitanTeachableLearnset[] = {
@@ -59764,6 +61225,7 @@ static const u16 sSteel_TitanTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLava_TitanTeachableLearnset[] = {
@@ -59786,6 +61248,8 @@ static const u16 sLava_TitanTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sObsidian_GolemTeachableLearnset[] = {
@@ -59813,6 +61277,7 @@ static const u16 sObsidian_GolemTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSwamp_TitanTeachableLearnset[] = {
@@ -59841,6 +61306,8 @@ static const u16 sSwamp_TitanTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIce_TitanTeachableLearnset[] = {
@@ -59864,6 +61331,8 @@ static const u16 sIce_TitanTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFire_TitanTeachableLearnset[] = {
@@ -59886,6 +61355,8 @@ static const u16 sFire_TitanTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGeysir_TitanTeachableLearnset[] = {
@@ -59911,6 +61382,8 @@ static const u16 sGeysir_TitanTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDark_CoreTeachableLearnset[] = {
@@ -59948,10 +61421,15 @@ static const u16 sDark_CoreTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCorporeal_BeastTeachableLearnset[] = {
@@ -60003,13 +61481,17 @@ static const u16 sCorporeal_BeastTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCorporeal_Beast_Zanik_FormTeachableLearnset[] = {
@@ -60062,14 +61544,18 @@ static const u16 sCorporeal_Beast_Zanik_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCompost_MoundTeachableLearnset[] = {
@@ -60093,6 +61579,7 @@ static const u16 sCompost_MoundTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEntTeachableLearnset[] = {
@@ -60125,6 +61612,10 @@ static const u16 sEntTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDerwenTeachableLearnset[] = {
@@ -60155,11 +61646,15 @@ static const u16 sDerwenTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCockroach_DroneTeachableLearnset[] = {
@@ -60181,6 +61676,7 @@ static const u16 sCockroach_DroneTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCockroach_WorkerTeachableLearnset[] = {
@@ -60204,6 +61700,7 @@ static const u16 sCockroach_WorkerTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCockroach_SoldierTeachableLearnset[] = {
@@ -60231,6 +61728,7 @@ static const u16 sCockroach_SoldierTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCockroach_Warped_FormTeachableLearnset[] = {
@@ -60264,6 +61762,9 @@ static const u16 sCockroach_Warped_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFiaraTeachableLearnset[] = {
@@ -60302,11 +61803,16 @@ static const u16 sFiaraTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCave_BugTeachableLearnset[] = {
@@ -60334,6 +61840,7 @@ static const u16 sCave_BugTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMalcolmTeachableLearnset[] = {
@@ -60371,6 +61878,9 @@ static const u16 sMalcolmTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMeerkatsTeachableLearnset[] = {
@@ -60402,6 +61912,8 @@ static const u16 sMeerkatsTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sOrigami_BalloonTeachableLearnset[] = {
@@ -60417,6 +61929,7 @@ static const u16 sOrigami_BalloonTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKrill_BalloonTeachableLearnset[] = {
@@ -60438,6 +61951,7 @@ static const u16 sKrill_BalloonTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBalloon_GoatTeachableLearnset[] = {
@@ -60456,6 +61970,7 @@ static const u16 sBalloon_GoatTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_MotherTeachableLearnset[] = {
@@ -60496,6 +62011,10 @@ static const u16 sDagannoth_MotherTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGelatinnothTeachableLearnset[] = {
@@ -60540,6 +62059,10 @@ static const u16 sGelatinnothTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_DaughterTeachableLearnset[] = {
@@ -60580,6 +62103,10 @@ static const u16 sDagannoth_DaughterTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDagannoth_Reanimated_FormTeachableLearnset[] = {
@@ -60617,6 +62144,9 @@ static const u16 sDagannoth_Reanimated_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -60658,6 +62188,9 @@ static const u16 sDagannoth_Spirit_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -60684,8 +62217,8 @@ static const u16 sFlambeedTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
-	MOVE_EMBERLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAgrithNaNaTeachableLearnset[] = {
@@ -60715,9 +62248,8 @@ static const u16 sAgrithNaNaTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKaramelTeachableLearnset[] = {
@@ -60757,9 +62289,10 @@ static const u16 sKaramelTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
+	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_SILVERLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_ELECTRIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDessourtTeachableLearnset[] = {
@@ -60804,11 +62337,14 @@ static const u16 sDessourtTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSharkizardTeachableLearnset[] = {
@@ -60832,6 +62368,7 @@ static const u16 sSharkizardTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBasstoiseTeachableLearnset[] = {
@@ -60851,6 +62388,7 @@ static const u16 sBasstoiseTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRaventzhaarTeachableLearnset[] = {
@@ -60901,6 +62439,9 @@ static const u16 sWall_BeastTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWall_Beast_Mega_FormTeachableLearnset[] = {
@@ -60930,6 +62471,9 @@ static const u16 sWall_Beast_Mega_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSourhogTeachableLearnset[] = {
@@ -60958,6 +62502,7 @@ static const u16 sSourhogTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Farmhand_FormTeachableLearnset[] = {
@@ -60990,6 +62535,7 @@ static const u16 sHand_Farmhand_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Stuffed_FormTeachableLearnset[] = {
@@ -61025,6 +62571,7 @@ static const u16 sHand_Stuffed_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_BrokenFingers_FormTeachableLearnset[] = {
@@ -61055,6 +62602,9 @@ static const u16 sHand_BrokenFingers_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_DeadHand_FormTeachableLearnset[] = {
@@ -61089,6 +62639,9 @@ static const u16 sHand_DeadHand_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHand_Dungeoneering_FormTeachableLearnset[] = {
@@ -61121,6 +62674,9 @@ static const u16 sHand_Dungeoneering_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnake_Desert_FormTeachableLearnset[] = {
@@ -61142,6 +62698,7 @@ static const u16 sSnake_Desert_FormTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnake_Poison_FormTeachableLearnset[] = {
@@ -61162,6 +62719,7 @@ static const u16 sSnake_Poison_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnake_Swamp_FormTeachableLearnset[] = {
@@ -61184,6 +62742,7 @@ static const u16 sSnake_Swamp_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIcxanTeachableLearnset[] = {
@@ -61213,6 +62772,9 @@ static const u16 sIcxanTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSkeletal_WyvernTeachableLearnset[] = {
@@ -61246,6 +62808,7 @@ static const u16 sSkeletal_WyvernTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWyvernTeachableLearnset[] = {
@@ -61277,6 +62840,7 @@ static const u16 sWyvernTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Gourmet_FormTeachableLearnset[] = {
@@ -61302,6 +62866,8 @@ static const u16 sImpling_Gourmet_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Earth_FormTeachableLearnset[] = {
@@ -61329,6 +62895,7 @@ static const u16 sImpling_Earth_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Young_FormTeachableLearnset[] = {
@@ -61351,6 +62918,7 @@ static const u16 sImpling_Young_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Pirate_FormTeachableLearnset[] = {
@@ -61386,6 +62954,9 @@ static const u16 sImpling_Pirate_FormTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Ninja_FormTeachableLearnset[] = {
@@ -61421,6 +62992,9 @@ static const u16 sImpling_Ninja_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -61453,6 +63027,8 @@ static const u16 sImpling_Zombie_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Eclectic_FormTeachableLearnset[] = {
@@ -61485,6 +63061,9 @@ static const u16 sImpling_Eclectic_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Crystal_FormTeachableLearnset[] = {
@@ -61516,8 +63095,10 @@ static const u16 sImpling_Crystal_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_ARCLIGHT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Nature_FormTeachableLearnset[] = {
@@ -61549,6 +63130,7 @@ static const u16 sImpling_Nature_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Essence_FormTeachableLearnset[] = {
@@ -61583,6 +63165,8 @@ static const u16 sImpling_Essence_FormTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Divine_FormTeachableLearnset[] = {
@@ -61617,9 +63201,12 @@ static const u16 sImpling_Divine_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_ARCLIGHT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Spirit_FormTeachableLearnset[] = {
@@ -61653,9 +63240,12 @@ static const u16 sImpling_Spirit_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAraxyte_BabyTeachableLearnset[] = {
@@ -61699,6 +63289,8 @@ static const u16 sAraxyte_AcidicTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAraxyte_MirrorbackTeachableLearnset[] = {
@@ -61726,6 +63318,9 @@ static const u16 sAraxyte_MirrorbackTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAraxyte_PulsingTeachableLearnset[] = {
@@ -61757,6 +63352,8 @@ static const u16 sAraxyte_PulsingTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAraxxorTeachableLearnset[] = {
@@ -61796,6 +63393,8 @@ static const u16 sAraxxorTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAraxxiTeachableLearnset[] = {
@@ -61835,6 +63434,8 @@ static const u16 sAraxxiTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGlacor_Enduring_FormTeachableLearnset[] = {
@@ -61866,6 +63467,8 @@ static const u16 sGlacor_Enduring_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGlacor_Sapping_FormTeachableLearnset[] = {
@@ -61898,11 +63501,13 @@ static const u16 sGlacor_Sapping_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGlacor_Unstable_FormTeachableLearnset[] = {
@@ -61931,11 +63536,13 @@ static const u16 sGlacor_Unstable_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGlacorTeachableLearnset[] = {
@@ -61970,11 +63577,13 @@ static const u16 sGlacorTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGlacor_Arch_FormTeachableLearnset[] = {
@@ -62010,11 +63619,13 @@ static const u16 sGlacor_Arch_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_Common_FormTeachableLearnset[] = {
@@ -62036,6 +63647,7 @@ static const u16 sJadinko_Common_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_Male_FormTeachableLearnset[] = {
@@ -62061,6 +63673,7 @@ static const u16 sJadinko_Male_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_QueenTeachableLearnset[] = {
@@ -62088,6 +63701,7 @@ static const u16 sJadinko_QueenTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRuby_HarvestTeachableLearnset[] = {
@@ -62135,6 +63749,7 @@ static const u16 sSapphire_GlacialisTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnow_KnightTeachableLearnset[] = {
@@ -62161,6 +63776,8 @@ static const u16 sSnow_KnightTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBlack_WarlockTeachableLearnset[] = {
@@ -62193,6 +63810,8 @@ static const u16 sBlack_WarlockTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sForge_RegentTeachableLearnset[] = {
@@ -62217,10 +63836,11 @@ static const u16 sForge_RegentTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGuthixian_ButterflyTeachableLearnset[] = {
@@ -62247,11 +63867,14 @@ static const u16 sGuthixian_ButterflyTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCharming_MothTeachableLearnset[] = {
@@ -62280,6 +63903,7 @@ static const u16 sCharming_MothTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTrebornTeachableLearnset[] = {
@@ -62305,11 +63929,14 @@ static const u16 sTrebornTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDraugenTeachableLearnset[] = {
@@ -62348,12 +63975,15 @@ static const u16 sDraugenTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMacawTeachableLearnset[] = {
@@ -62375,6 +64005,7 @@ static const u16 sMacawTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sThe_IllusiveTeachableLearnset[] = {
@@ -62395,6 +64026,12 @@ static const u16 sThe_IllusiveTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDoubtTeachableLearnset[] = {
@@ -62419,6 +64056,12 @@ static const u16 sDoubtTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEverlastingTeachableLearnset[] = {
@@ -62455,6 +64098,12 @@ static const u16 sEverlastingTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUntouchableTeachableLearnset[] = {
@@ -62496,9 +64145,15 @@ static const u16 sUntouchableTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
-static const u16 sInadequancyTeachableLearnset[] = {
+static const u16 sInadequacyTeachableLearnset[] = {
 	MOVE_RAIN_DANCE,
 	MOVE_HAIL,
 	MOVE_FLAME_CHARGE,
@@ -62547,10 +64202,17 @@ static const u16 sInadequancyTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChinchompa_BabyTeachableLearnset[] = {
@@ -62704,6 +64366,9 @@ static const u16 sVulture_RSHD_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVulture_Pink_FormTeachableLearnset[] = {
@@ -62742,6 +64407,9 @@ static const u16 sVulture_Pink_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVulture_OSRS_FormTeachableLearnset[] = {
@@ -62778,6 +64446,9 @@ static const u16 sVulture_OSRS_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVulture_RS3_FormTeachableLearnset[] = {
@@ -62814,6 +64485,9 @@ static const u16 sVulture_RS3_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBeagleTeachableLearnset[] = {
@@ -62863,6 +64537,8 @@ static const u16 sPugTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHuskieTeachableLearnset[] = {
@@ -62890,6 +64566,8 @@ static const u16 sHuskieTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sShibaTeachableLearnset[] = {
@@ -62918,6 +64596,7 @@ static const u16 sShibaTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPolar_Bear_PunishedTeachableLearnset[] = {
@@ -62949,6 +64628,12 @@ static const u16 sPolar_Bear_PunishedTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLobstrocityTeachableLearnset[] = {
@@ -62984,6 +64669,7 @@ static const u16 sLobstrocityTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSalamander_Yellow_FormTeachableLearnset[] = {
@@ -63042,6 +64728,9 @@ static const u16 sAbyssal_DeepSea_WalkerTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_DeepSea_LeechTeachableLearnset[] = {
@@ -63078,6 +64767,9 @@ static const u16 sAbyssal_DeepSea_LeechTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAbyssal_DeepSea_GuardianTeachableLearnset[] = {
@@ -63115,6 +64807,9 @@ static const u16 sAbyssal_DeepSea_GuardianTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRift_GuardianTeachableLearnset[] = {
@@ -63146,6 +64841,9 @@ static const u16 sRift_GuardianTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCoral_GuardianTeachableLearnset[] = {
@@ -63179,6 +64877,9 @@ static const u16 sCoral_GuardianTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRewards_GuardianTeachableLearnset[] = {
@@ -63212,6 +64913,9 @@ static const u16 sRewards_GuardianTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Normal_FormTeachableLearnset[] = {
@@ -63224,6 +64928,9 @@ static const u16 sBaboon_Normal_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Mage_FormTeachableLearnset[] = {
@@ -63237,6 +64944,9 @@ static const u16 sBaboon_Mage_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Shaman_FormTeachableLearnset[] = {
@@ -63253,6 +64963,10 @@ static const u16 sBaboon_Shaman_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Thrower_FormTeachableLearnset[] = {
@@ -63267,6 +64981,9 @@ static const u16 sBaboon_Thrower_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Cursed_FormTeachableLearnset[] = {
@@ -63284,6 +65001,10 @@ static const u16 sBaboon_Cursed_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Thrall_FormTeachableLearnset[] = {
@@ -63299,6 +65020,10 @@ static const u16 sBaboon_Thrall_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_Volatile_FormTeachableLearnset[] = {
@@ -63312,6 +65037,9 @@ static const u16 sBaboon_Volatile_FormTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBaboon_BaBa_FormTeachableLearnset[] = {
@@ -63329,6 +65057,10 @@ static const u16 sBaboon_BaBa_FormTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScarab_Spitting_FormTeachableLearnset[] = {
@@ -63382,6 +65114,8 @@ static const u16 sCrocodile_Red_FormTeachableLearnset[] = {
 	MOVE_JAW_LOCK,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZebakTeachableLearnset[] = {
@@ -63415,6 +65149,12 @@ static const u16 sZebakTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCamel_Bank_FormTeachableLearnset[] = {
@@ -63422,17 +65162,25 @@ static const u16 sCamel_Bank_FormTeachableLearnset[] = {
 	MOVE_SANDSTORM,
 	MOVE_TAILWIND,
 	MOVE_FLAME_CHARGE,
+	MOVE_SOLAR_BLADE,
 	MOVE_TRIPLE_ARROWS,
+	MOVE_EERIE_SPELL,
 	MOVE_VOLT_TACKLE,
 	MOVE_DRAINING_KISS,
 	MOVE_TOXIC,
 	MOVE_BANEFUL_BUNKER,
 	MOVE_U_TURN,
+	MOVE_GUILLOTINE,
+	MOVE_KINGS_SHIELD,
+	MOVE_SACRED_SWORD,
+	MOVE_SWORDS_DANCE,
 	MOVE_SECRET_SWORD,
 	MOVE_RETURN,
+	MOVE_DRAGON_BREATH,
 	MOVE_SLACK_OFF,
 	MOVE_THOUSAND_ARROWS,
 	MOVE_POLLEN_PUFF,
+	MOVE_PSYCHO_CUT,
 	MOVE_LUNAR_DANCE,
 	MOVE_SNARL,
 	MOVE_POWDER,
@@ -63444,9 +65192,19 @@ static const u16 sCamel_Bank_FormTeachableLearnset[] = {
 	MOVE_DEFOG,
 	MOVE_TRICK_OR_TREAT,
 	MOVE_BRUTAL_SWING,
+	MOVE_PARTING_SHOT,
 	MOVE_TERRAIN_PULSE,
+	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_SNIPE_SHOT,
+	MOVE_TEATIME,
+	MOVE_DRAGON_DARTS,
+	MOVE_BITTER_BLADE,
+	MOVE_GIGATON_HAMMER,
+	MOVE_GLAIVE_RUSH,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_SWORD_STRIKE,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSlime_LilGloopTeachableLearnset[] = {
@@ -63471,6 +65229,8 @@ static const u16 sSlime_LilGloopTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSlime_KingTeachableLearnset[] = {
@@ -63505,6 +65265,9 @@ static const u16 sSlime_KingTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGraahk_Forsaken_FormTeachableLearnset[] = {
@@ -63544,10 +65307,13 @@ static const u16 sGraahk_Forsaken_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_Magical_FormTeachableLearnset[] = {
@@ -63583,6 +65349,9 @@ static const u16 sZygomite_Magical_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_Zanarian_FormTeachableLearnset[] = {
@@ -63617,6 +65386,9 @@ static const u16 sZygomite_Zanarian_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_Arcspore_FormTeachableLearnset[] = {
@@ -63650,6 +65422,9 @@ static const u16 sZygomite_Arcspore_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_Daemoncap_FormTeachableLearnset[] = {
@@ -63682,6 +65457,9 @@ static const u16 sZygomite_Daemoncap_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_Ancient_FormTeachableLearnset[] = {
@@ -63717,6 +65495,9 @@ static const u16 sZygomite_Ancient_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZulrah_Serpentine_FormTeachableLearnset[] = {
@@ -63777,10 +65558,16 @@ static const u16 sPig_Summoning_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTzTok_Jad_HD_Mega_FormTeachableLearnset[] = {
@@ -63810,6 +65597,8 @@ static const u16 sAbyssal_GuardianTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSlime_QueenTeachableLearnset[] = {
@@ -63842,6 +65631,9 @@ static const u16 sSlime_QueenTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAirutTeachableLearnset[] = {
@@ -63901,10 +65693,12 @@ static const u16 sSkotizoTeachableLearnset[] = {
 	MOVE_FUTURE_SIGHT,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScurrius_Melee_FormTeachableLearnset[] = {
@@ -63950,6 +65744,11 @@ static const u16 sScurrius_Melee_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScurrius_Ranged_FormTeachableLearnset[] = {
@@ -63994,6 +65793,11 @@ static const u16 sScurrius_Ranged_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_DRAGON_DARTS,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sScurrius_Magic_FormTeachableLearnset[] = {
@@ -64048,6 +65852,13 @@ static const u16 sScurrius_Magic_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBroav_Zombie_FormTeachableLearnset[] = {
@@ -64079,6 +65890,7 @@ static const u16 sBroav_Zombie_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Easter_FormTeachableLearnset[] = {
@@ -64111,6 +65923,8 @@ static const u16 sImpling_Easter_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Snow_FormTeachableLearnset[] = {
@@ -64140,6 +65954,8 @@ static const u16 sImpling_Snow_FormTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Wandering_FormTeachableLearnset[] = {
@@ -64169,6 +65985,9 @@ static const u16 sImpling_Wandering_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sImpling_Ghost_FormTeachableLearnset[] = {
@@ -64199,6 +66018,10 @@ static const u16 sImpling_Ghost_FormTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVorkathTeachableLearnset[] = {
@@ -64232,6 +66055,7 @@ static const u16 sVorkathTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFox_PyreTeachableLearnset[] = {
@@ -64295,8 +66119,9 @@ static const u16 sFox_RecruitmentDriveTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
-	MOVE_ARCLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFox_FennecTeachableLearnset[] = {
@@ -64402,11 +66227,13 @@ static const u16 sAntelope_Sunlight_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAntelope_Moonlight_FormTeachableLearnset[] = {
@@ -64430,11 +66257,13 @@ static const u16 sAntelope_Moonlight_FormTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
-	MOVE_DARKLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCapybaraTeachableLearnset[] = {
@@ -64504,6 +66333,8 @@ static const u16 sPigglesTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWolpertinger_Mega_FormTeachableLearnset[] = {
@@ -64549,6 +66380,10 @@ static const u16 sFlesh_Spoiler_Naked_FormTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFlesh_Spoiler_SpawnlingTeachableLearnset[] = {
@@ -64584,6 +66419,10 @@ static const u16 sFlesh_Spoiler_SpawnlingTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCaustic_GazerTeachableLearnset[] = {
@@ -64615,6 +66454,10 @@ static const u16 sCaustic_GazerTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIris_StalkerTeachableLearnset[] = {
@@ -64645,6 +66488,10 @@ static const u16 sIris_StalkerTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnimated_BookTeachableLearnset[] = {
@@ -64667,6 +66514,9 @@ static const u16 sAnimated_BookTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTome_of_StrengthTeachableLearnset[] = {
@@ -64694,6 +66544,12 @@ static const u16 sTome_of_StrengthTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTome_of_RangedTeachableLearnset[] = {
@@ -64722,6 +66578,9 @@ static const u16 sTome_of_RangedTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTome_of_MagicTeachableLearnset[] = {
@@ -64748,6 +66607,9 @@ static const u16 sTome_of_MagicTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLuminescent_IcefiendTeachableLearnset[] = {
@@ -64771,11 +66633,13 @@ static const u16 sLuminescent_IcefiendTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_DARKLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_DARKLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWarped_GalugaTeachableLearnset[] = {
@@ -64807,6 +66671,8 @@ static const u16 sWarped_GalugaTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSubmastyxTeachableLearnset[] = {
@@ -64831,6 +66697,7 @@ static const u16 sSubmastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sParamastyxTeachableLearnset[] = {
@@ -64855,6 +66722,7 @@ static const u16 sParamastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sArchaemastyxTeachableLearnset[] = {
@@ -64879,6 +66747,7 @@ static const u16 sArchaemastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDromomastyxTeachableLearnset[] = {
@@ -64903,6 +66772,7 @@ static const u16 sDromomastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpinomastyxTeachableLearnset[] = {
@@ -64927,6 +66797,7 @@ static const u16 sSpinomastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGallimastyxTeachableLearnset[] = {
@@ -64951,6 +66822,7 @@ static const u16 sGallimastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStegomastyxTeachableLearnset[] = {
@@ -64975,6 +66847,7 @@ static const u16 sStegomastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMegamastyxTeachableLearnset[] = {
@@ -64999,6 +66872,7 @@ static const u16 sMegamastyxTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJelly_Alternate_FormTeachableLearnset[] = {
@@ -65096,6 +66970,7 @@ static const u16 sJelly_Warped_Vitreous_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMoth_Sunlight_FormTeachableLearnset[] = {
@@ -65140,12 +67015,14 @@ static const u16 sMoth_Moonlight_FormTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sStone_of_Jas_Mega_FormTeachableLearnset[] = {
 	MOVE_EERIE_SPELL,
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_WarriorTeachableLearnset[] = {
@@ -65181,10 +67058,11 @@ static const u16 sSpirit_WarriorTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_RangerTeachableLearnset[] = {
@@ -65227,10 +67105,11 @@ static const u16 sSpirit_RangerTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_MageTeachableLearnset[] = {
@@ -65272,14 +67151,17 @@ static const u16 sSpirit_MageTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEsslingTeachableLearnset[] = {
@@ -65309,6 +67191,10 @@ static const u16 sEsslingTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEsshoundTeachableLearnset[] = {
@@ -65342,6 +67228,10 @@ static const u16 sEsshoundTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEsswraithTeachableLearnset[] = {
@@ -65380,6 +67270,10 @@ static const u16 sEsswraithTeachableLearnset[] = {
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHarpy_EagleTeachableLearnset[] = {
@@ -65407,6 +67301,10 @@ static const u16 sHarpy_EagleTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
@@ -65428,8 +67326,8 @@ static const u16 sReborn_WarriorTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_EMBERLIGHT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sReborn_RangerTeachableLearnset[] = {
@@ -65454,10 +67352,10 @@ static const u16 sReborn_RangerTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_GRASSY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
-	MOVE_GRASSY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sReborn_MageTeachableLearnset[] = {
@@ -65481,10 +67379,11 @@ static const u16 sReborn_MageTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJaguar_Orange_FormTeachableLearnset[] = {
@@ -65553,6 +67452,7 @@ static const u16 sTortleTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCockatrice_OSRS_FormTeachableLearnset[] = {
@@ -65633,6 +67533,7 @@ static const u16 sCockatrice_MoonlightTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRevenant_ImpTeachableLearnset[] = {
@@ -65657,6 +67558,7 @@ static const u16 sRevenant_ImpTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRevenant_DragonTeachableLearnset[] = {
@@ -65690,6 +67592,7 @@ static const u16 sRevenant_DragonTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMaledictusTeachableLearnset[] = {
@@ -65728,6 +67631,8 @@ static const u16 sMaledictusTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKalragTeachableLearnset[] = {
@@ -65756,10 +67661,12 @@ static const u16 sKalragTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnimawhalTeachableLearnset[] = {
@@ -65787,6 +67694,9 @@ static const u16 sAnimawhalTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAnimasaurusTeachableLearnset[] = {
@@ -65822,6 +67732,10 @@ static const u16 sAnimasaurusTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSea_Troll_QueenTeachableLearnset[] = {
@@ -65857,6 +67771,7 @@ static const u16 sSea_Troll_QueenTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GLACIAL_LANCE,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sYak_Lumber_FormTeachableLearnset[] = {
@@ -65897,6 +67812,7 @@ static const u16 sCabbage_Shattered_World_FormTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sVulture_Bearded_FormTeachableLearnset[] = {
@@ -65935,6 +67851,7 @@ static const u16 sVulture_Bearded_FormTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sKryket_BatTeachableLearnset[] = {
@@ -65974,6 +67891,8 @@ static const u16 sKryket_BatTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHar_AkenTeachableLearnset[] = {
@@ -66022,10 +67941,14 @@ static const u16 sSpirit_FighterTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_ArcherTeachableLearnset[] = {
@@ -66067,10 +67990,11 @@ static const u16 sSpirit_ArcherTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_MysticTeachableLearnset[] = {
@@ -66112,14 +68036,17 @@ static const u16 sSpirit_MysticTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_KnightTeachableLearnset[] = {
@@ -66155,10 +68082,11 @@ static const u16 sSpirit_KnightTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_ScoutTeachableLearnset[] = {
@@ -66201,10 +68129,11 @@ static const u16 sSpirit_ScoutTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_SILVERLIGHT,
 	MOVE_DARKLIGHT,
 	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSpirit_WarmageTeachableLearnset[] = {
@@ -66247,14 +68176,17 @@ static const u16 sSpirit_WarmageTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sPomapooTeachableLearnset[] = {
@@ -66280,6 +68212,9 @@ static const u16 sPomapooTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_MutatedTeachableLearnset[] = {
@@ -66315,6 +68250,11 @@ static const u16 sJadinko_MutatedTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_FerociousTeachableLearnset[] = {
@@ -66349,6 +68289,11 @@ static const u16 sJadinko_FerociousTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_DraconicTeachableLearnset[] = {
@@ -66377,6 +68322,8 @@ static const u16 sJadinko_DraconicTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_CarrionTeachableLearnset[] = {
@@ -66409,6 +68356,7 @@ static const u16 sJadinko_CarrionTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_DRAGON_DARTS,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_ShadowTeachableLearnset[] = {
@@ -66443,6 +68391,9 @@ static const u16 sJadinko_ShadowTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_GuthixTeachableLearnset[] = {
@@ -66468,10 +68419,12 @@ static const u16 sJadinko_GuthixTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_ARCLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_ZamorakTeachableLearnset[] = {
@@ -66498,10 +68451,11 @@ static const u16 sJadinko_ZamorakTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_FUTURE_SIGHT,
 	MOVE_PROTECT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sJadinko_SaradominTeachableLearnset[] = {
@@ -66531,10 +68485,12 @@ static const u16 sJadinko_SaradominTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
-	MOVE_SILVERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_SILVERLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMax_GolemTeachableLearnset[] = {
@@ -66619,15 +68575,22 @@ static const u16 sMax_GolemTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
 	MOVE_PSYSHIELD_BASH,
-	MOVE_SWORD_STRIKE,
-	MOVE_SILVERLIGHT,
-	MOVE_DARKLIGHT,
-	MOVE_ARCLIGHT,
-	MOVE_EMBERLIGHT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_SWORD_STRIKE,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
+	MOVE_SILVERLIGHT,
+	MOVE_DARKLIGHT,
+	MOVE_ARCLIGHT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFlesh_CrawlerTeachableLearnset[] = {
@@ -66659,6 +68622,7 @@ static const u16 sFlesh_CrawlerTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_ELECTRIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_OSRSTeachableLearnset[] = {
@@ -66705,6 +68669,10 @@ static const u16 sZygomite_OSRSTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_OSRS_AncientTeachableLearnset[] = {
@@ -66755,6 +68723,11 @@ static const u16 sZygomite_OSRS_AncientTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_RSHD_MutatedTeachableLearnset[] = {
@@ -66804,6 +68777,11 @@ static const u16 sZygomite_RSHD_MutatedTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZygomite_GloomshroomTeachableLearnset[] = {
@@ -66852,6 +68830,8 @@ static const u16 sZygomite_GloomshroomTeachableLearnset[] = {
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnailTeachableLearnset[] = {
@@ -66869,6 +68849,8 @@ static const u16 sSnailTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRockslug_RSHDTeachableLearnset[] = {
@@ -66893,6 +68875,8 @@ static const u16 sRockslug_RSHDTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRockslug_OSRSTeachableLearnset[] = {
@@ -66917,6 +68901,8 @@ static const u16 sRockslug_OSRSTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeaslugTeachableLearnset[] = {
@@ -66945,6 +68931,10 @@ static const u16 sSeaslugTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeaslug_PrinceTeachableLearnset[] = {
@@ -66975,6 +68965,10 @@ static const u16 sSeaslug_PrinceTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Giant_OSRSTeachableLearnset[] = {
@@ -66998,6 +68992,8 @@ static const u16 sSnail_Giant_OSRSTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Giant_RS3TeachableLearnset[] = {
@@ -67021,6 +69017,8 @@ static const u16 sSnail_Giant_RS3TeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_ThornyTeachableLearnset[] = {
@@ -67047,6 +69045,9 @@ static const u16 sSnail_ThornyTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_RavenousTeachableLearnset[] = {
@@ -67073,6 +69074,9 @@ static const u16 sSnail_RavenousTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Bruise_OSRSTeachableLearnset[] = {
@@ -67096,6 +69100,8 @@ static const u16 sSnail_Bruise_OSRSTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Bark_OSRSTeachableLearnset[] = {
@@ -67119,6 +69125,8 @@ static const u16 sSnail_Bark_OSRSTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GRASSY_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Blood_RS3TeachableLearnset[] = {
@@ -67142,6 +69150,8 @@ static const u16 sSnail_Blood_RS3TeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Ochre_RS3TeachableLearnset[] = {
@@ -67165,6 +69175,8 @@ static const u16 sSnail_Ochre_RS3TeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSnail_Myre_RS3TeachableLearnset[] = {
@@ -67188,6 +69200,8 @@ static const u16 sSnail_Myre_RS3TeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
+	MOVE_MISTY_TERRAIN,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMother_MallumTeachableLearnset[] = {
@@ -67222,6 +69236,10 @@ static const u16 sMother_MallumTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_PSYCHIC_TERRAIN,
+	MOVE_MISTY_TERRAIN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLava_DragonTeachableLearnset[] = {
@@ -67251,6 +69269,10 @@ static const u16 sLava_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrost_DragonTeachableLearnset[] = {
@@ -67282,6 +69304,10 @@ static const u16 sFrost_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Crystalline_FormTeachableLearnset[] = {
@@ -67318,6 +69344,10 @@ static const u16 sDragon_Crystalline_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sDragon_Corrupted_FormTeachableLearnset[] = {
@@ -67352,6 +69382,10 @@ static const u16 sDragon_Corrupted_FormTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSottlepotTeachableLearnset[] = {
@@ -67382,6 +69416,10 @@ static const u16 sSottlepotTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_TEATIME,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sReanimated_DragonTeachableLearnset[] = {
@@ -67417,6 +69455,10 @@ static const u16 sReanimated_DragonTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWhite_DragonTeachableLearnset[] = {
@@ -67449,6 +69491,10 @@ static const u16 sWhite_DragonTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBronze_DragonTeachableLearnset[] = {
@@ -67482,6 +69528,10 @@ static const u16 sBronze_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sIron_DragonTeachableLearnset[] = {
@@ -67515,6 +69565,10 @@ static const u16 sIron_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSteel_DragonTeachableLearnset[] = {
@@ -67548,6 +69602,10 @@ static const u16 sSteel_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMithril_DragonTeachableLearnset[] = {
@@ -67582,6 +69640,10 @@ static const u16 sMithril_DragonTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sAdamant_DragonTeachableLearnset[] = {
@@ -67615,6 +69677,10 @@ static const u16 sAdamant_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRune_DragonTeachableLearnset[] = {
@@ -67648,6 +69714,10 @@ static const u16 sRune_DragonTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sGalvekTeachableLearnset[] = {
@@ -67682,6 +69752,10 @@ static const u16 sGalvekTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCelestial_DragonTeachableLearnset[] = {
@@ -67718,6 +69792,10 @@ static const u16 sCelestial_DragonTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_BERSERK,
 	MOVE_PROTECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBandotriceTeachableLearnset[] = {
@@ -67770,6 +69848,7 @@ static const u16 sSeretriceTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZarotriceTeachableLearnset[] = {
@@ -67796,6 +69875,7 @@ static const u16 sZarotriceTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sTumetriceTeachableLearnset[] = {
@@ -67822,6 +69902,7 @@ static const u16 sTumetriceTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sUngotriceTeachableLearnset[] = {
@@ -67897,6 +69978,7 @@ static const u16 sSpirit_CockatriceTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sSeagutriceTeachableLearnset[] = {
@@ -68030,6 +70112,7 @@ static const u16 sRichieTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
+	MOVE_AUGURY,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCpt_MarlinTeachableLearnset[] = {
@@ -68063,6 +70146,8 @@ static const u16 sCpt_MarlinTeachableLearnset[] = {
 	MOVE_TEATIME,
 	MOVE_DRAGON_DARTS,
 	MOVE_GLACIAL_LANCE,
+	MOVE_AUGURY,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sBarrelchestTeachableLearnset[] = {
@@ -68116,6 +70201,7 @@ static const u16 sLava_BeastTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sLava_MonsterTeachableLearnset[] = {
@@ -68134,6 +70220,7 @@ static const u16 sLava_MonsterTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sZombie_headTeachableLearnset[] = {
@@ -68170,6 +70257,11 @@ static const u16 sZombie_headTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_AUGURY,
+	MOVE_TURMOIL,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWintertoadTeachableLearnset[] = {
@@ -68366,6 +70458,7 @@ static const u16 sRabbit_CaerbannogTeachableLearnset[] = {
 	MOVE_TERRAIN_PULSE,
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChocolate_RabbitTeachableLearnset[] = {
@@ -68402,6 +70495,7 @@ static const u16 sChocolate_RabbitTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sHarveyTeachableLearnset[] = {
@@ -68439,6 +70533,7 @@ static const u16 sHarveyTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sEaster_BunnyTeachableLearnset[] = {
@@ -68476,6 +70571,7 @@ static const u16 sEaster_BunnyTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sWar_BunnyTeachableLearnset[] = {
@@ -68515,6 +70611,8 @@ static const u16 sWar_BunnyTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRabbit_StalkerTeachableLearnset[] = {
@@ -68554,6 +70652,8 @@ static const u16 sRabbit_StalkerTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sRabbit_Elder_StalkerTeachableLearnset[] = {
@@ -68595,6 +70695,8 @@ static const u16 sRabbit_Elder_StalkerTeachableLearnset[] = {
 	MOVE_DRAGON_DARTS,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_FrankTeachableLearnset[] = {
@@ -68623,6 +70725,10 @@ static const u16 sChicken_FrankTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_TEATIME,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_DeathTeachableLearnset[] = {
@@ -68649,6 +70755,10 @@ static const u16 sChicken_DeathTeachableLearnset[] = {
 	MOVE_CEASELESS_EDGE,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_WarTeachableLearnset[] = {
@@ -68677,6 +70787,10 @@ static const u16 sChicken_WarTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_NO_RETREAT,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_PestilenceTeachableLearnset[] = {
@@ -68704,6 +70818,10 @@ static const u16 sChicken_PestilenceTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sChicken_FamineTeachableLearnset[] = {
@@ -68731,6 +70849,10 @@ static const u16 sChicken_FamineTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_DRAGON_DARTS,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_CrystallineTeachableLearnset[] = {
@@ -68772,6 +70894,10 @@ static const u16 sFrogeel_CrystallineTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_SeekerTeachableLearnset[] = {
@@ -68814,6 +70940,11 @@ static const u16 sFrogeel_SeekerTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_CorporealTeachableLearnset[] = {
@@ -68856,6 +70987,11 @@ static const u16 sFrogeel_CorporealTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_TzhaarTeachableLearnset[] = {
@@ -68895,6 +71031,10 @@ static const u16 sFrogeel_TzhaarTeachableLearnset[] = {
 	MOVE_BERSERK,
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_AbyssalTeachableLearnset[] = {
@@ -68935,6 +71075,10 @@ static const u16 sFrogeel_AbyssalTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_ReanimatedTeachableLearnset[] = {
@@ -68978,6 +71122,11 @@ static const u16 sFrogeel_ReanimatedTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_StrykewyrmTeachableLearnset[] = {
@@ -69018,6 +71167,10 @@ static const u16 sFrogeel_StrykewyrmTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_SnowTeachableLearnset[] = {
@@ -69059,6 +71212,10 @@ static const u16 sFrogeel_SnowTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_TrialTeachableLearnset[] = {
@@ -69099,6 +71256,10 @@ static const u16 sFrogeel_TrialTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_MeleeTeachableLearnset[] = {
@@ -69141,6 +71302,10 @@ static const u16 sFrogeel_MeleeTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_NO_RETREAT,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_MagicTeachableLearnset[] = {
@@ -69184,6 +71349,11 @@ static const u16 sFrogeel_MagicTeachableLearnset[] = {
 	MOVE_GLACIAL_LANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_RangedTeachableLearnset[] = {
@@ -69226,6 +71396,10 @@ static const u16 sFrogeel_RangedTeachableLearnset[] = {
 	MOVE_SNIPE_SHOT,
 	MOVE_TEATIME,
 	MOVE_GLACIAL_LANCE,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_SaneTeachableLearnset[] = {
@@ -69266,6 +71440,10 @@ static const u16 sFrogeel_SaneTeachableLearnset[] = {
 	MOVE_PROTECT,
 	MOVE_VICTORY_DANCE,
 	MOVE_SNIPE_SHOT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_PrinceTeachableLearnset[] = {
@@ -69309,6 +71487,11 @@ static const u16 sFrogeel_PrinceTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sFrogeel_PrincessTeachableLearnset[] = {
@@ -69352,6 +71535,11 @@ static const u16 sFrogeel_PrincessTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_PIETY,
+	MOVE_RIGOUR,
+	MOVE_TURMOIL,
+	MOVE_TORMENT_PRAYER,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sCorrupted_BeastTeachableLearnset[] = {
@@ -69370,6 +71558,7 @@ static const u16 sCorrupted_BeastTeachableLearnset[] = {
 	MOVE_NO_RETREAT,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
 	MOVE_UNAVAILABLE,
 };
 static const u16 sMolaniskTeachableLearnset[] = {
@@ -69423,6 +71612,28 @@ static const u16 sDuckatriceTeachableLearnset[] = {
 	MOVE_VICTORY_DANCE,
 	MOVE_REFLECT,
 	MOVE_LIGHT_SCREEN,
+	MOVE_DEFLECT,
+	MOVE_UNAVAILABLE,
+};
+static const u16 sScarabTeachableLearnset[] = {
+	MOVE_UNAVAILABLE,
+};
+static const u16 sScarab_GiantTeachableLearnset[] = {
+	MOVE_UNAVAILABLE,
+};
+static const u16 sScarab_Agile_FormTeachableLearnset[] = {
+	MOVE_UNAVAILABLE,
+};
+static const u16 sAkkhaTeachableLearnset[] = {
+	MOVE_UNAVAILABLE,
+};
+static const u16 sTumekens_Warden_Mega_FormTeachableLearnset[] = {
+	MOVE_UNAVAILABLE,
+};
+static const u16 sPoop_RockTeachableLearnset[] = {
+	MOVE_UNAVAILABLE,
+};
+static const u16 sBaboon_Brawler_FormTeachableLearnset[] = {
 	MOVE_UNAVAILABLE,
 };
 

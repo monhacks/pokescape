@@ -1276,7 +1276,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(DOUBT, gMonFrontPic_Doubt),
     SPECIES_SPRITE(EVERLASTING, gMonFrontPic_Everlasting),
     SPECIES_SPRITE(UNTOUCHABLE, gMonFrontPic_Untouchable),
-    SPECIES_SPRITE(INADEQUANCY, gMonFrontPic_Inadequancy),
+    SPECIES_SPRITE(INADEQUACY, gMonFrontPic_Inadequacy),
     SPECIES_SPRITE(CHINCHOMPA_BABY, gMonFrontPic_Chinchompa_Baby),
     SPECIES_SPRITE(CHINCHOMPA_GREY_BABY, gMonFrontPic_Chinchompa_Grey_Baby),
     SPECIES_SPRITE(CHINCHOMPA_RED_BABY, gMonFrontPic_Chinchompa_Red_Baby),

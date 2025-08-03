@@ -1276,7 +1276,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(DOUBT, gMonPalette_Doubt),
     SPECIES_PAL(EVERLASTING, gMonPalette_Everlasting),
     SPECIES_PAL(UNTOUCHABLE, gMonPalette_Untouchable),
-    SPECIES_PAL(INADEQUANCY, gMonPalette_Inadequancy),
+    SPECIES_PAL(INADEQUACY, gMonPalette_Inadequacy),
     SPECIES_PAL(CHINCHOMPA_BABY, gMonPalette_Chinchompa_Baby),
     SPECIES_PAL(CHINCHOMPA_GREY_BABY, gMonPalette_Chinchompa_Grey_Baby),
     SPECIES_PAL(CHINCHOMPA_RED_BABY, gMonPalette_Chinchompa_Red_Baby),
