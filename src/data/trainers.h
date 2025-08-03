@@ -2777,7 +2777,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_ROUTE29_TRAINER_5),
+        .party = TRAINER_PARTY(sParty_ALKHARID_GYM_TRAINER_1),
     },
 
     [TRAINER_ALKHARID_GYM_TRAINER_2] =
@@ -2789,7 +2789,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_ROUTE29_TRAINER_5),
+        .party = TRAINER_PARTY(sParty_ALKHARID_GYM_TRAINER_2),
     },
 
     [TRAINER_ALKHARID_GYM_TRAINER_3] =
@@ -2801,7 +2801,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_ROUTE29_TRAINER_5),
+        .party = TRAINER_PARTY(sParty_ALKHARID_GYM_TRAINER_3),
     },
 
     [TRAINER_ALKHARID_GYM_TRAINER_4] =
@@ -2813,7 +2813,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_ROUTE29_TRAINER_5),
+        .party = TRAINER_PARTY(sParty_ALKHARID_GYM_TRAINER_4),
     },
 
 

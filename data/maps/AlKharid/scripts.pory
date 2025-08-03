@@ -865,7 +865,7 @@ script BATTLE_FROGEEL_RIVAL_6 {
 }
 
 movement MOVEMENT_FROGEEL_RIVAL_ALKHARID_1 {
-    walk_fast_right * 6
+    walk_fast_right * 2
     step_end
 }
 
@@ -878,15 +878,15 @@ movement MOVEMENT_FROGEEL_RIVAL_ALKHARID_2 {
 }
 
 movement MOVEMENT_FROGEEL_RIVAL_ALKHARID_3 {
-    face_down
-    walk_faster_down * 7
+    walk_faster_right
+    walk_faster_down * 2
+    walk_faster_left * 9
     step_end
 }
 
 movement MOVEMENT_FROGEEL_RIVAL_ALKHARID_4 {
-    walk_faster_up * 4
-    walk_faster_left * 9
-    walk_faster_up * 8        
+    walk_faster_right * 3
+    walk_faster_up * 7   
     step_end
 }
 

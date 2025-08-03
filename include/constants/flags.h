@@ -333,7 +333,7 @@
 #define FLAG_HAS_MATCH_CALL                  0x12F
 #define FLAG_ADDED_MATCH_CALL_TO_POKENAV     0x130
 #define FLAG_NORMALTREE_ASSISTANT_6          0x131 //FLAG_REGISTERED_STEVEN_POKENAV
-#define FLAG_UNUSED0x132                     0x132 //FLAG_ENABLE_NORMAN_MATCH_CALL
+#define FLAG_NORMALTREE_ASSISTANT_7          0x132 //FLAG_ENABLE_NORMAN_MATCH_CALL
 #define FLAG_BKF_QUIZ_1                      0x133 //FLAG_STEVEN_GUIDES_TO_CAVE_OF_ORIGIN // Set after you follow Steven to the entrance of the Cave of Origin.
 #define FLAG_BKF_QUIZ_2                      0x134 //FLAG_MET_ARCHIE_SOOTOPOLIS
 #define FLAG_BKF_QUIZ_3                      0x135 //FLAG_MET_MAXIE_SOOTOPOLIS

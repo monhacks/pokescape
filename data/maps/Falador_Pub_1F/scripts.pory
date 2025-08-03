@@ -44,6 +44,16 @@ script NPC_FALADORPUB_BARMAID_3
 	end
 }
 
+script NPC_FALADORPUB_DWARF {
+	lock
+	faceplayer
+    namebox("Dorlak")
+	msgbox(format("Studies have shown that 6 out of 7 dwarves aren't happy.\p…{PAUSE 15}\pNo wonder so many of us like to drink!"))
+	closemessage
+    hidenamebox
+    release
+	end
+}
 
 
 

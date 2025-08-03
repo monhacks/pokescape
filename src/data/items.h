@@ -13181,7 +13181,7 @@ const struct Item gItems[] =
 
     [ITEM_EEL_SUSHI] = //Figy Berry - NEW - NEEDS TO MAKE SURE IT LINKS TO SPRITES ETC
     {
-        .name = _("EEL SUHSI"),
+        .name = _("EEL SUSHI"),
         .price = 20,
         .holdEffect = HOLD_EFFECT_CONFUSE_SPICY,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
