@@ -250,7 +250,7 @@ script TZHAAR_NPC_1
                 applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_TZHAAR_GYMWALK_4)
             }
             waitmovement(0)
-
+            namebox ("Tzhaar")
             msgbox(format("Here we are, this is the Tzhaar Gym. Our champion is one of the strongest Tzhaar!\pI will be over here if you have anymore questions about the gym."))
             closemessage
             hidenamebox

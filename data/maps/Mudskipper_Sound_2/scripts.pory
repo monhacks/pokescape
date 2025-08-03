@@ -67,3 +67,16 @@ script BATTLE_AJAMJAM{
     msgbox(format("I think I need a hug now…"))
     release
 }
+
+script ROUGH_SEAS_NPC {
+    lock
+    faceplayer
+    namebox("Officer")
+    msgbox(format("Go no further, the seas south of here are too rough for your little dinghy boat."))
+    hidenamebox
+    closemessage
+	applymovement (VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection)
+    waitmovement(0)
+    release
+    end
+}

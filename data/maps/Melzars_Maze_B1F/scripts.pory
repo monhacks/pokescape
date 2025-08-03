@@ -300,7 +300,7 @@ script TRIGGER_Melzar_Maze_HAM_EVENT_BABE {
     waitmovement(0)
 
 	namebox("Babe")
-	msgbox(format("Hey you, you may have won this time, but let me just say you shouldn't give chase after us.\pSome of the higher ups like Johanhus and Sigmund can be real scary.\pI wouldn't want to oppose them.\pThis one time I accidentally ate Sigmunds san-"))
+	msgbox(format("Hey you, you may have won this time, but let me just say you shouldn't give chase after us.\pSome of the higher ups like Johanhus and Sigmund can be real scary.\pI wouldn't want to oppose them.\pThis one time I accidentally ate Sigmund's san-"))
 	closemessage
 	hidenamebox
 	applymovement(6, MOVEMENT_INTERACT_LEFT)
