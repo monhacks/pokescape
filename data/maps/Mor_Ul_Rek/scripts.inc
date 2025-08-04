@@ -828,8 +828,8 @@ TZHAAR_NPC_1_Text_1:
 	.string "Okay Jalyt, follow me.$"
 
 TZHAAR_NPC_1_Text_2:
-	.string "Here we are, this is the Tzhaar Gym. Our\n"
-	.string "champion is one of the strongest\l"
+	.string "Here we are, this is the Tzhaar Gym.\p"
+	.string "Our champion is one of the strongest\n"
 	.string "Tzhaar!\p"
 	.string "I will be over here if you have anymore\n"
 	.string "questions about the gym.$"

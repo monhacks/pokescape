@@ -282,8 +282,9 @@ script ALKHARID_NPC_17
 
 script ALKHARID_NPC_18
 {
+    lock
     faceplayer
-    namebox ("F0rrest Gee")
+    namebox ("Sanicman345")
     msgbox(format("I heard that running laps of rooftop courses was a good way to level Agility…\pbut I have been up here going in circles for hours and not gained a single xp!"))
     closemessage
     hidenamebox
@@ -293,6 +294,7 @@ script ALKHARID_NPC_18
 
 script ALKHARID_NPC_19
 {
+    lock
     faceplayer
     namebox ("Noob")
     msgbox(format("Huh, I thought the palace entrance was always on the north side, not the south side.\pEh, must've drank to much Sq'irkjuice."))

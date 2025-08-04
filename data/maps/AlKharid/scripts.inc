@@ -261,6 +261,7 @@ ALKHARID_NPC_17::
 
 
 ALKHARID_NPC_18::
+	lock
 	faceplayer
 	namebox ALKHARID_NPC_18_Text_0
 	msgbox ALKHARID_NPC_18_Text_1
@@ -271,6 +272,7 @@ ALKHARID_NPC_18::
 
 
 ALKHARID_NPC_19::
+	lock
 	faceplayer
 	namebox ALKHARID_NPC_19_Text_0
 	msgbox ALKHARID_NPC_19_Text_1
@@ -1041,7 +1043,7 @@ ALKHARID_NPC_17_Text_0:
 	.string "one of the MvM leaders!$"
 
 ALKHARID_NPC_18_Text_0:
-	.string "F0rrest Gee$"
+	.string "Sanicman345$"
 
 ALKHARID_NPC_18_Text_1:
 	.string "I heard that running laps of rooftop\n"

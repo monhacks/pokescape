@@ -40,6 +40,8 @@ script MUSAPOINT_METATILES {
 script MUSAPOINT_STATE {
 	removeobject(15)
 	setflag(FLAG_TEMP_10) //Angrenouille
+	setflag(FLAG_TEMP_3) //Tzhaar Gym Guide
+	removeobject(30)
 
 	if (var(VAR_POKESCAPE_GAMEMODE_STATE) == 0) //if STORYMODE
     {
@@ -83,12 +85,18 @@ script MUSAPOINT_STATE {
 			removeobject(24)
 			removeobject(25)
 		}
+	//Tzhaar Gym Guide
+		if ((var(VAR_WISE_OLD_MAN_RIVAL) >= 20) && (!flag(FLAG_BADGE03_GET))) {
+			clearflag(FLAG_TEMP_3)
+			addobject(30)
+		}
 	}
 
-	if ((var(VAR_FROGEEL_RIVAL) == 10)) {
-        addobject(15)
+	//Angrenouille appears after wise old man cutscene is done.
+	if ((var(VAR_WISE_OLD_MAN_RIVAL) >= 20) && (var(VAR_FROGEEL_RIVAL) == 10)) {
+		addobject(15)
         clearflag(FLAG_TEMP_10) //Angrenouille
-    }
+	}
 	return
 }
 
@@ -148,9 +156,12 @@ script SIGNPOST_MUSA_POINT
 
 script SIGNPOST_BOAT_FOR_SALE
 {
-	if (var(VAR_BANANA_BOAT_QUEST) <= 10) {
-		msgbox(format("Boat for Sale!\pSee Luthas inside for more details."))
-    	closemessage
+	checkitem(ITEM_SURF_TOOL, 1)
+	if (!var(VAR_RESULT)) {
+		if (var(VAR_BANANA_BOAT_QUEST) <= 10) {
+			msgbox(format("Boat for Sale!\pSee Luthas inside for more details."))
+			closemessage
+		}
 	}
 	end
 }
@@ -567,8 +578,8 @@ script TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT {
     if (var(VAR_TEMP_B) == 29){
         applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_01)
 		waitmovement(0)
-		applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN)
-		waitmovement(0)
+		//applymovement (OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN)
+		//waitmovement(0)
     } 
     elif (var(VAR_TEMP_B) == 30){
         applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_02)
@@ -606,59 +617,66 @@ script TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT {
 	msgbox(format("Me?\pI think I might go visit the pub for a drink.\pI truly am looking forward to seeing your MvM championship progress.\pUntil next time {PLAYER}."))
 	hidenamebox
 	closemessage
-	special(SpawnCameraObject)                                      //Need to spawn a camera as with the moved trigger tiles you wouldn't see WOM enter the pub
+	special(SpawnCameraObject)    //Need to spawn a camera as with the moved trigger tiles you wouldn't see WOM enter the pub
+
 	getplayerxy(VAR_TEMP_A, VAR_TEMP_B)
-		if (var(VAR_TEMP_B) == 29){
-			applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_1)
-		} 
-		elif (var(VAR_TEMP_B) == 30){
-			applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_2)
-		}
-		elif (var(VAR_TEMP_B) == 31){
-			applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_3)
-		}
-	if ((var(VAR_FROGEEL_RIVAL) == 10)) {                           //if Angrenouille is stood outside the pub, WOM will walk around him and react to him
-    	getplayerxy(VAR_TEMP_A, VAR_TEMP_B)
-    		if (var(VAR_TEMP_B) == 29){
-        		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_04)
-    		} 
-    		elif (var(VAR_TEMP_B) == 30){
-        		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_05)
-   			}
-			elif (var(VAR_TEMP_B) == 31){
-        		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_06)
-   			}
-    }
-	else {
-		getplayerxy(VAR_TEMP_A, VAR_TEMP_B)                         //if Angrenouille is NOT stood outside the pub, WOM will walk through where he'd otherwise be
-    		if (var(VAR_TEMP_B) == 29){
-        		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_07)
-    		} 
-    		elif (var(VAR_TEMP_B) == 30){
-       			applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_08)
-   			}
-			elif (var(VAR_TEMP_B) == 31){
-        		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_09)
-    		}
+	if (var(VAR_TEMP_B) == 29){
+		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_07)
+		delay(60)
+		applymovement (OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
+		applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_1)
+	} 
+	elif (var(VAR_TEMP_B) == 30){
+		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_08)
+		delay(60)
+		applymovement (OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
+		applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_2)
 	}
-	waitmovement(0)
-	opendoor(18,32)
-	waitdooranim
+	elif (var(VAR_TEMP_B) == 31){
+		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_wom_musapoint_09)
+		delay(60)
+		applymovement (OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)
+		applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_3)
+	}
+	waitmovement(OBJ_EVENT_ID_WISE_OLD_MAN)
+	//if Angrenouille quest is at this point too.
+	if ((var(VAR_FROGEEL_RIVAL) == 10)) {
+		setobjectxyperm(15, 18, 32)
+    	opendoor(18,32)
+		waitdooranim
+		delay(30)
+		addobject(15)
+		clearflag(FLAG_TEMP_10) //Angrenouille
+		playse(SE_WALL_HIT)
+		applymovement (15, movement_musapoint_frogeelman_exitpub_1)
+		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_musapoint_frogeelman_exitpub_2)
+		waitmovement(0)
+		applymovement (15, movement_musapoint_frogeelman_exitpub_3)
+		delay(30)
+		applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_musapoint_frogeelman_exitpub_4)
+		waitmovement(0)
+		delay(60)
+	}
+	else {
+		opendoor(18,32)
+		waitdooranim
+	}
 	applymovement (OBJ_EVENT_ID_WISE_OLD_MAN, movement_ENTER_DOOR)
 	waitmovement(0)
 	removeobject(OBJ_EVENT_ID_WISE_OLD_MAN)
 	setflag(FLAG_TEMP_1F)
 	closedoor(18,32)
-	getplayerxy(VAR_TEMP_A, VAR_TEMP_B)                               //Pans the camera back
-		if (var(VAR_TEMP_B) == 29){
-			applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_4)
-		} 
-		elif (var(VAR_TEMP_B) == 30){
-			applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_5)
-		}
-		elif (var(VAR_TEMP_B) == 31){
-			applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_6)
-		}
+	waitdooranim
+	if (var(VAR_TEMP_B) == 29){
+		applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_4)
+	} 
+	elif (var(VAR_TEMP_B) == 30){
+		applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_5)
+	}
+	elif (var(VAR_TEMP_B) == 31){
+		applymovement (OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_6)
+	}
+	waitmovement(OBJ_EVENT_ID_CAMERA)
 	applymovement (29, movement_musapoint_luthas_monkey)          //Moves the monkey out from in front of Luthas' house
 	waitmovement(0)
 	special(RemoveCameraObject)
@@ -675,10 +693,32 @@ script TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT {
 	end
 }
 
+movement movement_musapoint_frogeelman_exitpub_1 {
+	walk_fast_down
+	step_end
+}
+movement movement_musapoint_frogeelman_exitpub_2 {
+	lock_facing_direction
+	walk_fast_down
+	unlock_facing_direction
+	step_end
+}
+movement movement_musapoint_frogeelman_exitpub_3 {
+	walk_right * 2
+	face_left
+	step_end
+}
+movement movement_musapoint_frogeelman_exitpub_4 {
+	walk_up
+	face_right
+	step_end
+}
+
 movement movement_wom_musapoint_noticeplayer{
     face_player
     emote_exclamation_mark
     delay_16
+	step_end
 }
 movement movement_wom_musapoint_01{
     walk_left
@@ -700,6 +740,7 @@ movement movement_wom_musapoint_1{
     face_right
     delay_16 * 6
     face_player
+	step_end
 }
 
 movement movement_wom_musapoint_04{
@@ -767,42 +808,44 @@ movement movement_ENTER_DOOR{
 }
 
 movement movement_musapoint_camera_1{
-    walk_left * 3
-	walk_down
+	walk_slow_diag_southwest * 3
+	walk_slow_left * 1
     step_end
 }
 
 movement movement_musapoint_camera_2{
-    walk_left * 3
+	walk_slow_diag_southwest * 2
+    walk_slow_left * 2
     step_end
 }
 
 movement movement_musapoint_camera_3{
-    walk_left * 3
-    walk_up
+	walk_slow_diag_southwest * 1
+    walk_slow_left * 3
     step_end
 }
 
 movement movement_musapoint_camera_4{
-    walk_up
-	walk_right * 3
+    walk_slow_diag_northeast * 3
+	walk_slow_right * 1
     step_end
 }
 
 movement movement_musapoint_camera_5{
-    walk_right * 3
+    walk_slow_diag_northeast * 2
+    walk_slow_right * 2
     step_end
 }
 
 movement movement_musapoint_camera_6{
-    walk_down
-	walk_right * 3
+    walk_slow_diag_northeast * 1
+    walk_slow_right * 3
     step_end
 }
 
 movement movement_musapoint_luthas_monkey{
-    walk_down
-	walk_left * 9
+    walk_up
+	set_invisible
     step_end
 }
 
@@ -823,7 +866,15 @@ script NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB {
 	end
 }
 
-
+script NPC_Angrenouille_MUSAPOINT_PUB {
+	lock
+	namebox("Angrenouille")
+	msgbox(format("…{PAUSE 15}…\n{PAUSE 15}…{PAUSE 15}Ribbit…"))
+	hidenamebox
+	closemessage
+	release
+	end
+}
 
 
 script LUTHAS_QUEST {
@@ -1007,9 +1058,10 @@ script LUTHAS_QUEST_PART_5 {
 			hidenamebox
 			//give mon
 			call(EventScript_GiftMonster_Banana)
+			namebox("Luthas")
 			msgbox(format("I hope you will keep assisting me in the future."))
 			setvar(VAR_BANANA_BOAT_QUEST, 25)
-			subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_BANANA_BOAT, 3)
+			subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_BANANA_BOAT, 2)
 		}
 	}
 	hidenamebox
@@ -1744,17 +1796,17 @@ script FROGEEL_RIVAL_3 {
 	applymovement (15, MOVEMENT_EXCLAMATIONMARK)
 	waitmovement(0)
 	namebox("Angrenouille")
-	msgbox(format("You have to buy them?\p{PAUSE 15}They don't belong to me?\pListen here {PLAYER}.\nIn life a man has to do certain things to become a frog monarch.\pEating bananas is one of them.\nEven if they are owned by others.\pAnd if you can not accept that?\pWell I guess we'll just have to fight about it.\nLike this!"))
+	msgbox(format("You have to buy them?\pThey don't belong to me?\pListen here {PLAYER}.\nIn life a man has to do certain things to become a frog monarch.\pEating bananas is one of them.\nEven if they are owned by others.\pAnd if you can not accept that?\pWell I guess we'll just have to fight about it.\nLike this!"))
     closemessage
     hidenamebox
 	if (flag(FLAG_STARTER1)){ //Grass
-		trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_3_GRASS, format("Seeya!"))
+		trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_3_GRASS, format("AAAA- Seeya!"))
 	}
 	elif (flag(FLAG_STARTER2)) { //Fire
-		trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_3_FIRE, format("Seeya!"))
+		trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_3_FIRE, format("AAAA- Seeya!"))
 	}
 	elif (flag(FLAG_STARTER3)) { //Water
-		trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_3_WATER, format("Seeya!"))
+		trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_3_WATER, format("AAAA- Seeya!"))
 	}
     namebox("Angrenouille")
 	msgbox(format("A\nAAA\nAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA!\pI said…{PAUSE 15}…\lA!"))
@@ -1815,4 +1867,28 @@ movement MOVEMENT_FROGEEL_RIVAL_MUSA_REACTION {
 	walk_fast_down
 	face_right
     step_end
+}
+
+
+
+script MUSAPOINT_TZHAAR_GYM_GUIDE
+{
+	lock
+	faceplayer
+	namebox ("Tzhaar-Guide")
+	msgbox(format("You are a MvM challenger, yes?\pWe are here advertising our gym.\pIt is located in Mor Ul Rek, would you like me to take you there?"), MSGBOX_YESNO)
+	if (var(VAR_RESULT)) {
+		msgbox(format("Follow us, we shall now escort you…"))
+		closemessage
+		hidenamebox
+		warp(MAP_MOR_UL_REK, 2)
+		waitstate
+	}
+	else {
+		msgbox(format("Oh…\pWell don't forget about our gym on your adventures then."))
+	}
+	closemessage
+	hidenamebox
+	release
+	end
 }

@@ -43,35 +43,40 @@ MUSAPOINT_METATILES_5:
 MUSAPOINT_STATE::
 	removeobject 15
 	setflag FLAG_TEMP_10
+	setflag FLAG_TEMP_3
+	removeobject 30
 	compare VAR_POKESCAPE_GAMEMODE_STATE, 0
 	goto_if_eq MUSAPOINT_STATE_2
 MUSAPOINT_STATE_1:
-	compare VAR_FROGEEL_RIVAL, 10
-	goto_if_eq MUSAPOINT_STATE_5
+	compare VAR_WISE_OLD_MAN_RIVAL, 20
+	goto_if_ge MUSAPOINT_STATE_6
 MUSAPOINT_STATE_4:
 	return
 
 MUSAPOINT_STATE_2:
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 155
-	goto_if_le MUSAPOINT_STATE_8
+	goto_if_le MUSAPOINT_STATE_10
 	removeobject 21
 	setflag FLAG_TEMP_1D
-MUSAPOINT_STATE_7:
+MUSAPOINT_STATE_9:
 	compare VAR_WISE_OLD_MAN_RIVAL, 15
-	goto_if_le MUSAPOINT_STATE_12
+	goto_if_le MUSAPOINT_STATE_14
 	removeobject 20
 	setflag FLAG_TEMP_1F
 	removeobject 22
 	removeobject 23
 	removeobject 29
 	setflag FLAG_TEMP_1E
-MUSAPOINT_STATE_11:
+MUSAPOINT_STATE_13:
 	compare VAR_BANANA_BOAT_QUEST, 5
-	goto_if_ge MUSAPOINT_STATE_15
+	goto_if_ge MUSAPOINT_STATE_18
 	setflag FLAG_TEMP_1C
 	setflag FLAG_TEMP_1B
 	removeobject 24
 	removeobject 25
+MUSAPOINT_STATE_17:
+	compare VAR_WISE_OLD_MAN_RIVAL, 20
+	goto_if_ge MUSAPOINT_STATE_22
 	goto MUSAPOINT_STATE_1
 
 MUSAPOINT_STATE_5:
@@ -79,13 +84,18 @@ MUSAPOINT_STATE_5:
 	clearflag FLAG_TEMP_10
 	goto MUSAPOINT_STATE_4
 
-MUSAPOINT_STATE_8:
+MUSAPOINT_STATE_6:
+	compare VAR_FROGEEL_RIVAL, 10
+	goto_if_eq MUSAPOINT_STATE_5
+	goto MUSAPOINT_STATE_4
+
+MUSAPOINT_STATE_10:
 	addobject 21
 	clearflag FLAG_TEMP_1D
 	setobjectxyperm 7, 38, 29
-	goto MUSAPOINT_STATE_7
+	goto MUSAPOINT_STATE_9
 
-MUSAPOINT_STATE_12:
+MUSAPOINT_STATE_14:
 	setvar VAR_TEMP_F, 1
 	addobject 20
 	clearflag FLAG_TEMP_1F
@@ -93,13 +103,22 @@ MUSAPOINT_STATE_12:
 	addobject 23
 	addobject 29
 	clearflag FLAG_TEMP_1E
-	goto MUSAPOINT_STATE_11
+	goto MUSAPOINT_STATE_13
 
-MUSAPOINT_STATE_15:
+MUSAPOINT_STATE_18:
 	clearflag FLAG_TEMP_1C
 	clearflag FLAG_TEMP_1B
 	addobject 24
 	addobject 25
+	goto MUSAPOINT_STATE_17
+
+MUSAPOINT_STATE_21:
+	clearflag FLAG_TEMP_3
+	addobject 30
+	goto MUSAPOINT_STATE_1
+
+MUSAPOINT_STATE_22:
+	goto_if_unset FLAG_BADGE03_GET, MUSAPOINT_STATE_21
 	goto MUSAPOINT_STATE_1
 
 
@@ -148,12 +167,18 @@ SIGNPOST_MUSA_POINT::
 
 
 SIGNPOST_BOAT_FOR_SALE::
-	compare VAR_BANANA_BOAT_QUEST, 10
-	goto_if_le SIGNPOST_BOAT_FOR_SALE_2
+	checkitem ITEM_SURF_TOOL, 1
+	compare VAR_RESULT, 0
+	goto_if_eq SIGNPOST_BOAT_FOR_SALE_2
 SIGNPOST_BOAT_FOR_SALE_1:
 	end
 
 SIGNPOST_BOAT_FOR_SALE_2:
+	compare VAR_BANANA_BOAT_QUEST, 10
+	goto_if_le SIGNPOST_BOAT_FOR_SALE_4
+	goto SIGNPOST_BOAT_FOR_SALE_1
+
+SIGNPOST_BOAT_FOR_SALE_4:
 	msgbox SIGNPOST_BOAT_FOR_SALE_Text_0
 	closemessage
 	goto SIGNPOST_BOAT_FOR_SALE_1
@@ -615,25 +640,18 @@ TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_8:
 	compare VAR_TEMP_B, 31
 	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_15
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_12:
+	waitmovement 20
 	compare VAR_FROGEEL_RIVAL, 10
 	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_20
-	getplayerxy VAR_TEMP_A, VAR_TEMP_B
-	compare VAR_TEMP_B, 29
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_36
-	compare VAR_TEMP_B, 30
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_37
-	compare VAR_TEMP_B, 31
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_38
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19:
-	waitmovement 0
 	opendoor 18, 32
 	waitdooranim
+TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19:
 	applymovement 20, movement_ENTER_DOOR
 	waitmovement 0
 	removeobject 20
 	setflag FLAG_TEMP_1F
 	closedoor 18, 32
-	getplayerxy VAR_TEMP_A, VAR_TEMP_B
+	waitdooranim
 	compare VAR_TEMP_B, 29
 	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_24
 	compare VAR_TEMP_B, 30
@@ -641,14 +659,15 @@ TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19:
 	compare VAR_TEMP_B, 31
 	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_26
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_23:
+	waitmovement OBJ_EVENT_ID_CAMERA
 	applymovement 29, movement_musapoint_luthas_monkey
 	waitmovement 0
 	special RemoveCameraObject
 	removeobject 29
 	setflag FLAG_TEMP_1E
 	compare VAR_WISE_OLD_MAN_RIVAL, 10
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_43
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_42:
+	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_31
+TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_30:
 	setvar VAR_WISE_OLD_MAN_RIVAL, 20
 	setvar VAR_TEMP_F, 0
 	savebgm MUS_DUMMY
@@ -658,8 +677,6 @@ TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_42:
 
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_2:
 	applymovement 20, movement_wom_musapoint_01
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
 	waitmovement 0
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_1
 
@@ -682,25 +699,42 @@ TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_11:
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_8
 
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_13:
+	applymovement 20, movement_wom_musapoint_07
+	delay 60
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
 	applymovement OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_1
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_12
 
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_14:
+	applymovement 20, movement_wom_musapoint_08
+	delay 60
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
 	applymovement OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_2
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_12
 
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_15:
+	applymovement 20, movement_wom_musapoint_09
+	delay 60
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT
 	applymovement OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_3
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_12
 
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_20:
-	getplayerxy VAR_TEMP_A, VAR_TEMP_B
-	compare VAR_TEMP_B, 29
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_30
-	compare VAR_TEMP_B, 30
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_31
-	compare VAR_TEMP_B, 31
-	goto_if_eq TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_32
+	setobjectxyperm 15, 18, 32
+	opendoor 18, 32
+	waitdooranim
+	delay 30
+	addobject 15
+	clearflag FLAG_TEMP_10
+	playse SE_WALL_HIT
+	applymovement 15, movement_musapoint_frogeelman_exitpub_1
+	applymovement 20, movement_musapoint_frogeelman_exitpub_2
+	waitmovement 0
+	applymovement 15, movement_musapoint_frogeelman_exitpub_3
+	delay 30
+	applymovement 20, movement_musapoint_frogeelman_exitpub_4
+	waitmovement 0
+	delay 60
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
 
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_24:
@@ -715,34 +749,31 @@ TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_26:
 	applymovement OBJ_EVENT_ID_CAMERA, movement_musapoint_camera_6
 	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_23
 
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_30:
-	applymovement 20, movement_wom_musapoint_04
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
-
 TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_31:
-	applymovement 20, movement_wom_musapoint_05
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
-
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_32:
-	applymovement 20, movement_wom_musapoint_06
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
-
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_36:
-	applymovement 20, movement_wom_musapoint_07
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
-
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_37:
-	applymovement 20, movement_wom_musapoint_08
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
-
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_38:
-	applymovement 20, movement_wom_musapoint_09
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_19
-
-TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_43:
 	addvar VAR_GAMEMODE_LEVEL_CAP, 2
-	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_42
+	goto TRIGGER_WISEOLDMAN_RIVAL_MUSAPOINT_30
 
+
+movement_musapoint_frogeelman_exitpub_1:
+	walk_fast_down
+	step_end
+
+movement_musapoint_frogeelman_exitpub_2:
+	lock_facing_direction
+	walk_fast_down
+	unlock_facing_direction
+	step_end
+
+movement_musapoint_frogeelman_exitpub_3:
+	walk_right
+	walk_right
+	face_left
+	step_end
+
+movement_musapoint_frogeelman_exitpub_4:
+	walk_up
+	face_right
+	step_end
 
 movement_wom_musapoint_noticeplayer:
 	face_player
@@ -899,56 +930,50 @@ movement_ENTER_DOOR:
 	step_end
 
 movement_musapoint_camera_1:
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
 	walk_left
-	walk_left
-	walk_left
-	walk_down
 	step_end
 
 movement_musapoint_camera_2:
-	walk_left
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
 	walk_left
 	walk_left
 	step_end
 
 movement_musapoint_camera_3:
+	walk_slow_diag_southwest
 	walk_left
 	walk_left
 	walk_left
-	walk_up
 	step_end
 
 movement_musapoint_camera_4:
-	walk_up
-	walk_right
-	walk_right
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
 	walk_right
 	step_end
 
 movement_musapoint_camera_5:
-	walk_right
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
 	walk_right
 	walk_right
 	step_end
 
 movement_musapoint_camera_6:
-	walk_down
+	walk_slow_diag_northeast
 	walk_right
 	walk_right
 	walk_right
 	step_end
 
 movement_musapoint_luthas_monkey:
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_up
+	set_invisible
 	step_end
 
 NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB::
@@ -968,6 +993,16 @@ NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB_1:
 NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB_2:
 	msgbox NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB_Text_0
 	goto NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB_1
+
+
+NPC_Angrenouille_MUSAPOINT_PUB::
+	lock
+	namebox NPC_Angrenouille_MUSAPOINT_PUB_Text_0
+	msgbox NPC_Angrenouille_MUSAPOINT_PUB_Text_1
+	hidenamebox
+	closemessage
+	release
+	end
 
 
 LUTHAS_QUEST::
@@ -2080,23 +2115,23 @@ SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_4_7:
 FROGEEL_RIVAL_3::
 	lock
 	faceplayer
-	namebox FROGEEL_RIVAL_3_Text_0
-	msgbox FROGEEL_RIVAL_3_Text_1
+	namebox NPC_Angrenouille_MUSAPOINT_PUB_Text_0
+	msgbox FROGEEL_RIVAL_3_Text_0
 	hidenamebox
 	closemessage
 	playse SE_PIN
 	applymovement 15, MOVEMENT_EXCLAMATIONMARK
 	waitmovement 0
-	namebox FROGEEL_RIVAL_3_Text_0
-	msgbox FROGEEL_RIVAL_3_Text_2
+	namebox NPC_Angrenouille_MUSAPOINT_PUB_Text_0
+	msgbox FROGEEL_RIVAL_3_Text_1
 	closemessage
 	hidenamebox
 	goto_if_set FLAG_STARTER1, FROGEEL_RIVAL_3_2
 	goto_if_set FLAG_STARTER2, FROGEEL_RIVAL_3_3
 	goto_if_set FLAG_STARTER3, FROGEEL_RIVAL_3_4
 FROGEEL_RIVAL_3_1:
-	namebox FROGEEL_RIVAL_3_Text_0
-	msgbox FROGEEL_RIVAL_3_Text_4
+	namebox NPC_Angrenouille_MUSAPOINT_PUB_Text_0
+	msgbox FROGEEL_RIVAL_3_Text_3
 	closemessage
 	hidenamebox
 	playse SE_FLEE
@@ -2118,7 +2153,7 @@ FROGEEL_RIVAL_3_8:
 	waitmovement 0
 	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK
-	msgbox FROGEEL_RIVAL_3_Text_5
+	msgbox FROGEEL_RIVAL_3_Text_4
 	closemessage
 	giveitem ITEM_NATURE_RUNE, 1
 	closemessage
@@ -2130,15 +2165,15 @@ FROGEEL_RIVAL_3_8:
 	end
 
 FROGEEL_RIVAL_3_2:
-	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_GRASS, FROGEEL_RIVAL_3_Text_3
+	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_GRASS, FROGEEL_RIVAL_3_Text_2
 	goto FROGEEL_RIVAL_3_1
 
 FROGEEL_RIVAL_3_3:
-	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_FIRE, FROGEEL_RIVAL_3_Text_3
+	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_FIRE, FROGEEL_RIVAL_3_Text_2
 	goto FROGEEL_RIVAL_3_1
 
 FROGEEL_RIVAL_3_4:
-	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_WATER, FROGEEL_RIVAL_3_Text_3
+	trainerbattle_no_intro TRAINER_FROGEEL_RIVAL_3_WATER, FROGEEL_RIVAL_3_Text_2
 	goto FROGEEL_RIVAL_3_1
 
 FROGEEL_RIVAL_3_9:
@@ -2180,6 +2215,29 @@ MOVEMENT_FROGEEL_RIVAL_MUSA_REACTION:
 	walk_fast_down
 	face_right
 	step_end
+
+MUSAPOINT_TZHAAR_GYM_GUIDE::
+	lock
+	faceplayer
+	namebox MUSAPOINT_TZHAAR_GYM_GUIDE_Text_0
+	msgbox MUSAPOINT_TZHAAR_GYM_GUIDE_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne MUSAPOINT_TZHAAR_GYM_GUIDE_2
+	msgbox MUSAPOINT_TZHAAR_GYM_GUIDE_Text_3
+MUSAPOINT_TZHAAR_GYM_GUIDE_1:
+	closemessage
+	hidenamebox
+	release
+	end
+
+MUSAPOINT_TZHAAR_GYM_GUIDE_2:
+	msgbox MUSAPOINT_TZHAAR_GYM_GUIDE_Text_2
+	closemessage
+	hidenamebox
+	warp MAP_MOR_UL_REK, 2
+	waitstate
+	goto MUSAPOINT_TZHAAR_GYM_GUIDE_1
+
 
 NPC_MUSAPOINT_SAILOR_Text_0:
 	.string "Officer$"
@@ -2638,6 +2696,13 @@ NPC_WISEOLDMAN_RIVAL_MUSAPOINT_PUB_Text_1:
 	.string "Did you end up going to see Luthas\n"
 	.string "about that boat?$"
 
+NPC_Angrenouille_MUSAPOINT_PUB_Text_0:
+	.string "Angrenouille$"
+
+NPC_Angrenouille_MUSAPOINT_PUB_Text_1:
+	.string "…{PAUSE 15}…\n"
+	.string "{PAUSE 15}…{PAUSE 15}Ribbit…$"
+
 LUTHAS_QUEST_Text_0:
 	.string "Hello, I run the banana plantation. How\n"
 	.string "many I help you today?$"
@@ -3084,16 +3149,13 @@ SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_4_Text_4:
 	.string "need to be prepared for a fierce battle.$"
 
 FROGEEL_RIVAL_3_Text_0:
-	.string "Angrenouille$"
-
-FROGEEL_RIVAL_3_Text_1:
 	.string "Oh, it's you again {PLAYER}.\p"
 	.string "No, I am not doing anything shady, just\n"
 	.string "eating bananas.\p"
 	.string "I like them, they have multiple A's in\n"
 	.string "them.$"
 
-FROGEEL_RIVAL_3_Text_2:
+FROGEEL_RIVAL_3_Text_1:
 	.string "You have to buy them?\p"
 	.string "{PAUSE 15}They don't belong to me?\p"
 	.string "Listen here {PLAYER}.\n"
@@ -3106,10 +3168,10 @@ FROGEEL_RIVAL_3_Text_2:
 	.string "about it.\n"
 	.string "Like this!$"
 
-FROGEEL_RIVAL_3_Text_3:
+FROGEEL_RIVAL_3_Text_2:
 	.string "Seeya!$"
 
-FROGEEL_RIVAL_3_Text_4:
+FROGEEL_RIVAL_3_Text_3:
 	.string "A\n"
 	.string "AAA\n"
 	.string "AAAAAAA\p"
@@ -3120,8 +3182,25 @@ FROGEEL_RIVAL_3_Text_4:
 	.string "I said…{PAUSE 15}…\l"
 	.string "A!$"
 
-FROGEEL_RIVAL_3_Text_5:
+FROGEEL_RIVAL_3_Text_4:
 	.string "It seems that Angrenouille dropped a\n"
 	.string "banana.\p"
 	.string "Opening the banana revealed an item\n"
 	.string "inside.$"
+
+MUSAPOINT_TZHAAR_GYM_GUIDE_Text_0:
+	.string "Tzhaar-Guide$"
+
+MUSAPOINT_TZHAAR_GYM_GUIDE_Text_1:
+	.string "You are a MvM challenger, yes?\p"
+	.string "We are here advertising our gym.\p"
+	.string "It is located in Mor Ul Rek, would you\n"
+	.string "like me to take you there?$"
+
+MUSAPOINT_TZHAAR_GYM_GUIDE_Text_2:
+	.string "Follow us, we shall now escort you…$"
+
+MUSAPOINT_TZHAAR_GYM_GUIDE_Text_3:
+	.string "Oh…\p"
+	.string "Well don't forget about our gym on your\n"
+	.string "adventures then.$"

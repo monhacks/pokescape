@@ -310,7 +310,7 @@ script ALKHARID_GYM_ALI {
     namebox("Prince Ali")
     if (!flag(FLAG_BADGE06_GET)){   //ALKHARID BADGE
         if (var(VAR_POKESCAPE_GAMEMODE_STATE) == 0) { //if story mode
-            msgbox(format("So you're the one who saved Leel-.\pAhem, I mean me.\pOsman and I are indebted to you.\pShould you ever require anything we shall come to your aid.\pAhem…"))
+            msgbox(format("So you're the one who saved Leel-\pAhem, I mean me.\pOsman and I are indebted to you.\pShould you ever require anything we shall come to your aid.\pAhem…"))
         }
         msgbox(format("Welcome to the Al Kharid Gym.\pI Prince Ali shall test your skills.\pI hope you are ready!"))
         hidenamebox

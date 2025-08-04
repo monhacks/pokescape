@@ -1152,7 +1152,7 @@ NPC_ALKHARID_OSMAN_Text_2:
 	.string "disguse by sneezing.$"
 
 ALKHARID_GYM_ALI_Text_0:
-	.string "So you're the one who saved Leel-.\p"
+	.string "So you're the one who saved Leel-\p"
 	.string "Ahem, I mean me.\p"
 	.string "Osman and I are indebted to you.\p"
 	.string "Should you ever require anything we\n"

@@ -9,14 +9,21 @@ mapscripts MusaPoint_Pub_1F_MapScripts {
 
 
 script MUSAPOINT_PUB_STATE {
+	removeobject(7)
+	setflag(FLAG_TEMP_10) //Angrenouille
+	removeobject(OBJ_EVENT_ID_WISE_OLD_MAN)
+	setflag(FLAG_TEMP_1F)
+
     if ((var(VAR_WISE_OLD_MAN_RIVAL) == 20) && (var(VAR_POKESCAPE_STORYMODE_PROGRESS) < 160)) { //Post Karamaja Gym, 
         addobject(OBJ_EVENT_ID_WISE_OLD_MAN)
         clearflag(FLAG_TEMP_1F)
     }
-    else {
-        removeobject(OBJ_EVENT_ID_WISE_OLD_MAN)
-        setflag(FLAG_TEMP_1F)
-    }
+
+	//Angrenouille appears before wise old man cutscene is done.
+	if ((var(VAR_WISE_OLD_MAN_RIVAL) <= 20) && (var(VAR_FROGEEL_RIVAL) == 10)) {
+		addobject(7)
+        clearflag(FLAG_TEMP_10) //Angrenouille
+	}
 }
 
 
