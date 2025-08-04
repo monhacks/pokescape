@@ -1,3 +1,5 @@
+const OBJ_EVENT_ID_SIR_OWEN = 7
+
 mapscripts Black_Knights_Fortress_4_MapScripts {
     MAP_SCRIPT_ON_LOAD {
         call(BKF_HEAL_ZONE)
@@ -89,7 +91,7 @@ script BKFORT_4F_NPC_6 //Right Black Knight in front of treasure room
     lock
     faceplayer
     namebox ("Black Knight")
-    msgbox(format("Back up will be here soon and they'll stop you!\p{PAUSE 15}They are coming, right..?"))
+    msgbox(format("Back up will be here soon and they'll stop you!\pThey are coming, right{PAUSE 15}…?"))
     closemessage
     hidenamebox
     release
@@ -199,7 +201,7 @@ script BKFORT_4F_BOOK_3
 	msgbox(format("A book on the Kinshra catches your eye.\pWould you like to read it?"), MSGBOX_YESNO)
         if (var(VAR_RESULT))
         { 
-            msgbox(format("Volume ??\pPossible future plans.\pLocate a tomb in the north, and use the power within to raise an army of the undead.\p{PAUSE 15}Enslave some druids in Taverley, and use their magic to bolster our monsters.\p{PAUSE 15}Resume contact with the witch in the west to capture a King Arthur and take over Camelot.\p{PAUSE 15}Prevent the White Knights from retrieving the Holy Grail.\pUse the Humans Against Monsters organisation to locate a monster of immense power capable of…\p{PAUSE 15}The rest of the page appears to have been hurriedly torn out."))
+            msgbox(format("Volume ??\pPossible future plans.\pLocate a tomb in the north, and use the power within to raise an army of the undead.\pEnslave some druids in Taverley, and use their magic to bolster our monsters.\pResume contact with the witch in the west to capture a King Arthur and take over Camelot.\pPrevent the White Knights from retrieving the Holy Grail.\pUse the Humans Against Monsters organisation to locate a monster of immense power capable of…\pThe rest of the page appears to have been hurriedly torn out."))
         }
     closemessage
 	release
@@ -369,6 +371,10 @@ script BATTLE_BLACKKNIGHT_SIFT
 script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         lockall
         facefollower
+        setvar(VAR_0x8004, OUTFIT_DEFAULT)
+        special(WearOutfit)
+        releaseall
+        end
         namebox("Sir Owen")
         msgbox(format("{PLAYER}, I can hear voices inside.\pLet's see if we can listen in and find out what they're up to without blowing our cover any further."))
         closemessage
@@ -379,7 +385,7 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         special(SpawnCameraObject)
         applymovement(OBJ_EVENT_ID_CAMERA, movement_BK_Fort_camera_1)
         waitmovement(0)
-
+        special(RemoveCameraObject)
         namebox("Daquarius")
         msgbox(format("It is as my scout said Sigmund.\pThe complete mural is right there."))
         closemessage
@@ -419,23 +425,46 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         waitmovement(0)
         //setobjectxy(3, 16,10)
         //setobjectxyperm(3, 16,10)
-        applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_1)
-        applymovement(OBJ_EVENT_ID_PLAYER, Movement_BKF_BossEvent_1)
+        
         //applymovement(3, Movement_BKF_BossEvent_1)
         namebox("Sigmund")
         msgbox(format("You will get what you deserve in due time."))
+        closemessage
+
+        setobjectxy(3, 16,11)
+        setobjectxyperm(3, 16,11)
+        setobjectxy(OBJ_EVENT_ID_SIR_OWEN, 16,11)
+        setobjectxyperm(OBJ_EVENT_ID_SIR_OWEN, 16,11)
+        addobject(3)
+        addobject(OBJ_EVENT_ID_SIR_OWEN)
+        clearflag(FLAG_TEMP_2)
+        
+        setvar(VAR_0x8004, OUTFIT_DEFAULT)
+        special(WearOutfit)
+        delay(30)
+        special(SpawnCameraObject)
+        applymovement(OBJ_EVENT_ID_CAMERA, Movement_InteractFACEDOWN)
         waitmovement(0)
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_BKF_BossEvent_1)
+        applymovement(OBJ_EVENT_ID_SIR_OWEN, Movement_BKF_BossEvent_1)
+        applymovement(3, Movement_BKF_BossEvent_1_bk)
+        waitmovement(0)
+        namebox("Black Knight")
+        msgbox(format("Sir I caught these two ease dropping."))
+        closemessage
+
+
         applymovement(2, Movement_InteractFACELEFT)
-        msgbox(format("Now…"))
+        namebox("Sigmund")
+        msgbox(format("Hmph…"))
+        closemessage
         waitmovement(0)
         applymovement(2, Movement_InteractFACEUP)
         waitmovement(0)
+        namebox("Sigmund")
         msgbox(format("I will take my leave, and you will deal with this pest problem right here."))
         closemessage
         hidenamebox 
-
-        
-        
 
         //player walks with black knight guards
         applymovement(2, Movement_InteractFACELEFT)
@@ -457,14 +486,17 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
         applymovement(2, movement_WALK_DOWN_1_STEP)
         waitmovement(0)
+
+        applymovement(OBJ_EVENT_ID_SIR_OWEN, MOVEMENT_INTERACT_RIGHT)
         namebox("Sir Owen")
         msgbox(format("Stop right the-"))
         closemessage
         hidenamebox 
+        waitmovement(0)
         applymovement(2, MOVEMENT_DraynorManorCrypt_COUNT_3)
         playse(SE_WALL_HIT)
-        applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_DraynorManorCrypt_HAM_3)
-        waitmovement(OBJ_EVENT_ID_FOLLOWER)
+        applymovement(OBJ_EVENT_ID_SIR_OWEN, MOVEMENT_DraynorManorCrypt_HAM_3)
+        waitmovement(OBJ_EVENT_ID_SIR_OWEN)
         
         //pushes sir owen like vampire quest
         namebox("Sigmund")
@@ -482,10 +514,13 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         applymovement(1, Movement_BKF_BossEvent_3)
         applymovement(2, Movement_BKF_BossEvent_2)
         applymovement(4, Movement_BKF_BossEvent_5)
+        applymovement(3, Movement_BKF_BossEvent_5_bk1)
         waitmovement(0)
         //daquirus walks over.
         applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
-        applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_4)
+        applymovement(OBJ_EVENT_ID_SIR_OWEN, Movement_BKF_BossEvent_4)
+        applymovement(3, Movement_BKF_BossEvent_5_bk2)
+        waitmovement(0)
         namebox("Daquarius")
         msgbox(format("That guy is hard to deal with."))
         closemessage
@@ -502,7 +537,7 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         msgbox(format("In case you are wondering, my alliance stands, and I am true to my words.\pOn behalf of the Black Knights, we will end you two right here.\pNow Perish!"))
         closemessage
         hidenamebox 
-
+        waitmovement(0)
         trainerbattle_two_trainers(TRAINER_LORD_DAQUARIUS, msgbox(format("Daquarius: That darn Sigmund and his Saradominist ilk.\pLeaving me with the dirty work…")), TRAINER_BLACKKNIGHT_ELITE_1, msgbox(format("Elite Knight: I'm sorry sir.")))
 
         
@@ -535,6 +570,13 @@ movement Movement_BKF_BossEvent_1 {
     face_right
     step_end
 }
+movement Movement_BKF_BossEvent_1_bk {
+    delay_16
+    walk_up * 5
+    walk_right * 2
+    face_up
+    step_end
+}
 movement Movement_BKF_BossEvent_2 {
     walk_down
     walk_left
@@ -549,11 +591,23 @@ movement Movement_BKF_BossEvent_3 {
 movement Movement_BKF_BossEvent_4 {
     walk_slow_right
     walk_slow_up
+    face_right
     step_end
 }
 movement Movement_BKF_BossEvent_5 {
     walk_slow_down * 2
     walk_slow_left * 3
+    step_end
+}
+movement Movement_BKF_BossEvent_5_bk1 {
+    delay_16
+    walk_slow_up * 1
+    walk_slow_left * 1
+    step_end
+}
+movement Movement_BKF_BossEvent_5_bk2 {
+    walk_slow_left * 2
+    face_up
     step_end
 }
 movement Movement_BKF_BossEvent_6 {

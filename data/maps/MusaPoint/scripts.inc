@@ -933,42 +933,42 @@ movement_musapoint_camera_1:
 	walk_slow_diag_southwest
 	walk_slow_diag_southwest
 	walk_slow_diag_southwest
-	walk_left
+	walk_slow_left
 	step_end
 
 movement_musapoint_camera_2:
 	walk_slow_diag_southwest
 	walk_slow_diag_southwest
-	walk_left
-	walk_left
+	walk_slow_left
+	walk_slow_left
 	step_end
 
 movement_musapoint_camera_3:
 	walk_slow_diag_southwest
-	walk_left
-	walk_left
-	walk_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
 	step_end
 
 movement_musapoint_camera_4:
 	walk_slow_diag_northeast
 	walk_slow_diag_northeast
 	walk_slow_diag_northeast
-	walk_right
+	walk_slow_right
 	step_end
 
 movement_musapoint_camera_5:
 	walk_slow_diag_northeast
 	walk_slow_diag_northeast
-	walk_right
-	walk_right
+	walk_slow_right
+	walk_slow_right
 	step_end
 
 movement_musapoint_camera_6:
 	walk_slow_diag_northeast
-	walk_right
-	walk_right
-	walk_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
 	step_end
 
 movement_musapoint_luthas_monkey:
@@ -1226,9 +1226,10 @@ LUTHAS_QUEST_PART_5_7:
 	closemessage
 	hidenamebox
 	call EventScript_GiftMonster_Banana
+	namebox NPC_MUSA_POINT_Luthas_Text_0
 	msgbox LUTHAS_QUEST_PART_5_Text_3
 	setvar VAR_BANANA_BOAT_QUEST, 25
-	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_BANANA_BOAT, 3
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_BANANA_BOAT, 2
 	goto LUTHAS_QUEST_PART_5_1
 
 
@@ -3157,7 +3158,7 @@ FROGEEL_RIVAL_3_Text_0:
 
 FROGEEL_RIVAL_3_Text_1:
 	.string "You have to buy them?\p"
-	.string "{PAUSE 15}They don't belong to me?\p"
+	.string "They don't belong to me?\p"
 	.string "Listen here {PLAYER}.\n"
 	.string "In life a man has to do certain things\l"
 	.string "to become a frog monarch.\p"
@@ -3169,7 +3170,7 @@ FROGEEL_RIVAL_3_Text_1:
 	.string "Like this!$"
 
 FROGEEL_RIVAL_3_Text_2:
-	.string "Seeya!$"
+	.string "AAAA- Seeya!$"
 
 FROGEEL_RIVAL_3_Text_3:
 	.string "A\n"

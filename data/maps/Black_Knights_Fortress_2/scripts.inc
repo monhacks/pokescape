@@ -654,11 +654,11 @@ BLACK_KNIGHT_QUIZ_4_Text_0:
 	.string "Black Knight$"
 
 BLACK_KNIGHT_QUIZ_4_Text_1:
-	.string "Sorry. Increased security means you\n"
+	.string "Sorry, increased security means you\n"
 	.string "need to answer a question before\l"
 	.string "passing.\p"
 	.string "It'll be easy…\p"
-	.string "if you're a true Black Knight!$"
+	.string "If you're a true Black Knight!$"
 
 BLACK_KNIGHT_QUIZ_4_Text_2:
 	.string "The first Black Knights were allies of\n"
@@ -676,9 +676,9 @@ BLACK_KNIGHT_QUIZ_4_Text_4:
 	.string "I'm such a loser…$"
 
 BLACK_KNIGHT_QUIZ_4_Text_5:
-	.string "Correct\p"
-	.string "We were allies of King Raddallin. Not\n"
-	.string "Wallace.$"
+	.string "Correct!\p"
+	.string "We were allies of King Raddallin.\n"
+	.string "Not Wallace.$"
 
 BLACK_KNIGHT_QUIZ_4_Text_6:
 	.string "Phew, it's just you two.\p"
@@ -775,7 +775,7 @@ BLACK_KNIGHT_QUIZ_7_Text_4:
 	.string "Hail Daquarius.$"
 
 BLACK_KNIGHT_QUIZ_7_Text_5:
-	.string "Hail Daquarius.{PAUSE 15}\p"
+	.string "Hail Daquarius!\p"
 	.string "You may pass.$"
 
 BLACK_KNIGHT_QUIZ_7_Text_6:
@@ -788,7 +788,7 @@ BKFORT_2F_NPC_1_Text_0:
 
 BKFORT_2F_NPC_1_Text_1:
 	.string "Me need Draynor cabbageth.\p"
-	.string "{PAUSE 15}They tayth-tee, me hope thilly Black\n"
+	.string "They tayth-tee, me hope thilly Black\n"
 	.string "Knight not eat it or green lady be very\l"
 	.string "angry.$"
 
@@ -798,7 +798,7 @@ BKFORT_2F_NPC_2_Text_0:
 
 BKFORT_2F_NPC_3_Text_0:
 	.string "Can I ask you a question?\p"
-	.string "What do you think about puns?{PAUSE 15}\p"
+	.string "What do you think about puns?\p"
 	.string "Look, I hate the White Knights as much\n"
 	.string "as everyone else but I really do think\l"
 	.string "they nailed the whole naming thing.\p"
@@ -862,7 +862,7 @@ BKFORT_2F_NPC_11_Text_0:
 	.string "settle down.$"
 
 BKFORT_2F_NPC_12_Text_0:
-	.string "Ughhhhhh\p"
+	.string "Ughhhhhh…\p"
 	.string "I was so hungry I snuck into the\n"
 	.string "kitchen and ate a whole cabbage!\p"
 	.string "But now I feel really sick…$"
@@ -909,7 +909,7 @@ BKFORT_2F_NPC_19_Text_0:
 	.string "GIM Frankie$"
 
 BKFORT_2F_NPC_19_Text_1:
-	.string "Hold on…{PAUSE 15}\p"
+	.string "Hold on…{PAUSE 15}…\p"
 	.string "This isn't White Knight's castle.\p"
 	.string "Drat!\p"
 	.string "Wrong quest guide…$"
@@ -940,4 +940,4 @@ NPC_ZAMOHAWK_Text_0:
 	.string "Zamohawk$"
 
 NPC_ZAMOHAWK_Text_1:
-	.string "Kee-eeeee-arr$"
+	.string "Kee-eeeee-arr…$"

@@ -134,7 +134,7 @@ script BKFORT_3F_NPC_3
     lock
     faceplayer
     namebox ("Sir Gawain")
-    msgbox(format("For the last time…\pI AM NOT A WHITE KNIGHT!\pI AM A KNIGHT OF THE ROUND TABLE!\p{PAUSE 15}Very well, the King will save me…"))
+    msgbox(format("For the last time…\pI AM NOT A WHITE KNIGHT!\pI AM A KNIGHT OF THE ROUND TABLE!\p…{PAUSE 15}…{PAUSE 15}…"))
     closemessage
     hidenamebox
     release
@@ -170,7 +170,8 @@ script BKFORT_3F_NPC_6
     lock
     faceplayer
     namebox ("Goebie")
-    msgbox(format("The airut invaded our planet and enslaved our people.\pI came to your world for help, but the people here weren't as friendly as I'd hoped.\pWe aren't strong enough to fight back on our own…"))
+    msgbox(format("A rift opened in our homelands, a few of us were sucked in.\pWhen we came to some of you pink and black primates bundled us away."))
+    //msgbox(format("The airut invaded our planet and enslaved our people.\pI came to your world for help, but the people here weren't as friendly as I'd hoped.\pWe aren't strong enough to fight back on our own…"))
     closemessage
     hidenamebox
     release
@@ -190,8 +191,8 @@ script BKFORT_3F_NPC_8
 {
     lock
     faceplayer
-    namebox ("Skeleton")
-    msgbox(format("The skeleton stares at you.\pIt can see you looking at the item behind it, but it clearly has no intention of handing it over."))
+    //namebox ("Skeleton")
+    msgbox(format("The skeleton stares at you from behind the bars."))
     closemessage
     hidenamebox
     release
@@ -214,7 +215,7 @@ script BKFORT_3F_NPC_10
 {
     lock
     faceplayer
-    namebox ("Forgotten W.")
+    namebox ("Warrior")
     msgbox(format("This place is even more bleak than the dungeons back home."))
     closemessage
     hidenamebox

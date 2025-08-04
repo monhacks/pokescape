@@ -189,8 +189,7 @@ BKFORT_3F_NPC_7::
 BKFORT_3F_NPC_8::
 	lock
 	faceplayer
-	namebox BKFORT_3F_NPC_8_Text_0
-	msgbox BKFORT_3F_NPC_8_Text_1
+	msgbox BKFORT_3F_NPC_8_Text_0
 	closemessage
 	hidenamebox
 	release
@@ -419,7 +418,7 @@ BKFORT_3F_NPC_3_Text_1:
 	.string "For the last time…\p"
 	.string "I AM NOT A WHITE KNIGHT!\p"
 	.string "I AM A KNIGHT OF THE ROUND TABLE!\p"
-	.string "{PAUSE 15}Very well, the King will save me…$"
+	.string "…{PAUSE 15}…{PAUSE 15}…$"
 
 BKFORT_3F_NPC_4_Text_0:
 	.string "Hill Giant$"
@@ -456,13 +455,10 @@ BKFORT_3F_NPC_6_Text_0:
 	.string "Goebie$"
 
 BKFORT_3F_NPC_6_Text_1:
-	.string "The airut invaded our planet and\n"
-	.string "enslaved our people.\p"
-	.string "I came to your world for help, but the\n"
-	.string "people here weren't as friendly as I'd\l"
-	.string "hoped.\p"
-	.string "We aren't strong enough to fight back\n"
-	.string "on our own…$"
+	.string "A rift opened in our homelands, a few of\n"
+	.string "us were sucked in.\p"
+	.string "When we came to some of you pink and\n"
+	.string "black primates bundled us away.$"
 
 BKFORT_3F_NPC_7_Text_0:
 	.string "No matter how hard you try, you can't\n"
@@ -471,13 +467,8 @@ BKFORT_3F_NPC_7_Text_0:
 	.string "over and over and over again…$"
 
 BKFORT_3F_NPC_8_Text_0:
-	.string "Skeleton$"
-
-BKFORT_3F_NPC_8_Text_1:
-	.string "The skeleton stares at you.\p"
-	.string "It can see you looking at the item\n"
-	.string "behind it, but it clearly has no\l"
-	.string "intention of handing it over.$"
+	.string "The skeleton stares at you from behind\n"
+	.string "the bars.$"
 
 BKFORT_3F_NPC_9_Text_0:
 	.string "Worldbearer$"
@@ -487,7 +478,7 @@ BKFORT_3F_NPC_9_Text_1:
 	.string "Alnaasdzoh klesh yetsan.$"
 
 BKFORT_3F_NPC_10_Text_0:
-	.string "Forgotten W.$"
+	.string "Warrior$"
 
 BKFORT_3F_NPC_10_Text_1:
 	.string "This place is even more bleak than the\n"

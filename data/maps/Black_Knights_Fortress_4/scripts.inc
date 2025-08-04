@@ -374,6 +374,10 @@ BATTLE_BLACKKNIGHT_SIFT::
 TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	lockall
 	facefollower
+	setvar VAR_0x8004, OUTFIT_DEFAULT
+	special WearOutfit
+	releaseall
+	end
 	namebox TRIGGER_BLACK_KNIGHT_4F_1_Text_2
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_0
 	closemessage
@@ -384,6 +388,7 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, movement_BK_Fort_camera_1
 	waitmovement 0
+	special RemoveCameraObject
 	namebox BKFORT_4F_NPC_11_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_1
 	closemessage
@@ -421,79 +426,106 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	closemessage
 	hidenamebox
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_1
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_BKF_BossEvent_1
 	namebox BKFORT_4F_NPC_10_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_6
+	closemessage
+	setobjectxy 3, 16, 11
+	setobjectxyperm 3, 16, 11
+	setobjectxy 7, 16, 11
+	setobjectxyperm 7, 16, 11
+	addobject 3
+	addobject 7
+	clearflag FLAG_TEMP_2
+	setvar VAR_0x8004, OUTFIT_DEFAULT
+	special WearOutfit
+	delay 30
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Movement_InteractFACEDOWN
 	waitmovement 0
-	applymovement 2, Movement_InteractFACELEFT
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_BKF_BossEvent_1
+	applymovement 7, Movement_BKF_BossEvent_1
+	applymovement 3, Movement_BKF_BossEvent_1_bk
+	waitmovement 0
+	namebox BKFORT_4F_NPC_1_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_7
-	waitmovement 0
-	applymovement 2, Movement_InteractFACEUP
-	waitmovement 0
+	closemessage
+	applymovement 2, Movement_InteractFACELEFT
+	namebox BKFORT_4F_NPC_10_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_8
 	closemessage
-	hidenamebox
-	applymovement 2, Movement_InteractFACELEFT
+	waitmovement 0
+	applymovement 2, Movement_InteractFACEUP
 	waitmovement 0
 	namebox BKFORT_4F_NPC_10_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_9
 	closemessage
 	hidenamebox
-	applymovement 2, MOVEMENT_WALKLEFT
+	applymovement 2, Movement_InteractFACELEFT
 	waitmovement 0
 	namebox BKFORT_4F_NPC_10_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_10
 	closemessage
 	hidenamebox
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
-	applymovement 2, movement_WALK_DOWN_1_STEP
+	applymovement 2, MOVEMENT_WALKLEFT
 	waitmovement 0
-	namebox TRIGGER_BLACK_KNIGHT_4F_1_Text_2
+	namebox BKFORT_4F_NPC_10_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_11
 	closemessage
 	hidenamebox
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
+	applymovement 2, movement_WALK_DOWN_1_STEP
+	waitmovement 0
+	applymovement 7, MOVEMENT_INTERACT_RIGHT
+	namebox TRIGGER_BLACK_KNIGHT_4F_1_Text_2
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_12
+	closemessage
+	hidenamebox
+	waitmovement 0
 	applymovement 2, MOVEMENT_DraynorManorCrypt_COUNT_3
 	playse SE_WALL_HIT
-	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_DraynorManorCrypt_HAM_3
-	waitmovement OBJ_EVENT_ID_FOLLOWER
+	applymovement 7, MOVEMENT_DraynorManorCrypt_HAM_3
+	waitmovement 7
 	namebox BKFORT_4F_NPC_10_Text_0
-	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_12
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_13
 	closemessage
 	hidenamebox
 	applymovement 2, Movement_InteractFACEUP
 	waitmovement 0
 	namebox BKFORT_4F_NPC_10_Text_0
-	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_13
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_14
 	closemessage
 	hidenamebox
 	applymovement 1, Movement_BKF_BossEvent_3
 	applymovement 2, Movement_BKF_BossEvent_2
 	applymovement 4, Movement_BKF_BossEvent_5
+	applymovement 3, Movement_BKF_BossEvent_5_bk1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
-	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_4
+	applymovement 7, Movement_BKF_BossEvent_4
+	applymovement 3, Movement_BKF_BossEvent_5_bk2
+	waitmovement 0
 	namebox BKFORT_4F_NPC_11_Text_0
-	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_14
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_15
 	closemessage
 	hidenamebox
 	waitmovement 0
 	applymovement 17, Movement_BKF_BossEvent_6
 	namebox BKFORT_4F_NPC_11_Text_0
-	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_15
-	closemessage
-	hidenamebox
-	namebox BKFORT_4F_NPC_11_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_16
 	closemessage
 	hidenamebox
-	trainerbattle_two_trainers TRAINER_LORD_DAQUARIUS, TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_17, TRAINER_BLACKKNIGHT_ELITE_1, TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_18
+	namebox BKFORT_4F_NPC_11_Text_0
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_17
+	closemessage
+	hidenamebox
+	waitmovement 0
+	trainerbattle_two_trainers TRAINER_LORD_DAQUARIUS, TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_18, TRAINER_BLACKKNIGHT_ELITE_1, TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_19
 	namebox TRIGGER_BLACK_KNIGHT_4F_1_Text_2
-	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_19
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_20
 	closemessage
 	hidenamebox
 	namebox BKFORT_4F_NPC_11_Text_0
-	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_20
+	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_21
 	closemessage
 	hidenamebox
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11
@@ -520,6 +552,18 @@ Movement_BKF_BossEvent_1:
 	face_right
 	step_end
 
+Movement_BKF_BossEvent_1_bk:
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	face_up
+	step_end
+
 Movement_BKF_BossEvent_2:
 	walk_down
 	walk_left
@@ -540,6 +584,7 @@ Movement_BKF_BossEvent_3:
 Movement_BKF_BossEvent_4:
 	walk_slow_right
 	walk_slow_up
+	face_right
 	step_end
 
 Movement_BKF_BossEvent_5:
@@ -548,6 +593,18 @@ Movement_BKF_BossEvent_5:
 	walk_slow_left
 	walk_slow_left
 	walk_slow_left
+	step_end
+
+Movement_BKF_BossEvent_5_bk1:
+	delay_16
+	walk_slow_up
+	walk_slow_left
+	step_end
+
+Movement_BKF_BossEvent_5_bk2:
+	walk_slow_left
+	walk_slow_left
+	face_up
 	step_end
 
 Movement_BKF_BossEvent_6:
@@ -738,7 +795,7 @@ BKFORT_4F_NPC_5_Text_0:
 BKFORT_4F_NPC_6_Text_0:
 	.string "Back up will be here soon and they'll\n"
 	.string "stop you!\p"
-	.string "{PAUSE 15}They are coming, right..?$"
+	.string "They are coming, right{PAUSE 15}…?$"
 
 BKFORT_4F_NPC_10_Text_0:
 	.string "Sigmund$"
@@ -801,18 +858,18 @@ BKFORT_4F_BOOK_3_Text_1:
 	.string "Locate a tomb in the north, and use the\n"
 	.string "power within to raise an army of the\l"
 	.string "undead.\p"
-	.string "{PAUSE 15}Enslave some druids in Taverley, and\n"
+	.string "Enslave some druids in Taverley, and\n"
 	.string "use their magic to bolster our\l"
 	.string "monsters.\p"
-	.string "{PAUSE 15}Resume contact with the witch in the\n"
+	.string "Resume contact with the witch in the\n"
 	.string "west to capture a King Arthur and take\l"
 	.string "over Camelot.\p"
-	.string "{PAUSE 15}Prevent the White Knights from\n"
+	.string "Prevent the White Knights from\n"
 	.string "retrieving the Holy Grail.\p"
 	.string "Use the Humans Against Monsters\n"
 	.string "organisation to locate a monster of\l"
 	.string "immense power capable of…\p"
-	.string "{PAUSE 15}The rest of the page appears to have\n"
+	.string "The rest of the page appears to have\n"
 	.string "been hurriedly torn out.$"
 
 TRIGGER_BLACK_KNIGHT_4F_1_Text_0:
@@ -902,30 +959,33 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_6:
 	.string "time.$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_7:
-	.string "Now…$"
+	.string "Sir I caught these two ease dropping.$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_8:
+	.string "Hmph…$"
+
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_9:
 	.string "I will take my leave, and you will deal\n"
 	.string "with this pest problem right here.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_9:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_10:
 	.string "Running with your life barely intact\n"
 	.string "from a volcano, then struggling your\l"
 	.string "way here.\p"
 	.string "I would call you remarkable if you\n"
 	.string "weren't a monster sympathiser.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_10:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_11:
 	.string "These Zamorakian scum have their\n"
 	.string "purpose, and right now that purpose is\l"
 	.string "to end you.\p"
 	.string "Think you can stop us?\p"
 	.string "You cant, now begone.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_11:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_12:
 	.string "Stop right the-$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_12:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_13:
 	.string "You White Knights made your choice\n"
 	.string "when you used monsters to defend\l"
 	.string "yourself.\p"
@@ -934,42 +994,42 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_12:
 	.string "wannabe paladin up there deal with you\l"
 	.string "like a nice goody two shoes.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_13:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_14:
 	.string "It would be mercy for you to die here.\p"
 	.string "If I see you meddle in our plans again.\p"
 	.string "Well…\n"
 	.string "{PAUSE 15}Mercy wont be on the menu.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_14:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_15:
 	.string "That guy is hard to deal with.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_15:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_16:
 	.string "Sir Owen Sonde…{PAUSE 15}\n"
 	.string "and a sidekick?\p"
 	.string "Or are you his paige?\p"
 	.string "Ah but it matters not, lovely of you to\n"
 	.string "join me.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_16:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_17:
 	.string "In case you are wondering, my alliance\n"
 	.string "stands, and I am true to my words.\p"
 	.string "On behalf of the Black Knights, we will\n"
 	.string "end you two right here.\p"
 	.string "Now Perish!$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_17:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_18:
 	.string "Daquarius: That darn Sigmund and his\n"
 	.string "Saradominist ilk.\p"
 	.string "Leaving me with the dirty work…$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_18:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_19:
 	.string "Elite Knight: I'm sorry sir.$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_19:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_20:
 	.string "Tell us right now, where did that pink\n"
 	.string "moustache twirler leave to?!$"
 
-TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_20:
+TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_21:
 	.string "You have the gall to ask me?\p"
 	.string "Very well, I will tell you if you leave my\n"
 	.string "fortress.\p"
