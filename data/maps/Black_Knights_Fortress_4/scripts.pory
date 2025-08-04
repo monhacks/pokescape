@@ -11,6 +11,8 @@ mapscripts Black_Knights_Fortress_4_MapScripts {
 }
 
 script STORYMODE_STATE_BKFORT_4F {
+    setflag(FLAG_TEMP_2)
+    setflag(FLAG_TEMP_3)
     removeobject(18)
     setflag(FLAG_TEMP_F)
     removeobject(9)
@@ -371,10 +373,6 @@ script BATTLE_BLACKKNIGHT_SIFT
 script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         lockall
         facefollower
-        setvar(VAR_0x8004, OUTFIT_DEFAULT)
-        special(WearOutfit)
-        releaseall
-        end
         namebox("Sir Owen")
         msgbox(format("{PLAYER}, I can hear voices inside.\pLet's see if we can listen in and find out what they're up to without blowing our cover any further."))
         closemessage
@@ -384,8 +382,13 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         waitmovement(0)
         special(SpawnCameraObject)
         applymovement(OBJ_EVENT_ID_CAMERA, movement_BK_Fort_camera_1)
+        //fadescreenswapbuffers(FADE_TO_BLACK)
+        //setvar(VAR_0x8004, OUTFIT_DEFAULT)
+        //waitmovement(0)
+        //special(WearOutfit)
         waitmovement(0)
         special(RemoveCameraObject)
+        delay(60)
         namebox("Daquarius")
         msgbox(format("It is as my scout said Sigmund.\pThe complete mural is right there."))
         closemessage
@@ -433,30 +436,30 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
 
         setobjectxy(3, 16,11)
         setobjectxyperm(3, 16,11)
-        setobjectxy(OBJ_EVENT_ID_SIR_OWEN, 16,11)
-        setobjectxyperm(OBJ_EVENT_ID_SIR_OWEN, 16,11)
+        //setobjectxy(OBJ_EVENT_ID_SIR_OWEN, 16,11)
+        //setobjectxyperm(OBJ_EVENT_ID_SIR_OWEN, 16,11)
         addobject(3)
-        addobject(OBJ_EVENT_ID_SIR_OWEN)
+        //addobject(OBJ_EVENT_ID_SIR_OWEN)
         clearflag(FLAG_TEMP_2)
         
-        setvar(VAR_0x8004, OUTFIT_DEFAULT)
-        special(WearOutfit)
+        //setvar(VAR_0x8004, OUTFIT_DEFAULT)
+        //special(WearOutfit)
         delay(30)
         special(SpawnCameraObject)
         applymovement(OBJ_EVENT_ID_CAMERA, Movement_InteractFACEDOWN)
         waitmovement(0)
         applymovement(OBJ_EVENT_ID_PLAYER, Movement_BKF_BossEvent_1)
-        applymovement(OBJ_EVENT_ID_SIR_OWEN, Movement_BKF_BossEvent_1)
+        applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_1)
         applymovement(3, Movement_BKF_BossEvent_1_bk)
         waitmovement(0)
         namebox("Black Knight")
-        msgbox(format("Sir I caught these two ease dropping."))
+        msgbox(format("Sir I caught these two eavesdropping."))
         closemessage
 
 
         applymovement(2, Movement_InteractFACELEFT)
         namebox("Sigmund")
-        msgbox(format("Hmph…"))
+        msgbox(format("Hmph…\n{PAUSE 15}Such ridiculous disguises…"))
         closemessage
         waitmovement(0)
         applymovement(2, Movement_InteractFACEUP)
@@ -472,7 +475,7 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
 
         //faceplayer
         namebox("Sigmund")
-        msgbox(format("Running with your life barely intact from a volcano, then struggling your way here.\pI would call you remarkable if you weren't a monster sympathiser."))
+        msgbox(format("So, running with your life barely intact from a volcano, then struggling your way here.\pI would call you remarkable if you weren't a monster sympathiser."))
         closemessage
         hidenamebox 
         applymovement(2, MOVEMENT_WALKLEFT)
@@ -487,7 +490,7 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         applymovement(2, movement_WALK_DOWN_1_STEP)
         waitmovement(0)
 
-        applymovement(OBJ_EVENT_ID_SIR_OWEN, MOVEMENT_INTERACT_RIGHT)
+        applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_RIGHT)
         namebox("Sir Owen")
         msgbox(format("Stop right the-"))
         closemessage
@@ -495,8 +498,8 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         waitmovement(0)
         applymovement(2, MOVEMENT_DraynorManorCrypt_COUNT_3)
         playse(SE_WALL_HIT)
-        applymovement(OBJ_EVENT_ID_SIR_OWEN, MOVEMENT_DraynorManorCrypt_HAM_3)
-        waitmovement(OBJ_EVENT_ID_SIR_OWEN)
+        applymovement(OBJ_EVENT_ID_FOLLOWER, MOVEMENT_DraynorManorCrypt_HAM_3)
+        waitmovement(OBJ_EVENT_ID_FOLLOWER)
         
         //pushes sir owen like vampire quest
         namebox("Sigmund")
@@ -518,14 +521,25 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         waitmovement(0)
         //daquirus walks over.
         applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
-        applymovement(OBJ_EVENT_ID_SIR_OWEN, Movement_BKF_BossEvent_4)
+        applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_4)
         applymovement(3, Movement_BKF_BossEvent_5_bk2)
         waitmovement(0)
         namebox("Daquarius")
-        msgbox(format("That guy is hard to deal with."))
+        msgbox(format("That guy is hard to deal with.\pNow stop insulting us and take off those disguises!"))
         closemessage
         hidenamebox 
         waitmovement(0)
+        
+        applymovement(OBJ_EVENT_ID_FOLLOWER, movement_hideFollower)
+        setobjectxy(OBJ_EVENT_ID_SIR_OWEN, 15,4)
+        setobjectxyperm(OBJ_EVENT_ID_SIR_OWEN, 15,4)
+        addobject(OBJ_EVENT_ID_SIR_OWEN)
+        clearflag(FLAG_TEMP_3)
+        waitmovement(0)
+        setvar(VAR_0x8004, OUTFIT_DEFAULT)
+        special(WearOutfit)
+
+
         applymovement(17, Movement_BKF_BossEvent_6)
         //faces owen
         namebox("Daquarius")
@@ -560,6 +574,10 @@ script TRIGGER_BLACK_KNIGHT_4F_FINAL {
         end
 }
 
+movement movement_hideFollower {
+    set_invisible
+    step_end
+}
 
 movement movement_WALK_DOWN_1_STEP {
     walk_down
@@ -600,7 +618,7 @@ movement Movement_BKF_BossEvent_5 {
     step_end
 }
 movement Movement_BKF_BossEvent_5_bk1 {
-    delay_16
+    delay_16 * 2
     walk_slow_up * 1
     walk_slow_left * 1
     step_end

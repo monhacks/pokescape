@@ -462,7 +462,7 @@ script EVENT_ICE_MOUNTAIN_GUARDS {
 	setvar(VAR_0x8004, OUTFIT_GUARD)
 	special(WearOutfit)
 	delay(30)
-	//fadescreenswapbuffers(FADE_FROM_BLACK)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
 	
 	namebox ("Sir Owen")
 	msgbox(format("Right, this should get us through the gate.\pAlthough I do feel a bit bad for leaving them out in the cold…"))

@@ -5005,12 +5005,13 @@ void MakeoverMage(void)
 
 void WearOutfit(void)
 {
-    u16 outfitId = gSpecialVar_0x8004;
+    u32 outfitId = gSpecialVar_0x8004, gfxId;
+    struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+
     gSaveBlock2Ptr->currOutfitId = outfitId;
-    SetMainCallback2(CB2_ReturnToFieldContinueScript);
-    //CB2_ReturnToField();
-    //ScriptContext_Enable();
-    //DrawWholeMapView();
-    //SetMainCallback1(CB1_Overworld);
-    //SetMainCallback2(CB2_Overworld);
+    gfxId = GetPlayerAvatarGraphicsIdByOutfitStateIdAndGender(gSaveBlock2Ptr->currOutfitId,
+                                                              PLAYER_AVATAR_STATE_NORMAL,
+                                                              gSaveBlock2Ptr->playerGender);
+    ObjectEventSetGraphicsId(player, gfxId);
+    ObjectEventTurn(player, player->movementDirection);
 }

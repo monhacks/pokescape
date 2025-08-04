@@ -76,11 +76,23 @@ script BKF_GATE
         setmetatile(16, 6, METATILE_IndoorTowns3_JAILDOOR_OPEN_SIDE, 1)
         special(DrawWholeMapView) 
         //if sir owen is with you.
-        facefollower
-        namebox ("Sir Owen")
-        msgbox(format("They're joking right?\pMan, someone is gonna get fired.\pAnyways lets get back to our mission and try this again!"))
-        closemessage
-        hidenamebox
+        checkfollower
+        if (var(VAR_RESULT)) {
+            facefollower
+            namebox ("Sir Owen")
+            msgbox(format("They're joking right?\pMan, someone is gonna get fired.\pAnyways lets get back to our mission and try this again!"))
+            closemessage
+            hidenamebox
+            iswearingoutfit(OUTFIT_GUARD)
+            if (var(VAR_RESULT) == FALSE) {
+                namebox ("Sir Owen")
+                msgbox(format("Woah, wait a second!\pWe don't want to be caught again, here put this outfit back on."))
+                closemessage
+                hidenamebox
+                setvar(VAR_0x8004, OUTFIT_GUARD)
+			    special(WearOutfit)
+            }
+        }
         setvar(VAR_TEMP_C, 1)
         release
     }

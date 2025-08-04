@@ -88,14 +88,33 @@ BKF_GATE_2:
 	setmetatile 15, 6, METATILE_IndoorTowns3_BKF_FLOOR, 0
 	setmetatile 16, 6, METATILE_IndoorTowns3_JAILDOOR_OPEN_SIDE, 1
 	special DrawWholeMapView
+	checkfollower
+	compare VAR_RESULT, 0
+	goto_if_ne BKF_GATE_5
+BKF_GATE_4:
+	setvar VAR_TEMP_C, 1
+	release
+	goto BKF_GATE_1
+
+BKF_GATE_5:
 	facefollower
 	namebox BKF_GATE_Text_2
 	msgbox BKF_GATE_Text_3
 	closemessage
 	hidenamebox
-	setvar VAR_TEMP_C, 1
-	release
-	goto BKF_GATE_1
+	iswearingoutfit OUTFIT_GUARD
+	compare VAR_RESULT, FALSE
+	goto_if_eq BKF_GATE_7
+	goto BKF_GATE_4
+
+BKF_GATE_7:
+	namebox BKF_GATE_Text_2
+	msgbox BKF_GATE_Text_4
+	closemessage
+	hidenamebox
+	setvar VAR_0x8004, OUTFIT_GUARD
+	special WearOutfit
+	goto BKF_GATE_4
 
 
 BKF_Banker::
@@ -381,6 +400,11 @@ BKF_GATE_Text_3:
 	.string "Man, someone is gonna get fired.\p"
 	.string "Anyways lets get back to our mission\n"
 	.string "and try this again!$"
+
+BKF_GATE_Text_4:
+	.string "Woah, wait a second!\p"
+	.string "We don't want to be caught again, here\n"
+	.string "put this outfit back on.$"
 
 BKF_Banker_Text_0:
 	.string "Banker$"

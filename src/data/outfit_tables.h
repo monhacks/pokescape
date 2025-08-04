@@ -193,7 +193,7 @@ const struct Outfit gOutfits[OUTFIT_COUNT] =
         },
         .iconsRM = { sRegionMapPlayerIcon_Gfx_HAM_M, sRegionMapPlayerIcon_Gfx_HAM_F },
         .iconsFP = sFrontierPassPlayerIcons_RSBrendanMay_Gfx,
-        .hasExtraAnims = FALSE,
+        .hasExtraAnims = TRUE,
     },
 
     [OUTFIT_GUARD] = {

@@ -19,19 +19,22 @@ AlKharid_MapScripts_MAP_SCRIPT_ON_LOAD_1:
 
 
 ALKHARID_STATE::
+	setflag FLAG_TEMP_9
+	removeobject 12
 	removeobject 17
 	setflag FLAG_TEMP_10
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 220
 	goto_if_le ALKHARID_STATE_2
 ALKHARID_STATE_1:
-	setflag FLAG_TEMP_9
-	removeobject 12
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 210
 	goto_if_eq ALKHARID_STATE_5
 ALKHARID_STATE_4:
-	compare VAR_FROGEEL_RIVAL, 25
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
 	goto_if_eq ALKHARID_STATE_8
 ALKHARID_STATE_7:
+	compare VAR_FROGEEL_RIVAL, 25
+	goto_if_eq ALKHARID_STATE_11
+ALKHARID_STATE_10:
 	return
 
 ALKHARID_STATE_2:
@@ -45,9 +48,20 @@ ALKHARID_STATE_5:
 	goto ALKHARID_STATE_4
 
 ALKHARID_STATE_8:
+	clearflag FLAG_TEMP_9
+	addobject 12
+	setobjectxyperm 12, 30, 32
+	setobjectxyperm 14, 30, 31
+	setobjectxyperm 15, 31, 31
+	setobjectmovementtype 14, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype 15, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype 12, MOVEMENT_TYPE_FACE_UP
+	goto ALKHARID_STATE_7
+
+ALKHARID_STATE_11:
 	addobject 17
 	clearflag FLAG_TEMP_10
-	goto ALKHARID_STATE_7
+	goto ALKHARID_STATE_10
 
 
 ALKHARID_GNOMEGLIDER::
@@ -163,11 +177,18 @@ ALKHARID_NPC_7::
 ALKHARID_NPC_8::
 	faceplayer
 	namebox ALKHARID_NPC_4_Text_0
-	msgbox ALKHARID_NPC_8_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
+	goto_if_eq ALKHARID_NPC_8_2
+	msgbox ALKHARID_NPC_8_Text_1
+ALKHARID_NPC_8_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+ALKHARID_NPC_8_2:
+	msgbox ALKHARID_NPC_8_Text_0
+	goto ALKHARID_NPC_8_1
 
 
 ALKHARID_NPC_9::
@@ -211,7 +232,7 @@ ALKHARID_NPC_12::
 
 
 ALKHARID_NPC_13::
-	faceplayer
+	lock
 	namebox ALKHARID_NPC_13_Text_0
 	msgbox ALKHARID_NPC_13_Text_1
 	closemessage
@@ -658,11 +679,7 @@ TRIGGER_ALKHARID_HAM_EVENT_2_4:
 	compare VAR_TEMP_1, 31
 	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_2_10
 TRIGGER_ALKHARID_HAM_EVENT_2_8:
-	applymovement 14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2
-	applymovement 15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2
-	waitmovement 12
-	removeobject 12
-	setflag FLAG_TEMP_9
+	waitmovement 0
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 215
 	setvar VAR_TEMP_A, 2
 	release
@@ -683,13 +700,17 @@ TRIGGER_ALKHARID_HAM_EVENT_2_5:
 	goto TRIGGER_ALKHARID_HAM_EVENT_2_4
 
 TRIGGER_ALKHARID_HAM_EVENT_2_9:
-	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_3
+	applymovement 12, Movement_InteractFACEUP
 	goto TRIGGER_ALKHARID_HAM_EVENT_2_8
 
 TRIGGER_ALKHARID_HAM_EVENT_2_10:
-	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_4
+	applymovement 12, MOVEMENT_ALKHARID_PALACE_OZAN_walkup
 	goto TRIGGER_ALKHARID_HAM_EVENT_2_8
 
+
+MOVEMENT_ALKHARID_PALACE_OZAN_walkup:
+	walk_up
+	step_end
 
 movement_walk_slow_down_2:
 	walk_slow_down
@@ -971,6 +992,11 @@ ALKHARID_NPC_7_Text_0:
 	.string "to lose to the prince?$"
 
 ALKHARID_NPC_8_Text_0:
+	.string "If Ozan's reputation was better then\n"
+	.string "maybe we would believe you.\p"
+	.string "But we don't so go away.$"
+
+ALKHARID_NPC_8_Text_1:
 	.string "This is Al Kharid castle, would you like\n"
 	.string "to challenge the prince?$"
 
@@ -1011,17 +1037,7 @@ ALKHARID_NPC_13_Text_0:
 	.string "Ozan$"
 
 ALKHARID_NPC_13_Text_1:
-	.string "Who am I?\p"
-	.string "Only the most famous hero ever born in\n"
-	.string "Al Kharid!\p"
-	.string "I helped aid in the defence of\n"
-	.string "Burthorpe from the troll invasion.\p"
-	.string "I helped rescue the druid master\n"
-	.string "Pikkupstix from the depths of\l"
-	.string "Daemonheim!\p"
-	.string "…{PAUSE 32}\p"
-	.string "What do you mean you've never heard of\n"
-	.string "me?$"
+	.string "I might have to find another way in…$"
 
 ALKHARID_NPC_14_Text_0:
 	.string "I'm guarding the bank, so don't think\n"

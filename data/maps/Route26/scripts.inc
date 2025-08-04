@@ -16,8 +16,8 @@ Route26_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 POST_WARP_BKF_EVENT::
-	applymovement 16, Movement_InteractFACEUP
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	applymovement 16, Movement_InteractFACEUP
 	waitmovement 0
 	delay 90
 	applymovement 14, movement_BlackKnights_POST_WARP_BKF_EVENT

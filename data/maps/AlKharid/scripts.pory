@@ -19,7 +19,8 @@ MAP_SCRIPT_ON_LOAD { //ON LOAD FOR MAP TILES
 
 script ALKHARID_STATE {
     //setmetatile(13, 16, METATILE_AlKharid_OPENED_DOOR, 0) //Openworld Player House door.
-
+    setflag(FLAG_TEMP_9)
+    removeobject(12)
 	removeobject(17)
 	setflag(FLAG_TEMP_10) //Angrenouille
 
@@ -27,21 +28,25 @@ script ALKHARID_STATE {
         setvar(VAR_TEMP_B, 1) // Block Gym Access
     }
     
-
-
-    setflag(FLAG_TEMP_9)
-    removeobject(12)
-
+    
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 210) {
         clearflag(FLAG_TEMP_9)
         addobject(12)
 		setvar(VAR_TEMP_A, 1) //Enables Ham Event At palace.
-        
 	}
-
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) {
+        clearflag(FLAG_TEMP_9)
+        addobject(12)
+        setobjectxyperm(12, 30, 32)
+        setobjectxyperm(14, 30, 31)
+        setobjectxyperm(15, 31, 31)
+        setobjectmovementtype(14, MOVEMENT_TYPE_FACE_DOWN)
+        setobjectmovementtype(15, MOVEMENT_TYPE_FACE_DOWN)
+        setobjectmovementtype(12, MOVEMENT_TYPE_FACE_UP)
+    }
     if ((var(VAR_FROGEEL_RIVAL) == 25)) {
-    addobject(17)
-    clearflag(FLAG_TEMP_10) //Angrenouille
+        addobject(17)
+        clearflag(FLAG_TEMP_10) //Angrenouille
     }
 	return
 }
@@ -163,7 +168,12 @@ script ALKHARID_NPC_7
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("This is Al Kharid castle, would you like to lose to the prince?"))
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) {
+        msgbox(format("If Ozan's reputation was better then maybe we would believe you.\pBut we don't so go away."))
+    }
+    else {
+        msgbox(format("This is Al Kharid castle, would you like to lose to the prince?"))
+    }
     closemessage
     hidenamebox
     release
@@ -174,7 +184,13 @@ script ALKHARID_NPC_8
 {
     faceplayer
     namebox ("Guard")
-    msgbox(format("This is Al Kharid castle, would you like to challenge the prince?"))
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 215) {
+        msgbox(format("If Ozan's reputation was better then maybe we would believe you.\pBut we don't so go away."))
+    }
+    else {
+        msgbox(format("This is Al Kharid castle, would you like to challenge the prince?"))
+    }
+    
     closemessage
     hidenamebox
     release
@@ -227,9 +243,9 @@ script ALKHARID_NPC_12
 
 script ALKHARID_NPC_13
 {
-    faceplayer
+    lock
     namebox ("Ozan")
-    msgbox(format("Who am I?\pOnly the most famous hero ever born in Al Kharid!\pI helped aid in the defence of Burthorpe from the troll invasion.\pI helped rescue the druid master Pikkupstix from the depths of Daemonheim!\p…{PAUSE 32}\pWhat do you mean you've never heard of me?"))
+    msgbox(format("I might have to find another way in…"))
     closemessage
     hidenamebox
     release
@@ -691,23 +707,31 @@ script TRIGGER_ALKHARID_HAM_EVENT_2
     hidenamebox
     getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
     if (var(VAR_TEMP_1) == 30){
-        applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_3)         //Ozan walks around you depending on what tile you're on
+        applymovement(12, Movement_InteractFACEUP)
+    //    applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_3)         //Ozan walks around you depending on what tile you're on
     } 
     elif (var(VAR_TEMP_1) == 31){
-        applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_4)         //Ozan walks around you depending on what tile you're on
+        applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_walkup)
+    //    applymovement(12, MOVEMENT_ALKHARID_PALACE_OZAN_4)         //Ozan walks around you depending on what tile you're on
     }
-    applymovement(14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2)    //Left guard moves back into original position
-    applymovement(15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2)   //Right guard moves back into original position
-    waitmovement(12)
+    //applymovement(14, MOVEMENT_ALKHARID_PALACE_GUARD_LEFT_2)    //Left guard moves back into original position
+    //applymovement(15, MOVEMENT_ALKHARID_PALACE_GUARD_RIGHT_2)   //Right guard moves back into original position
+    //waitmovement(12)
     //ozan walks away
-    
+    //applymovement(12, Movement_InteractFACEUP)
+    waitmovement(0)
 
-    removeobject(12)
-    setflag(FLAG_TEMP_9)
+    //removeobject(12)
+    //setflag(FLAG_TEMP_9)
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 215)
 	setvar(VAR_TEMP_A, 2)
     release
     end
+}
+
+movement MOVEMENT_ALKHARID_PALACE_OZAN_walkup {
+    walk_up
+    step_end
 }
 
 movement movement_walk_slow_down_2 {

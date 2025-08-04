@@ -428,6 +428,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction
         setvar(VAR_0x8004, OUTFIT_HAM)
         special(WearOutfit)
         delay(20)
+		fadescreenswapbuffers(FADE_FROM_BLACK)
         namebox("Zanik")
         msgbox(format("Perfect let us venture below!"))
         closemessage
@@ -571,6 +572,7 @@ script SetFollower_Zanik {
 		}
         setvar(VAR_0x8004, OUTFIT_HAM)
         special(WearOutfit)
+		fadescreenswapbuffers(FADE_FROM_BLACK)
         delay(20)
         namebox("Zanik")
         msgbox(format("Perfect let us venture below!"))

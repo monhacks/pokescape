@@ -278,7 +278,8 @@ void ItemUseOutOfBattle_Bike(u8 taskId)
         DisplayCannotDismountBikeMessage(taskId, tUsingRegisteredKeyItem);
     else
     {
-        if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+        //if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+        if (FlagGet(FLAG_PARTNER_BATTLE)) {
             QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
         }
         else if (gOutfits[gSaveBlock2Ptr->currOutfitId].hasExtraAnims == FALSE) {
@@ -1619,7 +1620,8 @@ static void Task_OpenRegisteredFlyTool(u8 taskId)
 
 void ItemUseOutOfBattle_FlyTool(u8 taskId)
 {
-    if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+    //if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+    if (FlagGet(FLAG_PARTNER_BATTLE)) {
         QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
     else if (MenuHelpers_IsLinkActive() == TRUE)
@@ -1646,7 +1648,8 @@ static void ItemUseOnFieldCB_SurfTool(u8 taskId)
 
 void ItemUseOutOfBattle_SurfTool(u8 taskId)
 {
-    if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+    //if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+    if (FlagGet(FLAG_PARTNER_BATTLE)) {
         QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
     else if (gOutfits[gSaveBlock2Ptr->currOutfitId].hasExtraAnims == FALSE) {
@@ -1796,7 +1799,8 @@ static void AskPlayerTeleportTool(u8 taskId)
 
 void ItemUseOutOfBattle_TeleportTool(u8 taskId)
 {
-    if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+    //if (CheckFollowerFlag(FOLLOWER_FLAG_QUEST)) {
+    if (FlagGet(FLAG_PARTNER_BATTLE)) {
         QuestFollowerCannotDoThatMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
     else if (CanUseDigOrEscapeRopeOnCurMap() == TRUE)

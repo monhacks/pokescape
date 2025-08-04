@@ -13,6 +13,8 @@ Black_Knights_Fortress_4_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 
 STORYMODE_STATE_BKFORT_4F::
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
 	removeobject 18
 	setflag FLAG_TEMP_F
 	removeobject 9
@@ -374,10 +376,6 @@ BATTLE_BLACKKNIGHT_SIFT::
 TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	lockall
 	facefollower
-	setvar VAR_0x8004, OUTFIT_DEFAULT
-	special WearOutfit
-	releaseall
-	end
 	namebox TRIGGER_BLACK_KNIGHT_4F_1_Text_2
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_0
 	closemessage
@@ -389,6 +387,7 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	applymovement OBJ_EVENT_ID_CAMERA, movement_BK_Fort_camera_1
 	waitmovement 0
 	special RemoveCameraObject
+	delay 60
 	namebox BKFORT_4F_NPC_11_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_1
 	closemessage
@@ -431,19 +430,14 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	closemessage
 	setobjectxy 3, 16, 11
 	setobjectxyperm 3, 16, 11
-	setobjectxy 7, 16, 11
-	setobjectxyperm 7, 16, 11
 	addobject 3
-	addobject 7
 	clearflag FLAG_TEMP_2
-	setvar VAR_0x8004, OUTFIT_DEFAULT
-	special WearOutfit
 	delay 30
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Movement_InteractFACEDOWN
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_BKF_BossEvent_1
-	applymovement 7, Movement_BKF_BossEvent_1
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_1
 	applymovement 3, Movement_BKF_BossEvent_1_bk
 	waitmovement 0
 	namebox BKFORT_4F_NPC_1_Text_0
@@ -475,7 +469,7 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
 	applymovement 2, movement_WALK_DOWN_1_STEP
 	waitmovement 0
-	applymovement 7, MOVEMENT_INTERACT_RIGHT
+	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_INTERACT_RIGHT
 	namebox TRIGGER_BLACK_KNIGHT_4F_1_Text_2
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_12
 	closemessage
@@ -483,8 +477,8 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	waitmovement 0
 	applymovement 2, MOVEMENT_DraynorManorCrypt_COUNT_3
 	playse SE_WALL_HIT
-	applymovement 7, MOVEMENT_DraynorManorCrypt_HAM_3
-	waitmovement 7
+	applymovement OBJ_EVENT_ID_FOLLOWER, MOVEMENT_DraynorManorCrypt_HAM_3
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	namebox BKFORT_4F_NPC_10_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_13
 	closemessage
@@ -501,7 +495,7 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	applymovement 3, Movement_BKF_BossEvent_5_bk1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
-	applymovement 7, Movement_BKF_BossEvent_4
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_BKF_BossEvent_4
 	applymovement 3, Movement_BKF_BossEvent_5_bk2
 	waitmovement 0
 	namebox BKFORT_4F_NPC_11_Text_0
@@ -509,6 +503,14 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	closemessage
 	hidenamebox
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_FOLLOWER, movement_hideFollower
+	setobjectxy 7, 15, 4
+	setobjectxyperm 7, 15, 4
+	addobject 7
+	clearflag FLAG_TEMP_3
+	waitmovement 0
+	setvar VAR_0x8004, OUTFIT_DEFAULT
+	special WearOutfit
 	applymovement 17, Movement_BKF_BossEvent_6
 	namebox BKFORT_4F_NPC_11_Text_0
 	msgbox TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_16
@@ -537,6 +539,10 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL::
 	releaseall
 	end
 
+
+movement_hideFollower:
+	set_invisible
+	step_end
 
 movement_WALK_DOWN_1_STEP:
 	walk_down
@@ -596,6 +602,7 @@ Movement_BKF_BossEvent_5:
 	step_end
 
 Movement_BKF_BossEvent_5_bk1:
+	delay_16
 	delay_16
 	walk_slow_up
 	walk_slow_left
@@ -959,17 +966,18 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_6:
 	.string "time.$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_7:
-	.string "Sir I caught these two ease dropping.$"
+	.string "Sir I caught these two eavesdropping.$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_8:
-	.string "Hmph…$"
+	.string "Hmph…\n"
+	.string "{PAUSE 15}Such ridiculous disguises…$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_9:
 	.string "I will take my leave, and you will deal\n"
 	.string "with this pest problem right here.$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_10:
-	.string "Running with your life barely intact\n"
+	.string "So, running with your life barely intact\n"
 	.string "from a volcano, then struggling your\l"
 	.string "way here.\p"
 	.string "I would call you remarkable if you\n"
@@ -1001,7 +1009,9 @@ TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_14:
 	.string "{PAUSE 15}Mercy wont be on the menu.$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_15:
-	.string "That guy is hard to deal with.$"
+	.string "That guy is hard to deal with.\p"
+	.string "Now stop insulting us and take off\n"
+	.string "those disguises!$"
 
 TRIGGER_BLACK_KNIGHT_4F_FINAL_Text_16:
 	.string "Sir Owen Sonde…{PAUSE 15}\n"
