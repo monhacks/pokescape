@@ -488,6 +488,7 @@ EVENT_ICE_MOUNTAIN_GUARDS::
 	setvar VAR_0x8004, OUTFIT_GUARD
 	special WearOutfit
 	delay 30
+	fadescreenswapbuffers FADE_FROM_BLACK
 	namebox TRIGGER_BLACK_KNIGHTS_FORTRESS_ENTRY_Text_6
 	msgbox EVENT_ICE_MOUNTAIN_GUARDS_Text_7
 	closemessage

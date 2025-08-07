@@ -388,7 +388,9 @@ void DoWhiteOut(void)
         || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(HAM_HIDEOUT_B2F)
         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(HAM_HIDEOUT_B2F))
         || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(HAM_HIDEOUT_B3F)
-        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(HAM_HIDEOUT_B3F))) {
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(HAM_HIDEOUT_B3F))
+        || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(HAM_HIDEOUT_B4F)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(HAM_HIDEOUT_B4F))) {
             SetLastHealLocationWarp(HEAL_LOCATION_HAM_JAIL);
             FlagSet(FLAG_HAM_JAILED);
     }

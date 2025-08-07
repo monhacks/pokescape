@@ -413,6 +413,7 @@ TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_17:
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
 	delay 20
+	fadescreenswapbuffers FADE_FROM_BLACK
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11
 	closemessage
@@ -615,6 +616,7 @@ SetFollower_Zanik_2:
 SetFollower_Zanik_8:
 	setvar VAR_0x8004, OUTFIT_HAM
 	special WearOutfit
+	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 20
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_4_Zanik_first_interaction_Text_11

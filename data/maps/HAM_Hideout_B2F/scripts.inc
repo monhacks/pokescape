@@ -664,18 +664,6 @@ TRIGGER_HAMHIDEOUT_JOHANHUS_3:
 	goto TRIGGER_HAMHIDEOUT_JOHANHUS_1
 
 
-movement_HAM_Hideout_finale_Player_Left_1:
-	walk_up
-	walk_right
-	face_up
-	step_end
-
-movement_HAM_Hideout_finale_Player_Right_1:
-	walk_up
-	walk_left
-	face_up
-	step_end
-
 movement_HAM_Hideout_finale_ZANIK_1:
 	walk_left
 	walk_up

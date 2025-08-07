@@ -1,1 +1,451 @@
-mapscripts HAM_Hideout_B4F_MapScripts {}
+const OBJ_EVENT_ID_ZANIK = 5
+const OBJ_EVENT_ID_SIGMUND = 1
+const OBJ_EVENT_ID_JOHANHUS = 2
+
+mapscripts HAM_Hideout_B4F_MapScripts {
+
+    MAP_SCRIPT_ON_TRANSITION { 
+        call(HAM_HIDEOUT_B4F_STATE)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_POKESCAPE_STORYMODE_PROGRESS, 245: STORYMODE_HAMHIDEOUT_BOSS_ROOM
+    ]
+}
+
+script HAM_HIDEOUT_B4F_STATE {
+    setflag(FLAG_TEMP_A)    //Grunts
+    setflag(FLAG_TEMP_B)    //Sigmund
+    setflag(FLAG_TEMP_C)    //Johanhus
+    setflag(FLAG_TEMP_D)    //Zanik
+    if(var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 245) {
+        clearflag(FLAG_TEMP_B)    //Sigmund
+        clearflag(FLAG_TEMP_C)    //Johanhus
+        clearflag(FLAG_TEMP_D)    //Zanik
+    }
+    return
+}
+
+
+
+
+//Should do a fadescreen walk into boss room? (start with the camera focused on sigmund and johanhus)
+
+script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
+    lockall
+    call(FOLLOWER_REMOVE)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, movement_camera_setup_hamevent)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_JOHANHUS, MOVEMENT_INTERACT_DOWN)
+    namebox ("Johanhus")
+    msgbox(format("So the capture was successful?\pExcellent, once we hand the prince over to Lady Keli, we'll be one step closer."))
+    applymovement(OBJ_EVENT_ID_SIGMUND, MOVEMENT_INTERACT_UP)
+    namebox ("Sigmund")
+    msgbox(format("Good, then with Patty and Babe stationed in Varrock, I shall make my way to the Wilderness to make the final preparations as planned."))
+    applymovement(OBJ_EVENT_ID_JOHANHUS, MOVEMENT_INTERACT_DOWN)
+    namebox ("Johanhus")
+    msgbox(format("And you are sure this will save the world of the scourge that are monsters Sigmund?"))
+    applymovement(OBJ_EVENT_ID_SIGMUND, MOVEMENT_INTERACT_UP)
+    namebox ("Sigmund")
+    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\pAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\nThe world will be at peace.{PAUSE 30}\lJust like we have always wanted…"))
+    hidenamebox
+    closemessage
+    //Zanik and the player step into the room.
+    applymovement(OBJ_EVENT_ID_CAMERA, movement_camera_movedown_hamevent)
+    applymovement(OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_Player_Left_1)   
+    applymovement(OBJ_EVENT_ID_ZANIK, movement_HAM_Hideout_finale_Player_Right_1)
+    waitmovement(0)
+    namebox ("Zanik")
+    msgbox(format("Not if we have anything to say with this!"))
+    hidenamebox
+    closemessage
+    
+    //Question mark, johanhhus and sigmund turn to face them.
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_SIGMUND, MOVEMENT_QUESTIONMARK_FACEDOWN)
+    applymovement(OBJ_EVENT_ID_JOHANHUS, MOVEMENT_QUESTIONMARK_FACEDOWN)
+    waitmovement(0)
+    delay(90)
+    namebox ("Sigmund")
+    msgbox(format("Looks like some monsters just entered a den they shouldn't have, Johanhus."))
+    namebox ("Johanhus")
+    msgbox(format("Indeed, noisy little things aren't they.\pWhat shall we do?"))
+    hidenamebox
+    closemessage
+    //Guards rush into the room surrounding Zanik and the player.
+    clearflag(FLAG_TEMP_A)
+    
+    //probably set invisable first
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)   
+    applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACEDOWN)
+    addobject(6)
+    applymovement(6, movement_surroundplayer_6)
+    delay(16)
+    addobject(7)
+    applymovement(7, movement_surroundplayer_7)
+    delay(16)
+    addobject(8)
+    applymovement(8, movement_surroundplayer_8)
+    delay(16)
+    addobject(9)
+    applymovement(9, movement_surroundplayer_9)
+    delay(16)
+    addobject(10)
+    applymovement(10, movement_surroundplayer_10)
+    delay(16)
+    addobject(11)
+    applymovement(11, movement_surroundplayer_11)
+    delay(16)
+    addobject(12)
+    applymovement(12, movement_surroundplayer_12)
+    delay(16)
+    addobject(13)
+    applymovement(13, movement_surroundplayer_13)
+    applymovement(OBJ_EVENT_ID_PLAYER, movement_surroundplayer_panic_player)   
+    applymovement(OBJ_EVENT_ID_ZANIK, movement_surroundplayer_panic_zanik)
+    waitmovement(13)
+    delay(60)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACELEFT)   
+    applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACERIGHT)
+    waitmovement(0)
+    namebox ("Zanik")
+    msgbox(format("Shoot there's so many of them!\p{PLAYER}, I will take care of these grunts, while you handle those guys."))
+    hidenamebox
+    closemessage
+    //Player approaches Sigmund and johanhus
+    applymovement(OBJ_EVENT_ID_PLAYER, movement_playerapproaches_sigmund)
+    applymovement(OBJ_EVENT_ID_ZANIK, movement_zanikapproaches_grunts)
+    applymovement(6, movement_surroundzanik_6)
+    applymovement(7, movement_surroundzanik_7)
+    applymovement(8, movement_surroundzanik_8)
+    applymovement(9, movement_surroundzanik_9)
+    applymovement(10, movement_surroundzanik_10)
+    applymovement(11, movement_surroundzanik_11)
+    applymovement(12, movement_surroundzanik_12)
+    applymovement(13, movement_surroundzanik_13)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_SIGMUND, MOVEMENT_INTERACT_DOWN)
+    applymovement(OBJ_EVENT_ID_JOHANHUS, movement_Johanhus_walkover_toPlayer)
+    namebox ("Sigmund")
+    msgbox(format("I warned you what would happen if we were to meet again."))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_JOHANHUS, MOVEMENT_INTERACT_LEFT)
+    applymovement(OBJ_EVENT_ID_SIGMUND, Movement_InteractFACERIGHT)
+    namebox ("Johanhus")
+    msgbox(format("Hang on Sigmund, I'll handle this, you've got places to be."))
+    hidenamebox
+    closemessage
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_SIGMUND, Movement_InteractFACEDOWN)
+    namebox ("Sigmund")
+    msgbox(format("Very well dear friend, I guess this is goodbye to you aswell pest."))
+    hidenamebox
+    closemessage
+    //Sigmund leaves the room
+    applymovement(OBJ_EVENT_ID_JOHANHUS, movement_HAM_Hideout_Johanhus_approachplayer)
+    applymovement(OBJ_EVENT_ID_SIGMUND, movement_HAM_Hideout_Sigmund_exit)
+    waitmovement(OBJ_EVENT_ID_JOHANHUS)
+    delay(30)
+    namebox ("Johanhus")
+    msgbox(format("Look, I get it.\pYou believe you are righteous.\pYou believe you are correct.\pYou believe in yourself and that what you are doing is the good thing to do.\pAnd as do I.\pAnd so as leader of Humans Against Monsters, on behalf of the world.\pI will smite you…"))
+    hidenamebox
+    closemessage
+    trainerbattle_no_intro(TRAINER_HAM_HIDEOUT_JOHANHUS, format("NO!\pThis cannot be!"))
+    namebox ("Johanhus")
+    msgbox(format("So it seems my power is insignificant to yours.\pI guess it seems weird to use the power of monsters to fight when we ourselves use monsters?\pBut what choice do we have?\pYou and everyone else changed the rules.\pWhat is a dagger to a dragon?\pThe world is changing.\pAnd we adapted.\pBut this is not the world we wish to live in."))
+    hidenamebox
+    closemessage
+//  Johanhus contemplates
+    namebox ("Johanhus")
+    msgbox(format("I will submit just this once.\pOut of goodness of my heart, you can even let the little gremlin over there live as well.\pAs at the end of the day it doesn't matter.\pNone of this matters.\pIf Sigmund is right, you can not stop him.\pAnd he will make a world free of the monsters that once caused us so much pain."))
+    hidenamebox
+    closemessage
+    namebox ("Zanik")
+    msgbox(format("Quick while he is monologuing {PLAYER}, lets get out of here!"))
+    hidenamebox
+    closemessage
+    playse(SE_FLEE)
+    //player and zanik flee
+    subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11)
+    addvar(VAR_GAMEMODE_LEVEL_CAP, 5) //Level 55 cap.             
+    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)                 
+    setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
+    call(FOLLOWER_REMOVE)
+    //warp outside to Lumbridge Forest
+    warp(MAP_LUMBRIDGE_FOREST, 28, 5)
+    waitstate
+    releaseall
+    end
+
+
+
+
+    addobject(35)
+    clearflag(FLAG_TEMP_1C)
+    applymovement (35, movement_HAM_Hideout_finale_walk_up) //Prince Ali; walk up beside player
+    waitmovement(0)
+    applymovement (35, movement_HAM_Hideout_finale_walk_up) //Prince Ali walk up with player/Zanik
+    applymovement (OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up) //Player; walk up with Zanik/Prince Ali
+    applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up) //Zanik; walk up player/Prince Ali
+    waitmovement(0)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2)
+    waitmovement(0)
+    
+    applymovement(36, movement_HAM_Hideout_finale_reaction_1) 
+    applymovement(37, movement_HAM_Hideout_finale_reaction_2) 
+    applymovement(38, movement_HAM_Hideout_finale_reaction_1) 
+    applymovement(39, movement_HAM_Hideout_finale_reaction_3) 
+    applymovement(40, movement_HAM_Hideout_finale_reaction_2) 
+    applymovement(41, movement_HAM_Hideout_finale_reaction_1) 
+    applymovement(42, movement_HAM_Hideout_finale_reaction_3)
+    applymovement(21, MOVEMENT_EXCLAMATIONMARK)
+    waitmovement(0)
+    namebox ("Johanhus")
+    msgbox(format(""))
+    applymovement(23, movement_HAM_Hideout_finale_reaction_1)
+    waitmovement(0)
+    namebox ("Sigmund")
+    msgbox(format(""))
+    namebox ("Johanhus")
+    msgbox(format("Indeed. What shall we do?"))
+    namebox ("Sigmund")
+    msgbox(format("I will head to the wilderness as planned.\pI will station Patty and Babe in Varrock for the thing we discussed.\pAs for these guys and the prince.\pLet us show them what happens to monster sympathisers taking a wrong turn."))
+    setobjectxy(43, 40, 34)      //spawn in extra HAM member for blocking
+	setobjectxyperm(43, 40, 34)
+    applymovement(43, movement_HAM_Hideout_finale_walk_up)
+    applymovement(42, movement_HAM_Hideout_finale_swarm_left_1)  
+    applymovement(41, movement_HAM_Hideout_finale_swarm_right_1)     
+    applymovement(39, movement_HAM_Hideout_finale_swarm_left_2)     
+    applymovement(37, movement_HAM_Hideout_finale_swarm_right_2) 
+    waitmovement(0)
+    applymovement(23, movement_HAM_Hideout_finale_Sigmund_exit)
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(23)
+    setflag(FLAG_TEMP_10)
+    //Lots of Ham members swarm the player and Zanik. Sigmund leaves menacingly
+    namebox ("Zanik")
+    msgbox(format("Shoot.\p{PLAYER}!\pI will handle this.\pYou go and get them!"))
+    applymovement(40, movement_HAM_Hideout_finale_misc_1)
+    applymovement(21, movement_HAM_Hideout_finale_Johanhus_1)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_3)
+    waitmovement(0)
+    special(RemoveCameraObject)
+    namebox ("Johanhus")
+    msgbox(format("I get it.\pYou believe you are righteous.\pYou believe you are correct.\pYou believe in yourself and that what you are doing is the good thing to do.\pAnd as do I.\pAs leader of Humans Against Monsters, on behalf of the world.\pI will smite you.."))
+    trainerbattle_no_intro(TRAINER_HAM_HIDEOUT_JOHANHUS, format("NO!\pThis cannot be!"))
+    namebox ("Johanhus")
+    msgbox(format("So it seems my power is insignificant to yours.\pI guess it seems weird to use the power of monsters to fight when we ourselves use monsters?\pBut what choice do we have?\pYou and everyone else changed the rules.\pWhat is a dagger to a dragon?\pThe world is changing.\pAnd we adapted.\pBut this is not the world we wish to live in."))
+    applymovement(21, Movement_InteractFACERIGHT)     //Looks to Prince Ali
+    namebox ("Johanhus")
+    msgbox(format("I will submit just this once.\pTake this prince and leave."))
+    applymovement(21, Movement_InteractFACELEFT)      //Looks to Zanik
+    namebox ("Johanhus")
+    msgbox(format("Out of goodness of my heart, you can even let the little gremlin over there live as well.\pIt doesn't matter.\pNone of this matters.\pIf Sigmund is right, you can not stop him.\pAnd he will make a world free of the monsters that once caused us so much pain.."))
+    applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER)
+    //Zanik runs to the player
+    namebox ("Zanik")
+    msgbox(format("Quick while he is monologuing {PLAYER}.\pGrab the Prince and run!"))
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11)                            //TBC
+    addvar(VAR_GAMEMODE_LEVEL_CAP, 5) //Level 55 cap.                                         //TBC
+    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)                                             //TBC
+    setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
+    call(FOLLOWER_REMOVE)
+    //warp outside to Lumbridge Forest
+    warp(MAP_LUMBRIDGE_FOREST, 28, 5)
+    waitstate
+    releaseall
+    end
+}
+
+
+movement movement_HAM_Hideout_Johanhus_approachplayer {
+    walk_left
+    face_down
+    step_end
+}
+movement movement_HAM_Hideout_Sigmund_exit {
+    walk_left * 3
+    walk_down * 4
+    walk_right * 3
+    walk_down * 1
+    set_invisible
+    step_end
+}
+
+movement movement_Johanhus_walkover_toPlayer {
+    walk_right * 2
+    walk_down * 2
+    walk_left
+    step_end
+}
+
+movement movement_surroundzanik_12 {
+    delay_16 * 2
+    walk_up
+    step_end
+}
+movement movement_surroundzanik_13 {
+    delay_16 * 2
+    walk_up
+    step_end
+}
+movement movement_surroundzanik_6 {
+    delay_16 * 2
+    walk_right
+    face_down
+    step_end
+}
+movement movement_surroundzanik_7 {
+    delay_16 * 2
+    walk_left
+    face_down
+    step_end
+}
+movement movement_surroundzanik_8 {
+    delay_16 * 2
+    walk_right
+    step_end
+}
+movement movement_surroundzanik_9 {
+    delay_16 * 2
+    walk_left
+    step_end
+}
+movement movement_surroundzanik_10 {
+    delay_16 * 2
+    walk_up
+    face_right
+    step_end
+}
+movement movement_surroundzanik_11 {
+    delay_16 * 2
+    walk_up
+    face_left
+    step_end
+}
+movement movement_zanikapproaches_grunts {
+    delay_16 * 2
+    walk_right
+    face_down
+    step_end
+}
+
+movement movement_camera_movedown_hamevent {
+    walk_slow_down * 2
+    step_end
+}
+movement movement_camera_setup_hamevent {
+    walk_up * 6
+    step_end
+}
+movement movement_playerapproaches_sigmund {
+    walk_left
+    walk_up
+    step_end
+}
+
+movement movement_HAM_Hideout_finale_Player_Left_1{
+    walk_up * 3
+    walk_right
+    face_up
+    step_end
+}
+
+movement movement_HAM_Hideout_finale_Player_Right_1{
+    delay_16
+    walk_up * 3
+    walk_left
+    face_up
+    step_end
+}
+
+movement movement_surroundplayer_6 {
+    walk_up
+    walk_left * 2
+    walk_up * 3
+    face_right
+    step_end
+}
+movement movement_surroundplayer_7 {
+    walk_up
+    walk_right * 2
+    walk_up * 3
+    face_left
+    step_end
+}
+movement movement_surroundplayer_8 {
+    walk_up
+    walk_left * 2
+    walk_up * 2
+    face_right
+    step_end
+}
+movement movement_surroundplayer_9 {
+    walk_up
+    walk_right * 2
+    walk_up * 2
+    face_left
+    step_end
+}
+movement movement_surroundplayer_10 {
+    walk_up
+    walk_left * 2
+    walk_up * 1
+    face_right
+    step_end
+}
+movement movement_surroundplayer_11 {
+    walk_up
+    walk_right * 2
+    walk_up * 1
+    face_left
+    step_end
+}
+movement movement_surroundplayer_12 {
+    walk_up
+    walk_left * 1
+    face_up
+    step_end
+}
+movement movement_surroundplayer_13 {
+    walk_up
+    walk_right * 1
+    face_up
+    step_end
+}
+movement movement_surroundplayer_panic_player {
+    face_right
+    delay_8
+    face_down
+    delay_8
+    face_left
+    delay_8
+    face_right
+    delay_8
+    face_down
+    delay_8
+    face_right
+    step_end
+}
+movement movement_surroundplayer_panic_zanik{
+    face_left
+    delay_8
+    face_down
+    delay_8
+    face_right
+    delay_8
+    face_left
+    delay_8
+    face_down
+    delay_8
+    face_left
+    step_end
+}
+
+movement MOVEMENT_QUESTIONMARK_FACEDOWN {
+    emote_question_mark
+    face_down
+    step_end
+}

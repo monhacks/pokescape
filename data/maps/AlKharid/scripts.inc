@@ -167,11 +167,18 @@ ALKHARID_NPC_6::
 ALKHARID_NPC_7::
 	faceplayer
 	namebox ALKHARID_NPC_4_Text_0
-	msgbox ALKHARID_NPC_7_Text_0
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
+	goto_if_eq ALKHARID_NPC_7_2
+	msgbox ALKHARID_NPC_7_Text_1
+ALKHARID_NPC_7_1:
 	closemessage
 	hidenamebox
 	release
 	end
+
+ALKHARID_NPC_7_2:
+	msgbox ALKHARID_NPC_7_Text_0
+	goto ALKHARID_NPC_7_1
 
 
 ALKHARID_NPC_8::
@@ -179,7 +186,7 @@ ALKHARID_NPC_8::
 	namebox ALKHARID_NPC_4_Text_0
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 215
 	goto_if_eq ALKHARID_NPC_8_2
-	msgbox ALKHARID_NPC_8_Text_1
+	msgbox ALKHARID_NPC_8_Text_0
 ALKHARID_NPC_8_1:
 	closemessage
 	hidenamebox
@@ -187,7 +194,7 @@ ALKHARID_NPC_8_1:
 	end
 
 ALKHARID_NPC_8_2:
-	msgbox ALKHARID_NPC_8_Text_0
+	msgbox ALKHARID_NPC_7_Text_0
 	goto ALKHARID_NPC_8_1
 
 
@@ -988,15 +995,15 @@ ALKHARID_NPC_6_Text_0:
 	.string "at one point.$"
 
 ALKHARID_NPC_7_Text_0:
-	.string "This is Al Kharid castle, would you like\n"
-	.string "to lose to the prince?$"
-
-ALKHARID_NPC_8_Text_0:
 	.string "If Ozan's reputation was better then\n"
 	.string "maybe we would believe you.\p"
 	.string "But we don't so go away.$"
 
-ALKHARID_NPC_8_Text_1:
+ALKHARID_NPC_7_Text_1:
+	.string "This is Al Kharid castle, would you like\n"
+	.string "to lose to the prince?$"
+
+ALKHARID_NPC_8_Text_0:
 	.string "This is Al Kharid castle, would you like\n"
 	.string "to challenge the prince?$"
 
