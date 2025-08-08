@@ -182,7 +182,7 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     applymovement(OBJ_EVENT_ID_ZANIK, MOVEMENT_INTERACT_UP)
     waitmovement(0)
     namebox ("Zanik")
-    msgbox(format("Quick while he is monologuing {PLAYER}, lets get out of here!"))
+    msgbox(format("Quick before he changes his mind {PLAYER}, let's get out of here!"))
     hidenamebox
     closemessage
     playse(SE_FLEE)

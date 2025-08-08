@@ -403,7 +403,6 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
 	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEUP
 	waitmovement 0
-	fadescreenswapbuffers FADE_TO_BLACK
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_22
 	hidenamebox
 	closemessage
@@ -414,7 +413,6 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY::
 	clearflag FLAG_TEMP_1F
 	loadword 0, Following_Zanik
 	setfollower 27, 0x80
-	fadescreenswapbuffers FADE_FROM_BLACK
 TRIGGER_HAMHIDEOUT_BABE_PATTY_1:
 	playse SE_LEDGE
 	applymovement 4, movement_HAMHIDEOUT_GUARD_3
@@ -472,7 +470,6 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY_2:
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_19
 	hidenamebox
 	closemessage
-	fadescreenswapbuffers FADE_TO_BLACK
 	msgbox TRIGGER_HAMHIDEOUT_BABE_PATTY_Text_20
 	hidenamebox
 	closemessage
@@ -483,7 +480,6 @@ TRIGGER_HAMHIDEOUT_BABE_PATTY_2:
 	clearflag FLAG_TEMP_1F
 	loadword 0, Following_Zanik
 	setfollower 27, 0x80
-	fadescreenswapbuffers FADE_FROM_BLACK
 	goto TRIGGER_HAMHIDEOUT_BABE_PATTY_1
 
 

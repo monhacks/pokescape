@@ -20,6 +20,7 @@ LumForest_STATE::
 	setflag FLAG_TEMP_1D
 	setflag FLAG_TEMP_1E
 	setflag FLAG_TEMP_1C
+	setflag FLAG_TEMP_15
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 210
 	goto_if_lt LumForest_STATE_2
 LumForest_STATE_1:
@@ -152,6 +153,8 @@ POST_WARP_ZANIK_EVENT::
 	applymovement 42, ZanikLeavesForest
 	waitmovement 0
 	removeobject 42
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	waitmovement 0
 	namebox POST_WARP_ZANIK_EVENT_Text_7
 	msgbox POST_WARP_ZANIK_EVENT_Text_14
 	closemessage
@@ -164,6 +167,10 @@ POST_WARP_ZANIK_EVENT::
 	removeobject 43
 	setflag FLAG_TEMP_1D
 	setflag FLAG_TEMP_15
+	setflag FLAG_TEMP_13
+	setflag FLAG_TEMP_14
+	setflag FLAG_TEMP_E
+	setflag FLAG_TEMP_A
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 255
 	release
 	end
@@ -183,6 +190,7 @@ ZanikLeavesForest:
 	step_end
 
 AliLeavesForest:
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -1169,7 +1177,7 @@ POST_WARP_ZANIK_EVENT_Text_13:
 	.string "again.$"
 
 POST_WARP_ZANIK_EVENT_Text_14:
-	.string "{PLAYER} I hope to see you at the\n"
+	.string "{PLAYER}, I hope to see you at the\n"
 	.string "palace in Al Kharid.$"
 
 LUMBRIDGEFOREST_NPC_BOT1_Text_0:
@@ -1244,8 +1252,8 @@ NPC_LUMBRIDGE_FOREST_MISSING_AXE_Text_1:
 	.string "…{PAUSE 15}…\p"
 	.string "You don't have one?\p"
 	.string "Why don't you try seeing if you can buy\n"
-	.string "one from someone in Lumbridge?\l"
-	.string "I'm sure there's an axe shop there.$"
+	.string "one from Bob's Axes in Lumbridge?\l"
+	.string "I'm sure they'll have one.$"
 
 BATTLE_LUMBRIDGEFOREST_BOT1_Text_0:
 	.string "ALERT!\p"

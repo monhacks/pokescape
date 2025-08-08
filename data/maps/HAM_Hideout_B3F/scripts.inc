@@ -25,6 +25,7 @@ HAMHIDEOUT_HEAL_ZONE::
 CHECK_JAILED_HAM::
 	setflag FLAG_TEMP_1F
 	switch VAR_POKESCAPE_STORYMODE_PROGRESS
+	case 230, CHECK_JAILED_HAM_3
 	case 235, CHECK_JAILED_HAM_3
 	case 240, CHECK_JAILED_HAM_3
 	case 241, CHECK_JAILED_HAM_3
@@ -117,6 +118,50 @@ movement_HAM_lockup_leave:
 	face_left
 	step_end
 
+breakoutofHAM_jail_afterfailingtodefeatguard::
+	applymovement 2, Movement_InteractFACERIGHT
+	waitmovement 0
+	namebox HAM_WHITEOUT_Text_0
+	msgbox breakoutofHAM_jail_afterfailingtodefeatguard_Text_0
+	hidenamebox
+	closemessage
+	applymovement 2, Movement_Run_Right_5
+	waitmovement 0
+	playse SE_DING_DONG
+	waitse
+	applymovement 2, Movement_InteractFACELEFT
+	waitmovement 0
+	namebox HAM_WHITEOUT_Text_0
+	msgbox breakoutofHAM_jail_afterfailingtodefeatguard_Text_1
+	hidenamebox
+	closemessage
+	playbgm MUS_PS_HAM_HIDEOUT_HIGH_ALERT, TRUE
+	savebgm MUS_PS_HAM_HIDEOUT_HIGH_ALERT
+	namebox HAM_WHITEOUT_Text_3
+	msgbox breakoutofHAM_jail_afterfailingtodefeatguard_Text_2
+	hidenamebox
+	closemessage
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_RIGHT
+	waitmovement 0
+	namebox HAM_WHITEOUT_Text_3
+	msgbox breakoutofHAM_jail_afterfailingtodefeatguard_Text_3
+	hidenamebox
+	closemessage
+	setvar VAR_TEMP_0, 2
+	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 235
+	clearflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
+	return
+
+
+Movement_Run_Right_5:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
 HAM_HIDEOUT_GATE::
 	compare VAR_TEMP_C, 0
 	goto_if_eq HAM_HIDEOUT_GATE_2
@@ -145,6 +190,9 @@ HAM_HIDEOUT_GATE_4:
 	goto_if_ne HAM_HIDEOUT_GATE_9
 HAM_HIDEOUT_GATE_8:
 	setvar VAR_TEMP_C, 1
+	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 230
+	goto_if_eq HAM_HIDEOUT_GATE_16
+HAM_HIDEOUT_GATE_15:
 	release
 	goto HAM_HIDEOUT_GATE_1
 
@@ -182,6 +230,10 @@ HAM_HIDEOUT_GATE_12:
 	waitmovement 0
 	goto HAM_HIDEOUT_GATE_11
 
+HAM_HIDEOUT_GATE_16:
+	goto breakoutofHAM_jail_afterfailingtodefeatguard
+	goto HAM_HIDEOUT_GATE_15
+
 
 HAMHIDEOUT_Banker::
 	lock
@@ -210,9 +262,11 @@ HAMHIDEOUT_BankChest::
 
 HAMHIDEOUT_Guard::
 	lock
-	goto_if_set FLAG_TEMP_10, HAMHIDEOUT_Guard_2
+	compare VAR_TEMP_0, 2
+	goto_if_eq HAMHIDEOUT_Guard_2
+	goto_if_set FLAG_TEMP_10, HAMHIDEOUT_Guard_3
 	compare VAR_POKESCAPE_STORYMODE_PROGRESS, 235
-	goto_if_eq HAMHIDEOUT_Guard_3
+	goto_if_eq HAMHIDEOUT_Guard_4
 	namebox HAM_WHITEOUT_Text_0
 	playse SE_M_SNORE
 	msgbox HAM_WHITEOUT_Text_2
@@ -234,6 +288,12 @@ HAMHIDEOUT_Guard_3:
 	msgbox HAMHIDEOUT_Guard_Text_1
 	goto HAMHIDEOUT_Guard_1
 
+HAMHIDEOUT_Guard_4:
+	faceplayer
+	namebox HAM_WHITEOUT_Text_0
+	msgbox HAMHIDEOUT_Guard_Text_0
+	goto HAMHIDEOUT_Guard_1
+
 
 HAM_WHITEOUT_Text_0:
 	.string "H.A.M Guard$"
@@ -251,6 +311,27 @@ HAM_WHITEOUT_Text_3:
 HAM_WHITEOUT_Text_4:
 	.string "This isn't good…\n"
 	.string "We must find a way out.$"
+
+breakoutofHAM_jail_afterfailingtodefeatguard_Text_0:
+	.string "Huh?\p"
+	.string "What?\p"
+	.string "Urgh!\p"
+	.string "Stupid goblin how did you get out…\p"
+	.string "I bet it was this human!\p"
+	.string "There's no way I'm letting either of you\n"
+	.string "escape alive!$"
+
+breakoutofHAM_jail_afterfailingtodefeatguard_Text_1:
+	.string "Hahaha!$"
+
+breakoutofHAM_jail_afterfailingtodefeatguard_Text_2:
+	.string "Oh no they sounded the alarm!\p"
+	.string "I'm sorry {PLAYER}…\p"
+	.string "I should have just kept my mouth shut…$"
+
+breakoutofHAM_jail_afterfailingtodefeatguard_Text_3:
+	.string "You're right, no time to feel sorry.\p"
+	.string "We've got some people to rescue!$"
 
 HAM_HIDEOUT_GATE_Text_0:
 	.string "You attempt to pick the lock.\p"
@@ -290,12 +371,12 @@ HAMHIDEOUT_BankChest_Text_0:
 	.string "Would you like to use the bank chest?$"
 
 HAMHIDEOUT_Guard_Text_0:
-	.string "Zzz…{PAUSE 15}…\p"
-	.string "Huh?!{PAUSE 15} What?!\n"
-	.string "How did you get out!?\p"
 	.string "I've sounded the alarm!\p"
 	.string "You both won't be getting away now!$"
 
 HAMHIDEOUT_Guard_Text_1:
+	.string "Zzz…{PAUSE 15}…\p"
+	.string "Huh?!{PAUSE 15} What?!\n"
+	.string "How did you get out!?\p"
 	.string "I've sounded the alarm!\p"
 	.string "You both won't be getting away now!$"

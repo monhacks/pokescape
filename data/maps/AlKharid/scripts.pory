@@ -22,6 +22,7 @@ script ALKHARID_STATE {
     setflag(FLAG_TEMP_9)
     setflag(FLAG_TEMP_14)
     setflag(FLAG_TEMP_15)
+    setflag(FLAG_TEMP_16)
     removeobject(12)
 	removeobject(17)
 	setflag(FLAG_TEMP_10) //Angrenouille
@@ -48,12 +49,13 @@ script ALKHARID_STATE {
     }
     if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 255) {
         //Show Ozan, Osman, PrinceAli, Leela, Guards x2
-        setflag(FLAG_TEMP_9)
+        clearflag(FLAG_TEMP_14)
+        clearflag(FLAG_TEMP_9)
         setflag(FLAG_TEMP_13)   //Hides bronze guy temp
-        setflag(FLAG_TEMP_15)
-        setobjectxyperm(12, 31, 30)
-        setobjectmovementtype(12, MOVEMENT_TYPE_FACE_LEFT)
-
+        clearflag(FLAG_TEMP_15)
+        setobjectxyperm(12, 30, 30)
+        setobjectmovementtype(12, MOVEMENT_TYPE_FACE_RIGHT)
+        setvar(VAR_TEMP_C, 1)
     }
     if ((var(VAR_FROGEEL_RIVAL) == 25)) {
         addobject(17)
@@ -630,7 +632,130 @@ script RANDOM_PARTY_SIZE {
 
 
 
+script TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1
+{
+    lockall
+    getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+    if (var(VAR_TEMP_1) == 31) {
+        applymovement(29, Movement_InteractFACELEFT)
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT)
+        waitmovement(0)
+    }
+    else {
+        applymovement(29, MOVEMENT_WALK_LEFT)
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT)
+        waitmovement(0)
+    }
+    namebox ("Prince Ali")
+    msgbox(format("{PLAYER} you made it."))
+    closemessage
+    hidenamebox
+    special(SpawnCameraObject)
+	applymovement (OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2)
+    waitmovement(0)
 
+    namebox ("Osman")
+    msgbox(format("Ozan, what is all this ruckus about the prince being kidnapped?!"))
+    closemessage
+    hidenamebox
+    applymovement(12, MOVEMENT_INTERACT_RIGHT)
+    namebox ("Ozan")
+    msgbox(format("Well you see-"))
+    closemessage
+    hidenamebox
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(12, MOVEMENT_SHOCKED_FACEPLAYER)
+    applymovement(29, MOVEMENT_WALK_UP) //* 2 //smooth scene out
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP)//* 2 
+    applymovement(30, Movement_InteractFACEDOWN)
+    waitmovement(0)
+    delay(30)
+    namebox ("Ozan")
+    msgbox(format("You did it, you resuced the Prince!"))
+    closemessage
+    hidenamebox
+    namebox ("Prince Ali")
+    msgbox(format("Fath-{PAUSE 15} err…\nOsman, I must have a word with you in private."))
+    closemessage
+    hidenamebox
+    clearflag(FLAG_TEMP_15)
+    addobject(26)
+    addobject(27)
+    addobject(28)
+    applymovement(26, Movement_InteractFACEDOWN) //all walk across
+    applymovement(27, Movement_InteractFACEDOWN)
+    applymovement(28, Movement_InteractFACEDOWN)
+    waitmovement(0)
+    namebox ("Osman")
+    msgbox(format("Very well, come this way."))
+    closemessage
+    hidenamebox
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(12, MOVEMENT_QUESTIONMARK_FACEDOWN)
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK_FACEDOWN)
+    waitmovement(0)
+    namebox ("Guard")
+    msgbox(format("Step aside the Prince has returned!"))
+    closemessage
+    hidenamebox
+    applymovement(12, Movement_InteractFACERIGHT)
+    namebox ("Ozan")
+    msgbox(format("What?!"))
+    waitmovement(0)
+    applymovement(12, Movement_InteractFACEDOWN)
+    msgbox(format("Two Prince Ali's?!"))
+    closemessage
+    hidenamebox
+    waitmovement(0)
+    namebox ("Prince Ali?")
+    msgbox(format("Actually about that…"))
+    closemessage
+    hidenamebox
+    applymovement(29, MOVEMENT_INTERACT_LEFT)
+    waitmovement(0)
+    setflag(FLAG_TEMP_14)
+    removeobject(29)
+    clearflag(FLAG_TEMP_16)
+    addobject(31)
+    namebox ("Leela")
+    msgbox(format("My name is Leela, I heard some rumours about someone wanting to kidnap the prince so I digusied myself as him and went undercover.\pAppolgies for any deception {PLAYER}, it wasn't my intentions to lead you astray."))
+    closemessage
+    hidenamebox
+    applymovement(30, MOVEMENT_INTERACT_DOWN)
+    waitmovement(0)
+    namebox ("Osman")
+    msgbox(format("Leela, I suggest you give me have a debriefing with me inside.\pMeanwhile, PLAYER was it?\pWhy don't you test yourself against the prince?\pCome Leela, we have much to discuss."))
+    closemessage
+    hidenamebox
+    applymovement(30, movement_osmanwalk_insidePalace)
+    applymovement(32, movement_leelawalk_insidePalace)
+    waitmovement(0)
+
+    special(RemoveCameraObject) //Move camera movement back
+    //setvar
+
+    releaseall
+    end
+}
+movement movement_leelawalk_insidePalace {
+    walk_up
+    walk_right
+    walk_up * 3
+    walk_left
+    walk_up * 2
+    set_invisible
+    step_end
+}
+movement movement_osmanwalk_insidePalace {
+    walk_right
+    walk_up * 3
+    walk_left
+    walk_up * 2
+    set_invisible
+    step_end
+}
 
 
 script TRIGGER_ALKHARID_HAM_EVENT_2

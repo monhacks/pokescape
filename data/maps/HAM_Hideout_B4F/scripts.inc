@@ -141,6 +141,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM::
 	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_14
 	hidenamebox
 	closemessage
+	trainerbattle_no_intro TRAINER_HAM_HIDEOUT_JOHANHUS, STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15
 	fadeoutbgm 2
 	applymovement 5, Movement_InteractFACELEFT
 	applymovement 6, movement_lock_walk_left_faceright
@@ -154,7 +155,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM::
 	waitmovement 0
 	applymovement 5, Movement_InteractFACERIGHT
 	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15
+	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16
 	hidenamebox
 	closemessage
 	applymovement 5, Movement_InteractFACELEFT
@@ -165,13 +166,13 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM::
 	waitmovement 0
 	applymovement 5, Movement_InteractFACERIGHT
 	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16
+	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17
 	hidenamebox
 	closemessage
 	applymovement 5, MOVEMENT_INTERACT_UP
 	waitmovement 0
 	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17
+	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_18
 	hidenamebox
 	closemessage
 	playse SE_FLEE
@@ -537,6 +538,10 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_14:
 	.string "I will smite you…$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15:
+	.string "NO!\p"
+	.string "This cannot be!$"
+
+STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
 	.string "So it seems my power is insignificant to\n"
 	.string "yours.\p"
 	.string "I guess it seems weird to use the power\n"
@@ -551,7 +556,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15:
 	.string "But this is not the world we wish to live\n"
 	.string "in.$"
 
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
+STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17:
 	.string "I will submit just this once.\p"
 	.string "Out of goodness of my heart, you can\n"
 	.string "even let the little gremlin over there\l"
@@ -565,6 +570,6 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
 	.string "monsters that once caused us so much\l"
 	.string "pain.$"
 
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17:
-	.string "Quick while he is monologuing\n"
-	.string "{PLAYER}, lets get out of here!$"
+STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_18:
+	.string "Quick before he changes his mind\n"
+	.string "{PLAYER}, let's get out of here!$"

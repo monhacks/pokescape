@@ -20,6 +20,7 @@ script CHECK_JAILED_HAM {
     setflag(FLAG_TEMP_1F)
 
     switch (var(VAR_POKESCAPE_STORYMODE_PROGRESS)) {
+        case 230:   //if you lose to that ham dude outside the jail
         case 235:
         case 240:
         case 241:
@@ -95,8 +96,47 @@ movement movement_HAM_lockup_leave {
 }
 
 
+script breakoutofHAM_jail_afterfailingtodefeatguard {
+    applymovement(2, Movement_InteractFACERIGHT)
+    waitmovement(0)
+    namebox ("H.A.M Guard")
+    msgbox(format("Huh?\pWhat?\pUrgh!\pStupid goblin how did you get out…\pI bet it was this human!\pThere's no way I'm letting either of you escape alive!"))
+    hidenamebox
+    closemessage
+    //Runs off to sound the alarm.
+    applymovement(2, Movement_Run_Right_5)
+    waitmovement(0)
+    playse(SE_DING_DONG)
+    waitse
+    applymovement(2, Movement_InteractFACELEFT)
+    waitmovement(0)
+    namebox ("H.A.M Guard")
+    msgbox(format("Hahaha!"))
+    hidenamebox
+    closemessage
+    playbgm(MUS_PS_HAM_HIDEOUT_HIGH_ALERT, TRUE)
+    savebgm(MUS_PS_HAM_HIDEOUT_HIGH_ALERT)
+    namebox ("Zanik")
+    msgbox(format("Oh no they sounded the alarm!\pI'm sorry {PLAYER}…\pI should have just kept my mouth shut…"))
+    hidenamebox
+    closemessage
+    //player interacts.
+    applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACELEFT)
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_INTERACT_RIGHT)
+    waitmovement(0)
+    namebox ("Zanik")
+    msgbox(format("You're right, no time to feel sorry.\pWe've got some people to rescue!"))
+    hidenamebox
+    closemessage
+    setvar(VAR_TEMP_0, 2)
+    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 235)
+    clearflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
+}
 
-
+movement Movement_Run_Right_5 {
+    walk_fast_right * 5
+    step_end
+}
 
 script HAM_HIDEOUT_GATE
 {
@@ -155,6 +195,9 @@ script HAM_HIDEOUT_GATE
             hidenamebox
         }
         setvar(VAR_TEMP_C, 1)
+        if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 230) {
+            goto(breakoutofHAM_jail_afterfailingtodefeatguard)
+        }
         release
     }
     end
@@ -187,7 +230,12 @@ script HAMHIDEOUT_BankChest {
 
 script HAMHIDEOUT_Guard {
     lock
-    if (flag(FLAG_TEMP_10)) {
+    if (var(VAR_TEMP_0) == 2) {
+        faceplayer
+        namebox ("H.A.M Guard")
+        msgbox(format("I've sounded the alarm!\pYou both won't be getting away now!"))
+    }
+    elif (flag(FLAG_TEMP_10)) {
         faceplayer
         namebox ("H.A.M Guard")
         msgbox(format("Zzz…{PAUSE 15}…\pHuh?!{PAUSE 15} What?!\nHow did you get out!?\pI've sounded the alarm!\pYou both won't be getting away now!"))
