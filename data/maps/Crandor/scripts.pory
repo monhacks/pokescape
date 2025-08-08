@@ -282,7 +282,7 @@ script TRIGGER_ELVARGFLYOVER
     //setobjectxy(33,21,31)
     delay(32)
     special(RemoveCameraObject)
-    fadeinbgm(0)
+    fadeinbgm(2)
     //waitmovement(0)
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 140)
     warp(MAP_KARAMJA_VOLCANO_B3F, 1, 0, 0)

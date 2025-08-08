@@ -116,6 +116,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM::
 	applymovement 12, movement_surroundzanik_12
 	applymovement 13, movement_surroundzanik_13
 	waitmovement 0
+	applymovement 1, MOVEMENT_INTERACT_DOWN
 	applymovement 2, movement_Johanhus_walkover_toPlayer
 	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_2
 	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_11
@@ -140,103 +141,95 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM::
 	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_14
 	hidenamebox
 	closemessage
-	trainerbattle_no_intro TRAINER_HAM_HIDEOUT_JOHANHUS, STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15
+	fadeoutbgm 2
+	applymovement 5, Movement_InteractFACELEFT
+	applymovement 6, movement_lock_walk_left_faceright
+	applymovement 7, movement_lock_walk_right_faceleft
+	applymovement 8, movement_lock_walk_left
+	applymovement 9, movement_lock_walk_right
+	applymovement 10, movement_lock_walk_left
+	applymovement 11, movement_lock_walk_right
+	applymovement 12, movement_lock_walk_left_faceright
+	applymovement 13, movement_lock_walk_right_faceleft
+	waitmovement 0
+	applymovement 5, Movement_InteractFACERIGHT
+	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
+	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15
+	hidenamebox
+	closemessage
+	applymovement 5, Movement_InteractFACELEFT
+	applymovement 2, Movement_InteractFACEUP
+	waitmovement 0
+	delay 120
+	applymovement 2, Movement_InteractFACEDOWN
+	waitmovement 0
+	applymovement 5, Movement_InteractFACERIGHT
 	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
 	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16
 	hidenamebox
 	closemessage
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
+	applymovement 5, MOVEMENT_INTERACT_UP
+	waitmovement 0
+	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6
 	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17
 	hidenamebox
 	closemessage
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_18
-	hidenamebox
-	closemessage
 	playse SE_FLEE
+	applymovement OBJ_EVENT_ID_PLAYER, movement_playerandzanikflee2
+	applymovement 5, movement_playerandzanikflee
+	waitmovement 0
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11
 	addvar VAR_GAMEMODE_LEVEL_CAP, 5
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 250
 	setflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
 	call FOLLOWER_REMOVE
-	warp MAP_LUMBRIDGE_FOREST, 28, 5
-	waitstate
-	releaseall
-	end
-	addobject 35
-	clearflag FLAG_TEMP_1C
-	applymovement 35, movement_HAM_Hideout_finale_walk_up
-	waitmovement 0
-	applymovement 35, movement_HAM_Hideout_finale_walk_up
-	applymovement OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up
-	applymovement OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2
-	waitmovement 0
-	applymovement 36, movement_HAM_Hideout_finale_reaction_1
-	applymovement 37, movement_HAM_Hideout_finale_reaction_2
-	applymovement 38, movement_HAM_Hideout_finale_reaction_1
-	applymovement 39, movement_HAM_Hideout_finale_reaction_3
-	applymovement 40, movement_HAM_Hideout_finale_reaction_2
-	applymovement 41, movement_HAM_Hideout_finale_reaction_1
-	applymovement 42, movement_HAM_Hideout_finale_reaction_3
-	applymovement 21, MOVEMENT_EXCLAMATIONMARK
-	waitmovement 0
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_19
-	applymovement 23, movement_HAM_Hideout_finale_reaction_1
-	waitmovement 0
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_2
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_19
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_20
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_2
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_21
-	setobjectxy 43, 40, 34
-	setobjectxyperm 43, 40, 34
-	applymovement 43, movement_HAM_Hideout_finale_walk_up
-	applymovement 42, movement_HAM_Hideout_finale_swarm_left_1
-	applymovement 41, movement_HAM_Hideout_finale_swarm_right_1
-	applymovement 39, movement_HAM_Hideout_finale_swarm_left_2
-	applymovement 37, movement_HAM_Hideout_finale_swarm_right_2
-	waitmovement 0
-	applymovement 23, movement_HAM_Hideout_finale_Sigmund_exit
-	waitmovement 0
-	playse SE_EXIT
-	removeobject 23
-	setflag FLAG_TEMP_10
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_22
-	applymovement 40, movement_HAM_Hideout_finale_misc_1
-	applymovement 21, movement_HAM_Hideout_finale_Johanhus_1
-	applymovement OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_3
-	waitmovement 0
-	special RemoveCameraObject
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_23
-	trainerbattle_no_intro TRAINER_HAM_HIDEOUT_JOHANHUS, STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16
-	applymovement 21, Movement_InteractFACERIGHT
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_24
-	applymovement 21, Movement_InteractFACELEFT
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_0
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_25
-	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER
-	namebox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6
-	msgbox STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_26
-	fadescreenswapbuffers FADE_TO_BLACK
-	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11
-	addvar VAR_GAMEMODE_LEVEL_CAP, 5
-	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 250
-	setflag FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE
-	call FOLLOWER_REMOVE
-	warp MAP_LUMBRIDGE_FOREST, 28, 5
+	fadeinbgm 2
+	warp MAP_LUMBRIDGE_FOREST, 35, 18
 	waitstate
 	releaseall
 	end
 
+
+movement_lock_walk_right_faceleft:
+	face_left
+	lock_facing_direction
+	walk_right
+	unlock_facing_direction
+	step_end
+
+movement_lock_walk_left_faceright:
+	face_right
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+
+movement_lock_walk_right:
+	lock_facing_direction
+	walk_right
+	unlock_facing_direction
+	step_end
+
+movement_lock_walk_left:
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+
+movement_playerandzanikflee:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	set_invisible
+	step_end
+
+movement_playerandzanikflee2:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	set_invisible
+	step_end
 
 movement_HAM_Hideout_Johanhus_approachplayer:
 	walk_left
@@ -497,7 +490,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_5:
 	.string "abandon every single monster in the\l"
 	.string "world.\p"
 	.string "And when that happens…\n"
-	.string "The world will be at peace.{PAUSE 30}\l"
+	.string "The world will be at peace.\l"
 	.string "Just like we have always wanted…$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6:
@@ -544,10 +537,6 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_14:
 	.string "I will smite you…$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15:
-	.string "NO!\p"
-	.string "This cannot be!$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
 	.string "So it seems my power is insignificant to\n"
 	.string "yours.\p"
 	.string "I guess it seems weird to use the power\n"
@@ -562,7 +551,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
 	.string "But this is not the world we wish to live\n"
 	.string "in.$"
 
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17:
+STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
 	.string "I will submit just this once.\p"
 	.string "Out of goodness of my heart, you can\n"
 	.string "even let the little gremlin over there\l"
@@ -576,60 +565,6 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17:
 	.string "monsters that once caused us so much\l"
 	.string "pain.$"
 
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_18:
+STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_17:
 	.string "Quick while he is monologuing\n"
 	.string "{PLAYER}, lets get out of here!$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_19:
-	.string "$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_20:
-	.string "Indeed. What shall we do?$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_21:
-	.string "I will head to the wilderness as\n"
-	.string "planned.\p"
-	.string "I will station Patty and Babe in Varrock\n"
-	.string "for the thing we discussed.\p"
-	.string "As for these guys and the prince.\p"
-	.string "Let us show them what happens to\n"
-	.string "monster sympathisers taking a wrong\l"
-	.string "turn.$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_22:
-	.string "Shoot.\p"
-	.string "{PLAYER}!\p"
-	.string "I will handle this.\p"
-	.string "You go and get them!$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_23:
-	.string "I get it.\p"
-	.string "You believe you are righteous.\p"
-	.string "You believe you are correct.\p"
-	.string "You believe in yourself and that what\n"
-	.string "you are doing is the good thing to do.\p"
-	.string "And as do I.\p"
-	.string "As leader of Humans Against Monsters,\n"
-	.string "on behalf of the world.\p"
-	.string "I will smite you..$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_24:
-	.string "I will submit just this once.\p"
-	.string "Take this prince and leave.$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_25:
-	.string "Out of goodness of my heart, you can\n"
-	.string "even let the little gremlin over there\l"
-	.string "live as well.\p"
-	.string "It doesn't matter.\p"
-	.string "None of this matters.\p"
-	.string "If Sigmund is right, you can not stop\n"
-	.string "him.\p"
-	.string "And he will make a world free of the\n"
-	.string "monsters that once caused us so much\l"
-	.string "pain..$"
-
-STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_26:
-	.string "Quick while he is monologuing\n"
-	.string "{PLAYER}.\p"
-	.string "Grab the Prince and run!$"

@@ -20,6 +20,8 @@ MAP_SCRIPT_ON_LOAD { //ON LOAD FOR MAP TILES
 script ALKHARID_STATE {
     //setmetatile(13, 16, METATILE_AlKharid_OPENED_DOOR, 0) //Openworld Player House door.
     setflag(FLAG_TEMP_9)
+    setflag(FLAG_TEMP_14)
+    setflag(FLAG_TEMP_15)
     removeobject(12)
 	removeobject(17)
 	setflag(FLAG_TEMP_10) //Angrenouille
@@ -43,6 +45,15 @@ script ALKHARID_STATE {
         setobjectmovementtype(14, MOVEMENT_TYPE_FACE_DOWN)
         setobjectmovementtype(15, MOVEMENT_TYPE_FACE_DOWN)
         setobjectmovementtype(12, MOVEMENT_TYPE_FACE_UP)
+    }
+    if (var(VAR_POKESCAPE_STORYMODE_PROGRESS) == 255) {
+        //Show Ozan, Osman, PrinceAli, Leela, Guards x2
+        setflag(FLAG_TEMP_9)
+        setflag(FLAG_TEMP_13)   //Hides bronze guy temp
+        setflag(FLAG_TEMP_15)
+        setobjectxyperm(12, 31, 30)
+        setobjectmovementtype(12, MOVEMENT_TYPE_FACE_LEFT)
+
     }
     if ((var(VAR_FROGEEL_RIVAL) == 25)) {
         addobject(17)

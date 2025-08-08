@@ -270,7 +270,7 @@ TRIGGER_ELVARGFLYOVER::
 	applymovement 8, MOVEMENT_HAM_CONFUSED
 	delay 32
 	special RemoveCameraObject
-	fadeinbgm 0
+	fadeinbgm 2
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 140
 	warp MAP_KARAMJA_VOLCANO_B3F, 1, 0, 0
 	waitstate

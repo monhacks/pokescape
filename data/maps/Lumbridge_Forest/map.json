@@ -224,8 +224,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOODCUTTER",
-      "x": 46,
-      "y": 12,
+      "x": 0,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -341,8 +341,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 25,
-      "y": 18,
+      "x": 23,
+      "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -366,17 +366,17 @@
       "flag": "FLAG_TEMP_B"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 0,
-      "y": 0,
+      "graphics_id": "OBJ_EVENT_GFX_MUGGER",
+      "x": 37,
+      "y": 19,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_TEMP_15"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZANIK_HAM",
@@ -458,7 +458,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 22,
+      "x": 24,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -496,17 +496,17 @@
       "flag": "FLAG_TEMP_1C"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 3,
-      "y": 0,
+      "graphics_id": "OBJ_EVENT_GFX_GOEBIE_6",
+      "x": 36,
+      "y": 17,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_11"
+      "flag": "FLAG_TEMP_15"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPIDER_BROWN",
@@ -562,16 +562,42 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GYMLEADER_PRINCE_ALI",
-      "x": 3,
-      "y": 2,
+      "x": 37,
+      "y": 18,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_TEMP_1D"
+      "flag": "FLAG_TEMP_15"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 46,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 47,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_14"
     }
   ],
   "warp_events": [
@@ -591,7 +617,7 @@
     },
     {
       "x": 46,
-      "y": 10,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LUMBRIDGE",
       "dest_warp_id": "16"
@@ -619,10 +645,10 @@
     },
     {
       "x": 47,
-      "y": 10,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LUMBRIDGE",
-      "dest_warp_id": "17"
+      "dest_warp_id": "7"
     },
     {
       "x": 43,

@@ -47,7 +47,7 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     msgbox(format("And you are sure this will save the world of the scourge that are monsters Sigmund?"))
     applymovement(OBJ_EVENT_ID_SIGMUND, MOVEMENT_INTERACT_UP)
     namebox ("Sigmund")
-    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\pAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\nThe world will be at peace.{PAUSE 30}\lJust like we have always wanted…"))
+    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\pAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\nThe world will be at peace.\lJust like we have always wanted…"))
     hidenamebox
     closemessage
     //Zanik and the player step into the room.
@@ -151,114 +151,93 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     hidenamebox
     closemessage
     trainerbattle_no_intro(TRAINER_HAM_HIDEOUT_JOHANHUS, format("NO!\pThis cannot be!"))
+    fadeoutbgm(2)
+    applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACELEFT)
+    applymovement(6, movement_lock_walk_left_faceright)
+    applymovement(7, movement_lock_walk_right_faceleft)
+    applymovement(8, movement_lock_walk_left)
+    applymovement(9, movement_lock_walk_right)
+    applymovement(10, movement_lock_walk_left)
+    applymovement(11, movement_lock_walk_right)
+    applymovement(12, movement_lock_walk_left_faceright)
+    applymovement(13, movement_lock_walk_right_faceleft)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACERIGHT)
     namebox ("Johanhus")
     msgbox(format("So it seems my power is insignificant to yours.\pI guess it seems weird to use the power of monsters to fight when we ourselves use monsters?\pBut what choice do we have?\pYou and everyone else changed the rules.\pWhat is a dagger to a dragon?\pThe world is changing.\pAnd we adapted.\pBut this is not the world we wish to live in."))
     hidenamebox
     closemessage
+    applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACELEFT)
+    applymovement(OBJ_EVENT_ID_JOHANHUS, Movement_InteractFACEUP)
+    waitmovement(0)
+    delay(120)
+    applymovement(OBJ_EVENT_ID_JOHANHUS, Movement_InteractFACEDOWN)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACERIGHT)
 //  Johanhus contemplates
     namebox ("Johanhus")
     msgbox(format("I will submit just this once.\pOut of goodness of my heart, you can even let the little gremlin over there live as well.\pAs at the end of the day it doesn't matter.\pNone of this matters.\pIf Sigmund is right, you can not stop him.\pAnd he will make a world free of the monsters that once caused us so much pain."))
     hidenamebox
     closemessage
+    applymovement(OBJ_EVENT_ID_ZANIK, MOVEMENT_INTERACT_UP)
+    waitmovement(0)
     namebox ("Zanik")
     msgbox(format("Quick while he is monologuing {PLAYER}, lets get out of here!"))
     hidenamebox
     closemessage
     playse(SE_FLEE)
+    applymovement (OBJ_EVENT_ID_PLAYER, movement_playerandzanikflee2)
+    applymovement (OBJ_EVENT_ID_ZANIK, movement_playerandzanikflee)
+    waitmovement(0)
     //player and zanik flee
     subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11)
     addvar(VAR_GAMEMODE_LEVEL_CAP, 5) //Level 55 cap.             
     setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)                 
     setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
     call(FOLLOWER_REMOVE)
+    fadeinbgm(2)
     //warp outside to Lumbridge Forest
-    warp(MAP_LUMBRIDGE_FOREST, 28, 5)
-    waitstate
-    releaseall
-    end
-
-
-
-
-    addobject(35)
-    clearflag(FLAG_TEMP_1C)
-    applymovement (35, movement_HAM_Hideout_finale_walk_up) //Prince Ali; walk up beside player
-    waitmovement(0)
-    applymovement (35, movement_HAM_Hideout_finale_walk_up) //Prince Ali walk up with player/Zanik
-    applymovement (OBJ_EVENT_ID_PLAYER, movement_HAM_Hideout_finale_walk_up) //Player; walk up with Zanik/Prince Ali
-    applymovement (OBJ_EVENT_ID_FOLLOWER, movement_HAM_Hideout_finale_walk_up) //Zanik; walk up player/Prince Ali
-    waitmovement(0)
-	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_2)
-    waitmovement(0)
-    
-    applymovement(36, movement_HAM_Hideout_finale_reaction_1) 
-    applymovement(37, movement_HAM_Hideout_finale_reaction_2) 
-    applymovement(38, movement_HAM_Hideout_finale_reaction_1) 
-    applymovement(39, movement_HAM_Hideout_finale_reaction_3) 
-    applymovement(40, movement_HAM_Hideout_finale_reaction_2) 
-    applymovement(41, movement_HAM_Hideout_finale_reaction_1) 
-    applymovement(42, movement_HAM_Hideout_finale_reaction_3)
-    applymovement(21, MOVEMENT_EXCLAMATIONMARK)
-    waitmovement(0)
-    namebox ("Johanhus")
-    msgbox(format(""))
-    applymovement(23, movement_HAM_Hideout_finale_reaction_1)
-    waitmovement(0)
-    namebox ("Sigmund")
-    msgbox(format(""))
-    namebox ("Johanhus")
-    msgbox(format("Indeed. What shall we do?"))
-    namebox ("Sigmund")
-    msgbox(format("I will head to the wilderness as planned.\pI will station Patty and Babe in Varrock for the thing we discussed.\pAs for these guys and the prince.\pLet us show them what happens to monster sympathisers taking a wrong turn."))
-    setobjectxy(43, 40, 34)      //spawn in extra HAM member for blocking
-	setobjectxyperm(43, 40, 34)
-    applymovement(43, movement_HAM_Hideout_finale_walk_up)
-    applymovement(42, movement_HAM_Hideout_finale_swarm_left_1)  
-    applymovement(41, movement_HAM_Hideout_finale_swarm_right_1)     
-    applymovement(39, movement_HAM_Hideout_finale_swarm_left_2)     
-    applymovement(37, movement_HAM_Hideout_finale_swarm_right_2) 
-    waitmovement(0)
-    applymovement(23, movement_HAM_Hideout_finale_Sigmund_exit)
-    waitmovement(0)
-    playse(SE_EXIT)
-    removeobject(23)
-    setflag(FLAG_TEMP_10)
-    //Lots of Ham members swarm the player and Zanik. Sigmund leaves menacingly
-    namebox ("Zanik")
-    msgbox(format("Shoot.\p{PLAYER}!\pI will handle this.\pYou go and get them!"))
-    applymovement(40, movement_HAM_Hideout_finale_misc_1)
-    applymovement(21, movement_HAM_Hideout_finale_Johanhus_1)
-	applymovement (OBJ_EVENT_ID_CAMERA, movement_HAM_Hideout_camera_3)
-    waitmovement(0)
-    special(RemoveCameraObject)
-    namebox ("Johanhus")
-    msgbox(format("I get it.\pYou believe you are righteous.\pYou believe you are correct.\pYou believe in yourself and that what you are doing is the good thing to do.\pAnd as do I.\pAs leader of Humans Against Monsters, on behalf of the world.\pI will smite you.."))
-    trainerbattle_no_intro(TRAINER_HAM_HIDEOUT_JOHANHUS, format("NO!\pThis cannot be!"))
-    namebox ("Johanhus")
-    msgbox(format("So it seems my power is insignificant to yours.\pI guess it seems weird to use the power of monsters to fight when we ourselves use monsters?\pBut what choice do we have?\pYou and everyone else changed the rules.\pWhat is a dagger to a dragon?\pThe world is changing.\pAnd we adapted.\pBut this is not the world we wish to live in."))
-    applymovement(21, Movement_InteractFACERIGHT)     //Looks to Prince Ali
-    namebox ("Johanhus")
-    msgbox(format("I will submit just this once.\pTake this prince and leave."))
-    applymovement(21, Movement_InteractFACELEFT)      //Looks to Zanik
-    namebox ("Johanhus")
-    msgbox(format("Out of goodness of my heart, you can even let the little gremlin over there live as well.\pIt doesn't matter.\pNone of this matters.\pIf Sigmund is right, you can not stop him.\pAnd he will make a world free of the monsters that once caused us so much pain.."))
-    applymovement(OBJ_EVENT_ID_FOLLOWER, Movement_InteractFACEPLAYER)
-    //Zanik runs to the player
-    namebox ("Zanik")
-    msgbox(format("Quick while he is monologuing {PLAYER}.\pGrab the Prince and run!"))
-    fadescreenswapbuffers(FADE_TO_BLACK)
-    subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MAIN_STORY, 11)                            //TBC
-    addvar(VAR_GAMEMODE_LEVEL_CAP, 5) //Level 55 cap.                                         //TBC
-    setvar(VAR_POKESCAPE_STORYMODE_PROGRESS, 250)                                             //TBC
-    setflag(FLAG_HAM_HIDEOUT_DEFEATED_GUARDS_TO_LEAVE)
-    call(FOLLOWER_REMOVE)
-    //warp outside to Lumbridge Forest
-    warp(MAP_LUMBRIDGE_FOREST, 28, 5)
+    warp(MAP_LUMBRIDGE_FOREST, 35, 18)
     waitstate
     releaseall
     end
 }
-
+movement movement_lock_walk_right_faceleft {
+    face_left
+    lock_facing_direction
+    walk_right
+    unlock_facing_direction
+    step_end
+}
+movement movement_lock_walk_left_faceright {
+    face_right
+    lock_facing_direction
+    walk_left
+    unlock_facing_direction
+    step_end
+}
+movement movement_lock_walk_right {
+    lock_facing_direction
+    walk_right
+    unlock_facing_direction
+    step_end
+}
+movement movement_lock_walk_left {
+    lock_facing_direction
+    walk_left
+    unlock_facing_direction
+    step_end
+}
+movement movement_playerandzanikflee {
+    walk_fast_down * 3
+    set_invisible
+    step_end
+}
+movement movement_playerandzanikflee2 {
+    walk_fast_down * 4
+    set_invisible
+    step_end
+}
 
 movement movement_HAM_Hideout_Johanhus_approachplayer {
     walk_left

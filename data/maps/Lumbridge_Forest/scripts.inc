@@ -74,8 +74,10 @@ LumForest_STATE_8:
 
 LumForest_STATE_9:
 	clearflag FLAG_TEMP_1D
-	setobjectxy 42, 28, 4
-	setobjectxyperm 42, 28, 4
+	clearflag FLAG_TEMP_15
+	setobjectxy 42, 35, 19
+	setobjectxyperm 42, 35, 19
+	setobjectmovementtype 42, MOVEMENT_TYPE_FACE_UP
 	goto LumForest_STATE_4
 
 LumForest_STATE_11:
@@ -97,41 +99,129 @@ LumForest_STATE_17:
 
 
 POST_WARP_ZANIK_EVENT::
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_FACE_DOWN
+	applymovement 42, Movement_InteractFACEUP
 	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox POST_WARP_ZANIK_EVENT_Text_1
-	applymovement 42, MOVEMENT_INTERACT_LEFT
-	waitmovement 0
+	closemessage
+	applymovement 42, MOVEMENT_INTERACT_RIGHT
+	namebox POST_WARP_ZANIK_EVENT_Text_0
 	msgbox POST_WARP_ZANIK_EVENT_Text_2
-	applymovement 43, MOVEMENT_INTERACT_RIGHT
+	closemessage
 	waitmovement 0
+	applymovement 28, MOVEMENT_INTERACT_LEFT
 	namebox POST_WARP_ZANIK_EVENT_Text_3
 	msgbox POST_WARP_ZANIK_EVENT_Text_4
-	namebox POST_WARP_ZANIK_EVENT_Text_0
-	msgbox POST_WARP_ZANIK_EVENT_Text_5
-	applymovement 42, MOVEMENT_INTERACT_DOWN
-	applymovement 43, MOVEMENT_INTERACT_DOWN
+	closemessage
 	waitmovement 0
-	namebox POST_WARP_ZANIK_EVENT_Text_3
+	applymovement 38, MOVEMENT_INTERACT_DOWN
+	namebox POST_WARP_ZANIK_EVENT_Text_5
 	msgbox POST_WARP_ZANIK_EVENT_Text_6
-	applymovement 43, movement_Post_HAM_Hideout_Prince_Exit
-	removeobject 43
+	closemessage
+	waitmovement 0
+	applymovement 43, MOVEMENT_INTERACT_LEFT
+	namebox POST_WARP_ZANIK_EVENT_Text_7
+	msgbox POST_WARP_ZANIK_EVENT_Text_8
+	closemessage
+	waitmovement 0
+	applymovement 42, MOVEMENT_INTERACT_UP
 	namebox POST_WARP_ZANIK_EVENT_Text_0
-	msgbox POST_WARP_ZANIK_EVENT_Text_7
-	hidenamebox
+	msgbox POST_WARP_ZANIK_EVENT_Text_9
+	closemessage
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	applymovement 43, MOVEMENT_WALKLEFT
+	waitmovement 0
+	namebox POST_WARP_ZANIK_EVENT_Text_7
+	msgbox POST_WARP_ZANIK_EVENT_Text_10
+	closemessage
+	applymovement 42, Movement_InteractFACERIGHT
+	waitmovement 0
+	namebox POST_WARP_ZANIK_EVENT_Text_0
+	msgbox POST_WARP_ZANIK_EVENT_Text_11
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
+	applymovement 42, Movement_InteractFACEUP
+	waitmovement 0
+	msgbox POST_WARP_ZANIK_EVENT_Text_12
 	closemessage
 	giveitem ITEM_BONECROSSBOW, 1
 	closemessage
 	namebox POST_WARP_ZANIK_EVENT_Text_0
-	msgbox POST_WARP_ZANIK_EVENT_Text_8
-	hidenamebox
+	msgbox POST_WARP_ZANIK_EVENT_Text_13
 	closemessage
-	applymovement 42, movement_Post_HAM_Hideout_Zanik_Exit
+	applymovement 42, ZanikLeavesForest
+	waitmovement 0
 	removeobject 42
+	namebox POST_WARP_ZANIK_EVENT_Text_7
+	msgbox POST_WARP_ZANIK_EVENT_Text_14
+	closemessage
+	applymovement 43, AliLeavesForest
+	applymovement 28, JimmyLeavesForest
+	applymovement 38, GoebieLeavesForest
+	waitmovement 0
+	removeobject 28
+	removeobject 38
+	removeobject 43
 	setflag FLAG_TEMP_1D
+	setflag FLAG_TEMP_15
 	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 255
 	release
 	end
 
+
+ZanikLeavesForest:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+AliLeavesForest:
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+JimmyLeavesForest:
+	delay_16
+	delay_16
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+GoebieLeavesForest:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 movement_Post_HAM_Hideout_Prince_Exit:
 	walk_down
@@ -1024,61 +1114,63 @@ POST_WARP_ZANIK_EVENT_Text_0:
 	.string "Zanik$"
 
 POST_WARP_ZANIK_EVENT_Text_1:
-	.string "We made it out somehow.$"
+	.string "We made it out somehow.\p"
+	.string "It looks like the prisoners managed to\n"
+	.string "escape too.$"
 
 POST_WARP_ZANIK_EVENT_Text_2:
-	.string "Hey you, sunburned human, are you all\n"
-	.string "right?$"
+	.string "Are you all alright?$"
 
 POST_WARP_ZANIK_EVENT_Text_3:
-	.string "Prince Ali$"
+	.string "Jimmy$"
 
 POST_WARP_ZANIK_EVENT_Text_4:
-	.string "My name is Prince Ali, goblin.\l"
-	.string "Thank you for saving me.$"
+	.string "Awh man I left my favourite chisel down\n"
+	.string "there!$"
 
 POST_WARP_ZANIK_EVENT_Text_5:
+	.string "Goebie-wan$"
+
+POST_WARP_ZANIK_EVENT_Text_6:
+	.string "Fank you for saving us.$"
+
+POST_WARP_ZANIK_EVENT_Text_7:
+	.string "Ali$"
+
+POST_WARP_ZANIK_EVENT_Text_8:
+	.string "Yes, thank you for saving us goblin.$"
+
+POST_WARP_ZANIK_EVENT_Text_9:
 	.string "It wasn't all me, most of it was\n"
 	.string "{PLAYER} here.$"
 
-POST_WARP_ZANIK_EVENT_Text_6:
-	.string "{PLAYER}.\l"
-	.string "Thank you for saving me.\p"
-	.string "H.A.M wanted the Kharid-ib saying it was\n"
-	.string "a vital ingredient to a ritual to bind a\l"
-	.string "monster to their will.\p"
-	.string "It has been passed down in my family\n"
-	.string "for ages.\l"
-	.string "But it seems I had to trade it for my\l"
-	.string "life for now.\p"
-	.string "We can not let H.A.M get away with this.\l"
-	.string "I will try to reach the other MvM\l"
-	.string "leaders and organize a front to stop\l"
-	.string "them.\p"
-	.string "But until then, I guess you do need to\n"
-	.string "beat me right?\l"
-	.string "I will meet you back in Al Kharid.\l"
-	.string "Let us battle and become ever stronger\l"
-	.string "together!$"
+POST_WARP_ZANIK_EVENT_Text_10:
+	.string "{PLAYER} is it?\p"
+	.string "We can not let H.A.M get away with this.\p"
+	.string "We should return to Al Kharid at once\n"
+	.string "and inform my fath-\p"
+	.string "I mean we should inform Osman about the\n"
+	.string "events that have transpired.$"
 
-POST_WARP_ZANIK_EVENT_Text_7:
-	.string "You save him from a bunch of\n"
-	.string "extremists.\l"
-	.string "We risk our lives in doing so.\l"
-	.string "And your thanks is a battle?\p"
-	.string "You humans are weird.\p"
-	.string "Either way, I should get involved as\n"
-	.string "well in tracking H.A.M.\p"
-	.string "For now I will retreat.\p"
+POST_WARP_ZANIK_EVENT_Text_11:
+	.string "I should get involved as well in\n"
+	.string "tracking H.A.M, whatever they are\l"
+	.string "planning I need to find out.\p"
+	.string "But for now I will retreat.$"
+
+POST_WARP_ZANIK_EVENT_Text_12:
 	.string "Hey {PLAYER}, as a thanks for the\n"
 	.string "help, I want you to have this!$"
 
-POST_WARP_ZANIK_EVENT_Text_8:
-	.string "it's a spare, but I hope it will do you\n"
-	.string "good.\p"
-	.string "I am going back to Dorgesh-Kaan for\n"
-	.string "now, but I hope to see you again.\p"
-	.string "Goodbye {PLAYER}.$"
+POST_WARP_ZANIK_EVENT_Text_13:
+	.string "Don't worry it's a spare, but I hope you\n"
+	.string "will find it useful.\p"
+	.string "Goodbye {PLAYER}, I hope to see you\n"
+	.string "again.$"
+
+POST_WARP_ZANIK_EVENT_Text_14:
+	.string "{PLAYER} I hope to see you at the\n"
+	.string "palace in Al Kharid.$"
 
 LUMBRIDGEFOREST_NPC_BOT1_Text_0:
 	.string "Bot$"
