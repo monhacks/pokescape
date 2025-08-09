@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_AL_KHARID",
-      "offset": -20,
+      "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_DESERT_ROUTE_1",
+      "offset": -20,
+      "direction": "down"
     }
   ],
   "object_events": [
