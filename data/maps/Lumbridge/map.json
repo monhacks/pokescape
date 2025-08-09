@@ -42,6 +42,11 @@
       "map": "MAP_ROUTE36",
       "offset": 44,
       "direction": "up"
+    },
+    {
+      "map": "MAP_DESERT_ROUTE_2",
+      "offset": 38,
+      "direction": "right"
     }
   ],
   "object_events": [

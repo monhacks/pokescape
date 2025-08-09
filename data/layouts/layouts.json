@@ -5045,7 +5045,7 @@
       "id": "LAYOUT_AL_KHARID",
       "name": "AlKharid_Layout",
       "width": 60,
-      "height": 43,
+      "height": 44,
       "primary_tileset": "gTileset_PokeScapeOutdoors",
       "secondary_tileset": "gTileset_AlKharid",
       "border_filepath": "data/layouts/AlKharid/border.bin",
@@ -9094,12 +9094,22 @@
     {
       "id": "LAYOUT_DESERT_ROUTE_1",
       "name": "Desert_Route_1_Layout",
-      "width": 80,
-      "height": 80,
+      "width": 90,
+      "height": 70,
       "primary_tileset": "gTileset_PokeScapeOutdoors",
       "secondary_tileset": "gTileset_AlKharid",
       "border_filepath": "data/layouts/Desert_Route_1/border.bin",
       "blockdata_filepath": "data/layouts/Desert_Route_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESERT_ROUTE_2",
+      "name": "Desert_Route_2_Layout",
+      "width": 30,
+      "height": 60,
+      "primary_tileset": "gTileset_PokeScapeOutdoors",
+      "secondary_tileset": "gTileset_AlKharid",
+      "border_filepath": "data/layouts/Desert_Route_2/border.bin",
+      "blockdata_filepath": "data/layouts/Desert_Route_2/map.bin"
     }
   ]
 }

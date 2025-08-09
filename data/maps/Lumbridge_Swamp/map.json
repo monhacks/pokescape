@@ -27,6 +27,11 @@
       "map": "MAP_WIZARDS_TOWER",
       "offset": 30,
       "direction": "left"
+    },
+    {
+      "map": "MAP_DESERT_ROUTE_2",
+      "offset": -14,
+      "direction": "right"
     }
   ],
   "object_events": [

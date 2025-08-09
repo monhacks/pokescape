@@ -1071,6 +1071,7 @@
 #define MAP_HAM_HIDEOUT_B3F                     (91 | (50 << 8))
 #define MAP_HAM_HIDEOUT_B4F                     (92 | (50 << 8))
 #define MAP_DESERT_ROUTE_1                      (93 | (50 << 8))
+#define MAP_DESERT_ROUTE_2                      (94 | (50 << 8))
 
 // gMapGroup_PokescapeWildernessRoutes
 #define MAP_ROUTE41                  (0 | (51 << 8))
