@@ -6281,7 +6281,7 @@ static const struct TrainerMon sParty_WISE_OLD_MAN_1[] = { //LUMBRIDGE FOREST
     .heldItem = ITEM_NONE
     },
     {
-    .ability = ABILITY_LEVITATE,
+    .ability = ABILITY_MAGIC_BOUNCE,
     .nature = NATURE_MODEST,
     .moves = {MOVE_CONFUSION, MOVE_THUNDER_WAVE, MOVE_CALM_MIND, MOVE_PSYCHIC_TERRAIN},
     .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 0, 252),
@@ -6325,7 +6325,7 @@ static const struct TrainerMon sParty_WISE_OLD_MAN_2[] = { //ICE DUNGEON
     .heldItem = ITEM_NONE
     },
     {
-    .ability = ABILITY_LEVITATE,
+    .ability = ABILITY_MAGIC_BOUNCE,
     .nature = NATURE_MODEST,
     .moves = {MOVE_PSYSHOCK, MOVE_PSYCHIC_TERRAIN, MOVE_THUNDER_WAVE, MOVE_CALM_MIND},
     .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 0, 252),
@@ -6369,7 +6369,7 @@ static const struct TrainerMon sParty_WISE_OLD_MAN_3[] = { //MUSA POINT
     .heldItem = ITEM_NONE
     },
     {
-    .ability = ABILITY_LEVITATE,
+    .ability = ABILITY_MAGIC_BOUNCE,
     .nature = NATURE_MODEST,
     .moves = {MOVE_ICE_BARRAGE, MOVE_PSYCHIC_TERRAIN, MOVE_EXPANDING_FORCE, MOVE_TRI_ATTACK},
     .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 0, 252),

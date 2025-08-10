@@ -47,7 +47,7 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     msgbox(format("And you are sure this will save the world of the scourge that are monsters Sigmund?"))
     applymovement(OBJ_EVENT_ID_SIGMUND, MOVEMENT_INTERACT_UP)
     namebox ("Sigmund")
-    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\pAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\nThe world will be at peace.\lJust like we have always wanted…"))
+    msgbox(format("Johanhus my friend.\pEveryday monsters cause problems around the world.\pAnd now adventurers, cooks, kings, queens, pawns and even goblins have decided to use them as their own to attain power.\pWhat we want is to prove to them that we hold absolute power.\pAnd then they will see that the only way for this world to be free is to kill and abandon every single monster in the world.\pAnd when that happens…\nThe world will finally be at peace.\lJust like we have always wanted…"))
     hidenamebox
     closemessage
     //Zanik and the player step into the room.
@@ -56,7 +56,7 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     applymovement(OBJ_EVENT_ID_ZANIK, movement_HAM_Hideout_finale_Player_Right_1)
     waitmovement(0)
     namebox ("Zanik")
-    msgbox(format("Not if we have anything to say with this!"))
+    msgbox(format("Not if we have anything to say about it!"))
     hidenamebox
     closemessage
     
@@ -138,7 +138,7 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_SIGMUND, Movement_InteractFACEDOWN)
     namebox ("Sigmund")
-    msgbox(format("Very well dear friend, I guess this is goodbye to you aswell pest."))
+    msgbox(format("Very well dear friend, I guess this is goodbye to you as well pest."))
     hidenamebox
     closemessage
     //Sigmund leaves the room
@@ -164,7 +164,7 @@ script STORYMODE_HAMHIDEOUT_BOSS_ROOM {
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACERIGHT)
     namebox ("Johanhus")
-    msgbox(format("So it seems my power is insignificant to yours.\pI guess it seems weird to use the power of monsters to fight when we ourselves use monsters?\pBut what choice do we have?\pYou and everyone else changed the rules.\pWhat is a dagger to a dragon?\pThe world is changing.\pAnd we adapted.\pBut this is not the world we wish to live in."))
+    msgbox(format("So it seems my power is insignificant to yours.\pI guess it must seem weird to you that we want to eradicate monsters when we use monsters' power to fight?\pBut what choice do we have?\pYou and everyone else changed the rules.\pWhat is a dagger to a dragon?\pThe world is changing.\pAnd we adapted.\pBut this is not the world we wish to live in."))
     hidenamebox
     closemessage
     applymovement(OBJ_EVENT_ID_ZANIK, Movement_InteractFACELEFT)

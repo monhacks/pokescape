@@ -672,7 +672,7 @@ script TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1
     waitmovement(0)
     delay(30)
     namebox ("Ozan")
-    msgbox(format("You did it, you resuced the Prince!"))
+    msgbox(format("You did it, you rescued the Prince!"))
     closemessage
     hidenamebox
     namebox ("Prince Ali")
@@ -720,13 +720,13 @@ script TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1
     clearflag(FLAG_TEMP_16)
     addobject(31)
     namebox ("Leela")
-    msgbox(format("My name is Leela, I heard some rumours about someone wanting to kidnap the prince so I digusied myself as him and went undercover.\pAppolgies for any deception {PLAYER}, it wasn't my intentions to lead you astray."))
+    msgbox(format("My name is Leela, I heard some rumours about someone wanting to kidnap the prince so I disguised myself as him and went undercover.\pApologies for any deception {PLAYER}, it wasn't my intention to lead you astray."))
     closemessage
     hidenamebox
     applymovement(30, MOVEMENT_INTERACT_DOWN)
     waitmovement(0)
     namebox ("Osman")
-    msgbox(format("Leela, I suggest you give me have a debriefing with me inside.\pMeanwhile, PLAYER was it?\pWhy don't you test yourself against the prince?\pCome Leela, we have much to discuss."))
+    msgbox(format("Leela, I suggest you have a debriefing with me inside.\pMeanwhile, {PLAYER} was it?\pWhy don't you test yourself against the prince?\pCome Leela, we have much to discuss."))
     closemessage
     hidenamebox
     applymovement(30, movement_osmanwalk_insidePalace)
