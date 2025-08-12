@@ -68,7 +68,6 @@ ALKHARID_STATE_11:
 	clearflag FLAG_TEMP_14
 	clearflag FLAG_TEMP_9
 	setflag FLAG_TEMP_13
-	clearflag FLAG_TEMP_15
 	setobjectxyperm 12, 30, 30
 	setobjectmovementtype 12, MOVEMENT_TYPE_FACE_RIGHT
 	setvar VAR_TEMP_C, 1
@@ -646,8 +645,11 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_1:
 	closemessage
 	hidenamebox
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_2
+	compare VAR_TEMP_1, 31
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_6
+	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_up_1
 	waitmovement 0
+TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_5:
 	namebox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_2
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_3
 	closemessage
@@ -658,10 +660,15 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_1:
 	closemessage
 	hidenamebox
 	waitmovement 0
-	playse SE_PIN
-	applymovement 12, MOVEMENT_SHOCKED_FACEPLAYER
+	compare VAR_TEMP_1, 31
+	goto_if_eq TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_10
+TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_9:
 	applymovement 29, MOVEMENT_WALK_UP
 	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP
+	waitmovement 0
+	delay 30
+	playse SE_PIN
+	applymovement 12, MOVEMENT_SHOCKED_FACEPLAYER
 	applymovement 30, Movement_InteractFACEDOWN
 	waitmovement 0
 	delay 30
@@ -669,43 +676,54 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_1:
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_5
 	closemessage
 	hidenamebox
+	applymovement 29, MOVEMENT_INTERACT_UP
 	namebox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_6
 	closemessage
 	hidenamebox
+	waitmovement 0
 	clearflag FLAG_TEMP_15
 	addobject 26
 	addobject 27
 	addobject 28
-	applymovement 26, Movement_InteractFACEDOWN
-	applymovement 27, Movement_InteractFACEDOWN
-	applymovement 28, Movement_InteractFACEDOWN
+	applymovement 27, Movement_PriceAliEscort1
+	applymovement 26, Movement_PriceAliEscort2
+	applymovement 28, Movement_PriceAliEscort3
 	namebox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_2
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_7
 	closemessage
 	hidenamebox
 	waitmovement 0
-	playse SE_PIN
-	applymovement 12, MOVEMENT_QUESTIONMARK_FACEDOWN
-	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK_FACEDOWN
+	applymovement 27, Movement_InteractFACEUP
+	applymovement 26, Movement_InteractFACEUP
+	applymovement 28, Movement_InteractFACEUP
 	waitmovement 0
 	namebox ALKHARID_NPC_4_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_8
 	closemessage
 	hidenamebox
+	playse SE_PIN
+	applymovement 12, MOVEMENT_QUESTIONMARK_FACEDOWN
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK_FACEDOWN
+	waitmovement 0
+	delay 30
+	applymovement 12, MOVEMENT_WALK_FAST_DOWN_1
+	waitmovement 0
 	applymovement 12, Movement_InteractFACERIGHT
 	namebox ALKHARID_NPC_13_Text_0
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_9
+	waitmovement 0
 	applymovement 12, Movement_InteractFACEDOWN
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_10
 	closemessage
 	hidenamebox
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	applymovement 29, MOVEMENT_INTERACT_LEFT
 	namebox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_11
 	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_12
 	closemessage
 	hidenamebox
-	applymovement 29, MOVEMENT_INTERACT_LEFT
 	waitmovement 0
 	setflag FLAG_TEMP_14
 	removeobject 29
@@ -722,9 +740,34 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_1:
 	closemessage
 	hidenamebox
 	applymovement 30, movement_osmanwalk_insidePalace
-	applymovement 32, movement_leelawalk_insidePalace
+	applymovement 31, movement_leelawalk_insidePalace
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
+	waitmovement 0
+	namebox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_16
+	closemessage
+	hidenamebox
+	applymovement 27, movement_aliwalk_insidePalace1
+	applymovement 26, movement_aliwalk_insidePalace2
+	applymovement 28, movement_aliwalk_insidePalace3
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACERIGHT
+	waitmovement 28
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	waitmovement 0
+	namebox ALKHARID_NPC_13_Text_0
+	msgbox TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_17
+	closemessage
+	hidenamebox
+	applymovement 28, movement_ozanwalk_awayfrompalace
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN
+	waitmovement 28
 	special RemoveCameraObject
+	setflag FLAG_TEMP_9
+	setflag FLAG_TEMP_15
+	setvar VAR_TEMP_C, 2
+	setvar VAR_POKESCAPE_STORYMODE_PROGRESS, 260
 	releaseall
 	end
 
@@ -734,8 +777,89 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_2:
 	waitmovement 0
 	goto TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_1
 
+TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_6:
+	applymovement OBJ_EVENT_ID_CAMERA, movement_walk_slow_northwest
+	waitmovement 0
+	goto TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_5
+
+TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_10:
+	applymovement 29, MOVEMENT_WALK_LEFT
+	applymovement OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_LEFT
+	waitmovement 0
+	goto TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_9
+
+
+movement_walk_slow_northwest:
+	walk_slow_diag_northwest
+	step_end
+
+movement_ozanwalk_awayfrompalace:
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+movement_aliwalk_insidePalace3:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+movement_aliwalk_insidePalace2:
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+movement_aliwalk_insidePalace1:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+MOVEMENT_WALK_FAST_DOWN_1:
+	walk_fast_down
+	step_end
 
 movement_leelawalk_insidePalace:
+	walk_up
 	walk_up
 	walk_right
 	walk_up
@@ -756,6 +880,42 @@ movement_osmanwalk_insidePalace:
 	walk_up
 	walk_up
 	set_invisible
+	step_end
+
+Movement_PriceAliEscort1:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Movement_PriceAliEscort2:
+	delay_16
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Movement_PriceAliEscort3:
+	delay_16
+	delay_16
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 TRIGGER_ALKHARID_HAM_EVENT_2::
@@ -868,6 +1028,10 @@ movement_walk_slow_down_2:
 
 movement_walk_slow_up_2:
 	walk_slow_up
+	walk_slow_up
+	step_end
+
+movement_walk_slow_up_1:
 	walk_slow_up
 	step_end
 
@@ -1430,10 +1594,11 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_4:
 	.string "Well you see-$"
 
 TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_5:
-	.string "You did it, you resuced the Prince!$"
+	.string "Wah? It's you!\p"
+	.string "You did it, you rescued the Prince!$"
 
 TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_6:
-	.string "Fath-{PAUSE 15} err…\n"
+	.string "Fath-{PAUSE 30} err…{PAUSE 30}\n"
 	.string "Osman, I must have a word with you in\l"
 	.string "private.$"
 
@@ -1461,19 +1626,30 @@ TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_13:
 TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_14:
 	.string "My name is Leela, I heard some rumours\n"
 	.string "about someone wanting to kidnap the\l"
-	.string "prince so I digusied myself as him and\l"
+	.string "prince so I disguised myself as him and\l"
 	.string "went undercover.\p"
-	.string "Appolgies for any deception {PLAYER},\n"
-	.string "it wasn't my intentions to lead you\l"
+	.string "Apologies for any deception {PLAYER},\n"
+	.string "it wasn't my intention to lead you\l"
 	.string "astray.$"
 
 TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_15:
-	.string "Leela, I suggest you give me have a\n"
-	.string "debriefing with me inside.\p"
-	.string "Meanwhile, PLAYER was it?\p"
+	.string "Leela, I suggest you have a debriefing\n"
+	.string "with me inside.\p"
+	.string "Meanwhile, {PLAYER} was it?\p"
 	.string "Why don't you test yourself against the\n"
 	.string "prince?\p"
 	.string "Come Leela, we have much to discuss.$"
+
+TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_16:
+	.string "I'm not entirely sure what is going on,\n"
+	.string "but you're a challenger correct?\p"
+	.string "I'll meet you inside if you wish to\n"
+	.string "battle.$"
+
+TRIGGER_ALKHARID_HAM_EVENT_POST_FOREST_1_Text_17:
+	.string "…\p"
+	.string "This is too much for one day.\p"
+	.string "I'm going to get a kebab.$"
 
 TRIGGER_ALKHARID_HAM_EVENT_2_Text_0:
 	.string "???$"

@@ -491,15 +491,14 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_5:
 	.string "abandon every single monster in the\l"
 	.string "world.\p"
 	.string "And when that happens…\n"
-	.string "The world will be at peace.\l"
+	.string "The world will finally be at peace.\l"
 	.string "Just like we have always wanted…$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_6:
 	.string "Zanik$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_7:
-	.string "Not if we have anything to say with\n"
-	.string "this!$"
+	.string "Not if we have anything to say about it!$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_8:
 	.string "Looks like some monsters just entered\n"
@@ -524,7 +523,7 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_12:
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_13:
 	.string "Very well dear friend, I guess this is\n"
-	.string "goodbye to you aswell pest.$"
+	.string "goodbye to you as well pest.$"
 
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_14:
 	.string "Look, I get it.\p"
@@ -544,9 +543,9 @@ STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_15:
 STORYMODE_HAMHIDEOUT_BOSS_ROOM_Text_16:
 	.string "So it seems my power is insignificant to\n"
 	.string "yours.\p"
-	.string "I guess it seems weird to use the power\n"
-	.string "of monsters to fight when we ourselves\l"
-	.string "use monsters?\p"
+	.string "I guess it must seem weird to you that\n"
+	.string "we want to eradicate monsters when we\l"
+	.string "use monsters' power to fight?\p"
 	.string "But what choice do we have?\p"
 	.string "You and everyone else changed the\n"
 	.string "rules.\p"

@@ -362,7 +362,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GYMLEADER_PRINCE_ALI",
-      "x": 21,
+      "x": 22,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -375,7 +375,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GUARD_ALKHAIRD",
-      "x": 20,
+      "x": 22,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",

@@ -3153,6 +3153,8 @@ extern const u8 gText_Post_FALADORGYM[];
 extern const u8 gText_Pre_Crandor[];
 extern const u8 gText_Pre_BKF[];
 extern const u8 gText_Post_BKF[];
+extern const u8 gText_Post_HAMHIDEOUT[];
+
 
 extern const u8 gText_PubCrawlInfo[];
 

@@ -916,6 +916,7 @@ static const struct MenuAction MultichoiceList_STORYMODE_STATE[] =
     {gText_Pre_Crandor},
     {gText_Pre_BKF},
     {gText_Post_BKF},
+    {gText_Post_HAMHIDEOUT},
     {gText_Exit},
 };
 static const struct MenuAction MultichoiceList_PUB[] =
