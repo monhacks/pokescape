@@ -4628,6 +4628,20 @@ extern const u32 gItemIconPalette_sweets_red[];
 extern const u32 gItemIconPalette_sweets_purple[];
 extern const u32 gItemIcon_sweets_many[];
 extern const u32 gItemIconPalette_sweets_many[];
+extern const u32 gItemIcon_herb_def[];
+extern const u32 gItemIconPalette_herb_def[];
+extern const u32 gItemIcon_herb_atk[];
+extern const u32 gItemIconPalette_herb_atk[];
+extern const u32 gItemIcon_herb_spdef[];
+extern const u32 gItemIconPalette_herb_spdef[];
+extern const u32 gItemIcon_herb_spatk[];
+extern const u32 gItemIconPalette_herb_spatk[];
+extern const u32 gItemIcon_herb_speed[];
+extern const u32 gItemIconPalette_herb_speed[];
+
+
+
+
 
 
 

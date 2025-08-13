@@ -1431,8 +1431,12 @@
 #define ITEM_EASTER_EGG		        (FINAL_VANILLA_ITEM + 288 )
 #define ITEM_OUTFIT_BOX             (FINAL_VANILLA_ITEM + 289 )
 #define ITEM_BAR_CRAWL_BATTLE_CARD	(FINAL_VANILLA_ITEM + 290 )
+#define ITEM_BASHFUL_MINT	        (FINAL_VANILLA_ITEM + 291 )
+#define ITEM_DOCILE_MINT	        (FINAL_VANILLA_ITEM + 292 )
+#define ITEM_HARDY_MINT	            (FINAL_VANILLA_ITEM + 293 )
+#define ITEM_QUIRKY_MINT	        (FINAL_VANILLA_ITEM + 294 )
 
-#define ITEMS_COUNT (ITEM_BAR_CRAWL_BATTLE_CARD + 1) //1106
+#define ITEMS_COUNT (ITEM_QUIRKY_MINT + 1) //1106 - ITEM_BAR_CRAWL_BATTLE_CARD
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -2900,9 +2900,20 @@ const u32 gItemIconPalette_BatShish[] = INCBIN_U32("graphics/items/pokescape_ico
 const u32 gItemIcon_EelSushi[] = INCBIN_U32("graphics/items/pokescape_icons/eel_sushi.4bpp.lz");
 const u32 gItemIconPalette_EelSushi[] = INCBIN_U32("graphics/items/pokescape_icon_palettes/eel_sushi.gbapal.lz");
 
+const u32 gItemIcon_herb_def[] = INCBIN_U32("graphics/items/pokescape_icons/herb_def.4bpp.lz");
+const u32 gItemIconPalette_herb_def[] = INCBIN_U32("graphics/items/pokescape_icon_palettes/herb_def.gbapal.lz");
 
+const u32 gItemIcon_herb_atk[] = INCBIN_U32("graphics/items/pokescape_icons/herb_atk.4bpp.lz");
+const u32 gItemIconPalette_herb_atk[] = INCBIN_U32("graphics/items/pokescape_icon_palettes/herb_atk.gbapal.lz");
 
+const u32 gItemIcon_herb_spdef[] = INCBIN_U32("graphics/items/pokescape_icons/herb_spdef.4bpp.lz");
+const u32 gItemIconPalette_herb_spdef[] = INCBIN_U32("graphics/items/pokescape_icon_palettes/herb_spdef.gbapal.lz");
 
+const u32 gItemIcon_herb_spatk[] = INCBIN_U32("graphics/items/pokescape_icons/herb_spatk.4bpp.lz");
+const u32 gItemIconPalette_herb_spatk[] = INCBIN_U32("graphics/items/pokescape_icon_palettes/herb_spatk.gbapal.lz");
+
+const u32 gItemIcon_herb_speed[] = INCBIN_U32("graphics/items/pokescape_icons/herb_speed.4bpp.lz");
+const u32 gItemIconPalette_herb_speed[] = INCBIN_U32("graphics/items/pokescape_icon_palettes/herb_speed.gbapal.lz");
 
 
 

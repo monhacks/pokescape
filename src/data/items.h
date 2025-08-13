@@ -988,7 +988,7 @@ const struct Item gItems[] =
 //mints
     [ITEM_ADAMANT_MINT] = 
     {
-        .name = _("Adamant Mint"),
+        .name = _("Cardamaim"),
         //.itemId = ITEM_ADAMANT_MINT,
         .price = 20000,
         .description = sAdamantMintDesc,
@@ -999,7 +999,7 @@ const struct Item gItems[] =
     },
     [ITEM_BOLD_MINT] = 
     {
-        .name = _("Bold Mint"),
+        .name = _("Wergali"),
         //.itemId = ITEM_BOLD_MINT,
         .price = 20000,
         .description = sBoldMintDesc,
@@ -1010,7 +1010,7 @@ const struct Item gItems[] =
     },
     [ITEM_BRAVE_MINT] = 
     {
-        .name = _("Brave Mint"),
+        .name = _("Papreaper"),
         //.itemId = ITEM_BRAVE_MINT,
         .price = 20000,
         .description = sBraveMintDesc,
@@ -1021,7 +1021,7 @@ const struct Item gItems[] =
     },
     [ITEM_CALM_MINT] = 
     {
-        .name = _("Calm Mint"),
+        .name = _("Irit"),
         //.itemId = ITEM_CALM_MINT,
         .price = 20000,
         .description = sCalmMintDesc,
@@ -1032,7 +1032,7 @@ const struct Item gItems[] =
     },
     [ITEM_CAREFUL_MINT] = 
     {
-        .name = _("Careful Mint"),
+        .name = _("Torstol"),
         //.itemId = ITEM_CAREFUL_MINT,
         .price = 20000,
         .description = sCarefulMintDesc,
@@ -1043,7 +1043,7 @@ const struct Item gItems[] =
     },
     [ITEM_GENTLE_MINT] = 
     {
-        .name = _("Gentle Mint"),
+        .name = _("Avantoe"),
         //.itemId = ITEM_GENTLE_MINT,
         .price = 20000,
         .description = sGentleMintDesc,
@@ -1054,7 +1054,7 @@ const struct Item gItems[] =
     },
     [ITEM_HASTY_MINT] = 
     {
-        .name = _("Hasty Mint"),
+        .name = _("Tarromin"),
         //.itemId = ITEM_HASTY_MINT,
         .price = 20000,
         .description = sHastyMintDesc,
@@ -1065,7 +1065,7 @@ const struct Item gItems[] =
     },
     [ITEM_IMPISH_MINT] = 
     {
-        .name = _("Impish Mint"),
+        .name = _("Cadantine"),
         //.itemId = ITEM_IMPISH_MINT,
         .price = 20000,
         .description = sImpishMintDesc,
@@ -1076,7 +1076,7 @@ const struct Item gItems[] =
     },
     [ITEM_JOLLY_MINT] = 
     {
-        .name = _("Jolly Mint"),
+        .name = _("Harralander"),
         //.itemId = ITEM_JOLLY_MINT,
         .price = 20000,
         .description = sJollyMintDesc,
@@ -1087,7 +1087,7 @@ const struct Item gItems[] =
     },
     [ITEM_LAX_MINT] = 
     {
-        .name = _("Lax Mint"),
+        .name = _("Kwuarm"),
         //.itemId = ITEM_LAX_MINT,
         .price = 20000,
         .description = sLaxMintDesc,
@@ -1098,7 +1098,7 @@ const struct Item gItems[] =
     },
     [ITEM_LONELY_MINT] = 
     {
-        .name = _("Lonely Mint"),
+        .name = _("Parslay"),
         //.itemId = ITEM_LONELY_MINT,
         .price = 20000,
         .description = sLonelyMintDesc,
@@ -1109,7 +1109,7 @@ const struct Item gItems[] =
     },
     [ITEM_MILD_MINT] = 
     {
-        .name = _("Mild Mint"),
+        .name = _("Buckthorn"),
         //.itemId = ITEM_MILD_MINT,
         .price = 20000,
         .description = sMildMintDesc,
@@ -1120,7 +1120,7 @@ const struct Item gItems[] =
     },
     [ITEM_MODEST_MINT] = 
     {
-        .name = _("Modest Mint"),
+        .name = _("Lycopus"),
         //.itemId = ITEM_MODEST_MINT,
         .price = 20000,
         .description = sModestMintDesc,
@@ -1131,7 +1131,7 @@ const struct Item gItems[] =
     },
     [ITEM_NAIVE_MINT] = 
     {
-        .name = _("Naive Mint"),
+        .name = _("Ranarr"),
         //.itemId = ITEM_NAIVE_MINT,
         .price = 20000,
         .description = sNaiveMintDesc,
@@ -1142,7 +1142,7 @@ const struct Item gItems[] =
     },
     [ITEM_NAUGHTY_MINT] = 
     {
-        .name = _("Naughty Mint"),
+        .name = _("Consecrated"),
         //.itemId = ITEM_NAUGHTY_MINT,
         .price = 20000,
         .description = sNaughtyMintDesc,
@@ -1153,7 +1153,7 @@ const struct Item gItems[] =
     },
     [ITEM_QUIET_MINT] = 
     {
-        .name = _("Quiet Mint"),
+        .name = _("Magebane"),
         //.itemId = ITEM_QUIET_MINT,
         .price = 20000,
         .description = sQuietMintDesc,
@@ -1164,7 +1164,7 @@ const struct Item gItems[] =
     },
     [ITEM_RASH_MINT] = 
     {
-        .name = _("Rash Mint"),
+        .name = _("Wormwood"),
         //.itemId = ITEM_RASH_MINT,
         .price = 20000,
         .description = sRashMintDesc,
@@ -1175,7 +1175,7 @@ const struct Item gItems[] =
     },
     [ITEM_RELAXED_MINT] = 
     {
-        .name = _("Relaxed Mint"),
+        .name = _("Bloodweed"),
         //.itemId = ITEM_RELAXED_MINT,
         .price = 20000,
         .description = sRelaxedMintDesc,
@@ -1186,7 +1186,7 @@ const struct Item gItems[] =
     },
     [ITEM_SASSY_MINT] = 
     {
-        .name = _("Sassy Mint"),
+        .name = _("Lantadyme"),
         //.itemId = ITEM_SASSY_MINT,
         .price = 20000,
         .description = sSassyMintDesc,
@@ -1197,7 +1197,7 @@ const struct Item gItems[] =
     },
     [ITEM_SERIOUS_MINT] = 
     {
-        .name = _("Serious Mint"),
+        .name = _("Toadflax"),
         //.itemId = ITEM_SERIOUS_MINT,
         .price = 20000,
         .description = sSeriousMintDesc,
@@ -1208,8 +1208,7 @@ const struct Item gItems[] =
     },
     [ITEM_TIMID_MINT] = 
     {
-        .name = _("Timid Mint"),
-        //.itemId = ITEM_TIMID_MINT,
+        .name = _("Guam"),
         .price = 20000,
         .description = sTimidMintDesc,
         .pocket = POCKET_ITEMS,
@@ -1217,6 +1216,47 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Mints,
         .secondaryId = NATURE_TIMID,
     },
+    [ITEM_BASHFUL_MINT] = 
+    {
+        .name = _("Valerian"),
+        .price = 20000,
+        .description = sBashfulMintDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_Mints,
+        .secondaryId = NATURE_BASHFUL,
+    },
+    [ITEM_DOCILE_MINT] = 
+    {
+        .name = _("Arbuck"),
+        .price = 20000,
+        .description = sDocileMintDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_Mints,
+        .secondaryId = NATURE_DOCILE,
+    },
+    [ITEM_HARDY_MINT] = 
+    {
+        .name = _("Corianger"),
+        .price = 20000,
+        .description = sHardyMintDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_Mints,
+        .secondaryId = NATURE_HARDY,
+    },
+    [ITEM_QUIRKY_MINT] = 
+    {
+        .name = _("Marrentil"),
+        .price = 20000,
+        .description = sQuirkyMintDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_Mints,
+        .secondaryId = NATURE_QUIRKY,
+    },
+    
 
 // Candy
 
