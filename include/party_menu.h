@@ -100,6 +100,7 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+void ItemUseCB_Mints(u8 taskId, TaskFunc task);
 // Start qol_field_moves
 // These are all moved from src/party_menu.c
 u8 CanMonLearnTMTutor(struct Pokemon *, u16, u8);
