@@ -470,7 +470,7 @@ const u32 gTrainerFrontPic_lord_daquarius[] = INCBIN_U32("graphics/trainers/poke
 const u32 gTrainerFrontPic_elite_black_knight[] = INCBIN_U32("graphics/trainers/pokescape/front_pics/TRAINER/elite_black_knight.4bpp.lz");
 const u32 gTrainerFrontPic_angrennouille[] = INCBIN_U32("graphics/trainers/pokescape/front_pics/TRAINER/angrennouille.4bpp.lz");
 const u32 gTrainerFrontPic_ham_johanhus[] = INCBIN_U32("graphics/trainers/pokescape/front_pics/TRAINER/ham_johanhus.4bpp.lz");
-
+const u32 gTrainerFrontPic_ham_sigmund[] = INCBIN_U32("graphics/trainers/pokescape/front_pics/TRAINER/ham_sigmund.4bpp.lz");
 
 //POKESCAPE PALETTES
 const u32 gTrainerPalette_a_nub_tot[] = INCBIN_U32("graphics/trainers/pokescape/palettes/a_nub_tot.gbapal.lz");
@@ -648,4 +648,5 @@ const u32 gTrainerPalette_lord_daquarius[] = INCBIN_U32("graphics/trainers/pokes
 const u32 gTrainerPalette_elite_black_knight[] = INCBIN_U32("graphics/trainers/pokescape/palettes/elite_black_knight.gbapal.lz");
 const u32 gTrainerPalette_angrennouille[] = INCBIN_U32("graphics/trainers/pokescape/palettes/angrennouille.gbapal.lz");
 const u32 gTrainerPalette_ham_johanhus[] = INCBIN_U32("graphics/trainers/pokescape/palettes/ham_johanhus.gbapal.lz");
+const u32 gTrainerPalette_ham_sigmund[] = INCBIN_U32("graphics/trainers/pokescape/palettes/ham_sigmund.gbapal.lz");
 
