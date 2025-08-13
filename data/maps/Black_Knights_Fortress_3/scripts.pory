@@ -134,7 +134,7 @@ script BKFORT_3F_NPC_2
     lock
     faceplayer
     namebox ("Black Knight")
-    msgbox(format("I can't believe I spend all day down here torturing people…\p{PAUSE 15}THIS IS THE BEST JOB EVER!"))
+    msgbox(format("I can't believe I spend all day down here torturing people…\pTHIS IS THE BEST JOB EVER!"))
     closemessage
     hidenamebox
     release

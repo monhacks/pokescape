@@ -28,7 +28,7 @@ script NPC_BLACK_ARM_2 {
 	lock
 	faceplayer
     namebox ("Thief")
-	msgbox(format("I heard that Scarface Pete has the candlesticks, but I have no idea how to get past his security…\p{PAUSE 15}Hey!\pForget you heard anything, or else!"))
+	msgbox(format("I heard that Scarface Pete has the candlesticks, but I have no idea how to get past his security…\pHey!\nForget you heard anything, or else!"))
     closemessage
     hidenamebox
 	release

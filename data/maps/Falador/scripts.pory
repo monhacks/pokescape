@@ -518,7 +518,7 @@ script NPC_FALADOR_APPRENTICE
 			checkmoney(5000, 0)
 				if (!var(VAR_RESULT))
 				{
-					msgbox(format("…{PAUSE 32}…{PAUSE 32} Uh…\p{PAUSE 32}You do not have enough money."))
+					msgbox(format("…{PAUSE 32}…{PAUSE 32} Uh…\n{PAUSE 32}You do not have enough money."))
 					waitmessage
 					hidenamebox
 					release
@@ -1590,7 +1590,7 @@ script FROGEEL_RIVAL_2 {
             msgbox(format("{PLAYER}… You agreed that you were going to let me leave.\pYou haven't changed your mind now, have you?"), MSGBOX_YESNO)
             if (!var(VAR_RESULT))
             { 
-                msgbox(format("Good, now leave me to plan my next heis-\p{PAUSE 15}You heard nothing…"))
+                msgbox(format("Good, now leave me to plan my next heis-\pYou heard nothing…"))
                 closemessage
                 hidenamebox
                 setvar(VAR_FROGEEL_RIVAL, 7)

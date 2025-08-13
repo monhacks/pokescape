@@ -10,7 +10,7 @@ script WOM_BED_RIGHT
 	msgbox(format("It's a fairly ordinary bed, but…"))
 	applymovement (OBJ_EVENT_ID_PLAYER, movement_WOM_BED_RIGHT)
     waitmovement(0)
-	msgbox(format("Was that a hand!?\p{PAUSE 15}You decide it's best not to try to sleep in this bed."))
+	msgbox(format("Was that a hand!?\pYou decide it's best not to try to sleep in this bed."))
 	release
 	end
 }
@@ -27,7 +27,7 @@ script WOM_BED_BOTTOM
 	msgbox(format("It's a fairly ordinary bed, but…"))
 	applymovement (OBJ_EVENT_ID_PLAYER, movement_WOM_BED_BOTTOM)
     waitmovement(0)
-	msgbox(format("Was that a hand!?\p{PAUSE 15}You decide it's best not to try to sleep in this bed."))
+	msgbox(format("Was that a hand!?\pYou decide it's best not to try to sleep in this bed."))
 	release
 	end
 }
@@ -51,7 +51,7 @@ script WOM_BED_CORNER
         applymovement (OBJ_EVENT_ID_PLAYER, movement_WOM_BED_RIGHT)
     	waitmovement(0)
     }
-	msgbox(format("Was that a hand!?\p{PAUSE 15}You decide it's best not to try to sleep in this bed."))
+	msgbox(format("Was that a hand!?\pYou decide it's best not to try to sleep in this bed."))
 	release
 	end
 }

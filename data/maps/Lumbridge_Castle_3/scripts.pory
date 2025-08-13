@@ -322,11 +322,11 @@ script HANS_GYM_LUMBRIDGE {
 
 script SIGMUND_DRAWERS {
     lock
-    msgbox(format("You rummage through the drawers…\p{PAUSE 15}")) 
+    msgbox(format("You rummage through the drawers…{PAUSE 15}…")) 
     if (!flag(FLAG_BADGE02_GET)){
         applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_QUESTIONMARK)
         waitmovement(0)
-        msgbox(format("and find a set of pink robes?"))
+        msgbox(format("You find a set of pink robes."))
         closemessage
         applymovement(3, MOVEMENT_EXCLAMATIONMARK_JUMP_RIGHT)
         waitmovement(0)

@@ -31,7 +31,7 @@ script LOWESBOOK {
     lock
     msgbox(format("There is a journal on the table.\pDo you want to read it?"), MSGBOX_YESNO)
         if (var(VAR_RESULT)){
-            msgbox(format("I've heard rumours that Robin lives across the River Salve.\pImagine living so close to THE Robin.\pA Master Bowman.\pI'd love to meet him one day, and get some tips.\pI don't think anybody else in Gielinor shares my love of archery like he does.\p{PAUSE 15}The journal continues on sharing Lowe's admiration of Robin for many, many, many more pages.\pYou decide not to continue reading…"))
+            msgbox(format("I've heard rumours that Robin lives across the River Salve.\pImagine living so close to THE Robin.\pA Master Bowman.\pI'd love to meet him one day, and get some tips.\pI don't think anybody else in Gielinor shares my love of archery like he does.\pThe journal continues on sharing Lowe's admiration of Robin for many, many, many more pages.\pYou decide not to continue reading…"))
             closemessage
         }
         else {

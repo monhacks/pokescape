@@ -237,15 +237,15 @@ script MODEST_SAMUEL_Battle
 script MILL_LANE_MILL_HUNTER_NPC {
     lock
     faceplayer
-    namebox("Chymp")
+    namebox("Keb0t")
     random(7)
     switch (var(VAR_RESULT)) {
         case 0: 
-            msgbox(format("The kebbits you can catch around here evolve at level 15.\pIf they have higher speed than defence, then they'll evolve into Wild Kebbits.\pIf they have higher speed than defence, then they'll evolve into Spotted Kebbits.\pAnd if both of those stats are the same, they'll evolve into Polar Kebbits.\p"))
+            msgbox(format("The kebbits you can catch around here evolve at quite low levels.\pIf they have higher speed than defence, then they'll evolve into Wild Kebbits.\pIf they have higher speed than defence, then they'll evolve into Spotted Kebbits.\pAnd if both of those stats are the same, they'll evolve into Polar Kebbits."))
         case 1: 
             msgbox(format("I really, really love Kebbits!\pI'm happy to share my knowledge with you if you want to keep talking."))
         case 2: 
-            msgbox(format("Did you know that there are 15 different types of kebbits?\pThey're all NORMAL type, but sometimes when they evolve they gain a secondary typing.\pYou'll have to discover those for yourself!"))
+            msgbox(format("Did you know that there are 15 different types of kebbits?\pThey're all NORMAL-type, but sometimes when they evolve they gain a secondary typing.\pYou'll have to discover those for yourself!"))
         case 3: 
             msgbox(format("If you teach a Barbed Kebbit a POISON move, it starts to look very ill.\pI love Kebbits too much to do it myself."))
         case 4: 

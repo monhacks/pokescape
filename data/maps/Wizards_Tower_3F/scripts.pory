@@ -46,7 +46,7 @@ script NPC_WIZARDSTOWER_LESSERDEMON_GATE
 	end
     }
     else {
-    msgbox(format("As you approach the gate…\p{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\pNothing interesting happens…"))
+    msgbox(format("As you approach the gate…\p…{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\pNothing interesting happens…"))
     closemessage
 	release
 	end

@@ -158,7 +158,7 @@ script ROUTE20_BLOCKADE_SOUTH
 {
     faceplayer
     namebox ("Sailor")
-    msgbox(format("Blasted fish leapt out the water and stole me leg!\pI can't let you past until I've caught it…\p{PAUSE 15}I'm comin' for ye Peggy!"))
+    msgbox(format("Blasted fish leapt out the water and stole me leg!\pI can't let you past until I've caught it…\pI'm comin' for ye Peggy!"))
     closemessage
     hidenamebox
     applymovement(OBJ_EVENT_ID_PLAYER, MOVEMENT_WALK_UP)
@@ -234,7 +234,7 @@ script FROGEEL_RIVAL_4 {
         msgbox(format("Ouch! It's not easy being a frog monarch in the making."))
         waitmovement(0)
         faceplayer
-        msgbox(format("Oh hi {PLAYER}.\p{PAUSE 15}Hey, are you following me?\p{PAUSE 15}Pure chance?\nYeah right.\pListen, I am not up to anything shady this time.\pI haven't stolen anything.\p{PAUSE 32}Yet.\pListen, when I am King of The Land of the Frogs, you might regret your tone here.\nDon't you think?"), MSGBOX_YESNO)
+        msgbox(format("Oh hi {PLAYER}.\pHey, are you following me?\pPure chance?\nYeah right.\pListen, I am not up to anything shady this time.\pI haven't stolen anything.\pYet.\pListen, when I am King of The Land of the Frogs, you might regret your tone here.\nDon't you think?"), MSGBOX_YESNO)
         if (var(VAR_RESULT)) { 
             msgbox(format("That's right.\pNow, make sure not to tell my future Frog Princess to be about our encounter with the barbarian lady…"))
             closemessage
@@ -293,7 +293,7 @@ script BATTLE_FROGEEL_RIVAL_4 {
         trainerbattle_no_intro(TRAINER_FROGEEL_RIVAL_4_WATER, format("Seeya!"))
     }
     namebox("Angrenouille")
-    msgbox(format("A\nAAA\nAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA!\p{PAUSE 15}Oh, you did not hear the last part?\pSorry.\pAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!"))
+    msgbox(format("A\nAAA\nAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA\pAAAAAAAAAAAAAAAAA!\pOh, you did not hear the last part?\pSorry.\pAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!"))
     closemessage
     hidenamebox
     playse(SE_FLEE)

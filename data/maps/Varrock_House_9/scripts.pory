@@ -6,7 +6,7 @@ script NPC_VARROCK_ZMI_1 {
 	lock
 	faceplayer
     namebox ("Zamorak Mage")
-	msgbox(format("We are a group of mages in service to Zamorak.\pOur group is called the Zamorak Magical Institute, or Z.M.I. for short.\pThere are too many Saradominist groups in these lands for us to practice freely, so we have to hide in the shadows.\p{PAUSE 15}Perhaps if you can prove yourself in future, we can share some of our knowledge with you."))
+	msgbox(format("We are a group of mages in service to Zamorak.\pOur group is called the Zamorak Magical Institute, or Z.M.I. for short.\pThere are too many Saradominist groups in these lands for us to practice freely, so we have to hide in the shadows.\pPerhaps if you can prove yourself in future, we can share some of our knowledge with you."))
     closemessage
     hidenamebox
 	release

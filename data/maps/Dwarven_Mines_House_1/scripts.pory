@@ -22,7 +22,7 @@ script NPC_Dwarven_Mines_House_3   //Dwarf - top left
 	lock
 	faceplayer
     namebox ("Dwarf")
-	msgbox(format("We harness the fire from baby dragons to fuel our forges.\p{PAUSE 15}Do you know how difficult it is to try and tame an adult dragon?!"))
+	msgbox(format("We harness the fire from baby dragons to fuel our forges.\pDo you know how difficult it is to try and tame an adult dragon?!"))
     waitmessage
     hidenamebox
 	release

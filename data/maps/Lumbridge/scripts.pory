@@ -321,7 +321,11 @@ script Lumbridge_LACHTOPHER
 		faceplayer
 		namebox("Lachtopher")
 		msgbox(format("Wow!\pYou're even more broke than me!\pHere's some money noob."))
+		closemessage
+		playse(SE_ITEMFINDER)
+    	msgbox(format("{PLAYER} recieved 200 GP."))
 		addmoney (200, 0)
+		closemessage
 		hidenamebox
 		release
 		end
@@ -437,7 +441,7 @@ script NPC_LumbridgeBridge
 	lock
 	faceplayer
 	namebox("Fisherman")
-	msgbox(format("Is it just me or is this really long?\pNah, I must be imagining it.\p{PAUSE 15}Wait, I'm SURE the river used to be wider than this…"))
+	msgbox(format("Is it just me or is this bridge really long?\pNah, I must be imagining it."))
 	release
 	end
 }
@@ -715,7 +719,7 @@ script Lumbridge_GeneralStore_NPC2
 	lock
 	faceplayer
 	namebox("H1PYRaNG3r59")
-	msgbox(format("There are a lot of goblins around these parts, you might want to stock up on a Chocolate Sunday or two!.\pThey can cure poison, and this will prepare you for the worst."))
+	msgbox(format("There are a lot of goblins around these parts, you might want to stock up on a Chocolate Sunday or two.\pThey can cure poison, and this will prepare you for the worst."))
 	release
 	end
 }	

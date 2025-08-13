@@ -448,7 +448,7 @@ script BATTLE_ROUTE1_RIVER_TRAINER_1
 {
     trainerbattle_single(TRAINER_ROUTE1_RIVER_TRAINER_1, format("No! My peace! You've ruined it!"),format("I just need an escape, okay?!"))
     namebox ("Awenix")
-    msgbox(format("I love spending time on the water like this.\pIt helps me escape from life's responsibilities for a moment.\pLike my wife and children.\p{PAUSE 15}Don't tell them you found me here!."))
+    msgbox(format("I love spending time on the water like this.\pIt helps me escape from life's responsibilities for a moment.\pLike my wife and children.\p…{PAUSE 15} Don't tell them you found me here!"))
     hidenamebox
     release
     end

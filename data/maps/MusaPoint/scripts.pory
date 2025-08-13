@@ -1756,7 +1756,7 @@ script SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_3 {
 	case 2:
 		msgbox(format("Can you hear that sound?\pThey've got more than just humans down here…"))
 	case 3:
-		msgbox(format("That sound!\pThey're training!\p{PAUSE 15}We need to find out what they're up to and stop them quickly!"))
+		msgbox(format("That sound!\pThey're training!\pWe need to find out what they're up to and stop them quickly!"))
 	}
 	hidenamebox
 	closemessage

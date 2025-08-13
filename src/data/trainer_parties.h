@@ -8103,22 +8103,22 @@ static const struct TrainerMon sParty_Route9_ItsWill[] = {
 
 static const struct TrainerMon sParty_ModestSamuel[] = {
     {
-    .lvl = 5,
+    .lvl = 16,
     .species = SPECIES_SPIDERLING,
     .nature = NATURE_MODEST,
     },
     {
-    .lvl = 6,
+    .lvl = 17,
     .species = SPECIES_SPIDERLING,
     .nature = NATURE_MODEST,
     },
     {
-    .lvl = 6,
+    .lvl = 16,
     .species = SPECIES_SPIDERLING,
     .nature = NATURE_MODEST,
     },
     {
-    .lvl = 6,
+    .lvl = 20,
     .species = SPECIES_SPIDERLING,
     .nature = NATURE_MODEST,
     .isShiny = TRUE,
