@@ -1272,7 +1272,7 @@ ALKHARID_GYM_ItsIsPrinceAli_Text_0:
 
 ALKHARID_GYM_ItsIsPrinceAli_Text_1:
 	.string "…{PAUSE 16}…{PAUSE 16}\n"
-	.string "Just Kidding!\p"
+	.string "Just kidding!\p"
 	.string "It was me all along.$"
 
 GYM_NPC_7_Text_0:

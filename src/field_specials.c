@@ -2395,6 +2395,16 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
+    case SCROLL_MULTI_SAVEFILE_EDITOR:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 17;
+        task->tTop = 1;
+        task->tWidth = 11;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
     default:
         gSpecialVar_Result = MULTI_B_PRESSED;
         DestroyTask(taskId);
@@ -2593,7 +2603,21 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_GraniteMaul,
         gText_KrakenTentacle,
         gText_Exit
+    },
+    [SCROLL_MULTI_SAVEFILE_EDITOR] =
+    {
+        gText_BEGINNING,
+        gText_Pre_WIZARDSTOWER,
+        gText_Post_DRAYNORMANOR,
+        gText_Post_MELZARSMAZE,
+        gText_Post_FALADORGYM,
+        gText_Pre_Crandor,
+        gText_Pre_BKF,
+        gText_Post_BKF,
+        gText_Post_HAMHIDEOUT,
+        gText_Exit,
     }
+    
 };
 
 static void Task_ShowScrollableMultichoice(u8 taskId)

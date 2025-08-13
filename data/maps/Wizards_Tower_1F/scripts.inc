@@ -1138,7 +1138,9 @@ STORYMODE_SAVESTATE::
 
 STORYMODE_SAVESTATE_1:
 	closemessage
-	multichoicedefault 1, 0, MULTI_STORYMODE_STATE, 0, 0
+	setvar VAR_0x8004, SCROLL_MULTI_SAVEFILE_EDITOR
+	special ShowScrollableMultichoice
+	waitstate
 	switch VAR_RESULT
 	case 0, STORYMODE_SAVESTATE_4
 	case 1, STORYMODE_SAVESTATE_5
