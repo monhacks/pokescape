@@ -612,7 +612,7 @@ script ALKHARID_GYM_ItsIsPrinceAli {
     namebox("Warrior")
     msgbox(format("I need to guard the south gate tomorrow and give out these cabbages…"))
     namebox("Prince Ali")
-    msgbox(format("…{PAUSE 16}…{PAUSE 16}\nJust Kidding!\pIt was me all along."))
+    msgbox(format("…{PAUSE 16}…{PAUSE 16}\nJust kidding!\pIt was me all along."))
     setvar(VAR_POKESCAPE_ALKHARID_GYM_QUEST, 20)
     return
 }

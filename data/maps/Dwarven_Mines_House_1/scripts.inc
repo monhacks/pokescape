@@ -376,7 +376,7 @@ NPC_Dwarven_Mines_House_3_Text_0:
 NPC_Dwarven_Mines_House_3_Text_1:
 	.string "We harness the fire from baby dragons\n"
 	.string "to fuel our forges.\p"
-	.string "{PAUSE 15}Do you know how difficult it is to try\n"
+	.string "Do you know how difficult it is to try\n"
 	.string "and tame an adult dragon?!$"
 
 NPC_Dwarven_Mines_House_4_Text_0:

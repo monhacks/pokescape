@@ -79,7 +79,7 @@ PURO_HUNTER_2_Text_0:
 PURO_HUNTER_2_Text_1:
 	.string "I brought plenty of nets and jars to\n"
 	.string "catch myself some implings.\p"
-	.string "{PAUSE 15}What do you mean I have to use\n"
+	.string "What do you mean I have to use\n"
 	.string "pouches?\p"
 	.string "How on Gielinor would it fit in there??$"
 

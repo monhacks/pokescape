@@ -433,7 +433,7 @@ BKFORT_3F_NPC_1_Text_1:
 BKFORT_3F_NPC_2_Text_0:
 	.string "I can't believe I spend all day down\n"
 	.string "here torturing people…\p"
-	.string "{PAUSE 15}THIS IS THE BEST JOB EVER!$"
+	.string "THIS IS THE BEST JOB EVER!$"
 
 BKFORT_3F_NPC_3_Text_0:
 	.string "Sir Gawain$"

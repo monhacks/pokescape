@@ -47,7 +47,7 @@ NPC_VARROCK_ZMI_1_Text_1:
 	.string "in these lands for us to practice\l"
 	.string "freely, so we have to hide in the\l"
 	.string "shadows.\p"
-	.string "{PAUSE 15}Perhaps if you can prove yourself in\n"
+	.string "Perhaps if you can prove yourself in\n"
 	.string "future, we can share some of our\l"
 	.string "knowledge with you.$"
 

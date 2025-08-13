@@ -3122,7 +3122,7 @@ SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_3_Text_2:
 SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_3_Text_3:
 	.string "That sound!\p"
 	.string "They're training!\p"
-	.string "{PAUSE 15}We need to find out what they're up to\n"
+	.string "We need to find out what they're up to\n"
 	.string "and stop them quickly!$"
 
 SIR_OWEN_DIALOGUE_BLACK_KNIGHT_FORTRESS_4_Text_0:

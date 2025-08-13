@@ -486,11 +486,10 @@ HANS_GYM_LUMBRIDGE_Text_2:
 	.string "making, good job!$"
 
 SIGMUND_DRAWERS_Text_0:
-	.string "You rummage through the drawers…\p"
-	.string "{PAUSE 15}$"
+	.string "You rummage through the drawers…{PAUSE 15}…$"
 
 SIGMUND_DRAWERS_Text_1:
-	.string "and find a set of pink robes?$"
+	.string "You find a set of pink robes.$"
 
 SIGMUND_DRAWERS_Text_2:
 	.string "Get out of there, that's private!$"

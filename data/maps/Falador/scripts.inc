@@ -1852,7 +1852,7 @@ NPC_FALADOR_APPRENTICE_Text_2:
 	.string "Is this okay with you?$"
 
 NPC_FALADOR_APPRENTICE_Text_3:
-	.string "…{PAUSE 32}…{PAUSE 32} Uh…\p"
+	.string "…{PAUSE 32}…{PAUSE 32} Uh…\n"
 	.string "{PAUSE 32}You do not have enough money.$"
 
 NPC_FALADOR_APPRENTICE_Text_4:
@@ -2309,7 +2309,7 @@ FROGEEL_RIVAL_2_Text_5:
 
 FROGEEL_RIVAL_2_Text_6:
 	.string "Good, now leave me to plan my next heis-\p"
-	.string "{PAUSE 15}You heard nothing…$"
+	.string "You heard nothing…$"
 
 FROGEEL_RIVAL_2_Text_7:
 	.string "Ugh, in that case I shall have to fight\n"

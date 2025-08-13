@@ -93,7 +93,7 @@ NPC_WIZARDSTOWER_LESSERDEMON_GATE_Text_2:
 
 NPC_WIZARDSTOWER_LESSERDEMON_GATE_Text_3:
 	.string "As you approach the gate…\p"
-	.string "{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\p"
+	.string "…{PAUSE 15}…{PAUSE 15}…{PAUSE 15}…\p"
 	.string "Nothing interesting happens…$"
 
 ENCOUNTER_LESSERDEMON_Text_0:

@@ -63,5 +63,5 @@ NPC_BLACK_ARM_2_Text_1:
 	.string "I heard that Scarface Pete has the\n"
 	.string "candlesticks, but I have no idea how to\l"
 	.string "get past his security…\p"
-	.string "{PAUSE 15}Hey!\p"
+	.string "Hey!\n"
 	.string "Forget you heard anything, or else!$"

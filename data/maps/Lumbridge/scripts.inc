@@ -260,7 +260,11 @@ Lumbridge_LACHTOPHER::
 	faceplayer
 	namebox Lumbridge_LACHTOPHER_Text_0
 	msgbox Lumbridge_LACHTOPHER_Text_2
+	closemessage
+	playse SE_ITEMFINDER
+	msgbox Lumbridge_LACHTOPHER_Text_3
 	addmoney 200, 0
+	closemessage
 	hidenamebox
 	release
 	end
@@ -1172,6 +1176,9 @@ Lumbridge_LACHTOPHER_Text_2:
 	.string "You're even more broke than me!\p"
 	.string "Here's some money noob.$"
 
+Lumbridge_LACHTOPHER_Text_3:
+	.string "{PLAYER} recieved 200 GP.$"
+
 Lumbridge_DOOMSAYER_Text_0:
 	.string "Doomsayer$"
 
@@ -1246,10 +1253,9 @@ Lumbridge_EVENT_NPC3_Text_2:
 	.string "And no, you cannot have it.$"
 
 NPC_LumbridgeBridge_Text_0:
-	.string "Is it just me or is this really long?\p"
-	.string "Nah, I must be imagining it.\p"
-	.string "{PAUSE 15}Wait, I'm SURE the river used to be wider\n"
-	.string "than this…$"
+	.string "Is it just me or is this bridge really\n"
+	.string "long?\p"
+	.string "Nah, I must be imagining it.$"
 
 Lumbridge_Guard_NORTH_Text_0:
 	.string "Pazel$"
@@ -1314,7 +1320,7 @@ Lumbridge_GeneralStore_NPC2_Text_0:
 Lumbridge_GeneralStore_NPC2_Text_1:
 	.string "There are a lot of goblins around these\n"
 	.string "parts, you might want to stock up on a\l"
-	.string "Chocolate Sunday or two!.\p"
+	.string "Chocolate Sunday or two.\p"
 	.string "They can cure poison, and this will\n"
 	.string "prepare you for the worst.$"
 

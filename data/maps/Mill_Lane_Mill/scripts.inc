@@ -343,11 +343,11 @@ MODEST_SAMUEL_Battle_Text_2:
 	.string "favourite monsters.$"
 
 MILL_LANE_MILL_HUNTER_NPC_Text_0:
-	.string "Chymp$"
+	.string "Keb0t$"
 
 MILL_LANE_MILL_HUNTER_NPC_Text_1:
 	.string "The kebbits you can catch around here\n"
-	.string "evolve at level 15.\p"
+	.string "evolve at quite low levels.\p"
 	.string "If they have higher speed than\n"
 	.string "defence, then they'll evolve into Wild\l"
 	.string "Kebbits.\p"
@@ -355,8 +355,7 @@ MILL_LANE_MILL_HUNTER_NPC_Text_1:
 	.string "defence, then they'll evolve into\l"
 	.string "Spotted Kebbits.\p"
 	.string "And if both of those stats are the\n"
-	.string "same, they'll evolve into Polar Kebbits.\p"
-	.string "$"
+	.string "same, they'll evolve into Polar Kebbits.$"
 
 MILL_LANE_MILL_HUNTER_NPC_Text_2:
 	.string "I really, really love Kebbits!\p"
@@ -366,7 +365,7 @@ MILL_LANE_MILL_HUNTER_NPC_Text_2:
 MILL_LANE_MILL_HUNTER_NPC_Text_3:
 	.string "Did you know that there are 15\n"
 	.string "different types of kebbits?\p"
-	.string "They're all NORMAL type, but sometimes\n"
+	.string "They're all NORMAL-type, but sometimes\n"
 	.string "when they evolve they gain a secondary\l"
 	.string "typing.\p"
 	.string "You'll have to discover those for\n"

@@ -63,5 +63,5 @@ WOM_BED_RIGHT_Text_0:
 
 WOM_BED_RIGHT_Text_1:
 	.string "Was that a hand!?\p"
-	.string "{PAUSE 15}You decide it's best not to try to sleep\n"
+	.string "You decide it's best not to try to sleep\n"
 	.string "in this bed.$"

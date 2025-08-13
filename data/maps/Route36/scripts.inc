@@ -75,7 +75,7 @@ DUCK_NPC_Text_3:
 	.string "ducks too?\p"
 	.string "If you level one up underground, it'll\n"
 	.string "start riding a cart.\p"
-	.string "{PAUSE 15}Don't ask me where it gets one from\n"
+	.string "Don't ask me where it gets one from\n"
 	.string "though.\p"
 	.string "Does it steal it?$"
 
@@ -85,7 +85,7 @@ DUCK_NPC_Text_4:
 	.string "If you level one up while also having an\n"
 	.string "EXORAXE in your party, it'll start riding\l"
 	.string "a cart.\p"
-	.string "{PAUSE 15}Don't ask me where it gets one from\n"
+	.string "Don't ask me where it gets one from\n"
 	.string "though.\p"
 	.string "Is it possessed like the EXORAXE?$"
 
@@ -94,7 +94,7 @@ DUCK_NPC_Text_5:
 	.string "ducks too?\p"
 	.string "If you use a LAW RUNE on one, it'll start\n"
 	.string "riding a cart.\p"
-	.string "{PAUSE 15}Don't ask me where it gets one from\n"
+	.string "Don't ask me where it gets one from\n"
 	.string "though.\p"
 	.string "Must be the magic from the rune!$"
 
@@ -107,7 +107,7 @@ DUCK_NPC_Text_6:
 	.string "Vicious things!\p"
 	.string "They're not birds, they're demons in\n"
 	.string "disguise!\p"
-	.string "{PAUSE 15}Don't believe me?\p"
+	.string "Don't believe me?\p"
 	.string "Try having a SWAN and an IMP in your\n"
 	.string "party and see what happens…\p"
 	.string "Don't say I didn't warn you!!$"

@@ -1224,7 +1224,7 @@ NPC_EDGEVILLE_HOUSE_NPC_4_Text_0:
 NPC_EDGEVILLE_HOUSE_NPC_5_Text_0:
 	.string "Did you know there something are useful\n"
 	.string "things in boxes?\p"
-	.string "{PAUSE 15}These meet your Crate expectations!$"
+	.string "These meet your crate expectations!$"
 
 NPC_EDGEVILLE_HOUSE_NPC_6_Text_0:
 	.string "Oziach$"

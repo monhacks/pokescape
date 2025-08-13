@@ -153,7 +153,9 @@ IMP_DEFENDER::
 	lock
 	faceplayer
 	namebox IMP_DEFENDER_Text_0
+	playmoncry SPECIES_IMP, 1
 	msgbox IMP_DEFENDER_Text_1
+	waitmoncry
 	hidenamebox
 	closemessage
 	release
@@ -177,7 +179,7 @@ ENCOUNTER_PURO_PURO_1::
 	faceplayer
 	namebox ENCOUNTER_PURO_PURO_1_Text_0
 	playmoncry SPECIES_IMP, 0
-	msgbox ENCOUNTER_PURO_PURO_1_Text_1
+	msgbox IMP_DEFENDER_Text_1
 	waitmoncry
 	hidenamebox
 	closemessage
@@ -434,7 +436,7 @@ ELNOCK_1_Text_1:
 	.string "doing here.\p"
 	.string "I'm an investigator.\p"
 	.string "I'm watching the implings.\p"
-	.string "{PAUSE 15}I'm not at liberty to say why.$"
+	.string "I'm not at liberty to say why.$"
 
 PURO_HUNTER_1_Text_0:
 	.string "Hunter$"
@@ -453,14 +455,14 @@ PURO_IRONMAN_1_Text_1:
 	.string "eclectic implings to stack medium clue\l"
 	.string "scrolls and get myself a pair of Ranger\l"
 	.string "boots!\p"
-	.string "{PAUSE 15}But I've been here for hours and not\n"
+	.string "But I've been here for hours and not\n"
 	.string "seen a single eclectic impling…$"
 
 IMP_DEFENDER_Text_0:
-	.string "Defender$"
+	.string "Imp Defender$"
 
 IMP_DEFENDER_Text_1:
-	.string "Be free little implings!$"
+	.string "Kekeke!$"
 
 NPC_IMPLING_Text_0:
 	.string "Impling$"
@@ -470,9 +472,6 @@ NPC_IMPLING_Text_1:
 
 ENCOUNTER_PURO_PURO_1_Text_0:
 	.string "Imp$"
-
-ENCOUNTER_PURO_PURO_1_Text_1:
-	.string "Kekeke!$"
 
 ENCOUNTER_IMPLING_BABY_Text_0:
 	.string "Teehee!$"

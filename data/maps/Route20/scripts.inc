@@ -547,7 +547,7 @@ ROUTE20_BLOCKADE_SOUTH_Text_0:
 	.string "stole me leg!\p"
 	.string "I can't let you past until I've caught\n"
 	.string "it…\p"
-	.string "{PAUSE 15}I'm comin' for ye Peggy!$"
+	.string "I'm comin' for ye Peggy!$"
 
 ROUTE20_VARROCK_GUARD_1_Text_0:
 	.string "Guard$"
@@ -593,13 +593,13 @@ FROGEEL_RIVAL_4_Text_2:
 
 FROGEEL_RIVAL_4_Text_3:
 	.string "Oh hi {PLAYER}.\p"
-	.string "{PAUSE 15}Hey, are you following me?\p"
-	.string "{PAUSE 15}Pure chance?\n"
+	.string "Hey, are you following me?\p"
+	.string "Pure chance?\n"
 	.string "Yeah right.\p"
 	.string "Listen, I am not up to anything shady\n"
 	.string "this time.\p"
 	.string "I haven't stolen anything.\p"
-	.string "{PAUSE 32}Yet.\p"
+	.string "Yet.\p"
 	.string "Listen, when I am King of The Land of\n"
 	.string "the Frogs, you might regret your tone\l"
 	.string "here.\n"
@@ -646,7 +646,7 @@ BATTLE_FROGEEL_RIVAL_4_Text_1:
 	.string "AAAAAAAAAAAAAAAAA\p"
 	.string "AAAAAAAAAAAAAAAAA\p"
 	.string "AAAAAAAAAAAAAAAAA!\p"
-	.string "{PAUSE 15}Oh, you did not hear the last part?\p"
+	.string "Oh, you did not hear the last part?\p"
 	.string "Sorry.\p"
 	.string "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!$"
 

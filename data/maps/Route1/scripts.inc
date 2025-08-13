@@ -1218,7 +1218,7 @@ BATTLE_ROUTE1_RIVER_TRAINER_1_Text_3:
 	.string "It helps me escape from life's\n"
 	.string "responsibilities for a moment.\p"
 	.string "Like my wife and children.\p"
-	.string "{PAUSE 15}Don't tell them you found me here!.$"
+	.string "…{PAUSE 15} Don't tell them you found me here!$"
 
 BATTLE_ROUTE1_RIVER_TRAINER_2_Text_0:
 	.string "I need to get into Varrock for my quest\n"

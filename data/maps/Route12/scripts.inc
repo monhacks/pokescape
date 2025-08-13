@@ -1120,7 +1120,7 @@ NPC_ROUTE12_IRONMAN_Text_4:
 	.string "tasks,\p"
 	.string "obtain all unique monster drops,\p"
 	.string "and obtain all unique items on a route.\p"
-	.string "{PAUSE 15}What do you mean there are no\n"
+	.string "What do you mean there are no\n"
 	.string "achievement diaries?!$"
 
 NPC_ROUTE12_IRONMAN_Text_5:
@@ -1140,9 +1140,9 @@ NPC_ROUTE12_IRONMAN_Text_7:
 	.string "is looking for an item.\p"
 	.string "Do you have any idea where it could be?\p"
 	.string "I can't roll my next route until I find\n"
-	.string "it.\p"
-	.string "{PAUSE 15}…\p"
-	.string "{PAUSE 15}I… must… find… it!$"
+	.string "it.\n"
+	.string "…{PAUSE 15}…\p"
+	.string "I…{PAUSE 15} must…{PAUSE 15} find…{PAUSE 15} it!$"
 
 NPC_ROUTE12_BRONZEMAN_Text_0:
 	.string "Br0nzem4n$"

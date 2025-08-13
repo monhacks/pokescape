@@ -122,7 +122,7 @@ LOWESBOOK_Text_1:
 	.string "some tips.\p"
 	.string "I don't think anybody else in Gielinor\n"
 	.string "shares my love of archery like he does.\p"
-	.string "{PAUSE 15}The journal continues on sharing Lowe's\n"
+	.string "The journal continues on sharing Lowe's\n"
 	.string "admiration of Robin for many, many, many\l"
 	.string "more pages.\p"
 	.string "You decide not to continue reading…$"

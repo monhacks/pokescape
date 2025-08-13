@@ -146,7 +146,7 @@ MEGAEVOSBOOK_Text_1:
 	.string "TzTok Jad\p"
 	.string "Dagannoth Kings\p"
 	.string "Chaos El-\p"
-	.string "{PAUSE 15}The rest of the page is torn out..$"
+	.string "{PAUSE 15}The rest of the page is torn out…$"
 
 MEGAEVOSBOOK_Text_2:
 	.string "You decide to leave the book on the\n"

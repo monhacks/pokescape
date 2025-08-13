@@ -163,7 +163,7 @@ NPC_WORKER_BLOCK_Text_1:
 	.string "leg, so we are waiting on a health and\l"
 	.string "safety assessment before we let\l"
 	.string "anyone else down there.\p"
-	.string "{PAUSE 15}Yes, that also means we have to wait\n"
+	.string "Yes, that also means we have to wait\n"
 	.string "until we can rescue them!$"
 
 NPC_DIGSITE_WORKER_1_Text_0:
@@ -205,7 +205,7 @@ NPC_BARGE_GUARD_Text_1:
 	.string "I am afraid the barge is already on its\n"
 	.string "way to Fossil Island.\p"
 	.string "Please come back later.\p"
-	.string "{PAUSE 15}Also, no sailing in the canal!\p"
+	.string "Also, no sailing in the canal!\p"
 	.string "It must be kept clear for the barge!$"
 
 NPC_CAPTAIN_ERRDO_Text_0:
@@ -225,7 +225,7 @@ NPC_DIGSITE_STUDENT_Text_0:
 NPC_DIGSITE_STUDENT_Text_1:
 	.string "I lost my teddy.\p"
 	.string "They were my lucky mascot…\p"
-	.string "{PAUSE 15}But then I caught a really cool monster\n"
+	.string "But then I caught a really cool monster\n"
 	.string "I've never seen before, so maybe they\l"
 	.string "can be my new lucky mascot instead!$"
 
