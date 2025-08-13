@@ -259,6 +259,7 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     ResetOutfitData();
     QuestMenu_ResetMenuSaveData();
+    gSaveBlock2Ptr->autoRun = FALSE;
     memset(&gSaveBlock2Ptr->follower, 0, sizeof(gSaveBlock2Ptr->follower));
     memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
     
