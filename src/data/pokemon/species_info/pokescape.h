@@ -42366,7 +42366,7 @@ const struct SpeciesInfo gSpeciesInfoPokescape[] =
 		.backPicYOffset = 0,
 		.backAnimId = BACK_ANIM_H_SHAKE,
 		PALETTES(Wyvern),
-		ICON(Wyvern, 0),
+		ICON(Wyvern, 2),
 		.footprint = gMonFootprint_Wyvern,
 		LEARNSETS(Wyvern),
 		.frontPicYOffset = 0,

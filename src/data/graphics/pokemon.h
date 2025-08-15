@@ -16679,7 +16679,7 @@ const u32 gMonShinyPalette_Skeletal_Wyvern[] = INCBIN_U32("graphics/pokescape_mo
 const u8 gMonIcon_Skeletal_Wyvern[] = INCBIN_U8("graphics/pokescape_monsters/Skeletal_Wyvern/icon.4bpp");
 const u8 gMonFootprint_Skeletal_Wyvern[] = INCBIN_U8("graphics/pokescape_monsters/Skeletal_Wyvern/footprint.1bpp");
 
-const u32 gMonFrontPic_Wyvern[] = INCBIN_U32("graphics/pokescape_monsters/Wyvern/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Wyvern[] = INCBIN_U32("graphics/pokescape_monsters/Wyvern/front.4bpp.lz");
 const u32 gMonPalette_Wyvern[] = INCBIN_U32("graphics/pokescape_monsters/Wyvern/normal.gbapal.lz");
 const u32 gMonBackPic_Wyvern[] = INCBIN_U32("graphics/pokescape_monsters/Wyvern/back.4bpp.lz");
 const u32 gMonShinyPalette_Wyvern[] = INCBIN_U32("graphics/pokescape_monsters/Wyvern/shiny.gbapal.lz");

@@ -18512,9 +18512,8 @@ static const union AnimCmd sAnim_Skeletal_Wyvern_1[] =
 
 static const union AnimCmd sAnim_Wyvern_1[] =
 {
-	ANIMCMD_FRAME(1, 40),
-	ANIMCMD_FRAME(0, 5),
-	ANIMCMD_END,
+	ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_Impling_Gourmet_Form_1[] =
