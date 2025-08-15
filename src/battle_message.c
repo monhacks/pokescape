@@ -4391,7 +4391,49 @@ static const struct TrainerSlide sTrainerSlides[] =
     },
 
     {
-        .trainerId = TRAINER_MAGGIE,
+        .trainerId = TRAINER_MAGGIE_1,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_2,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_3,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_4,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_5,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_6,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_7,
+        .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgPlayerLost = sText_Maggie_PlayerLost,
+    },
+    {
+        .trainerId = TRAINER_MAGGIE_8,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
         .msgPlayerLost = sText_Maggie_PlayerLost,

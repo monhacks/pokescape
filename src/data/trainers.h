@@ -11,7 +11,7 @@ const struct Trainer gTrainers[] = {
         .party = NULL,
 	},
 
-    [TRAINER_MAGGIE] =
+    [TRAINER_MAGGIE_1] =
     {
         .trainerClass = TRAINER_CLASS_WITCH,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
@@ -20,7 +20,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
-        .party = TRAINER_PARTY(sParty_Maggie),
+        .party = TRAINER_PARTY(sParty_Maggie_1),
     },
 
     [TRAINER_GOBLIN_1_ROUTE1] =
@@ -6860,6 +6860,84 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_OZAN_2),
+    },
+
+    [TRAINER_MAGGIE_2] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_2),
+    },
+    [TRAINER_MAGGIE_3] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_3),
+    },
+    [TRAINER_MAGGIE_4] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_4),
+    },
+    [TRAINER_MAGGIE_5] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_5),
+    },
+    [TRAINER_MAGGIE_6] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_6),
+    },
+    [TRAINER_MAGGIE_7] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_7),
+    },
+    [TRAINER_MAGGIE_8] =
+    {
+        .trainerClass = TRAINER_CLASS_WITCH,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_PKER,
+        .trainerPic = TRAINER_PIC_maggie,
+        .trainerName = _("Maggie"),
+        .items = {ITEM_BREAD, ITEM_BREAD, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_HP_AWARE | AI_FLAG_ACE_POKEMON,
+        .party = TRAINER_PARTY(sParty_Maggie_8),
     },
 
 /*

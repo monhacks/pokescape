@@ -2,7 +2,7 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #define TRAINER_NONE                                    0
-#define TRAINER_MAGGIE					                1
+#define TRAINER_MAGGIE_1				                1
 #define TRAINER_GOBLIN_1_ROUTE1					        2
 #define TRAINER_GOBLIN_2_ROUTE1					        3
 #define TRAINER_GOBLIN_3_ROUTE1					        4
@@ -623,13 +623,20 @@
 #define TRAINER_HAM_HIDEOUT_GUARD_3                     619
 #define TRAINER_HAM_HIDEOUT_GUARD_4                     620
 #define TRAINER_FIGHTCAVES_DOUBLE_LOW_KET_HD            621
+#define TRAINER_MAGGIE_2				                622
+#define TRAINER_MAGGIE_3				                623
+#define TRAINER_MAGGIE_4				                624
+#define TRAINER_MAGGIE_5				                625
+#define TRAINER_MAGGIE_6				                626
+#define TRAINER_MAGGIE_7				                627
+#define TRAINER_MAGGIE_8				                628
 
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      (TRAINER_FIGHTCAVES_DOUBLE_LOW_KET_HD + 1)
+#define TRAINERS_COUNT                      (TRAINER_MAGGIE_8 + 1)
 #define MAX_TRAINERS_COUNT                  864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

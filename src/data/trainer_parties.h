@@ -1,6 +1,5 @@
 
-static const struct TrainerMon sParty_Maggie[] = {
-    
+static const struct TrainerMon sParty_Maggie_1[] = {
     {
     .friendship = 255,
     //.ev = TRAINER_PARTY_EVS(10, 252, 0, 0, 4, 242),
@@ -6327,12 +6326,12 @@ static const struct TrainerMon sParty_WISE_OLD_MAN_2[] = { //ICE DUNGEON
     {
     .ability = ABILITY_MAGIC_BOUNCE,
     .nature = NATURE_MODEST,
-    .moves = {MOVE_PSYSHOCK, MOVE_PSYCHIC_TERRAIN, MOVE_THUNDER_WAVE, MOVE_CALM_MIND},
+    .moves = {MOVE_PSYSHOCK, MOVE_PSYCHIC_TERRAIN, MOVE_THUNDER_WAVE, MOVE_BLOOD_BURST},
     .ev = TRAINER_PARTY_EVS(4, 0, 0, 252, 0, 252),
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 27,
     .species = SPECIES_RUNE,
-    .heldItem = ITEM_NONE
+    .heldItem = ITEM_PHOENIX_NECKLACE
     },
     {
     .ability = ABILITY_INTIMIDATE,
@@ -6376,7 +6375,7 @@ static const struct TrainerMon sParty_WISE_OLD_MAN_3[] = { //MUSA POINT
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 40,
     .species = SPECIES_RUNE,
-    .heldItem = ITEM_NONE
+    .heldItem = ITEM_PHOENIX_NECKLACE
     },
     {
     .ability = ABILITY_INTIMIDATE,
@@ -10089,6 +10088,210 @@ static const struct TrainerMon sParty_OZAN_2[] = {             //Needs EVs, natu
     .species = SPECIES_PENANCE_RANGER,
     }
 };
+
+static const struct TrainerMon sParty_Maggie_2[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+static const struct TrainerMon sParty_Maggie_3[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+static const struct TrainerMon sParty_Maggie_4[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+static const struct TrainerMon sParty_Maggie_5[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+static const struct TrainerMon sParty_Maggie_6[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+static const struct TrainerMon sParty_Maggie_7[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+static const struct TrainerMon sParty_Maggie_8[] = {
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_FEMALE,
+    .species = SPECIES_SKELETALOX_FEMALE_FORM,
+    .nickname = COMPOUND_STRING("Babe"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 18,
+    .gender = TRAINER_MON_MALE,
+    .species = SPECIES_SKELETALOX_MALE_FORM,
+    .nickname = COMPOUND_STRING("Norman"),
+    },
+    {
+    .friendship = 255,
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 19,
+    .species = SPECIES_CAT_PURPLE_FORM,
+    .gender = TRAINER_MON_MALE,
+    .nickname = COMPOUND_STRING("Trogs"),
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //TZHAAR GYM CHALLENGE POOL
 static const struct TrainerMon sParty_POOL_PortSarim_Pub[] = {

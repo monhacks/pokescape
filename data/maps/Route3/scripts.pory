@@ -48,39 +48,6 @@ script Script_Cauldron
 }
 
 
-script Script_Maggie_1
-{
-	lock
-    faceplayer
-	namebox("Maggie")
-	goto_if_defeated (TRAINER_MAGGIE, Script_Maggie_2)
-	msgbox(format("Hiya!\nMy name is Maggie.\pSay cha looks pretty strong, care for a battle?"), MSGBOX_YESNO)
-    if (!var(VAR_RESULT))
-    { 
-		msgbox(format("That's anything but sweet of cha…"))
-		release
-    	end
-	}
-	msgbox(format("I hope you prepared chaself!"))
-	trainerbattle_no_intro(TRAINER_MAGGIE,format("What?! How couldcha!"))
-	msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
-	hidenamebox
-	giveitem (ITEM_MANY_SWEETS, 1)
-	namebox("Maggie")
-	msgbox(format("Come back to visit whenever!"))
-    closemessage
-    release
-    end
-}
-
-script Script_Maggie_2
-{
-	msgbox(format("Oh, Hi!\nIt's cha again!"))
-    closemessage
-    release
-    end
-}
-
 
 
 script Script_Wendy_1
@@ -88,7 +55,7 @@ script Script_Wendy_1
 	lock
     faceplayer
 	namebox("Wendy")
-	if (!defeated(TRAINER_MAGGIE)) {
+	if (!defeated(TRAINER_MAGGIE_1)) {
 		msgbox(format("Seems like Maggie over there is urging for a battle.\pStop by once in awhile for a quick fix won't you?"))
 		release
     	end
@@ -179,3 +146,235 @@ script BATTLE_MUDSKIPPERSOUND2_TRAINER_3
     release
     end
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+script NPC_MAGGIE {
+    lock
+    faceplayer
+	namebox("Maggie")
+
+    switch (var(VAR_POKESCAPE_MAGGIE_STATE)){ 
+		case 0:     
+            if (!flag(FLAG_BADGE01_GET)) { // No badge, first time.
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_1 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 1)
+            release
+            end
+        case 1: 
+            if (flag(FLAG_BADGE01_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_2 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 2)
+            release
+            end
+        case 2: 
+            if (flag(FLAG_BADGE02_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_3 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 3)
+            release
+            end
+        case 3: 
+            if (flag(FLAG_BADGE03_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_3 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 4)
+            release
+            end
+        case 4: 
+            if (flag(FLAG_BADGE04_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_4 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 5)
+            release
+            end
+        case 5: 
+            if (flag(FLAG_BADGE05_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_5 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 6)
+            release
+            end
+        case 6: 
+            if (flag(FLAG_BADGE06_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_6 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 7)
+            release
+            end
+        case 7: 
+            if (flag(FLAG_BADGE07_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_7 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 8)
+            release
+            end
+        case 8: 
+            if (flag(FLAG_BADGE08_GET)) { 
+                call(AskMaggieForABattle)
+            }
+            else {
+                goto(MaggieDoesntHaveABattle)
+            }
+            msgbox(format("I hope you prepared chaself!"))
+            trainerbattle_no_intro(TRAINER_MAGGIE_8 ,format("What?! How couldcha!"))
+            msgbox(format("That was quite amusing don'tcha know.\pI have had far too many sweets, here."))
+            hidenamebox
+            giveitem (ITEM_MANY_SWEETS, 5)
+            namebox("Maggie")
+            msgbox(format("Come back to visit whenever!"))
+            closemessage
+            setvar(VAR_POKESCAPE_MAGGIE_STATE, 9)
+            release
+            end
+        case 9: 
+            msgbox(format("Sorry, I'm all battled out for awhile.\pIt was fun though."))
+            closemessage
+            release
+            end
+    }
+}
+
+
+script AskMaggieForABattle {
+    msgbox(format("Hiya!\nMy name is Maggie.\pSay cha looks pretty strong, care for a battle?"), MSGBOX_YESNO)
+    if (!var(VAR_RESULT))
+    { 
+		msgbox(format("That's anything but sweet of cha…"))
+        closemessage
+		release
+    	end
+	}
+    return
+}
+
+script MaggieDoesntHaveABattle {
+    msgbox(format("Oh, Hi!\nIt's cha again!\pAnother battle?\pMaybe once you've grown a bit more."))
+    closemessage
+    release
+    end
+}
+
