@@ -3954,8 +3954,8 @@ bool8 ExecuteTableBasedItemEffect(struct Pokemon *mon, u16 item, u8 partyIndex, 
 
 // EXP candies store an index for this table in their holdEffectParam.
 const u32 sExpCandyExperienceTable[] = {
-    [EXP_100 - 1] = 2000,
-    [EXP_800 - 1] = 5000,
+    [EXP_100 - 1] = 500,
+    [EXP_800 - 1] = 2500,
     [EXP_3000 - 1] = 10000,
     [EXP_10000 - 1] = 25000,
     [EXP_30000 - 1] = 50000,

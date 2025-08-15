@@ -804,8 +804,8 @@ script QUEST_Cooks_Assistant_STATE{
 				hidenamebox
 				closemessage
 				giveitem(ITEM_BREAD, 5)
-				giveitem(ITEM_CAKE, 1)
-				giveitem(ITEM_EXP_CANDY_XS, 15)
+				//giveitem(ITEM_CAKE, 1)
+				giveitem(ITEM_EXP_CANDY_XS, 10)
 				namebox ("Cook")
 				msgbox(format("Once again, thank you."))
 				if (var(VAR_POKESCAPE_GAMEMODE_STATE) == 0) //if STORY MODE
