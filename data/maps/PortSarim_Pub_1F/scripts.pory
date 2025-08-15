@@ -102,51 +102,68 @@ script PUBCRAWL_RANDOMISED_PARTY_SIZE {
 script PUBCRAWL_RANDOMISED_LEVELS {  
 
 	if (!flag(FLAG_BADGE01_GET)) { //8 - 15
-        random(10) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 8)          
+        setvar(VAR_TEMP_A, 8) 	//base level.
+		setvar(VAR_TEMP_B, 7)  	//amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)       
     }
     if (flag(FLAG_BADGE01_GET)) { //15 - 25
-        random(10) 
-		copyvar(VAR_TEMP_E, VAR_RESULT)
-		addvar(VAR_TEMP_E, 15) 
+        setvar(VAR_TEMP_A, 15) 	//base level.
+		setvar(VAR_TEMP_B, 10)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A) 
     }
     if (flag(FLAG_BADGE02_GET)) { //20 - 30
-        random(10) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 20)    
+        setvar(VAR_TEMP_A, 20) 	//base level.
+		setvar(VAR_TEMP_B, 10)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)   
     }
     if (flag(FLAG_BADGE03_GET)) { //25 - 35
-        random(10) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 25)    
+        setvar(VAR_TEMP_A, 25) 	//base level.
+		setvar(VAR_TEMP_B, 10)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A) 
     }
     if (flag(FLAG_BADGE04_GET)) { //30 - 40
-        random(10) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 30)    
+        setvar(VAR_TEMP_A, 30) 	//base level.
+		setvar(VAR_TEMP_B, 10)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)    
     }
     if (flag(FLAG_BADGE05_GET)) { //30 - 45
-        random(15) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 30)    
+        setvar(VAR_TEMP_A, 30) 	//base level.
+		setvar(VAR_TEMP_B, 15)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)    
     }
     if (flag(FLAG_BADGE06_GET)) { //30 - 50
-        random(20) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 30)    
+        setvar(VAR_TEMP_A, 30) 	//base level.
+		setvar(VAR_TEMP_B, 20)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)  
     }
-    if (flag(FLAG_BADGE07_GET)) { //30 - 55
-        random(25) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 30)    
+    if (flag(FLAG_BADGE07_GET)) { //40 - 55
+        setvar(VAR_TEMP_A, 40) 	//base level.
+		setvar(VAR_TEMP_B, 15)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)   
     }
     if (flag(FLAG_BADGE08_GET)) {//50 - 70
-        random(20) 
-        copyvar(VAR_TEMP_E, VAR_RESULT)
-        addvar(VAR_TEMP_E, 50)    
+        setvar(VAR_TEMP_A, 50) 	//base level.
+		setvar(VAR_TEMP_B, 20)  //amount of randomness 0,1
+		random(VAR_TEMP_B) 
+		copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_RESULT)
+		addvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_A)   
     }
-	copyvar(VAR_CUSTOM_TRAINERPOOL_LEVEL, VAR_TEMP_E)
 	//30 - 35
 	//setvar(VAR_TEMP_A, 30) //base level.
 	//setvar(VAR_TEMP_B, 6)  //amount of randomness 0,1,2,3,4,5
@@ -215,6 +232,15 @@ script NPC_PortSarimPub_BRINE
 	end
 }
 
+script RandomisedLevelsTest_pubcrawl {
+	call(PUBCRAWL_RANDOMISED_LEVELS)
+	buffernumberstring (STR_VAR_1, VAR_RESULT) 
+	buffernumberstring (STR_VAR_2, VAR_CUSTOM_TRAINERPOOL_LEVEL) 
+	buffernumberstring (STR_VAR_3, VAR_TEMP_E) 
+	msgbox(("VAR_TEMP_E {STR_VAR_3}\pVAR_CUSTOM_TRAINERPOOL_LEVEL {STR_VAR_2}\pVAR_RESULT {STR_VAR_1}"))
+	closemessage
+	end
+}
 
 
 

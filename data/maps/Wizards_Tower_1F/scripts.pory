@@ -888,7 +888,6 @@ script STORYMODE_VAR_CHECK {
 			clearflag(FLAG_ENABLE_P2P_BADGES)
 		}
     }
-	removeitem(ITEM_CUT_TOOL, 1)
 	closemessage
     end
 }

@@ -809,7 +809,6 @@ STORYMODE_VAR_CHECK_1:
 	compare VAR_RESULT, 0
 	goto_if_ne STORYMODE_VAR_CHECK_5
 STORYMODE_VAR_CHECK_4:
-	removeitem ITEM_CUT_TOOL, 1
 	closemessage
 	end
 
