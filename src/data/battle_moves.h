@@ -16316,6 +16316,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
+        .slicingMove = TRUE,
     },
 
     [MOVE_DARKLIGHT] =  //todo anims
@@ -16329,6 +16330,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
+        .slicingMove = TRUE,
     },
 
     [MOVE_ARCLIGHT] =  //todo anims
@@ -16342,6 +16344,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
+        .slicingMove = TRUE,
     },
     
     [MOVE_EMBERLIGHT] =  //todo anims
@@ -16355,6 +16358,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
+        .slicingMove = TRUE,
     },
 
     [MOVE_IBAN_BLAST] = //todo anims
@@ -17208,10 +17212,173 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
     },
    
+    [MOVE_EARTH_STRIKE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 35,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
 
+    [MOVE_EARTH_BLAST] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 55,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
 
+    [MOVE_EARTH_WAVE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 90,
+        .type = TYPE_ROCK,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
 
+    [MOVE_EARTH_SURGE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 110,
+        .type = TYPE_ROCK,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
 
+    [MOVE_WATER_STRIKE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 35,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_WATER_BLAST] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 55,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_WATER_WAVE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 90,
+        .type = TYPE_WATER,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_WATER_SURGE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 110,
+        .type = TYPE_WATER,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_FIRE_STRIKE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 35,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_FIRE_BLAST_PS] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 55,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_FIRE_WAVE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 90,
+        .type = TYPE_FIRE,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_FIRE_SURGE] =
+    {
+        .effect = EFFECT_HIT, //NEEDS IMPLEMENTING
+	    .power = 110,
+        .type = TYPE_FIRE,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 0, //NEEDS UPDATING WHEN EFFECT ADDED
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
 
 
 

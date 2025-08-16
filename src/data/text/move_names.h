@@ -935,6 +935,18 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_VANILLA_OOZE] = _("Vanilla Ooze"),
     [MOVE_STRAWBERRY_OOZE] = _("Strawberry Ooze"),
     [MOVE_CHOCOLATE_OOZE] = _("Chocolate Ooze"),
+    [MOVE_EARTH_STRIKE] = _("Earth Strike"),
+    [MOVE_EARTH_BLAST] = _("Earth Blast"),
+    [MOVE_EARTH_WAVE] = _("Earth Wave"),
+    [MOVE_EARTH_SURGE] = _("Earth Surge"),
+    [MOVE_WATER_STRIKE] = _("Water Strike"),
+    [MOVE_WATER_BLAST] = _("Water Blast"),
+    [MOVE_WATER_WAVE] = _("Water Wave"),
+    [MOVE_WATER_SURGE] = _("Water Surge"),
+    [MOVE_FIRE_STRIKE] = _("Fire Strike"),
+    [MOVE_FIRE_BLAST_PS] = _("Fire Blast"),
+    [MOVE_FIRE_WAVE] = _("Fire Wave"),
+    [MOVE_FIRE_SURGE] = _("Fire Surge"),
     
     // Max Moves
     [MOVE_MAX_GUARD] = _("Max Guard"),

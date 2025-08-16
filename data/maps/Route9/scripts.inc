@@ -129,7 +129,7 @@ BATTLE_ROUTE9_ITSWILL::
 	msgbox BATTLE_ROUTE9_ITSWILL_Text_3
 	hidenamebox
 	release
-	return
+	end
 
 
 ROUTE9_SIGNPOST_Text_0:
@@ -243,6 +243,6 @@ BATTLE_ROUTE9_ITSWILL_Text_2:
 
 BATTLE_ROUTE9_ITSWILL_Text_3:
 	.string "Be careful…\p"
-	.string "There's a girl dressed in all pink in\n"
-	.string "there.{PAUSE 15}\p"
-	.string "She beat my ass hard.$"
+	.string "There was a girl dressed in all pink in\n"
+	.string "Melzar's Maze.\p"
+	.string "She beat me hard.$"

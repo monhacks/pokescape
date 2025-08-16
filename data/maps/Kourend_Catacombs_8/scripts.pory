@@ -530,7 +530,7 @@ script ENCOUNTER_SNOW_IMP
 	delay(1)
     specialvar (VAR_RESULT, GetCurrentMap)
     if (var(VAR_RESULT) == MAP_WIZARDS_TOWER_DINING_HALL) {
-        setwildbattle (SPECIES_SNOW_IMP, 5, ITEM_NONE)
+        setwildbattle (SPECIES_SNOW_IMP, 10, ITEM_NONE)
     }
     else {
         setwildbattle (SPECIES_SNOW_IMP, 30, ITEM_NONE)

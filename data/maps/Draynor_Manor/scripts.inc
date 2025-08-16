@@ -291,6 +291,7 @@ HAM_EVENT_DraynorManor_MAIN_1::
 	waitmovement 0
 	opendoor 20, 17
 	waitdooranim
+	namebox HAM_EVENT_DraynorManor_DOOR_LEFT_Text_0
 	msgbox HAM_EVENT_DraynorManor_MAIN_1_Text_1
 	playSE SE_LEDGE
 	applymovement 1, Ariane_DraynorManor_2
@@ -311,6 +312,7 @@ HAM_EVENT_DraynorManor_MAIN_2::
 
 HAM_EVENT_DraynorManor_TRIGGER_1::
 	call HAM_EVENT_DraynorManor_MAIN_1
+	namebox HAM_EVENT_DraynorManor_DOOR_LEFT_Text_0
 	msgbox HAM_EVENT_DraynorManor_TRIGGER_1_Text_0
 	hidenamebox
 	closemessage
@@ -321,6 +323,7 @@ HAM_EVENT_DraynorManor_TRIGGER_1::
 
 HAM_EVENT_DraynorManor_TRIGGER_2::
 	call HAM_EVENT_DraynorManor_MAIN_1
+	namebox HAM_EVENT_DraynorManor_DOOR_LEFT_Text_0
 	msgbox HAM_EVENT_DraynorManor_TRIGGER_1_Text_0
 	hidenamebox
 	closemessage

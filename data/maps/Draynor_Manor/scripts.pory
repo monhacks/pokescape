@@ -311,6 +311,7 @@ script HAM_EVENT_DraynorManor_MAIN_1{
 	waitmovement(0)
 	opendoor(20,17) // opendoor(14,17)
 	waitdooranim
+	namebox("Ariane")
 	msgbox(format("EEEEEEK!"))
 	playSE(SE_LEDGE)
     applymovement (1,Ariane_DraynorManor_2)
@@ -332,6 +333,7 @@ script HAM_EVENT_DraynorManor_MAIN_2{
 
 script HAM_EVENT_DraynorManor_TRIGGER_1 {
 	call(HAM_EVENT_DraynorManor_MAIN_1)
+	namebox("Ariane")
 	msgbox(format("I…{PAUSE 15} I…{PAUSE 15} I cannot do this!!"))
 	hidenamebox
 	closemessage
@@ -341,6 +343,7 @@ script HAM_EVENT_DraynorManor_TRIGGER_1 {
 
 script HAM_EVENT_DraynorManor_TRIGGER_2 {
 	call(HAM_EVENT_DraynorManor_MAIN_1)
+	namebox("Ariane")
 	msgbox(format("I…{PAUSE 15} I…{PAUSE 15} I cannot do this!!"))
 	hidenamebox
 	closemessage

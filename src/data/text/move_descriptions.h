@@ -3647,7 +3647,55 @@ static const u8 sStrawberryOozeDescription[] = _(
 static const u8 sChocolateOozeDescription[] = _(
     "\n"
     "");
+
+static const u8 sEarthStrikeDescription[] = _(
+    "The weakest of all the earth spells.\n"
+    "Powered up when not very effective.");
+
+static const u8 sEarthBlastDescription[] = _(
+    "A moderately strong earth spell.\n"
+    "Powered up when not very effective.");
+
+static const u8 sEarthWaveDescription[] = _(
+    "A fairly strong earth spell.\n"
+    "Powered up when not very effective.");
+
+static const u8 sEarthSurgeDescription[] = _(
+    "The strongest of all the earth spells.\n"
+    "Powered up when not very effective.");
+
+static const u8 sWaterStrikeDescription[] = _(
+    "The weakest of all the water spells.\n"
+    "Powered up when not very effective.");
+
+static const u8 sWaterBlastDescription[] = _(
+    "A moderately strong water spell.\n"
+    "Powered up when not very effective.");
+
+static const u8 sWaterWaveDescription[] = _(
+    "A fairly strong water spell.\n"
+    "Powered up when not very effective.");
+
+static const u8 sWaterSurgeDescription[] = _(
+    "The strongest of all the water spells.\n"
+    "Powered up when not very effective.");
     
+static const u8 sFireStrikeDescription[] = _(
+    "The weakest of all the fire spells.\n"
+    "Powered up when not very effective.");
+
+static const u8 sFireBlastPSDescription[] = _(
+    "A moderately strong fire spell.\n"
+    "Powered up when not very effective.");
+
+static const u8 sFireWaveDescription[] = _(
+    "A fairly strong fire spell.\n"
+    "Powered up when not very effective.");
+
+static const u8 sFireSurgeDescription[] = _(
+    "The strongest of all the fire spells.\n"
+    "Powered up when not very effective.");
+
 
 #undef BINDING_TURNS
 
@@ -4589,6 +4637,17 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_STRAWBERRY_OOZE - 1] = sStrawberryOozeDescription,
     [MOVE_CHOCOLATE_OOZE - 1] = sChocolateOozeDescription,
 
-
+    [MOVE_EARTH_STRIKE - 1] = sEarthStrikeDescription,
+    [MOVE_EARTH_BLAST - 1] = sEarthBlastDescription,
+    [MOVE_EARTH_WAVE - 1] = sEarthWaveDescription,
+    [MOVE_EARTH_SURGE - 1] = sEarthSurgeDescription,
+    [MOVE_WATER_STRIKE - 1] = sWaterStrikeDescription,
+    [MOVE_WATER_BLAST - 1] = sWaterBlastDescription,
+    [MOVE_WATER_WAVE - 1] = sWaterWaveDescription,
+    [MOVE_WATER_SURGE - 1] = sWaterSurgeDescription,
+    [MOVE_FIRE_STRIKE - 1] = sFireStrikeDescription,
+    [MOVE_FIRE_BLAST_PS - 1] = sFireBlastPSDescription,
+    [MOVE_FIRE_WAVE - 1] = sFireWaveDescription,
+    [MOVE_FIRE_SURGE - 1] = sFireSurgeDescription,
 
 };
