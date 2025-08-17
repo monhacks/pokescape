@@ -814,8 +814,18 @@
 #define STRINGID_PRINCE_ALI_MESSAGE_2                 812
 #define STRINGID_PRINCE_ALI_MESSAGE_3                 813
 #define STRINGID_PRINCE_ALI_MESSAGE_4                 814
+#define STRINGID_WISE_OLD_MAN_MESSAGE_1               815
+#define STRINGID_WISE_OLD_MAN_MESSAGE_2               816
+#define STRINGID_WISE_OLD_MAN_MESSAGE_3               817
+#define STRINGID_WISE_OLD_MAN_MESSAGE_4               818
+#define STRINGID_WISE_OLD_MAN_MESSAGE_5               819
+#define STRINGID_WISE_OLD_MAN_MESSAGE_6               820
+#define STRINGID_MAGGIE_MESSAGE_4                     821
+#define STRINGID_MAGGIE_MESSAGE_5                     822
+#define STRINGID_MAGGIE_MESSAGE_6                     823
+#define STRINGID_MAGGIE_MESSAGE_7                     824
 
-#define BATTLESTRINGS_VANILLA_END                     814
+#define BATTLESTRINGS_VANILLA_END                     824
 
 
 

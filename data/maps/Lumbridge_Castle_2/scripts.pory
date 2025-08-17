@@ -66,7 +66,7 @@ script Lumbridge_Bookshelf
 script Lumbridge_Bookshelf_2
 {
 	lock
-	msgbox(format("There is a Book about MvM Championships.\pMvM also known as Monster VS Monster.\pAdventurers gather from all around the world to battle it out within the depths of the Wilderness Crater to see who is the strongest of them all."))
+	msgbox(format("There is a Book about MvM Championships.\pMvM also known as Monster VS Monster.\pAdventurers gather from all around the world to battle it out within the depths of the Wilderness to see who is the strongest of them all."))
 	release
 	end
 }
@@ -336,7 +336,7 @@ script Lumbridge_Castle_Hans_1{
 	applymovement(10, Movement_Hans_4)
 	waitmovement(0)
 	namebox ("Hans")
-	msgbox(format("{PLAYER}, before you go have you heard of the MvM championships?\pMvM, which stands for Monster VS Monster, is where trainers compete against each other in battle by using their monsters to fight for them.\pIf you wish to participate in the MvM Championships you must defeat 8 leaders from around Gielinor and make your way to the Wilderness Crater.\pThe Duke is one of these 8 Leaders.\pIf you are interested you should pay him a visit."))
+	msgbox(format("{PLAYER}, before you go have you heard of the MvM championships?\pMvM, which stands for Monster VS Monster, is where trainers compete against each other in battle by using their monsters to fight for them.\pIf you wish to participate in the MvM Championships you must defeat 8 leaders from around Gielinor and make your way to the Wilderness.\pThe Duke is one of these 8 Leaders.\pIf you are interested you should pay him a visit."))
 	msgbox(format("Oh, before I forget take these."))
 	waitmessage
 	hidenamebox
@@ -1307,7 +1307,7 @@ script Mithrilman_LUMBRIDGE_STATE_LOST{
     lock
     faceplayer  
     namebox ("Mithrilman")
-    msgbox(format("Haha, Thousts assumed thoust could beat thine.\pWell KNAVE.{PAUSE 15}\nThoust were wrongst.\pBegone knave, thoust have metst thousts superiorst."))
+    msgbox(format("Haha, thousts assumed thoust could beat thine.\pWell KNAVE.{PAUSE 15}\nThoust were wrongst.\pBegone knave, thoust have metst thousts superiorst."))
     waitmessage
     hidenamebox
 	closemessage

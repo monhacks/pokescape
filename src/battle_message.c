@@ -865,7 +865,11 @@ static const u8 sText_SandwichLady_SwitchIn[] = _("Oh dear…\pIt appears I'm do
 static const u8 sText_SandwichLady_LastHalfHp[] = _("I'm down to my last\nbaguette!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_SandwichLady_FirstSuperEffectiveHit[] = _("Hey, I didn't say you could\ndo that!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Maggie_BeforeFirstTurn[] = _("I can feel it now, this is going to be\na splentabulous battle!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_Maggie_SwitchIn[] = _("Now that wasn't very nice of cha!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Maggie_FirstDown[] = _("Now that wasn't very nice of cha!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Maggie_SuperEffective[] = _("Tasty!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Maggie_CriticalHit[] = _("Full course meal served by cha truly.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Maggie_SwitchIn[] = _("Now for your just desserts!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Maggie_LastLowHp[] = _("This is getting to be a real treat of\na battle don'cha think?{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Maggie_PlayerLost[] = _("Sweet, sweet victory.\pI think cha should go back and train\ncha's monsters some more.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Melzar_BeforeFirstTurn[] = _("Let me drink my tea in peace!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Melzar_SwitchIn[] = _("By the power of custard!{PAUSE_UNTIL_PRESS}");
@@ -935,7 +939,6 @@ static const u8 sText_BabeCrandor_FirstDown[] = _("Well it seems like this is go
 static const u8 sText_BabeCrandor_SwitchIn[] = _("This is getting tiresome.\nPlease stay down so we can move on.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_BabeCrandor_PlayerLost[] = _("Would think coming this far you would\nbe better prepared.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_BeforeFirstTurn[] = _("For your next task, you are to defeat my\nteam of monsters.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_Vannaka_CriticalHit[] = _("Strike the monster down!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_SuperEffective[] = _("Expose the weakness and take the\nmonster down!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_FirstSTABMove[] = _("Showing some prowess as a slayer are we?{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_FirstDown[] = _("This may be a rather long task.\nAre you sufficiently prepared?{PAUSE_UNTIL_PRESS}");
@@ -953,6 +956,12 @@ static const u8 sText_PrinceAli_SuperEffective[] = _("I will stand here among my
 static const u8 sText_PrinceAli_FirstDown[] = _("Strike one of us and you will face the\nfury of us all!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PrinceAli_SwitchIn[] = _("I am in no need for a rescue.\nYou however might need one soon.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PrinceAli_PlayerLost[] = _("The wrath of the desert proves to be\nmore than you can handle it would seem.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_WiseOldMan_FirstDown[] = _("Tactical of you.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_WiseOldMan_CriticalHit[] = _("That one looked really strong!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_WiseOldMan_SuperEffective[] = _("Seems someone did their prep work and\nfigured out what move to use.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_WiseOldMan_SwitchIn[] = _("I am betting everything on this one\nthen!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_WiseOldMan_LastLowHp[] = _("The final standoff. Let us make it a good\none.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_WiseOldMan_PlayerLost[] = _("I guess this was too much for you to\nhandle. Come back once you are better\nprepared.{PAUSE_UNTIL_PRESS}");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1670,8 +1679,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SPIRITSHIELDREDUCEDAMAGE - BATTLESTRINGS_TABLE_START] = sText_SpiritShieldReducedDamage,
     [STRINGID_EATINGSANDWICH - BATTLESTRINGS_TABLE_START] = sText_EatingSandwich,
     [STRINGID_MAGGIE_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Maggie_BeforeFirstTurn,
-    [STRINGID_MAGGIE_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Maggie_SwitchIn,
-    [STRINGID_MAGGIE_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Maggie_PlayerLost,
+    [STRINGID_MAGGIE_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Maggie_FirstDown,
+    [STRINGID_MAGGIE_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Maggie_SuperEffective,
     [STRINGID_MELZAR_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_Melzar_BeforeFirstTurn,
     [STRINGID_MELZAR_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_Melzar_SwitchIn,
     [STRINGID_MELZAR_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_Melzar_LastLowHp,
@@ -1761,6 +1770,16 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PRINCE_ALI_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_FirstDown,
     [STRINGID_PRINCE_ALI_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_SwitchIn,
     [STRINGID_PRINCE_ALI_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_PlayerLost,
+    [STRINGID_WISEOLDMAN_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_FirstDown,
+    [STRINGID_WISEOLDMAN_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_CriticalHit,
+    [STRINGID_WISEOLDMAN_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_SuperEffective,
+    [STRINGID_WISEOLDMAN_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_SwitchIn,
+    [STRINGID_WISEOLDMAN_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_LastLowHp,
+    [STRINGID_WISEOLDMAN_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_PlayerLost,
+    [STRINGID_MAGGIE_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Maggie_CriticalHit,
+    [STRINGID_MAGGIE_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Maggie_SwitchIn,
+    [STRINGID_MAGGIE_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Maggie_LastLowHp,
+    [STRINGID_MAGGIE_MESSAGE_7 - BATTLESTRINGS_TABLE_START] = sText_Maggie_PlayerLost,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -4393,49 +4412,81 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_1,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_2,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_3,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_4,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_5,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_6,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_7,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
     {
         .trainerId = TRAINER_MAGGIE_8,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
+        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
+        .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
+        .msgLastHalfHp = sText_Maggie_LastLowHp,
         .msgPlayerLost = sText_Maggie_PlayerLost,
     },
 
@@ -4836,6 +4887,36 @@ static const struct TrainerSlide sTrainerSlides[] =
         .msgFirstDown = sText_PrinceAli_FirstDown,
         .msgLastSwitchIn = sText_PrinceAli_SwitchIn,
         .msgPlayerLost = sText_PrinceAli_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_RIVAL_WISE_OLD_MAN_1,    //Wise Old Man - Lumbridge Forest
+        .msgFirstDown = sText_WiseOldMan_FirstDown,
+        .msgFirstCriticalHit = sText_WiseOldMan_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_WiseOldMan_SuperEffective,
+        .msgLastSwitchIn = sText_WiseOldMan_SwitchIn,
+        .msgLastHalfHp = sText_WiseOldMan_LastLowHp,
+        .msgPlayerLost = sText_WiseOldMan_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_RIVAL_WISE_OLD_MAN_2,    //Wise Old Man - Asgarnia Dungeon
+        .msgFirstDown = sText_WiseOldMan_FirstDown,
+        .msgFirstCriticalHit = sText_WiseOldMan_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_WiseOldMan_SuperEffective,
+        .msgLastSwitchIn = sText_WiseOldMan_SwitchIn,
+        .msgLastHalfHp = sText_WiseOldMan_LastLowHp,
+        .msgPlayerLost = sText_WiseOldMan_PlayerLost,
+    },
+
+    {
+        .trainerId = TRAINER_RIVAL_WISE_OLD_MAN_3,    //Wise Old Man - Musa Point
+        .msgFirstDown = sText_WiseOldMan_FirstDown,
+        .msgFirstCriticalHit = sText_WiseOldMan_CriticalHit,
+        .msgFirstSuperEffectiveHit = sText_WiseOldMan_SuperEffective,
+        .msgLastSwitchIn = sText_WiseOldMan_SwitchIn,
+        .msgLastHalfHp = sText_WiseOldMan_LastLowHp,
+        .msgPlayerLost = sText_WiseOldMan_PlayerLost,
     },
 
     {
