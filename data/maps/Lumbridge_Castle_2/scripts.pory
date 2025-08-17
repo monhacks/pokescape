@@ -1267,8 +1267,16 @@ script Mithrilman_LUMBRIDGE_STATE_2{
         namebox ("Mithrilman")
         msgbox(format("Morest fabled thanst the Ironmen and faster than the Adamantmen.\pThe Mithrilman is a challenge upon the very spirit ofst PokeScape itself.\pAs thy predecessor inst this realm.\pWhy doesnt thine show ye, knave, howst a true master battles.")) 
         hidenamebox
-        trainerbattle_no_intro(TRAINER_MITHRILMAN1,format("…"))
-        goto(Mithrilman_LUMBRIDGE_STATE_3)
+
+		trainerbattle_no_intro_no_whiteout (TRAINER_MITHRILMAN1, "…")
+        specialvar (VAR_RESULT, GetBattleOutcome)
+        if (var(VAR_RESULT) == B_OUTCOME_LOST) {
+            special (HealPlayerParty)
+            goto(Mithrilman_LUMBRIDGE_STATE_LOST)
+        }
+        else {
+            goto(Mithrilman_LUMBRIDGE_STATE_3)
+        }
         release
         end
     }
@@ -1278,6 +1286,28 @@ script Mithrilman_LUMBRIDGE_STATE_3{
     faceplayer  
     namebox ("Mithrilman")
     msgbox(format("Ahaa, it would seemst that thine monsters were weakened since the Duke's ordeal.\pThine werest the luckiest, forst thine have used all thine 200 cabbages on that battle.\pThus leaving thine cabbage-less for the battle with thee knave.\pYee be lucky knave, forst thine am a Mithrilman and thine shalt return and glory be rewon!"))
+    waitmessage
+    hidenamebox
+	closemessage
+	fadescreenswapbuffers (FADE_TO_BLACK)
+	removeobject(2)
+	fadescreenswapbuffers(FADE_FROM_BLACK)
+	setvar(VAR_MITHRILMAN_STATE, 5) //defetated lumbridge
+	removeobject(2)
+	startquest (QUEST_MITHRILMAN_QUEST)
+	subquestmenu (QUEST_MENU_COMPLETE_QUEST, QUEST_MITHRILMAN_QUEST, 0)
+	setflag(FLAG_TEMP_1F)
+    savebgm(MUS_DUMMY)
+	fadedefaultbgm
+    release
+    end
+}
+
+script Mithrilman_LUMBRIDGE_STATE_LOST{  
+    lock
+    faceplayer  
+    namebox ("Mithrilman")
+    msgbox(format("Haha, Thousts assumed thoust could beat thine.\pWell KNAVE.{PAUSE 15}\nThoust were wrongst.\pBegone knave, thoust have metst thousts superiorst."))
     waitmessage
     hidenamebox
 	closemessage

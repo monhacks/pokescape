@@ -1335,8 +1335,12 @@ Mithrilman_LUMBRIDGE_STATE_2::
 	namebox Mithrilman_LUMBRIDGE_STATE_2_Text_3
 	msgbox Mithrilman_LUMBRIDGE_STATE_2_Text_4
 	hidenamebox
-	trainerbattle_no_intro TRAINER_MITHRILMAN1, Mithrilman_LUMBRIDGE_STATE_2_Text_5
+	trainerbattle_no_intro_no_whiteout TRAINER_MITHRILMAN1, Mithrilman_LUMBRIDGE_STATE_2_Text_5
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Mithrilman_LUMBRIDGE_STATE_2_5
 	goto Mithrilman_LUMBRIDGE_STATE_3
+Mithrilman_LUMBRIDGE_STATE_2_4:
 	release
 	end
 
@@ -1354,12 +1358,39 @@ Mithrilman_LUMBRIDGE_STATE_2_1:
 	release
 	end
 
+Mithrilman_LUMBRIDGE_STATE_2_5:
+	special HealPlayerParty
+	goto Mithrilman_LUMBRIDGE_STATE_LOST
+	goto Mithrilman_LUMBRIDGE_STATE_2_4
+
 
 Mithrilman_LUMBRIDGE_STATE_3::
 	lock
 	faceplayer
 	namebox Mithrilman_LUMBRIDGE_STATE_2_Text_3
 	msgbox Mithrilman_LUMBRIDGE_STATE_3_Text_0
+	waitmessage
+	hidenamebox
+	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject 2
+	fadescreenswapbuffers FADE_FROM_BLACK
+	setvar VAR_MITHRILMAN_STATE, 5
+	removeobject 2
+	startquest QUEST_MITHRILMAN_QUEST
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_MITHRILMAN_QUEST, 0
+	setflag FLAG_TEMP_1F
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	release
+	end
+
+
+Mithrilman_LUMBRIDGE_STATE_LOST::
+	lock
+	faceplayer
+	namebox Mithrilman_LUMBRIDGE_STATE_2_Text_3
+	msgbox Mithrilman_LUMBRIDGE_STATE_LOST_Text_0
 	waitmessage
 	hidenamebox
 	closemessage
@@ -1850,3 +1881,11 @@ Mithrilman_LUMBRIDGE_STATE_3_Text_0:
 	.string "Yee be lucky knave, forst thine am a\n"
 	.string "Mithrilman and thine shalt return and\l"
 	.string "glory be rewon!$"
+
+Mithrilman_LUMBRIDGE_STATE_LOST_Text_0:
+	.string "Haha, Thousts assumed thoust could\n"
+	.string "beat thine.\p"
+	.string "Well KNAVE.{PAUSE 15}\n"
+	.string "Thoust were wrongst.\p"
+	.string "Begone knave, thoust have metst\n"
+	.string "thousts superiorst.$"

@@ -1752,6 +1752,12 @@ void SpeakerNameTrainerClasses(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_SKELETON) {
         gSpeakerName = NULL;
     }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_ARCHAEOLOGIST) {
+        gSpeakerName = gText_Archaeologist;
+    }
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_GUARD) {
+        gSpeakerName = gText_Guard;
+    }
 }
 
 static const u8 *GetIntroSpeechOfApproachingTrainer(void)

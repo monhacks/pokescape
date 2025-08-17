@@ -379,15 +379,15 @@
     {
       "map_section": "MAPSEC_ROUTE_32",
       "name": "Route 32",
-      "x": 6,
-      "y": 14,
-      "width": 4,
+      "x": 0,
+      "y": 0,
+      "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_ROUTE_33",
       "name": "Route 33",
-      "x": 0,
+      "x": 9,
       "y": 0,
       "width": 1,
       "height": 1
@@ -395,31 +395,31 @@
     {
       "map_section": "MAPSEC_ROUTE_34",
       "name": "Route 34",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "x": 6,
+      "y": 6,
+      "width": 2,
+      "height": 2
     },
     {
       "map_section": "MAPSEC_ROUTE_35",
       "name": "Route 35",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "x": 6,
+      "y": 4,
+      "width": 3,
+      "height": 2
     },
     {
       "map_section": "MAPSEC_ROUTE_36",
-      "name": "Route 36",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name": "River Lum",
+      "x": 19,
+      "y": 8,
+      "width": 2,
+      "height": 2
     },
     {
       "map_section": "MAPSEC_ROUTE_37",
       "name": "Route 37",
-      "x": 0,
+      "x": 7,
       "y": 0,
       "width": 1,
       "height": 1
@@ -666,9 +666,9 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_46",
-      "name": "Digsite",
-      "x": 0,
-      "y": 0,
+      "name": "Exam Centre",
+      "x": 24,
+      "y": 5,
       "width": 1,
       "height": 1
     },

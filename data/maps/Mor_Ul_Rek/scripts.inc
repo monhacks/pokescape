@@ -4,6 +4,7 @@ Mor_Ul_Rek_MapScripts::
 	.byte 0
 
 Mor_Ul_Rek_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	setflag FLAG_VISITED_MOR_UL_REK
 	setvar VAR_EVOLUTION_MAP_STATE, 8
 	call TZHAAR_STATE
 	return

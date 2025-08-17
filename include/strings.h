@@ -3681,5 +3681,7 @@ extern const u8 gText_Mugger[];
 extern const u8 gText_HAMGrunt[];
 extern const u8 gText_BlackKnight[];
 extern const u8 gText_WhiteKnight[];
+extern const u8 gText_Archaeologist[];
+extern const u8 gText_Guard[];
 
 #endif // GUARD_STRINGS_H

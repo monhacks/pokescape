@@ -1,6 +1,6 @@
 #ifndef GUARD_REGIONMAPSEC_H
 #define GUARD_REGIONMAPSEC_H
-
+//MAPSECS and VISTED_FLAGS must be in the same order for fly locations.
 #define	MAPSEC_TUTORIAL_ISLAND	        0x00
 #define	MAPSEC_LUMBRIDGE	            0x01
 #define	MAPSEC_DRAYNOR	                0x02
@@ -13,7 +13,7 @@
 #define	MAPSEC_EDGEVILLE				0x09
 #define	MAPSEC_ALKHARID					0x0A
 #define	MAPSEC_MUSA_POINT				0x0B
-#define	MAPSEC_GOBLIN_VILLAGE	       	0x0C 
+#define	MAPSEC_MOR_UL_REK	       	    0x0C 
 #define	MAPSEC_DWARVEN_MINES	        0x0D
 #define	MAPSEC_LUMBRIDGE_SWAMP	        0x0E
 #define	MAPSEC_MILL_LANE_MILL	        0x0F
@@ -73,7 +73,7 @@
 #define	MAPSEC_CRANDOR            		0x45	
 #define	MAPSEC_ICE_MOUNTAIN            	0x46
 #define	MAPSEC_GROTTO            	    0x47
-#define	MAPSEC_MOR_UL_REK            	0x48
+#define	MAPSEC_GOBLIN_VILLAGE           0x48
 #define	MAPSEC_LUMBRIDGE_SWAMP_CAVES   	0x49
 #define	MAPSEC_BAY_OF_SARIM   	        0x4A
 #define	MAPSEC_MUDSKIPPER_SOUND	        0x4B

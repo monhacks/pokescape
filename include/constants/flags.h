@@ -1527,9 +1527,9 @@
 #define FLAG_VISITED_EDGEVILLE                      (SYSTEM_FLAGS + 0x8D) // Unused Flag
 #define FLAG_VISITED_AL_KHARID                      (SYSTEM_FLAGS + 0x8E) // Unused Flag
 #define FLAG_VISITED_MUSA_POINT                     (SYSTEM_FLAGS + 0x8F) // Unused Flag
-#define FLAG_VISITED_DAEMONHEIM                     (SYSTEM_FLAGS + 0x90) // Unused Flag 
-#define FLAG_VISITED_WILDERNESS_CRATER              (SYSTEM_FLAGS + 0x91) // Unused Flag
-#define FLAG_UNUSED_0x92                            (SYSTEM_FLAGS + 0x92) // Unused Flag
+#define FLAG_VISITED_MOR_UL_REK                     (SYSTEM_FLAGS + 0x90) // Unused Flag 
+#define FLAG_VISITED_DAEMONHEIM                     (SYSTEM_FLAGS + 0x91) // Unused Flag
+#define FLAG_VISITED_WILDERNESS_CRATER              (SYSTEM_FLAGS + 0x92) // Unused Flag
 #define FLAG_UNUSED_0x93                            (SYSTEM_FLAGS + 0x93) // Unused Flag
 #define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
