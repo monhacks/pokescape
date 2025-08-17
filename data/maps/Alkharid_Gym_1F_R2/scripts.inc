@@ -207,6 +207,12 @@ QUEST_ALKHARID_GYM_1_4:
 	setvar VAR_POKESCAPE_ALKHARID_GYM_QUEST, 15
 	fadescreenswapbuffers FADE_TO_BLACK
 	call ALKHARID_GYM_STATE
+	setobjectxy 9, 13, 11
+	setobjectxyperm 9, 13, 11
+	setobjectmovementtype 9, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxy 10, 7, 5
+	setobjectxyperm 10, 7, 5
+	setobjectmovementtype 10, MOVEMENT_TYPE_FACE_LEFT
 	delay 60
 	fadescreenswapbuffers FADE_FROM_BLACK
 	return

@@ -3460,6 +3460,9 @@ void SetMoveEffect(bool32 primary, u32 certain)
                     {
                         gBattlescriptCurrInstr++;
                     }
+                    else if (FlagGet(FLAG_TZHAAR_RANDOM)) {
+                        gBattlescriptCurrInstr++;
+                    }
                     else
                     {
                         StealTargetItem(gBattlerAttacker, gBattlerTarget);  // Attacker steals target item
@@ -6251,13 +6254,13 @@ static void Cmd_sethealblock(void)
 
     if (gStatuses3[gBattlerTarget] & STATUS3_HEAL_BLOCK)
     {
-        if (gCurrentMove == MOVE_ZAROS_BECKON) { //skips failed and prevented from healing string.
-            gBattlescriptCurrInstr++;
-            BattleScriptPush(cmd->nextInstr);
-        }
-        else {
+        //if (gCurrentMove == MOVE_ZAROS_BECKON) { //skips failed and prevented from healing string.
+        //    gBattlescriptCurrInstr++;
+        //    BattleScriptPush(cmd->nextInstr);
+        //}
+        //else {
             gBattlescriptCurrInstr = cmd->failInstr;
-        }
+        //}
     }
     else
     {

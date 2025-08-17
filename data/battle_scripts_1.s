@@ -10997,11 +10997,13 @@ BattleScript_EffectHealBlockHit:
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	jumpifability BS_TARGET_SIDE, ABILITY_AROMA_VEIL, BattleScript_AromaVeilProtects
-	sethealblock BattleScript_ButItFailed
+	sethealblock BattleScript_TryFaintMon
 	printstring STRINGID_PKMNPREVENTEDFROMHEALING
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_TARGET
 	goto BattleScript_MoveEnd
+
+
 
 BattleScript_EffectAuroraVeilHit:
 	attackcanceler
