@@ -956,7 +956,7 @@ gBattleAnims_Moves::
 	.4byte Move_TORMENT   
 	.4byte Move_AUGURY    
 	.4byte Move_ANGUISH   
-	.4byte Move_DIVINERAGE
+	.4byte Move_DIVINE_RAGE
 	.4byte Move_VANILLA_OOZE
 	.4byte Move_STRAWBERRY_OOZE
 	.4byte Move_CHOCOLATE_OOZE
@@ -34369,7 +34369,7 @@ Move_RIGOUR:
 Move_TORMENT_PRAYER:
 Move_AUGURY:
 Move_ANGUISH:
-Move_DIVINERAGE:
+Move_DIVINE_RAGE:
 	goto Move_HEALING_WISH
 
 Move_VANILLA_OOZE:

@@ -429,7 +429,7 @@ script MOVE_TUTOR_DIVINE_RAGE {
             end
         }
         else {
-            setvar (VAR_0x8005, MOVE_DIVINERAGE)
+            setvar (VAR_0x8005, MOVE_DIVINE_RAGE)
             call (MOVE_TUTOR_OpenPartyMenu)
             if (var(VAR_RESULT) == 0) {
                 goto(MOVE_TUTOR_PRAYER_NO)

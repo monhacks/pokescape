@@ -17149,7 +17149,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .snatchAffected = TRUE,
     },
      
-    [MOVE_DIVINERAGE] =
+    [MOVE_DIVINE_RAGE] =
     {
         .effect = EFFECT_DIVINERAGE,
         .power = 0,
