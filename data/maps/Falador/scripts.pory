@@ -874,11 +874,46 @@ movement Movement_FaladorTree_2
 
 
 
+script NPC_Ridgeley {
+    lock
+    faceplayer
+    msgbox(format("Ridgeley ignores you. Perhaps some cheese might get his attention."))
+    closemessage
+    checkitem(ITEM_CHEESE, 1)
+        if (var(VAR_RESULT)){
+            msgbox(format("Would you like to give Ridgeley some cheese?"), MSGBOX_YESNO)
+	    	if (var(VAR_RESULT)){
+				goto(NPC_Ridgeley_Cheese)
+				}
+			else {
+				msgbox(format("Ridgeley looks very upset. Would you like to give him some cheese?"), MSGBOX_YESNO)
+				if (var(VAR_RESULT)){
+					goto(NPC_Ridgeley_Cheese)
+				}
+				else {
+					msgbox(format("Ridgeley snuck into your backpack while you were deciding what to do and stole a piece of cheese anyway."))
+					closemessage
+					removeitem(ITEM_CHEESE, 1)
+					release
+					end
+				}
+			}
+        }
+	release
+    end
+}
 
-
-
-
-
+script NPC_Ridgeley_Cheese {
+	msgbox(format("You throw the cheese to Ridgeley, for which he appears grateful."))
+	closemessage
+	namebox ("Ridgeley")
+	msgbox(format("Squeeeeeeeeep!!"))
+	hidenamebox
+	closemessage
+	removeitem(ITEM_CHEESE, 1)
+	release
+	end
+}
 
 
 

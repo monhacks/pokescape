@@ -102,16 +102,16 @@ script ENCOUNTER_BEHEMOTH
 	delay(1)
 
     if (flag(FLAG_BADGE01_GET) == TRUE) {
-        setwildbattle (SPECIES_BEHEMOTH_ADOLSCENT_FORM, 20, ITEM_NONE)
+        setwildbattle (SPECIES_BEHEMOTH_NORMAL_FORM, 20, ITEM_NONE)
     }
     elif (flag(FLAG_BADGE02_GET) == TRUE) {
-        setwildbattle (SPECIES_BEHEMOTH_ADOLSCENT_FORM, 25, ITEM_NONE)
+        setwildbattle (SPECIES_BEHEMOTH_NORMAL_FORM, 25, ITEM_NONE)
     }
     elif (flag(FLAG_BADGE03_GET) == TRUE) {
         setwildbattle (SPECIES_BEHEMOTH_ADOLSCENT_FORM, 30, ITEM_NONE)
     }
     elif (flag(FLAG_BADGE04_GET) == TRUE) {
-        setwildbattle (SPECIES_BEHEMOTH_GLUTTONOUS_FORM, 35, ITEM_NONE)
+        setwildbattle (SPECIES_BEHEMOTH_ADOLSCENT_FORM, 35, ITEM_NONE)
     }
     elif (flag(FLAG_BADGE05_GET) == TRUE) {
         setwildbattle (SPECIES_BEHEMOTH_GLUTTONOUS_FORM, 40, ITEM_NONE)

@@ -347,7 +347,7 @@ script Draynor_Miss_Schism{
 	lock
 	faceplayer
     namebox("Miss Schism")
-	msgbox(format("Hello, I hear a lot of gossip and rumours.\pFor example did you know if you use flavoured milk on a Cow it may evolve into another Cow.\pFurthermore, if that Cow learns a move that spins around really fast it can evolve even further!"))
+	msgbox(format("Hello, I hear a lot of gossip and rumours.\pFor example did you know if you teach a Cow a specifically flavoured move, it may evolve into another Cow.\pFurthermore, if that Cow learns a move that spins around really fast it can evolve even further!"))
     hidenamebox
     release
 	end
