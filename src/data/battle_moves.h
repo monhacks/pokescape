@@ -14710,334 +14710,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .zMoveEffect = Z_EFFECT_NONE,
     },
 
-    // Pokescape Moves
-
-    [MOVE_CHAOTIC_RIFT] =
-    {
-        .effect = EFFECT_INVERSE_BATTLE, //EFFECT_INVERSE_BATTLE
-        .power = 0,
-        .type = TYPE_PSYCHIC,
-        .accuracy = 0,
-        .pp = 5,
-        .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_USER,
-        .priority = 0,
-        .split = SPLIT_STATUS,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_SWORD_STRIKE] =
-    {
-        .effect = EFFECT_HIT,
-        .power = 70,
-        .type = TYPE_STEEL,
-        .accuracy = 100,
-        .pp = 20,
-        .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .makesContact = TRUE,
-        .ignoresKingsRock = TRUE,
-        .highCritRatio = TRUE,
-        .slicingMove = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_SLICE_DICE] =
-    {
-        .effect = EFFECT_TRIPLE_KICK,
-        .power = 30,
-        .type = TYPE_DRAGON,
-        .accuracy = 85,
-        .pp = 5,
-        .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 1,
-        .split = SPLIT_PHYSICAL,
-        .makesContact = TRUE,
-        .highCritRatio = TRUE,
-        .slicingMove = TRUE,
-        .strikeCount = 4,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_SARADOMIN_STRIKE] =
-    {
-        .effect = EFFECT_SPEED_DOWN_HIT, //EFFECT_SARADOMIN_STRIKE
-        .power = 90,
-        .type = TYPE_WATER,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        //.argument = TYPE_ELECTRIC,
-        //.ignoresKingsRock = TRUE,
-        //.damagesAirborneDoubleDamage = TRUE,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
     
-    [MOVE_ZAMORAK_FLAMES] =
-    {
-        .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
-        .power = 90,
-        .type = TYPE_FIRE,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_GUTHIX_CLAWS] =
-    {
-        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
-        .power = 90,
-        .type = TYPE_GRASS,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_ARMADYL_STORM] =
-    {
-        .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 90,
-        .type = TYPE_PSYCHIC,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .damagesAirborneDoubleDamage = TRUE,
-        .windMove = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_TUMEKEN_STORM] =
-    {
-        .effect = EFFECT_SANDSTORM_HIT,
-        .power = 90,
-        .type = TYPE_ROCK,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .sheerForceBoost = TRUE,
-        .damagesAirborneDoubleDamage = TRUE,
-        .windMove = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_BANDOS_FURY] =
-    {
-        .effect = EFFECT_ATTACK_UP_HIT,
-        .power = 90,
-        .type = TYPE_STEEL,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .sheerForceBoost = TRUE,
-        .makesContact = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_ZAROS_BECKON] =
-    {
-        .effect = EFFECT_HEAL_BLOCK_HIT,
-        .power = 90,
-        .type = TYPE_DARK,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 30,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_SEREN_SHINE] =
-    {
-        .effect = EFFECT_AURORA_VEIL_HIT,
-        .power = 90,
-        .type = TYPE_ICE,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .snatchAffected = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_GODLESS_REBEL] =
-    {
-        .effect = EFFECT_FACADE,
-        .power = 90,
-        .type = TYPE_FIGHTING,
-        .accuracy = 90,
-        .pp = 10,
-        .secondaryEffectChance = 50,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .makesContact = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_SMOKE_BARRAGE] = 
-    {
-        .effect = EFFECT_ACCURACY_DOWN_HIT,
-        .power = 90,
-        .type = TYPE_POISON,
-        .accuracy = 100,
-        .pp = 15,
-        .secondaryEffectChance = 30,
-        .target = MOVE_TARGET_BOTH,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_SHADOW_BARRAGE] = 
-    {
-        .effect = EFFECT_EVASION_UP_HIT,
-        .power = 90,
-        .type = TYPE_GHOST,
-        .accuracy = 100,
-        .pp = 15,
-        .secondaryEffectChance = 30,
-        .target = MOVE_TARGET_BOTH,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_TELEGRAB] =
-    {
-        .effect = EFFECT_THIEF,
-        .power = 50,
-        .type = TYPE_PSYCHIC,
-        .accuracy = 100,
-        .pp = 25,
-        .secondaryEffectChance = 100,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_FREE_STUFF] =
-    {
-        .effect = EFFECT_FREE_STUFF,
-        .power = 40,
-        .type = TYPE_NORMAL,
-        .accuracy = 100,
-        .pp = 20,
-        .secondaryEffectChance = 100,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .danceMove = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_POLYPORE_STRIKE] =
-    {
-        .effect = EFFECT_PARALYZE_HIT,
-        .power = 90,
-        .type = TYPE_GRASS,
-        .accuracy = 100,
-        .pp = 15,
-        .secondaryEffectChance = 30,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_ICE_BARRAGE] = 
-        {
-        .effect = EFFECT_FREEZE_HIT,
-        .power = 90,
-        .type = TYPE_ICE,
-        .accuracy = 100,
-        .pp = 10,
-        .secondaryEffectChance = 30,
-        .target = MOVE_TARGET_BOTH,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .zMoveEffect = 0
-    },
-
-    [MOVE_BLOOD_BARRAGE] = 
-        {
-        .effect = EFFECT_ABSORB,
-        .power = 90,
-        .type = TYPE_BUG,
-        .accuracy = 100,
-        .pp = 10,
-        .secondaryEffectChance = 30,
-        .target = MOVE_TARGET_BOTH,
-        .priority = 0,
-        .split = SPLIT_SPECIAL,
-        .sheerForceBoost = TRUE,
-        .argument = 75,
-        .zMoveEffect = 0,
-        .healBlockBanned = TRUE,
-    },
-
-    [MOVE_VENGEANCE] = 
-        {
-        .effect = EFFECT_VENGEANCE,
-        .power = 0,
-        .type = TYPE_NORMAL,
-        .accuracy = 100,
-        .pp = 5,
-        .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_USER,
-        .priority = 0,
-        .split = SPLIT_STATUS,
-        .zMoveEffect = 0
-    },
-    
-    [MOVE_TZ_TOK_ZEK] =
-    {
-        .power = 65,
-        .effect = EFFECT_DOUBLE_DAMAGE_IF_BURN,
-        .type = TYPE_FIRE,
-        .accuracy = 100,
-        .pp = 10,
-        .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_PHYSICAL,
-        .makesContact = TRUE,
-        .zMoveEffect = Z_EFFECT_NONE,
-    },
 
     
 
@@ -16238,7 +15911,335 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .argument = MAX_EFFECT_BYPASS_PROTECT, //EFFECT TODO
     },
 
+// Pokescape Moves
 
+    [MOVE_CHAOTIC_RIFT] =
+    {
+        .effect = EFFECT_INVERSE_BATTLE, //EFFECT_INVERSE_BATTLE
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_SWORD_STRIKE] =
+    {
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .makesContact = TRUE,
+        .ignoresKingsRock = TRUE,
+        .highCritRatio = TRUE,
+        .slicingMove = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_SLICE_DICE] =
+    {
+        .effect = EFFECT_TRIPLE_KICK,
+        .power = 30,
+        .type = TYPE_DRAGON,
+        .accuracy = 85,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 1,
+        .split = SPLIT_PHYSICAL,
+        .makesContact = TRUE,
+        .highCritRatio = TRUE,
+        .slicingMove = TRUE,
+        .strikeCount = 4,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_SARADOMIN_STRIKE] =
+    {
+        .effect = EFFECT_SPEED_DOWN_HIT, //EFFECT_SARADOMIN_STRIKE
+        .power = 90,
+        .type = TYPE_WATER,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        //.argument = TYPE_ELECTRIC,
+        //.ignoresKingsRock = TRUE,
+        //.damagesAirborneDoubleDamage = TRUE,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+    
+    [MOVE_ZAMORAK_FLAMES] =
+    {
+        .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_FIRE,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_GUTHIX_CLAWS] =
+    {
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_GRASS,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_ARMADYL_STORM] =
+    {
+        .effect = EFFECT_DEFENSE_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .damagesAirborneDoubleDamage = TRUE,
+        .windMove = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_TUMEKEN_STORM] =
+    {
+        .effect = EFFECT_SANDSTORM_HIT,
+        .power = 90,
+        .type = TYPE_ROCK,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .sheerForceBoost = TRUE,
+        .damagesAirborneDoubleDamage = TRUE,
+        .windMove = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_BANDOS_FURY] =
+    {
+        .effect = EFFECT_ATTACK_UP_HIT,
+        .power = 90,
+        .type = TYPE_STEEL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .sheerForceBoost = TRUE,
+        .makesContact = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_ZAROS_BECKON] =
+    {
+        .effect = EFFECT_HEAL_BLOCK_HIT,
+        .power = 90,
+        .type = TYPE_DARK,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_SEREN_SHINE] =
+    {
+        .effect = EFFECT_AURORA_VEIL_HIT,
+        .power = 90,
+        .type = TYPE_ICE,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .snatchAffected = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_GODLESS_REBEL] =
+    {
+        .effect = EFFECT_FACADE,
+        .power = 90,
+        .type = TYPE_FIGHTING,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 50,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .makesContact = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_SMOKE_BARRAGE] = 
+    {
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_SHADOW_BARRAGE] = 
+    {
+        .effect = EFFECT_EVASION_UP_HIT,
+        .power = 90,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_TELEGRAB] =
+    {
+        .effect = EFFECT_THIEF,
+        .power = 50,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 25,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_FREE_STUFF] =
+    {
+        .effect = EFFECT_FREE_STUFF,
+        .power = 40,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .danceMove = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_POLYPORE_STRIKE] =
+    {
+        .effect = EFFECT_PARALYZE_HIT,
+        .power = 90,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_ICE_BARRAGE] = 
+        {
+        .effect = EFFECT_FREEZE_HIT,
+        .power = 90,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .zMoveEffect = 0
+    },
+
+    [MOVE_BLOOD_BARRAGE] = 
+        {
+        .effect = EFFECT_ABSORB,
+        .power = 90,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .sheerForceBoost = TRUE,
+        .argument = 75,
+        .zMoveEffect = 0,
+        .healBlockBanned = TRUE,
+    },
+
+    [MOVE_VENGEANCE] = 
+        {
+        .effect = EFFECT_VENGEANCE,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = 0
+    },
+    
+    [MOVE_TZ_TOK_ZEK] =
+    {
+        .power = 65,
+        .effect = EFFECT_DOUBLE_DAMAGE_IF_BURN,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .makesContact = TRUE,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+    
 //PokeScape Moves
     [MOVE_BAWK_BAWK] = //todo anims
     {
