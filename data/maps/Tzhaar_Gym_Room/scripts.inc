@@ -22,6 +22,8 @@ GIVE_TOKKUL::
 
 
 TZHAAR_GYM_ROOM_POST_WIN::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP
+	waitmovement 0
 	namebox TZHAAR_GYM_ROOM_POST_WIN_Text_0
 	msgbox TZHAAR_GYM_ROOM_POST_WIN_Text_1
 	closemessage

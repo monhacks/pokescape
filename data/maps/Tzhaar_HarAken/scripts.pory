@@ -37,10 +37,20 @@ script FIGHT_CAVES_RESTRICTIONS_OFF {
 
 
 script TZHAAR_GYMCHALLENGE_SETUP_BEGIN {
-    call(FIGHT_CAVES_RESTRICTIONS_ON)
+    call(TZHAAR_GYMCHALLENGE_RESTRICTIONS_ON)
     //If Gym Challenge go here:
     warp(MAP_TZHAAR_GYM_CHALLENGE, 0)
     waitstate
+}
+script TZHAAR_GYMCHALLENGE_RESTRICTIONS_ON {
+    setflag(FLAG_TOGGLE_NO_CATCHING)
+    //msgbox(format("Catching is disabled."))
+    //setflag(FLAG_TOGGLE_NO_BAG_USE)
+    //msgbox(format("Bag is disabled."))
+    setflag (FLAG_TZHAAR_RANDOM) // SET TO BE ABLE TO HAVE THE RANDOMISED BATTLES.
+    setflag(FLAG_POKESCAPE_USECUSTOM_POOL_LEVEL) //Enable this if using the randomised WAVE levels.
+    closemessage
+    return
 }
 
 script FIGHT_CAVES_FINISHED {

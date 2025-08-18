@@ -74,14 +74,19 @@ script TZHAAR_FIGHTCAVES_STATE {
 }
 
 script FIGHTCAVES_ENTER {
-    msgbox(format("Good luck JalYt!"))
-    closemessage
-    hidenamebox
-    // player walks into the cave.
-    //applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
-    //waitmovement(0)
-    call(FIGHTCAVES_SETUP_BEGIN)
-    return
+    msgbox(format("Would you like to start your challenge?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT))
+    {
+        msgbox(format("Good luck JalYt!"))
+        closemessage
+        hidenamebox
+        // player walks into the cave.
+        //applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEDOWN)
+        //waitmovement(0)
+        call(FIGHTCAVES_SETUP_BEGIN)
+        return
+    }
+    goto(TZHAAR_FIGHTCAVES_NPC)
 }
 
 script FIGHTCAVES_SETUP_BEGIN {

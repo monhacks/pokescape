@@ -197,7 +197,7 @@ script TZHAAR_FIGHTCAVES_NPC
             case 0:
                 call(FIGHTCAVES_ENTER)
             case 1:
-                msgbox(format("Our Fight Caves consist of 63 rounds of constant battles with our brethern, getting harder the higher the wave.\pYour goal is to make it to the end of the waves.\pIf you lose, you must start again from the beginning.\pIf you do you will be rewarded and known as a champion amoung us Tzhaar."))
+                msgbox(format("Your goal is simple.\nBbattle your way through all 25 waves.\pIf you manage this, we shall acknowledge you as Champion of Fight Caves.\pThe Rules are as follow:\n- You may not capture our brethern.\l- You may only use items in between waves and not during battle.\l- If you whiteout you must start again."))
             case 2:
                 msgbox(format("Very well."))
         }
@@ -210,6 +210,7 @@ script TZHAAR_FIGHTCAVES_NPC
     release
     end
 }
+
 
 
 script TZHAAR_GYM_NPC

@@ -4,7 +4,7 @@ mapscripts Tzhaar_Gym_Room_MapScripts {
 
     MAP_SCRIPT_ON_TRANSITION 
     {
-        
+
     }
 
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -24,6 +24,8 @@ script GIVE_TOKKUL {
 }
 
 script TZHAAR_GYM_ROOM_POST_WIN {
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_InteractFACEUP)
+    waitmovement(0)
     namebox("Kimit-Kal")
     msgbox(format("Congratulations on your victory JalYt.\pBefore you go, please accept this Tokkul as an extra reward for defeating our gym."))
     closemessage

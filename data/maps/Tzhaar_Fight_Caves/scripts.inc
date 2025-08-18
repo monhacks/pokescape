@@ -57,7 +57,14 @@ TZHAAR_FIGHTCAVES_STATE::
 
 
 FIGHTCAVES_ENTER::
-	msgbox FIGHTCAVES_ENTER_Text_0
+	msgbox FIGHTCAVES_ENTER_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne FIGHTCAVES_ENTER_2
+	goto TZHAAR_FIGHTCAVES_NPC
+	return
+
+FIGHTCAVES_ENTER_2:
+	msgbox FIGHTCAVES_ENTER_Text_1
 	closemessage
 	hidenamebox
 	call FIGHTCAVES_SETUP_BEGIN
@@ -676,6 +683,9 @@ FIGHTCAVES_RANDOM_EVENT_5:
 
 
 FIGHTCAVES_ENTER_Text_0:
+	.string "Would you like to start your challenge?$"
+
+FIGHTCAVES_ENTER_Text_1:
 	.string "Good luck JalYt!$"
 
 TRIGGER_FIGHT_CAVES_QUIT_Text_0:

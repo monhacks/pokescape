@@ -4157,25 +4157,33 @@ static const struct TrainerMon sParty_LUMBRIDGESWAMPCAVE_6[] = {
 //musa point
 static const struct TrainerMon sParty_MUSA_POINT_TRAINER_1[] = {
     {
+    .lvl = 36,
+    .species = SPECIES_LOBSTER_NORMAL_FORM,
+    },
+    {
     .lvl = 35,
+    .species = SPECIES_LOBSTER_GIANT_FORM,
+    },
+    {
+    .lvl = 36,
     .species = SPECIES_LOBSTER_HEIM_FORM,
-    }
+    },
 };
 static const struct TrainerMon sParty_MUSA_POINT_TRAINER_2[] = {
     {
-    .lvl = 38,
-    .species = SPECIES_CRAYFISH,
+    .lvl = 37,
+    .species = SPECIES_SHRIMP,
     },
     {
-    .lvl = 40,
-    .species = SPECIES_CRAYFISH,
+    .lvl = 37,
+    .species = SPECIES_LOBSTER_NORMAL_FORM,
     },
     {
     .lvl = 39,
     .species = SPECIES_SHRIMP,
     },
     {
-    .lvl = 38,
+    .lvl = 35,
     .species = SPECIES_LOBSTER_NORMAL_FORM,
     }
 };
@@ -4185,31 +4193,35 @@ static const struct TrainerMon sParty_MUSA_POINT_TRAINER_3[] = {
     .species = SPECIES_SHRIMP,
     },
     {
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_SHRIMP,
     },
     {
-    .lvl = 35,
-    .species = SPECIES_SHRIMP,
-    },
-    {
-    .lvl = 35,
-    .species = SPECIES_SHRIMP,
-    },
-    {
-    .lvl = 35,
+    .lvl = 38,
     .species = SPECIES_SHRIMP,
     },
     {
     .lvl = 35,
     .species = SPECIES_ANCHOVY,
+    },
+    {
+    .lvl = 35,
+    .species = SPECIES_SWORDFISH,
     }
 };
 static const struct TrainerMon sParty_MUSA_POINT_TRAINER_4[] = {
     {
-    .lvl = 38,
+    .lvl = 36,
+    .species = SPECIES_LOBSTER_NORMAL_FORM,
+    },
+    {
+    .lvl = 36,
     .species = SPECIES_LOBSTER_GOLDEN_FORM,
-    }
+    },
+    {
+    .lvl = 37,
+    .species = SPECIES_CRAB_RED_FORM,
+    },
 };
 
 static const struct TrainerMon sParty_SCAPEINK[] = {

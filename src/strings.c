@@ -2495,3 +2495,4 @@ const u8 gText_BlackKnight[] = _("Black Knight");
 const u8 gText_WhiteKnight[] = _("White Knight");
 const u8 gText_Archaeologist[] = _("Archaeologist");
 const u8 gText_Guard[] = _("Guard");
+const u8 gText_Jailer[] = _("Jailer");

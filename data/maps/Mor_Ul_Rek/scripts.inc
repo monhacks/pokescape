@@ -794,15 +794,16 @@ TZHAAR_FIGHTCAVES_NPC_Text_2:
 	.string "What would you like to do?$"
 
 TZHAAR_FIGHTCAVES_NPC_Text_3:
-	.string "Our Fight Caves consist of 63 rounds of\n"
-	.string "constant battles with our brethern,\l"
-	.string "getting harder the higher the wave.\p"
-	.string "Your goal is to make it to the end of\n"
-	.string "the waves.\p"
-	.string "If you lose, you must start again from\n"
-	.string "the beginning.\p"
-	.string "If you do you will be rewarded and known\n"
-	.string "as a champion amoung us Tzhaar.$"
+	.string "Your goal is simple.\n"
+	.string "Bbattle your way through all 25 waves.\p"
+	.string "If you manage this, we shall\n"
+	.string "acknowledge you as Champion of Fight\l"
+	.string "Caves.\p"
+	.string "The Rules are as follow:\n"
+	.string "- You may not capture our brethern.\l"
+	.string "- You may only use items in between\l"
+	.string "waves and not during battle.\l"
+	.string "- If you whiteout you must start again.$"
 
 TZHAAR_FIGHTCAVES_NPC_Text_4:
 	.string "Very well.$"

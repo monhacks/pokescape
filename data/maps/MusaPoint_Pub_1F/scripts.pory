@@ -20,7 +20,7 @@ script MUSAPOINT_PUB_STATE {
     }
 
 	//Angrenouille appears before wise old man cutscene is done.
-	if ((var(VAR_WISE_OLD_MAN_RIVAL) <= 20) && (var(VAR_FROGEEL_RIVAL) == 10)) {
+	if ((var(VAR_WISE_OLD_MAN_RIVAL) < 20) && (var(VAR_FROGEEL_RIVAL) == 10)) {
 		addobject(7)
         clearflag(FLAG_TEMP_10) //Angrenouille
 	}

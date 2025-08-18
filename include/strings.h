@@ -3683,5 +3683,6 @@ extern const u8 gText_BlackKnight[];
 extern const u8 gText_WhiteKnight[];
 extern const u8 gText_Archaeologist[];
 extern const u8 gText_Guard[];
+extern const u8 gText_Jailer[];
 
 #endif // GUARD_STRINGS_H

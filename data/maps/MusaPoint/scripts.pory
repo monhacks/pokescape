@@ -1851,7 +1851,7 @@ movement MOVEMENT_FROGEEL_RIVAL_MUSA_POINT_1 {
 
 movement MOVEMENT_FROGEEL_RIVAL_MUSA_POINT_2 {
     face_up
-    walk_faster_up * 5
+    walk_faster_up * 7
     step_end
 }
 
