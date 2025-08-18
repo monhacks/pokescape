@@ -7,46 +7,13 @@ mapscripts Route29_MapScripts
     }
     MAP_SCRIPT_ON_LOAD 
     {
-        call(ROUTE29_DOOR)
+        call(METATILES_ROUTE29)
     }
 }
 
-script ROUTE29_DOOR
-{
-    if (flag(FLAG_DUNGEONEERING_DOOR_ROUTE29))
-    {
-        setmetatile(24, 11, 121, 0)
-        special(DrawWholeMapView) 
-    }
-}
 
-script DUNGEONEERING_DOOR_ROUTE29
-{
-    if (!flag(FLAG_DUNGEONEERING_DOOR_ROUTE29))
-    {
-        msgbox(format("It appears to be a mysterious door.\pWould you like to try and pry it open?"), MSGBOX_YESNO)
-        closemessage
-		if (var(VAR_RESULT))
-        {
-            playse(SE_SWITCH)
-            waitse
-            delay(30)
-            setmetatile(24, 11, 121, 0)
-            special(DrawWholeMapView) 
-            playse(SE_ICE_BREAK)
-            setflag(FLAG_DUNGEONEERING_DOOR_ROUTE29)
-            msgbox(format("The door opens."))
-            closemessage
-        }
-    }
-    else
-    {
-        msgbox(format("The door is already open."))
-        closemessage
-    } 
-    release
-    end
-}
+
+
 
 
 
@@ -102,3 +69,153 @@ script BATTLE_ROUTE29_TRAINER_5
 	end
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+script METATILES_ROUTE29 {
+    switch(var(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE)) {
+        case 5:
+            setmetatile(17,15, METATILE_AlKharid_SPARKLE_CLIFF_LEFT, 1)
+            setmetatile(17,22, METATILE_AlKharid_SPARKLE_CLIFF_LEFT, 1)
+            setmetatile(28,13, METATILE_AlKharid_SPARKLE_CLIFF_RIGHT, 1)
+            setmetatile(32,24, METATILE_AlKharid_SPARKLE_CLIFF_RIGHT, 1)
+            setmetatile(22,24, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(20,22, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(11,19, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(32,16, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(34,18, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(36,13, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(32,10, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(22,14, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(13,14, METATILE_AlKharid_SPARKLE_SAND, 0)
+            setmetatile(31,9, METATILE_AlKharid_SPARKLE_SAND, 0) //THE KEY
+        case 10:
+            //Clear all the ones set.
+            setmetatile(17,15, METATILE_AlKharid_CLIFF_LEFT, 1)
+            setmetatile(17,22, METATILE_AlKharid_CLIFF_LEFT, 1)
+            setmetatile(28,13, METATILE_AlKharid_CLIFF_RIGHT, 1)
+            setmetatile(32,24, METATILE_AlKharid_CLIFF_RIGHT, 1)
+            setmetatile(22,24, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(20,22, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(11,19, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(32,16, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(34,18, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(36,13, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(32,10, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(22,14, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(13,14, METATILE_AlKharid_ENCOUNTER_SAND, 0)
+            setmetatile(31,9, METATILE_AlKharid_ENCOUNTER_SAND, 0) //THE KEY
+        case 15:
+            setmetatile(24, 11, 121, 0) //Open Door.
+    }
+    return
+}
+
+
+
+script DUNGEONEERING_DOOR_ROUTE29_KEYS
+{
+    if (var(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE) == 5) {
+        setvar(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE, 10)
+        msgbox(format("You shift through the sand…{PAUSE 15}…"))
+        playfanfare (MUS_PS_GET_ITEM)
+        msgbox(format("{PLAYER} found a DUNGEON KEY."))
+        waitfanfare
+        closemessage
+    //Clears all shiny spots.
+        call(METATILES_ROUTE29)
+        special(DrawWholeMapView) 
+    }
+    end
+}
+
+script DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS
+{
+    if (var(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE) == 5) {
+        random(13)
+        switch(var(VAR_RESULT)) {
+            case 0:
+                msgbox(format("You shift through the sand…\pYou find nothing except some molten glass."))
+            case 1:
+                msgbox(format("You shift through the sand…\pYou find nothing except a crushed gemstone."))
+            case 2:
+                msgbox(format("You shift through the sand…\pYou find some sparkly but stinky kalphite poop."))
+            case 3:
+                msgbox(format("You shift through the sand…\pYou find a shiny scarab!\p…{PAUSE 30}…{PAUSE 30} But it fled before the battle even begun…"))
+            case 4:
+                msgbox(format("You shift through the sand…\pYou find nothing interesting at all."))
+            case 5:
+                msgbox(format("You shift through the sand…\pYou find a one of a kind antique Frogeel Plush!\p…{PAUSE 30}…{PAUSE 30} But unearthing it cause it to disinigrate and is now nothing but sand…"))
+            case 6:
+                msgbox(format("You shift through the sand…\pThe grains just fall through your hands."))
+            case 7:
+                msgbox(format("You shift through the sand…\pYou find some sort of remains.\nYUCK!"))
+            case 8:
+                msgbox(format("You shift through the sand…\pYou find a cabbage."))
+                giveitem(ITEM_CABBAGE, 1)
+            case 9:
+                msgbox(format("You shift through the sand…\pYou a Spirit Shard!"))
+                giveitem(ITEM_SPIRIT_SHARD, 1)
+            default:
+                msgbox(format("You shift through the sand…\pAnd nothing interesting happens…"))
+        }
+        closemessage
+    }
+    end
+}
+
+script DUNGEONEERING_DOOR_ROUTE29
+{
+    if (!(var(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE) == 15)) //Door is already open.
+    { 
+        msgbox(format("It appears to be a mysterious door.\pWould you like to try and pry it open?"), MSGBOX_YESNO)
+        closemessage
+        if (var(VAR_RESULT))
+        {
+            if (var(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE) == 10) //If you have Found the Key.
+            { 
+                playse(SE_SWITCH)
+                msgbox(format("The DUNGEON KEY slots into a hole."))
+                closemessage
+                waitse
+                delay(30)
+                setmetatile(24, 11, 121, 0)
+                special(DrawWholeMapView) 
+                playse(SE_TRUCK_DOOR)
+                msgbox(format("The door opens."))
+                closemessage
+                setvar(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE, 15)
+                setflag(FLAG_DUNGEONEERING_DOOR_ROUTE29)
+            }
+            else 
+            {
+                playse(SE_FAILURE)
+                waitse
+                delay(30)
+                msgbox(format("The door refuses to open.\pMaybe there is something nearby that can open it."))
+                closemessage
+                
+                setvar(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE, 5)
+                //Show all shiny spots.
+                call(METATILES_ROUTE29)
+                special(DrawWholeMapView) 
+            }
+        }
+    }
+    else
+    {
+        msgbox(format("The door is already open."))
+        closemessage
+    } 
+    release
+    end
+}

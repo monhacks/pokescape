@@ -2,8 +2,14 @@
 #define GUARD_METATILE_LABELS_H
 
 // gTileset_AlKharid
-#define METATILE_AlKharid_LOCKED_DOOR  0x251
-#define METATILE_AlKharid_OPENED_DOOR  0x213
+#define METATILE_AlKharid_CLIFF_LEFT           0x287
+#define METATILE_AlKharid_CLIFF_RIGHT          0x285
+#define METATILE_AlKharid_ENCOUNTER_SAND       0x281
+#define METATILE_AlKharid_LOCKED_DOOR          0x251
+#define METATILE_AlKharid_OPENED_DOOR          0x213
+#define METATILE_AlKharid_SPARKLE_CLIFF_LEFT   0x34E
+#define METATILE_AlKharid_SPARKLE_CLIFF_RIGHT  0x356
+#define METATILE_AlKharid_SPARKLE_SAND         0x34F
 
 // gTileset_Barbarian_Village
 #define METATILE_Barbarian_Village_BRIDGE_SIDE_TOP  0x3CB

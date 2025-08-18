@@ -2203,6 +2203,8 @@ MOVEMENT_FROGEEL_RIVAL_MUSA_POINT_2:
 	walk_faster_up
 	walk_faster_up
 	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 MOVEMENT_FROGEEL_RIVAL_MUSA_POINT_3:

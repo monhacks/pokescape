@@ -255,6 +255,33 @@ ENCOUNTER_IMPLING_EARTH_2:
 	goto ENCOUNTER_IMPLING_EARTH_1
 
 
+ENCOUNTER_IMPLING_DRAGON::
+	lock
+	faceplayer
+	namebox NPC_IMPLING_Text_0
+	playmoncry SPECIES_IMPLING_DRAGON_FORM, 0
+	msgbox ENCOUNTER_IMPLING_BABY_Text_0
+	waitmoncry
+	hidenamebox
+	closemessage
+	delay 1
+	setwildbattle SPECIES_IMPLING_DRAGON_FORM, 20, ITEM_NONE
+	dowildbattle
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq ENCOUNTER_IMPLING_DRAGON_2
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq ENCOUNTER_IMPLING_DRAGON_2
+ENCOUNTER_IMPLING_DRAGON_1:
+	release
+	end
+
+ENCOUNTER_IMPLING_DRAGON_2:
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto ENCOUNTER_IMPLING_DRAGON_1
+
+
 ENCOUNTER_LUCKY_IMPLING::
 	lock
 	faceplayer

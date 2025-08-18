@@ -939,6 +939,7 @@ static const u8 sText_BabeCrandor_FirstDown[] = _("Well it seems like this is go
 static const u8 sText_BabeCrandor_SwitchIn[] = _("This is getting tiresome.\nPlease stay down so we can move on.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_BabeCrandor_PlayerLost[] = _("Would think coming this far you would\nbe better prepared.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_BeforeFirstTurn[] = _("For your next task, you are to defeat my\nteam of monsters.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_Vannaka_CriticalHit[] = _("Strike the monster down!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_SuperEffective[] = _("Expose the weakness and take the\nmonster down!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_FirstSTABMove[] = _("Showing some prowess as a slayer are we?{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Vannaka_FirstDown[] = _("This may be a rather long task.\nAre you sufficiently prepared?{PAUSE_UNTIL_PRESS}");
@@ -1770,12 +1771,12 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PRINCE_ALI_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_FirstDown,
     [STRINGID_PRINCE_ALI_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_SwitchIn,
     [STRINGID_PRINCE_ALI_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_PrinceAli_PlayerLost,
-    [STRINGID_WISEOLDMAN_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_FirstDown,
-    [STRINGID_WISEOLDMAN_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_CriticalHit,
-    [STRINGID_WISEOLDMAN_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_SuperEffective,
-    [STRINGID_WISEOLDMAN_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_SwitchIn,
-    [STRINGID_WISEOLDMAN_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_LastLowHp,
-    [STRINGID_WISEOLDMAN_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_PlayerLost,
+    [STRINGID_WISE_OLD_MAN_MESSAGE_1 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_FirstDown,
+    [STRINGID_WISE_OLD_MAN_MESSAGE_2 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_CriticalHit,
+    [STRINGID_WISE_OLD_MAN_MESSAGE_3 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_SuperEffective,
+    [STRINGID_WISE_OLD_MAN_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_SwitchIn,
+    [STRINGID_WISE_OLD_MAN_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_LastLowHp,
+    [STRINGID_WISE_OLD_MAN_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_WiseOldMan_PlayerLost,
     [STRINGID_MAGGIE_MESSAGE_4 - BATTLESTRINGS_TABLE_START] = sText_Maggie_CriticalHit,
     [STRINGID_MAGGIE_MESSAGE_5 - BATTLESTRINGS_TABLE_START] = sText_Maggie_SwitchIn,
     [STRINGID_MAGGIE_MESSAGE_6 - BATTLESTRINGS_TABLE_START] = sText_Maggie_LastLowHp,
@@ -4412,7 +4413,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_1,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4422,7 +4423,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_2,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4432,7 +4433,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_3,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4442,7 +4443,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_4,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4452,7 +4453,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_5,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4462,7 +4463,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_6,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4472,7 +4473,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_7,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,
@@ -4482,7 +4483,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {
         .trainerId = TRAINER_MAGGIE_8,
         .msgBeforeFirstTurn = sText_Maggie_BeforeFirstTurn,
-        .msgFirstDown - sText_Maggie_FirstDown,
+        .msgFirstDown = sText_Maggie_FirstDown,
         .msgFirstSuperEffectiveHit = sText_Maggie_SuperEffective,
         .msgFirstCriticalHit = sText_Maggie_CriticalHit,
         .msgLastSwitchIn = sText_Maggie_SwitchIn,

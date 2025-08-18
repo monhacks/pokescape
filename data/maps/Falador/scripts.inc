@@ -750,6 +750,52 @@ Movement_FaladorTree_2:
 	face_up
 	step_end
 
+NPC_Ridgeley::
+	lock
+	faceplayer
+	msgbox NPC_Ridgeley_Text_0
+	closemessage
+	checkitem ITEM_CHEESE, 1
+	compare VAR_RESULT, 0
+	goto_if_ne NPC_Ridgeley_2
+NPC_Ridgeley_1:
+	release
+	end
+
+NPC_Ridgeley_2:
+	msgbox NPC_Ridgeley_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne NPC_Ridgeley_4
+	msgbox NPC_Ridgeley_Text_2, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne NPC_Ridgeley_7
+	msgbox NPC_Ridgeley_Text_3
+	closemessage
+	removeitem ITEM_CHEESE, 1
+	release
+	end
+
+NPC_Ridgeley_4:
+	goto NPC_Ridgeley_Cheese
+	goto NPC_Ridgeley_1
+
+NPC_Ridgeley_7:
+	goto NPC_Ridgeley_Cheese
+	goto NPC_Ridgeley_1
+
+
+NPC_Ridgeley_Cheese::
+	msgbox NPC_Ridgeley_Cheese_Text_0
+	closemessage
+	namebox NPC_Ridgeley_Cheese_Text_1
+	msgbox NPC_Ridgeley_Cheese_Text_2
+	hidenamebox
+	closemessage
+	removeitem ITEM_CHEESE, 1
+	release
+	end
+
+
 NPC_FALADOR_NPC_8::
 	lock
 	faceplayer
@@ -2024,6 +2070,33 @@ Falador_TREE_Text_3:
 
 Falador_TREE_Text_4:
 	.string "TIIIIMBOOOOOOOOO!$"
+
+NPC_Ridgeley_Text_0:
+	.string "Ridgeley ignores you. Perhaps some\n"
+	.string "cheese might get his attention.$"
+
+NPC_Ridgeley_Text_1:
+	.string "Would you like to give Ridgeley some\n"
+	.string "cheese?$"
+
+NPC_Ridgeley_Text_2:
+	.string "Ridgeley looks very upset. Would you\n"
+	.string "like to give him some cheese?$"
+
+NPC_Ridgeley_Text_3:
+	.string "Ridgeley snuck into your backpack while\n"
+	.string "you were deciding what to do and stole\l"
+	.string "a piece of cheese anyway.$"
+
+NPC_Ridgeley_Cheese_Text_0:
+	.string "You throw the cheese to Ridgeley, for\n"
+	.string "which he appears grateful.$"
+
+NPC_Ridgeley_Cheese_Text_1:
+	.string "Ridgeley$"
+
+NPC_Ridgeley_Cheese_Text_2:
+	.string "Squeeeeeeeeep!!$"
 
 NPC_FALADOR_NPC_8_Text_0:
 	.string "$"

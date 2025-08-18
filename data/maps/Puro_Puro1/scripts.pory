@@ -214,7 +214,27 @@ script ENCOUNTER_IMPLING_EARTH
 	end
 }
 
-
+script ENCOUNTER_IMPLING_DRAGON
+{
+	lock
+	faceplayer
+    namebox ("Impling")
+    playmoncry(SPECIES_IMPLING_DRAGON_FORM, 0)
+	msgbox(format("Teehee!"))
+    waitmoncry
+    hidenamebox
+	closemessage
+	delay(1)
+    setwildbattle (SPECIES_IMPLING_DRAGON_FORM, 20, ITEM_NONE)
+	dowildbattle
+	if (var(VAR_RESULT) == B_OUTCOME_WON || var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+		fadescreenswapbuffers(FADE_TO_BLACK)
+		removeobject (VAR_LAST_TALKED)
+		fadescreenswapbuffers(FADE_FROM_BLACK)
+	}
+    release
+	end
+}
 
 
 

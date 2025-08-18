@@ -319,27 +319,139 @@
     },
     {
       "type": "hidden_item",
-      "x": 17,
-      "y": 15,
+      "x": 22,
+      "y": 21,
       "elevation": 3,
       "item": "ITEM_POUCH_GRANITE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE29_1"
     },
     {
       "type": "hidden_item",
-      "x": 22,
-      "y": 10,
+      "x": 23,
+      "y": 14,
       "elevation": 3,
       "item": "ITEM_SPIRIT_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE29_2"
     },
     {
       "type": "hidden_item",
-      "x": 29,
-      "y": 21,
+      "x": 26,
+      "y": 25,
       "elevation": 3,
       "item": "ITEM_SPIRIT_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE29_3"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS"
     }
   ],
   "has_night_table": true

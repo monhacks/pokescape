@@ -1,0 +1,185 @@
+const OBJ_EVENT_ID_LUCKY_IMPLING = 10
+const OBJ_EVENT_ID_DRAGON_IMPLING = 7
+const OBJ_EVENT_ID_BABY_IMPLING = 8
+const OBJ_EVENT_ID_EARTH_IMPLING = 9
+const OBJ_EVENT_ID_YOUNG_IMPLING = 11
+const OBJ_EVENT_ID_GOURMET_IMPLING = 12
+const OBJ_EVENT_ID_NINJA_IMPLING = 13
+
+
+
+mapscripts Al_Kharid_Mines_B1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        call(RANDOM_EVENT_SPAWNS_ALKHARIDMINES)
+    }
+}
+
+
+script RANDOM_EVENT_SPAWNS_ALKHARIDMINES {
+    random(4)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_6)
+		    addobject(OBJ_EVENT_ID_BABY_IMPLING)
+		default:
+			setflag(FLAG_TEMP_6)
+		    removeobject(OBJ_EVENT_ID_BABY_IMPLING)
+	}
+    random(6)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_5)
+		    addobject(OBJ_EVENT_ID_EARTH_IMPLING)
+		default:
+			setflag(FLAG_TEMP_5)
+		    removeobject(OBJ_EVENT_ID_EARTH_IMPLING)
+	}
+    random(6)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_4)
+		    addobject(OBJ_EVENT_ID_YOUNG_IMPLING)
+		default:
+			setflag(FLAG_TEMP_4)
+		    removeobject(OBJ_EVENT_ID_YOUNG_IMPLING)
+	}
+    random(6)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_3)
+		    addobject(OBJ_EVENT_ID_GOURMET_IMPLING)
+		default:
+			setflag(FLAG_TEMP_3)
+		    removeobject(OBJ_EVENT_ID_GOURMET_IMPLING)
+	}
+    random(6)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_9)
+		    addobject(OBJ_EVENT_ID_NINJA_IMPLING)
+		default:
+			setflag(FLAG_TEMP_9)
+		    removeobject(OBJ_EVENT_ID_NINJA_IMPLING)
+	}
+
+    random(15)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			clearflag(FLAG_TEMP_7)
+		    addobject(OBJ_EVENT_ID_DRAGON_IMPLING)
+		default:
+			setflag(FLAG_TEMP_7)
+		    removeobject(OBJ_EVENT_ID_DRAGON_IMPLING)
+	}
+    random(15)
+	if (var(VAR_RESULT) == 1) {
+		clearflag(FLAG_TEMP_8)
+		addobject(OBJ_EVENT_ID_LUCKY_IMPLING)
+	}
+	else {
+		setflag(FLAG_TEMP_8)
+		removeobject(OBJ_EVENT_ID_LUCKY_IMPLING)
+	}
+	return
+}
+
+
+script ENCOUNTER_COMMON_IMPLING {
+    lock
+	faceplayer
+    namebox ("Impling")
+    playmoncry(SPECIES_IMPLING_LUCKY_FORM, 0)
+	msgbox(format("Teehee!"))
+	waitmoncry
+    hidenamebox
+	closemessage
+	delay(1)
+    random(6)
+    switch(var(VAR_RESULT)) {
+		case 1:
+			setwildbattle (SPECIES_IMPLING_BABY_FORM, 30, ITEM_NONE)
+        case 2:
+			setwildbattle (SPECIES_IMPLING_GOURMET_FORM, 30, ITEM_NONE)
+        case 3:
+			setwildbattle (SPECIES_IMPLING_YOUNG_FORM, 30, ITEM_NONE)
+        case 4:
+			setwildbattle (SPECIES_IMPLING_EARTH_FORM, 30, ITEM_NONE)
+        case 5:
+			setwildbattle (SPECIES_IMPLING_MAGPIE_FORM, 30, ITEM_NONE)
+		default:
+            setwildbattle (SPECIES_IMPLING_BABY_FORM, 30, ITEM_NONE)
+    }
+	dowildbattle
+    if (var(VAR_RESULT) == B_OUTCOME_RAN) {
+        namebox ("Impling")
+        playmoncry(SPECIES_IMPLING_LUCKY_FORM, 0)
+        msgbox(format("Teehee teehee!"))
+        waitmoncry
+        hidenamebox
+        closemessage
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        removeobject (VAR_LAST_TALKED)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+        msgbox(format("The impling teleported away…"))
+	}
+    hidenamebox
+    closemessage
+	release
+	end
+}
+
+script ENCOUNTER_RARE_IMPLING {
+    lock
+	faceplayer
+    namebox ("Impling")
+    playmoncry(SPECIES_IMPLING_LUCKY_FORM, 0)
+	msgbox(format("Teehee!"))
+	waitmoncry
+    hidenamebox
+	closemessage
+	delay(1)
+    random(12)
+    switch(var(VAR_RESULT)) {
+        case 1:
+            setwildbattle (SPECIES_IMPLING_PIRATE_FORM, 30, ITEM_NONE)
+        case 2:
+            setwildbattle (SPECIES_IMPLING_NINJA_FORM, 30, ITEM_NONE)
+        case 3:
+            setwildbattle (SPECIES_IMPLING_ZOMBIE_FORM, 30, ITEM_NONE)
+        case 4:
+            setwildbattle (SPECIES_IMPLING_ECLECTIC_FORM, 30, ITEM_NONE)
+        case 5:
+            setwildbattle (SPECIES_IMPLING_NATURE_FORM, 30, ITEM_NONE)
+        case 6:
+            setwildbattle (SPECIES_IMPLING_CRYSTAL_FORM, 30, ITEM_NONE)
+        case 7:
+            setwildbattle (SPECIES_IMPLING_ESSENCE_FORM, 30, ITEM_NONE)
+        case 8:
+            setwildbattle (SPECIES_IMPLING_DIVINE_FORM, 30, ITEM_NONE)
+        case 9:
+            setwildbattle (SPECIES_IMPLING_SPIRIT_FORM, 30, ITEM_NONE)
+        case 10:
+            setwildbattle (SPECIES_IMPLING_KINGLY_FORM, 30, ITEM_NONE)
+        case 11:
+            setwildbattle (SPECIES_IMPLING_DRAGON_FORM, 30, ITEM_NONE)
+		default:
+            setwildbattle (SPECIES_IMPLING_ESSENCE_FORM, 30, ITEM_NONE)
+    }
+	dowildbattle
+    if (var(VAR_RESULT) == B_OUTCOME_RAN) {
+        namebox ("Impling")
+        playmoncry(SPECIES_IMPLING_LUCKY_FORM, 0)
+        msgbox(format("Teehee teehee!"))
+        waitmoncry
+        hidenamebox
+        closemessage
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        removeobject (VAR_LAST_TALKED)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+        msgbox(format("The impling teleported away…"))
+	}
+    hidenamebox
+    closemessage
+	release
+	end
+}

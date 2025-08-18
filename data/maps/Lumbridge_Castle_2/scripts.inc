@@ -1421,8 +1421,8 @@ Lumbridge_Bookshelf_2_Text_0:
 	.string "MvM also known as Monster VS Monster.\p"
 	.string "Adventurers gather from all around the\n"
 	.string "world to battle it out within the depths\l"
-	.string "of the Wilderness Crater to see who is\l"
-	.string "the strongest of them all.$"
+	.string "of the Wilderness to see who is the\l"
+	.string "strongest of them all.$"
 
 Lumbridge_Castle_GUARD_Text_0:
 	.string "Brawn$"
@@ -1579,7 +1579,7 @@ Lumbridge_Castle_Hans_1_Text_0:
 	.string "If you wish to participate in the MvM\n"
 	.string "Championships you must defeat 8\l"
 	.string "leaders from around Gielinor and make\l"
-	.string "your way to the Wilderness Crater.\p"
+	.string "your way to the Wilderness.\p"
 	.string "The Duke is one of these 8 Leaders.\p"
 	.string "If you are interested you should pay\n"
 	.string "him a visit.$"
@@ -1883,7 +1883,7 @@ Mithrilman_LUMBRIDGE_STATE_3_Text_0:
 	.string "glory be rewon!$"
 
 Mithrilman_LUMBRIDGE_STATE_LOST_Text_0:
-	.string "Haha, Thousts assumed thoust could\n"
+	.string "Haha, thousts assumed thoust could\n"
 	.string "beat thine.\p"
 	.string "Well KNAVE.{PAUSE 15}\n"
 	.string "Thoust were wrongst.\p"

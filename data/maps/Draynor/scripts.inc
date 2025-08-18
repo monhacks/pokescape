@@ -653,9 +653,9 @@ Draynor_Miss_Schism_Text_0:
 Draynor_Miss_Schism_Text_1:
 	.string "Hello, I hear a lot of gossip and\n"
 	.string "rumours.\p"
-	.string "For example did you know if you use\n"
-	.string "flavoured milk on a Cow it may evolve\l"
-	.string "into another Cow.\p"
+	.string "For example did you know if you teach a\n"
+	.string "Cow a specifically flavoured move, it\l"
+	.string "may evolve into another Cow.\p"
 	.string "Furthermore, if that Cow learns a move\n"
 	.string "that spins around really fast it can\l"
 	.string "evolve even further!$"
