@@ -141,7 +141,7 @@ script DUNGEONEERING_DOOR_ROUTE29_KEYS
 script DUNGEONEERING_DOOR_ROUTE29_FAKE_KEYS
 {
     if (var(VAR_DUNGEONEERING_DOOR_ROUTE29_STATE) == 5) {
-        random(13)
+        random(11)
         switch(var(VAR_RESULT)) {
             case 0:
                 msgbox(format("You shift through the sand…\pYou find nothing except some molten glass."))
@@ -198,7 +198,7 @@ script DUNGEONEERING_DOOR_ROUTE29
             }
             else 
             {
-                playse(SE_FAILURE)
+                playse(SE_FU_ZAKU)
                 waitse
                 delay(30)
                 msgbox(format("The door refuses to open.\pMaybe there is something nearby that can open it."))
