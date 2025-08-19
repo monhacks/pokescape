@@ -337,7 +337,13 @@ void HandleAction_UseMove(void)
 
     // Set dynamic move type.
     SetTypeBeforeUsingMove(gChosenMove, gBattlerAttacker);
-    GET_MOVE_TYPE(gChosenMove, moveType);
+    
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(gChosenMove, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(gChosenMove, moveType);
+    }
 
     // check max move used
     if (gBattleStruct->dynamax.usingMaxMove[gBattlerAttacker])
@@ -1133,9 +1139,31 @@ static const uq4_12_t sPercentToModifier[] =
 #define X UQ_4_12
 #define ______ X(1.0) // Regular effectiveness.
 
-static const uq4_12_t sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
+static const uq4_12_t sTypeEffectivenessTable_Runes[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
 {//                   Defender -->
- //  Attacker         Normal  Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy
+//  Attacker                Air     Water   Earth   Fire    Mind    Body    Cosmic  Chaos   Astral  Nature  Law     Death   Blood   Soul    Wrath   Miasma
+    [TYPE_RUNE_NONE]    = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_AIR]     = {X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_WATER]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_EARTH]   = {X(2.0), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_FIRE]    = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_MIND]    = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_BODY]    = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_COSMIC]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_CHAOS]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_ASTRAL]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_NATURE]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_LAW]     = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_DEATH]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_BLOOD]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_SOUL]    = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_WRATH]   = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+    [TYPE_RUNE_MIASMA]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
+};
+
+static const uq4_12_t sTypeEffectivenessTable[TYPE_PKMN_TYPES_END][TYPE_PKMN_TYPES_END] =
+{//                   Defender -->
+//  Attacker         Normal  Fighting Flying  Poison  Ground   Rock    Bug     Ghost   Steel  Mystery  Fire   Water   Grass  Electric Psychic   Ice   Dragon   Dark   Fairy
     [TYPE_NORMAL]   = {______, ______, ______, ______, ______, X(0.5), ______, X(0.0), X(0.5), ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
     [TYPE_FIGHTING] = {X(2.0), ______, X(0.5), X(0.5), ______, X(2.0), X(0.5), X(0.0), X(2.0), ______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), X(0.5)},
     [TYPE_FLYING]   = {______, X(2.0), ______, ______, ______, X(0.5), X(2.0), ______, X(0.5), ______, ______, ______, X(2.0), X(0.5), ______, ______, ______, ______, ______},
@@ -1164,6 +1192,7 @@ static const uq4_12_t sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON
 #endif
     [TYPE_FAIRY]    = {______, X(2.0), ______, X(0.5), ______, ______, ______, ______, X(0.5), ______, X(0.5), ______, ______, ______, ______, ______, X(2.0), X(2.0), ______},
 };
+
 
 #undef ______
 #undef X
@@ -1910,8 +1939,14 @@ static void TryToRevertMimicryAndFlags(void)
     for (i = 0; i < gBattlersCount; i++)
     {
         gDisableStructs[i].terrainAbilityDone = FALSE;
-        if (GetBattlerAbility(i) == ABILITY_MIMICRY)
-            RESTORE_BATTLER_TYPE(i);
+        if (GetBattlerAbility(i) == ABILITY_MIMICRY) {        
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                RESTORE_BATTLER_RUNE_TYPE(i);
+            }
+            else {
+                RESTORE_BATTLER_TYPE(i);
+            }
+        }
     }
 }
 
@@ -4279,7 +4314,13 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
     else
         move = gCurrentMove;
 
-    GET_MOVE_TYPE(move, moveType);
+    
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
 
     switch (caseID)
     {
@@ -4517,7 +4558,12 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                         for (j = 0; j < MAX_MON_MOVES; j++)
                         {
                             move = gBattleMons[i].moves[j];
-                            GET_MOVE_TYPE(move, moveType);
+                            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                                GET_MOVE_TYPE_RUNE(move, moveType);
+                            }
+                            else {
+                                GET_MOVE_TYPE(move, moveType);
+                            }
                             if (CalcTypeEffectivenessMultiplier(move, moveType, i, battler, ABILITY_ANTICIPATION, FALSE) >= UQ_4_12(2.0))
                             {
                                 effect++;
@@ -8019,13 +8065,24 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
     case ITEMEFFECT_TARGET:
         if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
         {
-            GET_MOVE_TYPE(gCurrentMove, moveType);
+            
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+            }
+            else {
+                GET_MOVE_TYPE(gCurrentMove, moveType);
+            }
             switch (battlerHoldEffect)
             {
             
 
             case HOLD_EFFECT_DFS:
-                GET_MOVE_TYPE(gCurrentMove, moveType);
+                if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                    GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+                }
+                else {
+                    GET_MOVE_TYPE(gCurrentMove, moveType);
+                }
                 if ((moveType == TYPE_FIRE || moveType == TYPE_DRAGON)
                 && IsBattlerAlive(battler)
                 && TARGET_TURN_DAMAGED)
@@ -8035,7 +8092,12 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SPIRIT_SHIELD:
-                GET_MOVE_TYPE(gCurrentMove, moveType);
+                if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                    GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+                }
+                else {
+                    GET_MOVE_TYPE(gCurrentMove, moveType);
+                }
                 if ((moveType == TYPE_GHOST || moveType == TYPE_FAIRY)
                 && IsBattlerAlive(battler)
                 && TARGET_TURN_DAMAGED)
@@ -9915,12 +9977,22 @@ static inline u32 CalcDefenseStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5)); 
         break;
     case HOLD_EFFECT_SPIRIT_SHIELD:
-        GET_MOVE_TYPE(gCurrentMove, moveType);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+        }
+        else {
+            GET_MOVE_TYPE(gCurrentMove, moveType);
+        }
         if(moveType == TYPE_GHOST|| moveType == TYPE_FAIRY)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0)); //Decreases damage from Ghost and Fairy type moves by half.
         break;
     case HOLD_EFFECT_DFS:
-        GET_MOVE_TYPE(gCurrentMove, moveType);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+        }
+        else {
+            GET_MOVE_TYPE(gCurrentMove, moveType);
+        }
         if(moveType == TYPE_FIRE|| moveType == TYPE_DRAGON)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0)); //Decreases damage from Dragon and Fire type moves by half.
         if (gCurrentMove == MOVE_DRAGONFIRE) {
@@ -10382,10 +10454,16 @@ static inline void TryNoticeIllusionInTypeEffectiveness(u32 move, u32 moveType, 
 {
     // Check if the type effectiveness would've been different if the pokemon really had the types as the disguise.
     uq4_12_t presumedModifier = UQ_4_12(1.0);
-    MulByTypeEffectiveness(&presumedModifier, move, moveType, battlerDef, gSpeciesInfo[illusionSpecies].types[0], battlerAtk, FALSE);
-    if (gSpeciesInfo[illusionSpecies].types[1] != gSpeciesInfo[illusionSpecies].types[0])
-        MulByTypeEffectiveness(&presumedModifier, move, moveType, battlerDef, gSpeciesInfo[illusionSpecies].types[1], battlerAtk, FALSE);
-
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        MulByTypeEffectiveness(&presumedModifier, move, moveType, battlerDef, gSpeciesInfo[illusionSpecies].runetypes[0], battlerAtk, FALSE);
+        if (gSpeciesInfo[illusionSpecies].runetypes[1] != gSpeciesInfo[illusionSpecies].runetypes[0])
+            MulByTypeEffectiveness(&presumedModifier, move, moveType, battlerDef, gSpeciesInfo[illusionSpecies].runetypes[1], battlerAtk, FALSE);
+    }
+    else {
+        MulByTypeEffectiveness(&presumedModifier, move, moveType, battlerDef, gSpeciesInfo[illusionSpecies].types[0], battlerAtk, FALSE);
+        if (gSpeciesInfo[illusionSpecies].types[1] != gSpeciesInfo[illusionSpecies].types[0])
+            MulByTypeEffectiveness(&presumedModifier, move, moveType, battlerDef, gSpeciesInfo[illusionSpecies].types[1], battlerAtk, FALSE);
+    }
     if (presumedModifier != resultingModifier)
         RecordAbilityBattle(battlerDef, ABILITY_ILLUSION);
 }
@@ -10498,13 +10576,26 @@ uq4_12_t CalcTypeEffectivenessMultiplier(u32 move, u32 moveType, u32 battlerAtk,
 uq4_12_t CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilityDef)
 {
     uq4_12_t modifier = UQ_4_12(1.0);
-    u8 moveType = gBattleMoves[move].type;
+    u8 moveType;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        moveType = gBattleMoves[move].runetype;
+    }
+    else {
+        moveType = gBattleMoves[move].type;
+    }
 
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
-        MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].types[0], 0, FALSE);
-        if (gSpeciesInfo[speciesDef].types[1] != gSpeciesInfo[speciesDef].types[0])
-            MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].types[1], 0, FALSE);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].runetypes[0], 0, FALSE);
+            if (gSpeciesInfo[speciesDef].runetypes[1] != gSpeciesInfo[speciesDef].runetypes[0])
+                MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].runetypes[1], 0, FALSE);
+        }
+        else {
+            MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].types[0], 0, FALSE);
+            if (gSpeciesInfo[speciesDef].types[1] != gSpeciesInfo[speciesDef].types[0])
+                MulByTypeEffectiveness(&modifier, move, moveType, 0, gSpeciesInfo[speciesDef].types[1], 0, FALSE);
+        }
 
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_LEVITATE && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
@@ -10533,10 +10624,20 @@ static uq4_12_t GetInverseTypeMultiplier(uq4_12_t multiplier)
 
 uq4_12_t GetTypeModifier(u32 atkType, u32 defType)
 {
-    if ((B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) || (gFieldStatuses & STATUS_FIELD_CHAOTIC_RIFT))
-        return GetInverseTypeMultiplier(sTypeEffectivenessTable[atkType][defType]);
-    return sTypeEffectivenessTable[atkType][defType];
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        if ((B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) || (gFieldStatuses & STATUS_FIELD_CHAOTIC_RIFT))
+            return GetInverseTypeMultiplier(sTypeEffectivenessTable_Runes[atkType][defType]);
+        return sTypeEffectivenessTable_Runes[atkType][defType];
+    }
+    else {
+        if ((B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) || (gFieldStatuses & STATUS_FIELD_CHAOTIC_RIFT))
+            return GetInverseTypeMultiplier(sTypeEffectivenessTable[atkType][defType]);
+        return sTypeEffectivenessTable[atkType][defType];
+    }
+    
 }
+
+
 
 s32 GetStealthHazardDamageByTypesAndHP(u8 hazardType, u8 type1, u8 type2, u32 maxHp)
 {
@@ -11552,9 +11653,17 @@ void CopyMonLevelAndBaseStatsToBattleMon(u32 battler, struct Pokemon *mon)
 void CopyMonAbilityAndTypesToBattleMon(u32 battler, struct Pokemon *mon)
 {
     gBattleMons[battler].ability = GetMonAbility(mon);
-    gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
-    gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
-    gBattleMons[battler].type3 = TYPE_MYSTERY;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].runetypes[0];
+        gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].runetypes[1];
+        gBattleMons[battler].type3 = TYPE_RUNE_NONE;
+    }
+    else {
+        gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
+        gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
+        gBattleMons[battler].type3 = TYPE_MYSTERY;
+    }
+    
 }
 
 void RecalcBattlerStats(u32 battler, struct Pokemon *mon)
@@ -11641,7 +11750,13 @@ bool8 CanMonParticipateInSkyBattle(struct Pokemon *mon)
     u16 monAbilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM, NULL);
 
     bool8 hasLevitateAbility = gSpeciesInfo[species].abilities[monAbilityNum] == ABILITY_LEVITATE;
-    bool8 isFlyingType = gSpeciesInfo[species].types[0] == TYPE_FLYING || gSpeciesInfo[species].types[1] == TYPE_FLYING;
+    bool8 isFlyingType;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        isFlyingType = gSpeciesInfo[species].types[0] == TYPE_FLYING || gSpeciesInfo[species].runetypes[1] == TYPE_RUNE_AIR;
+    }
+    else {
+        isFlyingType = gSpeciesInfo[species].types[0] == TYPE_FLYING || gSpeciesInfo[species].types[1] == TYPE_FLYING;
+    }
     bool8 monIsValidAndNotEgg = GetMonData(mon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(mon, MON_DATA_IS_EGG);
 
     if (monIsValidAndNotEgg)

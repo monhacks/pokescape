@@ -669,7 +669,12 @@ bool32 MovesWithSplitUnusable(u32 attacker, u32 target, u32 split)
             && !(unusable & gBitTable[i]))
         {
             SetTypeBeforeUsingMove(moves[i], attacker);
-            GET_MOVE_TYPE(moves[i], moveType);
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                GET_MOVE_TYPE_RUNE(moves[i], moveType);
+            }
+            else {
+                GET_MOVE_TYPE(moves[i], moveType);
+            }
             if (CalcTypeEffectivenessMultiplier(moves[i], moveType, attacker, target, AI_DATA->abilities[target], FALSE) != 0)
                 usable |= gBitTable[i];
         }
@@ -718,7 +723,12 @@ s32 AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u8 *typeEffectivenes
 
 
     SetTypeBeforeUsingMove(move, battlerAtk);
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
 
     effectivenessMultiplier = CalcTypeEffectivenessMultiplier(move, moveType, battlerAtk, battlerDef, aiData->abilities[battlerDef], FALSE);
     if (gBattleMoves[move].power)
@@ -1066,7 +1076,12 @@ uq4_12_t AI_GetTypeEffectiveness(u32 move, u32 battlerAtk, u32 battlerDef)
 
     gBattleStruct->dynamicMoveType = 0;
     SetTypeBeforeUsingMove(move, battlerAtk);
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
     typeEffectiveness = CalcTypeEffectivenessMultiplier(move, moveType, battlerAtk, battlerDef, AI_DATA->abilities[battlerDef], FALSE);
 
     RestoreBattlerData(battlerAtk);

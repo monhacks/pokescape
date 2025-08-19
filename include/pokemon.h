@@ -402,6 +402,7 @@ struct SpeciesInfo /*0x8C*/
  /* 0x88 */ const struct Evolution *evolutions;
  /* 0x84 */ const u16 *formSpeciesIdTable;
  /* 0x84 */ const struct FormChange *formChangeTable;
+            u8 runetypes[2];
 };
 
 struct BattleMove
@@ -463,6 +464,7 @@ struct BattleMove
     u32 parentalBondBanned:1;
     u32 skyBattleBanned:1;
     u32 sketchBanned:1;
+    u8 runetype;
 };
 
 #define SPINDA_SPOT_WIDTH 16

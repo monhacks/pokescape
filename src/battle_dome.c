@@ -2446,7 +2446,12 @@ static int GetTypeEffectivenessPoints(int move, int targetSpecies, int mode)
     defType1 = gSpeciesInfo[targetSpecies].types[0];
     defType2 = gSpeciesInfo[targetSpecies].types[1];
     defAbility = gSpeciesInfo[targetSpecies].abilities[0];
-    moveType = gBattleMoves[move].type;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        moveType = gBattleMoves[move].runetype;
+    }
+    else {
+        moveType = gBattleMoves[move].type;
+    }
 
     if (defAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND)
     {

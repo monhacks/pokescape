@@ -891,6 +891,76 @@ static const union AnimCmd sSpriteAnim_TypeFairy[] = {
     ANIMCMD_FRAME(TYPE_FAIRY * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
+//PokeScape Types
+static const union AnimCmd sSpriteAnim_TypeRuneNone[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_NONE * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneAir[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_AIR * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneWater[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_WATER * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneEarth[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_EARTH * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneFire[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_FIRE * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneMind[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_MIND * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneBody[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_BODY * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneCosmic[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_COSMIC * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneChaos[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_CHAOS * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneAstral[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_ASTRAL * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneNature[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_NATURE * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneLaw[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_LAW * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneDeath[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_DEATH * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneBlood[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_BLOOD * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneSoul[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_SOUL * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneWrath[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_WRATH * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+static const union AnimCmd sSpriteAnim_TypeRuneMiasma[] = {
+    ANIMCMD_FRAME(TYPE_RUNE_MIASMA * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+
 static const union AnimCmd sSpriteAnim_CategoryCool[] = {
     ANIMCMD_FRAME((CONTEST_CATEGORY_COOL + NUMBER_OF_MON_TYPES) * 8, 0, FALSE, FALSE),
     ANIMCMD_END
@@ -911,7 +981,7 @@ static const union AnimCmd sSpriteAnim_CategoryTough[] = {
     ANIMCMD_FRAME((CONTEST_CATEGORY_TOUGH + NUMBER_OF_MON_TYPES) * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
-static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] = {
+static const union AnimCmd *const sSpriteAnimTable_MoveTypes[TYPE_PKMN_TYPES_END + CONTEST_CATEGORIES_COUNT] = {
     sSpriteAnim_TypeNormal,
     sSpriteAnim_TypeFighting,
     sSpriteAnim_TypeFlying,
@@ -938,10 +1008,36 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     sSpriteAnim_CategoryTough,
 };
 
+static const union AnimCmd *const sSpriteAnimTable_MoveTypesRunes[TYPE_RUNE_TYPES_END] = {
+    sSpriteAnim_TypeRuneNone,
+    sSpriteAnim_TypeRuneAir,
+    sSpriteAnim_TypeRuneWater,
+    sSpriteAnim_TypeRuneEarth,
+    sSpriteAnim_TypeRuneFire,
+    sSpriteAnim_TypeRuneMind,
+    sSpriteAnim_TypeRuneBody,
+    sSpriteAnim_TypeRuneCosmic,
+    sSpriteAnim_TypeRuneChaos,
+    sSpriteAnim_TypeRuneAstral,
+    sSpriteAnim_TypeRuneNature,
+    sSpriteAnim_TypeRuneLaw,
+    sSpriteAnim_TypeRuneDeath,
+    sSpriteAnim_TypeRuneBlood,
+    sSpriteAnim_TypeRuneSoul,
+    sSpriteAnim_TypeRuneWrath,
+    sSpriteAnim_TypeRuneMiasma,
+};
+
 const struct CompressedSpriteSheet gSpriteSheet_MoveTypes =
 {
     .data = gMoveTypes_Gfx,
-    .size = (NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT) * 0x100,
+    .size = (TYPE_PKMN_TYPES_END + CONTEST_CATEGORIES_COUNT) * 0x100,
+    .tag = TAG_MOVE_TYPES
+};
+const struct CompressedSpriteSheet gSpriteSheet_MoveTypesRunes =
+{
+    .data = gMoveTypesRunes_Gfx,
+    .size = (TYPE_RUNE_TYPES_END) * 0x100,
     .tag = TAG_MOVE_TYPES
 };
 const struct SpriteTemplate gSpriteTemplate_MoveTypes =
@@ -954,7 +1050,17 @@ const struct SpriteTemplate gSpriteTemplate_MoveTypes =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
 };
-static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] =
+const struct SpriteTemplate gSpriteTemplate_MoveTypesRunes =
+{
+    .tileTag = TAG_MOVE_TYPES,
+    .paletteTag = TAG_MOVE_TYPES,
+    .oam = &sOamData_MoveTypes,
+    .anims = sSpriteAnimTable_MoveTypesRunes,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+static const u8 sMoveTypeToOamPaletteNum[TYPE_PKMN_TYPES_END + CONTEST_CATEGORIES_COUNT] =
 {
     [TYPE_NORMAL] = 13,
     [TYPE_FIGHTING] = 13,
@@ -975,11 +1081,31 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_DRAGON] = 15,
     [TYPE_DARK] = 13,
     [TYPE_FAIRY] = 14,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = 13,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = 14,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = 14,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_SMART] = 15,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_TOUGH] = 13,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_COOL] = 13,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_BEAUTY] = 14,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_CUTE] = 14,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_SMART] = 15,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_TOUGH] = 13,
+};
+static const u8 sMoveTypeRunesToOamPaletteNum[TYPE_RUNE_TYPES_END] =
+{
+    [TYPE_RUNE_NONE] = 15,
+    [TYPE_RUNE_AIR] = 14,
+    [TYPE_RUNE_MIND] = 13,
+    [TYPE_RUNE_WATER] = 14,
+    [TYPE_RUNE_EARTH] = 13,
+    [TYPE_RUNE_FIRE] = 13,
+    [TYPE_RUNE_BODY] = 15,
+    [TYPE_RUNE_COSMIC] = 13,
+    [TYPE_RUNE_CHAOS] = 13,
+    [TYPE_RUNE_NATURE] = 15,
+    [TYPE_RUNE_LAW] = 15,
+    [TYPE_RUNE_DEATH] = 13,
+    [TYPE_RUNE_ASTRAL] = 14,
+    [TYPE_RUNE_BLOOD] = 13,
+    [TYPE_RUNE_SOUL] = 14,
+    [TYPE_RUNE_WRATH] = 13,
+    [TYPE_RUNE_MIASMA] = 14,
 };
 static const struct OamData sOamData_MoveSelector =
 {
@@ -1430,7 +1556,12 @@ static bool8 DecompressGraphics(void)
         sMonSummaryScreen->switchCounter++;
         break;
     case 7:
-        LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypesRunes);
+        }
+        else {
+            LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
+        }
         sMonSummaryScreen->switchCounter++;
         break;
     case 8:
@@ -3905,9 +4036,14 @@ static void CreateMoveTypeIcons(void)
 
     for (i = SPRITE_ARR_ID_TYPE; i < SPRITE_ARR_ID_TYPE + TYPE_ICON_SPRITE_COUNT; i++)
     {
-        if (sMonSummaryScreen->spriteIds[i] == SPRITE_NONE)
-            sMonSummaryScreen->spriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypes, 0, 0, 2);
-
+        if (sMonSummaryScreen->spriteIds[i] == SPRITE_NONE) {
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                sMonSummaryScreen->spriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypesRunes, 0, 0, 2);
+            }
+            else {
+                sMonSummaryScreen->spriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypes, 0, 0, 2);
+            }
+        }
         SetSpriteInvisibility(i, TRUE);
     }
 }
@@ -3916,7 +4052,12 @@ void SetTypeSpritePosAndPal(u8 typeId, u8 x, u8 y, u8 spriteArrayId)
 {
     struct Sprite *sprite = &gSprites[sMonSummaryScreen->spriteIds[spriteArrayId]];
     StartSpriteAnim(sprite, typeId);
-    sprite->oam.paletteNum = sMoveTypeToOamPaletteNum[typeId];
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        sprite->oam.paletteNum = sMoveTypeRunesToOamPaletteNum[typeId];
+    }
+    else {
+        sprite->oam.paletteNum = sMoveTypeToOamPaletteNum[typeId];
+    }
     sprite->x = x + 16;
     sprite->y = y + 8;
     SetSpriteInvisibility(spriteArrayId, FALSE);
@@ -3927,20 +4068,39 @@ static void SetMonTypeIcons(void)
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     if (summary->isEgg)
     {
-        SetTypeSpritePosAndPal(TYPE_MYSTERY, 120, 48, SPRITE_ARR_ID_TYPE);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            SetTypeSpritePosAndPal(TYPE_RUNE_NONE, 120, 48, SPRITE_ARR_ID_TYPE);
+        }
+        else {
+            SetTypeSpritePosAndPal(TYPE_MYSTERY, 120, 48, SPRITE_ARR_ID_TYPE);
+        }
         SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
     }
     else
     {
-        SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].types[0], 120, 48, SPRITE_ARR_ID_TYPE);
-        if (gSpeciesInfo[summary->species].types[0] != gSpeciesInfo[summary->species].types[1])
-        {
-            SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].types[1], 160, 48, SPRITE_ARR_ID_TYPE + 1);
-            SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, FALSE);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].runetypes[0], 120, 48, SPRITE_ARR_ID_TYPE);
+            if (gSpeciesInfo[summary->species].runetypes[0] != gSpeciesInfo[summary->species].runetypes[1])
+            {
+                SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].runetypes[1], 160, 48, SPRITE_ARR_ID_TYPE + 1);
+                SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, FALSE);
+            }
+            else
+            {
+                SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
+            }
         }
-        else
-        {
-            SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
+        else {
+            SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].types[0], 120, 48, SPRITE_ARR_ID_TYPE);
+            if (gSpeciesInfo[summary->species].types[0] != gSpeciesInfo[summary->species].types[1])
+            {
+                SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].types[1], 160, 48, SPRITE_ARR_ID_TYPE + 1);
+                SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, FALSE);
+            }
+            else
+            {
+                SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
+            }
         }
     }
 }
@@ -3955,8 +4115,14 @@ static void SetMoveTypeIcons(void)
         {
             if (summary->moves[i] == MOVE_IVY_CUDGEL && ItemId_GetHoldEffect(summary->item) == HOLD_EFFECT_MASK)
                 SetTypeSpritePosAndPal(ItemId_GetSecondaryId(summary->item), 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
-            else
-                SetTypeSpritePosAndPal(gBattleMoves[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+            else {
+                if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                    SetTypeSpritePosAndPal(gBattleMoves[summary->moves[i]].runetype, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+                }
+                else {
+                    SetTypeSpritePosAndPal(gBattleMoves[summary->moves[i]].type, 85, 32 + (i * 16), i + SPRITE_ARR_ID_TYPE);
+                }
+            }
         }
         else
             SetSpriteInvisibility(i + SPRITE_ARR_ID_TYPE, TRUE);
@@ -3984,8 +4150,14 @@ static void SetNewMoveTypeIcon(void)
     }
     else
     {
-        if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-            SetTypeSpritePosAndPal(gBattleMoves[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
+        if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES) {
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                SetTypeSpritePosAndPal(gBattleMoves[sMonSummaryScreen->newMove].runetype, 85, 96, SPRITE_ARR_ID_TYPE + 4);
+            }
+            else {
+                SetTypeSpritePosAndPal(gBattleMoves[sMonSummaryScreen->newMove].type, 85, 96, SPRITE_ARR_ID_TYPE + 4);
+            }
+        }
         else
             SetTypeSpritePosAndPal(NUMBER_OF_MON_TYPES + gContestMoves[sMonSummaryScreen->newMove].contestCategory, 85, 96, SPRITE_ARR_ID_TYPE + 4);
     }

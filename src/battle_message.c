@@ -2346,7 +2346,7 @@ static const u8 sText_ApostropheS[] = _("'s");
 
 // For displaying names of invalid moves.
 // This is large enough that the text for TYPE_ELECTRIC will exceed TEXT_BUFF_ARRAY_COUNT.
-static const u8 sATypeMove_Table[NUMBER_OF_MON_TYPES][17] =
+static const u8 sATypeMove_Table[TYPE_PKMN_TYPES_END][17] =
 {
     [TYPE_NORMAL]   = _("a NORMAL move"),
     [TYPE_FIGHTING] = _("a FIGHTING move"),
@@ -2367,6 +2367,26 @@ static const u8 sATypeMove_Table[NUMBER_OF_MON_TYPES][17] =
     [TYPE_DRAGON]   = _("a DRAGON move"),
     [TYPE_DARK]     = _("a DARK move"),
     [TYPE_FAIRY]    = _("a FAIRY move"),
+};
+static const u8 sATypeRunesMove_Table[TYPE_RUNE_TYPES_END][17] =
+{
+    [TYPE_RUNE_NONE] = _("no Rune type"),
+    [TYPE_RUNE_AIR] = _("an Air move"),
+    [TYPE_RUNE_WATER] = _("a Water move"),
+    [TYPE_RUNE_EARTH] = _("a Earth move"),
+    [TYPE_RUNE_FIRE] = _("a Fire move"),
+    [TYPE_RUNE_MIND] = _("a Mind move"),
+    [TYPE_RUNE_BODY] = _("a Body move"),
+    [TYPE_RUNE_COSMIC] = _("a Cosmic move"),
+    [TYPE_RUNE_CHAOS] = _("a Chaos move"),
+    [TYPE_RUNE_ASTRAL] = _("an Astral move"),
+    [TYPE_RUNE_NATURE] = _("a Nature move"),
+    [TYPE_RUNE_LAW] = _("a Law move"),
+    [TYPE_RUNE_DEATH] = _("a Death move"),
+    [TYPE_RUNE_BLOOD] = _("a Blood move"),
+    [TYPE_RUNE_SOUL] = _("a Soul move"),
+    [TYPE_RUNE_WRATH] = _("a Wrath move"),
+    [TYPE_RUNE_MIASMA] = _("a Miasma move"),
 };
 
 const u8 gText_BattleTourney[] = _("BATTLE TOURNEY");
@@ -3239,8 +3259,15 @@ void BufferStringBattle(u16 stringID, u32 battler)
             StringCopy(gBattleTextBuff3, GetZMoveName(gBattleMsgDataPtr->currentMove));
         else if (IsMaxMove(gBattleMsgDataPtr->currentMove))
             StringCopy(gBattleTextBuff3, GetMaxMoveName(gBattleMsgDataPtr->currentMove));
-        else if (gBattleMsgDataPtr->currentMove >= MOVES_COUNT)
-            StringCopy(gBattleTextBuff3, sATypeMove_Table[*(&gBattleStruct->stringMoveType)]);
+        else if (gBattleMsgDataPtr->currentMove >= MOVES_COUNT) {
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                StringCopy(gBattleTextBuff3, sATypeRunesMove_Table[*(&gBattleStruct->stringMoveType)]);
+            }
+            else {
+                StringCopy(gBattleTextBuff3, sATypeMove_Table[*(&gBattleStruct->stringMoveType)]);
+            }
+        }
+            
         else
             StringCopy(gBattleTextBuff3, gMoveNames[gBattleMsgDataPtr->currentMove]);
 
@@ -3665,16 +3692,28 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
             case B_TXT_CURRENT_MOVE: // current move name
                 if (gBattleStruct->zmove.active)
                     toCpy = GetZMoveName(gBattleMsgDataPtr->currentMove);
-                else if (gBattleMsgDataPtr->currentMove >= MOVES_COUNT)
-                    toCpy = sATypeMove_Table[gBattleStruct->stringMoveType];
+                else if (gBattleMsgDataPtr->currentMove >= MOVES_COUNT) {
+                    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                        toCpy = sATypeRunesMove_Table[gBattleStruct->stringMoveType];
+                    }
+                    else {
+                        toCpy = sATypeMove_Table[gBattleStruct->stringMoveType];
+                    }
+                }
                 else
                     toCpy = gMoveNames[gBattleMsgDataPtr->currentMove];
                 break;
             case B_TXT_LAST_MOVE: // originally used move name
                 if (gBattleStruct->zmove.active)
                     toCpy = GetZMoveName(gBattleMsgDataPtr->originallyUsedMove);
-                else if (gBattleMsgDataPtr->originallyUsedMove >= MOVES_COUNT)
-                    toCpy = sATypeMove_Table[gBattleStruct->stringMoveType];
+                else if (gBattleMsgDataPtr->originallyUsedMove >= MOVES_COUNT) {
+                    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                        toCpy = sATypeRunesMove_Table[gBattleStruct->stringMoveType];
+                    }
+                    else {
+                        toCpy = sATypeMove_Table[gBattleStruct->stringMoveType];
+                    }
+                }
                 else
                     toCpy = gMoveNames[gBattleMsgDataPtr->originallyUsedMove];
                 break;
@@ -4041,7 +4080,12 @@ void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
             srcID += 3;
             break;
         case B_BUFF_TYPE: // type name
-            StringAppend(dst, gTypeNames[src[srcID + 1]]);
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                StringAppend(dst, gTypeNamesRunes[src[srcID + 1]]);
+            }
+            else {
+                StringAppend(dst, gTypeNames[src[srcID + 1]]);
+            }
             srcID += 2;
             break;
         case B_BUFF_MON_NICK_WITH_PREFIX: // poke nick with prefix

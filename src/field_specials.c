@@ -1228,7 +1228,7 @@ bool8 CheckLeadMonTough(void)
     return TRUE;
 }
 
-void IsGrassTypeInParty(void)
+void IsGrassTypeInParty(void) //Or Nature
 {
     u8 i;
     u16 species;
@@ -1239,11 +1239,21 @@ void IsGrassTypeInParty(void)
         if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG))
         {
             species = GetMonData(pokemon, MON_DATA_SPECIES);
-            if (gSpeciesInfo[species].types[0] == TYPE_GRASS || gSpeciesInfo[species].types[1] == TYPE_GRASS)
-            {
-                gSpecialVar_Result = TRUE;
-                return;
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                if (gSpeciesInfo[species].types[0] == TYPE_RUNE_NATURE || gSpeciesInfo[species].types[1] == TYPE_RUNE_NATURE)
+                {
+                    gSpecialVar_Result = TRUE;
+                    return;
+                }
             }
+            else {
+                if (gSpeciesInfo[species].types[0] == TYPE_GRASS || gSpeciesInfo[species].types[1] == TYPE_GRASS)
+                {
+                    gSpecialVar_Result = TRUE;
+                    return;
+                }
+            }
+            
         }
     }
     gSpecialVar_Result = FALSE;

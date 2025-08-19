@@ -171,6 +171,9 @@
 #define B_FLAG_NO_CATCHING          FLAG_TOGGLE_NO_CATCHING     // If this flag is set, the ability to catch wild Pokémon is disabled.
 #define B_FLAG_AI_VS_AI_BATTLE      0     // If this flag is set, the player's mons will be controlled by the ai next battles.
 #define B_FLAG_DYNAMAX_BATTLE       0     // If this flag is set, the ability to Dynamax in battle is enabled for all trainers.
+#define B_FLAG_RUNE_TYPES          FLAG_RUNE_TYPES  //This Flag changes the types of a Monster in battle.
+
+
 
 // Var Settings
 // To use the following features in scripting, replace the 0s with the var ID you're assigning it to.

@@ -1311,7 +1311,12 @@ static void Cmd_attackcanceler(void)
 
     s32 i, moveType;
     u16 attackerAbility = GetBattlerAbility(gBattlerAttacker);
-    GET_MOVE_TYPE(gCurrentMove, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(gCurrentMove, moveType);
+    }
 
     // Weight-based moves are blocked by Dynamax.
     if (IsDynamaxed(gBattlerTarget) && IsMoveBlockedByDynamax(gCurrentMove))
@@ -1824,7 +1829,12 @@ static void Cmd_accuracycheck(void)
     {
         u32 accuracy;
 
-        GET_MOVE_TYPE(move, type);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            GET_MOVE_TYPE_RUNE(move, type);
+        }
+        else {
+            GET_MOVE_TYPE(move, type);
+        }
         if (JumpIfMoveAffectedByProtect(move))
             return;
         if (AccuracyCalcHelper(move))
@@ -2038,7 +2048,12 @@ static void Cmd_damagecalc(void)
 
     u8 moveType;
 
-    GET_MOVE_TYPE(gCurrentMove, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(gCurrentMove, moveType);
+    }
     gBattleMoveDamage = CalculateMoveDamage(gCurrentMove, gBattlerAttacker, gBattlerTarget, moveType, 0, gIsCriticalHit, TRUE, TRUE);
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
@@ -2049,7 +2064,12 @@ static void Cmd_typecalc(void)
 
     u8 moveType;
 
-    GET_MOVE_TYPE(gCurrentMove, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(gCurrentMove, moveType);
+    }
     CalcTypeEffectivenessMultiplier(gCurrentMove, moveType, gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerTarget), TRUE);
 
     gBattlescriptCurrInstr = cmd->nextInstr;
@@ -2064,7 +2084,12 @@ static void Cmd_adjustdamage(void)
     u32 affectionScore = GetBattlerAffectionHearts(gBattlerTarget);
     u32 rand = Random() % 100;
 
-    GET_MOVE_TYPE(gCurrentMove, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(gCurrentMove, moveType);
+    }
 
     if (DoesSubstituteBlockMove(gBattlerAttacker, gBattlerTarget, gCurrentMove))
         goto END;
@@ -5316,7 +5341,12 @@ static void Cmd_moveend(void)
 
     holdEffectAtk = GetBattlerHoldEffect(gBattlerAttacker, TRUE);
     choicedMoveAtk = &gBattleStruct->choicedMove[gBattlerAttacker];
-    GET_MOVE_TYPE(gCurrentMove, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(gCurrentMove, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(gCurrentMove, moveType);
+    }
 
     do
     {
@@ -5790,7 +5820,13 @@ static void Cmd_moveend(void)
                     else
                     {
                         gLastLandedMoves[gBattlerTarget] = gCurrentMove;
-                        GET_MOVE_TYPE(gCurrentMove, gLastHitByType[gBattlerTarget]);
+                        
+                        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                            GET_MOVE_TYPE_RUNE(gCurrentMove, gLastHitByType[gBattlerTarget]);
+                        }
+                        else {
+                            GET_MOVE_TYPE(gCurrentMove, gLastHitByType[gBattlerTarget]);
+                        }
                     }
                 }
                 else
@@ -6318,10 +6354,17 @@ static void Cmd_switchindataupdate(void)
 
     for (i = 0; i < sizeof(struct BattlePokemon); i++)
         monData[i] = gBattleResources->bufferB[battler][4 + i];
-
-    gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
-    gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
-    gBattleMons[battler].type3 = TYPE_MYSTERY;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].runetypes[0];
+        gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].runetypes[1];
+        gBattleMons[battler].type3 = TYPE_RUNE_NONE;
+    }
+    else {
+        gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
+        gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
+        gBattleMons[battler].type3 = TYPE_MYSTERY;
+    }
+    
     gBattleMons[battler].ability = GetAbilityBySpecies(gBattleMons[battler].species, gBattleMons[battler].abilityNum);
 
     // check knocked off item
@@ -15117,14 +15160,27 @@ static void Cmd_handleballthrow(void)
                     break;
 
                 case ITEM_POUCH_ELEMENTAL:
-                    if (gSpeciesInfo[gBattleMons[gBattlerTarget].species].types[0] == 
-                    (TYPE_WATER | TYPE_FIRE | TYPE_GRASS | TYPE_ROCK | TYPE_GROUND | TYPE_FLYING) ||
-                    gSpeciesInfo[gBattleMons[gBattlerTarget].species].types[1] == 
-                    (TYPE_WATER | TYPE_FIRE | TYPE_GRASS | TYPE_ROCK | TYPE_GROUND | TYPE_FLYING)) {
-                        ballMultiplier = 400;
+                    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                        if (gSpeciesInfo[gBattleMons[gBattlerTarget].species].runetypes[0] == 
+                        (TYPE_RUNE_AIR | TYPE_RUNE_WATER | TYPE_RUNE_EARTH | TYPE_RUNE_FIRE) ||
+                        gSpeciesInfo[gBattleMons[gBattlerTarget].species].runetypes[1] == 
+                        (TYPE_RUNE_AIR | TYPE_RUNE_WATER | TYPE_RUNE_EARTH | TYPE_RUNE_FIRE)) {
+                            ballMultiplier = 400;
+                        }
+                        else {
+                            ballMultiplier = 100;
+                        }
                     }
                     else {
-                        ballMultiplier = 100;
+                        if (gSpeciesInfo[gBattleMons[gBattlerTarget].species].types[0] == 
+                        (TYPE_WATER | TYPE_FIRE | TYPE_GRASS | TYPE_ROCK | TYPE_GROUND | TYPE_FLYING) ||
+                        gSpeciesInfo[gBattleMons[gBattlerTarget].species].types[1] == 
+                        (TYPE_WATER | TYPE_FIRE | TYPE_GRASS | TYPE_ROCK | TYPE_GROUND | TYPE_FLYING)) {
+                            ballMultiplier = 400;
+                        }
+                        else {
+                            ballMultiplier = 100;
+                        }
                     }
                     break;
 

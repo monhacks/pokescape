@@ -2,27 +2,48 @@
 #define GUARD_CONSTANTS_POKEMON_H
 
 // Pokémon types
-#define TYPE_NONE             255
-#define TYPE_NORMAL           0
-#define TYPE_FIGHTING         1
-#define TYPE_FLYING           2
-#define TYPE_POISON           3
-#define TYPE_GROUND           4
-#define TYPE_ROCK             5
-#define TYPE_BUG              6
-#define TYPE_GHOST            7
-#define TYPE_STEEL            8
-#define TYPE_MYSTERY          9
-#define TYPE_FIRE             10
-#define TYPE_WATER            11
-#define TYPE_GRASS            12
-#define TYPE_ELECTRIC         13
-#define TYPE_PSYCHIC          14
-#define TYPE_ICE              15
-#define TYPE_DRAGON           16
-#define TYPE_DARK             17
-#define TYPE_FAIRY            18
-#define NUMBER_OF_MON_TYPES   19
+#define TYPE_NONE               255
+#define TYPE_NORMAL             0
+#define TYPE_FIGHTING           1
+#define TYPE_FLYING             2
+#define TYPE_POISON             3
+#define TYPE_GROUND             4
+#define TYPE_ROCK               5
+#define TYPE_BUG                6
+#define TYPE_GHOST              7
+#define TYPE_STEEL              8
+#define TYPE_MYSTERY            9
+#define TYPE_FIRE               10
+#define TYPE_WATER              11
+#define TYPE_GRASS              12
+#define TYPE_ELECTRIC           13
+#define TYPE_PSYCHIC            14
+#define TYPE_ICE                15
+#define TYPE_DRAGON             16
+#define TYPE_DARK               17
+#define TYPE_FAIRY              18
+#define TYPE_PKMN_TYPES_END     19
+
+#define TYPE_RUNE_NONE          0
+#define TYPE_RUNE_AIR           1
+#define TYPE_RUNE_WATER         2
+#define TYPE_RUNE_EARTH         3
+#define TYPE_RUNE_FIRE          4
+#define TYPE_RUNE_MIND          5
+#define TYPE_RUNE_BODY          6
+#define TYPE_RUNE_COSMIC        7
+#define TYPE_RUNE_CHAOS         8
+#define TYPE_RUNE_ASTRAL        9
+#define TYPE_RUNE_NATURE        10
+#define TYPE_RUNE_LAW           11
+#define TYPE_RUNE_DEATH         12
+#define TYPE_RUNE_BLOOD         13
+#define TYPE_RUNE_SOUL          14
+#define TYPE_RUNE_WRATH         15
+#define TYPE_RUNE_MIASMA        16
+#define TYPE_RUNE_TYPES_END     17
+
+#define NUMBER_OF_MON_TYPES     (TYPE_PKMN_TYPES_END + TYPE_RUNE_TYPES_END)
 
 // Pokémon egg groups
 #define EGG_GROUP_NONE                0

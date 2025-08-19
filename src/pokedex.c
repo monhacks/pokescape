@@ -1433,6 +1433,22 @@ static const u8 sDexSearchTypeIds[NUMBER_OF_MON_TYPES] =
     TYPE_DRAGON,
     TYPE_DARK,
     TYPE_FAIRY,
+    TYPE_RUNE_AIR,
+    TYPE_RUNE_WATER,
+    TYPE_RUNE_EARTH,
+    TYPE_RUNE_FIRE,
+    TYPE_RUNE_MIND,
+    TYPE_RUNE_BODY,
+    TYPE_RUNE_COSMIC,
+    TYPE_RUNE_CHAOS,
+    TYPE_RUNE_ASTRAL,
+    TYPE_RUNE_NATURE,
+    TYPE_RUNE_LAW,
+    TYPE_RUNE_DEATH,
+    TYPE_RUNE_BLOOD,
+    TYPE_RUNE_SOUL,
+    TYPE_RUNE_WRATH,
+    TYPE_RUNE_MIASMA,
 };
 
 // Number pairs are the task data for tracking the cursor pos and scroll offset of each option list

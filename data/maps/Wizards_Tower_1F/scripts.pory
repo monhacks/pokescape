@@ -848,6 +848,14 @@ script VAR_EDIT_TOKKUL {
 
 
 script STORYMODE_VAR_CHECK {
+	msgbox(format(" Rune Types - Yes.\nPkmn Types - No."), MSGBOX_YESNO)
+    if (var(VAR_RESULT))
+    {
+		setflag(FLAG_RUNE_TYPES)
+	}
+	else {
+		clearflag(FLAG_RUNE_TYPES)
+	}
 	
 //View Variables
 	msgbox(format("Would you like to view Variables?"), MSGBOX_YESNO)

@@ -1972,6 +1972,22 @@ static const struct SearchOptionText sDexSearchTypeOptions[NUMBER_OF_MON_TYPES +
     {gText_DexEmptyString, gTypeNames[TYPE_DRAGON]},
     {gText_DexEmptyString, gTypeNames[TYPE_DARK]},
     {gText_DexEmptyString, gTypeNames[TYPE_FAIRY]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_AIR]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_WATER]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_EARTH]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_FIRE]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_MIND]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_BODY]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_COSMIC]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_CHAOS]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_ASTRAL]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_NATURE]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_LAW]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_DEATH]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_BLOOD]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_SOUL]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_WRATH]},
+    {gText_DexEmptyString, gTypeNamesRunes[TYPE_RUNE_MIASMA]},
     {},
 };
 
@@ -2007,6 +2023,22 @@ static const u8 sDexSearchTypeIds[NUMBER_OF_MON_TYPES] =
     TYPE_DRAGON,
     TYPE_DARK,
     TYPE_FAIRY,
+    TYPE_RUNE_AIR,
+    TYPE_RUNE_WATER,
+    TYPE_RUNE_EARTH,
+    TYPE_RUNE_FIRE,
+    TYPE_RUNE_MIND,
+    TYPE_RUNE_BODY,
+    TYPE_RUNE_COSMIC,
+    TYPE_RUNE_CHAOS,
+    TYPE_RUNE_ASTRAL,
+    TYPE_RUNE_NATURE,
+    TYPE_RUNE_LAW,
+    TYPE_RUNE_DEATH,
+    TYPE_RUNE_BLOOD,
+    TYPE_RUNE_SOUL,
+    TYPE_RUNE_WRATH,
+    TYPE_RUNE_MIASMA,
 };
 
 // Number pairs are the task data for tracking the cursor pos and scroll offset of each option list
@@ -4369,7 +4401,7 @@ static void SetSpriteInvisibility(u8 spriteArrayId, bool8 invisible)
 #define TYPE_ICON_PAL_NUM_0     13
 #define TYPE_ICON_PAL_NUM_1     14
 #define TYPE_ICON_PAL_NUM_2     15
-static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] =
+static const u8 sMoveTypeToOamPaletteNum[TYPE_PKMN_TYPES_END + CONTEST_CATEGORIES_COUNT] =
 {
     [TYPE_NORMAL] = TYPE_ICON_PAL_NUM_0,
     [TYPE_FIGHTING] = TYPE_ICON_PAL_NUM_0,
@@ -4390,11 +4422,31 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_DRAGON] = TYPE_ICON_PAL_NUM_2,
     [TYPE_DARK] = TYPE_ICON_PAL_NUM_0,
     [TYPE_FAIRY] = TYPE_ICON_PAL_NUM_1,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = TYPE_ICON_PAL_NUM_0,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = TYPE_ICON_PAL_NUM_1,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = TYPE_ICON_PAL_NUM_1,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_SMART] = TYPE_ICON_PAL_NUM_2,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_TOUGH] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_COOL] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_BEAUTY] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_CUTE] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_SMART] = TYPE_ICON_PAL_NUM_2,
+    [TYPE_PKMN_TYPES_END + CONTEST_CATEGORY_TOUGH] = TYPE_ICON_PAL_NUM_0,
+};
+static const u8 sMoveTypeRunesToOamPaletteNum[TYPE_RUNE_TYPES_END] =
+{
+    [TYPE_RUNE_NONE] = TYPE_ICON_PAL_NUM_2,
+    [TYPE_RUNE_AIR] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_RUNE_MIND] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_WATER] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_RUNE_EARTH] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_FIRE] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_BODY] = TYPE_ICON_PAL_NUM_2,
+    [TYPE_RUNE_COSMIC] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_CHAOS] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_NATURE] = TYPE_ICON_PAL_NUM_2,
+    [TYPE_RUNE_LAW] = TYPE_ICON_PAL_NUM_2,
+    [TYPE_RUNE_DEATH] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_ASTRAL] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_RUNE_BLOOD] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_SOUL] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_RUNE_WRATH] = TYPE_ICON_PAL_NUM_0,
+    [TYPE_RUNE_MIASMA] = TYPE_ICON_PAL_NUM_1,
 };
 static void SetTypeIconPosAndPal(u8 typeId, u8 x, u8 y, u8 spriteArrayId)
 {
@@ -4402,7 +4454,12 @@ static void SetTypeIconPosAndPal(u8 typeId, u8 x, u8 y, u8 spriteArrayId)
 
     sprite = &gSprites[sPokedexView->typeIconSpriteIds[spriteArrayId]];
     StartSpriteAnim(sprite, typeId);
-    sprite->oam.paletteNum = sMoveTypeToOamPaletteNum[typeId];
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        sprite->oam.paletteNum = sMoveTypeRunesToOamPaletteNum[typeId];
+    }
+    else {
+        sprite->oam.paletteNum = sMoveTypeToOamPaletteNum[typeId];
+    }
     sprite->x = x + 16;
     sprite->y = y + 8;
     SetSpriteInvisibility(spriteArrayId, FALSE);
@@ -4420,11 +4477,23 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
         type1 = GetTypeBySpecies(species, 1);
         type2 = GetTypeBySpecies(species, 2);
     #else
-        type1 = gSpeciesInfo[species].types[0];
-        type2 = gSpeciesInfo[species].types[1];
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            type1 = gSpeciesInfo[species].runetypes[0];
+            type2 = gSpeciesInfo[species].runetypes[1];
+        }
+        else {
+            type1 = gSpeciesInfo[species].types[0];
+            type2 = gSpeciesInfo[species].types[1];
+        }
     #endif
-    if (species == SPECIES_NONE)
-        type1 = type2 = TYPE_MYSTERY;
+    if (species == SPECIES_NONE) {
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            type1 = type2 = TYPE_RUNE_NONE;
+        }
+        else {
+            type1 = type2 = TYPE_MYSTERY;
+        }
+    } 
 
     if (type1 == type2)
     {
@@ -4441,14 +4510,23 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
 static void CreateTypeIconSprites(void)
 {
     u8 i;
-
-    LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypesRunes);
+    }
+    else {
+        LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
+    }
     LoadCompressedPalette(gMoveTypes_Pal, 0x1D0, 0x60);
     for (i = 0; i < 2; i++)
     {
-        if (sPokedexView->typeIconSpriteIds[i] == 0xFF)
-            sPokedexView->typeIconSpriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypes, 10, 10, 2);
-
+        if (sPokedexView->typeIconSpriteIds[i] == 0xFF) {
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                sPokedexView->typeIconSpriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypesRunes, 10, 10, 2);
+            }
+            else {
+                sPokedexView->typeIconSpriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypes, 10, 10, 2);
+            }
+        }
         SetSpriteInvisibility(i, TRUE);
     }
 }
@@ -5380,11 +5458,17 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
     //Draw move type icon
     if (gTasks[taskId].data[5] == 0)
     {
-        SetTypeIconPosAndPal(gBattleMoves[move].type, moves_x + 146, moves_y + 17, 0);
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            SetTypeIconPosAndPal(gBattleMoves[move].runetype, moves_x + 146, moves_y + 17, 0);
+        }
+        else {
+            SetTypeIconPosAndPal(gBattleMoves[move].type, moves_x + 146, moves_y + 17, 0);
+        }
         SetSpriteInvisibility(1, TRUE);
     }
     else
     {
+        SetTypeIconPosAndPal(NUMBER_OF_MON_TYPES + gContestMoves[move].contestCategory, moves_x + 146, moves_y + 17, 1);
         SetTypeIconPosAndPal(NUMBER_OF_MON_TYPES + gContestMoves[move].contestCategory, moves_x + 146, moves_y + 17, 1);
         SetSpriteInvisibility(0, TRUE);
     }
@@ -7832,9 +7916,15 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                 if (sPokedexView->pokedexList[i].owned)
                 {
                     species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
-
-                    types[0] = gSpeciesInfo[species].types[0];
-                    types[1] = gSpeciesInfo[species].types[1];
+                    
+                    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                        types[0] = gSpeciesInfo[species].runetypes[0];
+                        types[1] = gSpeciesInfo[species].runetypes[1];
+                    }
+                    else {
+                        types[0] = gSpeciesInfo[species].types[0];
+                        types[1] = gSpeciesInfo[species].types[1];
+                    }
                     if (types[0] == type1 || types[1] == type1)
                     {
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
@@ -7850,9 +7940,14 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                 if (sPokedexView->pokedexList[i].owned)
                 {
                     species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
-
-                    types[0] = gSpeciesInfo[species].types[0];
-                    types[1] = gSpeciesInfo[species].types[1];
+                    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                        types[0] = gSpeciesInfo[species].runetypes[0];
+                        types[1] = gSpeciesInfo[species].runetypes[1];
+                    }
+                    else {
+                        types[0] = gSpeciesInfo[species].types[0];
+                        types[1] = gSpeciesInfo[species].types[1];
+                    }
                     if ((types[0] == type1 && types[1] == type2) || (types[0] == type2 && types[1] == type1))
                     {
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];

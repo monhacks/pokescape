@@ -41,6 +41,7 @@
 #include "constants/battle_move_effects.h"
 #include "constants/abilities.h"
 #include "constants/moves.h"
+#include "event_data.h"
 
 #define STAT_STAGE(battler, stat) (gBattleMons[battler].statStages[stat - 1])
 
@@ -192,10 +193,19 @@ bool32 IsViableZMove(u8 battler, u16 move)
             return TRUE;
         }
 
-        if (move != MOVE_NONE && zMove != MOVE_Z_STATUS && gBattleMoves[move].type == ItemId_GetSecondaryId(item))
-        {
-            gBattleStruct->zmove.chosenZMove = GetTypeBasedZMove(move, battler);
-            return TRUE;
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            if (move != MOVE_NONE && zMove != MOVE_Z_STATUS && gBattleMoves[move].runetype == ItemId_GetSecondaryId(item))
+            {
+                gBattleStruct->zmove.chosenZMove = GetTypeBasedZMove(move, battler);
+                return TRUE;
+            }
+        }
+        else {
+            if (move != MOVE_NONE && zMove != MOVE_Z_STATUS && gBattleMoves[move].type == ItemId_GetSecondaryId(item))
+            {
+                gBattleStruct->zmove.chosenZMove = GetTypeBasedZMove(move, battler);
+                return TRUE;
+            }
         }
     }
 
@@ -376,7 +386,13 @@ static u16 GetSignatureZMove(u16 move, u16 species, u16 item)
 
 static u16 GetTypeBasedZMove(u16 move, u8 battler)
 {
-    u8 moveType = gBattleMoves[move].type;
+    u8 moveType;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        moveType = gBattleMoves[move].runetype;
+    }
+    else {
+        moveType = gBattleMoves[move].type;
+    }
 
     // Get z move from type
     if (moveType < TYPE_FIRE)
@@ -546,14 +562,25 @@ static void ZMoveSelectionDisplayMoveType(u16 zMove, u32 battler)
     u8 *txtPtr;
     u8 zMoveType;
 
-    GET_MOVE_TYPE(zMove, zMoveType);
+    
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(zMove, zMoveType);
+    }
+    else {
+        GET_MOVE_TYPE(zMove, zMoveType);
+    }
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
     *(txtPtr)++ = EXT_CTRL_CODE_FONT;
     *(txtPtr)++ = FONT_NORMAL;
 
-    StringCopy(txtPtr, gTypeNames[zMoveType]);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        StringCopy(txtPtr, gTypeNamesRunes[zMoveType]);
+    }
+    else {
+        StringCopy(txtPtr, gTypeNames[zMoveType]);
+    }
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 }
 

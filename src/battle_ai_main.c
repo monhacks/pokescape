@@ -746,7 +746,13 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         return score;
 
     SetTypeBeforeUsingMove(move, battlerAtk);
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
+    
 
     // check non-user target
     if (!(moveTarget & MOVE_TARGET_USER))
@@ -2696,7 +2702,13 @@ static s32 AI_TryToFaint(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 {
     // move data
-    u32 moveType = gBattleMoves[move].type;
+    u32 moveType;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        moveType = gBattleMoves[move].runetype;
+    }
+    else {
+        moveType = gBattleMoves[move].type;
+    }
     u32 effect = gBattleMoves[move].effect;
     u32 moveTarget = AI_GetBattlerMoveTargetType(battlerAtk, move);
     // ally data
@@ -2710,7 +2722,12 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
     u32 predictedMove = aiData->predictedMoves[battlerDef];
 
     SetTypeBeforeUsingMove(move, battlerAtk);
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
 
     // check what effect partner is using
     if (aiData->partnerMove != 0)
@@ -5105,10 +5122,21 @@ static s32 AI_PreferBatonPass(u32 battlerAtk, u32 battlerDef, u32 move, s32 scor
 static s32 AI_HPAware(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 {
     u32 effect = gBattleMoves[move].effect;
-    u32 moveType = gBattleMoves[move].type;
+    u32 moveType;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        moveType = gBattleMoves[move].runetype;
+    }
+    else {
+        moveType = gBattleMoves[move].type;
+    }
 
     SetTypeBeforeUsingMove(move, battlerAtk);
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
 
     if (IS_TARGETING_PARTNER(battlerAtk, battlerDef))
     {

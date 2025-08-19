@@ -1788,10 +1788,21 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         else
             type = gBattleMoves[MOVE_IVY_CUDGEL].type;
     }
-    else
-        type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
-
-    StringCopy(txtPtr, gTypeNames[type]);
+    else {
+        if (FlagGet(B_FLAG_RUNE_TYPES)) {
+            type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].runetype;
+        }
+        else {
+            type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+        }
+    }
+        
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        StringCopy(txtPtr, gTypeNamesRunes[type]);
+    }
+    else {
+        StringCopy(txtPtr, gTypeNames[type]);
+    }
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
     MoveSelectionDisplaySplitIcon(battler);
 }
@@ -2391,7 +2402,13 @@ static void MoveSelectionDisplayInfo(u32 battler)
     u32 move = moveInfo->moves[gMoveSelectionCursor[battler]];
     u32 battlerAtk = battler;
     u32 battlerDef = BATTLE_OPPOSITE(battlerAtk);
-    u32 moveType = gBattleMoves[move].type;
+    u32 moveType;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        moveType = gBattleMoves[move].runetype;
+    }
+    else {
+        moveType = gBattleMoves[move].type;
+    }
     u32 moveContact = IsMoveMakingContact(move, battlerAtk);
     u32 atkAbility = GetBattlerAbility(battlerAtk);
     u32 defAbility = GetBattlerAbility(battlerDef);

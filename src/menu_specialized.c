@@ -26,6 +26,7 @@
 #include "constants/songs.h"
 #include "constants/battle_move_effects.h"
 #include "gba/io_reg.h"
+#include "event_data.h"
 
 EWRAM_DATA static u8 sMailboxWindowIds[MAILBOXWIN_COUNT] = {0};
 EWRAM_DATA static struct ListMenuItem *sMailboxList = NULL;
@@ -777,7 +778,12 @@ static void MoveRelearnerLoadBattleMoveDescription(u32 chosenMove)
         return;
     }
     move = &gBattleMoves[chosenMove];
-    str = gTypeNames[move->type];
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        str = gTypeNamesRunes[move->type];
+    }
+    else {
+        str = gTypeNames[move->type];
+    }
     AddTextPrinterParameterized(RELEARNERWIN_DESC_BATTLE, FONT_NORMAL, str, 4, 25, TEXT_SKIP_DRAW, NULL);
 
     x = 4 + GetStringWidth(FONT_NORMAL, gText_MoveRelearnerPP, 0);

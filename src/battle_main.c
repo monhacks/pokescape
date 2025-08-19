@@ -305,7 +305,7 @@ const struct OamData gOamData_BattleSpritePlayerSide =
 
 static const s8 sCenterToCornerVecXs[8] ={-32, -16, -16, -32, -32};
 
-const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
+const u8 gTypeNames[TYPE_PKMN_TYPES_END][TYPE_NAME_LENGTH + 1] =
 {
     [TYPE_NORMAL] = _("Normal"),
     [TYPE_FIGHTING] = _("Fight"),
@@ -326,6 +326,26 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
     [TYPE_DRAGON] = _("Dragon"),
     [TYPE_DARK] = _("Dark"),
     [TYPE_FAIRY] = _("Fairy"),
+};
+const u8 gTypeNamesRunes[TYPE_RUNE_TYPES_END][TYPE_NAME_LENGTH + 1] =
+{
+    [TYPE_RUNE_NONE] = _("???"),
+    [TYPE_RUNE_AIR] = _("Air"),
+    [TYPE_RUNE_WATER] = _("Water"),
+    [TYPE_RUNE_EARTH] = _("Earth"),
+    [TYPE_RUNE_FIRE] = _("Fire"),
+    [TYPE_RUNE_MIND] = _("Mind"),
+    [TYPE_RUNE_BODY] = _("Body"),
+    [TYPE_RUNE_COSMIC] = _("Cosmic"),
+    [TYPE_RUNE_CHAOS] = _("Chaos"),
+    [TYPE_RUNE_ASTRAL] = _("Astral"),
+    [TYPE_RUNE_NATURE] = _("Nature"),
+    [TYPE_RUNE_LAW] = _("Law"),
+    [TYPE_RUNE_DEATH] = _("Death"),
+    [TYPE_RUNE_BLOOD] = _("Blood"),
+    [TYPE_RUNE_SOUL] = _("Soul"),
+    [TYPE_RUNE_WRATH] = _("Wrath"),
+    [TYPE_RUNE_MIASMA] = _("Miasma"),
 };
 
 // This is a factor in how much money you get for beating a trainer.
@@ -3730,10 +3750,17 @@ const u8* FaintClearSetData(u32 battler)
     }
 
     gBattleResources->flags->flags[battler] = 0;
-
-    gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
-    gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
-    gBattleMons[battler].type3 = TYPE_MYSTERY;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].runetypes[0];
+        gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].runetypes[1];
+        gBattleMons[battler].type3 = TYPE_RUNE_NONE;
+    }
+    else {
+        gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
+        gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
+        gBattleMons[battler].type3 = TYPE_MYSTERY;
+    }
+    
 
     Ai_UpdateFaintData(battler);
     TryBattleFormChange(battler, FORM_CHANGE_FAINT);
@@ -3834,9 +3861,17 @@ static void DoBattleIntro(void)
             else
             {
                 memcpy(&gBattleMons[battler], &gBattleResources->bufferB[battler][4], sizeof(struct BattlePokemon));
-                gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
-                gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
-                gBattleMons[battler].type3 = TYPE_MYSTERY;
+                if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                    gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].runetypes[0];
+                    gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].runetypes[1];
+                    gBattleMons[battler].type3 = TYPE_RUNE_NONE;
+                }
+                else {
+                    gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
+                    gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
+                    gBattleMons[battler].type3 = TYPE_MYSTERY;
+                }
+                
                 gBattleMons[battler].ability = GetAbilityBySpecies(gBattleMons[battler].species, gBattleMons[battler].abilityNum);
                 gBattleStruct->hpOnSwitchout[GetBattlerSide(battler)] = gBattleMons[battler].hp;
                 gBattleMons[battler].status2 = 0;
@@ -6146,13 +6181,23 @@ void SetTypeBeforeUsingMove(u32 move, u32 battlerAtk)
         gBattleStruct->dynamicMoveType = TYPE_DARK | F_DYNAMIC_TYPE_SET;
     }
 
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
     if ((gFieldStatuses & STATUS_FIELD_ION_DELUGE && moveType == TYPE_NORMAL)
         || gStatuses4[battlerAtk] & STATUS4_ELECTRIFIED)
         gBattleStruct->dynamicMoveType = TYPE_ELECTRIC | F_DYNAMIC_TYPE_SET;
 
     // Check if a gem should activate.
-    GET_MOVE_TYPE(move, moveType);
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        GET_MOVE_TYPE_RUNE(move, moveType);
+    }
+    else {
+        GET_MOVE_TYPE(move, moveType);
+    }
     if (holdEffect == HOLD_EFFECT_GEMS
         && moveType == ItemId_GetSecondaryId(gBattleMons[battlerAtk].item))
     {

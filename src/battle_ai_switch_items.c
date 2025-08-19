@@ -20,6 +20,7 @@
 #include "constants/battle_move_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "event_data.h"
 
 // this file's functions
 static bool8 HasSuperEffectiveMoveAgainstOpponents(u32 battler, bool8 noRng);
@@ -1154,8 +1155,17 @@ static u32 GetBestMonTypeMatchup(struct Pokemon *party, int firstId, int lastId,
 
                 u8 atkType1 = gBattleMons[opposingBattler].type1;
                 u8 atkType2 = gBattleMons[opposingBattler].type2;
-                u8 defType1 = gSpeciesInfo[species].types[0];
-                u8 defType2 = gSpeciesInfo[species].types[1];
+                u8 defType1;
+                u8 defType2;
+                if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                    defType1 = gSpeciesInfo[species].runetypes[0];
+                    defType2 = gSpeciesInfo[species].runetypes[1];
+                }
+                else {
+                    defType1 = gSpeciesInfo[species].types[0];
+                    defType2 = gSpeciesInfo[species].types[1];
+                }
+                
 
                 typeEffectiveness = uq4_12_multiply(typeEffectiveness, (GetTypeModifier(atkType1, defType1)));
                 if (atkType2 != atkType1)

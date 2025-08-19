@@ -765,6 +765,14 @@ STATIC_ASSERT(sizeof(((struct BattleStruct *)0)->palaceFlags) * 8 >= MAX_BATTLER
         typeArg = gBattleMoves[move].type;                            \
 }
 
+#define GET_MOVE_TYPE_RUNE(move, typeArg)                                  \
+{                                                                     \
+    if (gBattleStruct->dynamicMoveType)                               \
+        typeArg = gBattleStruct->dynamicMoveType & DYNAMIC_TYPE_MASK; \
+    else                                                              \
+        typeArg = gBattleMoves[move].runetype;                            \
+}
+
 #define IS_MOVE_PHYSICAL(move)(GetBattleMoveSplit(move) == SPLIT_PHYSICAL)
 #define IS_MOVE_SPECIAL(move)(GetBattleMoveSplit(move) == SPLIT_SPECIAL)
 #define IS_MOVE_STATUS(move)(gBattleMoves[move].split == SPLIT_STATUS)
@@ -790,6 +798,13 @@ STATIC_ASSERT(sizeof(((struct BattleStruct *)0)->palaceFlags) * 8 >= MAX_BATTLER
     gBattleMons[battlerId].type1 = type;            \
     gBattleMons[battlerId].type2 = type;            \
     gBattleMons[battlerId].type3 = TYPE_MYSTERY;    \
+}
+
+#define RESTORE_BATTLER_RUNE_TYPE(battlerId)                                                     \
+{                                                                                           \
+    gBattleMons[battlerId].type1 = gSpeciesInfo[gBattleMons[battlerId].species].runetypes[0];   \
+    gBattleMons[battlerId].type2 = gSpeciesInfo[gBattleMons[battlerId].species].runetypes[1];   \
+    gBattleMons[battlerId].type3 = TYPE_RUNE_NONE;                                            \
 }
 
 #define RESTORE_BATTLER_TYPE(battlerId)                                                     \

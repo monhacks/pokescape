@@ -1570,7 +1570,7 @@
 #define FLAG_UNUSED_0x918                           (SYSTEM_FLAGS + 0xB8) // Unused Flag
 #define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag
 #define FLAG_UNUSED_0x91A                           (SYSTEM_FLAGS + 0xBA) // Unused Flag
-#define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
+#define FLAG_RUNE_TYPES                             (SYSTEM_FLAGS + 0xBB) // Unused Flag
 #define FLAG_SKY_BATTLE                             (SYSTEM_FLAGS + 0xBC) // Unused Flag
 #define FLAG_TOGGLE_NO_CATCHING                     (SYSTEM_FLAGS + 0xBD) // Unused Flag
 #define FLAG_TOGGLE_NO_BAG_USE                      (SYSTEM_FLAGS + 0xBE) // Unused Flag

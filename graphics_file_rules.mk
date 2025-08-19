@@ -8,6 +8,7 @@ BATINTGFXDIR := graphics/battle_interface
 MASKSGFXDIR := graphics/battle_anims/masks
 BATTRANSGFXDIR := graphics/battle_transitions
 TYPESGFXDIR := graphics/types
+RUNETYPESGFXDIR := graphics/types/pokescape_types
 RAYQUAZAGFXDIR := graphics/rayquaza_scene
 ROULETTEGFXDIR := graphics/roulette
 SLOTMACHINEGFXDIR := graphics/slot_machine
@@ -22,6 +23,7 @@ STARTERGFXDIR := graphics/starter_choose
 NAMINGGFXDIR := graphics/naming_screen
 SPINDAGFXDIR := graphics/pokemon/spinda/spots
 
+runetypes := rune_none rune_air rune_water rune_earth rune_fire rune_mind rune_body rune_cosmic rune_chaos rune_astral rune_nature rune_law rune_death rune_blood rune_soul rune_wrath rune_miasma
 types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark fairy
 contest_types := cool beauty cute smart tough
 
@@ -364,7 +366,10 @@ $(BATTRANSGFXDIR)/vs_frame.4bpp: %.4bpp: %.png
 graphics/party_menu/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 62 -Wnum_tiles
 
-$(TYPESGFXDIR)/move_types.4bpp: $(types:%=$(TYPESGFXDIR)/%.4bpp) $(contest_types:%=$(TYPESGFXDIR)/contest_%.4bpp)
+$(RUNETYPESGFXDIR)/move_rune_types.4bpp: $(runetypes:%=$(RUNETYPESGFXDIR)/%.4bpp)
+	@cat $^ >$@
+
+$(TYPESGFXDIR)/move_types.4bpp: $(types:%=$(TYPESGFXDIR)/%.4bpp) $(contest_types:%=$(TYPESGFXDIR)/contest_%.4bpp) 
 	@cat $^ >$@
 
 $(TYPESGFXDIR)/move_types.gbapal: $(TYPESGFXDIR)/move_types_1.gbapal \

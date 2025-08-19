@@ -36,6 +36,7 @@
 #include "constants/items.h"
 #include "constants/rgb.h"
 #include "constants/hold_effects.h"
+#include "event_data.h"
 
 #define MAX_MODIFY_DIGITS 4
 
@@ -1449,7 +1450,12 @@ static void PrintSecondaryEntries(struct BattleDebugMenu *data)
         {
             u8 *types = &gBattleMons[data->battlerId].type1;
 
-            PadString(gTypeNames[types[i]], text);
+            if (FlagGet(B_FLAG_RUNE_TYPES)) {
+                PadString(gTypeNamesRunes[types[i]], text);
+            }
+            else {
+                PadString(gTypeNames[types[i]], text);
+            }
             printer.currentY = printer.y = (i * yMultiplier) + sSecondaryListTemplate.upText_Y;
             AddTextPrinter(&printer, 0, NULL);
         }

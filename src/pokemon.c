@@ -3899,9 +3899,16 @@ void PokemonToBattleMon(struct Pokemon *src, struct BattlePokemon *dst)
     dst->spDefense = GetMonData(src, MON_DATA_SPDEF, NULL);
     dst->abilityNum = GetMonData(src, MON_DATA_ABILITY_NUM, NULL);
     dst->otId = GetMonData(src, MON_DATA_OT_ID, NULL);
-    dst->type1 = gSpeciesInfo[dst->species].types[0];
-    dst->type2 = gSpeciesInfo[dst->species].types[1];
-    dst->type3 = TYPE_MYSTERY;
+    if (FlagGet(B_FLAG_RUNE_TYPES)) {
+        dst->type1 = gSpeciesInfo[dst->species].runetypes[0];
+        dst->type2 = gSpeciesInfo[dst->species].runetypes[1];
+        dst->type3 = TYPE_RUNE_NONE;
+    }
+    else {
+        dst->type1 = gSpeciesInfo[dst->species].types[0];
+        dst->type2 = gSpeciesInfo[dst->species].types[1];
+        dst->type3 = TYPE_MYSTERY;
+    }
     dst->ability = GetAbilityBySpecies(dst->species, dst->abilityNum);
     GetMonData(src, MON_DATA_NICKNAME, nickname);
     StringCopy_Nickname(dst->nickname, nickname);
