@@ -171,7 +171,7 @@
       "flag": "FLAG_TEMP_C"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RAC_BONBUN",
+      "graphics_id": "OBJ_EVENT_GFX_TZHAAR_5",
       "x": 17,
       "y": 16,
       "elevation": 0,
@@ -184,7 +184,7 @@
       "flag": "FLAG_TEMP_D"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RAC_BONBUN",
+      "graphics_id": "OBJ_EVENT_GFX_TZHAAR_5",
       "x": 19,
       "y": 16,
       "elevation": 0,

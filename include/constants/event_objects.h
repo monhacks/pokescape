@@ -630,8 +630,15 @@
 #define OBJ_EVENT_GFX_ANGRENNOUILLE             613
 #define OBJ_EVENT_GFX_HAM_SACK                  614
 #define OBJ_EVENT_GFX_OSMAN                     615
+#define OBJ_EVENT_GFX_TZHAAR_5				    616
+#define OBJ_EVENT_GFX_VOID_KNIGHT_1				617
+#define OBJ_EVENT_GFX_VOID_KNIGHT_2				618
+#define OBJ_EVENT_GFX_VOID_KNIGHT_3				619
+#define OBJ_EVENT_GFX_VOID_KNIGHT_4				620
+#define OBJ_EVENT_GFX_LEPRECHAUN				621
+#define OBJ_EVENT_GFX_STRANGEPLANT				622
 
-#define NUM_OBJ_EVENT_GFX                       (OBJ_EVENT_GFX_OSMAN + 1)
+#define NUM_OBJ_EVENT_GFX                       (OBJ_EVENT_GFX_STRANGEPLANT + 1)
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
 // Object event graphics ids are 1 byte in size (max value of 255), and the dynamic

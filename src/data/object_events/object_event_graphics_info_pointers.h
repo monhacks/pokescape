@@ -1254,7 +1254,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ANGRENNOUILLE] =                 &gObjectEventGraphicsInfo_angrennouille,
     [OBJ_EVENT_GFX_HAM_SACK] =                      &gObjectEventGraphicsInfo_ham_sack,
     [OBJ_EVENT_GFX_OSMAN] =                         &gObjectEventGraphicsInfo_osman,
-
+    [OBJ_EVENT_GFX_TZHAAR_5] =                      &gObjectEventGraphicsInfo_Tzhaar_5,
+    [OBJ_EVENT_GFX_VOID_KNIGHT_1] =                 &gObjectEventGraphicsInfo_voidknight_1,
+    [OBJ_EVENT_GFX_VOID_KNIGHT_2] =                 &gObjectEventGraphicsInfo_voidknight_2,
+    [OBJ_EVENT_GFX_VOID_KNIGHT_3] =                 &gObjectEventGraphicsInfo_voidknight_3,
+    [OBJ_EVENT_GFX_VOID_KNIGHT_4] =                 &gObjectEventGraphicsInfo_voidknight_4,
+    [OBJ_EVENT_GFX_LEPRECHAUN] =                    &gObjectEventGraphicsInfo_leprechaun,
+    [OBJ_EVENT_GFX_STRANGEPLANT] =                  &gObjectEventGraphicsInfo_strangeplant,
     
 //ORES 
 	[OBJ_EVENT_GFX_COPPER_ORE] =          		    &gObjectEventGraphicsInfo_CopperOre,
